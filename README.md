@@ -2,22 +2,18 @@
 
 A tiny, mobile-friendly meditation toy that does one thing: grows a tree.
 
-Pick a few options, and a unique tree sprouts and grows over about four seconds, then sways in the wind while leaves fall, snow drifts, petals drop or fireflies wander, depending on what you chose. Every tree is different.
+Answer four quick questions and a unique, painterly tree sprouts and grows over about five seconds, then sways in the wind while leaves fall, petals drift, snow settles or glowing motes wander. Every tree is different.
 
-## Options
+## The four questions
 
-| Option   | Choices                                      |
-|----------|----------------------------------------------|
-| Leaves   | round, oval, maple, needle, heart, willow    |
-| Season   | spring, summer, autumn, winter               |
-| Density  | sparse, medium, lush                         |
-| Branches | thin, medium, thick                          |
-| Size     | small, medium, tall                          |
-| Flowers  | none, pink, white, purple, yellow            |
-| Fruit    | none, apple, orange, lemon, plum             |
-| Wind     | calm, breeze, gusty                          |
+| Step      | Choices                                         |
+|-----------|-------------------------------------------------|
+| Leaves    | round, oval, maple, needle, heart, willow       |
+| Season    | spring, summer, autumn, winter                  |
+| Character | sapling, grown, ancient (sets size, thickness and how full the crown is) |
+| Extra     | none, blossom, fruit                            |
 
-Tapping any option grows a new tree right away. **Grow another** regrows with the same settings, **Surprise** randomises everything, and tapping the sky grows a fresh tree too. The download button in the corner saves the current frame as a PNG.
+**Surprise me** picks everything at random. After the tree has grown, **Grow another** regrows with the same choices, **Change** goes back to the questions, and tapping the sky grows a fresh tree too. The download button in the corner saves the current frame as a PNG.
 
 ## Running it
 
@@ -28,8 +24,13 @@ python3 -m http.server 8000
 # then visit http://localhost:8000
 ```
 
-## How it works
+## How the picture is made
 
-Everything is drawn on one `<canvas>`. A seeded random generator builds a branching skeleton (breadth-first, with a branch budget so lush trees stay smooth on phones). Each branch gets a start time and duration, normalised so the whole tree finishes at the same moment. Leaves, flowers and fruit attach to outer branches and pop in with a small overshoot once their branch has grown past them. After growth, branches sway with a shared gust curve plus a per-branch flutter, scaled by depth so tips move more than the trunk.
+Everything is drawn on one `<canvas>`, lit from the upper left.
 
-Because the tree is rebuilt from the same seed on resize, rotating the phone or collapsing the options panel simply rescales the same tree.
+- **Skeleton.** A seeded random generator builds the branches breadth-first, with a budget so ancient trees stay smooth on phones. Each branch gets a start time and duration, normalised so the whole tree finishes together. Roots flare out at the base.
+- **Foliage.** Leaves are painted as clumps rather than one by one. Each clump is a small pre-painted sprite: a dark mass underneath, then dozens of leaf strokes shaded by their position on an imagined sphere, so tops go yellow-green and undersides go deep teal. Clumps sit at three depths: back ones are darker and cooler, front ones warmer, and each casts a soft shadow on what is behind it. Branches are drawn between the back and front layers.
+- **Wood.** Every branch is a tapered, slightly curved polygon with a highlight strip on the lit edge, a shadow strip on the far edge, and bark lines on the trunk.
+- **Atmosphere.** The sky, colour washes, sun glow, horizon mist, mossy mound, grass, paper grain and vignette are painted once per tree into an offscreen canvas. Light rays from the sun shimmer slowly in front of it.
+
+Because the tree is rebuilt from the same seed on resize, rotating the phone simply rescales the same tree.
