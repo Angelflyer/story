@@ -37,12 +37,17 @@
   }
   .step[hidden],.done[hidden]{display:none}
 
+  .pills{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+  .pill{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 11px;border-radius:999px;
+    border:1px dashed rgba(255,255,255,.25);background:transparent;color:inherit;opacity:.55;
+    font:inherit;font-size:13px;line-height:1;cursor:pointer;transition:background .2s,border-color .2s,opacity .2s,transform .2s}
+  .pill.set{border-style:solid;border-color:rgba(216,230,168,.45);background:rgba(216,230,168,.12);opacity:1}
+  .pill.open{border-color:#d8e6a8;box-shadow:0 0 0 1px #d8e6a8 inset;opacity:1}
+  .pill:active{transform:scale(.96)}
+  .pill canvas{width:15px;height:15px;flex:0 0 auto}
+  .pill .sw{width:11px;height:11px}
   .q{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:12px}
   .q h2{margin:0;font-size:20px;font-weight:500;letter-spacing:.01em}
-  .dots{display:flex;gap:6px}
-  .dots i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.22)}
-  .dots i.on{background:#d8e6a8}
-  .dots i.did{background:rgba(216,230,168,.5)}
 
   .choices{display:flex;flex-wrap:wrap;gap:8px}
   .chip{flex:1 1 auto;min-width:calc(33.33% - 6px);display:flex;align-items:center;justify-content:center;gap:8px;
@@ -56,16 +61,14 @@
   .chip small{font-size:12px;opacity:.65;display:block}
   .chip .lbl{text-align:left;line-height:1.15}
 
-  .nav{display:flex;justify-content:space-between;margin-top:12px}
-  .link{background:none;border:0;color:inherit;opacity:.7;font:inherit;font-size:14px;padding:6px 2px;cursor:pointer}
+  .link{background:none;border:0;color:inherit;opacity:.7;font:inherit;font-size:14px;padding:6px 2px;cursor:pointer;white-space:nowrap}
   .link:hover{opacity:1}
-  .link[disabled]{opacity:.25;cursor:default}
 
   .done{display:flex;gap:10px}
   .btn{flex:1;height:50px;border-radius:16px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.07);
     color:inherit;font:inherit;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
   .btn:active{transform:scale(.97)}
-  .btn.primary{flex:1.4;background:linear-gradient(135deg,#d8e6a8,#8fb56a);color:#1b2414;border-color:transparent}
+  .btn.primary{flex:1.6;background:linear-gradient(135deg,#d8e6a8,#8fb56a);color:#1b2414;border-color:transparent}
   .btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 </style>
 </head>
@@ -80,20 +83,17 @@
 </header>
 
 <section class="panel" id="panel" aria-live="polite">
+  <div class="pills" id="pills"></div>
   <div class="step" id="step">
-    <div class="q"><h2 id="question"></h2><div class="dots" id="dots"></div></div>
+    <div class="q"><h2 id="question"></h2><button class="link surprise">Surprise me</button></div>
     <div class="choices" id="choices"></div>
-    <div class="nav">
-      <button class="link" id="back">‹ Back</button>
-      <button class="link" id="surprise">Surprise me</button>
-    </div>
   </div>
   <div class="done" id="done" hidden>
-    <button class="btn" id="change">
-      <svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 13.6-5.7M20 12a8 8 0 0 1-13.6 5.7M17 3v4h-4M7 21v-4h4"/></svg>Change
-    </button>
     <button class="btn primary" id="regrow">
       <svg viewBox="0 0 24 24"><path d="M12 21v-9m0 0c-3 0-6-2-6-6 4 0 6 2 6 6Zm0 0c3 0 6-2 6-6-4 0-6 2-6 6Z"/></svg>Grow another
+    </button>
+    <button class="btn surprise">
+      <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM8.5 8.5h.01M15.5 8.5h.01M12 12h.01M8.5 15.5h.01M15.5 15.5h.01"/></svg>Surprise
     </button>
   </div>
 </section>
@@ -132,16 +132,21 @@ const FRUIT = { apple: ['#d43d3d', 1], orange: ['#f2892a', 1.05], lemon: ['#f0d6
 const CHARACTER = {
   sapling: { dens: 0, trunk: .022, size: .72, label: 'Sapling', sub: 'slender, young' },
   grown:   { dens: 1, trunk: .036, size: .9,  label: 'Grown',   sub: 'full crown' },
-  ancient: { dens: 2, trunk: .062, size: 1,   label: 'Ancient', sub: 'thick, sprawling' },
+  ancient: { dens: 2, trunk: .062, size: .95, label: 'Ancient', sub: 'thick, sprawling' },
 };
 
+/* each answer unlocks the next phase of growth: cap = how far the growth clock may run,
+   rewind = where the clock jumps back to when that answer is changed, so only its phase replays */
 const STEPS = [
-  { key: 'leaf', q: 'What kind of leaves?', choices: ['round', 'oval', 'maple', 'needle', 'heart', 'willow'] },
-  { key: 'season', q: 'Which season?', choices: ['spring', 'summer', 'autumn', 'winter'] },
-  { key: 'character', q: 'What character?', choices: ['sapling', 'grown', 'ancient'] },
-  { key: 'extra', q: 'Anything extra?', choices: ['none', 'blossom', 'fruit'] },
+  { key: 'season',    name: 'Season',    q: 'Which season?',          choices: ['spring', 'summer', 'autumn', 'winter'],                 cap: .62, rewind: .08 },
+  { key: 'character', name: 'Character', q: 'What character?',        choices: ['sapling', 'grown', 'ancient'],                          cap: 1,   rewind: .35 },
+  { key: 'leaf',      name: 'Leaves',    q: 'What kind of leaves?',   choices: ['round', 'oval', 'maple', 'needle', 'heart', 'willow'],  cap: 1.72, rewind: 1 },
+  { key: 'extra',     name: 'Extra',     q: 'Anything extra?',        choices: ['none', 'blossom', 'fruit'],                             cap: 9,   rewind: 1.7 },
 ];
+const SEEDLING_CAP = .42;
 const choice = { leaf: 'oval', season: 'summer', character: 'grown', extra: 'none' };
+const answered = { season: false, character: false, leaf: false, extra: false };
+function growthCap() { let c = SEEDLING_CAP; for (const st of STEPS) { if (!answered[st.key]) break; c = st.cap; } return c; }
 
 /* ================= shapes (unit coords, anchored at origin, pointing up) ================= */
 const PATH = {};
@@ -266,7 +271,7 @@ function buildTree(seed, s) {
   const R0 = U * .08;
   const T = { s, branches, roots, clusters: [], flowers: [], fruits: [], maxDepth, U, trunkW, season, willow, needle,
     leafPath: PATH[s.leaf], leafSize, ramp: leafRamp, R0, sprites: null, windAmp: s.wind * (reduceMotion ? .3 : 1),
-    gust: 0, wf: .3, t0: performance.now(), shadowCol: rgba(mixc(hex(season.sky[0]), [0, 0, 0], .5)) };
+    gust: 0, wf: .3, t: 0, shadowCol: rgba(mixc(hex(season.sky[0]), [0, 0, 0], .5)) };
 
   if (leafRamp) {
     T.sprites = [0, 1, 2].map(tier => Array.from({ length: 6 }, () => makeSprite(T, tier, rng)));
@@ -281,7 +286,7 @@ function buildTree(seed, s) {
       const R = U * rnd(.06, .1) * [.85, 1, 1.15][dens];
       T.clusters.push({ b, t: useTip ? rnd(.85, 1) : rnd(.5, 1), z, tier, R, scale: R / R0 * (1 + z * .1),
         sprite: T.sprites[tier][(rng() * 6) | 0], rot: rnd(-.22, .22), phase: rng() * 6.28,
-        appear: b.start + b.dur * .85 + rnd(0, .12) });
+        appear: 1 + .6 * (b.start + b.dur * .85) + rnd(0, .06) });   // foliage phase: t in [1, 1.7]
     }
     T.clusters.sort((a, b) => a.z - b.z);
   }
@@ -294,14 +299,14 @@ function buildTree(seed, s) {
     const cnt = Math.round([26, 48, 80][dens] * (s.season === 'autumn' ? .55 : 1) * s.size);
     for (let i = 0; i < cnt && hosts; i++) {
       const c = hosts[(rng() * hosts.length) | 0], a = rng() * 6.28, r = Math.sqrt(rng()) * c.R * .85;
-      T.flowers.push({ c, ox: Math.cos(a) * r, oy: Math.sin(a) * r * .8, size: U * .014 * rnd(.8, 1.2), phase: rng() * 6.28, appear: c.appear + rnd(.15, .6), rot: rng() * 6.28 });
+      T.flowers.push({ c, ox: Math.cos(a) * r, oy: Math.sin(a) * r * .8, size: U * .014 * rnd(.8, 1.2), phase: rng() * 6.28, appear: 1.72 + rnd(0, .45), rot: rng() * 6.28 });
     }
   }
   if (s.fruit !== 'none') {
     const cnt = Math.round([7, 12, 18][dens] * s.size);
     for (let i = 0; i < cnt; i++) {
-      if (hosts) { const c = hosts[(rng() * hosts.length) | 0]; T.fruits.push({ c, ox: rnd(-.75, .75) * c.R, oy: rnd(.25, .8) * c.R, size: U * .019 * FRUIT[s.fruit][1] * rnd(.85, 1.15), phase: rng() * 6.28, appear: c.appear + rnd(.4, .9) }); }
-      else { const b = outerB[(rng() * outerB.length) | 0]; T.fruits.push({ b, t: rnd(.3, 1), ox: 0, oy: 0, size: U * .019 * FRUIT[s.fruit][1] * rnd(.85, 1.15), phase: rng() * 6.28, appear: rnd(1.2, 1.8) }); }
+      if (hosts) { const c = hosts[(rng() * hosts.length) | 0]; T.fruits.push({ c, ox: rnd(-.75, .75) * c.R, oy: rnd(.25, .8) * c.R, size: U * .019 * FRUIT[s.fruit][1] * rnd(.85, 1.15), phase: rng() * 6.28, appear: 1.8 + rnd(0, .6) }); }
+      else { const b = outerB[(rng() * outerB.length) | 0]; T.fruits.push({ b, t: rnd(.3, 1), ox: 0, oy: 0, size: U * .019 * FRUIT[s.fruit][1] * rnd(.85, 1.15), phase: rng() * 6.28, appear: 1.8 + rnd(0, .6) }); }
     }
   }
 
@@ -441,7 +446,7 @@ function drawStars(time) {
 }
 
 function drawRays(t, time) {
-  const T = tree, k = clamp((t - .45) / .9, 0, 1); if (k <= 0) return;
+  const T = tree, k = clamp((t - 1) / .7, 0, 1); if (k <= 0) return;
   const [sx, sy] = T.sun, len = H * 1.7, col = T.season.ray;
   for (const r of T.rays) {
     const a = r.angle + Math.sin(time * .12 + r.phase) * .02, alpha = k * r.alpha * (.7 + .3 * Math.sin(time * .45 + r.phase));
@@ -555,7 +560,7 @@ function drawFruit(t, time) {
 }
 
 function drawCanopyShadow(t) {
-  const T = tree, k = clamp((t - .45) / .7, 0, 1); if (k <= 0) return;
+  const T = tree, k = clamp((t - 1) / .6, 0, 1); if (k <= 0) return;
   ctx.fillStyle = 'rgba(10,20,15,.22)'; ctx.beginPath();
   ctx.ellipse(W / 2 + T.U * .1, groundY + T.U * .012, T.U * .45 * k, T.U * .03 * k, 0, 0, Math.PI * 2); ctx.fill();
 }
@@ -584,8 +589,8 @@ function updateParticles(dt, t, time) {
   const T = tree, s = T.s, U = T.U, gust = T.gust, wind = T.windAmp;
   let rate = 0, kind = null;
   if (s.season === 'winter') { rate = 9 + wind * 5; kind = 'snow'; }
-  else if (t > 1.1 && s.season === 'autumn' && T.clusters.length) { rate = 1.3 + wind * 1.6; kind = 'leaf'; }
-  else if (t > 1.5 && T.flowers.length) { rate = .8 + wind; kind = 'petal'; }
+  else if (t > 1.75 && s.season === 'autumn' && T.clusters.length) { rate = 1.3 + wind * 1.6; kind = 'leaf'; }
+  else if (t > 2.3 && T.flowers.length) { rate = .8 + wind; kind = 'petal'; }
   spawnAcc = rate ? spawnAcc + rate * dt : 0;
   while (spawnAcc >= 1 && particles.length < 240) { spawnAcc -= 1; spawn(kind, t); }
   if (t > .3 && Math.random() < dt * (s.season === 'summer' ? .9 : .5)) spawn('mote', t);
@@ -632,8 +637,8 @@ function frame(now) {
   requestAnimationFrame(frame);
   if (!tree) return;
   const dt = Math.min(.05, (now - lastNow) / 1000) || 0; lastNow = now;
-  const t = (now - tree.t0) / GROW_MS, time = now / 1000;
-  tree.t = t;
+  tree.t = Math.min(tree.t + dt * 1000 / GROW_MS, growthCap());
+  const t = tree.t, time = now / 1000;
   updateTree(t, time);
   ctx.drawImage(tree.bg, 0, 0, W, H);
   drawStars(time);
@@ -657,23 +662,53 @@ function layout() {
   canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
   resetT();
   groundY = Math.max(H * .45, panel.getBoundingClientRect().top - 22);
-  if (tree) { const t0 = tree.t0; tree = buildTree(seed, tree.s); tree.t0 = t0; }
+  if (tree) { const t = tree.t; tree = buildTree(seed, tree.s); tree.t = t; }
 }
 addEventListener('resize', layout);
 new ResizeObserver(layout).observe(panel);
 
-function grow(newSeed = true) {
+function grow(newSeed = true, keepT = false) {
   if (newSeed) seed = (Math.random() * 2147483647) | 0;
+  const t = tree ? tree.t : 0;
   tree = buildTree(seed, deriveSettings(mulberry32(seed ^ 0x5bd1e995)));
+  if (keepT) tree.t = t;
   particles.length = 0; spawnAcc = 0;
 }
 
 /* ================= step-by-step UI ================= */
 const stepEl = document.getElementById('step'), doneEl = document.getElementById('done');
-const qEl = document.getElementById('question'), dotsEl = document.getElementById('dots'), choicesEl = document.getElementById('choices');
-const backBtn = document.getElementById('back');
-let step = 0;
+const qEl = document.getElementById('question'), pillsEl = document.getElementById('pills'), choicesEl = document.getElementById('choices');
+let open = 0;                                   // index of the open question, or -1 when all answered
 const cap = s => s[0].toUpperCase() + s.slice(1);
+const labelFor = st => st.key === 'character' ? CHARACTER[choice.character].label : cap(choice[st.key]);
+
+function seasonSwatch(val) {
+  const sw = document.createElement('span'); sw.className = 'sw';
+  sw.style.background = `linear-gradient(${SEASONS[val].sky[0]},${SEASONS[val].sky[2]})`; return sw;
+}
+function renderPills() {
+  pillsEl.innerHTML = '';
+  STEPS.forEach((st, i) => {
+    const p = document.createElement('button'); p.type = 'button';
+    p.className = 'pill' + (answered[st.key] ? ' set' : '') + (open === i ? ' open' : '');
+    if (answered[st.key]) {
+      if (st.key === 'leaf') p.appendChild(leafIcon(choice.leaf, '#d8e6a8'));
+      if (st.key === 'season') p.appendChild(seasonSwatch(choice.season));
+      p.appendChild(document.createTextNode(labelFor(st)));
+    } else p.textContent = st.name;
+    p.setAttribute('aria-label', `${st.name}: ${answered[st.key] ? labelFor(st) : 'not chosen'}`);
+    p.addEventListener('click', () => openStep(i));
+    pillsEl.appendChild(p);
+  });
+}
+function openStep(i) { open = i; render(); }
+function choose(st, val) {
+  const changed = !answered[st.key] || choice[st.key] !== val;
+  choice[st.key] = val; answered[st.key] = true;
+  if (changed) { grow(false, true); tree.t = Math.min(tree.t, st.rewind); }
+  const next = STEPS.findIndex(s => !answered[s.key]);
+  open = next; render();
+}
 
 function leafIcon(type, color) {
   const cv = document.createElement('canvas'); cv.width = cv.height = 40;
@@ -683,34 +718,32 @@ function leafIcon(type, color) {
   if (type === 'needle') c.stroke(PATH.needle); else c.fill(PATH[type]);
   return cv;
 }
-function renderStep() {
+function render() {
+  renderPills();
+  if (open < 0) { stepEl.hidden = true; doneEl.hidden = false; return; }
   stepEl.hidden = false; doneEl.hidden = true;
-  const st = STEPS[step];
+  const st = STEPS[open];
   qEl.textContent = st.q;
-  dotsEl.innerHTML = STEPS.map((_, i) => `<i class="${i === step ? 'on' : i < step ? 'did' : ''}"></i>`).join('');
   choicesEl.innerHTML = '';
   for (const val of st.choices) {
+    const on = answered[st.key] && choice[st.key] === val;
     const b = document.createElement('button'); b.className = 'chip'; b.type = 'button';
-    b.setAttribute('aria-pressed', String(choice[st.key] === val));
-    if (st.key === 'leaf') b.appendChild(leafIcon(val, choice[st.key] === val ? '#1b2414' : '#d8e6a8'));
-    if (st.key === 'season') { const sw = document.createElement('span'); sw.className = 'sw'; sw.style.background = `linear-gradient(${SEASONS[val].sky[0]},${SEASONS[val].sky[2]})`; b.appendChild(sw); }
+    b.setAttribute('aria-pressed', String(on));
+    if (st.key === 'leaf') b.appendChild(leafIcon(val, on ? '#1b2414' : '#d8e6a8'));
+    if (st.key === 'season') b.appendChild(seasonSwatch(val));
     const lbl = document.createElement('span'); lbl.className = 'lbl';
     if (st.key === 'character') lbl.innerHTML = `${CHARACTER[val].label}<small>${CHARACTER[val].sub}</small>`;
     else lbl.textContent = cap(val);
     b.appendChild(lbl);
-    b.addEventListener('click', () => { choice[st.key] = val; step++; step >= STEPS.length ? finish() : renderStep(); });
+    b.addEventListener('click', () => choose(st, val));
     choicesEl.appendChild(b);
   }
-  backBtn.disabled = step === 0;
 }
-function finish() { step = STEPS.length; stepEl.hidden = true; doneEl.hidden = false; grow(); }
 
-backBtn.addEventListener('click', () => { if (step > 0) { step--; renderStep(); } });
-document.getElementById('surprise').addEventListener('click', () => {
-  for (const st of STEPS) choice[st.key] = st.choices[(Math.random() * st.choices.length) | 0];
-  finish();
+for (const el of document.querySelectorAll('.surprise')) el.addEventListener('click', () => {
+  for (const st of STEPS) { choice[st.key] = st.choices[(Math.random() * st.choices.length) | 0]; answered[st.key] = true; }
+  open = -1; grow(); render();
 });
-document.getElementById('change').addEventListener('click', () => { step = 0; renderStep(); });
 document.getElementById('regrow').addEventListener('click', () => grow());
 canvas.addEventListener('pointerdown', () => grow());
 addEventListener('keydown', e => { if (e.code === 'Space' || e.key === 'Enter') { e.preventDefault(); grow(); } });
@@ -725,7 +758,7 @@ document.getElementById('save').addEventListener('click', () => {
   }, 'image/png');
 });
 
-renderStep();
+render();
 layout();
 grow();
 })();

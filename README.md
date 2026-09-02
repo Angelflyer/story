@@ -2,18 +2,18 @@
 
 A tiny, mobile-friendly meditation toy that does one thing: grows a tree.
 
-Answer four quick questions and a unique, painterly tree sprouts and grows over about five seconds, then sways in the wind while leaves fall, petals drift, snow settles or glowing motes wander. Every tree is different.
+Answer four quick questions and a unique, painterly tree grows as you answer: each choice unlocks the next phase, so you watch it form during setup. Afterwards it sways in the wind while leaves fall, petals drift, snow settles or glowing motes wander. Every tree is different.
 
 ## The four questions
 
-| Step      | Choices                                         |
-|-----------|-------------------------------------------------|
-| Leaves    | round, oval, maple, needle, heart, willow       |
-| Season    | spring, summer, autumn, winter                  |
-| Character | sapling, grown, ancient (sets size, thickness and how full the crown is) |
-| Extra     | none, blossom, fruit                            |
+| Step      | Choices                                         | What it grows                    |
+|-----------|-------------------------------------------------|----------------------------------|
+| Season    | spring, summer, autumn, winter                  | the world, and the seedling      |
+| Character | sapling, grown, ancient                         | the full skeleton at that size   |
+| Leaves    | round, oval, maple, needle, heart, willow       | the foliage blooms               |
+| Extra     | none, blossom, fruit                            | blossom or fruit pops            |
 
-**Surprise me** picks everything at random. After the tree has grown, **Grow another** regrows with the same choices, **Change** goes back to the questions, and tapping the sky grows a fresh tree too. The download button in the corner saves the current frame as a PNG.
+Each answer collapses into a small pill above the question. Tap a pill to reopen that question; changing the answer replays just that phase on the same tree. **Surprise me** picks everything at random, **Grow another** regrows a new tree with the same choices, and tapping the sky does the same. The download button in the corner saves the current frame as a PNG.
 
 ## Running it
 
