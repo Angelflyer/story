@@ -2,7 +2,7 @@
 
 A single-level, no-nonsense tower defense in the spirit of the original Flash-era games,
 with a medieval / dark-fantasy look. Built as a plain web app (HTML, CSS, vanilla JS,
-Canvas 2D) that runs well on iPhone Safari and as a home-screen web app.
+three.js/WebGL) that runs well on iPhone Safari and as a home-screen web app.
 
 **No timers, no build queues, no daily rewards, no currency tricks.** You get gold for
 kills, you raise towers on fixed plots, you upgrade them twice, you have two spells.
@@ -44,17 +44,19 @@ Each tower has two upgrades. Selling refunds 70% of what was invested.
 index.html          markup + HUD
 css/style.css       UI styles (safe-area aware, touch-sized)
 js/data.js          level geometry, towers, enemies, waves, spells
-js/render.js        procedural map pre-render and all in-game drawing
-js/game.js          simulation, camera, input, frame rendering
+js/ground.js        terrain texture (grass, road, river bed) painted on a canvas
+js/render3d.js      three.js scene: procedural low-poly models, lights, shadows, particles, camera
+js/vendor/          three.js (MIT)
+js/game.js          simulation, input, frame sync
 js/audio.js         Web Audio SFX + music routed through Web Audio (works on iOS)
 js/ui.js            HUD, build/upgrade sheets, menus
 audio/              music and SFX (see CREDITS.md and audio/credits.json)
 icons/              app icons
 ```
 
-No build step and no dependencies. All artwork is drawn procedurally at runtime.
+No build step; the only dependency is three.js, vendored under js/vendor. All models and textures are generated procedurally at runtime.
 
 ## Credits and licenses
 
-Code is MIT licensed (see `LICENSE`). Music and sound effects come from
+Code is MIT licensed (see `LICENSE`); three.js is MIT (js/vendor/THREE-LICENSE). Music and sound effects come from
 The Battle for Wesnoth (GNU GPL v2+) and Kenney (CC0); see `CREDITS.md`.

@@ -26,6 +26,10 @@ A per-file mapping to the original source paths is in `audio/credits.json`.
 
 Cinzel and Crimson Pro, SIL Open Font License, loaded from Google Fonts with system serif fallbacks.
 
+## Rendering
+
+three.js (MIT) — https://github.com/mrdoob/three.js
+
 ## Everything else
 
 Game code, level design and all procedural artwork: this repository, MIT license.
