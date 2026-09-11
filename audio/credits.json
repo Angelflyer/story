@@ -1,0 +1,350 @@
+{
+ "music": {
+  "title": {
+   "title": "Legends of the North",
+   "author": "Mattias Westlund",
+   "source": "Battle for Wesnoth, data/core/music/legends_of_the_north.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "battle1": {
+   "title": "The City Falls",
+   "author": "Doug Kaufman",
+   "source": "Battle for Wesnoth, data/core/music/the_city_falls.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "battle2": {
+   "title": "Siege of Laurelmor",
+   "author": "Doug Kaufman",
+   "source": "Battle for Wesnoth, data/core/music/siege_of_laurelmor.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "battle3": {
+   "title": "Frantic",
+   "author": "Stephen Rozanc",
+   "source": "Battle for Wesnoth, data/core/music/frantic.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "victory": {
+   "title": "Victory",
+   "author": "Ryan Reilly",
+   "source": "Battle for Wesnoth, data/core/music/victory2.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "defeat": {
+   "title": "Defeat",
+   "author": "Ryan Reilly",
+   "source": "Battle for Wesnoth, data/core/music/defeat2.ogg",
+   "license": "GNU GPL v2+"
+  }
+ },
+ "sfx": {
+  "ui_tap": {
+   "source": "kenney-ui-audio/click1.wav",
+   "license": "CC0"
+  },
+  "ui_tap2": {
+   "source": "kenney-ui-audio/click2.wav",
+   "license": "CC0"
+  },
+  "ui_open": {
+   "source": "kenney-ui-audio/rollover2.wav",
+   "license": "CC0"
+  },
+  "ui_close": {
+   "source": "kenney-ui-audio/switch5.wav",
+   "license": "CC0"
+  },
+  "build": {
+   "source": "wesnoth/data/core/sounds/mace.wav",
+   "license": "GNU GPL v2+"
+  },
+  "gold": {
+   "source": "wesnoth/data/core/sounds/gold.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "upgrade": {
+   "source": "wesnoth/data/core/sounds/potion.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "sell": {
+   "source": "wesnoth/data/core/sounds/open-chest.wav",
+   "license": "GNU GPL v2+"
+  },
+  "fanfare": {
+   "source": "wesnoth/data/core/sounds/fanfare-short.wav",
+   "license": "GNU GPL v2+"
+  },
+  "heal": {
+   "source": "wesnoth/data/core/sounds/heal.wav",
+   "license": "GNU GPL v2+"
+  },
+  "bow": {
+   "source": "wesnoth/data/core/sounds/bow.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "bow2": {
+   "source": "wesnoth/data/core/sounds/bow-miss.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "crossbow": {
+   "source": "wesnoth/data/core/sounds/crossbow.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "crossbow2": {
+   "source": "wesnoth/data/core/sounds/crossbow-miss.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "magic1": {
+   "source": "wesnoth/data/core/sounds/magic-missile-1.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "magic2": {
+   "source": "wesnoth/data/core/sounds/magic-missile-2.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "magic3": {
+   "source": "wesnoth/data/core/sounds/magic-missile-3.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "catapult": {
+   "source": "wesnoth/data/core/sounds/sling-big.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "impact": {
+   "source": "wesnoth/data/core/sounds/club.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "explosion": {
+   "source": "wesnoth/data/core/sounds/explosion.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "cavein": {
+   "source": "wesnoth/data/core/sounds/cave-in.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "rumble": {
+   "source": "wesnoth/data/core/sounds/rumble.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "flame": {
+   "source": "wesnoth/data/core/sounds/flame-big.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "fire": {
+   "source": "wesnoth/data/core/sounds/fire.wav",
+   "license": "GNU GPL v2+"
+  },
+  "lightning": {
+   "source": "wesnoth/data/core/sounds/lightning.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "frost": {
+   "source": "wesnoth/data/core/sounds/slowed.wav",
+   "license": "GNU GPL v2+"
+  },
+  "holy": {
+   "source": "wesnoth/data/core/sounds/magic-holy-1.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "faerie": {
+   "source": "wesnoth/data/core/sounds/magic-faeriefire.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "dark": {
+   "source": "wesnoth/data/core/sounds/magic-dark-big.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "swish": {
+   "source": "wesnoth/data/core/sounds/dagger-swish.wav",
+   "license": "GNU GPL v2+"
+  },
+  "flesh": {
+   "source": "wesnoth/data/core/sounds/squishy-hit.wav",
+   "license": "GNU GPL v2+"
+  },
+  "throw": {
+   "source": "wesnoth/data/core/sounds/throw-1.wav",
+   "license": "GNU GPL v2+"
+  },
+  "orc_hit1": {
+   "source": "wesnoth/data/core/sounds/orc-hit-1.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "orc_hit2": {
+   "source": "wesnoth/data/core/sounds/orc-hit-2.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "orc_die1": {
+   "source": "wesnoth/data/core/sounds/orc-die-1.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "orc_die2": {
+   "source": "wesnoth/data/core/sounds/orc-die-2.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "gob_hit1": {
+   "source": "wesnoth/data/core/sounds/goblin-hit-1.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "gob_hit2": {
+   "source": "wesnoth/data/core/sounds/goblin-hit-2.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "gob_die1": {
+   "source": "wesnoth/data/core/sounds/goblin-die-1.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "gob_die2": {
+   "source": "wesnoth/data/core/sounds/goblin-die-2.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "wolf_hit1": {
+   "source": "wesnoth/data/core/sounds/wolf-hit-1.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "wolf_hit2": {
+   "source": "wesnoth/data/core/sounds/wolf-hit-2.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "wolf_die1": {
+   "source": "wesnoth/data/core/sounds/wolf-die-1.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "wolf_die2": {
+   "source": "wesnoth/data/core/sounds/wolf-die-3.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "wolf_growl1": {
+   "source": "wesnoth/data/core/sounds/wolf-growl-1.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "wolf_growl2": {
+   "source": "wesnoth/data/core/sounds/wolf-growl-2.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "troll_hit1": {
+   "source": "wesnoth/data/core/sounds/troll-hit-1.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "troll_hit2": {
+   "source": "wesnoth/data/core/sounds/troll-hit-2.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "troll_die1": {
+   "source": "wesnoth/data/core/sounds/troll-die-1.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "troll_die2": {
+   "source": "wesnoth/data/core/sounds/troll-die-2.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "skel_hit1": {
+   "source": "wesnoth/data/core/sounds/skeleton-hit-1.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "skel_hit2": {
+   "source": "wesnoth/data/core/sounds/skeleton-hit-2.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "skel_die1": {
+   "source": "wesnoth/data/core/sounds/skeleton-die-1.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "skel_die2": {
+   "source": "wesnoth/data/core/sounds/skeleton-die-2.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "ogre_hit1": {
+   "source": "wesnoth/data/core/sounds/ogre-hit-1.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "ogre_hit2": {
+   "source": "wesnoth/data/core/sounds/ogre-hit-2.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "ogre_die1": {
+   "source": "wesnoth/data/core/sounds/ogre-die-2.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "ogre_die2": {
+   "source": "wesnoth/data/core/sounds/ogre-die-3.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "human_hit1": {
+   "source": "wesnoth/data/core/sounds/human-hit-1.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "human_hit2": {
+   "source": "wesnoth/data/core/sounds/human-hit-2.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "human_die1": {
+   "source": "wesnoth/data/core/sounds/human-die-1.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "human_die2": {
+   "source": "wesnoth/data/core/sounds/human-die-2.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "horse_hit": {
+   "source": "wesnoth/data/core/sounds/horse-hit-1.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "horse_die": {
+   "source": "wesnoth/data/core/sounds/horse-die.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "horse_canter": {
+   "source": "wesnoth/data/core/sounds/horse-canter.wav",
+   "license": "GNU GPL v2+"
+  },
+  "lich_die": {
+   "source": "wesnoth/data/core/sounds/lich-die.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "ugg": {
+   "source": "wesnoth/data/core/sounds/ugg.wav",
+   "license": "GNU GPL v2+"
+  },
+  "groan": {
+   "source": "wesnoth/data/core/sounds/groan.wav",
+   "license": "GNU GPL v2+"
+  },
+  "wail": {
+   "source": "wesnoth/data/core/sounds/wail-sml.wav",
+   "license": "GNU GPL v2+"
+  },
+  "horn1": {
+   "source": "wesnoth/data/core/sounds/horn-signals/horn-1.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "horn2": {
+   "source": "wesnoth/data/core/sounds/horn-signals/horn-2.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "horn3": {
+   "source": "wesnoth/data/core/sounds/horn-signals/horn-3.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "horn4": {
+   "source": "wesnoth/data/core/sounds/horn-signals/horn-4.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "birds1": {
+   "source": "wesnoth/data/core/sounds/ambient/birds1.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "birds2": {
+   "source": "wesnoth/data/core/sounds/ambient/birds2.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "birds3": {
+   "source": "wesnoth/data/core/sounds/ambient/birds3.ogg",
+   "license": "GNU GPL v2+"
+  },
+  "wardrums": {
+   "source": "wesnoth/data/core/sounds/ambient/wardrums.ogg",
+   "license": "GNU GPL v2+"
+  }
+ }
+}
