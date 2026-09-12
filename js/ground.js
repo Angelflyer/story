@@ -39,53 +39,71 @@ window.TD = window.TD || {};
     // grass
     (function () {
       const gw = 240, gh = 400; const img = ctx.createImageData(gw, gh); const d = img.data;
-      const g1 = [112, 150, 62], g2 = [70, 108, 48], g3 = [150, 158, 74], g4 = [86, 124, 56];
+      const g1 = [78, 170, 96], g2 = [46, 126, 76], g3 = [124, 190, 96], g4 = [58, 146, 84];
       for (let y = 0; y < gh; y++) for (let x = 0; x < gw; x++) {
         const wx = x / gw * W, wy = y / gh * H;
         const n = noise.fbm(wx / 260, wy / 260, 4) * 0.5 + 0.5, m = noise.fbm(wx / 90 + 7, wy / 90 + 3, 3) * 0.5 + 0.5;
         let c = lerpC(g2, g1, n); c = lerpC(c, g3, Math.max(0, m - 0.55) * 1.2); c = lerpC(c, g4, Math.max(0, 0.42 - m) * 1.4);
-        c = lerpC(c, [52, 70, 60], Math.max(0, 1 - wy / 420) * 0.3);
+        c = lerpC(c, [44, 96, 78], Math.max(0, 1 - wy / 420) * 0.28);
         const i = (y * gw + x) * 4; d[i] = c[0]; d[i + 1] = c[1]; d[i + 2] = c[2]; d[i + 3] = 255;
       }
       const tmp = document.createElement('canvas'); tmp.width = gw; tmp.height = gh; tmp.getContext('2d').putImageData(img, 0, 0);
       ctx.imageSmoothingEnabled = true; ctx.drawImage(tmp, 0, 0, W, H);
-      for (let i = 0; i < 14000; i++) { const x = rnd() * W, y = rnd() * H; const l = 2 + rnd() * 4; ctx.strokeStyle = rnd() < 0.5 ? 'rgba(175,205,95,0.25)' : 'rgba(30,55,25,0.22)'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x + (rnd() - 0.5) * 2, y - l); ctx.stroke(); }
+      for (let i = 0; i < 14000; i++) { const x = rnd() * W, y = rnd() * H; const l = 2 + rnd() * 4; ctx.strokeStyle = rnd() < 0.5 ? 'rgba(160,225,130,0.22)' : 'rgba(20,80,50,0.2)'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x + (rnd() - 0.5) * 2, y - l); ctx.stroke(); }
       // worn dirt patches
-      for (let i = 0; i < 40; i++) { const x = rnd() * W, y = rnd() * H; ell(ctx, x, y, 20 + rnd() * 40, 12 + rnd() * 20, 'rgba(120,100,60,0.12)'); }
+      for (let i = 0; i < 40; i++) { const x = rnd() * W, y = rnd() * H; ell(ctx, x, y, 20 + rnd() * 40, 12 + rnd() * 20, 'rgba(150,120,70,0.1)'); }
     })();
 
     // river bed (water surface is a 3D mesh)
     (function () {
       const w = level.riverWidth; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
-      polyline(ctx, river); ctx.strokeStyle = 'rgba(70,60,40,0.6)'; ctx.lineWidth = w + 24; ctx.stroke();
-      polyline(ctx, river); ctx.strokeStyle = '#6b5a3c'; ctx.lineWidth = w + 12; ctx.stroke();
-      polyline(ctx, river); ctx.strokeStyle = '#1e4656'; ctx.lineWidth = w + 2; ctx.stroke();
-      polyline(ctx, river); ctx.strokeStyle = '#256a80'; ctx.lineWidth = w * 0.7; ctx.stroke();
+      polyline(ctx, river); ctx.strokeStyle = 'rgba(90,70,44,0.5)'; ctx.lineWidth = w + 26; ctx.stroke();
+      polyline(ctx, river); ctx.strokeStyle = '#b27052'; ctx.lineWidth = w + 12; ctx.stroke();
+      polyline(ctx, river); ctx.strokeStyle = '#17708f'; ctx.lineWidth = w + 2; ctx.stroke();
+      polyline(ctx, river); ctx.strokeStyle = '#1f92bd'; ctx.lineWidth = w * 0.7; ctx.stroke();
       for (let i = 0; i < river.length; i += 2) {
         const p = river[i], q = river[Math.min(i + 1, river.length - 1)]; const dx = q[0] - p[0], dy = q[1] - p[1], l = Math.hypot(dx, dy) || 1, nx = -dy / l, ny = dx / l;
-        for (const s of [-1, 1]) if (rnd() < 0.6) { const o = w / 2 + 5 + rnd() * 8; circ(ctx, p[0] + nx * o * s, p[1] + ny * o * s, 1.5 + rnd() * 2.5, rnd() < 0.5 ? '#9a9385' : '#6e685c'); }
+        for (const s of [-1, 1]) if (rnd() < 0.6) { const o = w / 2 + 5 + rnd() * 8; circ(ctx, p[0] + nx * o * s, p[1] + ny * o * s, 1.5 + rnd() * 2.5, rnd() < 0.5 ? '#aab8be' : '#837265'); }
       }
     })();
 
     // road
     (function () {
       const w = level.roadWidth; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
-      polyline(ctx, roadPts); ctx.strokeStyle = 'rgba(50,40,22,0.4)'; ctx.lineWidth = w + 16; ctx.stroke();
-      polyline(ctx, roadPts); ctx.strokeStyle = '#86694a'; ctx.lineWidth = w + 4; ctx.stroke();
-      polyline(ctx, roadPts); ctx.strokeStyle = '#ad9166'; ctx.lineWidth = w; ctx.stroke();
+      polyline(ctx, roadPts); ctx.strokeStyle = 'rgba(70,50,28,0.35)'; ctx.lineWidth = w + 16; ctx.stroke();
+      polyline(ctx, roadPts); ctx.strokeStyle = '#b27052'; ctx.lineWidth = w + 5; ctx.stroke();
+      polyline(ctx, roadPts); ctx.strokeStyle = '#c08e59'; ctx.lineWidth = w; ctx.stroke();
       for (let i = 0; i < roadPts.length; i++) {
         const p = roadPts[i], q = roadPts[Math.min(i + 1, roadPts.length - 1)]; const dx = q[0] - p[0], dy = q[1] - p[1], l = Math.hypot(dx, dy) || 1, nx = -dy / l, ny = dx / l;
-        for (let k = 0; k < 2; k++) { const o = (rnd() - 0.5) * w * 0.8; ell(ctx, p[0] + nx * o, p[1] + ny * o, 3 + rnd() * 6, 2 + rnd() * 3, rnd() < 0.5 ? 'rgba(130,108,75,0.35)' : 'rgba(95,75,48,0.3)'); }
-        if (i % 2 === 0) for (const s of [-1, 1]) { const o = 13 * s; circ(ctx, p[0] + nx * o, p[1] + ny * o, 1.6, 'rgba(75,56,32,0.35)'); }
+        for (let k = 0; k < 2; k++) { const o = (rnd() - 0.5) * w * 0.8; ell(ctx, p[0] + nx * o, p[1] + ny * o, 3 + rnd() * 6, 2 + rnd() * 3, rnd() < 0.5 ? 'rgba(226,188,141,0.22)' : 'rgba(150,98,64,0.24)'); }
+        if (i % 2 === 0) for (const s of [-1, 1]) { const o = 13 * s; circ(ctx, p[0] + nx * o, p[1] + ny * o, 1.6, 'rgba(125,61,44,0.3)'); }
         if (rnd() < 0.2) { const s = rnd() < 0.5 ? -1 : 1; const o = w / 2 + 2 + rnd() * 5; circ(ctx, p[0] + nx * o * s, p[1] + ny * o * s, 1 + rnd() * 1.6, 'rgba(150,145,135,0.8)'); }
+      }
+    })();
+
+    // stone foundations on the build plots
+    (function () {
+      for (const [x, y] of level.plots) {
+        const gr = ctx.createRadialGradient(x - 8, y - 8, 4, x, y, 42);
+        gr.addColorStop(0, '#cfc6b6'); gr.addColorStop(0.75, '#b3a996'); gr.addColorStop(1, '#8d8477');
+        circ(ctx, x, y, 42, gr);
+        ctx.strokeStyle = 'rgba(70,62,52,0.5)'; ctx.lineWidth = 2.5;
+        ctx.beginPath(); ctx.arc(x, y, 42, 0, TAU); ctx.stroke();
+        ctx.strokeStyle = 'rgba(70,62,52,0.32)'; ctx.lineWidth = 1.4;
+        for (let k = 0; k < 8; k++) {
+          const a = k / 8 * TAU + 0.3;
+          ctx.beginPath(); ctx.moveTo(x + Math.cos(a) * 17, y + Math.sin(a) * 17);
+          ctx.lineTo(x + Math.cos(a) * 41, y + Math.sin(a) * 41); ctx.stroke();
+        }
+        ctx.beginPath(); ctx.arc(x, y, 17, 0, TAU); ctx.stroke();
       }
     })();
 
     // dark ground under the Blackgate & flagstones in the castle yard
     (function () {
       const g = level.gate; const gr = ctx.createRadialGradient(g.x, g.y, 5, g.x, g.y, 120); gr.addColorStop(0, 'rgba(25,12,35,0.9)'); gr.addColorStop(1, 'rgba(25,12,35,0)'); circ(ctx, g.x, g.y, 120, gr);
-      const c = level.castle; ctx.fillStyle = '#7d766a'; ctx.fillRect(c.x - 130, c.y - 105, 260, 175);
-      ctx.strokeStyle = 'rgba(40,36,30,0.35)'; ctx.lineWidth = 1; for (let y = c.y - 105; y < c.y + 70; y += 14) { ctx.beginPath(); ctx.moveTo(c.x - 130, y); ctx.lineTo(c.x + 130, y); ctx.stroke(); } for (let x = c.x - 130; x < c.x + 130; x += 18) { ctx.beginPath(); ctx.moveTo(x, c.y - 105); ctx.lineTo(x, c.y + 70); ctx.stroke(); }
+      const c = level.castle; ctx.fillStyle = '#8d857a'; ctx.fillRect(c.x - 190, c.y - 152, 380, 296);
+      ctx.strokeStyle = 'rgba(60,56,50,0.25)'; ctx.lineWidth = 1; for (let y = c.y - 152; y < c.y + 144; y += 16) { ctx.beginPath(); ctx.moveTo(c.x - 190, y); ctx.lineTo(c.x + 190, y); ctx.stroke(); } for (let x = c.x - 190; x < c.x + 190; x += 20) { ctx.beginPath(); ctx.moveTo(x, c.y - 152); ctx.lineTo(x, c.y + 144); ctx.stroke(); }
     })();
     return { canvas: cv, river };
   };

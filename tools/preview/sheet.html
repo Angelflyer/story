@@ -1,0 +1,43 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+body{margin:0;background:#1b1f26;font:12px system-ui;color:#eee}
+#grid{display:grid;grid-template-columns:repeat(var(--c,8),1fr);gap:2px}
+.cell{position:relative}.cell canvas{display:block;width:100%;background:#2a303a}
+.cell span{position:absolute;left:2px;bottom:2px;background:#000a;padding:1px 4px;border-radius:3px;font-size:10px}
+</style></head><body><div id="grid"></div>
+<script type="module">
+import * as THREE from '/js/vendor/three.module.min.js';
+import { GLTFLoader } from '/js/vendor/GLTFLoader.js';
+const p = new URLSearchParams(location.search);
+const file = p.get('file') || 'kit.glb';
+const cols = +(p.get('cols') || 8), size = +(p.get('size') || 200);
+document.getElementById('grid').style.setProperty('--c', cols);
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+renderer.setSize(size, size); renderer.setPixelRatio(1);
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+const loader = new GLTFLoader();
+loader.load('/assets/models/' + file, (g) => {
+  const items = p.get('mode') === 'char' ? [g.scene] : g.scene.children.slice();
+  const grid = document.getElementById('grid');
+  for (const obj of items) {
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x2a303a);
+    scene.add(new THREE.HemisphereLight(0xdfeaf5, 0x50603a, 2.0));
+    const dl = new THREE.DirectionalLight(0xfff2dd, 2.6); dl.position.set(-3, 6, 4); scene.add(dl);
+    const clone = obj; scene.add(clone);
+    const box = new THREE.Box3().setFromObject(clone);
+    const c = box.getCenter(new THREE.Vector3()), s = box.getSize(new THREE.Vector3());
+    const r = Math.max(s.x, s.y, s.z) || 1;
+    const cam = new THREE.PerspectiveCamera(35, 1, 0.01, 1000);
+    cam.position.set(c.x + r * 1.5, c.y + r * 1.2, c.z + r * 1.9); cam.lookAt(c);
+    renderer.render(scene, cam);
+    const cv = document.createElement('canvas'); cv.width = cv.height = size;
+    cv.getContext('2d').drawImage(renderer.domElement, 0, 0);
+    const cell = document.createElement('div'); cell.className = 'cell';
+    cell.appendChild(cv);
+    const lbl = document.createElement('span');
+    lbl.textContent = obj.name + ' ' + [s.x, s.y, s.z].map(v => v.toFixed(1)).join('/');
+    cell.appendChild(lbl); grid.appendChild(cell);
+  }
+  document.title = 'READY ' + items.length;
+}, undefined, (e) => { document.title = 'ERROR ' + e; document.body.textContent = 'ERROR ' + e; });
+</script></body></html>

@@ -86,34 +86,37 @@ window.TD = window.TD || {};
   TD.TOWER_ORDER = ['archer', 'ballista', 'mage', 'catapult'];
   TD.SELL_RATIO = 0.7;
 
+  // model: file in assets/models, h: on-screen height in world units,
+  // anim: which clip to loop while moving, tint: optional material multiply.
   TD.ENEMIES = {
-    goblin:   { name: 'Goblin',        hp: 48,   speed: 74,  armor: 0,    resist: 0,   gold: 5,  size: 13, sfx: 'gob' },
-    wolf:     { name: 'Warg',          hp: 66,   speed: 118, armor: 0,    resist: 0,   gold: 6,  size: 15, sfx: 'wolf' },
-    orc:      { name: 'Orc Warrior',   hp: 150,  speed: 56,  armor: 0.2,  resist: 0,   gold: 9,  size: 17, sfx: 'orc' },
-    skeleton: { name: 'Bone Sentinel', hp: 110,  speed: 60,  armor: 0.55, resist: -0.5, gold: 8, size: 15, sfx: 'skel' },
-    rider:    { name: 'Black Rider',   hp: 260,  speed: 92,  armor: 0.4,  resist: 0.1, gold: 16, size: 19, sfx: 'human' },
-    troll:    { name: 'Cave Troll',    hp: 480,  speed: 44,  armor: 0.25, resist: 0.1, gold: 22, size: 24, regen: 3, sfx: 'troll' },
-    chieftain:{ name: 'Troll Chieftain', hp: 1700, speed: 40, armor: 0.3, resist: 0.15, gold: 90, size: 30, regen: 8, boss: true, sfx: 'troll' },
-    ogre:     { name: 'Ogre Warlord',  hp: 3400, speed: 34,  armor: 0.35, resist: 0.2, gold: 200, size: 36, regen: 4, boss: true, sfx: 'ogre' },
+    goblin:    { name: 'Goblin Runner',  hp: 48,   speed: 78,  armor: 0,    resist: 0,    gold: 5,  size: 13, model: 'goblin',          h: 30, anim: 'run',  sfx: 'gob' },
+    scout:     { name: 'Goblin Scout',   hp: 66,   speed: 120, armor: 0,    resist: 0,    gold: 6,  size: 13, model: 'goblin',          h: 28, anim: 'run',  tint: 0xc9a14a, sfx: 'gob' },
+    skeleton:  { name: 'Skeleton',       hp: 105,  speed: 58,  armor: 0.45, resist: -0.5, gold: 8,  size: 15, model: 'skeleton_minion', h: 34, anim: 'walk', sfx: 'skel' },
+    orc:       { name: 'Orc Warrior',    hp: 155,  speed: 56,  armor: 0.2,  resist: 0,    gold: 9,  size: 17, model: 'orc',             h: 38, anim: 'walk', tint: 0x9fbf78, sfx: 'orc' },
+    sentinel:  { name: 'Bone Sentinel',  hp: 230,  speed: 52,  armor: 0.6,  resist: -0.4, gold: 12, size: 18, model: 'skeleton',        h: 38, anim: 'walk', sfx: 'skel' },
+    rider:     { name: 'Black Rider',    hp: 280,  speed: 92,  armor: 0.45, resist: 0.1,  gold: 16, size: 19, model: 'rider',           h: 40, anim: 'run',  tint: 0x51586b, sfx: 'human' },
+    warlock:   { name: 'Dark Warlock',   hp: 330,  speed: 60,  armor: 0.1,  resist: 0.55, gold: 18, size: 18, model: 'mage',            h: 38, anim: 'walk', tint: 0x8a6fb5, sfx: 'human' },
+    troll:     { name: 'Cave Troll',     hp: 520,  speed: 46,  armor: 0.3,  resist: 0.1,  gold: 22, size: 24, model: 'orc',             h: 54, anim: 'walk', tint: 0x7f9aa8, regen: 3, sfx: 'troll' },
+    chieftain: { name: 'Orc Warlord',    hp: 1800, speed: 42,  armor: 0.35, resist: 0.15, gold: 90, size: 30, model: 'orc',             h: 68, anim: 'walk', tint: 0x6f8c4a, regen: 8, boss: true, sfx: 'troll' },
+    bonelord:  { name: 'The Bonelord',   hp: 3600, speed: 36,  armor: 0.4,  resist: 0.3,  gold: 200, size: 36, model: 'skeleton_mage',  h: 82, anim: 'walk', tint: 0x9a7fc0, regen: 5, boss: true, sfx: 'ogre' },
   };
 
-  // Each wave: groups spawn sequentially; {t: type, n: count, gap: seconds between, delay: seconds before group}
   TD.WAVES = [
     { name: 'Scouts',            groups: [ { t: 'goblin', n: 8, gap: 1.1 } ] },
-    { name: 'Goblin raiders',    groups: [ { t: 'goblin', n: 10, gap: 0.9 }, { t: 'wolf', n: 3, gap: 1.0, delay: 3 } ] },
-    { name: 'Wargs',             groups: [ { t: 'wolf', n: 8, gap: 0.8 }, { t: 'goblin', n: 6, gap: 0.8, delay: 2 } ] },
+    { name: 'Goblin raiders',    groups: [ { t: 'goblin', n: 10, gap: 0.9 }, { t: 'scout', n: 3, gap: 1.0, delay: 3 } ] },
+    { name: 'Runners',           groups: [ { t: 'scout', n: 8, gap: 0.8 }, { t: 'goblin', n: 6, gap: 0.8, delay: 2 } ] },
     { name: 'Orc vanguard',      groups: [ { t: 'orc', n: 6, gap: 1.4 }, { t: 'goblin', n: 8, gap: 0.7, delay: 2 } ] },
-    { name: 'The dead walk',     groups: [ { t: 'skeleton', n: 8, gap: 1.2 }, { t: 'wolf', n: 5, gap: 0.8, delay: 4 } ] },
+    { name: 'The dead walk',     groups: [ { t: 'skeleton', n: 8, gap: 1.2 }, { t: 'scout', n: 5, gap: 0.8, delay: 4 } ] },
     { name: 'Mixed host',        groups: [ { t: 'orc', n: 8, gap: 1.1 }, { t: 'skeleton', n: 6, gap: 1.0, delay: 3 }, { t: 'goblin', n: 10, gap: 0.6, delay: 2 } ] },
-    { name: 'Black Riders',      groups: [ { t: 'rider', n: 4, gap: 1.6 }, { t: 'wolf', n: 8, gap: 0.7, delay: 3 } ] },
+    { name: 'Black Riders',      groups: [ { t: 'rider', n: 4, gap: 1.6 }, { t: 'scout', n: 8, gap: 0.7, delay: 3 } ] },
     { name: 'Cave Trolls',       groups: [ { t: 'troll', n: 2, gap: 4 }, { t: 'orc', n: 8, gap: 1.0, delay: 2 } ] },
-    { name: 'Bone legion',       groups: [ { t: 'skeleton', n: 14, gap: 0.8 }, { t: 'rider', n: 3, gap: 1.5, delay: 4 } ] },
-    { name: 'The Chieftain',     groups: [ { t: 'orc', n: 6, gap: 1.0 }, { t: 'chieftain', n: 1, gap: 1, delay: 4 }, { t: 'goblin', n: 12, gap: 0.5, delay: 1 } ] },
-    { name: 'Wolf packs',        groups: [ { t: 'wolf', n: 16, gap: 0.55 }, { t: 'rider', n: 4, gap: 1.2, delay: 3 } ] },
+    { name: 'Bone legion',       groups: [ { t: 'skeleton', n: 12, gap: 0.8 }, { t: 'sentinel', n: 4, gap: 1.6, delay: 3 }, { t: 'rider', n: 3, gap: 1.5, delay: 3 } ] },
+    { name: 'The Warlord',       groups: [ { t: 'orc', n: 6, gap: 1.0 }, { t: 'chieftain', n: 1, gap: 1, delay: 4 }, { t: 'goblin', n: 12, gap: 0.5, delay: 1 } ] },
+    { name: 'Dark covenant',     groups: [ { t: 'warlock', n: 5, gap: 1.6 }, { t: 'scout', n: 14, gap: 0.55, delay: 3 }, { t: 'rider', n: 4, gap: 1.2, delay: 3 } ] },
     { name: 'Orc warband',       groups: [ { t: 'orc', n: 14, gap: 0.8 }, { t: 'troll', n: 3, gap: 3, delay: 2 } ] },
-    { name: 'Night of the dead', groups: [ { t: 'skeleton', n: 18, gap: 0.7 }, { t: 'rider', n: 5, gap: 1.2, delay: 2 }, { t: 'troll', n: 2, gap: 3, delay: 2 } ] },
+    { name: 'Night of the dead', groups: [ { t: 'skeleton', n: 16, gap: 0.7 }, { t: 'sentinel', n: 6, gap: 1.3, delay: 2 }, { t: 'warlock', n: 4, gap: 1.4, delay: 2 } ] },
     { name: 'The great host',    groups: [ { t: 'goblin', n: 14, gap: 0.45 }, { t: 'orc', n: 12, gap: 0.8, delay: 1 }, { t: 'rider', n: 6, gap: 1.1, delay: 2 }, { t: 'troll', n: 3, gap: 2.5, delay: 2 } ] },
-    { name: 'The Ogre Warlord',  groups: [ { t: 'troll', n: 3, gap: 2.5 }, { t: 'skeleton', n: 10, gap: 0.7, delay: 2 }, { t: 'ogre', n: 1, gap: 1, delay: 5 }, { t: 'rider', n: 6, gap: 1.0, delay: 2 } ] },
+    { name: 'The Bonelord',      groups: [ { t: 'sentinel', n: 6, gap: 1.4 }, { t: 'troll', n: 3, gap: 2.5, delay: 2 }, { t: 'bonelord', n: 1, gap: 1, delay: 5 }, { t: 'skeleton', n: 12, gap: 0.7, delay: 2 }, { t: 'warlock', n: 4, gap: 1.5, delay: 3 } ] },
   ];
 
   TD.SPELLS = {

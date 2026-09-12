@@ -20,15 +20,18 @@ window.TD = window.TD || {};
   };
 
   // ---------- setup ---------------------------------------------------------
-  G.init = function (canvas) {
+  G.init = function (canvas, onProgress) {
     G.canvas = canvas;
     G.path = TD.buildPath(TD.LEVEL.path, TD.LEVEL.cornerRadius, 4);
     R3().init(canvas, TD.LEVEL, G.path);
     window.addEventListener('resize', () => R3().resize());
     window.addEventListener('orientationchange', () => setTimeout(() => R3().resize(), 250));
     G.bindInput();
-    R3().fitInitial();
-    requestAnimationFrame(G.frame);
+    return R3().load(onProgress).then(() => {
+      G.ready = true;
+      R3().fitInitial();
+      requestAnimationFrame(G.frame);
+    });
   };
   G.fitInitial = function () { R3().fitInitial(); };
   G.fitMap = function () { R3().fitMap(); };
@@ -75,7 +78,7 @@ window.TD = window.TD || {};
   G.upgrade = function (t) {
     const c = G.upgradeCost(t); if (c == null) return false;
     if (G.gold < c) { UI().toast('Not enough gold'); A().play('ui_close'); return false; }
-    G.gold -= c; G.stats.spent += c; t.invested += c; t.level++;
+    G.gold -= c; G.stats.spent += c; t.invested += c; t.level++; t.muzzleH = null;
     G.ring(t.x, t.y, 8, 70, 0.7, 0xfff0b4, 3);
     G.burst(t.x, t.y, 22, { speed: [30, 110], life: [0.5, 1.0], size: [1.5, 3], type: 'spark', color: '#ffe08a', up: 60, y: 30 });
     G.sfxAt('upgrade', t.x, { vol: 0.9 }); G.sfxAt('build', t.x, { vol: 0.5, rate: 1.2 });
@@ -140,6 +143,7 @@ window.TD = window.TD || {};
   };
   G.kill = function (e, src) {
     e.dead = true; G.stats.kills++;
+    R3().killEnemy(e);
     G.gold += e.def.gold; G.floater(e.x, e.y - e.def.size * 2, '+' + e.def.gold, '#e2b657', e.def.boss ? 20 : 13);
     if (src && src.tower) src.tower.kills++;
     const s = e.def.size;
@@ -250,7 +254,9 @@ window.TD = window.TD || {};
 
   // ---------- projectiles -------------------------------------------------------
   G.fire = function (t, target, lv) {
-    const def = t.def; const sx = t.x, sy = t.y; const h0 = def.id === 'mage' ? 110 + t.level * 12 : def.id === 'archer' ? 62 + t.level * 9 : def.id === 'ballista' ? 48 + t.level * 5 : 30;
+    const def = t.def; const sx = t.x, sy = t.y;
+    if (t.muzzleH == null) t.muzzleH = R3().towerHeight(t.type, t.level) * (def.id === 'catapult' ? 0.55 : 0.82);
+    const h0 = t.muzzleH;
     if (def.projectile === 'arrow') {
       G.projectiles.push({ kind: 'arrow', x: sx, y: sy, h: h0, vx: 0, vy: 0, speed: 560, target, dmg: lv.dmg, dtype: lv.dtype, tower: t, height: 0, age: 0 });
       G.sfxAt(Math.random() < 0.5 ? 'bow' : 'bow2', t.x, { vol: 0.45, vary: 0.08, throttle: 60 });
@@ -378,6 +384,7 @@ window.TD = window.TD || {};
   let last = 0;
   G.frame = function (ts) {
     requestAnimationFrame(G.frame);
+    if (!G.ready) { last = ts; return; }
     const raw = Math.min(0.05, (ts - last) / 1000 || 0); last = ts;
     const dt = raw * (G.running && !G.paused ? G.speed : 1);
     if (G.running && !G.paused) G.update(dt);
@@ -386,7 +393,7 @@ window.TD = window.TD || {};
 
   G.render = function (rawDt) {
     const time = performance.now() / 1000; const R = R3();
-    R.syncTowers(G.towers, time); R.syncEnemies(G.enemies, time); R.syncProjectiles(G.projectiles);
+    R.syncTowers(G.towers, time); R.syncEnemies(G.enemies, time, Math.min(0.05, rawDt)); R.syncProjectiles(G.projectiles);
     R.setPlotStates(G.towers, G.selected && G.selected.kind === 'plot' ? G.selected.index : -1, time);
     R.setSpellHint(G.casting === 'fire' && G.spellHint ? { x: G.spellHint.x, y: G.spellHint.y, r: TD.SPELLS.fire.radius } : null);
     R.render(rawDt, time, G);

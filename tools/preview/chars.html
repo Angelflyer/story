@@ -1,0 +1,41 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+body{margin:0;background:#1b1f26;font:12px system-ui;color:#eee}
+#grid{display:grid;grid-template-columns:repeat(8,1fr);gap:2px}
+.cell{position:relative}.cell canvas{display:block;width:100%}
+.cell span{position:absolute;left:2px;bottom:2px;background:#000a;padding:1px 4px;border-radius:3px;font-size:11px}
+</style></head><body><div id="grid"></div>
+<script type="module">
+import * as THREE from '/js/vendor/three.module.min.js';
+import { GLTFLoader } from '/js/vendor/GLTFLoader.js';
+const files = ['skeleton','skeleton_minion','skeleton_mage','goblin','orc','rider','mage','archer'];
+const poses = ['walk','attack','die'];
+const S = 240;
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true, alpha: false });
+renderer.setSize(S, S); renderer.setPixelRatio(1); renderer.toneMapping = THREE.ACESFilmicToneMapping;
+const loader = new GLTFLoader();
+const grid = document.getElementById('grid');
+let done = 0;
+for (const pose of poses) for (const f of files) {
+  loader.load('/assets/models/' + f + '.glb', (g) => {
+    const scene = new THREE.Scene(); scene.background = new THREE.Color(0x2a303a);
+    scene.add(new THREE.HemisphereLight(0xdfeaf5, 0x50603a, 2.0));
+    const dl = new THREE.DirectionalLight(0xfff2dd, 2.6); dl.position.set(-3, 6, 4); scene.add(dl);
+    scene.add(g.scene);
+    const mixer = new THREE.AnimationMixer(g.scene);
+    const clip = THREE.AnimationClip.findByName(g.animations, pose);
+    if (clip) { const a = mixer.clipAction(clip); a.play(); mixer.update(pose === 'die' ? clip.duration * 0.95 : clip.duration * 0.4); }
+    const box = new THREE.Box3().setFromObject(g.scene);
+    const c = box.getCenter(new THREE.Vector3()), s = box.getSize(new THREE.Vector3());
+    const r = Math.max(s.x, s.y, s.z) || 1;
+    const cam = new THREE.PerspectiveCamera(32, 1, 0.01, 100);
+    cam.position.set(c.x + r * 1.3, c.y + r * 0.9, c.z + r * 1.7); cam.lookAt(c.x, c.y, c.z);
+    renderer.render(scene, cam);
+    const cv = document.createElement('canvas'); cv.width = cv.height = S;
+    cv.getContext('2d').drawImage(renderer.domElement, 0, 0);
+    const cell = document.createElement('div'); cell.className = 'cell'; cell.appendChild(cv);
+    const lbl = document.createElement('span'); lbl.textContent = f + ' ' + pose + ' h=' + s.y.toFixed(2);
+    cell.appendChild(lbl); grid.appendChild(cell);
+    if (++done === files.length * poses.length) document.title = 'READY';
+  }, undefined, e => { document.title = 'ERROR ' + e; });
+}
+</script></body></html>

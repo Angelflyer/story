@@ -65,7 +65,8 @@
     <h1>Ravenhold</h1>
     <div class="sub">The Old Road</div>
     <p class="lead">The Blackgate has opened. Raise towers along the road and hold the keep against goblins, wargs, orcs, the restless dead, and worse.</p>
-    <button id="btn-start" class="big">Take up arms</button>
+    <button id="btn-start" class="big" disabled>Take up arms</button>
+    <div id="loading" class="loading"><div class="bar"><i id="loading-fill"></i></div><span id="loading-text">Mustering the garrison…</span></div>
     <div class="foot">Best on iPhone · headphones recommended</div>
   </div>
 </div>
@@ -106,10 +107,6 @@
 <div id="banner" class="banner hidden"><div class="bm"></div><div class="bs"></div></div>
 <div id="toast" class="toast hidden"></div>
 
-<script type="module">
-  import * as THREE from './js/vendor/three.module.min.js';
-  window.THREE = THREE; window.dispatchEvent(new Event('three-ready'));
-</script>
 <script src="js/data.js"></script>
 <script src="js/audio.js"></script>
 <script src="js/ground.js"></script>
@@ -117,5 +114,12 @@
 <script src="js/game.js"></script>
 <script src="js/ui.js"></script>
 <script src="js/main.js"></script>
+<script type="module">
+  import * as THREE from './js/vendor/three.module.min.js';
+  import { GLTFLoader } from './js/vendor/GLTFLoader.js';
+  import { clone } from './js/vendor/SkeletonUtils.js';
+  window.TD.R3.setLibs(THREE, GLTFLoader, clone);
+  window.TD.boot();
+</script>
 </body>
 </html>
