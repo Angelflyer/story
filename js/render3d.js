@@ -93,13 +93,34 @@ window.TD = window.TD || {};
   // ---------- asset loading --------------------------------------------------
   const CHARACTERS = ['goblin', 'orc', 'rider', 'mage', 'skeleton', 'skeleton_minion', 'skeleton_mage'];
 
+  // Fetch a .glb. Some static hosts refuse to serve model/gltf-binary; in that
+  // case fall back to the same bytes wrapped in a JSON envelope next to it.
+  function fetchModel(url) {
+    return fetch(url)
+      .then((r) => {
+        if (!r.ok) throw new Error(r.status);
+        return r.arrayBuffer();
+      })
+      .then((buf) => {
+        const magic = new DataView(buf).getUint32(0, true);
+        if (magic !== 0x46546c67) throw new Error('not a glb');
+        return buf;
+      })
+      .catch(() => fetch(url + '.json').then((r) => r.json()).then((j) => {
+        const bin = atob(j.b64);
+        const out = new Uint8Array(bin.length);
+        for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+        return out.buffer;
+      }));
+  }
+
   R.load = function (onProgress) {
     const loader = new GLTFLoader();
     const files = [['kit', 'assets/models/kit.glb']].concat(CHARACTERS.map((n) => [n, 'assets/models/' + n + '.glb']));
     let done = 0;
     R.kit = {}; R.chars = {};
-    const one = ([name, url]) => new Promise((res, rej) => {
-      loader.load(url, (g) => {
+    const one = ([name, url]) => fetchModel(url).then((buf) => new Promise((res, rej) => {
+      loader.parse(buf, '', (g) => {
         if (name === 'kit') {
           for (const child of g.scene.children.slice()) { R.kit[child.name] = child; g.scene.remove(child); }
           for (const key in R.kit) {
@@ -116,8 +137,8 @@ window.TD = window.TD || {};
         }
         onProgress && onProgress(++done / files.length);
         res();
-      }, undefined, rej);
-    });
+      }, rej);
+    }));
     return Promise.all(files.map(one)).then(() => { R.buildWorld(); });
   };
 
