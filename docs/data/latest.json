@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13T21:16:51+00:00",
+ "updated": "2026-10-13T21:19:18+00:00",
  "teams": {
   "cert-pl": {
    "status": "ok",
@@ -632,21 +632,59 @@
    ]
   },
   "csirt-it": {
-   "status": "no-feed",
-   "tried": [
-    "https://www.acn.gov.it/portale/csirt-italia/feed/",
-    "https://www.acn.gov.it/portale/csirt-italia/rss.xml",
-    "https://www.acn.gov.it/portale/csirt-italia/rss",
-    "https://www.acn.gov.it/feed/",
-    "https://www.acn.gov.it/rss.xml",
-    "https://www.acn.gov.it/rss",
-    "https://www.acn.gov.it/feed.xml",
-    "https://www.acn.gov.it/atom.xml",
-    "https://www.acn.gov.it/index.xml",
-    "https://www.acn.gov.it/feed.rss",
-    "https://www.acn.gov.it/?format=feed&type=rss"
-   ],
-   "items": []
+   "status": "watched",
+   "page": "https://www.acn.gov.it/portale/csirt-italia",
+   "via": "page",
+   "items": [
+    {
+     "title": "RSS: apre una nuova finestra",
+     "link": "https://www.acn.gov.it/portale/feedrss/-/journal/rss/20119/723192",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "Modalità e specifiche di base",
+     "link": "https://www.acn.gov.it/portale/nis/modalita-specifiche-base",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "Aggiornamento delle informazioni",
+     "link": "https://www.acn.gov.it/portale/nis/aggiornamento-informazioni",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "Regolamento Cloud per la PA",
+     "link": "https://www.acn.gov.it/portale/cloud/regolamento-cloud-per-la-pa",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "Qualificazione e adeguamento",
+     "link": "https://www.acn.gov.it/portale/cloud/qualificazione-e-adeguamento",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "Divulgazione coordinata delle vulnerabilità",
+     "link": "https://www.acn.gov.it/portale/csirt-italia/cvd",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "Opportunità di finanziamento",
+     "link": "https://www.acn.gov.it/portale/ncc-italia/opportunita-di-finanziamento",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "Zimbra ZCS: rilevato sfruttamento di vulnerabilità in versioni non aggiornate",
+     "link": "https://www.acn.gov.it/portale/w/zimbra-zcs-rilevato-sfruttamento-di-vulnerabilita-in-versioni-non-aggiornate",
+     "date": null,
+     "summary": ""
+    }
+   ]
   },
   "cert-lv": {
    "status": "ok",
@@ -849,7 +887,7 @@
    ]
   },
   "cert-pt": {
-   "status": "ok",
+   "status": "stale",
    "feed": "https://www.cncs.gov.pt/index.xml",
    "via": "probed",
    "items": [
@@ -901,7 +939,8 @@
      "date": "2022-06-23T00:00:00+00:00",
      "summary": ""
     }
-   ]
+   ],
+   "error": "latest fetch failed"
   },
   "dnsc-ro": {
    "status": "ok",
