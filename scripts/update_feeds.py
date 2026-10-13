@@ -19,13 +19,14 @@ from xml.etree import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "docs" / "data"
-UA = "Mozilla/5.0 (compatible; EU-CERT-Atlas/1.0; +https://github.com/angelflyer/story)"
+UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
 TIMEOUT = 20
 MAX_ITEMS = 8
+DEAD_DAYS = 730  # a feed with nothing newer than this is treated as abandoned
 
 
 def fetch(url):
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml, text/html;q=0.8, */*;q=0.5"})
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "en-GB,en;q=0.8", "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml, text/html;q=0.8, */*;q=0.5"})
     with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
         return r.read(3_000_000), r.headers.get("Content-Type", ""), r.geturl()
 
@@ -101,6 +102,8 @@ class AltLinks(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
+        if tag == "a" and a.get("href") and re.search(r"(rss|atom|/feed)", a["href"], re.I) and not a["href"].startswith("mailto:"):
+            self.found.append(a["href"])
         if tag == "link" and "alternate" in (a.get("rel") or "").lower() and any(t in (a.get("type") or "") for t in ("rss", "atom")) and a.get("href"):
             self.found.append(a["href"])
 
@@ -145,7 +148,8 @@ def watch_page(page):
         if u.netloc != base.netloc or url.rstrip("/") in skip or url in seen:
             continue
         depth = len([x for x in u.path.split("/") if x])
-        if depth < 2 or (listing and depth <= len([x for x in listing.split("/") if x])):
+        under_listing = listing and u.path.startswith(listing + "/") and len(u.path.rstrip("/")) > len(listing) + 1
+        if depth < 2 or not (under_listing or re.search(r"\d{3,}", u.path)):
             continue
         seen.add(url)
         m = DATE_RE.search(url) or DATE_RE.search(txt)
@@ -220,6 +224,9 @@ def try_urls(urls, tried, phase, parser=parse_feed):
             items = parser(raw, final)
         except Exception:  # noqa: BLE001
             continue
+        newest = max((i["date"] for i in items if i["date"]), default=None)
+        if newest and (datetime.now(timezone.utc) - datetime.fromisoformat(newest)).days > DEAD_DAYS:
+            continue
         if items:
             return {"status": "ok", "feed": url, "via": phase, "items": items}
     return None
@@ -240,7 +247,7 @@ def update(cert):
         try:
             found += discover(page)
         except Exception as e:  # noqa: BLE001
-            tried.append(f"{page} (discovery: {type(e).__name__})")
+            tried.append(f"{page} (discovery: {type(e).__name__} {getattr(e, 'code', '')})".replace(" )", ")"))
     r = try_urls(found, tried, "discovered")
     if r:
         return r
@@ -270,7 +277,10 @@ def main():
     for c in certs:
         r = results[c["id"]]
         # Keep the last good items when a feed is temporarily down.
-        if r["status"] not in ("ok", "watched") and previous.get(c["id"], {}).get("items"):
+        prev_items = previous.get(c["id"], {}).get("items") or []
+        prev_newest = max((i["date"] for i in prev_items if i.get("date")), default=None)
+        prev_alive = prev_newest and (datetime.now(timezone.utc) - datetime.fromisoformat(prev_newest)).days <= DEAD_DAYS
+        if r["status"] not in ("ok", "watched") and prev_alive:
             r = {**previous[c["id"]], "status": "stale", "error": "latest fetch failed"}
         teams[c["id"]] = r
         print(f"{c['id']:<14} {r['status']:<8} {r.get('feed', '')}", file=sys.stderr)

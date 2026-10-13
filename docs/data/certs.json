@@ -1223,7 +1223,9 @@
         }
       ],
       "stats": [],
-      "feeds": [],
+      "feeds": [
+        "https://www.acn.gov.it/portale/feedrss/-/journal/rss/20119/723192"
+      ],
       "newsletter": null,
       "related": [],
       "pages": [
