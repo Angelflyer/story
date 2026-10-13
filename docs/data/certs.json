@@ -561,6 +561,18 @@
           "name": "Report an incident",
           "desc": "Email abuse@csirt.cz.",
           "url": "https://csirt.cz/"
+        },
+        {
+          "cat": "reports",
+          "name": "NÚKIB quarterly threat overview",
+          "desc": "Quarterly Czech threat overview from the national cyber authority (Q1 2026 edition available).",
+          "url": "https://nukib.gov.cz/download/publikace/vyzkum/2026-Ctvrtletni-prehled-hrozeb_Q1.pdf"
+        },
+        {
+          "cat": "reports",
+          "name": "NÚKIB annual report on the state of cyber security",
+          "desc": "Zpráva o stavu kybernetické bezpečnosti, 2026 edition.",
+          "url": "https://nukib.gov.cz/download/publikace/zpravy_o_stavu/ZSKB2026.pdf"
         }
       ],
       "stats": [],
@@ -581,7 +593,7 @@
         }
       ],
       "pages": [
-        "https://www.nic.cz/"
+        "https://www.nic.cz/news/"
       ]
     },
     {
@@ -704,8 +716,8 @@
         {
           "cat": "reports",
           "name": "Cyber Security in Estonia yearbook",
-          "desc": "Annual review of incidents and threats.",
-          "url": "https://www.ria.ee/en"
+          "desc": "Annual review of incidents and threats. The 2026 edition reviews 2025, a record year for fraud and for vulnerabilities.",
+          "url": "https://www.ria.ee/sites/default/files/documents/2026-02/RIA-kuberturvalisuse-aastaraamat-2026.pdf"
         }
       ],
       "stats": [
@@ -722,7 +734,8 @@
       "newsletter": null,
       "related": [],
       "pages": [
-        "https://www.ria.ee/en/news"
+        "https://www.ria.ee/uudised",
+        "https://www.ria.ee/en"
       ]
     },
     {
@@ -1085,12 +1098,18 @@
           "cat": "alerts",
           "name": "Figyelmeztetések (warnings)",
           "desc": "Warnings on threats and campaigns.",
-          "url": "https://nki.gov.hu/figyelmeztetesek/"
+          "url": "https://nki.gov.hu/en/figyelmeztetesek/riasztas/"
         },
         {
           "cat": "alerts",
           "name": "Sérülékenységek (vulnerabilities)",
           "desc": "Rolling list of newly published CVEs from major vendors, in Hungarian.",
+          "url": "https://nki.gov.hu/figyelmeztetesek/cve-serulekenysegek/"
+        },
+        {
+          "cat": "newsletter",
+          "name": "Heti sajtószemle (weekly press review)",
+          "desc": "Weekly PDF review of international IT security news and newly exploited CVEs, in Hungarian.",
           "url": "https://nki.gov.hu/"
         },
         {
@@ -1102,7 +1121,9 @@
       ],
       "stats": [],
       "feeds": [
-        "https://nki.gov.hu/feed/"
+        "https://nki.gov.hu/figyelmeztetesek/riasztas/feed/",
+        "https://nki.gov.hu/figyelmeztetesek/feed/",
+        "https://nki.gov.hu/en/figyelmeztetesek/riasztas/feed/"
       ],
       "newsletter": null,
       "related": [
@@ -1113,7 +1134,8 @@
         }
       ],
       "pages": [
-        "https://nki.gov.hu/figyelmeztetesek/"
+        "https://nki.gov.hu/figyelmeztetesek/cve-serulekenysegek/",
+        "https://nki.gov.hu/en/figyelmeztetesek/riasztas/"
       ]
     },
     {
@@ -1762,8 +1784,8 @@
       "related": [
         {
           "name": "CSIRT.SK",
-          "desc": "Government CSIRT for public administration.",
-          "url": "https://www.csirt.gov.sk/"
+          "desc": "Government CSIRT for public administration. Publishes monthly threat reports.",
+          "url": "https://csirt.sk/publikacna-cinnost"
         }
       ],
       "pages": [
@@ -2183,8 +2205,8 @@
         {
           "cat": "alerts",
           "name": "Special reports & news",
-          "desc": "Alerts on mass exploitation events.",
-          "url": "https://www.shadowserver.org/news/"
+          "desc": "Scan results and mass-exploitation alerts, posted mostly on Bluesky and X.",
+          "url": "https://bsky.app/profile/shadowserver.bsky.social"
         }
       ],
       "stats": [
@@ -2198,13 +2220,12 @@
         }
       ],
       "feeds": [
-        "https://www.shadowserver.org/feed/"
+        "https://www.shadowserver.org/topics/shadowserver/feed/",
+        "https://bsky.app/profile/shadowserver.bsky.social/rss"
       ],
       "newsletter": null,
       "related": [],
-      "pages": [
-        "https://www.shadowserver.org/news/"
-      ]
+      "pages": []
     },
     {
       "id": "abuse-ch",

@@ -25,9 +25,12 @@ MAX_ITEMS = 8
 DEAD_DAYS = 730  # a feed with nothing newer than this is treated as abandoned
 
 
+_opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor())
+
+
 def fetch(url):
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "en-GB,en;q=0.8", "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml, text/html;q=0.8, */*;q=0.5"})
-    with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+    with _opener.open(req, timeout=TIMEOUT) as r:
         return r.read(3_000_000), r.headers.get("Content-Type", ""), r.geturl()
 
 
@@ -261,7 +264,8 @@ def update(cert):
             continue
         if items:
             return {"status": "watched", "page": page, "via": "page", "items": items}
-    return {"status": "no-feed", "tried": tried, "items": []}
+    blocked = bool(tried) and all("403" in t for t in tried if "discovery" in t) and any("discovery" in t for t in tried)
+    return {"status": "no-feed", "blocked": blocked, "tried": tried, "items": []}
 
 
 def main():
