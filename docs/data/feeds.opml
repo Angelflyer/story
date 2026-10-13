@@ -7,7 +7,7 @@
   <outline type="rss" text="BG – CERT Bulgaria" xmlUrl="https://www.govcert.bg/feed/" htmlUrl="https://govcert.bg/"/>
   <outline type="rss" text="HR – CERT.hr" xmlUrl="https://www.cert.hr/feed/" htmlUrl="https://www.cert.hr/"/>
   <outline type="rss" text="CY – CSIRT-CY" xmlUrl="https://csirt.cy/?format=feed&amp;type=rss" htmlUrl="https://csirt.cy/"/>
-  <outline type="rss" text="DK – CFCS" xmlUrl="https://samsik.dk/feed/" htmlUrl="https://www.cfcs.dk/"/>
+  <outline type="rss" text="DK – SAMSIK / CFCS" xmlUrl="https://samsik.dk/feed/" htmlUrl="https://samsik.dk/"/>
   <outline type="rss" text="FI – NCSC-FI" xmlUrl="https://www.kyberturvallisuuskeskus.fi/feed/rss/en" htmlUrl="https://www.kyberturvallisuuskeskus.fi/en"/>
   <outline type="rss" text="FR – CERT-FR" xmlUrl="https://www.cert.ssi.gouv.fr/feed/" htmlUrl="https://www.cert.ssi.gouv.fr/"/>
   <outline type="rss" text="DE – CERT-Bund" xmlUrl="https://wid.cert-bund.de/content/public/securityAdvisory/rss" htmlUrl="https://wid.cert-bund.de/"/>

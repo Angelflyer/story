@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13T20:37:27+00:00",
+ "updated": "2026-10-13T20:38:36+00:00",
  "teams": {
   "cert-pl": {
    "status": "ok",
@@ -251,7 +251,7 @@
   "cfcs-dk": {
    "status": "ok",
    "feed": "https://samsik.dk/feed/",
-   "via": "discovered",
+   "via": "known",
    "items": [
     {
      "title": "Myndigheder, organisationer og virksomheder bør supplere deres identitetskontrol efter læk fra CPR-registeret",
@@ -801,7 +801,7 @@
    ]
   },
   "incibe-cert": {
-   "status": "ok",
+   "status": "stale",
    "feed": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/feed",
    "via": "known",
    "items": [
@@ -853,7 +853,8 @@
      "date": "2026-10-09T07:23:24+00:00",
      "summary": "Inyección de comandos en Tenable Identity Exposure de Tenable Vie, 09/10/2026 - 09:23 Aviso Recursos Afectados Tenable Identity Exposure SaaS, versión 3.125.0 y anteriores. Descripción Takumi Ito ha informado sobre una vulnerabilidad de severidad crítica que, en caso de ser…"
     }
-   ]
+   ],
+   "error": "latest fetch failed"
   },
   "ccn-cert": {
    "status": "no-feed",
