@@ -20,7 +20,7 @@ from xml.etree import ElementTree as ET
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "docs" / "data"
 UA = "Mozilla/5.0 (compatible; EU-CERT-Atlas/1.0; +https://github.com/angelflyer/story)"
-TIMEOUT = 25
+TIMEOUT = 20
 MAX_ITEMS = 8
 
 
@@ -140,9 +140,12 @@ def main():
     out_path = DATA / "latest.json"
     if out_path.exists():
         previous = json.loads(out_path.read_text("utf-8")).get("teams", {})
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(max_workers=12) as pool:
+        results = dict(zip([c["id"] for c in certs], pool.map(update, certs)))
     teams = {}
     for c in certs:
-        r = update(c)
+        r = results[c["id"]]
         # Keep the last good items when a feed is temporarily down.
         if r["status"] != "ok" and previous.get(c["id"], {}).get("items"):
             r = {**previous[c["id"]], "status": "stale", "error": "latest fetch failed"}
