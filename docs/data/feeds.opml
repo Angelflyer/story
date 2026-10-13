@@ -12,13 +12,17 @@
   <outline type="rss" text="FR – CERT-FR" xmlUrl="https://www.cert.ssi.gouv.fr/feed/" htmlUrl="https://www.cert.ssi.gouv.fr/"/>
   <outline type="rss" text="DE – CERT-Bund" xmlUrl="https://wid.cert-bund.de/content/public/securityAdvisory/rss" htmlUrl="https://wid.cert-bund.de/"/>
   <outline type="rss" text="GR – EL-CSIRT" xmlUrl="https://cyber.gov.gr/feed/" htmlUrl="https://cyber.gov.gr/el-csirt/"/>
+  <outline type="rss" text="IE – NCSC-IE / CSIRT-IE" xmlUrl="https://www.ncsc.gov.ie/news/alerts.rss" htmlUrl="https://www.ncsc.gov.ie/"/>
   <outline type="rss" text="LV – CERT.LV" xmlUrl="https://cert.lv/lv/feed/atom/viss" htmlUrl="https://cert.lv/"/>
   <outline type="rss" text="LU – CIRCL" xmlUrl="https://www.circl.lu/rss.xml" htmlUrl="https://www.circl.lu/"/>
   <outline type="rss" text="NL – NCSC-NL" xmlUrl="https://advisories.ncsc.nl/rss/advisories" htmlUrl="https://www.ncsc.nl/"/>
+  <outline type="rss" text="PT – CERT.PT" xmlUrl="https://www.cncs.gov.pt/index.xml" htmlUrl="https://www.cncs.gov.pt/"/>
+  <outline type="rss" text="RO – DNSC" xmlUrl="https://dnsc.ro/feed/" htmlUrl="https://dnsc.ro/"/>
   <outline type="rss" text="SI – SI-CERT" xmlUrl="https://www.cert.si/feed/" htmlUrl="https://www.cert.si/"/>
   <outline type="rss" text="ES – INCIBE-CERT" xmlUrl="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/feed" htmlUrl="https://www.incibe.es/incibe-cert"/>
   <outline type="rss" text="SE – CERT-SE" xmlUrl="https://www.cert.se/feed.rss" htmlUrl="https://www.cert.se/"/>
   <outline type="rss" text="EU – CERT-EU" xmlUrl="https://cert.europa.eu/publications/security-advisories-rss" htmlUrl="https://cert.europa.eu/"/>
+  <outline type="rss" text="EU – ENISA EUVD" xmlUrl="https://euvdservices.enisa.europa.eu/api/exploitedvulnerabilities" htmlUrl="https://euvd.enisa.europa.eu/"/>
   <outline type="rss" text="INT – abuse.ch" xmlUrl="https://abuse.ch/rss/" htmlUrl="https://abuse.ch/"/>
   <outline type="rss" text="NL – DIVD" xmlUrl="https://www.divd.nl/index.xml" htmlUrl="https://www.divd.nl/"/>
   <outline type="rss" text="INT – MISP Project" xmlUrl="https://www.misp-project.org/feed.xml" htmlUrl="https://www.misp-project.org/"/>

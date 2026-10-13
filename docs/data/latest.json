@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13T20:38:36+00:00",
+ "updated": "2026-10-13T21:16:51+00:00",
  "teams": {
   "cert-pl": {
    "status": "ok",
@@ -116,7 +116,16 @@
    "tried": [
     "https://ccb.belgium.be/advisories/rss.xml",
     "https://ccb.belgium.be/rss.xml",
-    "https://ccb.belgium.be/ (discovery: HTTPError)"
+    "https://ccb.belgium.be/ (discovery: HTTPError)",
+    "https://ccb.belgium.be/advisories (discovery: HTTPError)",
+    "https://ccb.belgium.be/ccb-news (discovery: HTTPError)",
+    "https://ccb.belgium.be/feed/",
+    "https://ccb.belgium.be/rss",
+    "https://ccb.belgium.be/feed.xml",
+    "https://ccb.belgium.be/atom.xml",
+    "https://ccb.belgium.be/index.xml",
+    "https://ccb.belgium.be/feed.rss",
+    "https://ccb.belgium.be/?format=feed&type=rss"
    ],
    "items": []
   },
@@ -245,7 +254,17 @@
   },
   "csirt-cz": {
    "status": "no-feed",
-   "tried": [],
+   "tried": [
+    "https://csirt.cz/cs/rss/",
+    "https://csirt.cz/feed/",
+    "https://csirt.cz/rss.xml",
+    "https://csirt.cz/rss",
+    "https://csirt.cz/feed.xml",
+    "https://csirt.cz/atom.xml",
+    "https://csirt.cz/index.xml",
+    "https://csirt.cz/feed.rss",
+    "https://csirt.cz/?format=feed&type=rss"
+   ],
    "items": []
   },
   "cfcs-dk": {
@@ -306,7 +325,19 @@
   "cert-ee": {
    "status": "no-feed",
    "tried": [
-    "https://www.ria.ee/en/cyber-security (discovery: HTTPError)"
+    "https://www.ria.ee/en/cyber-security (discovery: HTTPError)",
+    "https://www.ria.ee/en/news (discovery: HTTPError)",
+    "https://www.ria.ee/en/cyber-security/feed/",
+    "https://www.ria.ee/en/cyber-security/rss.xml",
+    "https://www.ria.ee/en/cyber-security/rss",
+    "https://www.ria.ee/feed/",
+    "https://www.ria.ee/rss.xml",
+    "https://www.ria.ee/rss",
+    "https://www.ria.ee/feed.xml",
+    "https://www.ria.ee/atom.xml",
+    "https://www.ria.ee/index.xml",
+    "https://www.ria.ee/feed.rss",
+    "https://www.ria.ee/?format=feed&type=rss"
    ],
    "items": []
   },
@@ -533,18 +564,88 @@
   "nki-hu": {
    "status": "no-feed",
    "tried": [
-    "https://nki.gov.hu/feed/"
+    "https://nki.gov.hu/feed/",
+    "https://nki.gov.hu/figyelmeztetesek/ (discovery: HTTPError)",
+    "https://nki.gov.hu/rss.xml",
+    "https://nki.gov.hu/rss",
+    "https://nki.gov.hu/feed.xml",
+    "https://nki.gov.hu/atom.xml",
+    "https://nki.gov.hu/index.xml",
+    "https://nki.gov.hu/feed.rss",
+    "https://nki.gov.hu/?format=feed&type=rss"
    ],
    "items": []
   },
   "ncsc-ie": {
-   "status": "no-feed",
-   "tried": [],
-   "items": []
+   "status": "ok",
+   "feed": "https://www.ncsc.gov.ie/news/alerts.rss",
+   "via": "discovered",
+   "items": [
+    {
+     "title": "Critical Vulnerability in Ivanti Connect Secure (CVE-2026-104935)",
+     "link": "https://www.ncsc.gov.ie/pdfs/2610130333_CVE-2026-104935.pdf",
+     "date": "2026-10-13T00:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Critical Vulnerability in Citrix NetScaler ADC and Gateway (CVE-2026-107406)",
+     "link": "https://www.ncsc.gov.ie/pdfs/2610090281_CVE-2026-107406.pdf",
+     "date": "2026-10-09T00:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Critical Vulnerability in SonicWall:SMA1000 (CVE-2026-102255)",
+     "link": "https://www.ncsc.gov.ie/pdfs/2610070242_CVE-2026-102255.pdf",
+     "date": "2026-10-07T00:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Critical Arbitrary File Access Vulnerability impacting Multiple Atlassian Products (CVE-2026-21589)",
+     "link": "https://www.ncsc.gov.ie/pdfs/2610060236_CVE-2026-21589.pdf",
+     "date": "2026-10-06T00:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Vulnerability in Citrix NetScaler ADC and Gateway (CVE-2026-88779)",
+     "link": "https://www.ncsc.gov.ie/pdfs/2610050267_CVE-2026-88779.pdf",
+     "date": "2026-10-05T00:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Critical vulnerability in Fortinet: FortiMail (CVE-2026-104286)",
+     "link": "https://www.ncsc.gov.ie/pdfs/2610020234_CVE-2026-104286.pdf",
+     "date": "2026-10-02T00:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Critical vulnerability in Cisco Catalyst SD-WAN Manager (CVE-2026-76504)",
+     "link": "https://www.ncsc.gov.ie/pdfs/2610010256_CVE-2026-76504.pdf",
+     "date": "2026-10-01T00:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Critical vulnerabilities in Citrix NetScaler Gateway & ADC",
+     "link": "https://www.ncsc.gov.ie/pdfs/2609270214_Multiple_Citrix_Vulns.pdf",
+     "date": "2026-09-27T00:00:00+00:00",
+     "summary": ""
+    }
+   ]
   },
   "csirt-it": {
    "status": "no-feed",
-   "tried": [],
+   "tried": [
+    "https://www.acn.gov.it/portale/csirt-italia/feed/",
+    "https://www.acn.gov.it/portale/csirt-italia/rss.xml",
+    "https://www.acn.gov.it/portale/csirt-italia/rss",
+    "https://www.acn.gov.it/feed/",
+    "https://www.acn.gov.it/rss.xml",
+    "https://www.acn.gov.it/rss",
+    "https://www.acn.gov.it/feed.xml",
+    "https://www.acn.gov.it/atom.xml",
+    "https://www.acn.gov.it/index.xml",
+    "https://www.acn.gov.it/feed.rss",
+    "https://www.acn.gov.it/?format=feed&type=rss"
+   ],
    "items": []
   },
   "cert-lv": {
@@ -605,7 +706,19 @@
   "nksc-lt": {
    "status": "no-feed",
    "tried": [
-    "https://www.nksc.lt/en/ (discovery: HTTPError)"
+    "https://www.nksc.lt/en/ (discovery: HTTPError)",
+    "https://www.nksc.lt/naujienos.html (discovery: HTTPError)",
+    "https://www.nksc.lt/en/feed/",
+    "https://www.nksc.lt/en/rss.xml",
+    "https://www.nksc.lt/en/rss",
+    "https://www.nksc.lt/feed/",
+    "https://www.nksc.lt/rss.xml",
+    "https://www.nksc.lt/rss",
+    "https://www.nksc.lt/feed.xml",
+    "https://www.nksc.lt/atom.xml",
+    "https://www.nksc.lt/index.xml",
+    "https://www.nksc.lt/feed.rss",
+    "https://www.nksc.lt/?format=feed&type=rss"
    ],
    "items": []
   },
@@ -667,7 +780,16 @@
   "csirt-mt": {
    "status": "no-feed",
    "tried": [
-    "https://ncc-mita.gov.mt/ (discovery: HTTPError)"
+    "https://ncc-mita.gov.mt/ (discovery: HTTPError)",
+    "https://ncc-mita.gov.mt/news/ (discovery: HTTPError)",
+    "https://ncc-mita.gov.mt/feed/",
+    "https://ncc-mita.gov.mt/rss.xml",
+    "https://ncc-mita.gov.mt/rss",
+    "https://ncc-mita.gov.mt/feed.xml",
+    "https://ncc-mita.gov.mt/atom.xml",
+    "https://ncc-mita.gov.mt/index.xml",
+    "https://ncc-mita.gov.mt/feed.rss",
+    "https://ncc-mita.gov.mt/?format=feed&type=rss"
    ],
    "items": []
   },
@@ -727,22 +849,128 @@
    ]
   },
   "cert-pt": {
-   "status": "no-feed",
-   "tried": [
-    "https://www.cncs.gov.pt/ (discovery: HTTPError)"
-   ],
-   "items": []
+   "status": "ok",
+   "feed": "https://www.cncs.gov.pt/index.xml",
+   "via": "probed",
+   "items": [
+    {
+     "title": "https://dyn.cncs.gov.pt/en/detalhe/art/135690/",
+     "link": "https://dyn.cncs.gov.pt/en/detalhe/art/135690/",
+     "date": "2022-09-19T00:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "https://dyn.cncs.gov.pt/en/detalhe/art/135688/",
+     "link": "https://dyn.cncs.gov.pt/en/detalhe/art/135688/",
+     "date": "2022-09-15T00:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "https://dyn.cncs.gov.pt/en/detalhe/art/135689/",
+     "link": "https://dyn.cncs.gov.pt/en/detalhe/art/135689/",
+     "date": "2022-09-13T00:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "https://dyn.cncs.gov.pt/en/detalhe/art/135684/",
+     "link": "https://dyn.cncs.gov.pt/en/detalhe/art/135684/",
+     "date": "2022-08-25T00:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "https://dyn.cncs.gov.pt/en/detalhe/art/135683/",
+     "link": "https://dyn.cncs.gov.pt/en/detalhe/art/135683/",
+     "date": "2022-08-18T00:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "https://dyn.cncs.gov.pt/en/detalhe/art/135678/",
+     "link": "https://dyn.cncs.gov.pt/en/detalhe/art/135678/",
+     "date": "2022-07-15T00:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "https://dyn.cncs.gov.pt/en/detalhe/art/135674/",
+     "link": "https://dyn.cncs.gov.pt/en/detalhe/art/135674/",
+     "date": "2022-07-05T00:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "https://dyn.cncs.gov.pt/en/detalhe/art/135673/",
+     "link": "https://dyn.cncs.gov.pt/en/detalhe/art/135673/",
+     "date": "2022-06-23T00:00:00+00:00",
+     "summary": ""
+    }
+   ]
   },
   "dnsc-ro": {
-   "status": "no-feed",
-   "tried": [
-    "https://dnsc.ro/ (discovery: HTTPError)"
-   ],
-   "items": []
+   "status": "ok",
+   "feed": "https://dnsc.ro/feed/",
+   "via": "probed",
+   "items": [
+    {
+     "title": "Știrile săptămânii din cybersecurity (08.10.2026)",
+     "link": "https://dnsc.ro/citeste/stirile-saptamanii-din-cybersecurity-08-10-2026",
+     "date": "2026-10-08T11:48:08+00:00",
+     "summary": "Samsung Galaxy S26, compromis de șase ori în cadrul competiției Pwn2Own Ireland 2026 Cercet..."
+    },
+    {
+     "title": "ALERTĂ: Vulnerabilitate critică la nivelul Fortinet FortiMail",
+     "link": "https://dnsc.ro/citeste/alerta-vulnerabilitate-critica-la-nivelul-fortinet-fortimail",
+     "date": "2026-10-02T11:28:01+00:00",
+     "summary": "DESCRIERE Experții în securitate cibernetică au descoperit o vulnerabilitate critică, CVE-..."
+    },
+    {
+     "title": "Știrile săptămânii din cybersecurity (01.10.2026)",
+     "link": "https://dnsc.ro/citeste/stirile-saptamanii-din-cybersecurity-01-10-2026",
+     "date": "2026-10-01T12:02:43+00:00",
+     "summary": "DNSC aplică prima sancțiune contravențională pentru nerespectarea obligațiilor prevăzute de OU..."
+    },
+    {
+     "title": "COMUNICAT DE PRESĂ: Directoratul Național de Securitate Cibernetică (DNSC) aplică prima sancțiune contravențională pentru nerespectarea obligației de notificare prevăzute de OUG nr. 155/2024",
+     "link": "https://dnsc.ro/citeste/comunicat-de-presa-directoratul-national-de-securitate-cibernetica-dnsc-aplica-prima-sanctiune-contraventionala-pentru-nerespectarea-obligatiei-de-notificare-prevazute-de-oug-nr-155-2024",
+     "date": "2026-09-30T11:32:41+00:00",
+     "summary": "București, 30 septembrie 2026 Directoratul Național de Securitate Cibernetică (DNSC) a emis, la ..."
+    },
+    {
+     "title": "COMUNICAT DE PRESĂ: Agenda oficială a Bucharest Cybersecurity Conference 2026 a fost publicată",
+     "link": "https://dnsc.ro/citeste/comunicat-de-presa-agenda-oficial-a-bucharest-cybersecurity-conference-2026-a-fost-publicata",
+     "date": "2026-09-28T10:59:10+00:00",
+     "summary": "București, 28 septembrie 2026 Directoratul Național de Securitate Cibernetică (DNSC) anunță pu..."
+    },
+    {
+     "title": "ALERTĂ: Vulnerabilități critice exploatate activ în Citrix NetScaler",
+     "link": "https://dnsc.ro/citeste/alert-vulnerabilitati-critice-exploatate-activ-in-citrix-netscaler",
+     "date": "2026-09-28T10:53:04+00:00",
+     "summary": "CONTEXT La data de 27 septembrie 2026, Citrix a publicat un buletin de securitate referitor la opt ..."
+    },
+    {
+     "title": "Știrile săptămânii din cybersecurity (24.09.2026)",
+     "link": "https://dnsc.ro/citeste/stirile-saptamanii-din-cybersecurity-24-09-2026",
+     "date": "2026-09-24T11:57:36+00:00",
+     "summary": "Vulnerabilitate critică în WordPress Core. Atacatorii pot ajunge la executarea de cod pe serv..."
+    },
+    {
+     "title": "ALERTĂ: Vulnerabilitate critică la nivelul WordPress Core",
+     "link": "https://dnsc.ro/citeste/alerta-vulnerabilitate-critica-la-nivelul-wordpress-core",
+     "date": "2026-09-24T11:40:58+00:00",
+     "summary": "DESCRIERE Experții în securitate cibernetică au descoperit o vulnerabilitate critică, CVE-..."
+    }
+   ]
   },
   "sk-cert": {
    "status": "no-feed",
-   "tried": [],
+   "tried": [
+    "https://www.sk-cert.sk/sk/index.html (discovery: HTTPError)",
+    "https://www.sk-cert.sk/feed/",
+    "https://www.sk-cert.sk/rss.xml",
+    "https://www.sk-cert.sk/rss",
+    "https://www.sk-cert.sk/feed.xml",
+    "https://www.sk-cert.sk/atom.xml",
+    "https://www.sk-cert.sk/index.xml",
+    "https://www.sk-cert.sk/feed.rss",
+    "https://www.sk-cert.sk/?format=feed&type=rss"
+   ],
    "items": []
   },
   "si-cert": {
@@ -801,7 +1029,7 @@
    ]
   },
   "incibe-cert": {
-   "status": "stale",
+   "status": "ok",
    "feed": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/feed",
    "via": "known",
    "items": [
@@ -853,13 +1081,23 @@
      "date": "2026-10-09T07:23:24+00:00",
      "summary": "Inyección de comandos en Tenable Identity Exposure de Tenable Vie, 09/10/2026 - 09:23 Aviso Recursos Afectados Tenable Identity Exposure SaaS, versión 3.125.0 y anteriores. Descripción Takumi Ito ha informado sobre una vulnerabilidad de severidad crítica que, en caso de ser…"
     }
-   ],
-   "error": "latest fetch failed"
+   ]
   },
   "ccn-cert": {
    "status": "no-feed",
    "tried": [
-    "https://www.ccn-cert.cni.es/ (discovery: HTTPError)"
+    "https://www.ccn-cert.cni.es/es/seguridad-al-dia/alertas-ccn-cert.feed?type=rss",
+    "https://www.ccn-cert.cni.es/es/seguridad-al-dia/noticias-seguridad.feed?type=rss",
+    "https://www.ccn-cert.cni.es/ (discovery: HTTPError)",
+    "https://www.ccn-cert.cni.es/es/seguridad-al-dia.html (discovery: HTTPError)",
+    "https://www.ccn-cert.cni.es/feed/",
+    "https://www.ccn-cert.cni.es/rss.xml",
+    "https://www.ccn-cert.cni.es/rss",
+    "https://www.ccn-cert.cni.es/feed.xml",
+    "https://www.ccn-cert.cni.es/atom.xml",
+    "https://www.ccn-cert.cni.es/index.xml",
+    "https://www.ccn-cert.cni.es/feed.rss",
+    "https://www.ccn-cert.cni.es/?format=feed&type=rss"
    ],
    "items": []
   },
@@ -974,14 +1212,48 @@
    ]
   },
   "enisa-euvd": {
-   "status": "no-feed",
-   "tried": [],
-   "items": []
+   "status": "ok",
+   "feed": "https://euvdservices.enisa.europa.eu/api/exploitedvulnerabilities",
+   "via": "api",
+   "items": [
+    {
+     "title": "EUVD-2026-100274 (CVE-2026-96951) · CVSS 8.8",
+     "link": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-100274",
+     "date": "2026-10-13T19:01:26+00:00",
+     "summary": "Improper neutralization of special elements used in a command ('command injection') in Windows Shell allows an unauthorized attacker to bypass a security feature over a network."
+    },
+    {
+     "title": "EUVD-2026-98816 (GHSA-vm2g-whwh-xhq8) · CVSS 8.6",
+     "link": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-98816",
+     "date": "2026-10-13T15:31:07+00:00",
+     "summary": "Authentication bypass by spoofing in ICS before version 25.1.3.0 allows a remote unauthenticated attacker to execute arbitrary commands. This does not impact ICS version 22.7R2.14 or prior."
+    },
+    {
+     "title": "EUVD-2023-1342 (GHSA-jjqf-j4w7-92w8) · CVSS 7.2",
+     "link": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2023-1342",
+     "date": "2023-04-19T00:00:00+00:00",
+     "summary": "Strapi through 4.5.5 allows attackers (with access to the admin panel) to discover sensitive user details by exploiting the query filter. The attacker can filter users by columns that contain sensitive information and infer a value from API responses. If the attacker has super…"
+    },
+    {
+     "title": "EUVD-2022-3161 (CVE-2016-3081) · CVSS 8.1",
+     "link": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2022-3161",
+     "date": "2016-04-26T14:00:00+00:00",
+     "summary": "Apache Struts 2.3.19 to 2.3.20.2, 2.3.21 to 2.3.24.1, and 2.3.25 to 2.3.28, when Dynamic Method Invocation is enabled, allow remote attackers to execute arbitrary code via method: prefix, related to chained expressions."
+    }
+   ]
   },
   "shadowserver": {
    "status": "no-feed",
    "tried": [
-    "https://www.shadowserver.org/feed/"
+    "https://www.shadowserver.org/feed/",
+    "https://www.shadowserver.org/news/ (discovery: HTTPError)",
+    "https://www.shadowserver.org/rss.xml",
+    "https://www.shadowserver.org/rss",
+    "https://www.shadowserver.org/feed.xml",
+    "https://www.shadowserver.org/atom.xml",
+    "https://www.shadowserver.org/index.xml",
+    "https://www.shadowserver.org/feed.rss",
+    "https://www.shadowserver.org/?format=feed&type=rss"
    ],
    "items": []
   },
