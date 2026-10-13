@@ -2536,7 +2536,7 @@
         {
           "cat": "feeds",
           "name": "Known Exploited Vulnerabilities catalogue",
-          "desc": "Free list of vulnerabilities exploited in the wild, as web page, CSV and JSON.",
+          "desc": "Free list of vulnerabilities exploited in the wild, as web page, CSV and JSON. Also mirrored on GitHub (cisagov/kev-data), which this site polls.",
           "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
         },
         {
@@ -2592,7 +2592,11 @@
           "url": "https://www.cisecurity.org/ms-isac"
         }
       ],
-      "kind": "international"
+      "kind": "international",
+      "api": {
+        "type": "kev",
+        "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json"
+      }
     },
     {
       "id": "certcc-us",
@@ -3091,7 +3095,10 @@
       "feeds": [],
       "newsletter": null,
       "related": [],
-      "kind": "international"
+      "kind": "international",
+      "pages": [
+        "https://www.cert.org.cn/publish/main/index.html"
+      ]
     },
     {
       "id": "twcert-tw",
@@ -3101,7 +3108,7 @@
       "name": "TWCERT/CC",
       "full": "Taiwan Computer Emergency Response Team / Coordination Center",
       "host": "Taiwan government (Ministry of Digital Affairs)",
-      "url": "https://www.twcert.org.tw/en/",
+      "url": "https://www.twcert.org.tw/",
       "about": "Private-sector CERT that handles security notifications, vulnerability coordination as a CVE Numbering Authority, and information sharing with international partners.",
       "constituency": "Taiwanese private sector",
       "langs": [
@@ -3274,7 +3281,10 @@
           "value": ">42,500"
         }
       ],
-      "feeds": [],
+      "feeds": [
+        "https://www.cyber.gov.au/rss/alerts",
+        "https://www.cyber.gov.au/rss/advisories"
+      ],
       "pages": [
         "https://www.cyber.gov.au/about-us/view-all-content/alerts-and-advisories"
       ],
@@ -3340,7 +3350,10 @@
       "feeds": [],
       "newsletter": null,
       "related": [],
-      "kind": "international"
+      "kind": "international",
+      "pages": [
+        "https://www.ncsc.govt.nz/news/"
+      ]
     },
     {
       "id": "incd-il",
@@ -3446,7 +3459,10 @@
       "feeds": [],
       "newsletter": null,
       "related": [],
-      "kind": "international"
+      "kind": "international",
+      "pages": [
+        "https://www.ncsc.admin.ch/ncsc/en/home/aktuell/im-fokus.html"
+      ]
     },
     {
       "id": "nsm-no",
@@ -3546,7 +3562,10 @@
       "feeds": [],
       "newsletter": null,
       "related": [],
-      "kind": "international"
+      "kind": "international",
+      "pages": [
+        "https://cert.gov.ua/articles"
+      ]
     }
   ]
 }

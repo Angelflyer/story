@@ -217,6 +217,18 @@ def parse_euvd(raw, base):
     return items[:MAX_ITEMS]
 
 
+def parse_kev(raw, base):
+    """CISA Known Exploited Vulnerabilities JSON -> feed items (newest additions first)."""
+    rows = json.loads(raw).get("vulnerabilities", [])
+    rows.sort(key=lambda r: r.get("dateAdded", ""), reverse=True)
+    items = []
+    for r in rows[:MAX_ITEMS]:
+        cve = r.get("cveID", "")
+        date = parse_date(r.get("dateAdded", "") + "T00:00:00+00:00") if r.get("dateAdded") else None
+        items.append({"title": f"{cve}: {r.get('vendorProject', '')} {r.get('product', '')} added to KEV", "link": f"https://nvd.nist.gov/vuln/detail/{cve}", "date": date, "summary": clean(r.get("shortDescription"))})
+    return items
+
+
 def try_urls(urls, tried, phase, parser=parse_feed):
     for url in urls:
         if url in tried:
@@ -238,8 +250,9 @@ def try_urls(urls, tried, phase, parser=parse_feed):
 def update(cert):
     tried = []
     api = cert.get("api")
-    if api and api.get("type") == "euvd":
-        r = try_urls([api["url"]], tried, "api", parse_euvd)
+    parsers = {"euvd": parse_euvd, "kev": parse_kev}
+    if api and api.get("type") in parsers:
+        r = try_urls([api["url"]], tried, "api", parsers[api["type"]])
         if r:
             return r
     r = try_urls(cert.get("feeds") or [], tried, "known")
