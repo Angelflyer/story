@@ -540,6 +540,12 @@
           "url": "https://csirt.cz/"
         },
         {
+          "cat": "awareness",
+          "name": "Strážci internetu (Internet Guardians)",
+          "desc": "New CSIRT.CZ service launched in September 2026.",
+          "url": "https://www.nic.cz/page/4647/"
+        },
+        {
           "cat": "blocklists",
           "name": "Turris Sentinel dynamic firewall",
           "desc": "Attacker IP greylist built from thousands of Turris routers and honeypots, available to the public.",

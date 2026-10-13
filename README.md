@@ -7,6 +7,15 @@ A comparison of the national CSIRTs/CERTs of all 27 EU member states, plus EU-le
 - `scripts/update_feeds.py` fetches each team's RSS/Atom feed. It tries known URLs first, then auto-discovers feeds on the team's homepage. Output goes to `docs/data/latest.json` and `docs/data/feeds.opml`.
 - `.github/workflows/update-feeds.yml` runs the updater every 6 hours and commits the results.
 
+### How each team is tracked
+
+1. Known feed URLs from `certs.json` (`feeds`), or a JSON API (`api`, used for the ENISA EUVD).
+2. Feeds advertised on the team's homepage or extra `pages`, including plain links containing "rss" or "feed".
+3. Common feed paths (`/feed/`, `/rss.xml`, `/index.xml` …) on the team's site.
+4. If there is still no feed, new article links are read from the team's news `pages`.
+
+Feeds with nothing newer than two years are ignored as abandoned. Sites that answer every request with HTTP 403 are marked as blocking automated readers. As of October 2026 that applies to Belgium (CCB), Lithuania (NKSC), Malta (MITA) and Spain's CCN-CERT; Portugal's CNCS returns server errors.
+
 ## Viewing the site
 
 Enable GitHub Pages (Settings → Pages → Deploy from branch → `main` / `/docs`). The page loads its data with `fetch`, so open it through Pages or a local server (`python3 -m http.server -d docs`), not as a `file://` URL.
