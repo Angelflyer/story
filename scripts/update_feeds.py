@@ -105,6 +105,63 @@ class AltLinks(HTMLParser):
             self.found.append(a["href"])
 
 
+class Anchors(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.links, self._href, self._text = [], None, []
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "a":
+            self._href, self._text = dict(attrs).get("href"), []
+
+    def handle_data(self, data):
+        if self._href is not None:
+            self._text.append(data)
+
+    def handle_endtag(self, tag):
+        if tag == "a" and self._href is not None:
+            self.links.append((self._href, " ".join(self._text)))
+            self._href = None
+
+
+DATE_RE = re.compile(r"\b(20\d\d)[-./](\d{1,2})[-./](\d{1,2})\b|\b(\d{1,2})[./](\d{1,2})[./](20\d\d)\b")
+
+
+def watch_page(page):
+    """Fallback for teams without a feed: list article links from a news page."""
+    raw, _, final = fetch(page)
+    p = Anchors()
+    p.feed(raw.decode("utf-8", "replace"))
+    base = urlparse(final)
+    listing = base.path.rstrip("/")
+    skip = {final.rstrip("/"), f"{base.scheme}://{base.netloc}"}
+    items, seen = [], set()
+    for href, txt in p.links:
+        title = clean(txt, 200)
+        if not href or len(title) < 25 or href.startswith(("#", "mailto:", "javascript:")):
+            continue
+        url = urljoin(final, href).split("#")[0]
+        u = urlparse(url)
+        if u.netloc != base.netloc or url.rstrip("/") in skip or url in seen:
+            continue
+        depth = len([x for x in u.path.split("/") if x])
+        if depth < 2 or (listing and depth <= len([x for x in listing.split("/") if x])):
+            continue
+        seen.add(url)
+        m = DATE_RE.search(url) or DATE_RE.search(txt)
+        date = None
+        if m:
+            y, mo, d = (m.group(1), m.group(2), m.group(3)) if m.group(1) else (m.group(6), m.group(5), m.group(4))
+            try:
+                date = datetime(int(y), int(mo), int(d), tzinfo=timezone.utc).isoformat()
+            except ValueError:
+                pass
+        items.append({"title": title, "link": url, "date": date, "summary": ""})
+        if len(items) >= MAX_ITEMS:
+            break
+    return items if len(items) >= 3 else []
+
+
 def discover(home):
     raw, ctype, final = fetch(home)
     p = AltLinks()
@@ -190,6 +247,13 @@ def update(cert):
     r = try_urls(common_feeds(cert["url"]), tried, "probed")
     if r:
         return r
+    for page in cert.get("pages") or []:
+        try:
+            items = watch_page(page)
+        except Exception:  # noqa: BLE001
+            continue
+        if items:
+            return {"status": "watched", "page": page, "via": "page", "items": items}
     return {"status": "no-feed", "tried": tried, "items": []}
 
 
@@ -206,7 +270,7 @@ def main():
     for c in certs:
         r = results[c["id"]]
         # Keep the last good items when a feed is temporarily down.
-        if r["status"] != "ok" and previous.get(c["id"], {}).get("items"):
+        if r["status"] not in ("ok", "watched") and previous.get(c["id"], {}).get("items"):
             r = {**previous[c["id"]], "status": "stale", "error": "latest fetch failed"}
         teams[c["id"]] = r
         print(f"{c['id']:<14} {r['status']:<8} {r.get('feed', '')}", file=sys.stderr)

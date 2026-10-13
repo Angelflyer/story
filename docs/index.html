@@ -257,7 +257,7 @@ footer .wrap { display: grid; gap: 8px; }
   <section id="latest" data-panel="latest" hidden>
     <div class="wrap">
       <div class="section-head">
-        <div><h2>Latest from the teams</h2><p id="latest-sub">Newest posts across all team feeds.</p><p class="muted" style="font-size:.85rem;margin-top:4px">● live: posted in the last 180 days · ◇ quiet: feed works but nothing newer than 180 days · ▲ stale: last fetch failed, showing earlier posts · ○ none: no public feed found</p></div>
+        <div><h2>Latest from the teams</h2><p id="latest-sub">Newest posts across all team feeds.</p><p class="muted" style="font-size:.85rem;margin-top:4px">● live: posted in the last 180 days · ◇ quiet: feed works but nothing newer than 180 days · ▲ stale: last fetch failed, showing earlier posts · ◆ page watch: no feed, new links read from the news page · ○ none: nothing to track</p></div>
       </div>
       <div class="controls"><input type="search" id="q3" placeholder="Filter posts" aria-label="Filter posts"></div>
       <div id="latest-list"></div>
@@ -316,6 +316,7 @@ footer .wrap { display: grid; gap: 8px; }
   const QUIET_DAYS = 180;
   function feedStatus(t, long) {
     if (!L.updated) return '<span class="status none">pending</span>';
+    if (t && t.status === "watched") return '<span class="status ok" title="No feed; new links are read from the team\'s news page">◆ page watch</span>';
     if (!t || !(t.status === "ok" || t.status === "stale")) return `<span class="status none">○ ${long ? "no public feed found" : "none"}</span>`;
     const newest = (t.items || []).map(i => i.date).filter(Boolean).sort().pop();
     const quiet = newest && (Date.now() - new Date(newest)) / 864e5 > QUIET_DAYS;
@@ -332,7 +333,7 @@ footer .wrap { display: grid; gap: 8px; }
   function kpis() {
     const nat = D.certs.filter(c => c.kind === "national");
     const ccs = new Set(nat.map(c => c.cc));
-    const withFeed = Object.values(L.teams).filter(t => t.status === "ok" || t.status === "stale").length;
+    const withFeed = Object.values(L.teams).filter(t => ["ok", "stale", "watched"].includes(t.status)).length;
     const block = nat.filter(c => c.scores.block >= 2).length;
     const avg = Math.round(nat.reduce((a, c) => a + score(c), 0) / nat.length);
     const svc = D.certs.reduce((a, c) => a + c.services.length, 0);
@@ -342,7 +343,7 @@ footer .wrap { display: grid; gap: 8px; }
       [svc, "individual services catalogued"],
       [avg, "average national score / 100"],
       [block, "national teams running public blocking"],
-      [L.updated ? withFeed : "—", L.updated ? "teams with a live feed" : "live feeds pending first run"]
+      [L.updated ? withFeed : "—", L.updated ? "teams tracked live" : "live feeds pending first run"]
     ].map(([b, s]) => `<div class="kpi"><b>${b}</b><span>${s}</span></div>`).join("");
     $("#asof").textContent = "data as of " + D.meta.asOf;
   }
@@ -426,7 +427,7 @@ footer .wrap { display: grid; gap: 8px; }
     $("#feedstatus tbody").innerHTML = D.certs.map(c => {
       const t = L.teams[c.id];
       const st = feedStatus(t, true);
-      const url = t?.feed || (c.feeds[0] || "");
+      const url = t?.feed || t?.page || (c.feeds[0] || "");
       return `<tr data-id="${c.id}"><td><span class="cc">${c.cc}</span> ${esc(c.name)}</td><td>${st}</td><td class="url">${esc(url) || "—"}</td></tr>`;
     }).join("");
   }
