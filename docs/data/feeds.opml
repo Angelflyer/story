@@ -2,5 +2,25 @@
 <opml version="2.0">
 <head><title>EU CERT Atlas feeds</title></head>
 <body>
+  <outline type="rss" text="PL – CERT Polska" xmlUrl="https://cert.pl/en/atom.xml" htmlUrl="https://cert.pl/en/"/>
+  <outline type="rss" text="AT – CERT.at" xmlUrl="https://www.cert.at/cert-at.en.blog.rss_2.0.xml" htmlUrl="https://cert.at/en/"/>
+  <outline type="rss" text="BG – CERT Bulgaria" xmlUrl="https://www.govcert.bg/feed/" htmlUrl="https://govcert.bg/"/>
+  <outline type="rss" text="HR – CERT.hr" xmlUrl="https://www.cert.hr/feed/" htmlUrl="https://www.cert.hr/"/>
+  <outline type="rss" text="CY – CSIRT-CY" xmlUrl="https://csirt.cy/?format=feed&amp;type=rss" htmlUrl="https://csirt.cy/"/>
+  <outline type="rss" text="DK – CFCS" xmlUrl="https://samsik.dk/feed/" htmlUrl="https://www.cfcs.dk/"/>
+  <outline type="rss" text="FI – NCSC-FI" xmlUrl="https://www.kyberturvallisuuskeskus.fi/feed/rss/en" htmlUrl="https://www.kyberturvallisuuskeskus.fi/en"/>
+  <outline type="rss" text="FR – CERT-FR" xmlUrl="https://www.cert.ssi.gouv.fr/feed/" htmlUrl="https://www.cert.ssi.gouv.fr/"/>
+  <outline type="rss" text="DE – CERT-Bund" xmlUrl="https://wid.cert-bund.de/content/public/securityAdvisory/rss" htmlUrl="https://wid.cert-bund.de/"/>
+  <outline type="rss" text="GR – EL-CSIRT" xmlUrl="https://cyber.gov.gr/feed/" htmlUrl="https://cyber.gov.gr/el-csirt/"/>
+  <outline type="rss" text="LV – CERT.LV" xmlUrl="https://cert.lv/lv/feed/atom/viss" htmlUrl="https://cert.lv/"/>
+  <outline type="rss" text="LU – CIRCL" xmlUrl="https://www.circl.lu/rss.xml" htmlUrl="https://www.circl.lu/"/>
+  <outline type="rss" text="NL – NCSC-NL" xmlUrl="https://advisories.ncsc.nl/rss/advisories" htmlUrl="https://www.ncsc.nl/"/>
+  <outline type="rss" text="SI – SI-CERT" xmlUrl="https://www.cert.si/feed/" htmlUrl="https://www.cert.si/"/>
+  <outline type="rss" text="ES – INCIBE-CERT" xmlUrl="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/feed" htmlUrl="https://www.incibe.es/incibe-cert"/>
+  <outline type="rss" text="SE – CERT-SE" xmlUrl="https://www.cert.se/feed.rss" htmlUrl="https://www.cert.se/"/>
+  <outline type="rss" text="EU – CERT-EU" xmlUrl="https://cert.europa.eu/publications/security-advisories-rss" htmlUrl="https://cert.europa.eu/"/>
+  <outline type="rss" text="INT – abuse.ch" xmlUrl="https://abuse.ch/rss/" htmlUrl="https://abuse.ch/"/>
+  <outline type="rss" text="NL – DIVD" xmlUrl="https://www.divd.nl/index.xml" htmlUrl="https://www.divd.nl/"/>
+  <outline type="rss" text="INT – MISP Project" xmlUrl="https://www.misp-project.org/feed.xml" htmlUrl="https://www.misp-project.org/"/>
 </body>
 </opml>
