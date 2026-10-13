@@ -14,7 +14,7 @@ from email.utils import parsedate_to_datetime
 from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 from xml.etree import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -112,25 +112,84 @@ def discover(home):
     return [urljoin(final, h) for h in p.found]
 
 
+COMMON_PATHS = ("/feed/", "/rss.xml", "/rss", "/feed.xml", "/atom.xml", "/index.xml", "/feed.rss", "/?format=feed&type=rss")
+
+
+def common_feeds(url):
+    p = urlparse(url)
+    origin = f"{p.scheme}://{p.netloc}"
+    prefix = p.path.rstrip("/")
+    out = [origin + path for path in COMMON_PATHS]
+    if prefix:
+        out = [origin + prefix + path for path in COMMON_PATHS[:3]] + out
+    return out
+
+
+def parse_euvd(raw, base):
+    """ENISA EUVD JSON API -> feed items."""
+    data = json.loads(raw)
+    rows = data.get("items", data) if isinstance(data, dict) else data
+    items = []
+    for r in rows or []:
+        vid = r.get("id") or r.get("enisaUuid") or ""
+        aliases = (r.get("aliases") or "").split()
+        title = vid + (f" ({aliases[0]})" if aliases else "")
+        score = r.get("baseScore")
+        if score not in (None, "", -1):
+            title += f" · CVSS {score}"
+        date = None
+        for f in ("datePublished", "dateUpdated", "exploitedSince"):
+            if r.get(f):
+                for fmt in ("%b %d, %Y, %I:%M:%S %p", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d"):
+                    try:
+                        date = datetime.strptime(r[f].split(".")[0], fmt).replace(tzinfo=timezone.utc).isoformat()
+                        break
+                    except ValueError:
+                        continue
+                if date:
+                    break
+        items.append({"title": title or "EUVD entry", "link": f"https://euvd.enisa.europa.eu/vulnerability/{vid}" if vid else base, "date": date, "summary": clean(r.get("description"))})
+    items.sort(key=lambda i: i["date"] or "", reverse=True)
+    return items[:MAX_ITEMS]
+
+
+def try_urls(urls, tried, phase, parser=parse_feed):
+    for url in urls:
+        if url in tried:
+            continue
+        tried.append(url)
+        try:
+            raw, _, final = fetch(url)
+            items = parser(raw, final)
+        except Exception:  # noqa: BLE001
+            continue
+        if items:
+            return {"status": "ok", "feed": url, "via": phase, "items": items}
+    return None
+
+
 def update(cert):
     tried = []
-    candidates = list(cert.get("feeds") or [])
-    for phase in ("known", "discovered"):
-        if phase == "discovered":
-            try:
-                candidates = [u for u in discover(cert["url"]) if u not in tried]
-            except Exception as e:  # noqa: BLE001
-                tried.append(f"{cert['url']} (discovery: {type(e).__name__})")
-                break
-        for url in candidates:
-            tried.append(url)
-            try:
-                raw, _, final = fetch(url)
-                items = parse_feed(raw, final)
-            except Exception:  # noqa: BLE001
-                continue
-            if items:
-                return {"status": "ok", "feed": url, "via": phase, "items": items}
+    api = cert.get("api")
+    if api and api.get("type") == "euvd":
+        r = try_urls([api["url"]], tried, "api", parse_euvd)
+        if r:
+            return r
+    r = try_urls(cert.get("feeds") or [], tried, "known")
+    if r:
+        return r
+    found = []
+    for page in [cert["url"], *(cert.get("pages") or [])]:
+        try:
+            found += discover(page)
+        except Exception as e:  # noqa: BLE001
+            tried.append(f"{page} (discovery: {type(e).__name__})")
+    r = try_urls(found, tried, "discovered")
+    if r:
+        return r
+    r = try_urls(common_feeds(cert["url"]), tried, "probed")
+    if r:
+        return r
     return {"status": "no-feed", "tried": tried, "items": []}
 
 

@@ -257,7 +257,7 @@ footer .wrap { display: grid; gap: 8px; }
   <section id="latest" data-panel="latest" hidden>
     <div class="wrap">
       <div class="section-head">
-        <div><h2>Latest from the teams</h2><p id="latest-sub">Newest posts across all team feeds.</p></div>
+        <div><h2>Latest from the teams</h2><p id="latest-sub">Newest posts across all team feeds.</p><p class="muted" style="font-size:.85rem;margin-top:4px">● live: posted in the last 180 days · ◇ quiet: feed works but nothing newer than 180 days · ▲ stale: last fetch failed, showing earlier posts · ○ none: no public feed found</p></div>
       </div>
       <div class="controls"><input type="search" id="q3" placeholder="Filter posts" aria-label="Filter posts"></div>
       <div id="latest-list"></div>
@@ -313,6 +313,16 @@ footer .wrap { display: grid; gap: 8px; }
   const step = s => Math.min(5, Math.floor(s / 100 * 6));
   const byId = id => D.certs.find(c => c.id === id);
   const fmtDate = iso => { if (!iso) return "—"; const d = new Date(iso); return isNaN(d) ? "—" : d.toISOString().slice(0, 10); };
+  const QUIET_DAYS = 180;
+  function feedStatus(t, long) {
+    if (!L.updated) return '<span class="status none">pending</span>';
+    if (!t || !(t.status === "ok" || t.status === "stale")) return `<span class="status none">○ ${long ? "no public feed found" : "none"}</span>`;
+    const newest = (t.items || []).map(i => i.date).filter(Boolean).sort().pop();
+    const quiet = newest && (Date.now() - new Date(newest)) / 864e5 > QUIET_DAYS;
+    if (t.status === "stale") return '<span class="status stale">▲ stale</span>';
+    if (quiet) return `<span class="status stale" title="Newest post ${newest.slice(0, 10)}">◇ quiet</span>`;
+    return '<span class="status ok">● live</span>';
+  }
   const pip = v => `<span class="pip v${v}" role="img" aria-label="${["none", "limited", "full"][v]}"></span>`;
 
   async function load(path, fallback) {
@@ -377,7 +387,7 @@ footer .wrap { display: grid; gap: 8px; }
     rows.sort((a, b) => (val(a) > val(b) ? 1 : val(a) < val(b) ? -1 : score(b) - score(a)) * (sortKey === "name" || sortKey === "cc" ? -sortDir : sortDir));
     $("#table tbody").innerHTML = rows.map(c => {
       const s = score(c), t = L.teams[c.id];
-      const st = !L.updated ? '<span class="status none">pending</span>' : t && t.status === "ok" ? '<span class="status ok">● live</span>' : t && t.status === "stale" ? '<span class="status stale">▲ stale</span>' : '<span class="status none">○ none</span>';
+      const st = feedStatus(t);
       return `<tr data-id="${c.id}" tabindex="0"><td><span class="cc">${c.cc}</span> <span class="muted" style="font-size:.8rem">${esc(c.country)}</span></td><td><strong>${esc(c.name)}</strong><br><span class="kind">${KINDS[c.kind]}</span></td><td><div class="scorecell"><span class="score">${s}</span><span class="track"><span class="fill" style="width:${s}%;display:block"></span></span></div></td>${DIMS.map(k => `<td class="dim">${pip(c.scores[k])}</td>`).join("")}<td>${st}</td></tr>`;
     }).join("") || `<tr><td colspan="12" class="muted">No team matches “${esc(q)}”.</td></tr>`;
   }
@@ -415,7 +425,7 @@ footer .wrap { display: grid; gap: 8px; }
     }
     $("#feedstatus tbody").innerHTML = D.certs.map(c => {
       const t = L.teams[c.id];
-      const st = !L.updated ? '<span class="status none">pending</span>' : t?.status === "ok" ? '<span class="status ok">● live</span>' : t?.status === "stale" ? '<span class="status stale">▲ stale</span>' : '<span class="status none">○ no public feed found</span>';
+      const st = feedStatus(t, true);
       const url = t?.feed || (c.feeds[0] || "");
       return `<tr data-id="${c.id}"><td><span class="cc">${c.cc}</span> ${esc(c.name)}</td><td>${st}</td><td class="url">${esc(url) || "—"}</td></tr>`;
     }).join("");
