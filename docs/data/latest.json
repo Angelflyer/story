@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13T21:19:18+00:00",
+ "updated": "2026-10-13T21:20:59+00:00",
  "teams": {
   "cert-pl": {
    "status": "ok",
@@ -116,9 +116,9 @@
    "tried": [
     "https://ccb.belgium.be/advisories/rss.xml",
     "https://ccb.belgium.be/rss.xml",
-    "https://ccb.belgium.be/ (discovery: HTTPError)",
-    "https://ccb.belgium.be/advisories (discovery: HTTPError)",
-    "https://ccb.belgium.be/ccb-news (discovery: HTTPError)",
+    "https://ccb.belgium.be/ (discovery: HTTPError 403)",
+    "https://ccb.belgium.be/advisories (discovery: HTTPError 403)",
+    "https://ccb.belgium.be/ccb-news (discovery: HTTPError 403)",
     "https://ccb.belgium.be/feed/",
     "https://ccb.belgium.be/rss",
     "https://ccb.belgium.be/feed.xml",
@@ -325,8 +325,8 @@
   "cert-ee": {
    "status": "no-feed",
    "tried": [
-    "https://www.ria.ee/en/cyber-security (discovery: HTTPError)",
-    "https://www.ria.ee/en/news (discovery: HTTPError)",
+    "https://www.ria.ee/en/cyber-security (discovery: HTTPError 404)",
+    "https://www.ria.ee/en/news (discovery: HTTPError 404)",
     "https://www.ria.ee/en/cyber-security/feed/",
     "https://www.ria.ee/en/cyber-security/rss.xml",
     "https://www.ria.ee/en/cyber-security/rss",
@@ -565,7 +565,8 @@
    "status": "no-feed",
    "tried": [
     "https://nki.gov.hu/feed/",
-    "https://nki.gov.hu/figyelmeztetesek/ (discovery: HTTPError)",
+    "https://nki.gov.hu/figyelmeztetesek/ (discovery: HTTPError 404)",
+    "https://nki.gov.hu/intezet/tartalom/rss-csatornak/",
     "https://nki.gov.hu/rss.xml",
     "https://nki.gov.hu/rss",
     "https://nki.gov.hu/feed.xml",
@@ -632,57 +633,57 @@
    ]
   },
   "csirt-it": {
-   "status": "watched",
-   "page": "https://www.acn.gov.it/portale/csirt-italia",
-   "via": "page",
+   "status": "ok",
+   "feed": "https://www.acn.gov.it/portale/feedrss/-/journal/rss/20119/723192",
+   "via": "known",
    "items": [
     {
-     "title": "RSS: apre una nuova finestra",
-     "link": "https://www.acn.gov.it/portale/feedrss/-/journal/rss/20119/723192",
-     "date": null,
-     "summary": ""
+     "title": "Rilevate vulnerabilità in prodotti IBM",
+     "link": "https://www.acn.gov.it/portale/w/rilevate-vulnerabilita-in-prodotti-ibm-3",
+     "date": "2026-10-13T14:35:18+00:00",
+     "summary": "Risolte molteplici vulnerabilità, di cui 4 con gravità \"critica\" e 31 con gravità \"alta\", in diversi prodotti IBM."
     },
     {
-     "title": "Modalità e specifiche di base",
-     "link": "https://www.acn.gov.it/portale/nis/modalita-specifiche-base",
-     "date": null,
-     "summary": ""
+     "title": "Risolte vulnerabilità in prodotti Mozilla",
+     "link": "https://www.acn.gov.it/portale/w/risolte-vulnerabilita-in-prodotti-mozilla-12",
+     "date": "2026-10-13T14:18:09+00:00",
+     "summary": "Aggiornamenti di sicurezza sanano molteplici vulnerabilità di sicurezza, di cui 30 con gravità “alta”, in Firefox e Firefox ESR."
     },
     {
-     "title": "Aggiornamento delle informazioni",
-     "link": "https://www.acn.gov.it/portale/nis/aggiornamento-informazioni",
-     "date": null,
-     "summary": ""
+     "title": "Progress Software: sanate vulnerabilità in MarkLogic Server",
+     "link": "https://www.acn.gov.it/portale/w/progress-software-sanate-vulnerabilita-in-marklogic-server",
+     "date": "2026-10-13T13:09:02+00:00",
+     "summary": "Rilasciati aggiornamenti di sicurezza per sanare 31 vulnerabilità, di cui 5 con gravità \"critica\" e 24 con gravità \"alta\", in Progress MarkLogic Server, nota piattaforma di database NoSQL progettata per archiviare, integrare, gestire e ricercare grandi volumi di dati eterogenei…"
     },
     {
-     "title": "Regolamento Cloud per la PA",
-     "link": "https://www.acn.gov.it/portale/cloud/regolamento-cloud-per-la-pa",
-     "date": null,
-     "summary": ""
+     "title": "Risolte vulnerabilità in Craft CMS",
+     "link": "https://www.acn.gov.it/portale/w/risolte-vulnerabilita-in-craft-cms-1",
+     "date": "2026-10-13T13:05:28+00:00",
+     "summary": "Aggiornamenti di sicurezza sanano alcune vulnerabilità, di cui 2 con gravità “alta”, in Craft CMS, piattaforma open source per lo sviluppo e l’amministrazione di siti web e applicazioni digitali. Tali vulnerabilità, qualora sfruttate, potrebbero consentire a un utente…"
     },
     {
-     "title": "Qualificazione e adeguamento",
-     "link": "https://www.acn.gov.it/portale/cloud/qualificazione-e-adeguamento",
-     "date": null,
-     "summary": ""
+     "title": "Risolte vulnerabilità nella libreria Neo4j GraphQL",
+     "link": "https://www.acn.gov.it/portale/w/risolte-vulnerabilita-nella-libreria-neo4j-graphql",
+     "date": "2026-10-13T13:03:53+00:00",
+     "summary": "Risolte due vulnerabilità, di cui una con gravità \"critica\" e una con gravità \"alta\", presenti nella libreria Neo4j GraphQL. Tali vulnerabilità, qualora sfruttate, potrebbero consentire ad un utente malintenzionato di eludere dei meccanismi di sicurezza, accedere ad…"
     },
     {
-     "title": "Divulgazione coordinata delle vulnerabilità",
-     "link": "https://www.acn.gov.it/portale/csirt-italia/cvd",
-     "date": null,
-     "summary": ""
+     "title": "Aggiornamenti per prodotti Siemens",
+     "link": "https://www.acn.gov.it/portale/w/aggiornamenti-per-prodotti-siemens-28",
+     "date": "2026-10-13T11:11:09+00:00",
+     "summary": "Siemens ha rilasciato aggiornamenti di sicurezza per sanare molteplici vulnerabilità nei propri prodotti, di cui 4 con gravità “critica” e 14 con gravità “alta”."
     },
     {
-     "title": "Opportunità di finanziamento",
-     "link": "https://www.acn.gov.it/portale/ncc-italia/opportunita-di-finanziamento",
-     "date": null,
-     "summary": ""
+     "title": "Misure urgenti di verifica e mitigazione per operatori della distribuzione alimentare e della filiera del freddo",
+     "link": "https://www.acn.gov.it/portale/w/misure-urgenti-di-verifica-e-mitigazione-per-operatori-della-distribuzione-alimentare-e-della-filiera-del-freddo",
+     "date": "2026-10-13T10:44:39+00:00",
+     "summary": "L’Agenzia per la Cybersicurezza Nazionale richiama l’attenzione delle organizzazioni operanti nei settori della grande distribuzione organizzata (GDO), della logistica alimentare, della refrigerazione industriale e dei servizi di manutenzione connessi, alla luce del recente…"
     },
     {
-     "title": "Zimbra ZCS: rilevato sfruttamento di vulnerabilità in versioni non aggiornate",
-     "link": "https://www.acn.gov.it/portale/w/zimbra-zcs-rilevato-sfruttamento-di-vulnerabilita-in-versioni-non-aggiornate",
-     "date": null,
-     "summary": ""
+     "title": "Vulnerabilità in prodotti Schneider Electric",
+     "link": "https://www.acn.gov.it/portale/w/vulnerabilita-in-prodotti-schneider-electric-16",
+     "date": "2026-10-13T10:40:45+00:00",
+     "summary": "Rilevate due nuove vulnerabilità con gravità “alta” in alcuni prodotti Schneider Electric."
     }
    ]
   },
@@ -744,8 +745,8 @@
   "nksc-lt": {
    "status": "no-feed",
    "tried": [
-    "https://www.nksc.lt/en/ (discovery: HTTPError)",
-    "https://www.nksc.lt/naujienos.html (discovery: HTTPError)",
+    "https://www.nksc.lt/en/ (discovery: HTTPError 403)",
+    "https://www.nksc.lt/naujienos.html (discovery: HTTPError 403)",
     "https://www.nksc.lt/en/feed/",
     "https://www.nksc.lt/en/rss.xml",
     "https://www.nksc.lt/en/rss",
@@ -818,8 +819,8 @@
   "csirt-mt": {
    "status": "no-feed",
    "tried": [
-    "https://ncc-mita.gov.mt/ (discovery: HTTPError)",
-    "https://ncc-mita.gov.mt/news/ (discovery: HTTPError)",
+    "https://ncc-mita.gov.mt/ (discovery: HTTPError 403)",
+    "https://ncc-mita.gov.mt/news/ (discovery: HTTPError 403)",
     "https://ncc-mita.gov.mt/feed/",
     "https://ncc-mita.gov.mt/rss.xml",
     "https://ncc-mita.gov.mt/rss",
@@ -887,60 +888,20 @@
    ]
   },
   "cert-pt": {
-   "status": "stale",
-   "feed": "https://www.cncs.gov.pt/index.xml",
-   "via": "probed",
-   "items": [
-    {
-     "title": "https://dyn.cncs.gov.pt/en/detalhe/art/135690/",
-     "link": "https://dyn.cncs.gov.pt/en/detalhe/art/135690/",
-     "date": "2022-09-19T00:00:00+00:00",
-     "summary": ""
-    },
-    {
-     "title": "https://dyn.cncs.gov.pt/en/detalhe/art/135688/",
-     "link": "https://dyn.cncs.gov.pt/en/detalhe/art/135688/",
-     "date": "2022-09-15T00:00:00+00:00",
-     "summary": ""
-    },
-    {
-     "title": "https://dyn.cncs.gov.pt/en/detalhe/art/135689/",
-     "link": "https://dyn.cncs.gov.pt/en/detalhe/art/135689/",
-     "date": "2022-09-13T00:00:00+00:00",
-     "summary": ""
-    },
-    {
-     "title": "https://dyn.cncs.gov.pt/en/detalhe/art/135684/",
-     "link": "https://dyn.cncs.gov.pt/en/detalhe/art/135684/",
-     "date": "2022-08-25T00:00:00+00:00",
-     "summary": ""
-    },
-    {
-     "title": "https://dyn.cncs.gov.pt/en/detalhe/art/135683/",
-     "link": "https://dyn.cncs.gov.pt/en/detalhe/art/135683/",
-     "date": "2022-08-18T00:00:00+00:00",
-     "summary": ""
-    },
-    {
-     "title": "https://dyn.cncs.gov.pt/en/detalhe/art/135678/",
-     "link": "https://dyn.cncs.gov.pt/en/detalhe/art/135678/",
-     "date": "2022-07-15T00:00:00+00:00",
-     "summary": ""
-    },
-    {
-     "title": "https://dyn.cncs.gov.pt/en/detalhe/art/135674/",
-     "link": "https://dyn.cncs.gov.pt/en/detalhe/art/135674/",
-     "date": "2022-07-05T00:00:00+00:00",
-     "summary": ""
-    },
-    {
-     "title": "https://dyn.cncs.gov.pt/en/detalhe/art/135673/",
-     "link": "https://dyn.cncs.gov.pt/en/detalhe/art/135673/",
-     "date": "2022-06-23T00:00:00+00:00",
-     "summary": ""
-    }
+   "status": "no-feed",
+   "tried": [
+    "https://www.cncs.gov.pt/ (discovery: HTTPError 307)",
+    "https://www.cncs.gov.pt/pt/ (discovery: HTTPError 307)",
+    "https://www.cncs.gov.pt/feed/",
+    "https://www.cncs.gov.pt/rss.xml",
+    "https://www.cncs.gov.pt/rss",
+    "https://www.cncs.gov.pt/feed.xml",
+    "https://www.cncs.gov.pt/atom.xml",
+    "https://www.cncs.gov.pt/index.xml",
+    "https://www.cncs.gov.pt/feed.rss",
+    "https://www.cncs.gov.pt/?format=feed&type=rss"
    ],
-   "error": "latest fetch failed"
+   "items": []
   },
   "dnsc-ro": {
    "status": "ok",
@@ -998,19 +959,59 @@
    ]
   },
   "sk-cert": {
-   "status": "no-feed",
-   "tried": [
-    "https://www.sk-cert.sk/sk/index.html (discovery: HTTPError)",
-    "https://www.sk-cert.sk/feed/",
-    "https://www.sk-cert.sk/rss.xml",
-    "https://www.sk-cert.sk/rss",
-    "https://www.sk-cert.sk/feed.xml",
-    "https://www.sk-cert.sk/atom.xml",
-    "https://www.sk-cert.sk/index.xml",
-    "https://www.sk-cert.sk/feed.rss",
-    "https://www.sk-cert.sk/?format=feed&type=rss"
-   ],
-   "items": []
+   "status": "ok",
+   "feed": "https://www.sk-cert.sk/index.html%3Ffeed=rss",
+   "via": "discovered",
+   "items": [
+    {
+     "title": "Podvodníci pokračujú v úspešnej WhatsApp kampani imitujúcej súťaž",
+     "link": "https://www.sk-cert.sk/sk/podvodnici-pokracuju-v-uspesnej-whatsapp-kampani-imitujucej-sutaz/",
+     "date": null,
+     "summary": "Posledná aktualizácia 06.10.2026 Národné centrum kybernetickej bezpečnosti (NCKB) od začiatku októbra 2026 opäť eviduje nárast prípadov podvodnej kampane s tematikou hlasovania v talentovej súťaži. Ide o kampaň šírenú prostredníctvom aplikácie WhatsApp, v ktorej obeť obdrží…"
+    },
+    {
+     "title": "VAROVANIE: Kritické zraniteľnosti GITLAB CE a EE",
+     "link": "https://www.sk-cert.sk/sk/varovanie-kriticke-zranitelnosti-gitlab-ce-a-ee/",
+     "date": null,
+     "summary": "Národné centrum kybernetickej bezpečnosti (NCKB) NBÚ varuje pred kritickými zraniteľnosťami v produktoch GitLab Community Edition (CE) a GitLab Enterprise Edition (EE). Uvedené zraniteľnosti možno zneužiť na získanie neoprávneného prístupu k citlivým údajom a úplné narušenie…"
+    },
+    {
+     "title": "VAROVANIE: Útočníci aktívne zneužívajú zraniteľnosti MIKROTIK smerovačov",
+     "link": "https://www.sk-cert.sk/sk/varovanie-utocnici-aktivne-zneuzivaju-zranitelnosti-mikrotik-smerovacov/",
+     "date": null,
+     "summary": "Národné centrum kybernetickej bezpečnosti (NCKB) NBÚ varuje pred útokmi na smerovače značky MikroTik. Útočníci zreťazením bezpečnostných zraniteľností operačného systému MikroTik RouterOS dokážu získať úplnú kontrolu nad zariadením bez potreby autentifikácie. MikroTik routre sú…"
+    },
+    {
+     "title": "PLC na internete: aktuálne riziko aj pre kritickú infraštruktúru",
+     "link": "https://www.sk-cert.sk/sk/plc-na-internete-aktualne-riziko-aj-pre-kriticku-infrastrukturu/",
+     "date": null,
+     "summary": "Národné centrum kybernetickej bezpečnosti (NCKB) NBÚ upozorňuje na nebezpečenstvo prevádzkovania programovateľných logických radičov (ďalej ako „PLC“) voľne dostupných z verejného internetu. PLC nie je zariadenie, ktoré má byť priamo dostupné z verejného internetu.…"
+    },
+    {
+     "title": "Varovanie pred rizikami cestných meradiel",
+     "link": "https://www.sk-cert.sk/sk/varovanie-pred-rizikami-cestnych-meradiel/",
+     "date": null,
+     "summary": "Národný bezpečnostný úrad varuje pred významnou kybernetickou hrozbou spojenou s používaním viacerých typov cestných rýchlomerov s kamerou. Bezpečnostná analýza identifikovala viaceré riziká a dotknutým subjektom odporúča predmetné produkty vo svojej infraštruktúre…"
+    },
+    {
+     "title": "Závažná hardvérová zraniteľnosť starších procesorov AMD",
+     "link": "https://www.sk-cert.sk/sk/zavazna-hardverova-zranitelnost-starsich-procesorov-amd/",
+     "date": null,
+     "summary": "Národné centrum kybernetickej bezpečnosti upozorňuje na nový výskum bezpečnostného výskumníka Christophera Domasa, ktorý demonštruje závažnú hardvérovú zraniteľnosť procesorov AMD Family 16h (približne 2013 – 2016). Zmenou jediného konfiguračného bitu radiča operačnej pamäte je…"
+    },
+    {
+     "title": "OPERATION ENDGAME: Takmer 400 obetí na Slovensku infikovaných malvérom StealC",
+     "link": "https://www.sk-cert.sk/sk/operation-endgame-takmer-400-obeti-na-slovensku-infikovanych-malverom-stealc/",
+     "date": null,
+     "summary": "Národné centrum kybernetickej bezpečnosti (NCKB) NBÚ v uplynulých dňoch identifikovalo a následne hromadne varovalo niekoľko stoviek obyvateľov Slovenska, ktorých zariadenia boli kompromitované globálne rozšíreným malvérom StealC. Europol s partnermi 24. júna 2026 v rámci…"
+    },
+    {
+     "title": "WEBINÁR: Praktické rady k používaniu JISKB (Jednotný informačný systém kybernetickej bezpečnosti)",
+     "link": "https://www.sk-cert.sk/sk/webinar-prakticke-rady-k-pouzivaniu-jiskb-jednotny-informacny-system-kybernetickej-bezpecnosti/",
+     "date": null,
+     "summary": "V súvislosti so zavádzaním požiadaviek projektu NIS2 sme pre vás pripravili dva bezplatné webináre zamerané na praktické používanie JISKB – Jednotného informačného systému kybernetickej bezpečnosti. Počas 90-minútového online stretnutia získate prehľad o práci so systémom a…"
+    }
+   ]
   },
   "si-cert": {
    "status": "ok",
@@ -1127,8 +1128,8 @@
    "tried": [
     "https://www.ccn-cert.cni.es/es/seguridad-al-dia/alertas-ccn-cert.feed?type=rss",
     "https://www.ccn-cert.cni.es/es/seguridad-al-dia/noticias-seguridad.feed?type=rss",
-    "https://www.ccn-cert.cni.es/ (discovery: HTTPError)",
-    "https://www.ccn-cert.cni.es/es/seguridad-al-dia.html (discovery: HTTPError)",
+    "https://www.ccn-cert.cni.es/ (discovery: HTTPError 403)",
+    "https://www.ccn-cert.cni.es/es/seguridad-al-dia.html (discovery: HTTPError 403)",
     "https://www.ccn-cert.cni.es/feed/",
     "https://www.ccn-cert.cni.es/rss.xml",
     "https://www.ccn-cert.cni.es/rss",
@@ -1285,7 +1286,7 @@
    "status": "no-feed",
    "tried": [
     "https://www.shadowserver.org/feed/",
-    "https://www.shadowserver.org/news/ (discovery: HTTPError)",
+    "https://www.shadowserver.org/news/ (discovery: HTTPError 404)",
     "https://www.shadowserver.org/rss.xml",
     "https://www.shadowserver.org/rss",
     "https://www.shadowserver.org/feed.xml",

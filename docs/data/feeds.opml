@@ -13,11 +13,12 @@
   <outline type="rss" text="DE – CERT-Bund" xmlUrl="https://wid.cert-bund.de/content/public/securityAdvisory/rss" htmlUrl="https://wid.cert-bund.de/"/>
   <outline type="rss" text="GR – EL-CSIRT" xmlUrl="https://cyber.gov.gr/feed/" htmlUrl="https://cyber.gov.gr/el-csirt/"/>
   <outline type="rss" text="IE – NCSC-IE / CSIRT-IE" xmlUrl="https://www.ncsc.gov.ie/news/alerts.rss" htmlUrl="https://www.ncsc.gov.ie/"/>
+  <outline type="rss" text="IT – CSIRT Italia" xmlUrl="https://www.acn.gov.it/portale/feedrss/-/journal/rss/20119/723192" htmlUrl="https://www.acn.gov.it/portale/csirt-italia"/>
   <outline type="rss" text="LV – CERT.LV" xmlUrl="https://cert.lv/lv/feed/atom/viss" htmlUrl="https://cert.lv/"/>
   <outline type="rss" text="LU – CIRCL" xmlUrl="https://www.circl.lu/rss.xml" htmlUrl="https://www.circl.lu/"/>
   <outline type="rss" text="NL – NCSC-NL" xmlUrl="https://advisories.ncsc.nl/rss/advisories" htmlUrl="https://www.ncsc.nl/"/>
-  <outline type="rss" text="PT – CERT.PT" xmlUrl="https://www.cncs.gov.pt/index.xml" htmlUrl="https://www.cncs.gov.pt/"/>
   <outline type="rss" text="RO – DNSC" xmlUrl="https://dnsc.ro/feed/" htmlUrl="https://dnsc.ro/"/>
+  <outline type="rss" text="SK – SK-CERT" xmlUrl="https://www.sk-cert.sk/index.html%3Ffeed=rss" htmlUrl="https://www.sk-cert.sk/"/>
   <outline type="rss" text="SI – SI-CERT" xmlUrl="https://www.cert.si/feed/" htmlUrl="https://www.cert.si/"/>
   <outline type="rss" text="ES – INCIBE-CERT" xmlUrl="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/feed" htmlUrl="https://www.incibe.es/incibe-cert"/>
   <outline type="rss" text="SE – CERT-SE" xmlUrl="https://www.cert.se/feed.rss" htmlUrl="https://www.cert.se/"/>
