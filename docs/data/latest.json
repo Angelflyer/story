@@ -1,0 +1,1627 @@
+{
+ "updated": "2026-10-13T21:24:30+00:00",
+ "teams": {
+  "cert-pl": {
+   "status": "ok",
+   "feed": "https://cert.pl/en/atom.xml",
+   "via": "known",
+   "items": [
+    {
+     "title": "Vulnerability in Payload CMS software",
+     "link": "https://cert.pl/en/posts/2026/10/CVE-2026-63316/",
+     "date": "2026-10-13T10:55:00+00:00",
+     "summary": "SQL Injection vulnerability (CVE-2026-63316) has been found in Payload CMS software."
+    },
+    {
+     "title": "Vulnerability in Ollama software",
+     "link": "https://cert.pl/en/posts/2026/10/CVE-2026-103663/",
+     "date": "2026-10-08T10:55:00+00:00",
+     "summary": "Relative Path Traversal vulnerability (CVE-2026-103663) has been found in Ollama software."
+    },
+    {
+     "title": "Vulnerabilities in GNU Aspell software",
+     "link": "https://cert.pl/en/posts/2026/10/CVE-2026-75818/",
+     "date": "2026-10-06T10:55:00+00:00",
+     "summary": "CERT Polska has received a report about 3 vulnerabilities (from CVE-2026-75818 to CVE-2026-75820) found in GNU Aspell software."
+    },
+    {
+     "title": "Vulnerability in gotop software",
+     "link": "https://cert.pl/en/posts/2026/10/CVE-2026-91784/",
+     "date": "2026-10-02T10:55:00+00:00",
+     "summary": "Local Argument Injection vulnerability (CVE-2026-91784) has been found in cjbassi/gotop software."
+    },
+    {
+     "title": "Vulnerabilities in YunoHost-Apps sogo_yhn software",
+     "link": "https://cert.pl/en/posts/2026/09/CVE-2026-74864/",
+     "date": "2026-09-30T10:55:00+00:00",
+     "summary": "CERT Polska has received a report about 2 vulnerabilities (CVE-2026-74864 and CVE-2026-74865) found in YunoHost-Apps sogo_yhn software."
+    },
+    {
+     "title": "Vulnerability in Quick.Cart software",
+     "link": "https://cert.pl/en/posts/2026/09/CVE-2026-41875/",
+     "date": "2026-09-29T13:55:00+00:00",
+     "summary": "Cross-Site Request Forgery (CSRF) vulnerability (CVE-2026-41875) has been found in Quick.Cart software."
+    },
+    {
+     "title": "Vulnerability in MyPresta Google Merchant Center Feed software",
+     "link": "https://cert.pl/en/posts/2026/09/CVE-2026-85520/",
+     "date": "2026-09-29T12:55:00+00:00",
+     "summary": "External control of file name or path vulnerability (CVE-2026-85520) has been found in MyPresta Google Merchant Center Feed software."
+    },
+    {
+     "title": "Vulnerability in Ghostscript software",
+     "link": "https://cert.pl/en/posts/2026/09/CVE-2026-19547/",
+     "date": "2026-09-29T11:10:00+00:00",
+     "summary": "Untrusted Search Path vulnerability (CVE-2026-19547) has been found in Ghostscript software."
+    }
+   ]
+  },
+  "cert-at": {
+   "status": "ok",
+   "feed": "https://www.cert.at/cert-at.en.blog.rss_2.0.xml",
+   "via": "known",
+   "items": [
+    {
+     "title": "A quick note on incident classification",
+     "link": "https://www.cert.at/en/blog/2026/10/a-quick-note-on-incident-classification",
+     "date": "2026-10-13T11:32:35+00:00",
+     "summary": "Right now, there is ongoing work on EU level to harmonize how we classify incidents. This stems from multiple legal backgrounds, including the NIS2 directive and it’s reporting requirements and the Blueprint for cyber crisis management . I’ve tried to give input to most of…"
+    },
+    {
+     "title": "CRA - Reporting: The first two weeks",
+     "link": "https://www.cert.at/en/blog/2026/9/cra-reporting-the-first-two-weeks",
+     "date": "2026-09-25T16:01:26+00:00",
+     "summary": "The CRA-SRP (Single Reporting Platform) started operating two weeks ago, and we now have some experience with the system. There are multiple angles to this: The SRP Software With that, I mean the platform and its user experience itself. This is handled between the CSIRTs…"
+    },
+    {
+     "title": "Increased fraud attempts through BEC",
+     "link": "https://www.cert.at/en/blog/2026/8/increased-fraud-attempts-through-bec",
+     "date": "2026-08-25T21:04:49+00:00",
+     "summary": "In recent weeks, we have been receiving an increasing number of reports about criminals targeting Austrian organizations through Business Email Compromise (BEC). In this type of fraud, criminals impersonate a trusted person (such as management, a known supplier, a colleague…"
+    },
+    {
+     "title": "On the cyber-security implications of current LLMs",
+     "link": "https://www.cert.at/en/blog/2026/6/on-the-cyber-security-implications-of-current-llms",
+     "date": "2026-06-01T14:21:06+00:00",
+     "summary": "The rapid progress in the capabilities of LLMs for cyber-security related tasks naturally leads to the question of what the right response should be. With regards to CISOs, this (German) article on our webpage is my summary which also links to the paper from the Cloud Security…"
+    },
+    {
+     "title": "Lock the Ghost",
+     "link": "https://www.cert.at/en/blog/2026/3/lock-the-ghost",
+     "date": "2026-03-10T16:31:20+00:00",
+     "summary": "In the software world, “remove” is not equal to \"gone.\" This is crystal clear. There is always a good reason for that, but even the best reason does not have to be intuitive or expected by the users. Let’s take a short trip through how Python Package Index handles removals and…"
+    },
+    {
+     "title": "Incident Reporting: EU-Wide Statistics",
+     "link": "https://www.cert.at/en/blog/2026/2/incident-reporting-eu-wide-statistics",
+     "date": "2026-02-22T19:54:39+00:00",
+     "summary": "At the last CSIRTs Network meeting we got treated to a powerpoint versions of the statistics that ENISA publishes under https://ciras.enisa.europa.eu/ The mathematician inside me was not impressed, and as I’m prone to do, I did not withhold my opinion. This blog post explains…"
+    },
+    {
+     "title": "Lawful access to encrypted data: General Considerations",
+     "link": "https://www.cert.at/en/blog/2026/2/lawful-access-to-encrypted-data-general-considerations",
+     "date": "2026-02-18T19:04:18+00:00",
+     "summary": "Last week, I wrote a blog post on why the problem of lawful access to encrypted data is so tricky , this week I want to continue with a discussion on the general considerations you should keep in mind when thinking about this topic. Important note: I think LE is well aware of…"
+    },
+    {
+     "title": "Lawful access to encrypted data: why is this so hard to do?",
+     "link": "https://www.cert.at/en/blog/2026/2/lawful-access-to-encrypted-data-why-is-this-so-hard-to-do",
+     "date": "2026-02-12T17:48:27+00:00",
+     "summary": "This blogpost is part of a series of articles on this topic. I will thus not do a full intro here, for the background see Ein paar Thesen zu aktuellen Gesetzesentwürfen Ein paar Gedanken zur „Überwachung verschlüsselter Nachrichten“ Chat Control vs. File Sharing Encryption vs.…"
+    }
+   ]
+  },
+  "ccb-be": {
+   "status": "no-feed",
+   "blocked": true,
+   "tried": [
+    "https://ccb.belgium.be/advisories/rss.xml",
+    "https://ccb.belgium.be/rss.xml",
+    "https://ccb.belgium.be/ (discovery: HTTPError 403)",
+    "https://ccb.belgium.be/advisories (discovery: HTTPError 403)",
+    "https://ccb.belgium.be/ccb-news (discovery: HTTPError 403)",
+    "https://ccb.belgium.be/feed/",
+    "https://ccb.belgium.be/rss",
+    "https://ccb.belgium.be/feed.xml",
+    "https://ccb.belgium.be/atom.xml",
+    "https://ccb.belgium.be/index.xml",
+    "https://ccb.belgium.be/feed.rss",
+    "https://ccb.belgium.be/?format=feed&type=rss"
+   ],
+   "items": []
+  },
+  "cert-bg": {
+   "status": "ok",
+   "feed": "https://www.govcert.bg/feed/",
+   "via": "discovered",
+   "items": [
+    {
+     "title": "Уязвимост wp2shell засягащa WordPress",
+     "link": "https://www.govcert.bg/warnings/wp2shell-wordpress/",
+     "date": "2026-07-21T08:17:53+00:00",
+     "summary": "wp2shell представлява комбинация от 2 уязвимости за WordPress, които като бъдат екслоатирани водят до unauthenticated remote code execution (RCE) и могат да доведат до компрометирането на уязвими уебсайтове. wp2shell използва критична pre-authentication remote code execution…"
+    },
+    {
+     "title": "Кампания със заплашителни имейл съобщения относно заложени взривни устройства",
+     "link": "https://www.govcert.bg/warnings/%d0%ba%d0%b0%d0%bc%d0%bf%d0%b0%d0%bd%d0%b8%d1%8f-%d1%81%d1%8a%d1%81-%d0%b7%d0%b0%d0%bf%d0%bb%d0%b0%d1%88%d0%b8%d1%82%d0%b5%d0%bb%d0%bd%d0%b8-%d0%b8%d0%bc%d0%b5%d0%b9%d0%bb-%d1%81%d1%8a%d0%be%d0%b1/",
+     "date": "2026-07-09T07:20:15+00:00",
+     "summary": "CERT България регистрира e-mail кампания относно заложени взривни устройства, която тече от понеделник (06.07.2026г.). Кампанията е насочена срещу български държавни институции, като и при трите дни се наблюдава, че писмата са изпратени сутринта между 9 и 10 ч. Предполага се,…"
+    },
+    {
+     "title": "Уязвимост “Ghost-Sender”, засягаща хибридни Exchange Onprem – Online конфигурации",
+     "link": "https://www.govcert.bg/warnings/%d1%83%d1%8f%d0%b7%d0%b2%d0%b8%d0%bc%d0%be%d1%81%d1%82-ghost-sender/",
+     "date": "2026-06-25T14:06:58+00:00",
+     "summary": "“Ghost-Sender” е уязвимост която се изразява в широко разпространена грешка в конфигурацията, която позволява фалшифициране на имейли към организации използващи Exchange online тенанти или хибридни Exchange Onprem -> Еxchange Online конфигурации. При определени конфигурации в…"
+    },
+    {
+     "title": "FortiBleed – над 75 000 компрометирани Fortinet Firewall устройства след атака",
+     "link": "https://www.govcert.bg/warnings/fortibleed/",
+     "date": "2026-06-19T07:38:34+00:00",
+     "summary": "Установена е атака към Fortinet Firewall устройства, насочена към достъпни през интернет Fortinet устройства в правителствени и частни организации. Атакуващите използват вече компрометирани акаунти от стари изтекли данни. Установено е, че атаката е насочена към…"
+    },
+    {
+     "title": "Продължаваща phishing кампания, представяща се за държавни институции",
+     "link": "https://www.govcert.bg/warnings/%d0%bf%d1%80%d0%be%d0%b4%d1%8a%d0%bb%d0%b6%d0%b0%d0%b2%d0%b0%d1%89%d0%b0-phishing-%d0%ba%d0%b0%d0%bc%d0%bf%d0%b0%d0%bd%d0%b8%d1%8f-%d0%bf%d1%80%d0%b5%d0%b4%d1%81%d1%82%d0%b0%d0%b2%d1%8f%d1%89%d0%b0/",
+     "date": "2026-05-18T17:10:09+00:00",
+     "summary": "CERT-BG получава сигнали за продължаваща измамна кампания чрез SMS, при която престъпници се представят за държавни институции, като МВР, КАТ, Министерство на транспорта и др. Как изглежда измамата Адресатите получават съобщения, които изглеждат официални и спешни. В тях често…"
+    },
+    {
+     "title": "Какво представлява PurpleBravo",
+     "link": "https://www.govcert.bg/advices/%d0%ba%d0%b0%d0%ba%d0%b2%d0%be-%d0%bf%d1%80%d0%b5%d0%b4%d1%81%d1%82%d0%b0%d0%b2%d0%bb%d1%8f%d0%b2%d0%b0-purplebravo/",
+     "date": "2026-02-11T15:18:25+00:00",
+     "summary": "В епоха, в която дистанционната работа се е превърнала в норма, Северна Корея се възползва от възможността да манипулира процесите по наемане на служители, използвайки измамни назначения в сферата на информационните технологии (IT) за генериране на приходи за режима.…"
+    },
+    {
+     "title": "Функционалностите на DNS4EU – вече налични напълно безплатно",
+     "link": "https://www.govcert.bg/advices/%d1%84%d1%83%d0%bd%d0%ba%d1%86%d0%b8%d0%be%d0%bd%d0%b0%d0%bb%d0%bd%d0%be%d1%81%d1%82%d0%b8%d1%82%d0%b5-%d0%bd%d0%b0-dns4eu-%d0%b2%d0%b5%d1%87%d0%b5-%d0%bd%d0%b0%d0%bb%d0%b8%d1%87%d0%bd%d0%b8-%d0%bd/",
+     "date": "2025-11-11T10:07:51+00:00",
+     "summary": "Основна цел на Европейската комисия е да осигури защитата на данните на потребителите в цифровото пространство на ЕС, като същевременно се придържа към най-високите стандарти за поверителност и сигурност. Чрез мащабния проект DNS4EU беше изградена сигурна, съвместима с…"
+    },
+    {
+     "title": "Какво представлява нарушение на сигурността на данните (data breach)?",
+     "link": "https://www.govcert.bg/advices/data-breach/",
+     "date": "2025-08-28T07:25:08+00:00",
+     "summary": "Нарушение на сигурността на данните (data breach) е инцидент, при който неоторизирани лица получават достъп до защитена или поверителна информация. Такива случаи могат да включват изтичане, кражба или неправомерно разкриване на лични данни – например имена, електронни адреси,…"
+    }
+   ]
+  },
+  "cert-hr": {
+   "status": "ok",
+   "feed": "https://www.cert.hr/feed/",
+   "via": "known",
+   "items": [
+    {
+     "title": "Počelo je Europsko natjecanje iz kibernetičke sigurnosti",
+     "link": "https://www.cert.hr/pocelo-je-europsko-natjecanje-iz-kiberneticke-sigurnosti/?utm_source=rss&utm_medium=rss&utm_campaign=pocelo-je-europsko-natjecanje-iz-kiberneticke-sigurnosti",
+     "date": "2026-10-13T13:11:19+00:00",
+     "summary": "U njemačkom Bochumu počelo je ovogodišnje izdanje European Cybersecurity Challengea (ECSC), jednog od najvažnijih europskih natjecanja za mlade talente u području kibernetičke sigurnosti. Natjecanje se održava od 12. do 16. listopada 2026. godine, a okuplja više od 400…"
+    },
+    {
+     "title": "U prvih devet mjeseci 2026. godine 1203 incidenta: CARNET-ov Nacionalni CERT obilježava Mjesec kibernetičke sigurnosti nizom aktivnosti",
+     "link": "https://www.cert.hr/u-prvih-devet-mjeseci-2026-godine-1203-incidenta-carnet-ov-nacionalni-cert-obiljezava-mjesec-kiberneticke-sigurnosti-nizom-aktivnosti/?utm_source=rss&utm_medium=rss&utm_campaign=u-prvih-devet-mjeseci-2026-godine-1203-incidenta-carnet-ov-nacionalni-cert-obiljezava-mjesec-kiberneticke-sigurnosti-nizom-aktivnosti",
+     "date": "2026-10-07T07:48:13+00:00",
+     "summary": "Najviše je zabilježeno phishing napada, neželjenih poruka i financijski motiviranih prijevara, a listopad donosi kampanju za građane te nacionalna i europska natjecanja iz kibernetičke sigurnosti Tijekom Europskog mjeseca kibernetičke sigurnosti, koji se svake godine obilježava…"
+    },
+    {
+     "title": "GÉANT webinar: DEVET TOČKA OSAM OD DESET. ŠTO SAD?",
+     "link": "https://www.cert.hr/geant-webinar-devet-tocka-osam-od-deset-sto-sad/?utm_source=rss&utm_medium=rss&utm_campaign=geant-webinar-devet-tocka-osam-od-deset-sto-sad",
+     "date": "2026-09-25T12:26:31+00:00",
+     "summary": "Ranjivost dobije ocjenu 9,8 od 10. Zvuči ozbiljno, ali što ta ocjena zapravo govori i što sljedeće učiniti? Brojevi imaju snažan utjecaj na način na koji donosimo odluke. Kritična ranjivost može nas natjerati na hitno djelovanje, dok se ona s niskom ocjenom može ostaviti za…"
+    },
+    {
+     "title": "Google je izdao zakrpe za 230 ranjivosti. Ažurirajte Chrome preglednik.",
+     "link": "https://www.cert.hr/google-je-izdao-zakrpe-za-230-ranjivosti-azurirajte-chrome-preglednik/?utm_source=rss&utm_medium=rss&utm_campaign=google-je-izdao-zakrpe-za-230-ranjivosti-azurirajte-chrome-preglednik",
+     "date": "2026-09-10T13:02:35+00:00",
+     "summary": "Google je objavio sigurnosno ažuriranje kojim se otklanja ukupno 230 ranjivosti, među kojima se nalazi i ranjivost nultog dana Chrome preglednika koja se aktivno iskorištava u napadima. Google je počeo distribuirati zakrpane verzije za Windows (153.0.8010.36), Mac…"
+    },
+    {
+     "title": "Upozorenj: kritična ranjivosti u MikroTik RouterOS-u. Preporučuje se hitna nadogradnja.",
+     "link": "https://www.cert.hr/upozorenj-kriticna-ranjivosti-u-mikrotik-routeros-u-preporucuje-se-hitna-nadogradnja/?utm_source=rss&utm_medium=rss&utm_campaign=upozorenj-kriticna-ranjivosti-u-mikrotik-routeros-u-preporucuje-se-hitna-nadogradnja",
+     "date": "2026-09-07T13:11:46+00:00",
+     "summary": "Poljski CERT (CERT Polska) identificirao je i koordinirao objavu šest ranjivosti u sustavu MikroTik RouterOS. Kombinacijom dviju od njih (CVE-2026-67276 i CVE-2026-86060), nazvanom “MikroTrick”, napadač može bez autentikacije preuzeti potpunu kontrolu nad uređajem ako je na…"
+    },
+    {
+     "title": "Upozorenje: WhatsApp prijevara “Glasajte za moje dijete”",
+     "link": "https://www.cert.hr/upozorenje-whatsapp-prijevara-glasajte-za-moje-dijete/?utm_source=rss&utm_medium=rss&utm_campaign=upozorenje-whatsapp-prijevara-glasajte-za-moje-dijete",
+     "date": "2026-09-07T12:36:29+00:00",
+     "summary": "Nacionalni CERT zaprimio je prijave o phishing (smishing) prijevari putem preuzetog WhatsApp računa te je prijavio prijevare izvorima incidenta i nadležnim CERT timovima. Primjer WhatsApp poruke: Sadržaj lažnih WhatsApp poruka je: “Glasajte za … dijete na natjecanju” Možete…"
+    },
+    {
+     "title": "GÉANT webinar: Psihologija sigurnih navika",
+     "link": "https://www.cert.hr/geant-webinar-psihologija-sigurnih-navika/?utm_source=rss&utm_medium=rss&utm_campaign=geant-webinar-psihologija-sigurnih-navika",
+     "date": "2026-09-04T09:41:35+00:00",
+     "summary": "Navike oblikuju naš svakodnevni život. Svakoga dana izvodimo stotine radnji gotovo automatski, često bez aktivnog razmišljanja. Pojavi se obavijest o novoj poruci i otvaramo aplikaciju. Zvoni telefon, javljamo se. Vežemo pojas kada uđemo u automobil, peremo zube prije spavanja…"
+    },
+    {
+     "title": "Savjeti Nacionalnog CERT-a za siguran početak školske godine – što učiniti ako nešto pođe po krivu?",
+     "link": "https://www.cert.hr/savjeti-nacionalnog-cert-a-za-siguran-pocetak-skolske-godine-sto-uciniti-ako-nesto-pode-po-krivu/?utm_source=rss&utm_medium=rss&utm_campaign=savjeti-nacionalnog-cert-a-za-siguran-pocetak-skolske-godine-sto-uciniti-ako-nesto-pode-po-krivu",
+     "date": "2026-09-02T07:23:40+00:00",
+     "summary": "Koliko god se pridržavali svih sigurnosnih preporuka, ponekad se dogodi da nešto ipak pođe po krivu, bilo da je riječ o sumnjivoj poruci na koju smo kliknuli, kompromitiranom računu ili neugodnom iskustvu s nekim na internetu. Uz sve savjete o prevenciji, jednako je važno znati…"
+    }
+   ]
+  },
+  "csirt-cy": {
+   "status": "ok",
+   "feed": "https://csirt.cy/?format=feed&type=rss",
+   "via": "discovered",
+   "items": [
+    {
+     "title": "Προκήρυξη για την πλήρωση δεκατεσσάρων (14) θέσεων Μηχανικού Ψηφιακής Ασφάλειας στην ΑΨΑ - Κλίμακα Α9",
+     "link": "https://csirt.cy/security-news/dsa-a9-2025",
+     "date": "2025-08-11T10:59:49+00:00",
+     "summary": "Γίνονται δεκτές αιτήσεις για την πλήρωση 14 μόνιμων θέσεων Μηχανικού Ψηφιακής Ασφάλειας ΑΨΑ - Κλίμακα Α9."
+    }
+   ]
+  },
+  "csirt-cz": {
+   "status": "ok",
+   "feed": "https://www.nic.cz/rss/news/",
+   "via": "discovered",
+   "items": [
+    {
+     "title": "CSNOG 2027: organizátoři zveřejnili Call for Abstracts, ty platí do 31. října",
+     "link": "https://www.nic.cz/page/4655/",
+     "date": "2026-09-29T10:20:00+00:00",
+     "summary": "Návrhy konferenčních příspěvků mohou být věnované nejen správě sítí nebo bezpečnosti, ale programový výbor uvítá i přednášky s mezioborovým přesahem, například do oblasti legislativy nebo regulace."
+    },
+    {
+     "title": "Akademie CZ.NIC rozšiřuje nabídku vzdělávání o dva nové kurzy",
+     "link": "https://www.nic.cz/page/4652/",
+     "date": "2026-09-08T11:30:00+00:00",
+     "summary": "[Tisková zpráva] V harmonogramu Akademie CZ.NIC na druhou polovinu letošního roku se objevují dva nové kurzy – Linux pro mírně pokročilé a Exfiltrace dat: Útok a obrana."
+    },
+    {
+     "title": "Národní bezpečnostní tým CSIRT.CZ spouští službu Strážci internetu",
+     "link": "https://www.nic.cz/page/4647/",
+     "date": "2026-09-02T08:15:00+00:00",
+     "summary": "[Tisková zpráva] Nový nástroj podporuje jak hlášení vyžadující autorizaci, tak anonymní reporting, u kterého však nebude možné zapojit takovou míru automatizace jako u neanonymních oznámení."
+    },
+    {
+     "title": "Nový podcast Safer Internet Centra ČR pomůže rodičům lépe se orientovat v online světě dětí",
+     "link": "https://www.nic.cz/page/4643/",
+     "date": "2026-07-01T12:48:43+00:00",
+     "summary": "Cílem podcastu je nabídnout jasná data, konkrétní rady a návody, které mohou rodiče, pedagogové i další dospělí využít doma i ve škole. Bez zbytečného strašení a obecných frází chce podcast pomoci dospělým lépe porozumět digitálnímu světu dětí a otevírat s nimi důležitá témata…"
+    },
+    {
+     "title": "Safer Internet Centrum ČR se zapojilo do pracovní skupiny Kybermravnost",
+     "link": "https://www.nic.cz/page/4644/",
+     "date": "2026-06-22T10:35:00+00:00",
+     "summary": "[Tisková zpráva] Skupina propojuje instituce a odborné organizace, které se věnují prevenci, detekci a řešení rizik spojených s mravnostní kriminalitou v online prostředí. Vedle Ministerstva vnitra, Safer Internet Centra ČR a linky STOPonline.cz jsou její součástí také Policie…"
+    },
+    {
+     "title": "V Edici CZ.NIC vychází kniha Kódy, buildy, firmwary od Martina Malého",
+     "link": "https://www.nic.cz/page/4638/",
+     "date": "2026-06-18T07:30:00+00:00",
+     "summary": "[Tisková zpráva] Čtenář se v knize seznámí s různými možnostmi automatizace s cílem zlepšení a zjednodušení procesu vývoje domácích elektroprojektů, například pomocí ladicích nástrojů, build systémů nebo využití CI/CD pipeline."
+    },
+    {
+     "title": "Česko se zapojí do největšího evropského cvičení kybernetických krizí Cyber Europe 2026",
+     "link": "https://www.nic.cz/page/4640/",
+     "date": "2026-06-10T07:20:00+00:00",
+     "summary": "[Tisková zpráva] Národní koordinaci cvičení v České republice zajišťuje sdružení CZ.NIC prostřednictvím týmu CSIRT.CZ. CZ.NIC se organizaci cvičení Cyber Europe věnuje již od roku 2012, kdy se Česká republika zapojila do prvního ročníku."
+    },
+    {
+     "title": "Prezentace a videozáznamy z konference Den IPv6 2026 jsou na webu akce",
+     "link": "https://www.nic.cz/page/4639/",
+     "date": "2026-06-09T11:46:56+00:00",
+     "summary": "Konference věnovaná internetovému protokolu IPv6 proběhla 4. června v Národní technické knihovně v pražských Dejvicích."
+    }
+   ]
+  },
+  "cfcs-dk": {
+   "status": "ok",
+   "feed": "https://samsik.dk/feed/",
+   "via": "known",
+   "items": [
+    {
+     "title": "Myndigheder, organisationer og virksomheder bør supplere deres identitetskontrol efter læk fra CPR-registeret",
+     "link": "https://samsik.dk/artikler/2026/10/myndigheder-organisationer-og-virksomheder-boer-supplere-identitetskontrol/",
+     "date": "2026-10-06T08:00:00+00:00",
+     "summary": "Styrelsen for Samfundssikkerhed opfordrer til, at myndigheder, organisationer og virksomheder supplerer deres kontrol, så der ikke udleveres følsomme oplysninger alene på baggrund af oplysninger fra Det Centrale Personregister."
+    },
+    {
+     "title": "Uvedkommende har fået adgang til borgeres CPR-oplysninger: Sådan skal du forholde dig",
+     "link": "https://samsik.dk/artikler/2026/10/uvedkommende-adgang-til-cpr-oplysninger-sadan-skal-du-forholde-dig/",
+     "date": "2026-10-05T05:00:00+00:00",
+     "summary": "Forsknings-, Uddannelses og Digitaliseringsministeriet har oplyst, at uvedkommende har skaffet sig uautoriseret adgang til bl.a. navne og adresser samt CPR-numre gennem CPR-systemet. Myndigheder og borgere bør være opmærksomme på forsøg på svindel. Det Centrale Personregister…"
+    },
+    {
+     "title": "Nu går Cybersikkerhedsmåneden i gang",
+     "link": "https://samsik.dk/artikler/2026/10/nu-gaar-cybersikkerhedsmaaneden-i-gang/",
+     "date": "2026-10-01T06:00:00+00:00",
+     "summary": "Hver dag udsættes danske virksomheder, organisationer, myndigheder og borgere for forsøg på cyberangreb. Konsekvenserne kan være alvorlige – både for den enkelte, organisationer og for samfundet som helhed. Derfor sætter Styrelsen for Samfundssikkerhed ekstra fokus på…"
+    },
+    {
+     "title": "Truslen fra destruktive cyberangreb hæves til høj",
+     "link": "https://samsik.dk/artikler/2026/09/truslen-fra-destruktive-cyberangreb-haeves-til-hoej/",
+     "date": "2026-09-24T09:46:27+00:00",
+     "summary": "Det er sandsynligt, at Rusland vil forsøge at udføre destruktive cyberangreb mod Danmark. Det vurderer Styrelsen for Samfundssikkerhed, som derfor hæver trusselsniveauet for destruktive cyberangreb fra middel til høj. Truslen fra destruktive cyberangreb mod Danmark er øget.…"
+    },
+    {
+     "title": "Erfaringsopsamling fra den nationale krisestyringsøvelse",
+     "link": "https://samsik.dk/artikler/2026/09/erfaringsopsamling-fra-den-nationale-krisestyringsoevelse/",
+     "date": "2026-09-17T14:04:26+00:00",
+     "summary": "Styrelsen for Samfundssikkerhed har gennemført en erfaringsopsamling fra den nationale krisestyringsøvelse, som blev gennemført i efteråret 2025. På baggrund af erfaringerne er uddraget syv anbefalinger, der kan bidrage til at styrke samfundets evne til at håndtere kriser.…"
+    },
+    {
+     "title": "Nu skal virksomheder i hele EU underrette om digitale sårbarheder i produkter",
+     "link": "https://samsik.dk/artikler/2026/09/nu-skal-virksomheder-i-hele-eu-underrette-om-digitale-saarbarheder-i-produkter/",
+     "date": "2026-09-11T09:52:38+00:00",
+     "summary": "Fra den 11. september i år skal virksomheder i EU indberette digitale sårbarheder og alvorlige it-sikkerhedshændelser i produkter med digitale elementer. Forordningen for cyberrobusthed (CRA) skal sikre produkter mod cyberangreb og gælder både hardware og software."
+    },
+    {
+     "title": "Gode råd til mental trivsel i en urolig verden",
+     "link": "https://samsik.dk/artikler/2026/09/gode-raad-til-mental-trivsel-i-en-urolig-verden/",
+     "date": "2026-09-03T04:00:00+00:00",
+     "summary": "Styrelsen for Samfundssikkerhed har i samarbejde med Psykiatrifonden lavet syv gode råd til mental trivsel i en urolig tid. Hold fast i rutinerne og fokuser på det, du selv kan ændre. Det er to af de syv råd til at holde sig mentalt oven vande i en usikker tid. Alle kan nemlig…"
+    },
+    {
+     "title": "Sådan taler du med børn om kriser og bekymringer",
+     "link": "https://samsik.dk/artikler/2026/08/saadan-taler-du-med-boern-om-kriser-og-bekymringer/",
+     "date": "2026-08-26T04:00:00+00:00",
+     "summary": "En række organisationer er gået sammen med Styrelsen for Samfundssikkerhed for at hjælpe voksne med nogle af de svære samtaler med børn. I en urolig verden, hvor vi dagligt konfronteres med billeder og historier om krig, naturkatastrofer, ulykker og klimakriser, kan vi alle…"
+    }
+   ]
+  },
+  "cert-ee": {
+   "status": "ok",
+   "feed": "https://www.ria.ee/en/rss-feeds/rss.xml",
+   "via": "discovered",
+   "items": [
+    {
+     "title": "Reporting scam sites helps to prevent further victims",
+     "link": "https://ria.ee/en/news/reporting-scam-sites-helps-prevent-further-victims",
+     "date": "2026-10-13T10:26:18+00:00",
+     "summary": "One person’s vigilance can help to protect many others from fraud. The Information System Authority (RIA) invites the public to report fraudulent websites by emailing cert@cert.ee, so that these websites can be removed from the internet."
+    },
+    {
+     "title": "September in cyberspace: data breaches and disruptions to government e-services",
+     "link": "https://ria.ee/en/news/september-cyberspace-data-breaches-and-disruptions-government-e-services",
+     "date": "2026-10-05T06:45:59+00:00",
+     "summary": "The Information System Authority (RIA) registered 964 cyber incidents with an impact in September. Among the more serious incidents this month were data breaches affecting the dental care information system and the University of Tartu’s online bookshop, denial-of-service…"
+    },
+    {
+     "title": "The Windows update released on March 10 resolves issues affecting the use of new Thales ID cards",
+     "link": "https://ria.ee/en/news/windows-update-released-march-10-resolves-issues-affecting-use-new-thales-id-cards",
+     "date": "2026-09-17T07:43:00+00:00",
+     "summary": "The Windows update released on March 10 resolves an issue with new ID-cards that prevented the DigiDoc4 app from recognizing them. RIA recommends downloading and installing the latest Windows software update to ensure trouble-free use of your ID-card."
+    },
+    {
+     "title": "Estonian experts develop cyber defence doctrine for the AI era",
+     "link": "https://ria.ee/en/news/estonian-experts-develop-cyber-defence-doctrine-ai-era",
+     "date": "2026-09-16T10:18:14+00:00",
+     "summary": "Experts and researchers from Estonian government agencies, universities, technology companies and banks have developed a comprehensive cyber defence policy paper setting out recommendations for countries seeking to protect digital society in the age of artificial intelligence."
+    },
+    {
+     "title": "August in cyberspace: service disruptions, ransomware attacks, and phishing messages",
+     "link": "https://ria.ee/en/news/august-cyberspace-service-disruptions-ransomware-attacks-and-phishing-messages",
+     "date": "2026-09-03T09:49:42+00:00",
+     "summary": "In August, the Information System Authority registered 899 cyber incidents with an impact. Over the course of the month, there were disruptions to several key services, a school in Harju County was hit by a ransomware attack, and a phishing campaign with the perpetrator…"
+    },
+    {
+     "title": "RIA: Mobile-ID users will need to replace their SIM cards to continue using the service",
+     "link": "https://ria.ee/en/news/ria-mobile-id-users-will-need-replace-their-sim-cards-continue-using-service",
+     "date": "2026-08-06T07:06:50+00:00",
+     "summary": "Due to updates to the EU regulation on electronic identification and trust services (the eIDAS Regulation), mobile network operators will start to gradually replace SIM cards that support the Mobile-ID service. The way Mobile-ID is used will not change, but users will need to…"
+    },
+    {
+     "title": "July in cyberspace: hacked websites, service disruptions, and phishing emails",
+     "link": "https://ria.ee/en/news/july-cyberspace-hacked-websites-service-disruptions-and-phishing-emails",
+     "date": "2026-08-05T11:14:25+00:00",
+     "summary": "The Information System Authority (RIA) registered 1,044 cyber incidents in July. Over the course of the month, several websites experienced disruptions, defacements of Estonian websites became more frequent, and phishing emails sent posing as banks continued."
+    },
+    {
+     "title": "Mai Kraft appointed Director of RIA's National Cyber Security Centre",
+     "link": "https://ria.ee/en/news/mai-kraft-appointed-director-rias-national-cyber-security-centre",
+     "date": "2026-08-03T10:26:20+00:00",
+     "summary": "As of 1 August, Mai Kraft has assumed the position of Director of the National Cyber Security Centre of Estonia (NCSC-EE) at the Estonian Information System Authority (RIA), as well as Deputy Director General for Cyber Security. She succeeds Gert Auväärt, who has been appointed…"
+    }
+   ]
+  },
+  "ncsc-fi": {
+   "status": "ok",
+   "feed": "https://www.kyberturvallisuuskeskus.fi/feed/rss/en",
+   "via": "known",
+   "items": [
+    {
+     "title": "Citrix NetScaler vulnerabilities exploited in Finland",
+     "link": "https://www.kyberturvallisuuskeskus.fi/en/news/citrix-netscaler-vulnerabilities-exploited-finland?mtm_campaign=rss&mtm_source=rss&mtm_medium=rss",
+     "date": "2026-10-01T17:02:07+00:00",
+     "summary": "The National Cyber Security Centre Finland (NCSC-FI) has issued an alert about several critical vulnerabilities in Citrix NetScaler ADC and Gateway products that are also being actively exploited in Finland. The vulnerabilities may allow attackers to execute remote code without…"
+    },
+    {
+     "title": "Critical vulnerabilities in Citrix NetScaler ADC and NetScaler Gateway products, several intrusions in Finland",
+     "link": "https://www.kyberturvallisuuskeskus.fi/en/alerts/critical-vulnerabilities-citrix-netscaler-adc-and-netscaler-gateway-products-several-intrusions-finland?mtm_campaign=rss&mtm_source=rss&mtm_medium=rss",
+     "date": "2026-10-01T16:51:44+00:00",
+     "summary": "The National Cyber Security Centre Finland (NCSC-FI) has received reports of active exploitation of critical vulnerabilities in Citrix NetScaler ADC and NetScaler Gateway products in Finland. Systems affected by the vulnerabilities must be updated to patched software versions…"
+    },
+    {
+     "title": "TIETO26 exercise strengthens companies’ and public authorities’ preparedness through cooperation",
+     "link": "https://www.kyberturvallisuuskeskus.fi/en/news/tieto26-exercise-strengthens-companies-and-public-authorities-preparedness-through-cooperation?mtm_campaign=rss&mtm_source=rss&mtm_medium=rss",
+     "date": "2026-09-30T09:01:03+00:00",
+     "summary": "The Finnish Transport and Communications Agency Traficom supports companies and public authorities in preparing for cyber incidents. The TIETO26 exercise strengthens cooperation in the event of large-scale incidents."
+    },
+    {
+     "title": "Cyber Weather August 2026",
+     "link": "https://www.kyberturvallisuuskeskus.fi/en/news/cyber-weather-august-2026?mtm_campaign=rss&mtm_source=rss&mtm_medium=rss",
+     "date": "2026-09-29T12:10:08+00:00",
+     "summary": "August’s cyber weather remained rainy, and incident numbers increased after the summer holiday season."
+    },
+    {
+     "title": "Manufacturers – prepare in advance for reporting vulnerabilities and incidents under the Cyber Resilience Act",
+     "link": "https://www.kyberturvallisuuskeskus.fi/en/news/manufacturers-prepare-advance-reporting-vulnerabilities-and-incidents-under-cyber-resilience-act?mtm_campaign=rss&mtm_source=rss&mtm_medium=rss",
+     "date": "2026-08-28T08:51:38+00:00",
+     "summary": "Before the CRA reporting obligations start to apply, organisations should prepare internally for submitting notifications. The reporting deadlines are short, so it is important to agree on responsibilities and procedures before the first reportable case occurs. We have compiled…"
+    },
+    {
+     "title": "Cyber Weather July 2026",
+     "link": "https://www.kyberturvallisuuskeskus.fi/en/news/cyber-weather-july-2026?mtm_campaign=rss&mtm_source=rss&mtm_medium=rss",
+     "date": "2026-08-27T11:07:26+00:00",
+     "summary": "Rain fronts were seen across the cyber landscape in July. The number of ransomware incidents reported to the NCSC-FI increased. The number of vulnerabilities also continues to rise, which is reflected in the number of vulnerability advisories issued by the NCSC-FI."
+    },
+    {
+     "title": "As the school year begins, it is a good time to remind children about safe internet use",
+     "link": "https://www.kyberturvallisuuskeskus.fi/en/news/school-year-begins-it-good-time-remind-children-about-safe-internet-use?mtm_campaign=rss&mtm_source=rss&mtm_medium=rss",
+     "date": "2026-08-11T12:09:09+00:00",
+     "summary": "Many children get their first phone when they start school or begin using digital services more independently than before. However, a safe digital everyday life does not happen by itself: children need to learn digital safety skills together with their families at home.…"
+    },
+    {
+     "title": "Cyber Weather for June 2026",
+     "link": "https://www.kyberturvallisuuskeskus.fi/en/news/cyber-weather-june-2026?mtm_campaign=rss&mtm_source=rss&mtm_medium=rss",
+     "date": "2026-07-23T08:15:10+00:00",
+     "summary": "The global FortiBleed attack campaign brought dark clouds to the Cyber Weather in June, but Finland has so far avoided the storm. The month also saw the return of scams that are typical of the summer holiday season."
+    }
+   ]
+  },
+  "cert-fr": {
+   "status": "ok",
+   "feed": "https://www.cert.ssi.gouv.fr/feed/",
+   "via": "known",
+   "items": [
+    {
+     "title": "Vulnérabilité dans NetApp StorageGRID (13 octobre 2026)",
+     "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1295/",
+     "date": "2026-10-13T00:00:00+00:00",
+     "summary": "Une vulnérabilité a été découverte dans NetApp StorageGRID. Elle permet à un attaquant de provoquer un déni de service à distance."
+    },
+    {
+     "title": "Bulletin d'actualité CERTFR-2026-ACT-043 (12 octobre 2026)",
+     "link": "https://www.cert.ssi.gouv.fr/actualite/CERTFR-2026-ACT-043/",
+     "date": "2026-10-12T00:00:00+00:00",
+     "summary": "Ce bulletin d'actualité du CERT-FR revient sur les vulnérabilités significatives de la semaine passée pour souligner leurs criticités. Il ne remplace pas l'analyse de l'ensemble des avis et alertes publiés par le CERT-FR dans le cadre d'une analyse de risques pour prioriser…"
+    },
+    {
+     "title": "Multiples vulnérabilités dans GitLab (12 octobre 2026)",
+     "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1294/",
+     "date": "2026-10-12T00:00:00+00:00",
+     "summary": "De multiples vulnérabilités ont été découvertes dans GitLab. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une atteinte à la confidentialité des données et une atteinte à l'intégrité des données."
+    },
+    {
+     "title": "Multiples vulnérabilités dans PostgreSQL JDBC (12 octobre 2026)",
+     "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1292/",
+     "date": "2026-10-12T00:00:00+00:00",
+     "summary": "De multiples vulnérabilités ont été découvertes dans PostgreSQL JDBC. Elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données et un contournement de la politique de sécurité."
+    },
+    {
+     "title": "Multiples vulnérabilités dans MongoDB (12 octobre 2026)",
+     "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1293/",
+     "date": "2026-10-12T00:00:00+00:00",
+     "summary": "De multiples vulnérabilités ont été découvertes dans les produits MongoDB. Elles permettent à un attaquant de provoquer un déni de service à distance et un problème de sécurité non spécifié par l'éditeur."
+    },
+    {
+     "title": "Incident de sécurité ciblant les contrôleurs à distance des installations de réfrigération (12 octobre 2026)",
+     "link": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-012/",
+     "date": "2026-10-12T00:00:00+00:00",
+     "summary": "Le CERT-FR a connaissance de nombreuses compromissions des controleurs à distance d'installation de réfrigération Danfoss série AK-SM, AK-SC ainsi que Copeland xweb et Dixell xweb. De manière générale l'exposition d'une interface de gestion sur Internet est contraire aux bonnes…"
+    },
+    {
+     "title": "Vulnérabilité dans les produits Tenable (09 octobre 2026)",
+     "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1284/",
+     "date": "2026-10-09T00:00:00+00:00",
+     "summary": "Une vulnérabilité a été découverte dans les produits Tenable. Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance. L'éditeur indique qu'une réinstallation d'un composant est nécessaire après la mise à jour."
+    },
+    {
+     "title": "Multiples vulnérabilités dans le noyau Linux d'Ubuntu (09 octobre 2026)",
+     "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1286/",
+     "date": "2026-10-09T00:00:00+00:00",
+     "summary": "De multiples vulnérabilités ont été découvertes dans le noyau Linux d'Ubuntu. Certaines d'entre elles permettent à un attaquant de provoquer une élévation de privilèges, un déni de service à distance et une atteinte à la confidentialité des données."
+    }
+   ]
+  },
+  "cert-bund": {
+   "status": "ok",
+   "feed": "https://wid.cert-bund.de/content/public/securityAdvisory/rss",
+   "via": "known",
+   "items": [
+    {
+     "title": "[UPDATE] [hoch] ImageMagick: Mehrere Schwachstellen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3867",
+     "date": "2026-10-13T18:04:11+00:00",
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in ImageMagick ausnutzen, um beliebigen Programmcode mit den Rechten des Dienstes auszuführen, den Speicher zu beschädigen, Cross-Site-Scripting-Angriffe durchzuführen, einen Denial-of-Service-Angriff auszulösen, Daten zu manipulieren…"
+    },
+    {
+     "title": "[UPDATE] [hoch] Froxlor: Mehrere Schwachstellen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3629",
+     "date": "2026-10-13T17:59:11+00:00",
+     "summary": "Ein entfernter, authentisierter Angreifer kann mehrere Schwachstellen in Froxlor ausnutzen, um Cross-Site-Scripting-Angriffe durchzuführen, vertrauliche Informationen offenzulegen, Daten zu manipulieren und möglicherweise erweiterte Berechtigungen zu erlangen."
+    },
+    {
+     "title": "[NEU] [hoch] Siemens SIMATIC S7: Mehrere Schwachstelle",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3891",
+     "date": "2026-10-13T12:04:11+00:00",
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in verschiedenen Siemens SIMATIC S7 Produkten ausnutzen, um beliebigen Code auszuführen, erweiterte Berechtigungen zu erlangen, Daten zu manipulieren oder offenzulegen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand…"
+    },
+    {
+     "title": "[UPDATE] [mittel] QT: Schwachstelle ermöglicht Denial of Service",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3332",
+     "date": "2026-10-13T12:04:11+00:00",
+     "summary": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in QT ausnutzen, um einen Denial of Service Angriff durchzuführen."
+    },
+    {
+     "title": "[UPDATE] [mittel] libpng: Schwachstelle ermöglicht Denial of Service",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3619",
+     "date": "2026-10-13T12:00:15+00:00",
+     "summary": "Ein Angreifer kann eine Schwachstelle in libpng ausnutzen, um einen Denial of Service Angriff durchzuführen."
+    },
+    {
+     "title": "[UPDATE] [mittel] gcc: Schwachstelle ermöglicht Manipulation von Dateien und DoS",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3612",
+     "date": "2026-10-13T12:00:14+00:00",
+     "summary": "Ein Angreifer kann eine Schwachstelle in gcc ausnutzen, um Dateien zu manipulieren und Denial-of-Service-Zustände zu verursachen."
+    },
+    {
+     "title": "[UPDATE] [mittel] Linux Kernel: Mehrere Schwachstellen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3444",
+     "date": "2026-10-13T12:00:13+00:00",
+     "summary": "Ein Angreifer kann mehrere Schwachstellen im Linux Kernel möglicherweise ausnutzen, um Berechtigungen zu erweitern, Sicherheitsmaßnahmen zu umgehen, Daten offenzulegen oder zu manipulieren, den Speicher zu beschädigen, Denial-of-Service-Zustände zu verursachen oder andere,…"
+    },
+    {
+     "title": "[UPDATE] [mittel] Intel Prozessor: Mehrere Schwachstellen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-2772",
+     "date": "2026-10-13T12:00:10+00:00",
+     "summary": "Ein lokaler Angreifer kann mehrere Schwachstellen in Intel Prozessor ausnutzen, um erweiterte Rechte zu erlangen, Daten zu manipulieren, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen."
+    }
+   ]
+  },
+  "el-csirt": {
+   "status": "ok",
+   "feed": "https://cyber.gov.gr/feed/",
+   "via": "known",
+   "items": [
+    {
+     "title": "Κοινές δράσεις και συνέργειες των NCCs στην Κύπρο για ένα ισχυρότερο ευρωπαϊκό οικοσύστημα κυβερνοασφάλειας",
+     "link": "https://cyber.gov.gr/koines-draseis-kai-synergeies-ton-nccs-stin-kypro-gia-ena-ischyrotero-eyropaiko-oikosystima-kyvernoasfaleias/",
+     "date": "2026-10-13T12:53:09+00:00",
+     "summary": "Συνάντηση εκπροσώπων των Εθνικών Κέντρων Συντονισμού (National Coordination Centres – NCCs), καθώς και του Ευρωπαϊκού Κέντρου Αρμοδιότητας για την Κυβερνοασφάλεια (European Cybersecurity Competence Centre – ECCC), διοργάνωσε στις 12 Οκτωβρίου… Το άρθρο Κοινές δράσεις και…"
+    },
+    {
+     "title": "Κυβερνοασφάλεια και Τεχνητή Νοημοσύνη: Από την καινοτομία στην εφαρμογή-Ενημερωτική εκδήλωση στις Βρυξέλλες",
+     "link": "https://cyber.gov.gr/kyvernoasfaleia-kai-techniti-noimosyni-apo-tin-kainotomia-stin-efarmogi-enimerotiki-ekdilosi-stis-vryxelles/",
+     "date": "2026-10-08T08:27:46+00:00",
+     "summary": "Εκδήλωση με στόχο την ανταλλαγή απόψεων σχετικά με την ασφαλή και υπεύθυνη αξιοποίηση της ΤΝ για την ενίσχυση της κυβερνοασφάλειας και της ανθεκτικότητας στην Ευρώπη, με τίτλο «Cybersecurity and Artificial… Το άρθρο Κυβερνοασφάλεια και Τεχνητή Νοημοσύνη: Από την καινοτομία στην…"
+    },
+    {
+     "title": "Προκήρυξη ανοιχτού ηλεκτρονικού διαγωνισμού άνω των ορίων για την παροχή εξελιγμένων υπηρεσιών κυβερνοασφάλειας",
+     "link": "https://cyber.gov.gr/prokiryxi-anoichtoy-ilektronikoy-diagonismoy-ano-ton-orion-gia-tin-parochi-exeligmenon-ypiresion-kyvernoasfaleias/",
+     "date": "2026-09-30T07:49:48+00:00",
+     "summary": "Η Εθνική Αρχή Κυβερνοασφάλειας προκηρύσσει ανοικτό ηλεκτρονικό διαγωνισμό άνω των ορίων, μέσω του Εθνικού Συστήματος Ηλεκτρονικών Δημοσίων Συμβάσεων (ΕΣΗΔΗΣ), για την ανάδειξη αναδόχου για την παροχή εξελιγμένων υπηρεσιών μηχανισμού προστασίας… Το άρθρο Προκήρυξη ανοιχτού…"
+    },
+    {
+     "title": "Πρόσκληση σε διαδικτυακά μαθήματα Κυβερνοασφάλειας δωρεάν και πιστοποιούμενα μέσω του ευρωπαϊκού έργου Cadmus",
+     "link": "https://cyber.gov.gr/prosklisi-se-diadiktyaka-mathimata-kyvernoasfaleias-dorean-kai-pistopoioymena-meso-toy-eyropaikoy-ergoy-cadmus/",
+     "date": "2026-09-29T11:18:14+00:00",
+     "summary": "Σας προσκαλούμε να παρακολουθήσετε, δωρεάν, τα πιστοποιούμενα διαδικτυακά μαθήματα Κυβερνοασφάλειας που προσφέρονται, μέσω της πλατφόρμας του Ευρωπαϊκού έργου CADMUS . To έργο συντονίζει η Εθνική Αρχή Κυβερνοασφάλειας (ΕΑΚ), σε συνεργασία με… Το άρθρο Πρόσκληση σε διαδικτυακά…"
+    },
+    {
+     "title": "«Η Κυβερνοασφάλεια απαιτεί συνεχή γνώση και υπεύθυνη ψηφιακή συμπεριφορά απ’ όλους μας» Όλα όσα δήλωσε ο Υποδιοικητής της ΕΑΚ Ι. Παυλόσογλου στο podcast του Αλέξανδρου Κόντη στο Real fm",
+     "link": "https://cyber.gov.gr/i-kyvernoasfaleia-apaitei-synechi-gnosi-kai-ypeythyni-psifiaki-symperifora-ap-oloys-mas-ola-osa-dilose-o-ypodioikitis-tis-eak-i-paylosogloy-sto-podcast-toy-alexandroy-konti-sto-r/",
+     "date": "2026-09-29T07:24:02+00:00",
+     "summary": "Για τον ρόλο και την αποστολή της νεοσύστατης Εθνικής Αρχής Κυβερνοασφάλειας, τη σύγχρονη εικόνα των κυβερνοαπειλών όπως διαμορφώνεται και με τη χρήση της Τεχνητής Νοημοσύνης, αλλά και για τους βασικούς… Το άρθρο «Η Κυβερνοασφάλεια απαιτεί συνεχή γνώση και υπεύθυνη ψηφιακή…"
+    },
+    {
+     "title": "Καμπανάκι κινδύνου κρούει η ΕΑΚ: Όταν ο κωδικός πρόσβασης γίνεται πύλη εισόδου κακόβουλων",
+     "link": "https://cyber.gov.gr/kampanaki-kindynoy-kroyei-i-eak-otan-o-kodikos-prosvasis-ginetai-pyli-eisodoy-kakovoylon/",
+     "date": "2026-09-28T12:53:25+00:00",
+     "summary": "Προστατεύουμε εταιρικά και υπηρεσιακά διαπιστευτήρια από υποκλοπή και κακόβουλη αξιοποίηση Η Εθνική Αρχή Κυβερνοασφάλειας διαπιστώνει ότι σημαντικός αριθμός εταιρικών και υπηρεσιακών διαπιστευτηρίων κυκλοφορεί σε παράνομες αγορές του διαδικτύου. Τα διαπιστευτήρια… Το άρθρο…"
+    },
+    {
+     "title": "Διοικητής ΕΑΚ Μ. Μπλέτσας στην ΕΡΤ1 : «Ψυχραιμία και δυσπιστία στην πρώτη γραμμή άμυνας απέναντι στις σύγχρονες κυβερνοαπάτες»",
+     "link": "https://cyber.gov.gr/dioikitis-eak-m-mpletsas-stin-ert1-psychraimia-kai-dyspistia-stin-proti-grammi-amynas-apenanti-stis-sygchrones-kyvernoapates/",
+     "date": "2026-09-25T14:23:33+00:00",
+     "summary": "Την ανάγκη να διατηρούμε την ψυχραιμία μας και να ενεργοποιούμε τους μηχανισμούς λογικής πριν αντιδράσουμε σε ένα ύποπτο μήνυμα, τηλεφώνημα ή βιντεοκλήση, ανέδειξε ο Διοικητής της Εθνικής Αρχής Κυβερνοασφάλειας (ΕΑΚ)… Το άρθρο Διοικητής ΕΑΚ Μ. Μπλέτσας στην ΕΡΤ1 : «Ψυχραιμία…"
+    },
+    {
+     "title": "Διοικητής ΕΑΚ Μιχάλης Μπλέτσας: «Η με κάθε τρόπο κοινοποίηση τηλεφωνικών αριθμών και προσωπικών email καταρρίπτει αυτόματα κάθε είδους απορρήτου στο διαδίκτυο. Άνευ ουσίας δημοσιεύματα που…",
+     "link": "https://cyber.gov.gr/dioikitis-eak-michalis-mpletsas-i-me-kathe-tropo-koinopoiisi-tilefonikon-arithmon-kai-prosopikon-email-katarriptei-aytomata-kathe-eidoys-aporritoy-sto-diadiktyo-aney-oysias-dimosieymata-poy-di/",
+     "date": "2026-09-21T08:23:49+00:00",
+     "summary": "Διοικητής ΕΑΚ Μιχάλης Μπλέτσας: «Η με κάθε τρόπο κοινοποίηση τηλεφωνικών αριθμών και προσωπικών email καταρρίπτει αυτόματα κάθε είδους απορρήτου στο διαδίκτυο. Άνευ ουσίας δημοσιεύματα που διαπραγματεύονται το αυτονόητο». Με αφορμή… Το άρθρο Διοικητής ΕΑΚ Μιχάλης Μπλέτσας: «Η…"
+    }
+   ]
+  },
+  "nki-hu": {
+   "status": "ok",
+   "feed": "https://nki.gov.hu/figyelmeztetesek/riasztas/feed/",
+   "via": "known",
+   "items": [
+    {
+     "title": "Riasztás a WordPress Core-t érintő sérülékenységről",
+     "link": "https://nki.gov.hu/figyelmeztetesek/riasztas/riasztas-a-wordpress-core-t-erinto-serulekenysegrol/",
+     "date": "2026-10-01T10:27:15+00:00",
+     "summary": "A Nemzetbiztonsági Szakszolgálat Nemzeti Kiberbiztonsági Intézete riasztást ad ki a széles körben használt WordPress tartalomkezelő rendszer (Core) aktívan kihasznált sérülékenysége miatt. A CISA 2026. szeptember 25-én vette fel a KEV-katalógusába. A hiba hitelesítés nélkül…"
+    },
+    {
+     "title": "Riasztás a Cisco Catalyst SD-WAN Manager rendszert érintő sérülékenységről",
+     "link": "https://nki.gov.hu/figyelmeztetesek/riasztas/riasztas-a-cisco-catalyst-sd-wan-manager-rendszert-erinto-serulekenysegrol/",
+     "date": "2026-10-01T10:24:00+00:00",
+     "summary": "A Nemzetbiztonsági Szakszolgálat Nemzeti Kiberbiztonsági Intézete riasztást ad ki a Cisco Catalyst SD-WAN Manager API-jának hitelesítését érintő, aktívan kihasznált kritikus sérülékenység miatt. A hibát a Cisco közlése szerint 2026 szeptemberében már aktívan kihasználták. A…"
+    },
+    {
+     "title": "Riasztás a NetScaler ADC és NetScaler Gateway termékeket érintő sérülékenységekről",
+     "link": "https://nki.gov.hu/figyelmeztetesek/riasztas/riasztas-a-netscaler-adc-es-netscaler-gateway-termekeket-erinto-serulekenysegekrol/",
+     "date": "2026-09-28T10:59:18+00:00",
+     "summary": "A Nemzetbiztonsági Szakszolgálat Nemzeti Kiberbiztonsági Intézet riasztást ad ki a NetScaler ADC és NetScaler Gateway termékeket érintő CVE-2026-88771 és CVE-2026-88772 azonosítójú, aktívan kihasznált kritikus sérülékenységek kapcsán. A gyártó 2026. szeptember 27-én adott ki…"
+    },
+    {
+     "title": "Riasztás a Tárhely.Eu nevében küldött adathalász kampány kapcsán",
+     "link": "https://nki.gov.hu/figyelmeztetesek/riasztas/riasztas-a-tarhely-eu-neveben-kuldott-adathalasz-kampany-kapcsan/",
+     "date": "2026-09-25T06:18:10+00:00",
+     "summary": "A Nemzetbiztonsági Szakszolgálat Nemzeti Kiberbiztonsági Intézet riasztást ad ki a Tárhely.Eu tárhelyszolgáltató nevében küldött adathalász kampány kapcsán. A beérkezett bejelentések alapján ismeretlen elkövetők a Tárhely.Eu nevével visszaélve fizetési felszólításokat küldenek…"
+    },
+    {
+     "title": "Riasztás az F5 BIG-IP APM rendszert érintő CVE-2026-94127 sérülékenységről",
+     "link": "https://nki.gov.hu/figyelmeztetesek/riasztas/riasztas-az-f5-big-ip-apm-rendszert-erinto-cve-2026-94127-serulekenysegrol/",
+     "date": "2026-09-23T08:20:50+00:00",
+     "summary": "A Nemzetbiztonsági Szakszolgálat Nemzeti Kiberbiztonsági Intézet riasztást ad ki a BIG-IP Access Policy Manager-t (APM) érintő CVE-2026-94127 azonosítón nyomon követett, kritikus, nulladik napi sérülékenység kapcsán. A sérülékenység egy heap-alapú puffertúlcsordulás, amely…"
+    },
+    {
+     "title": "Riasztás Check Point Security Management Server-t érintő sérülékenységről",
+     "link": "https://nki.gov.hu/figyelmeztetesek/riasztas/riasztas-check-point-security-management-server-t-erinto-serulekenysegrol/",
+     "date": "2026-09-23T08:16:19+00:00",
+     "summary": "A Nemzetbiztonsági Szakszolgálat Nemzeti Kiberbiztonsági Intézet riasztást ad ki a Check Point Security Management Servert érintő CVE-2026-93616 azonosítójú, aktívan kihasznált kritikus sérülékenység kapcsán. A CVSS 9,8-as, előzetes hitelesítés nélkül kihasználható…"
+    },
+    {
+     "title": "Riasztás Cisco szoftvereket érintő sérülékenységekről",
+     "link": "https://nki.gov.hu/figyelmeztetesek/riasztas/riasztas-cisco-szoftvereket-erinto-serulekenysegekrol/",
+     "date": "2026-09-17T11:27:57+00:00",
+     "summary": "A Nemzetbiztonsági Szakszolgálat Nemzeti Kiberbiztonsági Intézet riasztást ad ki a Cisco Identity Services Engine (ISE) és az ISE Passive Identity Connector (ISE-PIC) termékeket érintő, CVE-2026-76460 azonosítón nyomon követett kritikus sérülékenység kapcsán. A sebezhetőség…"
+    },
+    {
+     "title": "Riasztás Microsoft szoftverek 2026 szeptemberben javított sérülékenységeiről",
+     "link": "https://nki.gov.hu/figyelmeztetesek/riasztas/riasztas-microsoft-szoftverek-2026-szeptemberben-javitott-serulekenysegeirol/",
+     "date": "2026-09-09T06:04:38+00:00",
+     "summary": "A Nemzetbiztonsági Szakszolgálat Nemzeti Kiberbiztonsági Intézet riasztást ad ki a Microsoft szoftvereket érintő kritikus kockázati besorolású sérülékenységek kapcsán azok súlyossága, a szoftverek széleskörű elterjedtsége, valamint az egyes biztonsági hibákat érintő aktív…"
+    }
+   ]
+  },
+  "ncsc-ie": {
+   "status": "ok",
+   "feed": "https://www.ncsc.gov.ie/news/alerts.rss",
+   "via": "discovered",
+   "items": [
+    {
+     "title": "Critical Vulnerability in Ivanti Connect Secure (CVE-2026-104935)",
+     "link": "https://www.ncsc.gov.ie/pdfs/2610130333_CVE-2026-104935.pdf",
+     "date": "2026-10-13T00:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Critical Vulnerability in Citrix NetScaler ADC and Gateway (CVE-2026-107406)",
+     "link": "https://www.ncsc.gov.ie/pdfs/2610090281_CVE-2026-107406.pdf",
+     "date": "2026-10-09T00:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Critical Vulnerability in SonicWall:SMA1000 (CVE-2026-102255)",
+     "link": "https://www.ncsc.gov.ie/pdfs/2610070242_CVE-2026-102255.pdf",
+     "date": "2026-10-07T00:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Critical Arbitrary File Access Vulnerability impacting Multiple Atlassian Products (CVE-2026-21589)",
+     "link": "https://www.ncsc.gov.ie/pdfs/2610060236_CVE-2026-21589.pdf",
+     "date": "2026-10-06T00:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Vulnerability in Citrix NetScaler ADC and Gateway (CVE-2026-88779)",
+     "link": "https://www.ncsc.gov.ie/pdfs/2610050267_CVE-2026-88779.pdf",
+     "date": "2026-10-05T00:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Critical vulnerability in Fortinet: FortiMail (CVE-2026-104286)",
+     "link": "https://www.ncsc.gov.ie/pdfs/2610020234_CVE-2026-104286.pdf",
+     "date": "2026-10-02T00:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Critical vulnerability in Cisco Catalyst SD-WAN Manager (CVE-2026-76504)",
+     "link": "https://www.ncsc.gov.ie/pdfs/2610010256_CVE-2026-76504.pdf",
+     "date": "2026-10-01T00:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Critical vulnerabilities in Citrix NetScaler Gateway & ADC",
+     "link": "https://www.ncsc.gov.ie/pdfs/2609270214_Multiple_Citrix_Vulns.pdf",
+     "date": "2026-09-27T00:00:00+00:00",
+     "summary": ""
+    }
+   ]
+  },
+  "csirt-it": {
+   "status": "ok",
+   "feed": "https://www.acn.gov.it/portale/feedrss/-/journal/rss/20119/723192",
+   "via": "known",
+   "items": [
+    {
+     "title": "Rilevate vulnerabilità in prodotti IBM",
+     "link": "https://www.acn.gov.it/portale/w/rilevate-vulnerabilita-in-prodotti-ibm-3",
+     "date": "2026-10-13T14:35:18+00:00",
+     "summary": "Risolte molteplici vulnerabilità, di cui 4 con gravità \"critica\" e 31 con gravità \"alta\", in diversi prodotti IBM."
+    },
+    {
+     "title": "Risolte vulnerabilità in prodotti Mozilla",
+     "link": "https://www.acn.gov.it/portale/w/risolte-vulnerabilita-in-prodotti-mozilla-12",
+     "date": "2026-10-13T14:18:09+00:00",
+     "summary": "Aggiornamenti di sicurezza sanano molteplici vulnerabilità di sicurezza, di cui 30 con gravità “alta”, in Firefox e Firefox ESR."
+    },
+    {
+     "title": "Progress Software: sanate vulnerabilità in MarkLogic Server",
+     "link": "https://www.acn.gov.it/portale/w/progress-software-sanate-vulnerabilita-in-marklogic-server",
+     "date": "2026-10-13T13:09:02+00:00",
+     "summary": "Rilasciati aggiornamenti di sicurezza per sanare 31 vulnerabilità, di cui 5 con gravità \"critica\" e 24 con gravità \"alta\", in Progress MarkLogic Server, nota piattaforma di database NoSQL progettata per archiviare, integrare, gestire e ricercare grandi volumi di dati eterogenei…"
+    },
+    {
+     "title": "Risolte vulnerabilità in Craft CMS",
+     "link": "https://www.acn.gov.it/portale/w/risolte-vulnerabilita-in-craft-cms-1",
+     "date": "2026-10-13T13:05:28+00:00",
+     "summary": "Aggiornamenti di sicurezza sanano alcune vulnerabilità, di cui 2 con gravità “alta”, in Craft CMS, piattaforma open source per lo sviluppo e l’amministrazione di siti web e applicazioni digitali. Tali vulnerabilità, qualora sfruttate, potrebbero consentire a un utente…"
+    },
+    {
+     "title": "Risolte vulnerabilità nella libreria Neo4j GraphQL",
+     "link": "https://www.acn.gov.it/portale/w/risolte-vulnerabilita-nella-libreria-neo4j-graphql",
+     "date": "2026-10-13T13:03:53+00:00",
+     "summary": "Risolte due vulnerabilità, di cui una con gravità \"critica\" e una con gravità \"alta\", presenti nella libreria Neo4j GraphQL. Tali vulnerabilità, qualora sfruttate, potrebbero consentire ad un utente malintenzionato di eludere dei meccanismi di sicurezza, accedere ad…"
+    },
+    {
+     "title": "Aggiornamenti per prodotti Siemens",
+     "link": "https://www.acn.gov.it/portale/w/aggiornamenti-per-prodotti-siemens-28",
+     "date": "2026-10-13T11:11:09+00:00",
+     "summary": "Siemens ha rilasciato aggiornamenti di sicurezza per sanare molteplici vulnerabilità nei propri prodotti, di cui 4 con gravità “critica” e 14 con gravità “alta”."
+    },
+    {
+     "title": "Misure urgenti di verifica e mitigazione per operatori della distribuzione alimentare e della filiera del freddo",
+     "link": "https://www.acn.gov.it/portale/w/misure-urgenti-di-verifica-e-mitigazione-per-operatori-della-distribuzione-alimentare-e-della-filiera-del-freddo",
+     "date": "2026-10-13T10:44:39+00:00",
+     "summary": "L’Agenzia per la Cybersicurezza Nazionale richiama l’attenzione delle organizzazioni operanti nei settori della grande distribuzione organizzata (GDO), della logistica alimentare, della refrigerazione industriale e dei servizi di manutenzione connessi, alla luce del recente…"
+    },
+    {
+     "title": "Vulnerabilità in prodotti Schneider Electric",
+     "link": "https://www.acn.gov.it/portale/w/vulnerabilita-in-prodotti-schneider-electric-16",
+     "date": "2026-10-13T10:40:45+00:00",
+     "summary": "Rilevate due nuove vulnerabilità con gravità “alta” in alcuni prodotti Schneider Electric."
+    }
+   ]
+  },
+  "cert-lv": {
+   "status": "ok",
+   "feed": "https://cert.lv/lv/feed/atom/viss",
+   "via": "discovered",
+   "items": [
+    {
+     "title": "Kritiska ievainojamība GitLab programmatūrā",
+     "link": "https://cert.lv/lv/2026/10/kritiska-ievainojamiba-gitlab-programmatura",
+     "date": "2026-10-13T13:22:30+00:00",
+     "summary": "GitLab ir publicējis atjauninājumus, kas novērš kritisku (CVSS novērtējums 10.0) veselā skaitļa (integer) pārpildes ievainojamību CVE-2026-97229 GitLab Community Edition (CE) un Enterprise Edition (EE) programmatūrā. Nepieciešams nekavējoties atjaunināt GitLab instances."
+    },
+    {
+     "title": "Pieejami drošības atjauninājumi vairākiem Cisco produktiem",
+     "link": "https://cert.lv/lv/2026/10/pieejami-drosibas-atjauninajumi-vairakiem-cisco-produktiem",
+     "date": "2026-10-08T12:30:34+00:00",
+     "summary": "Uzņēmums Cisco ir identificējis vairākas drošības ievainojamības savos produktos un publicējis atbilstošus drošības atjauninājumus, lai novērstu iespējamos kiberdrošības riskus."
+    },
+    {
+     "title": "Kritiska drošības ievainojamība PrestaShop modulī",
+     "link": "https://cert.lv/lv/2026/10/kritiska-drosibas-ievainojamiba-prestashop-moduli",
+     "date": "2026-10-08T06:20:19+00:00",
+     "summary": "Vienā no satura vadības sistēmas PrestaShop moduļiem ir atklāta kritiska līmeņa ievainojamība (CVE-2026-54159), kas ļauj neautentificētam uzbrucējam patvaļīgi izpildīt PHP kodu."
+    },
+    {
+     "title": "Kiberlaikapstākļi 2026 | SEPTEMBRIS",
+     "link": "https://cert.lv/lv/2026/10/kiberlaikapstakli-2026-septembris",
+     "date": "2026-10-07T11:52:42+00:00",
+     "summary": "Pieejami kiberlaikapstākļi par 2026. gada septembri. Kiberlaikapstākļi ir CERT.LV speciālistu apkopots pārskats īsā un pārskatāmā formā par Latvijas kibertelpā svarīgākajiem notikumiem pagājušajā mēnesī."
+    },
+    {
+     "title": "Ievainojamības VMware programmatūrā",
+     "link": "https://cert.lv/lv/2026/10/ievainojamibas-vmware-programmatura",
+     "date": "2026-10-07T07:47:41+00:00",
+     "summary": "Atklātas divas (kritiska un augsta riska) ievainojamības VMware programmatūrā (CVE-2026-59346, CVE-2026-59347), kas ļauj uzbrucējam veikt patvaļīgu koda izpildi uz iekārtas, kura uztur VMware virtuālo mašīnu."
+    },
+    {
+     "title": "Kritiska ievanojamība Atlassian produktos",
+     "link": "https://cert.lv/lv/2026/10/kritiska-ievanojamiba-atlassian-produktos",
+     "date": "2026-10-06T10:29:57+00:00",
+     "summary": "Programmatūras izstrādātājs Atlassian ir publicējis brīdinājumu par kritisku ievainojamību CVE-2026-21589 (CVSS 9.3), kas ietekmē Bitbucket Data Center, Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center, Crowd Data…"
+    },
+    {
+     "title": "Viltus sludinājumu krāpniecība",
+     "link": "https://cert.lv/lv/2026/10/viltus-sludinajumu-krapnieciba",
+     "date": "2026-10-06T08:47:42+00:00",
+     "summary": "CERT.LV informē, ka krāpnieki šobrīd aktīvi izvieto vilinošus sludinājumus, piedāvājot preces par neticami zemām cenām, taču to patiesais mērķis ir iegūt potenciālo pircēju maksājumu karšu datus."
+    },
+    {
+     "title": "Tiešsaistes semināru \"Virtuālā vide - 2026. Riski un apdraudējumi\"",
+     "link": "https://cert.lv/lv/2026/10/tiessaistes-seminaru-virtuala-vide-2026-riski-un-apdraudejumi",
+     "date": "2026-10-02T08:50:05+00:00",
+     "summary": "2026. gada 11. novembrī pl. 10:00 CERT.LV organizē tiešsaistes semināru \"Virtuālā vide - 2026. Riski un apdraudējumi\" ikvienam interneta lietotājiem - privātpesonām, mazo un vidēju uzņēmumu un valsts iestāžu darbiniekiem.. Seminārs ir bez dalības maksas, taču tam nepieciešams…"
+    }
+   ]
+  },
+  "nksc-lt": {
+   "status": "no-feed",
+   "blocked": true,
+   "tried": [
+    "https://www.nksc.lt/en/ (discovery: HTTPError 403)",
+    "https://www.nksc.lt/naujienos.html (discovery: HTTPError 403)",
+    "https://www.nksc.lt/en/feed/",
+    "https://www.nksc.lt/en/rss.xml",
+    "https://www.nksc.lt/en/rss",
+    "https://www.nksc.lt/feed/",
+    "https://www.nksc.lt/rss.xml",
+    "https://www.nksc.lt/rss",
+    "https://www.nksc.lt/feed.xml",
+    "https://www.nksc.lt/atom.xml",
+    "https://www.nksc.lt/index.xml",
+    "https://www.nksc.lt/feed.rss",
+    "https://www.nksc.lt/?format=feed&type=rss"
+   ],
+   "items": []
+  },
+  "circl-lu": {
+   "status": "ok",
+   "feed": "https://www.circl.lu/rss.xml",
+   "via": "discovered",
+   "items": [
+    {
+     "title": "Publications and Presentations",
+     "link": "https://www.circl.lu/pub/",
+     "date": "2026-10-01T00:00:00+00:00",
+     "summary": "Publications Description Last update TR-100 - Multiple Critical Vulnerabilities in Citrix NetScaler ADC and NetScaler Gateway 27th September 2026 TR-99 - Phishing Campaign Targeting Hotel Customers in Luxembourg 1st June 2026 TR-98 - Security Advisory Ivanti Endpoint Manager…"
+    },
+    {
+     "title": "Operational Guidance for Incident Handling - Rulebooks",
+     "link": "https://www.circl.lu/pub/guidance/",
+     "date": "2026-10-01T00:00:00+00:00",
+     "summary": "Operational guidance for incident handling Traffic Light Protocol (TLP): CLEAR Version: 1.0 (stable) Date: 28 September 2026 Authors: Agence Nationale de la Sécurité des Systèmes d’Information (ANSSI) Commission de Surveillance du Secteur Financier (CSSF) Computer Incident…"
+    },
+    {
+     "title": "CIRCL",
+     "link": "https://www.circl.lu/",
+     "date": "2026-10-01T00:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Operational guidance for incident handling",
+     "link": "https://www.circl.lu/pub/operational-guidance-for-incident-handling/",
+     "date": "2026-09-28T00:00:00+00:00",
+     "summary": "The High Commission for National Protection (“HCPN”), acting in its role as the Agence Nationale de la Sécurité des Systèmes d’Information (“ANSSI”) and as the Governmental Computer Security Incident Response Team (“GOVCERT.LU”), the Computer Incident Response Center Luxembourg…"
+    },
+    {
+     "title": "TR-100 Multiple Critical Vulnerabilities in Citrix NetScaler ADC and NetScaler Gateway",
+     "link": "https://www.circl.lu/pub/tr-100/",
+     "date": "2026-09-27T00:00:00+00:00",
+     "summary": "Summary Multiple vulnerabilities have been disclosed in Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway). The vulnerabilities include unauthenticated remote code execution, memory corruption, HTTP request smuggling,…"
+    },
+    {
+     "title": "TR-99 - Phishing Campaign Targeting Hotel Customers in Luxembourg",
+     "link": "https://www.circl.lu/pub/tr-99/",
+     "date": "2026-06-01T00:00:00+00:00",
+     "summary": "Executive Summary CIRCL and Horesca have been informed of a phishing campaign targeting customers of hotels in Luxembourg. A significant number of hotel guests have received fraudulent messages through different communication channels, including WhatsApp messages containing…"
+    },
+    {
+     "title": "TR-98 - Security Advisory Ivanti Endpoint Manager Mobile (EPMM) (CVE-2026-1281 & CVE-2026-1340) - Active Exploitation",
+     "link": "https://www.circl.lu/pub/tr-98/",
+     "date": "2026-02-09T00:00:00+00:00",
+     "summary": "Ivanti has released security updates for Endpoint Manager Mobile (EPMM) addressing two critical-severity vulnerabilities. Successful exploitation allows unauthenticated remote code execution. Active exploitation has been confirmed in the wild, both worldwide and in Luxembourg.…"
+    },
+    {
+     "title": "TR-97 - Supply Chain Compromise Propagating Through the npm Ecosystem (Shai-Hulud)",
+     "link": "https://www.circl.lu/pub/tr-97/",
+     "date": "2025-11-28T00:00:00+00:00",
+     "summary": "The incident involves a self-replicating worm, publicly referred to as “Shai-Hulud”, which has infected more than 500 npm packages, with an even broader impact in a second wave (Shai-Hulud 2.0) that delivered a different payload. After gaining initial access, the malicious…"
+    }
+   ]
+  },
+  "csirt-mt": {
+   "status": "no-feed",
+   "blocked": true,
+   "tried": [
+    "https://ncc-mita.gov.mt/ (discovery: HTTPError 403)",
+    "https://ncc-mita.gov.mt/news/ (discovery: HTTPError 403)",
+    "https://ncc-mita.gov.mt/feed/",
+    "https://ncc-mita.gov.mt/rss.xml",
+    "https://ncc-mita.gov.mt/rss",
+    "https://ncc-mita.gov.mt/feed.xml",
+    "https://ncc-mita.gov.mt/atom.xml",
+    "https://ncc-mita.gov.mt/index.xml",
+    "https://ncc-mita.gov.mt/feed.rss",
+    "https://ncc-mita.gov.mt/?format=feed&type=rss"
+   ],
+   "items": []
+  },
+  "ncsc-nl": {
+   "status": "ok",
+   "feed": "https://advisories.ncsc.nl/rss/advisories",
+   "via": "known",
+   "items": [
+    {
+     "title": "NCSC-2026-0426 [1.00] [M/H] Kwetsbaarheden verholpen in Microsoft Developer Tools",
+     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0426",
+     "date": "2026-10-13T18:56:15+00:00",
+     "summary": "Microsoft heeft kwetsbaarheden verholpen in diverse componenten van de Developer Tools, zoals .NET en Visual Studio. Een kwaadwillende kan aanvallen uitvoeren die kunnen leiden tot de categoriën schade zoals weergegeven in de onderstaande tabellen. .NET:…"
+    },
+    {
+     "title": "NCSC-2026-0425 [1.00] [M/H] Kwetsbaarheden verholpen in Microsoft System Center",
+     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0425",
+     "date": "2026-10-13T18:55:30+00:00",
+     "summary": "Microsoft heeft kwetsbaarheden verholpen in de Configuration Manager en Defender. Een lokale kwaadwillende kan de kwetsbaarheden misbruiken om zich verhoogde rechten toe te kennen en mogelijk toegang te krijgen tot gevoelige gegevens. Microsoft Configuration Manager:…"
+    },
+    {
+     "title": "NCSC-2026-0424 [1.00] [M/H] Kwetsbaarheden verholpen in Microsoft Dynamics",
+     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0424",
+     "date": "2026-10-13T18:54:39+00:00",
+     "summary": "Microsoft heeft kwetsbaarheden verholpen in diverse Dynamics componenten. Een kwaadwillende kan de kwetsbaarheden misbruiken om aanvallen uit te voeren die kunnen leiden tot de categorieën schade zoals benoemd in onderstaande tabellen: Microsoft Dataverse:…"
+    },
+    {
+     "title": "NCSC-2026-0423 [1.00] [M/H] Kwetsbaarheden verholpen in Microsoft Windows",
+     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0423",
+     "date": "2026-10-13T18:49:46+00:00",
+     "summary": "Microsoft heeft 1159 kwetsbaarheden verholpen in Windows. Het voert te ver om iedere kwetsbaarheid te benoemen. De 53 ernstigste kwetsbaarheden, met een CVSS score van 9 en hoger zijn weergegeven in onderstaande lijst en geven een kwaadwillende de mogelijkheid om zich voor te…"
+    },
+    {
+     "title": "NCSC-2026-0422 [1.00] [M/H] Kwetsbaarheden verholpen in Microsoft Office",
+     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0422",
+     "date": "2026-10-13T18:36:28+00:00",
+     "summary": "Microsoft heeft xxx kwetsbaarheden verholpen in diverse Office producten, zoals Word, Excel, Access, Outlook, Visio, Sharepoint en PowerPoint, maar ook subcomponenten als Shell, Azure Key Vault en Click-to-Run. Een kwaadwillende kan de kwetsbaarheden misbruiken om een…"
+    },
+    {
+     "title": "NCSC-2026-0421 [1.00] [M/H] Kwetsbaarheden verholpen in Microsoft Azure",
+     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0421",
+     "date": "2026-10-13T18:31:42+00:00",
+     "summary": "Microsoft heeft kwetsbaarheden verholpen in diverse Azure componenten, zoals Key Vault, DevOps, API center en Storage. Een kwaadwillende kan de kwetsbaarheden misbruiken om beveiligingsmaatregelen te omzeilen, zich verhoogde rechten toe te kennen, willekeurige code uit te…"
+    },
+    {
+     "title": "NCSC-2026-0420 [1.00] [M/H] Kwetsbaarheden verholpen in Microsoft SQL Server",
+     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0420",
+     "date": "2026-10-13T18:30:52+00:00",
+     "summary": "Microsoft heeft kwetsbaarheden verholpen in SQL Server. Een kwaadwillende kan de kwetsbaarheden misbruiken om een Denial-of-Service te veroorzaken, zich verhoogde rechten toe te kennen, willekeurige code uit te voeren, mogelijk met rechten van de SQL server en toegang te…"
+    },
+    {
+     "title": "NCSC-2026-0419 [1.00] [M/H] Kwetsbaarheden verholpen in Microsoft Excange Server",
+     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0419",
+     "date": "2026-10-13T18:28:55+00:00",
+     "summary": "Microsoft heeft kwetsbaarheden verholpen in Exchange. Een kwaadwillende kan de kwetsbaarheden misbruiken om zich voor te doen als andere gebruiker, zich verhoogde rechten toe te kennen en willekeurige code uit te voeren met rechten van het proces. Van de kwetsbaarheid met…"
+    }
+   ]
+  },
+  "cert-pt": {
+   "status": "no-feed",
+   "blocked": false,
+   "tried": [
+    "https://www.cncs.gov.pt/ (discovery: HTTPError 513)",
+    "https://www.cncs.gov.pt/pt/ (discovery: HTTPError 513)",
+    "https://www.cncs.gov.pt/feed/",
+    "https://www.cncs.gov.pt/rss.xml",
+    "https://www.cncs.gov.pt/rss",
+    "https://www.cncs.gov.pt/feed.xml",
+    "https://www.cncs.gov.pt/atom.xml",
+    "https://www.cncs.gov.pt/index.xml",
+    "https://www.cncs.gov.pt/feed.rss",
+    "https://www.cncs.gov.pt/?format=feed&type=rss"
+   ],
+   "items": []
+  },
+  "dnsc-ro": {
+   "status": "ok",
+   "feed": "https://dnsc.ro/feed/",
+   "via": "probed",
+   "items": [
+    {
+     "title": "Știrile săptămânii din cybersecurity (08.10.2026)",
+     "link": "https://dnsc.ro/citeste/stirile-saptamanii-din-cybersecurity-08-10-2026",
+     "date": "2026-10-08T11:48:08+00:00",
+     "summary": "Samsung Galaxy S26, compromis de șase ori în cadrul competiției Pwn2Own Ireland 2026 Cercet..."
+    },
+    {
+     "title": "ALERTĂ: Vulnerabilitate critică la nivelul Fortinet FortiMail",
+     "link": "https://dnsc.ro/citeste/alerta-vulnerabilitate-critica-la-nivelul-fortinet-fortimail",
+     "date": "2026-10-02T11:28:01+00:00",
+     "summary": "DESCRIERE Experții în securitate cibernetică au descoperit o vulnerabilitate critică, CVE-..."
+    },
+    {
+     "title": "Știrile săptămânii din cybersecurity (01.10.2026)",
+     "link": "https://dnsc.ro/citeste/stirile-saptamanii-din-cybersecurity-01-10-2026",
+     "date": "2026-10-01T12:02:43+00:00",
+     "summary": "DNSC aplică prima sancțiune contravențională pentru nerespectarea obligațiilor prevăzute de OU..."
+    },
+    {
+     "title": "COMUNICAT DE PRESĂ: Directoratul Național de Securitate Cibernetică (DNSC) aplică prima sancțiune contravențională pentru nerespectarea obligației de notificare prevăzute de OUG nr. 155/2024",
+     "link": "https://dnsc.ro/citeste/comunicat-de-presa-directoratul-national-de-securitate-cibernetica-dnsc-aplica-prima-sanctiune-contraventionala-pentru-nerespectarea-obligatiei-de-notificare-prevazute-de-oug-nr-155-2024",
+     "date": "2026-09-30T11:32:41+00:00",
+     "summary": "București, 30 septembrie 2026 Directoratul Național de Securitate Cibernetică (DNSC) a emis, la ..."
+    },
+    {
+     "title": "COMUNICAT DE PRESĂ: Agenda oficială a Bucharest Cybersecurity Conference 2026 a fost publicată",
+     "link": "https://dnsc.ro/citeste/comunicat-de-presa-agenda-oficial-a-bucharest-cybersecurity-conference-2026-a-fost-publicata",
+     "date": "2026-09-28T10:59:10+00:00",
+     "summary": "București, 28 septembrie 2026 Directoratul Național de Securitate Cibernetică (DNSC) anunță pu..."
+    },
+    {
+     "title": "ALERTĂ: Vulnerabilități critice exploatate activ în Citrix NetScaler",
+     "link": "https://dnsc.ro/citeste/alert-vulnerabilitati-critice-exploatate-activ-in-citrix-netscaler",
+     "date": "2026-09-28T10:53:04+00:00",
+     "summary": "CONTEXT La data de 27 septembrie 2026, Citrix a publicat un buletin de securitate referitor la opt ..."
+    },
+    {
+     "title": "Știrile săptămânii din cybersecurity (24.09.2026)",
+     "link": "https://dnsc.ro/citeste/stirile-saptamanii-din-cybersecurity-24-09-2026",
+     "date": "2026-09-24T11:57:36+00:00",
+     "summary": "Vulnerabilitate critică în WordPress Core. Atacatorii pot ajunge la executarea de cod pe serv..."
+    },
+    {
+     "title": "ALERTĂ: Vulnerabilitate critică la nivelul WordPress Core",
+     "link": "https://dnsc.ro/citeste/alerta-vulnerabilitate-critica-la-nivelul-wordpress-core",
+     "date": "2026-09-24T11:40:58+00:00",
+     "summary": "DESCRIERE Experții în securitate cibernetică au descoperit o vulnerabilitate critică, CVE-..."
+    }
+   ]
+  },
+  "sk-cert": {
+   "status": "ok",
+   "feed": "https://www.sk-cert.sk/index.html%3Ffeed=rss",
+   "via": "discovered",
+   "items": [
+    {
+     "title": "Podvodníci pokračujú v úspešnej WhatsApp kampani imitujúcej súťaž",
+     "link": "https://www.sk-cert.sk/sk/podvodnici-pokracuju-v-uspesnej-whatsapp-kampani-imitujucej-sutaz/",
+     "date": null,
+     "summary": "Posledná aktualizácia 06.10.2026 Národné centrum kybernetickej bezpečnosti (NCKB) od začiatku októbra 2026 opäť eviduje nárast prípadov podvodnej kampane s tematikou hlasovania v talentovej súťaži. Ide o kampaň šírenú prostredníctvom aplikácie WhatsApp, v ktorej obeť obdrží…"
+    },
+    {
+     "title": "VAROVANIE: Kritické zraniteľnosti GITLAB CE a EE",
+     "link": "https://www.sk-cert.sk/sk/varovanie-kriticke-zranitelnosti-gitlab-ce-a-ee/",
+     "date": null,
+     "summary": "Národné centrum kybernetickej bezpečnosti (NCKB) NBÚ varuje pred kritickými zraniteľnosťami v produktoch GitLab Community Edition (CE) a GitLab Enterprise Edition (EE). Uvedené zraniteľnosti možno zneužiť na získanie neoprávneného prístupu k citlivým údajom a úplné narušenie…"
+    },
+    {
+     "title": "VAROVANIE: Útočníci aktívne zneužívajú zraniteľnosti MIKROTIK smerovačov",
+     "link": "https://www.sk-cert.sk/sk/varovanie-utocnici-aktivne-zneuzivaju-zranitelnosti-mikrotik-smerovacov/",
+     "date": null,
+     "summary": "Národné centrum kybernetickej bezpečnosti (NCKB) NBÚ varuje pred útokmi na smerovače značky MikroTik. Útočníci zreťazením bezpečnostných zraniteľností operačného systému MikroTik RouterOS dokážu získať úplnú kontrolu nad zariadením bez potreby autentifikácie. MikroTik routre sú…"
+    },
+    {
+     "title": "PLC na internete: aktuálne riziko aj pre kritickú infraštruktúru",
+     "link": "https://www.sk-cert.sk/sk/plc-na-internete-aktualne-riziko-aj-pre-kriticku-infrastrukturu/",
+     "date": null,
+     "summary": "Národné centrum kybernetickej bezpečnosti (NCKB) NBÚ upozorňuje na nebezpečenstvo prevádzkovania programovateľných logických radičov (ďalej ako „PLC“) voľne dostupných z verejného internetu. PLC nie je zariadenie, ktoré má byť priamo dostupné z verejného internetu.…"
+    },
+    {
+     "title": "Varovanie pred rizikami cestných meradiel",
+     "link": "https://www.sk-cert.sk/sk/varovanie-pred-rizikami-cestnych-meradiel/",
+     "date": null,
+     "summary": "Národný bezpečnostný úrad varuje pred významnou kybernetickou hrozbou spojenou s používaním viacerých typov cestných rýchlomerov s kamerou. Bezpečnostná analýza identifikovala viaceré riziká a dotknutým subjektom odporúča predmetné produkty vo svojej infraštruktúre…"
+    },
+    {
+     "title": "Závažná hardvérová zraniteľnosť starších procesorov AMD",
+     "link": "https://www.sk-cert.sk/sk/zavazna-hardverova-zranitelnost-starsich-procesorov-amd/",
+     "date": null,
+     "summary": "Národné centrum kybernetickej bezpečnosti upozorňuje na nový výskum bezpečnostného výskumníka Christophera Domasa, ktorý demonštruje závažnú hardvérovú zraniteľnosť procesorov AMD Family 16h (približne 2013 – 2016). Zmenou jediného konfiguračného bitu radiča operačnej pamäte je…"
+    },
+    {
+     "title": "OPERATION ENDGAME: Takmer 400 obetí na Slovensku infikovaných malvérom StealC",
+     "link": "https://www.sk-cert.sk/sk/operation-endgame-takmer-400-obeti-na-slovensku-infikovanych-malverom-stealc/",
+     "date": null,
+     "summary": "Národné centrum kybernetickej bezpečnosti (NCKB) NBÚ v uplynulých dňoch identifikovalo a následne hromadne varovalo niekoľko stoviek obyvateľov Slovenska, ktorých zariadenia boli kompromitované globálne rozšíreným malvérom StealC. Europol s partnermi 24. júna 2026 v rámci…"
+    },
+    {
+     "title": "WEBINÁR: Praktické rady k používaniu JISKB (Jednotný informačný systém kybernetickej bezpečnosti)",
+     "link": "https://www.sk-cert.sk/sk/webinar-prakticke-rady-k-pouzivaniu-jiskb-jednotny-informacny-system-kybernetickej-bezpecnosti/",
+     "date": null,
+     "summary": "V súvislosti so zavádzaním požiadaviek projektu NIS2 sme pre vás pripravili dva bezplatné webináre zamerané na praktické používanie JISKB – Jednotného informačného systému kybernetickej bezpečnosti. Počas 90-minútového online stretnutia získate prehľad o práci so systémom a…"
+    }
+   ]
+  },
+  "si-cert": {
+   "status": "ok",
+   "feed": "https://www.cert.si/feed/",
+   "via": "known",
+   "items": [
+    {
+     "title": "Prosta delovna mesta",
+     "link": "https://www.cert.si/zaposlitev/",
+     "date": "2026-10-08T12:24:23+00:00",
+     "summary": "Vas zanima, kako pride do vdora v računalnik? Ali pa kako je sestavljen računalniški virus? Potem vas vabimo, da se pridružite ekipi nacionalnega odzivnega centra za kibernetsko varnost SI-CERT! The post Prosta delovna mesta appeared first on SI CERT ."
+    },
+    {
+     "title": "Nacionalna phishing prijavna točka",
+     "link": "https://www.cert.si/nacionalna-phishing-prijavna-tocka/",
+     "date": "2026-09-30T19:11:41+00:00",
+     "summary": "SI-CERT je na naslovu phishing@cert.si vzpostavil namensko točko za prijavo spletnih strani, namenjenih kraji podatkov The post Nacionalna phishing prijavna točka appeared first on SI CERT ."
+    },
+    {
+     "title": "SI-CERT 2026-06 / Kritične ranljivosti v Citrix NetScaler ADC in Gateway",
+     "link": "https://www.cert.si/si-cert-2026-06/",
+     "date": "2026-09-28T07:56:58+00:00",
+     "summary": "Kritične ranljivosti CVE-2026-88771 in CVE-2026-88772 v napravah Citrix NetScaler ADC in NetScaler Gateway lahko neavtenticiranemu napadalcu omogočijo oddaljeno izvajanje poljubne kode. Ranljivosti se že aktivno izkoriščata, zato je priporočljiva takojšnja nadgradnja prizadetih…"
+    },
+    {
+     "title": "Slovenska podjetja vse pogosteje tarče spletnih prevar",
+     "link": "https://www.cert.si/slovenska-podjetja-vse-pogosteje-tarce-spletnih-prevar/",
+     "date": "2026-09-23T13:08:55+00:00",
+     "summary": "V zadnjih mesecih na SI-CERT beležimo porast prijav vrivanja v poslovno komunikacijo (BEC oz. Business Email Compromise), direktorskih in drugih prevar, ki ciljajo na podjetja in javne ustanove, končni cilj … The post Slovenska podjetja vse pogosteje tarče spletnih prevar…"
+    },
+    {
+     "title": "Spletne goljufije, ki ciljajo na računovodstva – nov seminar",
+     "link": "https://www.cert.si/spletne-goljufije-ki-ciljajo-na-racunovodstva/",
+     "date": "2026-09-15T12:36:22+00:00",
+     "summary": "Spletne goljufije so ena najhitreje rastočih oblik premoženjske kriminalitete. Slovenska policija je od leta 2020 obravnavala že več kot 10.500 primerov, skupna škoda pa presega 167 milijonov evrov. Pri največjih … The post Spletne goljufije, ki ciljajo na računovodstva – nov…"
+    },
+    {
+     "title": "SI-CERT 2026-05 / Kritična ranljivost v MikroTik RouterOS – MikroTrick",
+     "link": "https://www.cert.si/si-cert-2026-05/",
+     "date": "2026-09-06T19:15:09+00:00",
+     "summary": "Veriga kritičnih ranljivosti v RouterOS omogoča popolno kompromitacijo MikroTik naprav, ki imajo dostopno SSH storitev. Ranljivosti se že izkorišča v napadih, zato priporočamo takojšnjo namestitev popravkov. The post SI-CERT 2026-05 / Kritična ranljivost v MikroTik RouterOS –…"
+    },
+    {
+     "title": "SI-CERT 2026-04 / Kritična ranljivost v WordPress jedru – WP2Shell",
+     "link": "https://www.cert.si/si-cert-2026-04/",
+     "date": "2026-07-21T09:01:13+00:00",
+     "summary": "Kritična veriga ranljivosti CVE-2026-63030 in CVE-2026-60137 v jedru sistema WordPress lahko napadalcu brez prijave omogoči popoln prevzem spletnega mesta. The post SI-CERT 2026-04 / Kritična ranljivost v WordPress jedru – WP2Shell appeared first on SI CERT ."
+    },
+    {
+     "title": "Lažna elektronska sporočila v imenu SURS ciljajo slovenska podjetja",
+     "link": "https://www.cert.si/lazna-elektronska-sporocila-v-imenu-surs-ciljajo-slovenska-podjetja/",
+     "date": "2026-07-08T12:11:57+00:00",
+     "summary": "Na SI-CERT-u smo v zadnjih dneh zaznali kampanjo lažnih elektronskih sporočil, v katerih se napadalci predstavljajo kot Statistični urad Republike Slovenije (SURS). Sporočila so namenjena predvsem podjetjem ter organizacijam, zlasti … The post Lažna elektronska sporočila v…"
+    }
+   ]
+  },
+  "incibe-cert": {
+   "status": "stale",
+   "feed": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/feed",
+   "via": "known",
+   "items": [
+    {
+     "title": "Cross-Site Scripting en la aplicación web de YouMind",
+     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/cross-site-scripting-en-la-aplicacion-web-de-youmind",
+     "date": "2026-10-13T07:39:28+00:00",
+     "summary": "Cross-Site Scripting en la aplicación web de YouMind Mar, 13/10/2026 - 09:39 Aviso Recursos Afectados Aplicación web de YouMind. Descripción INCIBE ha coordinado la publicación de una vulnerabilidad de severidad media que afecta a la aplicación web de YouMind, un espacio de…"
+    },
+    {
+     "title": "Múltiples vulnerabilidades en NonStop Servers de HPE",
+     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-nonstop-servers-de-hpe",
+     "date": "2026-10-13T07:38:16+00:00",
+     "summary": "Múltiples vulnerabilidades en NonStop Servers de HPE Mar, 13/10/2026 - 09:38 Aviso Recursos Afectados HPE NonStop Servers y los componentes de software indicados en el boletín del fabricante. Para la vulnerabilidad crítica está afectado XDR Streams T0248, versión T0248L01^AAD y…"
+    },
+    {
+     "title": "Desbordamiento de búfer basado en montículo en NX-OS Software de Cisco",
+     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/desbordamiento-de-bufer-basado-en-monticulo-en-nx-os-software-de-cisco",
+     "date": "2026-10-13T07:38:15+00:00",
+     "summary": "Desbordamiento de búfer basado en montículo en NX-OS Software de Cisco Mar, 13/10/2026 - 09:38 Aviso Recursos Afectados Versiones vulnerables de Cisco NX-OS Software en los siguientes productos: Cisco Nexus 3000 Series Switches con la función NX-API habilitada; Cisco Nexus 9000…"
+    },
+    {
+     "title": "Múltiples vulnerabilidades en productos de GitLab",
+     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-gitlab",
+     "date": "2026-10-13T07:38:14+00:00",
+     "summary": "Múltiples vulnerabilidades en productos de GitLab Mar, 13/10/2026 - 09:38 Aviso Recursos Afectados Para la vulnerabilidad crítica: GitLab Community Edition y Enterprise Edition 19.2, versiones anteriores a 19.2.8; GitLab Community Edition y Enterprise Edition 19.3, versiones…"
+    },
+    {
+     "title": "Cross-Site Scripting reflejado en la plataforma eCommerce de BeeTienda",
+     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/cross-site-scripting-reflejado-en-la-plataforma-ecommerce-de-beetienda",
+     "date": "2026-10-09T09:54:04+00:00",
+     "summary": "Cross-Site Scripting reflejado en la plataforma eCommerce de BeeTienda Vie, 09/10/2026 - 11:54 Aviso Recursos Afectados Última versión de demo de eCommerce Platform (noviembre de 2025). Descripción INCIBE ha coordinado la publicación de una vulnerabilidad de severidad media que…"
+    },
+    {
+     "title": "Omisión de autenticación en Intelligent Management Center de HPE",
+     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/omision-de-autenticacion-en-intelligent-management-center-de-hpe",
+     "date": "2026-10-09T07:23:27+00:00",
+     "summary": "Omisión de autenticación en Intelligent Management Center de HPE Vie, 09/10/2026 - 09:23 Aviso Recursos Afectados HPE Intelligent Management Center (iMC), versiones anteriores a 7.3 E0713. Descripción HPE ha publicado una vulnerabilidad de severidad crítica que, en caso de ser…"
+    },
+    {
+     "title": "Desbordamiento de memoria en NetScaler ADC y NetScaler Gateway de Citrix",
+     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/desbordamiento-de-memoria-en-netscaler-adc-y-netscaler-gateway-de-citrix",
+     "date": "2026-10-09T07:23:25+00:00",
+     "summary": "Desbordamiento de memoria en NetScaler ADC y NetScaler Gateway de Citrix Vie, 09/10/2026 - 09:23 Aviso Recursos Afectados Las siguientes versiones de NetScaler ADC y NetScaler Gateway configuradas como proveedor de identidad SAML: 14.1-73.37 hasta 14.1-73.41, ambas incluidas;…"
+    },
+    {
+     "title": "Inyección de comandos en Tenable Identity Exposure de Tenable",
+     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/inyeccion-de-comandos-en-tenable-identity-exposure-de-tenable",
+     "date": "2026-10-09T07:23:24+00:00",
+     "summary": "Inyección de comandos en Tenable Identity Exposure de Tenable Vie, 09/10/2026 - 09:23 Aviso Recursos Afectados Tenable Identity Exposure SaaS, versión 3.125.0 y anteriores. Descripción Takumi Ito ha informado sobre una vulnerabilidad de severidad crítica que, en caso de ser…"
+    }
+   ],
+   "error": "latest fetch failed"
+  },
+  "ccn-cert": {
+   "status": "no-feed",
+   "blocked": true,
+   "tried": [
+    "https://www.ccn-cert.cni.es/es/seguridad-al-dia/alertas-ccn-cert.feed?type=rss",
+    "https://www.ccn-cert.cni.es/es/seguridad-al-dia/noticias-seguridad.feed?type=rss",
+    "https://www.ccn-cert.cni.es/ (discovery: HTTPError 403)",
+    "https://www.ccn-cert.cni.es/es/seguridad-al-dia.html (discovery: HTTPError 403)",
+    "https://www.ccn-cert.cni.es/feed/",
+    "https://www.ccn-cert.cni.es/rss.xml",
+    "https://www.ccn-cert.cni.es/rss",
+    "https://www.ccn-cert.cni.es/feed.xml",
+    "https://www.ccn-cert.cni.es/atom.xml",
+    "https://www.ccn-cert.cni.es/index.xml",
+    "https://www.ccn-cert.cni.es/feed.rss",
+    "https://www.ccn-cert.cni.es/?format=feed&type=rss"
+   ],
+   "items": []
+  },
+  "cert-se": {
+   "status": "ok",
+   "feed": "https://www.cert.se/feed.rss",
+   "via": "known",
+   "items": [
+    {
+     "title": "GitLab rättar kritisk sårbarhet",
+     "link": "https://www.cert.se/2026/10/gitlab-rattar-kritisk-sarbarhet.html",
+     "date": "2026-10-13T09:50:00+00:00",
+     "summary": "GitLab har publicerat säkerhetsuppdateringar för flera sårbarheter i GitLab Community Edition (CE) och Enterprise Edition (EE). [1]"
+    },
+    {
+     "title": "CERT-SE:s veckobrev v.41",
+     "link": "https://www.cert.se/2026/10/cert-se-veckobrev-v41.html",
+     "date": "2026-10-09T10:25:00+00:00",
+     "summary": "Antar du vår utmaning? CERT-SE:s årliga CTF-utmaning är nu igång! Utmaningen pågår under cybersäkerhetsmånaden och vänder sig till alla med it-säkerhetsintresse oavsett kunskapsnivå. Hitta så många flaggor du kan och beskriv hur du hittade dem och mejla ditt svar till…"
+    },
+    {
+     "title": "Kritisk sårbarhet i FortiMail",
+     "link": "https://www.cert.se/2026/10/kritisk-sarbarhet-i-fortimail.html",
+     "date": "2026-10-02T11:30:00+00:00",
+     "summary": "Fortinet har publicerat information om en kritisk sårbarhet i FortiMail. Sårbarheten, CVE-2026-104286, har fått en CVSS-klassning på 9.8 och påverkar FortiMail managements gränssnitt. Ett framgångsrikt utnyttjande kan innebära att en oautentiserad angripare kan skriva…"
+    },
+    {
+     "title": "Antar du vår utmaning? / Do you accept our challenge?",
+     "link": "https://www.cert.se/2026/10/antar-du-var-utmaning.html",
+     "date": "2026-10-02T10:45:00+00:00",
+     "summary": "CERT-SE presenterar vår årliga utmaning (CTF) som sker under cybersäkerhetsmånaden [1, 2]. Utmaningen vänder sig till alla med it-säkerhetsintresse oavsett kunskapsnivå."
+    },
+    {
+     "title": "CERT-SE:s veckobrev v.40",
+     "link": "https://www.cert.se/2026/10/cert-se-veckobrev-v40.html",
+     "date": "2026-10-02T07:30:00+00:00",
+     "summary": "Oktober är cybersäkerhetsmånaden och vi vill passa på att slå ett slag för de kunskapshöjande aktiviteter som erbjuds genom NCSC:s och polisens cybersäkerhetskampanj “Tänk Säkert”."
+    },
+    {
+     "title": "Kritiska sårbarheter i Citrix NetScaler ADC och Citrix NetScaler Gateway",
+     "link": "https://www.cert.se/2026/09/information-om-kritiska-sarbarheter-i-citrixnetscaler.html",
+     "date": "2026-09-27T16:09:00+00:00",
+     "summary": "Citrix har publicerat information om allvarliga och kritiska sårbarheter i Citrix NetScaler ADC (tidigare Citrix ADC) and Citrix NetScaler Gateway (tidigare Citrix Gateway). Två av sårbarheterna, CVE-2026-88771 och CVE-2026-88772, har fått en CVSS-klassning på 9.5 där ett ett…"
+    },
+    {
+     "title": "CERT-SE:s veckobrev v.39",
+     "link": "https://www.cert.se/2026/09/cert-se-veckobrev-v39.html",
+     "date": "2026-09-25T08:45:00+00:00",
+     "summary": "För tionde året genomförs Beredskapsveckan i Sverige vecka 39. I år är det fokus på Sveriges totalförsvar, där samhällets motståndskraft mot cyberhot är en viktig del. Tänk på att ha en radio inställd på Sveriges Radio P4 och viktiga telefonnummer nedskrivna på papper."
+    },
+    {
+     "title": "F5 informerar om kritisk sårbarhet i BIG-IP APM",
+     "link": "https://www.cert.se/2026/09/information-om-kritisk-sarbarhet-i-big-ip-apm.html",
+     "date": "2026-09-23T09:20:00+00:00",
+     "summary": "F5 har publicerat information om en kritisk sårbarhet, CVE-2026-94127, i BIG-IP APM. Sårbarheten kan resultera i att en oautentiserad angripare kan fjärrexekvera godtycklig kod."
+    }
+   ]
+  },
+  "cert-eu": {
+   "status": "ok",
+   "feed": "https://cert.europa.eu/publications/security-advisories-rss",
+   "via": "known",
+   "items": [
+    {
+     "title": "2026-016: Critical Vulnerability in GitLab CE and EE",
+     "link": "https://cert.europa.eu/publications/security-advisories/2026-016/",
+     "date": "2026-10-12T14:57:02+00:00",
+     "summary": "On 12 October 2026, GitLab released versions 19.4.2, 19.3.4 and 19.2.8 of GitLab Community Edition (CE) and Enterprise Edition (EE), fixing 24 security issues among which a critical vulnerability that could allow an unauthenticated attacker to execute arbitrary code on the…"
+    },
+    {
+     "title": "2026-015: Critical Vulnerability in Multiple Atlassian Products",
+     "link": "https://cert.europa.eu/publications/security-advisories/2026-015/",
+     "date": "2026-10-07T09:52:48+00:00",
+     "summary": "On 5 October 2026, Atlassian published a security advisory addressing a critical arbitrary file access vulnerability. It affects Bitbucket Data Center, Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center, Crowd Data Center,…"
+    },
+    {
+     "title": "2026-014: Critical Vulnerabilities in Citrix NetScaler ADC and Gateway",
+     "link": "https://cert.europa.eu/publications/security-advisories/2026-014/",
+     "date": "2026-09-27T19:40:52+00:00",
+     "summary": "On 27 September 2026, Citrix published a security bulletin addressing 8 vulnerabilities affecting customer-managed Citrix NetScaler ADC and Citrix NetScaler Gateway, among which 2 critical unauthenticated Remote Code Execution (RCE) vulnerabilities. Citrix has confirmed active…"
+    },
+    {
+     "title": "2026-013: Critical Vulnerability in F5 BIG-IP APM",
+     "link": "https://cert.europa.eu/publications/security-advisories/2026-013/",
+     "date": "2026-09-22T18:52:36+00:00",
+     "summary": "On 22 September 2026, F5 published an advisory addressing a critical vulnerability affecting its BIG-IP APM product. The vendor confirmed active exploitation in the wild. CERT-EU recommends taking appropriate actions as soon as possible."
+    },
+    {
+     "title": "2026-012: Critical Vulnerabilities in Check Point Products",
+     "link": "https://cert.europa.eu/publications/security-advisories/2026-012/",
+     "date": "2026-09-10T10:20:06+00:00",
+     "summary": "On 9 September 2026, Check Point released emergency security updates addressing two critical vulnerabilities affecting Check Point Security Gateway, Security Management Server, and Spark Firewall deployments configured to use Remote Access VPN or Site-to-Site VPN. Both…"
+    },
+    {
+     "title": "2026-011: Critical Vulnerabilities in SAP Kernel and NetWeaver Message Server",
+     "link": "https://cert.europa.eu/publications/security-advisories/2026-011/",
+     "date": "2026-09-09T15:07:59+00:00",
+     "summary": "On 8 September 2026, as part of its September Security Patch Day, SAP released Security Notes addressing two critical vulnerabilities affecting a broad range of SAP products[3]. The most severe, CVE-2026-44756 (CVSS 10.0), is a memory corruption vulnerability in SAP Extended…"
+    },
+    {
+     "title": "2026-010: Critical Vulnerabilities in Citrix NetScaler ADC and NetScaler Gateway",
+     "link": "https://cert.europa.eu/publications/security-advisories/2026-010/",
+     "date": "2026-08-19T18:13:47+00:00",
+     "summary": "On 19 August 2026, Citrix published a security advisory addressing multiple critical vulnerabilities in NetScaler ADC (formerly Citrix ADC) and NetScaler Gateway (formerly Citrix Gateway). CERT-EU recommends updating affected devices as soon as possible."
+    },
+    {
+     "title": "2026-009: Critical Vulnerabilities in Microsoft SharePoint",
+     "link": "https://cert.europa.eu/publications/security-advisories/2026-009/",
+     "date": "2026-07-23T09:13:03+00:00",
+     "summary": "[UPDATED] On 14 July 2026, Microsoft released security updates addressing critical remote code execution (RCE) vulnerabilities in Microsoft SharePoint Server. On 20 July 2026, WatchTowr identified a proof-of-concept exploit code and subsequently observed active exploitation of…"
+    }
+   ]
+  },
+  "enisa-euvd": {
+   "status": "ok",
+   "feed": "https://euvdservices.enisa.europa.eu/api/exploitedvulnerabilities",
+   "via": "api",
+   "items": [
+    {
+     "title": "EUVD-2026-100274 (CVE-2026-96951) · CVSS 8.8",
+     "link": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-100274",
+     "date": "2026-10-13T19:01:26+00:00",
+     "summary": "Improper neutralization of special elements used in a command ('command injection') in Windows Shell allows an unauthorized attacker to bypass a security feature over a network."
+    },
+    {
+     "title": "EUVD-2026-98816 (GHSA-vm2g-whwh-xhq8) · CVSS 8.6",
+     "link": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-98816",
+     "date": "2026-10-13T15:31:07+00:00",
+     "summary": "Authentication bypass by spoofing in ICS before version 25.1.3.0 allows a remote unauthenticated attacker to execute arbitrary commands. This does not impact ICS version 22.7R2.14 or prior."
+    },
+    {
+     "title": "EUVD-2023-1342 (GHSA-jjqf-j4w7-92w8) · CVSS 7.2",
+     "link": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2023-1342",
+     "date": "2023-04-19T00:00:00+00:00",
+     "summary": "Strapi through 4.5.5 allows attackers (with access to the admin panel) to discover sensitive user details by exploiting the query filter. The attacker can filter users by columns that contain sensitive information and infer a value from API responses. If the attacker has super…"
+    },
+    {
+     "title": "EUVD-2022-3161 (CVE-2016-3081) · CVSS 8.1",
+     "link": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2022-3161",
+     "date": "2016-04-26T14:00:00+00:00",
+     "summary": "Apache Struts 2.3.19 to 2.3.20.2, 2.3.21 to 2.3.24.1, and 2.3.25 to 2.3.28, when Dynamic Method Invocation is enabled, allow remote attackers to execute arbitrary code via method: prefix, related to chained expressions."
+    }
+   ]
+  },
+  "shadowserver": {
+   "status": "ok",
+   "feed": "https://www.shadowserver.org/topics/shadowserver/feed/",
+   "via": "known",
+   "items": [
+    {
+     "title": "Shadowserver 2025: Highlights of the Year in Review",
+     "link": "https://www.shadowserver.org/news/shadowserver-2025-highlights-of-the-year-in-review/",
+     "date": "2026-09-07T09:29:44+00:00",
+     "summary": "A review of Shadowserver’s 21st year as the world’s largest provider of free, timely, actionable, daily cyber threat intelligence. Covering the latest improvements in our public benefit services, responses to emerging cyber threats, and detection and reporting of the latest…"
+    },
+    {
+     "title": "Shadowserver Critical Community Infrastructure Cyber Resilience Project",
+     "link": "https://www.shadowserver.org/news/shadowserver-critical-community-infrastructure-cyber-resilience-project/",
+     "date": "2026-08-05T09:04:44+00:00",
+     "summary": "The Shadowserver Critical Community Infrastructure (CCI) Project is designed to improve the cybersecurity posture of essential public-serving organizations across Central and Eastern Europe (CEE), with a special focus on Ukraine. The project will deliver free Cyber Threat…"
+    },
+    {
+     "title": "StealC Historical Bot Infection Special Report",
+     "link": "https://www.shadowserver.org/news/stealc-historical-bot-infection-special-report/",
+     "date": "2026-06-25T08:37:57+00:00",
+     "summary": "On Wednesday 24th June 2026, international law enforcement partners announced additional successful cyber crime disruption actions as part of the ongoing Operation Endgame initiative. This time the StealC infostealer and Amadey malware-as-a-service families were targeted. Law…"
+    },
+    {
+     "title": "SocGholish Compromised WordPress Sites Special Report",
+     "link": "https://www.shadowserver.org/news/socgholish-compromised-wordpress-sites-special-report/",
+     "date": "2026-06-18T19:41:28+00:00",
+     "summary": "On Thursday 18th June 2026, international law enforcement partners announced another successful cyber crime disruption action as part of the ongoing Operation Endgame initiative. This time it targeted the SocGholish malware platform and threat actors. Law enforcement acquired…"
+    },
+    {
+     "title": "Shadowserver Report Provides Cybersecurity Insights and Recommendations for ECOWAS Member States in West Africa",
+     "link": "https://www.shadowserver.org/news/shadowserver-report-provides-cybersecurity-insights-and-recommendations-for-ecowas-member-states-in-west-africa/",
+     "date": "2026-06-08T13:54:07+00:00",
+     "summary": "Shadowserver issued a report to inform government leaders, policymakers, and other key stakeholders in ECOWAS Member States in West Africa on the following: a) The ECOWAS region’s cyber threat landscape and attack surface using Shadowserver’s free, actionable cyber threat…"
+    },
+    {
+     "title": "Rhadamanthys Historical Bot Infections Special Report",
+     "link": "https://www.shadowserver.org/news/rhadamanthys-historical-bot-infections-special-report/",
+     "date": "2025-11-13T10:03:08+00:00",
+     "summary": "On Thursday 13th November 2025, international law enforcement partners announced a disruption action against the Rhadamanthys information stealer malware. As part of the ongoing Operation Endgame initiative, law enforcement acquired copies of the threat actor’s databases…"
+    },
+    {
+     "title": "Shadowserver 2024: Highlights of the Year in Review",
+     "link": "https://www.shadowserver.org/news/shadowserver-2024-highlights-of-the-year-in-review/",
+     "date": "2025-02-17T13:02:01+00:00",
+     "summary": "A review of Shadowserver’s 20th year as the world’s largest provider of free, timely, actionable, daily cyber threat intelligence. Covering the latest improvements in our public benefit services, responses to emerging cyber threats, and detection and reporting of the latest…"
+    },
+    {
+     "title": "Non-profit consortium launches national scale Cyber Resilience pilot to assess the cyber threat landscape for the NGO sector in The Netherlands",
+     "link": "https://www.shadowserver.org/news/non-profit-consortium-launches-national-scale-cyber-resilience-pilot-to-assess-the-cyber-threat-landscape-for-the-ngo-sector-in-the-netherlands/",
+     "date": "2024-04-04T07:20:24+00:00",
+     "summary": "A non-profit consortium – consisting of The Hague Humanity Hub, the CyberPeace Institute (CPI), Connect2 Trust Foundation and The Shadowserver Foundation, co-funded by Rijksdienst voor Ondernemend Nederland (RVO), will produce a national level assessment of the cyber threat…"
+    }
+   ]
+  },
+  "abuse-ch": {
+   "status": "ok",
+   "feed": "https://abuse.ch/rss/",
+   "via": "discovered",
+   "items": [
+    {
+     "title": "Introducing the abuse.ch Community Hub: recognition matters",
+     "link": "https://abuse.ch/blog/introducing-abuse-ch-community-hub/",
+     "date": "2026-07-28T11:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Creating sustainability for abuse.ch and its community",
+     "link": "https://abuse.ch/blog/creating-sustainability-for-abuse-ch-and-its-community/",
+     "date": "2025-07-29T13:30:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Introducing: abuse.ch Hunting Platform",
+     "link": "https://abuse.ch/blog/introducing-abuse-ch-hunting-platform/",
+     "date": "2025-03-11T14:11:35+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Community First - new authentication, new data, and new functionality",
+     "link": "https://abuse.ch/blog/community-first/",
+     "date": "2024-11-18T17:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "abuse.ch and Spamhaus: The Impact of Your Contributions",
+     "link": "https://abuse.ch/blog/ach-stec-the-impact-of-your-contributions/",
+     "date": "2024-11-11T14:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "abuse.ch appoints Spamhaus as a licensee to secure its future",
+     "link": "https://abuse.ch/blog/abuse-ch-appoints-spamhaus-as-a-licensee/",
+     "date": "2022-08-08T13:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Introducing YARAify",
+     "link": "https://abuse.ch/blog/introducing-yaraify/",
+     "date": "2022-06-13T11:23:48+00:00",
+     "summary": ""
+    },
+    {
+     "title": "abuse.ch gets a new home at BFH",
+     "link": "https://abuse.ch/blog/abuse-ch-gets-a-new-home-at-bfh/",
+     "date": "2021-06-01T07:25:31+00:00",
+     "summary": ""
+    }
+   ]
+  },
+  "divd": {
+   "status": "ok",
+   "feed": "https://www.divd.nl/index.xml",
+   "via": "known",
+   "items": [
+    {
+     "title": "It was a matter of when, not if...",
+     "link": "https://www.divd.nl/newsroom/articles/when-no-if/",
+     "date": "2026-09-24T20:36:00+00:00",
+     "summary": "Security people always say it’s not a matter of if, but when you get hacked. It took us (almost) seven years but we can now say that we’re the hackers that got hacked. We noticed suspicious activity, investigated, and came to the inevitable conclusion that damn, we got hacked.…"
+    },
+    {
+     "title": "Dutch energy sector, we have a cloud problem",
+     "link": "https://www.divd.nl/newsroom/articles/dutch-energy-sector-we-have-a-cloud-problem/",
+     "date": "2026-06-09T09:53:00+00:00",
+     "summary": "The Dutch energy sector has quietly drifted into cloud dependence. What started as a push for efficiency has become a question of sovereignty. A 2026 report by Energy Innovation NL on digital autonomy in the energy intensive industry confirms the pattern. Core OT systems are,…"
+    },
+    {
+     "title": "We have moved to ENISA as its Root CNA",
+     "link": "https://www.divd.nl/newsroom/articles/we-have-moved-to-enisa-as-its-root-cna/",
+     "date": "2026-04-23T10:37:00+00:00",
+     "summary": "As a CVE Numbering Authority, we assign CVEs to vulnerabilities. Within the CVE program, every CNA operates under a Root CNA, and until now that was MITRE . From now on, it will be European Union Agency for Cybersecurity (ENISA) . Coordinated Vulnerability Disclosure is at the…"
+    },
+    {
+     "title": "CASE: MENDIX MISCONFIGURATION (again)",
+     "link": "https://www.divd.nl/mendix.html",
+     "date": "2026-03-01T12:37:00+00:00",
+     "summary": "More than 2,000 publicly reachable systems have been identified worldwide so far. Mendix confirms that this concerns both internal (on-premise) and external applications. We urge every organisation to audit each of their Mendix applications to prevent data leaks. This is not a…"
+    },
+    {
+     "title": "OPERATION ENDGAME PART 3",
+     "link": "https://www.divd.nl/operation-endgame-3/",
+     "date": "2025-11-13T10:13:00+00:00",
+     "summary": "On November 13th 2025, The Dutch National Police, in cooperation with EuropPol and Eurojust announced they took down botnets in a another episode of Operation Endgame , the biggest continued anti-botnet operation to date. During this takedown, stolen data has been seized. As…"
+    },
+    {
+     "title": "OPERATION ENDGAME 2.0",
+     "link": "https://www.divd.nl/operation-endgame-2/",
+     "date": "2025-05-23T06:55:00+00:00",
+     "summary": "Last year, Operation Endgame marked the biggest anti-botnet operation to date. The Dutch Police, in cooperation with police units from Germany, France, Denmark, the United States and United Kingdom and support from Europol and Eurojust had infiltrated a number of botnets. Now,…"
+    },
+    {
+     "title": "Critical vulnerabilities found in procurement platform used by U.S. public sector",
+     "link": "https://www.divd.nl/newsroom/articles/179cc9f7122b/",
+     "date": "2025-04-14T08:16:00+00:00",
+     "summary": "One of our researchers has identified three critical vulnerabilities in the SicommNet BASEC e-procurement system, primarily used by U.S. public sector agencies. These vulnerabilities allow malicious actors to bypass all security measures in the system, granting them access to…"
+    },
+    {
+     "title": "DIVD speelt belangrijke rol in digitale veiligheid energiesector door unieke positie",
+     "link": "https://www.divd.nl/newsroom/articles/9c0cce32f736/",
+     "date": "2025-03-18T19:50:00+00:00",
+     "summary": "Het Dutch Institute for Vulnerability Disclosure (DIVD) start met trots het project ‘Coordinated Vulnerability Disclosure (CVD) in de energiesector’. Met dit initiatief zet DIVD een nieuwe onderzoekslijn op om de digitale weerbaarheid van het steeds kwetsbaarder wordende…"
+    }
+   ]
+  },
+  "misp": {
+   "status": "ok",
+   "feed": "https://www.misp-project.org/feed.xml",
+   "via": "discovered",
+   "items": [
+    {
+     "title": "MISP 2.5.50 Released - Security hardening, Overmind improvements, and streamlined workflows",
+     "link": "https://www.misp-project.org/2026/10/09/misp.2.5.50.released.html/",
+     "date": "2026-10-09T00:00:00+00:00",
+     "summary": "MISP 2.5.50 brings a substantial set of security fixes, continued development of the Overmind user interface, and the consolidation of several legacy features into their modern replacements. The release also improves TAXII connectivity, object handling, event graphs,…"
+    },
+    {
+     "title": "MISP 2.5.48 - Many security fixes, XLSX export feature, misp-modules tags removal and many bugs fixed",
+     "link": "https://www.misp-project.org/2026/10/01/misp.2.5.48.released.html/",
+     "date": "2026-10-01T00:00:00+00:00",
+     "summary": "This is mainly a security release. It closes a large batch of findings from the autumn 2026 review round, and every instance should be updated. Alongside the security work it brings a new XLSX export, tag removal from misp-module results, and a set of sync, ACL and correlation…"
+    },
+    {
+     "title": "MISP 2.5.47 released - a major security hardening round, the new database migration system with PostgreSQL support, AI-assisted analysis and Overmind moving forward",
+     "link": "https://www.misp-project.org/2026/09/17/misp.2.5.47.released.html/",
+     "date": "2026-09-17T00:00:00+00:00",
+     "summary": "MISP 2.5.47 is the outcome of the most intensive security review the project has gone through in a long time, and it ships alongside three larger pieces of work: a ledger-based database migration system that also brings PostgreSQL support, the first release of the AI-assisted…"
+    },
+    {
+     "title": "MISP 2.5.46 released - security hardening, major performance gains, knowledge-base updates and Overmind moving forward",
+     "link": "https://www.misp-project.org/2026/09/10/misp.2.5.46.released.html/",
+     "date": "2026-09-10T00:00:00+00:00",
+     "summary": "MISP 2.5.46 is out, and the project continues to move at a very active development pace . This release brings together a large security review, significant performance improvements, major updates to the MISP knowledge bases and submodules, many fixes contributed by the…"
+    },
+    {
+     "title": "MISP v2.5.45 released - Overmind Everywhere, LDAP Reworked, Security Hardened and Many Fixes",
+     "link": "https://www.misp-project.org/2026/08/25/misp.2.5.45.released.html/",
+     "date": "2026-08-25T00:00:00+00:00",
+     "summary": "A large six-week cycle (herding kids, pets, bots is tiring in the heat, especially without an HVAC). Three themes dominate: the continued Overmind (Bootstrap 5) UI migration, a full revamp of LDAP authentication, and a concentrated security and correctness hardening pass."
+    },
+    {
+     "title": "CTI-Transmute 1.5 released with 16 security fixes and a first-class public API",
+     "link": "https://www.misp-project.org/2026/08/11/cti-transmute-v1.5-released.html/",
+     "date": "2026-08-11T00:00:00+00:00",
+     "summary": "CTI-Transmute 1.5 released CTI-Transmute is an open-source service for converting threat intelligence between formats - MISP and STIX today, more to come - with a catalogue on top to store, share, comment on and evaluate the results. It wraps the misp-stix library behind a web…"
+    },
+    {
+     "title": "MISP 2.5.44: Hotfix release (pull mechanism) and Overmind theme update",
+     "link": "https://www.misp-project.org/2026/07/14/misp.2.5.44.released.html/",
+     "date": "2026-07-14T00:00:00+00:00",
+     "summary": "This is a hotfix release, primarily addressing a bug in the pull synchronisation mechanism that could cause failures when pulling events without any tags. It also ships a large batch of Bootstrap 5 views for the Overmind theme along with a couple of smaller fixes."
+    },
+    {
+     "title": "MISP 2.5.42: Major Codebase Hardening Release, Scheduled TAXII Push and Many Updates",
+     "link": "https://www.misp-project.org/2026/06/22/misp.2.5.43.released.html/",
+     "date": "2026-06-22T00:00:00+00:00",
+     "summary": "This MISP release 2.5.42 and is primarily a security hardening release, alongside a large iteration on the new Overmind UI, new TAXII scheduled-push capability, and the usual data-library refreshes."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EU CERT Atlas</title>
+<meta name="description" content="Comparison of national CSIRTs/CERTs in all 27 EU member states, plus EU-level and community services: capabilities, ratings, feeds, blocklists, alerts and reporting channels.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: masthead + sticky section tabs; each section is a full-width band built on a 1100px column. Tile-grid map of the EU as the signature element. */
+:root {
+  --bg: #f3f5f8;
+  --surface: #ffffff;
+  --sunk: #e9edf3;
+  --ink: #131926;
+  --muted: #586378;
+  --line: #d9dfe8;
+  --accent: #1f4fd1;
+  --accent-ink: #ffffff;
+  --s0: #e4e9f5; --s1: #c3d0f0; --s2: #93abe6; --s3: #5e82db; --s4: #2f58cf; --s5: #1c3a96;
+  --ok: #1a7f4b; --warn: #a15c00; --bad: #b42318;
+  --tlp: #33ff00;
+  --f-display: "Archivo", "Arial Narrow", system-ui, sans-serif;
+  --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --r: 6px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e121a; --surface: #161c27; --sunk: #1d2431; --ink: #e5e9f0; --muted: #9aa4b6; --line: #2a3242;
+    --accent: #8aa6ff; --accent-ink: #0e121a;
+    --s0: #1f2738; --s1: #23345e; --s2: #2c4a8c; --s3: #3d64bd; --s4: #6187e6; --s5: #a3bbff;
+    --ok: #4cc38a; --warn: #f0a541; --bad: #ff7b72;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e121a; --surface: #161c27; --sunk: #1d2431; --ink: #e5e9f0; --muted: #9aa4b6; --line: #2a3242;
+  --accent: #8aa6ff; --accent-ink: #0e121a;
+  --s0: #1f2738; --s1: #23345e; --s2: #2c4a8c; --s3: #3d64bd; --s4: #6187e6; --s5: #a3bbff;
+  --ok: #4cc38a; --warn: #f0a541; --bad: #ff7b72;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--f-body); margin: 0; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 1100px; margin: 0 auto; padding-inline: 20px; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; line-height: 1.1; }
+h2 { font-size: 1.7rem; font-stretch: 80%; font-weight: 750; }
+h3 { font-size: 1.1rem; font-weight: 700; font-stretch: 90%; }
+.mono { font-family: var(--f-mono); font-size: .82em; }
+.muted { color: var(--muted); }
+.eyebrow { font: 500 .72rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+
+/* Masthead */
+header.mast { border-bottom: 1px solid var(--line); background: var(--surface); }
+.mast .wrap { padding-block: 28px 22px; display: grid; gap: 14px; }
+.mast-top { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; justify-content: space-between; }
+.tlp { font: 600 .72rem/1 var(--f-mono); background: #000; color: #fff; padding: 5px 8px; border-radius: 3px; letter-spacing: .04em; }
+.tlp b { color: #fff; }
+h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); font-stretch: 68%; font-weight: 800; letter-spacing: -.01em; }
+.lede { max-width: 66ch; color: var(--muted); margin: 0; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; margin-top: 6px; }
+.kpi { background: var(--surface); padding: 12px 14px; display: grid; gap: 2px; }
+.kpi b { font: 700 1.6rem/1.1 var(--f-display); font-stretch: 75%; font-variant-numeric: tabular-nums; }
+.kpi span { font-size: .8rem; color: var(--muted); }
+
+/* Tabs */
+nav.tabs { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
+nav.tabs .wrap { display: flex; gap: 4px; overflow-x: auto; padding-block: 8px; scrollbar-width: none; }
+nav.tabs button { font: 600 .9rem/1 var(--f-body); color: var(--muted); background: none; border: 0; padding: 9px 12px; border-radius: 999px; cursor: pointer; white-space: nowrap; }
+nav.tabs button[aria-selected="true"] { background: var(--ink); color: var(--bg); }
+nav.tabs button:hover:not([aria-selected="true"]) { background: var(--sunk); color: var(--ink); }
+main section { padding-block: 32px 48px; }
+.section-head { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: end; justify-content: space-between; margin-bottom: 18px; }
+.section-head p { margin: 6px 0 0; color: var(--muted); max-width: 70ch; }
+
+/* Overview: map + leaders */
+.overview { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 24px; }
+@media (max-width: 860px) { .overview { grid-template-columns: 1fr; } }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 18px; min-width: 0; }
+.tilemap { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; margin-top: 14px; }
+.tile { aspect-ratio: 1; max-width: 100%; border-radius: 5px; border: 0; cursor: pointer; display: grid; place-content: center; text-align: center; font: 700 clamp(.8rem, 2.4vw, 1.05rem)/1 var(--f-display); font-stretch: 80%; padding: 2px; transition: transform .12s; }
+.tile small { display: block; font: 500 .62rem/1 var(--f-mono); margin-top: 3px; opacity: .85; }
+.tile:hover { transform: scale(1.06); }
+.tile.dim { opacity: .25; }
+.legend { display: flex; align-items: center; gap: 8px; margin-top: 12px; font-size: .78rem; color: var(--muted); flex-wrap: wrap; }
+.ramp { display: flex; gap: 2px; }
+.ramp i { width: 22px; height: 10px; border-radius: 2px; display: block; }
+.leaders { display: grid; gap: 2px; margin-top: 10px; }
+.leader { display: grid; grid-template-columns: 26px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 7px 4px; border-bottom: 1px solid var(--line); cursor: pointer; background: none; border-left: 0; border-right: 0; border-top: 0; text-align: left; color: inherit; font: inherit; width: 100%; }
+.leader:hover { background: var(--sunk); }
+.leader .rank { font: 500 .78rem var(--f-mono); color: var(--muted); }
+.leader .nm { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.score { font: 700 1rem/1 var(--f-display); font-variant-numeric: tabular-nums; font-stretch: 80%; }
+.bars { display: grid; gap: 8px; margin-top: 12px; }
+.bar { display: grid; grid-template-columns: minmax(110px, 190px) minmax(0, 1fr) 30px; gap: 10px; align-items: center; font-size: .85rem; }
+.bar .track { height: 10px; background: var(--sunk); border-radius: 3px; overflow: hidden; }
+.bar .fill { height: 100%; background: var(--s4); border-radius: 0 4px 4px 0; }
+.bar b { font: 500 .8rem var(--f-mono); text-align: right; font-variant-numeric: tabular-nums; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
+@media (max-width: 860px) { .two { grid-template-columns: 1fr; } }
+
+/* Controls */
+.controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 14px; }
+input[type="search"] { font: inherit; padding: 9px 12px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); color: var(--ink); min-width: 0; flex: 1 1 220px; max-width: 360px; }
+.chip { font: 500 .8rem/1 var(--f-body); padding: 8px 11px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+
+/* Compare table */
+.tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: .88rem; }
+th, td { padding: 9px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: middle; }
+th { font: 600 .72rem/1.2 var(--f-mono); text-transform: uppercase; letter-spacing: .04em; color: var(--muted); background: var(--sunk); position: sticky; top: 0; white-space: nowrap; }
+th button { all: unset; cursor: pointer; }
+th button:focus-visible { outline: 2px solid var(--accent); }
+th.dim, td.dim { text-align: center; padding-inline: 4px; }
+tbody tr { cursor: pointer; }
+tbody tr:hover { background: var(--sunk); }
+.cc { font: 600 .72rem/1 var(--f-mono); padding: 4px 5px; border-radius: 3px; background: var(--sunk); color: var(--ink); display: inline-block; min-width: 30px; text-align: center; }
+.kind { font-size: .72rem; color: var(--muted); }
+.pip { display: inline-block; width: 16px; height: 16px; border-radius: 3px; border: 1.5px solid var(--s4); vertical-align: middle; }
+.pip.v1 { background: linear-gradient(135deg, var(--s4) 50%, transparent 50%); }
+.pip.v2 { background: var(--s4); }
+.scorecell { display: flex; align-items: center; gap: 8px; min-width: 110px; }
+.scorecell .track { flex: 1; height: 6px; background: var(--sunk); border-radius: 3px; overflow: hidden; }
+.scorecell .fill { height: 100%; background: var(--accent); }
+
+/* Services */
+.catnav { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
+.cat { margin-bottom: 28px; }
+.cat-head { display: flex; align-items: baseline; gap: 10px; border-bottom: 2px solid var(--ink); padding-bottom: 6px; margin-bottom: 4px; }
+.cat-head .n { font: 500 .8rem var(--f-mono); color: var(--muted); }
+.svc { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 4px 16px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+@media (max-width: 620px) { .svc { grid-template-columns: 1fr; } }
+.svc .who { display: flex; gap: 6px; align-items: flex-start; flex-wrap: wrap; }
+.svc .who button { all: unset; cursor: pointer; font-weight: 600; font-size: .85rem; }
+.svc .who button:hover { text-decoration: underline; }
+.svc .what { min-width: 0; }
+.svc .what p { margin: 2px 0 0; color: var(--muted); font-size: .9rem; }
+.svc .what a, .svc .what strong { font-weight: 600; overflow-wrap: anywhere; }
+
+/* Latest */
+.feed-list { display: grid; gap: 0; }
+.item { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.item time { font: 500 .78rem/1.4 var(--f-mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.item a { font-weight: 600; overflow-wrap: anywhere; }
+.item p { margin: 3px 0 0; font-size: .87rem; color: var(--muted); }
+.status { font: 600 .72rem/1 var(--f-mono); display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+.status.ok { color: var(--ok); } .status.stale { color: var(--warn); } .status.none { color: var(--muted); }
+.empty { padding: 28px; border: 1px dashed var(--line); border-radius: var(--r); background: var(--surface); }
+.empty h3 { margin-bottom: 6px; }
+.copy { font: 500 .72rem var(--f-mono); padding: 4px 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 4px; cursor: pointer; }
+.url { font: .78rem var(--f-mono); overflow-wrap: anywhere; color: var(--muted); }
+
+/* Detail dialog */
+dialog { border: 1px solid var(--line); border-radius: 10px; padding: 0; width: min(760px, calc(100vw - 32px)); max-height: calc(100dvh - 48px); background: var(--surface); color: var(--ink); }
+dialog::backdrop { background: rgb(8 12 20 / .55); }
+.dlg-head { position: sticky; top: 0; background: var(--surface); border-bottom: 1px solid var(--line); padding: 18px 20px 14px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; z-index: 1; }
+.dlg-head h2 { font-size: 1.8rem; }
+.dlg-body { padding: 18px 20px 24px; display: grid; gap: 20px; }
+.close { font: 600 .85rem var(--f-body); border: 1px solid var(--line); background: var(--sunk); color: var(--ink); border-radius: 999px; padding: 7px 12px; cursor: pointer; height: fit-content; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px 20px; margin: 0; }
+.facts div { min-width: 0; } .facts dt { font: 500 .7rem var(--f-mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); } .facts dd { margin: 2px 0 0; overflow-wrap: anywhere; }
+.fingerprint { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 6px 18px; }
+.fp { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: center; font-size: .85rem; }
+.fp .cells { display: flex; gap: 3px; } .fp .cells i { width: 18px; height: 10px; border-radius: 2px; background: var(--sunk); display: block; } .fp .cells i.on { background: var(--s4); }
+.stat { display: flex; gap: 12px; align-items: baseline; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.stat b { font: 700 1.3rem/1 var(--f-display); font-stretch: 75%; min-width: 110px; }
+.method { max-width: 72ch; }
+.method li { margin-bottom: 6px; }
+footer { border-top: 1px solid var(--line); padding-block: 24px 40px; font-size: .82rem; color: var(--muted); }
+footer .wrap { display: grid; gap: 8px; }
+@media (prefers-reduced-motion: reduce) { .tile { transition: none; } .tile:hover { transform: none; } }
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="mast-top">
+      <span class="eyebrow">National CSIRTs · EU-27 · <span id="asof"></span></span>
+      <span class="tlp" title="Traffic Light Protocol: may be shared without restriction"><b>TLP:CLEAR</b></span>
+    </div>
+    <h1>EU CERT Atlas</h1>
+    <p class="lede">The government and community incident response teams of all 27 EU member states, compared on what they actually give the public: alerts, feeds, blocklists, reporting channels, open-source tools and notifications. Live feeds refresh every six hours.</p>
+    <div class="kpis" id="kpis"></div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <div class="wrap" role="tablist" id="tabs">
+    <button role="tab" data-tab="overview" aria-selected="true">Overview</button>
+    <button role="tab" data-tab="compare" aria-selected="false">Compare</button>
+    <button role="tab" data-tab="services" aria-selected="false">Services</button>
+    <button role="tab" data-tab="latest" aria-selected="false">Latest feed</button>
+    <button role="tab" data-tab="follow" aria-selected="false">Follow</button>
+    <button role="tab" data-tab="method" aria-selected="false">Method</button>
+  </div>
+</nav>
+
+<main>
+  <section id="overview" data-panel="overview">
+    <div class="wrap">
+      <div class="overview">
+        <div class="panel">
+          <div class="eyebrow">Capability score by country</div>
+          <h3 style="margin-top:6px">Best-rated team per member state</h3>
+          <div class="tilemap" id="tilemap" role="list"></div>
+          <div class="legend"><span>Score 0</span><span class="ramp" id="ramp"></span><span>100</span><span>· select a tile for details</span></div>
+        </div>
+        <div class="panel">
+          <div class="eyebrow">Leaderboard</div>
+          <h3 style="margin-top:6px">Top teams by public capability</h3>
+          <div class="leaders" id="leaders"></div>
+        </div>
+      </div>
+      <div class="two">
+        <div class="panel">
+          <div class="eyebrow">Coverage</div>
+          <h3 style="margin-top:6px">How many of the 27 national teams offer each service</h3>
+          <div class="bars" id="coverage"></div>
+        </div>
+        <div class="panel">
+          <div class="eyebrow">Standouts</div>
+          <h3 style="margin-top:6px">What to use first</h3>
+          <div id="standouts" class="bars"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="compare" data-panel="compare" hidden>
+    <div class="wrap">
+      <div class="section-head">
+        <div><h2>Compare capabilities</h2><p>Each square is one rubric dimension: empty means none found, half means limited or constituency-only, full means public and mature. Select a row for the full profile.</p></div>
+      </div>
+      <div class="controls">
+        <input type="search" id="q" placeholder="Search team, country or service" aria-label="Search teams">
+        <div id="kindchips" style="display:flex;gap:6px;flex-wrap:wrap"></div>
+      </div>
+      <div class="tablewrap"><table id="table"><thead></thead><tbody></tbody></table></div>
+    </div>
+  </section>
+
+  <section id="services" data-panel="services" hidden>
+    <div class="wrap">
+      <div class="section-head">
+        <div><h2>Service directory</h2><p>Every service from every team, grouped by what it does. Start with feeds and blocklists if you run a network, or with reporting channels and alerts if you need help.</p></div>
+      </div>
+      <div class="controls"><input type="search" id="q2" placeholder="Filter services" aria-label="Filter services"></div>
+      <div class="catnav" id="catnav"></div>
+      <div id="catlist"></div>
+    </div>
+  </section>
+
+  <section id="latest" data-panel="latest" hidden>
+    <div class="wrap">
+      <div class="section-head">
+        <div><h2>Latest from the teams</h2><p id="latest-sub">Newest posts across all team feeds.</p><p class="muted" style="font-size:.85rem;margin-top:4px">● live: posted in the last 180 days · ◇ quiet: feed works but nothing newer than 180 days · ▲ stale: last fetch failed, showing earlier posts · ◆ page watch: no feed, new links read from the news page · ⊘ blocked: the site refuses automated readers · ○ none: nothing to track</p></div>
+      </div>
+      <div class="controls"><input type="search" id="q3" placeholder="Filter posts" aria-label="Filter posts"><select id="team3" aria-label="Show posts from" class="chip" style="padding:8px 10px"><option value="">All teams</option></select><label class="chip" style="display:inline-flex;gap:6px;align-items:center"><input type="checkbox" id="mix3" checked> Max 2 per team</label></div>
+      <div id="latest-list"></div>
+      <h3 style="margin:32px 0 10px">Feed status</h3>
+      <div class="tablewrap"><table id="feedstatus"><thead><tr><th>Team</th><th>Status</th><th>Feed</th></tr></thead><tbody></tbody></table></div>
+    </div>
+  </section>
+
+  <section id="follow" data-panel="follow" hidden>
+    <div class="wrap">
+      <div class="section-head">
+        <div><h2>Follow the teams</h2><p>Newsletters and mailing lists need a personal sign-up with email confirmation. Feeds can go into any reader. To receive feeds by email, add them to a reader that sends email digests, or import the OPML file from this site's repository.</p></div>
+      </div>
+      <div class="two" style="margin-top:0">
+        <div class="panel"><h3>Newsletters & mailing lists</h3><div id="newsletters" class="feed-list" style="margin-top:8px"></div></div>
+        <div class="panel"><h3>RSS / Atom feeds</h3><div id="feedurls" class="feed-list" style="margin-top:8px"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="method" data-panel="method" hidden>
+    <div class="wrap method">
+      <h2>Method</h2>
+      <p id="scale"></p>
+      <ol id="rubric"></ol>
+      <p>Each EU member state is represented by its national CSIRT under the NIS2 Directive. Where a country has separate government or sector teams, they appear under <em>Related teams</em> in the profile, and Spain's CCN-CERT is scored separately because it offers its own public services. EU-level bodies (CERT-EU, ENISA) and free community services (Shadowserver, abuse.ch, DIVD, MISP) are scored on the same rubric for reference.</p>
+      <p>Scores reflect public information found through web research in October 2026, including official pages, RFC 2350 profiles, annual reports and reputable press. Services a team offers only to its regulated constituency score as limited. These are editorial assessments for orientation, not audits. Check each team's site before relying on a detail, and report corrections through the repository.</p>
+      <p>The feed panel is filled by a scheduled GitHub Action that tries each team's known feed URLs, then auto-discovers feeds on the team's homepage. Teams without a working public feed are listed as such.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Data: <a href="data/certs.json">certs.json</a> · <a href="data/latest.json">latest.json</a> · <a href="data/feeds.opml">feeds.opml</a> · Source: <a href="https://github.com/angelflyer/story">github.com/angelflyer/story</a></span>
+    <span>Not affiliated with any CERT. Names belong to their respective organisations.</span>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlg-title"></dialog>
+
+<script>
+(function () {
+  const $ = (s, el = document) => el.querySelector(s);
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const DIMS = ["adv", "feeds", "block", "report", "oss", "proactive", "transparency", "english"];
+  const SHORT = { adv: "Alerts", feeds: "Feeds", block: "Block", report: "Report", oss: "Tools", proactive: "Notify", transparency: "Stats", english: "EN" };
+  const KINDS = { national: "National CSIRT", government: "Government CERT", eu: "EU-level", community: "Community / free" };
+  const GRID = { EU: [0, 0], SE: [4, 0], FI: [5, 0], IE: [0, 1], DK: [3, 1], EE: [5, 1], NL: [2, 2], DE: [3, 2], PL: [4, 2], LV: [5, 2], FR: [1, 3], BE: [2, 3], LU: [3, 3], CZ: [4, 3], LT: [5, 3], PT: [0, 4], ES: [1, 4], AT: [3, 4], SK: [4, 4], HU: [5, 4], RO: [6, 4], IT: [2, 5], SI: [3, 5], HR: [4, 5], BG: [6, 5], MT: [2, 6], GR: [5, 6], CY: [6, 6] };
+  let D, L = { updated: null, teams: {} };
+  let sortKey = "score", sortDir = -1, kindFilter = new Set(Object.keys(KINDS));
+  const score = c => Math.round(DIMS.reduce((a, k) => a + (c.scores[k] || 0), 0) / (DIMS.length * 2) * 100);
+  const step = s => Math.min(5, Math.floor(s / 100 * 6));
+  const byId = id => D.certs.find(c => c.id === id);
+  const fmtDate = iso => { if (!iso) return "—"; const d = new Date(iso); return isNaN(d) ? "—" : d.toISOString().slice(0, 10); };
+  const QUIET_DAYS = 180;
+  function feedStatus(t, long) {
+    if (!L.updated) return '<span class="status none">pending</span>';
+    if (t && t.status === "watched") return '<span class="status ok" title="No feed; new links are read from the team\'s news page">◆ page watch</span>';
+    if (t && t.blocked) return `<span class="status none" title="The site returns 403 to automated readers">⊘ ${long ? "site blocks automated readers" : "blocked"}</span>`;
+    if (!t || !(t.status === "ok" || t.status === "stale")) return `<span class="status none">○ ${long ? "no public feed found" : "none"}</span>`;
+    const newest = (t.items || []).map(i => i.date).filter(Boolean).sort().pop();
+    const quiet = newest && (Date.now() - new Date(newest)) / 864e5 > QUIET_DAYS;
+    if (t.status === "stale") return '<span class="status stale">▲ stale</span>';
+    if (quiet) return `<span class="status stale" title="Newest post ${newest.slice(0, 10)}">◇ quiet</span>`;
+    return '<span class="status ok">● live</span>';
+  }
+  const pip = v => `<span class="pip v${v}" role="img" aria-label="${["none", "limited", "full"][v]}"></span>`;
+
+  async function load(path, fallback) {
+    try { const r = await fetch(path, { cache: "no-store" }); if (!r.ok) throw 0; return await r.json(); } catch (e) { return fallback; }
+  }
+
+  function kpis() {
+    const nat = D.certs.filter(c => c.kind === "national");
+    const ccs = new Set(nat.map(c => c.cc));
+    const withFeed = Object.values(L.teams).filter(t => ["ok", "stale", "watched"].includes(t.status)).length;
+    const block = nat.filter(c => c.scores.block >= 2).length;
+    const avg = Math.round(nat.reduce((a, c) => a + score(c), 0) / nat.length);
+    const svc = D.certs.reduce((a, c) => a + c.services.length, 0);
+    $("#kpis").innerHTML = [
+      [ccs.size + "/27", "member states covered"],
+      [D.certs.length, "teams and services profiled"],
+      [svc, "individual services catalogued"],
+      [avg, "average national score / 100"],
+      [block, "national teams running public blocking"],
+      [L.updated ? withFeed : "—", L.updated ? "teams tracked live" : "live feeds pending first run"]
+    ].map(([b, s]) => `<div class="kpi"><b>${b}</b><span>${s}</span></div>`).join("");
+    $("#asof").textContent = "data as of " + D.meta.asOf;
+  }
+
+  function overview() {
+    const best = {};
+    D.certs.filter(c => c.kind === "national" || c.kind === "eu").forEach(c => { if (!best[c.cc] || score(c) > score(best[c.cc])) best[c.cc] = c; });
+    const cells = [];
+    for (let r = 0; r < 7; r++) for (let col = 0; col < 7; col++) {
+      const cc = Object.keys(GRID).find(k => GRID[k][0] === col && GRID[k][1] === r);
+      if (!cc || !best[cc]) { cells.push('<div aria-hidden="true"></div>'); continue; }
+      const c = best[cc], s = score(c), st = step(s);
+      const fg = st >= 3 ? "#fff" : "var(--ink)";
+      cells.push(`<button class="tile" role="listitem" data-id="${c.id}" style="background:var(--s${st});color:${fg}" title="${esc(c.country)}: ${esc(c.name)}, score ${s}" aria-label="${esc(c.country)}, ${esc(c.name)}, score ${s}">${cc}<small>${s}</small></button>`);
+    }
+    $("#tilemap").innerHTML = cells.join("");
+    $("#ramp").innerHTML = [0, 1, 2, 3, 4, 5].map(i => `<i style="background:var(--s${i})"></i>`).join("");
+    const top = [...D.certs].sort((a, b) => score(b) - score(a)).slice(0, 10);
+    $("#leaders").innerHTML = top.map((c, i) => `<button class="leader" data-id="${c.id}"><span class="rank">${String(i + 1).padStart(2, "0")}</span><span class="nm"><span class="cc">${c.cc}</span> ${esc(c.name)} <span class="kind">· ${KINDS[c.kind]}</span></span><span class="score">${score(c)}</span></button>`).join("");
+    const nat = D.certs.filter(c => c.kind === "national");
+    const cats = Object.keys(D.meta.categories);
+    const cov = cats.map(k => [k, nat.filter(c => c.services.some(s => s.cat === k)).length]).sort((a, b) => b[1] - a[1]);
+    $("#coverage").innerHTML = cov.map(([k, n]) => `<div class="bar" title="${n} of ${nat.length} national teams"><span>${esc(D.meta.categories[k])}</span><span class="track"><span class="fill" style="width:${n / nat.length * 100}%;display:block"></span></span><b>${n}</b></div>`).join("");
+    const picks = [
+      ["Best free blocklist", "cert-pl", "Warning List in RPZ, hosts, AdBlock and more"],
+      ["Best open-source toolbox", "circl-lu", "MISP, AIL, Lookyloo, Vulnerability-Lookup"],
+      ["Best for network owners", "shadowserver", "Free daily reports on your own IP space"],
+      ["Best protective DNS", "cert-lv", "Free national DNS firewall"],
+      ["Best for staying informed", "ncsc-fi", "Weekly review, alerts, RSS and email"],
+      ["Best advisory volume", "cert-bund", "WID advisories with RSS and CSAF"],
+      ["Best EU-wide vulnerability view", "enisa-euvd", "Critical, exploited and EU-coordinated CVEs"]
+    ];
+    $("#standouts").innerHTML = picks.map(([t, id, d]) => { const c = byId(id); return `<button class="leader" data-id="${id}" style="grid-template-columns:minmax(0,1fr) auto"><span class="nm" style="white-space:normal"><span class="eyebrow">${t}</span><br><strong>${esc(c.name)}</strong> <span class="muted">· ${esc(d)}</span></span><span class="score">${score(c)}</span></button>`; }).join("");
+  }
+
+  function table() {
+    const head = `<tr><th><button data-sort="cc">Country</button></th><th><button data-sort="name">Team</button></th><th><button data-sort="score">Score ${sortKey === "score" ? (sortDir < 0 ? "↓" : "↑") : ""}</button></th>${DIMS.map(k => `<th class="dim" title="${esc(D.meta.rubric[k])}"><button data-sort="${k}">${SHORT[k]}</button></th>`).join("")}<th>Feed</th></tr>`;
+    $("#table thead").innerHTML = head;
+    const q = $("#q").value.trim().toLowerCase();
+    const rows = D.certs.filter(c => kindFilter.has(c.kind)).filter(c => !q || [c.name, c.full, c.country, c.cc, c.about, ...c.services.map(s => s.name + " " + s.desc)].join(" ").toLowerCase().includes(q));
+    const val = c => sortKey === "score" ? score(c) : sortKey === "name" ? c.name.toLowerCase() : sortKey === "cc" ? c.country : c.scores[sortKey];
+    rows.sort((a, b) => (val(a) > val(b) ? 1 : val(a) < val(b) ? -1 : score(b) - score(a)) * (sortKey === "name" || sortKey === "cc" ? -sortDir : sortDir));
+    $("#table tbody").innerHTML = rows.map(c => {
+      const s = score(c), t = L.teams[c.id];
+      const st = feedStatus(t);
+      return `<tr data-id="${c.id}" tabindex="0"><td><span class="cc">${c.cc}</span> <span class="muted" style="font-size:.8rem">${esc(c.country)}</span></td><td><strong>${esc(c.name)}</strong><br><span class="kind">${KINDS[c.kind]}</span></td><td><div class="scorecell"><span class="score">${s}</span><span class="track"><span class="fill" style="width:${s}%;display:block"></span></span></div></td>${DIMS.map(k => `<td class="dim">${pip(c.scores[k])}</td>`).join("")}<td>${st}</td></tr>`;
+    }).join("") || `<tr><td colspan="12" class="muted">No team matches “${esc(q)}”.</td></tr>`;
+  }
+
+  function kindChips() {
+    $("#kindchips").innerHTML = Object.entries(KINDS).map(([k, v]) => `<button class="chip" data-kind="${k}" aria-pressed="${kindFilter.has(k)}">${v}</button>`).join("");
+  }
+
+  function services() {
+    const q = $("#q2").value.trim().toLowerCase();
+    const cats = D.meta.categories;
+    const groups = Object.keys(cats).map(k => {
+      const items = [];
+      D.certs.forEach(c => c.services.filter(s => s.cat === k).forEach(s => items.push({ c, s })));
+      const f = items.filter(({ c, s }) => !q || [c.name, c.country, s.name, s.desc].join(" ").toLowerCase().includes(q));
+      f.sort((a, b) => score(b.c) - score(a.c));
+      return [k, f];
+    });
+    $("#catnav").innerHTML = groups.map(([k, f]) => `<a class="chip" href="#cat-${k}" data-jump="cat-${k}" style="text-decoration:none">${esc(cats[k])} · ${f.length}</a>`).join("");
+    $("#catlist").innerHTML = groups.filter(([, f]) => f.length).map(([k, f]) => `<div class="cat" id="cat-${k}"><div class="cat-head"><h3>${esc(cats[k])}</h3><span class="n">${f.length}</span></div>${f.map(({ c, s }) => `<div class="svc"><div class="who"><span class="cc">${c.cc}</span><button data-id="${c.id}">${esc(c.name)}</button></div><div class="what">${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>` : `<strong>${esc(s.name)}</strong>`}<p>${esc(s.desc)}</p></div></div>`).join("")}</div>`).join("") || `<p class="muted">No service matches “${esc(q)}”.</p>`;
+  }
+
+  function latest() {
+    const q = $("#q3").value.trim().toLowerCase();
+    if (!L.updated) {
+      $("#latest-sub").textContent = "Newest posts across all team feeds.";
+      $("#latest-list").innerHTML = `<div class="empty"><h3>Feeds have not been collected yet</h3><p class="muted" style="margin:0">A GitHub Action fetches every team's feed every six hours and writes <span class="mono">data/latest.json</span>. Posts appear here after its first successful run. Until then, use the links in the Follow tab.</p></div>`;
+    } else {
+      $("#latest-sub").textContent = "Newest posts across all team feeds. Last refreshed " + new Date(L.updated).toUTCString().replace(" GMT", " UTC") + ".";
+      const all = [];
+      Object.entries(L.teams).forEach(([id, t]) => (t.items || []).forEach(i => { const c = byId(id); if (c) all.push({ c, i }); }));
+      all.sort((a, b) => (b.i.date || "").localeCompare(a.i.date || ""));
+      const team = $("#team3").value, mix = $("#mix3").checked && !team && !q, per = {};
+      const f = all.filter(({ c, i }) => (!team || c.id === team) && (!q || [c.name, c.country, i.title, i.summary].join(" ").toLowerCase().includes(q))).filter(({ c }) => !mix || (per[c.id] = (per[c.id] || 0) + 1) <= 2).slice(0, 120);
+      $("#latest-list").innerHTML = f.length ? `<div class="feed-list">${f.map(({ c, i }) => `<div class="item"><time>${fmtDate(i.date)}</time><div><span class="cc">${c.cc}</span> <span class="kind">${esc(c.name)}</span><br><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a>${i.summary ? `<p>${esc(i.summary)}</p>` : ""}</div></div>`).join("")}</div>` : `<p class="muted">No posts match.</p>`;
+    }
+    $("#feedstatus tbody").innerHTML = D.certs.map(c => {
+      const t = L.teams[c.id];
+      const st = feedStatus(t, true);
+      const url = t?.feed || t?.page || (L.updated ? "" : (c.feeds[0] || ""));
+      return `<tr data-id="${c.id}"><td><span class="cc">${c.cc}</span> ${esc(c.name)}</td><td>${st}</td><td class="url">${esc(url) || "—"}</td></tr>`;
+    }).join("");
+  }
+
+  function follow() {
+    const nl = D.certs.filter(c => c.newsletter);
+    $("#newsletters").innerHTML = nl.map(c => `<div class="item" style="grid-template-columns:44px minmax(0,1fr)"><span class="cc">${c.cc}</span><div><a href="${esc(c.newsletter.url)}" target="_blank" rel="noopener">${esc(c.newsletter.name)}</a><p>${esc(c.name)}</p></div></div>`).join("");
+    const rows = D.certs.map(c => { const t = L.teams[c.id]; const u = t?.status === "ok" || t?.status === "stale" ? t.feed : (L.updated ? null : c.feeds[0]); return u ? { c, u, live: !!t } : null; }).filter(Boolean);
+    $("#feedurls").innerHTML = rows.map(({ c, u, live }) => `<div class="item" style="grid-template-columns:44px minmax(0,1fr) auto"><span class="cc">${c.cc}</span><div><strong>${esc(c.name)}</strong> ${live ? '<span class="status ok">● live</span>' : '<span class="status none">unverified</span>'}<div class="url">${esc(u)}</div></div><button class="copy" data-copy="${esc(u)}">Copy</button></div>`).join("");
+  }
+
+  function method() {
+    $("#scale").textContent = D.meta.scale;
+    $("#rubric").innerHTML = DIMS.map(k => `<li><strong>${SHORT[k]}</strong>: ${esc(D.meta.rubric[k])}</li>`).join("");
+  }
+
+  function open(id) {
+    const c = byId(id); if (!c) return;
+    const t = L.teams[c.id];
+    const groups = {};
+    c.services.forEach(s => (groups[s.cat] ||= []).push(s));
+    const dlg = $("#dlg");
+    dlg.innerHTML = `<div class="dlg-head"><div><div class="eyebrow">${esc(c.country)} · ${KINDS[c.kind]}</div><h2 id="dlg-title" style="margin-top:4px">${esc(c.name)} <span class="score" style="font-size:1.2rem;color:var(--muted)">${score(c)}/100</span></h2><div class="muted" style="font-size:.88rem">${esc(c.full)}</div></div><button class="close" data-close>Close</button></div>
+    <div class="dlg-body">
+      <p style="margin:0">${esc(c.about)}</p>
+      <dl class="facts"><div><dt>Hosted by</dt><dd>${esc(c.host)}</dd></div><div><dt>Serves</dt><dd>${esc(c.constituency)}</dd></div><div><dt>Languages</dt><dd>${c.langs.join(" · ")}</dd></div><div><dt>Website</dt><dd><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.url.replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a></dd></div></dl>
+      <div><div class="eyebrow" style="margin-bottom:8px">Capability fingerprint</div><div class="fingerprint">${DIMS.map(k => `<div class="fp" title="${esc(D.meta.rubric[k])}"><span>${esc(D.meta.rubric[k])}</span><span class="cells"><i class="${c.scores[k] >= 1 ? "on" : ""}"></i><i class="${c.scores[k] >= 2 ? "on" : ""}"></i></span></div>`).join("")}</div></div>
+      ${Object.entries(groups).map(([k, ss]) => `<div><div class="cat-head"><h3>${esc(D.meta.categories[k])}</h3></div>${ss.map(s => `<div class="svc" style="grid-template-columns:1fr"><div class="what">${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>` : `<strong>${esc(s.name)}</strong>`}<p>${esc(s.desc)}</p></div></div>`).join("")}</div>`).join("")}
+      ${c.stats.length ? `<div><div class="cat-head"><h3>Numbers</h3></div>${c.stats.map(s => `<div class="stat"><b>${esc(s.value)}</b><span>${esc(s.label)}${s.note ? `<br><span class="muted" style="font-size:.8rem">${esc(s.note)}</span>` : ""}</span></div>`).join("")}</div>` : ""}
+      ${t && t.items && t.items.length ? `<div><div class="cat-head"><h3>Latest posts</h3><span class="n mono">${fmtDate(L.updated)}</span></div>${t.items.slice(0, 5).map(i => `<div class="item"><time>${fmtDate(i.date)}</time><div><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a></div></div>`).join("")}</div>` : ""}
+      ${c.related.length ? `<div><div class="cat-head"><h3>Related teams</h3></div>${c.related.map(r => `<div class="svc" style="grid-template-columns:1fr"><div class="what">${r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.name)}</a>` : `<strong>${esc(r.name)}</strong>`}<p>${esc(r.desc)}</p></div></div>`).join("")}</div>` : ""}
+    </div>`;
+    if (!dlg.open) dlg.showModal();
+    dlg.scrollTop = 0;
+  }
+
+  function showTab(name) {
+    document.querySelectorAll("[data-tab]").forEach(b => b.setAttribute("aria-selected", b.dataset.tab === name));
+    document.querySelectorAll("[data-panel]").forEach(p => p.hidden = p.dataset.panel !== name);
+    try { localStorage.setItem("atlas-tab", name); } catch (e) {}
+  }
+
+  document.addEventListener("click", e => {
+    const tab = e.target.closest("[data-tab]"); if (tab) { showTab(tab.dataset.tab); return; }
+    if (e.target.closest("[data-close]")) { $("#dlg").close(); return; }
+    const sort = e.target.closest("[data-sort]"); if (sort) { const k = sort.dataset.sort; sortDir = sortKey === k ? -sortDir : -1; sortKey = k; table(); return; }
+    const kind = e.target.closest("[data-kind]"); if (kind) { const k = kind.dataset.kind; kindFilter.has(k) && kindFilter.size > 1 ? kindFilter.delete(k) : kindFilter.add(k); kindChips(); table(); return; }
+    const jump = e.target.closest("[data-jump]"); if (jump) { e.preventDefault(); document.getElementById(jump.dataset.jump)?.scrollIntoView({ behavior: "smooth", block: "start" }); return; }
+    const cp = e.target.closest("[data-copy]"); if (cp) { const u = cp.dataset.copy; navigator.clipboard?.writeText(u).then(() => { cp.textContent = "Copied"; setTimeout(() => cp.textContent = "Copy", 1500); }).catch(() => { cp.textContent = "Select it"; }); return; }
+    const row = e.target.closest("[data-id]"); if (row && !e.target.closest("a")) open(row.dataset.id);
+    if (e.target === $("#dlg")) $("#dlg").close();
+  });
+  document.addEventListener("keydown", e => { if (e.key === "Enter" && e.target.matches("tr[data-id]")) open(e.target.dataset.id); });
+  ["team3", "mix3"].forEach(id => $("#" + id).addEventListener("change", latest));
+  ["q", "q2", "q3"].forEach(id => $("#" + id).addEventListener("input", () => (id === "q" ? table : id === "q2" ? services : latest)()));
+
+  (async () => {
+    D = await load("data/certs.json", null);
+    if (!D) { document.querySelector("main").innerHTML = '<div class="wrap" style="padding-block:40px"><div class="empty"><h3>Data could not be loaded</h3><p class="muted">data/certs.json is missing or unreachable. Reload the page, or open it from the repository\'s GitHub Pages site.</p></div></div>'; return; }
+    L = await load("data/latest.json", L) || L;
+    $("#team3").insertAdjacentHTML("beforeend", D.certs.filter(c => L.teams[c.id]?.items?.length).map(c => `<option value="${c.id}">${c.cc} · ${esc(c.name)}</option>`).join(""));
+    kpis(); overview(); kindChips(); table(); services(); latest(); follow(); method();
+    let t = "overview"; try { t = localStorage.getItem("atlas-tab") || t; } catch (e) {}
+    const h = location.hash.slice(1); if (document.querySelector(`[data-tab="${h}"]`)) t = h;
+    showTab(t);
+  })();
+})();
+</script>
