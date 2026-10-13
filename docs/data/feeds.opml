@@ -32,6 +32,7 @@
   <outline type="rss" text="NL – DIVD" xmlUrl="https://www.divd.nl/index.xml" htmlUrl="https://www.divd.nl/"/>
   <outline type="rss" text="INT – MISP Project" xmlUrl="https://www.misp-project.org/feed.xml" htmlUrl="https://www.misp-project.org/"/>
   <outline type="rss" text="GB – NCSC UK" xmlUrl="https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml" htmlUrl="https://www.ncsc.gov.uk/"/>
+  <outline type="rss" text="US – CISA" xmlUrl="https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json" htmlUrl="https://www.cisa.gov/"/>
   <outline type="rss" text="US – CERT/CC" xmlUrl="https://www.kb.cert.org/vuls/atomfeed/" htmlUrl="https://www.kb.cert.org/vuls/"/>
   <outline type="rss" text="CA – Canadian Centre for Cyber Security" xmlUrl="https://www.cyber.gc.ca/api/cccs/rss/v1/get?feed=alerts_advisories&amp;lang=en" htmlUrl="https://www.cyber.gc.ca/en"/>
   <outline type="rss" text="BR – CERT.br" xmlUrl="https://www.cert.br/rss/certbr-rss.xml" htmlUrl="https://www.cert.br/"/>

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13T22:01:31+00:00",
+ "updated": "2026-10-13T22:06:51+00:00",
  "teams": {
   "cert-pl": {
    "status": "ok",
@@ -1678,22 +1678,59 @@
    ]
   },
   "cisa-us": {
-   "status": "no-feed",
-   "blocked": true,
-   "tried": [
-    "https://www.cisa.gov/cybersecurity-advisories/all.xml",
-    "https://www.cisa.gov/news.xml",
-    "https://www.cisa.gov/ (discovery: HTTPError 403)",
-    "https://www.cisa.gov/feed/",
-    "https://www.cisa.gov/rss.xml",
-    "https://www.cisa.gov/rss",
-    "https://www.cisa.gov/feed.xml",
-    "https://www.cisa.gov/atom.xml",
-    "https://www.cisa.gov/index.xml",
-    "https://www.cisa.gov/feed.rss",
-    "https://www.cisa.gov/?format=feed&type=rss"
-   ],
-   "items": []
+   "status": "ok",
+   "feed": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+   "via": "api",
+   "items": [
+    {
+     "title": "CVE-2026-104935: Ivanti Connect Secure added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-104935",
+     "date": "2026-10-13T00:00:00+00:00",
+     "summary": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands."
+    },
+    {
+     "title": "CVE-2015-5477: ISC BIND added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2015-5477",
+     "date": "2026-10-08T00:00:00+00:00",
+     "summary": "ISC BIND contains a data processing errors vulnerability that could allow remote attackers to cause a denial of service via TKEY queries."
+    },
+    {
+     "title": "CVE-2016-3081: Apache Struts added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2016-3081",
+     "date": "2026-10-08T00:00:00+00:00",
+     "summary": "Apache Struts contains a command injection vulnerability that could allow remote attackers to execute arbitrary code via method:prefix when Dynamic Method Invocation is enabled."
+    },
+    {
+     "title": "CVE-2023-22894: Strapi Strapi added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2023-22894",
+     "date": "2026-10-08T00:00:00+00:00",
+     "summary": "Strapi contains a cleartext storage of sensitive information vulnerability that could allow attackers with access to the admin panel to discover sensitive user details via the query filter. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users…"
+    },
+    {
+     "title": "CVE-2021-3199: ONLYOFFICE Docs added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2021-3199",
+     "date": "2026-10-08T00:00:00+00:00",
+     "summary": "ONLYOFFICE Docs contains a path traversal vulnerability that can occur when JWT is used, via a /.. sequence in an image upload parameter and could allow for remote code execution."
+    },
+    {
+     "title": "CVE-2015-3306: ProFTPD ProFTPD added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2015-3306",
+     "date": "2026-10-08T00:00:00+00:00",
+     "summary": "ProFTPD contains an improper access control vulnerability that could allow remote attackers to read and write to arbitrary files via the site cpfr and site cpto commands."
+    },
+    {
+     "title": "CVE-2026-88779: Citrix NetScaler added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-88779",
+     "date": "2026-10-04T00:00:00+00:00",
+     "summary": "Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway) contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for a denial of service."
+    },
+    {
+     "title": "CVE-2026-102490: Zammad GmbH Zammad added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-102490",
+     "date": "2026-10-02T00:00:00+00:00",
+     "summary": "Zammad GmbH Zammad contains an improper privilege management vulnerability that can allow the local zammad user to escalate privileges to root. This vulnerability can be chained with CVE-2026-102489."
+    }
+   ]
   },
   "certcc-us": {
    "status": "ok",
@@ -2041,29 +2078,64 @@
    "items": []
   },
   "cncert-cn": {
-   "status": "no-feed",
-   "blocked": false,
-   "tried": [
-    "https://www.cert.org.cn/sites/main/list/rss_list.htm",
-    "https://www.cert.org.cn/feed/",
-    "https://www.cert.org.cn/rss.xml",
-    "https://www.cert.org.cn/rss",
-    "https://www.cert.org.cn/feed.xml",
-    "https://www.cert.org.cn/atom.xml",
-    "https://www.cert.org.cn/index.xml",
-    "https://www.cert.org.cn/feed.rss",
-    "https://www.cert.org.cn/?format=feed&type=rss"
-   ],
-   "items": []
+   "status": "watched",
+   "page": "https://www.cert.org.cn/publish/main/index.html",
+   "via": "page",
+   "items": [
+    {
+     "title": "关于内置后门功能的恶意软件“荐片播放器”大规模传播的风险提示",
+     "link": "https://www.cert.org.cn/publish/main/10/2026/20261009203110219274970/20261009203110219274970_.html",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "关于新型僵尸网络FlyLegit大范围传播的风险提示",
+     "link": "https://www.cert.org.cn/publish/main/10/2026/20260930172928865590388/20260930172928865590388_.html",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "关于“银狐”木马“甲蚁（G01）”团伙攻击态势深入分析报告",
+     "link": "https://www.cert.org.cn/publish/main/10/2026/20260928181524758579103/20260928181524758579103_.html",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "关于“FakeSvc”挖矿组织大规模传播恶意程序的风险提示",
+     "link": "https://www.cert.org.cn/publish/main/10/2026/20260731185549211877315/20260731185549211877315_.html",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "关于Dysphoria僵尸网络大范围传播的风险提示",
+     "link": "https://www.cert.org.cn/publish/main/10/2026/20260727185721857549342/20260727185721857549342_.html",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "关于家用路由器DNS被恶意篡改导致异常跳转风险的提示",
+     "link": "https://www.cert.org.cn/publish/main/11/2026/20260601145618109326016/20260601145618109326016_.html",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "关于黑产团伙批量搭建高仿真钓鱼网站大规模传播银狐木马的风险提示",
+     "link": "https://www.cert.org.cn/publish/main/10/2026/20260522113326926111046/20260522113326926111046_.html",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "关于“黑猫”团伙利用搜索引擎传播仿冒Notepad++下载远...",
+     "link": "https://www.cert.org.cn/publish/main/10/2025/20251230153606629708787/20251230153606629708787_.html",
+     "date": null,
+     "summary": ""
+    }
+   ]
   },
   "twcert-tw": {
    "status": "no-feed",
    "blocked": false,
    "tried": [
-    "https://www.twcert.org.tw/en/ (discovery: HTTPError 404)",
-    "https://www.twcert.org.tw/en/feed/",
-    "https://www.twcert.org.tw/en/rss.xml",
-    "https://www.twcert.org.tw/en/rss",
     "https://www.twcert.org.tw/feed/",
     "https://www.twcert.org.tw/rss.xml",
     "https://www.twcert.org.tw/rss",
@@ -2134,6 +2206,8 @@
    "status": "no-feed",
    "blocked": false,
    "tried": [
+    "https://www.cyber.gov.au/rss/alerts",
+    "https://www.cyber.gov.au/rss/advisories",
     "https://www.cyber.gov.au/ (discovery: TimeoutError)",
     "https://www.cyber.gov.au/about-us/view-all-content/alerts-and-advisories (discovery: TimeoutError)",
     "https://www.cyber.gov.au/feed/",
@@ -2148,19 +2222,59 @@
    "items": []
   },
   "ncsc-nz": {
-   "status": "no-feed",
-   "blocked": false,
-   "tried": [
-    "https://www.ncsc.govt.nz/feed/",
-    "https://www.ncsc.govt.nz/rss.xml",
-    "https://www.ncsc.govt.nz/rss",
-    "https://www.ncsc.govt.nz/feed.xml",
-    "https://www.ncsc.govt.nz/atom.xml",
-    "https://www.ncsc.govt.nz/index.xml",
-    "https://www.ncsc.govt.nz/feed.rss",
-    "https://www.ncsc.govt.nz/?format=feed&type=rss"
-   ],
-   "items": []
+   "status": "watched",
+   "page": "https://www.ncsc.govt.nz/news/",
+   "via": "page",
+   "items": [
+    {
+     "title": "30 September 2026 Cyber Smart Week 2026 raises awareness of good cyber security practices The National Cyber Security Centre (NCSC) is using Cyber Smart Week (5-11 October) to remind people and…",
+     "link": "https://www.ncsc.govt.nz/news/find-a-scam-before-it-finds-you-cyber-smart-week-2026-raises-awareness-of-good-cyber-security-practices/",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "29 September 2026 Cyber security insights shared at Cyber Summit Korea 2026 Deputy Director-General of the National Cyber Security Centre, Catriona Robinson, recently spoke at Cyber Summit Korea…",
+     "link": "https://www.ncsc.govt.nz/news/cyber-security-insights-shared-at-cyber-summit-korea-2026/",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "24 September 2026 Cyber Threat Report 2026: Leaders need to prepare now for the impact of AI The NCSC is urging New Zealand business and organisational leaders to prepare for a cyber threat…",
+     "link": "https://www.ncsc.govt.nz/news/cyber-threat-report-2026-leaders-need-to-prepare-now-for-the-impact-of-ai/",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "21 September 2026 SME cyber vulnerability jumps as attacks hit medium-sized businesses hardest AI-enabled threats emerge as a growing concern, while one in three SMEs still take no action to train…",
+     "link": "https://www.ncsc.govt.nz/news/sme-cyber-vulnerability-jumps-as-attacks-hit-medium-sized-businesses-hardest/",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "20 August 2026 New Zealanders urged to take care as cyber security incidents become more complex New Zealanders continue to report cyber security incidents at a consistent rate, helping the NCSC…",
+     "link": "https://www.ncsc.govt.nz/news/new-zealanders-urged-to-take-care-as-cyber-security-incidents-become-more-complex/",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "4 August 2026 Strengthening your supply chain security Managing a third party supplier is an ongoing process, and NCSC has released cyber security guidance for organisations who use third parties to…",
+     "link": "https://www.ncsc.govt.nz/news/strengthening-your-supply-chain-security/",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "23 June 2026 Leaders of Five Eyes Cyber Security Agencies Call to Action on AI Preparedness The GCSB’s National Cyber Security Centre (NCSC) joins Five Eyes partners in issuing a call to action to…",
+     "link": "https://www.ncsc.govt.nz/news/leaders-of-five-eyes-cyber-security-agencies-call-to-action-on-ai-preparedness/",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "22 June 2026 Quarter One sees significant cyber incidents In Q1 the NCSC responded to three C2 category or ‘highly significant’ incidents, the first type of these incidents since the 2021/22…",
+     "link": "https://www.ncsc.govt.nz/news/quarter-one-sees-significant-cyber-incidents/",
+     "date": null,
+     "summary": ""
+    }
+   ]
   },
   "incd-il": {
    "status": "no-feed",
@@ -2182,22 +2296,29 @@
    "items": []
   },
   "ncsc-ch": {
-   "status": "no-feed",
-   "blocked": false,
-   "tried": [
-    "https://www.ncsc.admin.ch/ncsc/en/home.html/feed/",
-    "https://www.ncsc.admin.ch/ncsc/en/home.html/rss.xml",
-    "https://www.ncsc.admin.ch/ncsc/en/home.html/rss",
-    "https://www.ncsc.admin.ch/feed/",
-    "https://www.ncsc.admin.ch/rss.xml",
-    "https://www.ncsc.admin.ch/rss",
-    "https://www.ncsc.admin.ch/feed.xml",
-    "https://www.ncsc.admin.ch/atom.xml",
-    "https://www.ncsc.admin.ch/index.xml",
-    "https://www.ncsc.admin.ch/feed.rss",
-    "https://www.ncsc.admin.ch/?format=feed&type=rss"
-   ],
-   "items": []
+   "status": "watched",
+   "page": "https://www.ncsc.admin.ch/ncsc/en/home/aktuell/im-fokus.html",
+   "via": "page",
+   "items": [
+    {
+     "title": "More about «Mandatory caller ID is proving effective: Fraudulent calls made in the name of public authorities have fallen by over 75 per cent»",
+     "link": "https://www.bacs.admin.ch/en/hjb-2026-1-mm-en",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "More about «Cyberthreat level remains high – attacks becoming more targeted and complex»",
+     "link": "https://www.bacs.admin.ch/en/hjb-2025-2-mm-en",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "More about «Better protection for critical infrastructure in Switzerland»",
+     "link": "https://www.bacs.admin.ch/en/26-mo233001-2-en",
+     "date": null,
+     "summary": ""
+    }
+   ]
   },
   "nsm-no": {
    "status": "ok",
