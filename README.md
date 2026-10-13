@@ -14,7 +14,7 @@ A comparison of the national CSIRTs/CERTs of all 27 EU member states, plus EU-le
 3. Common feed paths (`/feed/`, `/rss.xml`, `/index.xml` …) on the team's site.
 4. If there is still no feed, new article links are read from the team's news `pages`.
 
-Feeds with nothing newer than two years are ignored as abandoned. Sites that answer every request with HTTP 403 are marked as blocking automated readers. As of October 2026 that applies to Belgium (CCB), Lithuania (NKSC), Malta (MITA) and Spain's CCN-CERT; Portugal's CNCS returns server errors.
+Feeds with nothing newer than two years are ignored as abandoned. Sites that answer every request with HTTP 403 are marked as blocking automated readers. As of October 2026 that applies to Belgium (CCB), Lithuania (NKSC), Malta (MITA), Spain's CCN-CERT, CISA's website and Israel's INCD; Portugal's CNCS returns server errors. CISA is tracked through its KEV catalogue mirror on GitHub instead. CERT-In, TWCERT/CC, ASD's ACSC and CERT-UA have no feed the updater can read yet.
 
 ## Viewing the site
 
