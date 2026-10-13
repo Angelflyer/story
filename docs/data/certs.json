@@ -12,7 +12,7 @@
       "transparency": "Published statistics and threat reports",
       "english": "Usable in English"
     },
-    "scale": "Each dimension is scored 0 (none found), 1 (limited or constituency-only) or 2 (public and mature). The overall score is the sum of eight dimensions, scaled to 100.",
+    "scale": "Each dimension is scored 0, 1 or 2 against written definitions (see below). The overall score is the sum of eight dimensions, scaled to 100. Where an assessor found no evidence, it scored lower, so a low score can mean missing evidence rather than a missing service.",
     "categories": {
       "alerts": "Alerts & advisories",
       "feeds": "Feeds & APIs",
@@ -23,6 +23,17 @@
       "newsletter": "Newsletters & digests",
       "reports": "Threat reports & statistics",
       "awareness": "Awareness & help for citizens"
+    },
+    "rating": "Scores come from a blind re-rating on 2026-10-13. Four separate assessor agents, with no access to the earlier scores, descriptions or conversation, each rated a random quarter of the 52 teams. They used only web search evidence and stricter written definitions for each level. The first editorial scores are kept for comparison.",
+    "levels": {
+      "adv": "0 none public · 1 occasional, sparse or constituency-only · 2 regular public advisories (several per month)",
+      "feeds": "0 none · 1 news RSS only, or data limited to members · 2 public machine-readable security data (advisory RSS plus API, IoC/STIX, CSAF or blocklists)",
+      "block": "0 none · 1 takedowns only, or blocking limited to government networks · 2 blocking that protects the general public (protective DNS, free blocklist, nationwide ISP blocking)",
+      "report": "0 no public channel · 1 organisations only · 2 channels for the general public (hotline, citizen form, phishing/SMS forwarding)",
+      "oss": "0 none · 1 a few tools, or free closed tools · 2 a substantial maintained open-source portfolio or major free platform",
+      "proactive": "0 none found · 1 limited or constituency-only notifications · 2 systematic notifications to network owners",
+      "transparency": "0 none · 1 occasional reports · 2 regular (at least annual) statistics or threat reports",
+      "english": "0 not usable without translation · 1 partial · 2 fully usable"
     }
   },
   "certs": [
@@ -164,7 +175,38 @@
           "url": "https://www.knf.gov.pl/en/MARKET/CSIRT_KNF"
         }
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 2,
+        "report": 2,
+        "oss": 2,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "Regular public warnings, analyses and monthly CSIRT NASK summaries on cert.pl.",
+          "feeds": "Warning List published at hole.cert.pl/domains/v2 in TXT, CSV, JSON, XML, hosts and RPZ formats, plus an API.",
+          "block": "Warning List is applied at DNS level by major Polish ISPs (Orange, Plus, Play, T-Mobile) under a UKE/ministry agreement and used by Quad9 and NextDNS.",
+          "report": "Citizens can forward SMS to 8080, use the incydent.cert.pl web form, email cert@cert.pl, or report through mObywatel.",
+          "oss": "Maintains open-source Artemis, MWDB Core, Karton and warning-list tools on GitHub.",
+          "proactive": "Artemis scans over 500k domains and sends automated vulnerability emails; n6 distributes threat data to network owners.",
+          "transparency": "Annual reports (2025 report published April 2026) and monthly incident summaries.",
+          "english": "Full English site (cert.pl/en) and an English annual report."
+        },
+        "sources": [
+          "https://cert.pl/en/posts/2026/04/annual-report-2025/",
+          "https://cert.pl/en/warning-list/",
+          "https://www.helpnetsecurity.com/2025/07/30/artemis-open-source-modular-vulnerability-scanner/",
+          "https://pretalx.com/hack-lu-2024/talk/88DSDM",
+          "https://spidersweb.pl/2023/11/falszywe-sms-numer-do-zglaszania-cert.html",
+          "https://cert.pl/uploads/docs/Podsumowanie_CSIRT_NASK_2025_11.pdf"
+        ],
+        "confidence": "high"
+      }
     },
     {
       "id": "cert-at",
@@ -183,13 +225,13 @@
       ],
       "scores": {
         "adv": 2,
-        "feeds": 2,
+        "feeds": 1,
         "block": 0,
         "report": 1,
         "oss": 2,
         "proactive": 2,
         "transparency": 2,
-        "english": 2
+        "english": 1
       },
       "services": [
         {
@@ -256,7 +298,36 @@
           "url": "https://cert.at/en/"
         }
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 1,
+        "oss": 2,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "Regular public warnings and blog posts, plus a daily digest ('Tagesberichte').",
+          "feeds": "RSS/Atom feeds for the blog, warnings and the daily digest; no public IoC or CSAF data was found.",
+          "block": "No public blocking service found.",
+          "report": "reports@cert.at accepts incident reports; consumer scam reporting is mainly handled elsewhere (no citizen-oriented channel confirmed).",
+          "oss": "Maintains open-source IntelMQ (certtools), tuency, intelmq-docker and the stats portal.",
+          "proactive": "Systematically notifies Austrian network owners of vulnerable or infected systems via IntelMQ-driven processing.",
+          "transparency": "Annual 'Bericht Internet-Sicherheit Österreich' (2020 to 2024 found; 2025 not yet seen).",
+          "english": "An English site exists, but many warnings are in German only."
+        },
+        "sources": [
+          "https://cert.at/en/services/feeds",
+          "https://www.cert.at/media/files/reports/2024/Jahresbericht_CERT_2024.pdf",
+          "https://intelmq.readthedocs.io/en/latest/user/universe.html",
+          "https://lists.cert.at/cgi-bin/mailman/listinfo/daily"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "ccb-be",
@@ -280,9 +351,9 @@
         "feeds": 1,
         "block": 2,
         "report": 2,
-        "oss": 0,
+        "oss": 1,
         "proactive": 2,
-        "transparency": 1,
+        "transparency": 2,
         "english": 2
       },
       "services": [
@@ -340,7 +411,36 @@
         "https://ccb.belgium.be/advisories",
         "https://ccb.belgium.be/ccb-news"
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 2,
+        "report": 2,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 1,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "ccb.belgium.be/advisories has dozens of paginated public 'Warning' advisories, with entries through late 2025.",
+          "feeds": "An advisory RSS feed exists (used by the OpenCTI connector), but no public IoC, CSAF or API data was found.",
+          "block": "The Belgian Anti-Phishing Shield (BAPS) with Proximus, Telenet, Orange and Belnet redirects the public away from reported malicious domains at ISP level.",
+          "report": "Citizens forward suspicious messages to suspicious@safeonweb.be (over 9 million in 2024).",
+          "oss": "It offers free closed tools and services such as the Safeonweb app; no open-source portfolio was found.",
+          "proactive": "The Spear Warning programme proactively alerts companies and individuals about vulnerabilities, stolen credentials and malware.",
+          "transparency": "Yearly statistics are published (suspicious@ volumes, BAPS clicks prevented, for example 13M in 2022).",
+          "english": "Site and advisories are available in English alongside FR/NL/DE."
+        },
+        "sources": [
+          "https://ccb.belgium.be/advisories?page=3",
+          "https://ccb.belgium.be/en/node/1843",
+          "https://news.belgium.be/en/node/41177",
+          "https://hub.filigran.io/en/cybersecurity-solutions/opencti-integrations/cert-belgium-advisories"
+        ],
+        "confidence": "high"
+      }
     },
     {
       "id": "cert-bg",
@@ -363,7 +463,7 @@
         "report": 1,
         "oss": 0,
         "proactive": 1,
-        "transparency": 0,
+        "transparency": 1,
         "english": 1
       },
       "services": [
@@ -388,7 +488,35 @@
       "feeds": [],
       "newsletter": null,
       "related": [],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 1,
+        "feeds": 0,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 0,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "The govcert.bg warnings category has 2026 entries (Ghost-Sender, an email threat campaign), but the cadence appears irregular.",
+          "feeds": "No machine-readable feeds found.",
+          "block": "No blocking service found.",
+          "report": "cert@govcert.bg in business hours; the constituency is state administration.",
+          "oss": "No tools found.",
+          "proactive": "Processes abuse alerts covering thousands of IPs (e.g. 5,100 IPs in a month), implying forwarding to owners, but the scope is unclear.",
+          "transparency": "Monthly newsletters with incident statistics were reported by BTA; the current cadence is unverified.",
+          "english": "An /en/ section exists, but content is largely in Bulgarian."
+        },
+        "sources": [
+          "https://www.govcert.bg/en/category/warnings/",
+          "https://www.trusted-introducer.org/teams/cert-bulgaria.html",
+          "https://www.bta.bg/en/news/131405-Internet-Abuse-Alerts-on-the-Increase"
+        ],
+        "confidence": "low"
+      }
     },
     {
       "id": "cert-hr",
@@ -408,11 +536,11 @@
       "scores": {
         "adv": 2,
         "feeds": 1,
-        "block": 1,
+        "block": 0,
         "report": 2,
         "oss": 0,
-        "proactive": 1,
-        "transparency": 1,
+        "proactive": 2,
+        "transparency": 2,
         "english": 1
       },
       "services": [
@@ -460,7 +588,36 @@
           "url": "https://www.zsis.hr/"
         }
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 1,
+        "report": 2,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 1,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "Publishes security notices and recommendations; frequency not confirmed for 2026 (medium confidence).",
+          "feeds": "No security-data feed found beyond the website.",
+          "block": "No blocking service found.",
+          "report": "Citizens can report incidents and phishing (with full headers) via published contacts.",
+          "oss": "None found.",
+          "proactive": "Issued 82,000+ security alerts to network owners in 2022 for incidents involving Croatian IPs and domains.",
+          "transparency": "Annual reports (e.g. 2020, 2022) with figures.",
+          "english": "Some English pages (e.g. phishing reporting), but mostly Croatian."
+        },
+        "sources": [
+          "https://www.cert.hr/wp-content/uploads/2023/02/CERT-G.I.-2022..pdf",
+          "https://www.cert.hr/wp-content/uploads/2021/02/Carnet_Cert_godisnji_izvjestaj_2020_0402-3.pdf",
+          "https://www.gov.hr/hr/nacionalni-cert/1230",
+          "https://cert.hr/?p=64768"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "csirt-cy",
@@ -483,9 +640,9 @@
         "block": 0,
         "report": 1,
         "oss": 0,
-        "proactive": 1,
+        "proactive": 0,
         "transparency": 0,
-        "english": 2
+        "english": 1
       },
       "services": [
         {
@@ -511,7 +668,36 @@
           "url": "https://csirt.cynet.ac.cy/"
         }
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 1,
+        "feeds": 0,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 0,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "The homepage lists some alerts (e.g. a critical vulnerability advisory dated 27/05/2026), but they appear sparse.",
+          "feeds": "No feed found.",
+          "block": "No blocking service found.",
+          "report": "Only a general contact (info@csirt.cy) found; no citizen hotline or form found.",
+          "oss": "None found.",
+          "proactive": "No evidence of notifications to network owners.",
+          "transparency": "No published statistics or annual reports found.",
+          "english": "The site has English alert pages (csirt.cy/en/alerts), but the extent of coverage is unverified."
+        },
+        "sources": [
+          "https://www.csirt.cy/",
+          "https://csirt.cy/alerts/customer-complaint-phishing-pushes-network-hacking-malware",
+          "https://mobile.ransomware.live/csirt/CY",
+          "https://www.lemorange.com/engineering/cyprus-cybersecurity-2026"
+        ],
+        "confidence": "low"
+      }
     },
     {
       "id": "csirt-cz",
@@ -529,13 +715,13 @@
         "EN"
       ],
       "scores": {
-        "adv": 2,
+        "adv": 1,
         "feeds": 2,
         "block": 2,
-        "report": 1,
+        "report": 2,
         "oss": 2,
         "proactive": 2,
-        "transparency": 1,
+        "transparency": 2,
         "english": 1
       },
       "services": [
@@ -607,7 +793,37 @@
       "pages": [
         "https://www.nic.cz/news/"
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 2,
+        "report": 1,
+        "oss": 2,
+        "proactive": 2,
+        "transparency": 1,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "Publishes news and warnings, but no evidence of a regular advisory series.",
+          "feeds": "The CZ.NIC Turris Sentinel greylist of attacker IPs is publicly available and reused by others (e.g. CESNET NERD).",
+          "block": "Free downloadable Sentinel greylist and CSIRT.CZ deny lists for automated blocking.",
+          "report": "National team handling incidents for all of Czechia; accepts reports from anyone, including phishing reports.",
+          "oss": "The parent CZ.NIC maintains a major open-source portfolio (Knot DNS/Resolver, BIRD, FRED, Turris); CSIRT.CZ has its own Malicious Domain Manager.",
+          "proactive": "Actively detects and removes phishing in .cz (down 80% in 2024) and notifies operators; scan-based notifications not fully verified.",
+          "transparency": "Annual CSIRT.CZ report (2024) and a CZ.NIC annual report section.",
+          "english": "Partial English content; CZ.NIC blog in English."
+        },
+        "sources": [
+          "https://www.lupa.cz/clanky/kratke-vlny-vyrocni-zprava-csirt-cz-i-izraelskeho-kyberuradu-a-soutez-na-eu-penezenku/",
+          "https://kariera.nic.cz/en/",
+          "https://docs.turris.cz/basics/sentinel/intro/",
+          "https://en.blog.nic.cz/2020/01/22/protecting-your-servers-with-turris-sentinel/",
+          "https://www.nic.cz/files/documents/vyrocni_zprava_2025_schvalena.pdf"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "cfcs-dk",
@@ -625,14 +841,14 @@
         "EN"
       ],
       "scores": {
-        "adv": 2,
-        "feeds": 1,
+        "adv": 1,
+        "feeds": 0,
         "block": 0,
-        "report": 1,
+        "report": 2,
         "oss": 0,
-        "proactive": 2,
+        "proactive": 0,
         "transparency": 2,
-        "english": 2
+        "english": 1
       },
       "services": [
         {
@@ -677,7 +893,36 @@
           "url": "https://www.cfcs.dk/"
         }
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "Mainly threat assessments and occasional guidance; no evidence of regular public alerts on samsik.dk.",
+          "feeds": "No machine-readable feeds found.",
+          "block": "No evidence of blocking.",
+          "report": "Organisations report through the virk.dk form (MitID); citizens can use the sikkerdigital.dk cyber hotline, which CFCS co-runs.",
+          "oss": "No open-source tools found.",
+          "proactive": "No evidence found of notifications to network owners.",
+          "transparency": "Annual 'cyber threat against Denmark' assessments and sector assessments (2024 CFCS, Nov 2025 SAMSIK).",
+          "english": "CFCS has English threat assessments; samsik.dk English coverage unclear."
+        },
+        "sources": [
+          "https://lex.dk/Styrelsen_for_Samfundssikkerhed",
+          "https://virk.dk/myndigheder/stat/SAMSIK/selvbetjening/Indberetning_af_brud_paa_sikkerhed/",
+          "https://cfcs.dk/en/cybertruslen/threat-assessments/the-cyber-threat-against-denmark",
+          "https://www.danskindustri.dk/brancher/di-digital/nyhedsarkiv/nyheder/2025/11/sadan-laser-du-en-trusselsvurdering--og-hvad-den-betyder-for-din-virksomhed/"
+        ],
+        "confidence": "low"
+      }
     },
     {
       "id": "cert-ee",
@@ -695,12 +940,12 @@
         "EN"
       ],
       "scores": {
-        "adv": 2,
-        "feeds": 1,
+        "adv": 1,
+        "feeds": 0,
         "block": 2,
         "report": 2,
-        "oss": 0,
-        "proactive": 1,
+        "oss": 1,
+        "proactive": 2,
         "transparency": 2,
         "english": 2
       },
@@ -751,7 +996,36 @@
         "https://www.ria.ee/uudised",
         "https://www.ria.ee/en"
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 2,
+        "report": 2,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 2,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "Warnings appear occasionally via RIA news (e.g. Log4j, MikroTik); no regular advisory series was found.",
+          "feeds": "No machine-readable feeds found.",
+          "block": "A free CERT-EE DNS-filtering app for iOS/Android blocks phishing and malware domains for the public, and CERT-EE restricts access to malicious sites.",
+          "report": "The public is asked to forward suspicious emails to cert@cert.ee.",
+          "oss": "The protective app is free but closed; no open-source portfolio was found.",
+          "proactive": "Automated monitoring finds infected devices and notifies owners via telcos (e.g. 1,204 devices) and flags vulnerable hosts (e.g. 130 Cisco IOS XE devices).",
+          "transparency": "There are monthly 'Situation in cyberspace' reports (through July 2026) and an annual Cyber Security Yearbook 2026.",
+          "english": "Monthly reports and news are published in English."
+        },
+        "sources": [
+          "https://ria.ee/en/news/application-developed-cert-ee-protects-against-phishing-and-malware",
+          "https://www.ria.ee/en/situation-cyberspace-july-2026",
+          "https://www.ria.ee/sites/default/files/documents/2026-02/RIA-kuberturvalisuse-aastaraamat-2026.pdf",
+          "https://www.err.ee/1608432728/ria-java-turvanorkus-ohustab-ka-eesti-ettevotteid-ja-asutusi"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "ncsc-fi",
@@ -771,10 +1045,10 @@
       ],
       "scores": {
         "adv": 2,
-        "feeds": 2,
+        "feeds": 1,
         "block": 1,
         "report": 2,
-        "oss": 0,
+        "oss": 1,
         "proactive": 2,
         "transparency": 2,
         "english": 2
@@ -837,7 +1111,36 @@
         "url": "https://www.kyberturvallisuuskeskus.fi/en/subscribe-our-newsletters"
       },
       "related": [],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 1,
+        "report": 2,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "Public vulnerability bulletins, weekly reviews and 'Information Security Now!' articles appear regularly (e.g. 3 critical bulletins in March 2026 alone).",
+          "feeds": "RSS exists for Information Security Now! articles; vulnerability summaries go by email list; no IoC, CSAF or API found.",
+          "block": "Traficom measures (protected SMS sender IDs, operator blocking of spoofed calls) protect the public, but no NCSC-run domain blocklist or protective DNS was found.",
+          "report": "A public reporting page (kyberturvallisuuskeskus.fi/ilmoita) accepts reports of scams and incidents from anyone.",
+          "oss": "Only the historic AbuseHelper co-development was found (old evidence); no current open-source portfolio.",
+          "proactive": "Autoreporter has run for 20+ years and passes malware-traffic findings on Finnish networks to telcos, who notify customers.",
+          "transparency": "There is a monthly 'Kybersää' (Cyber Weather) report plus an annual review (2025 review published).",
+          "english": "There are substantial English pages (weekly reviews, reporting, RFC2350), though some products such as Kybersää are Finnish-first."
+        },
+        "sources": [
+          "https://www.kyberturvallisuuskeskus.fi/files/media/file/Kybers%C3%A4%C3%A4%20maaliskuu%202026.pdf",
+          "https://kyberturvallisuuskeskus.fi/en/our-services/tilannekuva-ja-verkostojohtaminen/situation-awareness",
+          "https://www.kyberturvallisuuskeskus.fi/en/report",
+          "https://valtioneuvosto.fi/-/38197657/kyberturvallisuuden-uhkataso-pysynyt-koholla-vakavien-tapausten-maarat-kasvussa"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "cert-fr",
@@ -936,7 +1239,37 @@
           "url": "https://www.cybermalveillance.gouv.fr/"
         }
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 1,
+        "oss": 2,
+        "proactive": 1,
+        "transparency": 2,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "Publishes high volumes of numbered CERTFR-AVI advisories and alerts continuously.",
+          "feeds": "Public MISP feed at misp.cert.ssi.gouv.fr/feed-misp plus RSS feeds for advisories.",
+          "block": "No public protective DNS or blocklist run by CERT-FR was found.",
+          "report": "CERT-FR takes incident and vulnerability reports mainly from organisations; citizens are referred to Cybermalveillance.gouv.fr.",
+          "oss": "ANSSI maintains open-source tools on GitHub such as DFIR-ORC, plus reportedly ORADAD, ADTimeline and DFIR-O365RC.",
+          "proactive": "Accepts reports about third-party vulnerabilities and incidents and alerts the victims, mainly within its priority constituency; no systematic nationwide scan notifications found.",
+          "transparency": "Annual Panorama de la cybermenace (2025 edition published March 2026).",
+          "english": "Has an English RFC2350 and some English reports, but most advisories are in French."
+        },
+        "sources": [
+          "https://act.globalcyberalliance.org/index.php/CERT-FR",
+          "https://cyber.gouv.fr/actualites/panorama-de-la-cybermenace-2025/",
+          "https://www.ssi.gouv.fr/publication/the-french-national-cybersecurity-agency-presents-dfir-orc-an-open-source-forensics-tool-dedicated-to-artefact-collection/",
+          "https://cyber.gouv.fr/signalement-dune-vulnerabilite-ou-dun-incident-chez-autrui",
+          "https://www.cert.ssi.gouv.fr/uploads/CERT-FR_RFC2350_EN.pdf"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "cert-bund",
@@ -957,8 +1290,8 @@
         "adv": 2,
         "feeds": 2,
         "block": 1,
-        "report": 1,
-        "oss": 2,
+        "report": 2,
+        "oss": 1,
         "proactive": 2,
         "transparency": 2,
         "english": 1
@@ -1022,7 +1355,37 @@
           "url": "https://www.allianz-fuer-cybersicherheit.de/"
         }
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 1,
+        "report": 1,
+        "oss": 2,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "The WID portal publishes many public Kurzinfo and Infomeldung advisories, usually several per day.",
+          "feeds": "BSI/CERT-Bund is a CSAF trusted provider with provider metadata at wid.cert-bund.de/.well-known.",
+          "block": "Supports sinkholing and takedowns (for example Avalanche); no public protective DNS or blocklist found.",
+          "report": "BSI runs a free citizen hotline (0800 274 1000) and service-center@bsi.bund.de, and asks citizens to report suspicious mail.",
+          "oss": "Has some CSAF-related tooling, but no substantial CERT-Bund open-source portfolio was evident.",
+          "proactive": "CERT-Bund Reports send daily, signed sinkhole and Shadowserver notifications to RIPE abuse contacts of German networks.",
+          "transparency": "The BSI publishes the annual 'Die Lage der IT-Sicherheit in Deutschland' report (known, but not re-verified in this search).",
+          "english": "BSI has English pages, but WID advisories are mainly in German."
+        },
+        "sources": [
+          "https://wid.cert-bund.de/",
+          "https://www.bsi.bund.de/dok/en_csaf",
+          "https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Cyber-Sicherheitslage/Reaktion/CERT-Bund/CERT-Bund-Reports/Schadprogramm-Infektionen/schadprogramm-infektionen_node.html",
+          "https://bsi.bund.de/SharedDocs/FAQs/EN/CertBund/Reports/Functions/faq-certbund-reports.html?nn=910324",
+          "https://bsi.bund.de/EN/IT-Sicherheitsvorfall/Buergerinnen-und-Buerger/buergerinnen-und-buerger.html?cms_pos=2"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "el-csirt",
@@ -1040,13 +1403,13 @@
         "EN"
       ],
       "scores": {
-        "adv": 1,
-        "feeds": 1,
+        "adv": 2,
+        "feeds": 0,
         "block": 0,
         "report": 1,
         "oss": 0,
         "proactive": 1,
-        "transparency": 0,
+        "transparency": 1,
         "english": 1
       },
       "services": [
@@ -1085,7 +1448,36 @@
           "url": "https://cert.grnet.gr/"
         }
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 1,
+        "feeds": 1,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 0,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "Weekly public vulnerability newsletters on cyber.gov.gr (Feb and Aug 2026 issues) and public phishing warnings.",
+          "feeds": "Bulletins are PDFs only; no machine-readable feeds found.",
+          "block": "No evidence of blocking.",
+          "report": "Incident reporting for NIS2 entities and organisations via RFC 2350 contacts and forms; no citizen channel found.",
+          "oss": "No open-source tools found.",
+          "proactive": "Sends sectoral advisories (shipping, energy, banking in March 2026) to its constituency.",
+          "transparency": "No annual statistics report found; only the regular bulletins.",
+          "english": "English RFC 2350 exists, but bulletins and site are mainly in Greek."
+        },
+        "sources": [
+          "https://cyber.gov.gr/wp-content/uploads/2026/08/20260825.pdf",
+          "https://cyber.gov.gr/wp-content/uploads/2026/02/20260206_CVE.pdf",
+          "https://cyber.gov.gr/wp-content/uploads/2025/10/EL-CSIRT_RFC_2350_ENG-v1.0.pdf",
+          "https://ot.gr/2026/03/18/english-edition/greece-issues-cyber-alert-to-shipping-energy-banking-sectors/"
+        ],
+        "confidence": "low"
+      }
     },
     {
       "id": "nki-hu",
@@ -1104,7 +1496,7 @@
       ],
       "scores": {
         "adv": 2,
-        "feeds": 1,
+        "feeds": 0,
         "block": 0,
         "report": 1,
         "oss": 0,
@@ -1156,7 +1548,36 @@
         "https://nki.gov.hu/figyelmeztetesek/cve-serulekenysegek/",
         "https://nki.gov.hu/en/figyelmeztetesek/riasztas/"
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 1,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "Publishes alerts (riasztás), notices (tájékoztatás) and a running vulnerability list; the latest alert listing seen ran to 2025.",
+          "feeds": "No machine-readable feed found.",
+          "block": "No public blocking service found.",
+          "report": "Incidents and vulnerabilities can be reported by email (CSIRT@nki.gov.hu) or phone; no citizen-focused form or hotline found.",
+          "oss": "No open-source tools found.",
+          "proactive": "Handles incidents nationally, but no evidence of systematic notifications to network owners.",
+          "transparency": "Weekly press reviews and a trend report; regular annual statistics not found (old quarterly reports from 2011–2012).",
+          "english": "English site sections exist, but alert content is mostly Hungarian."
+        },
+        "sources": [
+          "https://nki.gov.hu/en/figyelmeztetesek/riasztas",
+          "https://nki.gov.hu/en/",
+          "https://nki.gov.hu/en/?p=57276",
+          "https://nki.gov.hu/figyelmeztetesek/archivum/nemzeti-kiberbunozesi-es-digitalis-biztonsagi-trend-riport"
+        ],
+        "confidence": "low"
+      }
     },
     {
       "id": "ncsc-ie",
@@ -1175,12 +1596,12 @@
       ],
       "scores": {
         "adv": 1,
-        "feeds": 1,
-        "block": 1,
+        "feeds": 0,
+        "block": 0,
         "report": 1,
         "oss": 0,
         "proactive": 2,
-        "transparency": 1,
+        "transparency": 0,
         "english": 2
       },
       "services": [
@@ -1213,7 +1634,37 @@
       "pages": [
         "https://www.ncsc.gov.ie/news/"
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 1,
+        "feeds": 1,
+        "block": 1,
+        "report": 1,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 1,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "Publishes occasional TLP:CLEAR PDF advisories on critical vulnerabilities (for example Fortinet and Citrix in 2025).",
+          "feeds": "No RSS, API or IoC feed found.",
+          "block": "No blocking service found.",
+          "report": "Reporting is via certreport@ncsc.gov.ie and info@ for organisations; citizens are directed to An Garda Síochána.",
+          "oss": "No open-source tools found.",
+          "proactive": "CSIRT-IE emails Irish network operators about Shadowserver vulnerability, sinkhole and DDoS-amplifier data by IP range.",
+          "transparency": "No annual report or statistics found in the searches.",
+          "english": "All content is in English."
+        },
+        "sources": [
+          "https://www.ncsc.gov.ie/emailsfrom/Reports",
+          "https://www.ncsc.gov.ie/emailsfrom/reports/mw/",
+          "https://ncsc.gov.ie/pdfs/2505140007_Critical_Vuln_Fortinet.pdf",
+          "https://www.ncsc.gov.ie/pdfs/RFC2350 NCSC-IE.txt",
+          "https://www.ncsc.gov.ie/npc25"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "csirt-it",
@@ -1233,10 +1684,10 @@
       "scores": {
         "adv": 2,
         "feeds": 1,
-        "block": 0,
+        "block": 1,
         "report": 1,
         "oss": 0,
-        "proactive": 1,
+        "proactive": 2,
         "transparency": 2,
         "english": 1
       },
@@ -1274,7 +1725,36 @@
       "pages": [
         "https://www.acn.gov.it/portale/csirt-italia"
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 2,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "Issued 80 public security advisories in October 2025 alone.",
+          "feeds": "Shares IoCs (charted in its operational summaries), but no confirmed public machine-readable feed was found.",
+          "block": "Reports malicious URLs (927 in H2 2025) for takedown; no public protective blocking found.",
+          "report": "Its constituency is NIS, Perimetro, Telco and public administration; no public citizen form was found (citizens are referred to Polizia Postale).",
+          "oss": "No open-source tools found.",
+          "proactive": "Sent 4,387 direct notifications in September 2025 to Italian administrations and companies about compromises and exposed services.",
+          "transparency": "Monthly and half-yearly Operational Summaries (CC BY 4.0).",
+          "english": "Mostly Italian, with limited English."
+        },
+        "sources": [
+          "https://www.acn.gov.it/portale/csirt-italia",
+          "https://www.cybersecitalia.it/wp-content/uploads/2025/10/Operational_summary_set2025_CLEAR_it.pdf",
+          "https://www.cybersecitalia.it/wp-content/uploads/2026/01/Operational_Summary_H2_CLEAR.pdf",
+          "https://lentepubblica.it/pa-digitale/cybersecurity-ottobre-2025-da-allerta-alta-per-la-nostra-pa/"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "cert-lv",
@@ -1296,10 +1776,10 @@
         "feeds": 1,
         "block": 2,
         "report": 2,
-        "oss": 0,
+        "oss": 1,
         "proactive": 2,
         "transparency": 2,
-        "english": 1
+        "english": 2
       },
       "services": [
         {
@@ -1342,7 +1822,37 @@
       "feeds": [],
       "newsletter": null,
       "related": [],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 2,
+        "report": 2,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "Regular public warnings about phishing and malware campaigns, plus monthly news digests.",
+          "feeds": "A general news RSS feed (cert.lv/en/feed/rss/all); no public IoC or blocklist download found.",
+          "block": "Free DNS firewall (DNS ugunsmūris) with NIC.LV, open to all residents and mandatory for ISPs; 2.5M+ blocks in Q1 2026.",
+          "report": "Residents can report to cert@cert.lv or by phone; also a researcher vulnerability-reporting platform.",
+          "oss": "A few open-source tools (Graphoscope on GitHub, MeliCERTes contributions, Pastelyzer).",
+          "proactive": "Compiles threatened Latvian IPs monthly (388,922 in Q2 2024) and notifies device owners.",
+          "transparency": "Quarterly and annual public reports with statistics.",
+          "english": "English site with news archive and English annual reports."
+        },
+        "sources": [
+          "https://cert.lv/uploads/parskati/Cert_Parskats_2024_2cert_LV.pdf",
+          "https://www.lsm.lv/raksts/zinas/latvija/25.11.2024-bezmaksas-ugunsmuris-palidz-pasargat-no-kiberkrapniekiem-un-viltvarzu-zvaniem.a577645/",
+          "https://cert.lv/en/feed/rss/all",
+          "https://www.cert.lv/uploads/CEF/projekta-kopsavilkums.pdf",
+          "https://cert.lv/uploads/pasakumi/2_Dace-Bulte_CERT-LV_17-03-2026.pdf"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "nksc-lt",
@@ -1360,12 +1870,12 @@
         "EN"
       ],
       "scores": {
-        "adv": 2,
-        "feeds": 1,
+        "adv": 1,
+        "feeds": 0,
         "block": 0,
         "report": 2,
         "oss": 0,
-        "proactive": 2,
+        "proactive": 1,
         "transparency": 2,
         "english": 1
       },
@@ -1402,7 +1912,36 @@
       "pages": [
         "https://www.nksc.lt/naujienos.html"
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 2,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "Publishes occasional recommendations and bulletins (e.g. July 2026 recommendations); no evidence of several public advisories per month.",
+          "feeds": "No machine-readable feeds found.",
+          "block": "No evidence of blocking or blocklists.",
+          "report": "Short phone number 1843, cert@nksc.lt and an online form; non-obliged persons may report voluntarily.",
+          "oss": "No open-source tools found.",
+          "proactive": "Its 'threat map' assessed Lithuanian systems as mostly vulnerable; no evidence of systematic notifications to network owners.",
+          "transparency": "Annual national cyber security status reports and annual activity reports (2024 key trends, 2025 status report).",
+          "english": "English section with English key statistics, but much content (activity report, recommendations) is in Lithuanian only."
+        },
+        "sources": [
+          "https://www.nksc.lt/doc/en/2024_key-trends-and-statistics-of-cyber-security.pdf",
+          "https://www.nksc.lt/doc/biuleteniai/Rekomendacijos dėl kintančios kibernetinių grėsmių aplinkos.pdf",
+          "https://www.lrt.lt/naujienos/mokslas-ir-it/11/2941099/nksc-kibernetiniu-gresmiu-lygis-pernai-buvo-vidutinis-dauguma-sistemu-pazeidziamos",
+          "https://tf-csirt.org/trusted-introducer/directory/teams/nksccert-lt-lt/"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "circl-lu",
@@ -1423,10 +1962,10 @@
         "LB"
       ],
       "scores": {
-        "adv": 2,
+        "adv": 1,
         "feeds": 2,
         "block": 1,
-        "report": 2,
+        "report": 1,
         "oss": 2,
         "proactive": 2,
         "transparency": 1,
@@ -1501,7 +2040,37 @@
           "url": "https://www.govcert.lu/"
         }
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 1,
+        "report": 2,
+        "oss": 2,
+        "proactive": 2,
+        "transparency": 1,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "Its own TR advisories are sparse (TR-97 to TR-99 over late 2025 to mid-2026), though Vulnerability-Lookup aggregates many advisories.",
+          "feeds": "Public machine-readable data includes the MISP OSINT feeds, hashlookup API and Bloom filters, and the Vulnerability-Lookup API.",
+          "block": "It handles take-down notifications (in its operational stats); no public blocklist or protective DNS was found.",
+          "report": "Email, phone and an anonymous reporting form exist, but the constituency is private sector, communes and NGOs.",
+          "oss": "It maintains 17+ widely used open-source projects (MISP, AIL, Vulnerability-Lookup, Lookyloo, FlowIntel).",
+          "proactive": "It runs scanning of Luxembourg networks, leak monitoring that notifies compromised systems, and BGP Ranking; much of the evidence is older.",
+          "transparency": "Operational statistics on data.public.lu were last updated in 2021; no recent annual report was found.",
+          "english": "Site is fully in English."
+        },
+        "sources": [
+          "https://circl.lu/projects/",
+          "https://www.circl.lu/pub/",
+          "https://www.circl.lu/projects/scanning",
+          "https://data.public.lu/en/search/?tag=cert",
+          "https://circl.lu/mission/rfc2350/"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "csirt-mt",
@@ -1524,7 +2093,7 @@
         "block": 0,
         "report": 1,
         "oss": 0,
-        "proactive": 1,
+        "proactive": 0,
         "transparency": 0,
         "english": 2
       },
@@ -1548,7 +2117,36 @@
       "pages": [
         "https://ncc-mita.gov.mt/news/"
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 1,
+        "feeds": 0,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 0,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "Advisories were found only via a mailing list and Twitter (2021 evidence); no current public advisory listing was found on ncc-mita.gov.mt or maltacip.gov.mt.",
+          "feeds": "No machine-readable feeds found.",
+          "block": "No blocking service found.",
+          "report": "The only channel found is csirtmalta@gov.mt / phone, aimed at organisations; no citizen form was found.",
+          "oss": "No tools found; ncc-mita.gov.mt is the EU Coordination Centre site (events, SME grants, challenges).",
+          "proactive": "No public evidence of systematic notifications.",
+          "transparency": "No published statistics or annual threat reports found.",
+          "english": "Sites are in English."
+        },
+        "sources": [
+          "https://ncc-mita.gov.mt/about-us/",
+          "https://maltacip.gov.mt/en/the-department/csirtmalta/",
+          "https://www.mfsa.mt/wp-content/uploads/2021/06/Joint-Communication-by-MFSA-and-CSIRTMalta-on-Cyber-Threats-and-Vulnerabilities.pdf",
+          "https://www.bdo.com.mt/en-gb/insights/nis2-in-malta-what-legal-notice-89-of-2026-really-changes"
+        ],
+        "confidence": "low"
+      }
     },
     {
       "id": "ncsc-nl",
@@ -1570,10 +2168,10 @@
         "feeds": 2,
         "block": 0,
         "report": 1,
-        "oss": 2,
-        "proactive": 2,
+        "oss": 1,
+        "proactive": 1,
         "transparency": 2,
-        "english": 2
+        "english": 1
       },
       "services": [
         {
@@ -1618,7 +2216,37 @@
           "url": "https://www.z-cert.nl/"
         }
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 1,
+        "oss": 2,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "Regular public security advisories at advisories.ncsc.nl (hundreds per year).",
+          "feeds": "Public CSAF 2.0 JSON for every advisory, plus a CVE CSAF set; the API is limited to NIS2 entities.",
+          "block": "No protective blocking found.",
+          "report": "cert@ncsc.nl and a vulnerability-report (CVD) form; citizens' phishing goes to Fraudehelpdesk, which is a different organisation.",
+          "oss": "A few repositories on GitHub (Taranis, an ASUS router malware scan, incident info lists).",
+          "proactive": "Receives data on over 500k vulnerable Dutch systems daily but notifies mainly central government and vital providers, passing the rest to intermediaries.",
+          "transparency": "Annual Cybersecuritybeeld Nederland (CSBN 2025, November 2025).",
+          "english": "Has an English site section, but much content is in Dutch."
+        },
+        "sources": [
+          "https://www.ncsc.nl/en/producten-en-diensten/security-advisories",
+          "https://advisories.ncsc.nl/csaf/v2/2026/ncsc-2026-0167.json",
+          "https://github.com/ncsc-nl",
+          "https://www.government.nl/ministries/ministry-of-justice-and-security/news/2022/12/02/more-ways-for-the-ncsc-to-share-information-on-threats-and-incidents",
+          "https://privacy-web.nl/wp-content/uploads/2025/11/TK-Brief-Cybersecuritybeeld-Nederland-2025-en-Voortgang-Nederlandse-Cybersecuritystrategie.pdf"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "cert-pt",
@@ -1636,12 +2264,12 @@
         "EN"
       ],
       "scores": {
-        "adv": 2,
+        "adv": 1,
         "feeds": 1,
         "block": 0,
-        "report": 2,
+        "report": 1,
         "oss": 1,
-        "proactive": 2,
+        "proactive": 1,
         "transparency": 2,
         "english": 1
       },
@@ -1683,7 +2311,36 @@
       "pages": [
         "https://www.cncs.gov.pt/pt/"
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 2,
+        "oss": 1,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "CNCS publishes 'alertas de segurança' with an RSS feed, but their frequency could not be verified.",
+          "feeds": "An alerts RSS feed exists (cncs.gov.pt/docs/alertas-seguranca/feed-rss/index.xml); no IoC, CSAF or API was found.",
+          "block": "No blocking service found.",
+          "report": "Notification channels exist, but evidence shows they serve mainly companies and public administration; no citizen-specific form was confirmed.",
+          "oss": "It co-created IntelMQ (now maintained mainly by CERT.at); no current own portfolio found.",
+          "proactive": "Vulnerability identification and alerts are listed as services, but no evidence of systematic nationwide notifications was found.",
+          "transparency": "Annual incident statistics (3,864 incidents in 2025, +40%) and the Observatório 'Cibersegurança em Portugal' reports are published.",
+          "english": "Partial English; the main content is in Portuguese."
+        },
+        "sources": [
+          "https://feeder.co/discover/b4bff1642f/cncs-gov-pt",
+          "https://www.dnoticias.pt/2026/4/28/490057-incidentes-de-seguranca-informatica-em-portugal-aumentaram-40-em-2025/",
+          "https://www.trusted-introducer.org/directory/teams/certpt.html",
+          "https://intelmq.readthedocs.io/en/latest/user/universe.html"
+        ],
+        "confidence": "low"
+      }
     },
     {
       "id": "dnsc-ro",
@@ -1702,12 +2359,12 @@
       ],
       "scores": {
         "adv": 2,
-        "feeds": 1,
+        "feeds": 0,
         "block": 0,
         "report": 2,
         "oss": 0,
-        "proactive": 1,
-        "transparency": 1,
+        "proactive": 2,
+        "transparency": 2,
         "english": 1
       },
       "services": [
@@ -1746,7 +2403,37 @@
       "pages": [
         "https://dnsc.ro/citeste/"
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 2,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 1,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "Frequent public phishing and fraud alerts throughout 2026 (Feb, Jul, Aug), widely relayed by the media.",
+          "feeds": "No public machine-readable feed found.",
+          "block": "No protective DNS, blocklist or blocking service found.",
+          "report": "1911 hotline for citizens and organisations, the PNRISC online reporting platform, and alerts@dnsc.ro.",
+          "oss": "No DNSC open-source tools found.",
+          "proactive": "Notified 3,178 entities about critical vulnerabilities in their infrastructure (up from 2,020); runs national sensors.",
+          "transparency": "Annual activity reports (2024; 2025 report published August 2026, TLP:CLEAR).",
+          "english": "Some English content, but alerts and reports are mainly in Romanian."
+        },
+        "sources": [
+          "https://startupcafe.ro/wp-content/uploads/2026/08/dnsc-raport-anual-2025.pdf",
+          "https://www.digi24.ro/stiri/actualitate/social/de-joi-romanii-care-sunt-victime-ale-unui-atac-cibernetic-pot-raporta-incidentul-la-numarul-unic-1911-1124468",
+          "https://www.capital.ro/noua-escrocherie-online-avertismentul-dnsc-phishing-periculos-cu-taxe-de-marca.html",
+          "https://www.forbes.ro/?p=519067",
+          "https://agerpres.ro/economic/2025/08/31/aproximativ-27-080-de-milioane-de-atacuri-cyber-extrase-din-senzorii-de-detectie-ai-dnsc-in-2024-rap--1480071"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "sk-cert",
@@ -1765,12 +2452,12 @@
       ],
       "scores": {
         "adv": 2,
-        "feeds": 1,
-        "block": 0,
-        "report": 1,
+        "feeds": 0,
+        "block": 1,
+        "report": 2,
         "oss": 0,
         "proactive": 1,
-        "transparency": 2,
+        "transparency": 1,
         "english": 1
       },
       "services": [
@@ -1820,7 +2507,36 @@
       "pages": [
         "https://www.sk-cert.sk/sk/index.html"
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 2,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "There are regular public security warnings in 2026 (Microsoft, Atlassian, NVIDIA, Cisco), with numbering such as V20260715-04 implying several per day or month.",
+          "feeds": "Bulletins are distributed by email subscription; no RSS, IoC or API feed was found.",
+          "block": "NBÚ (parent) can order nationwide blocking of harmful content, but the documented uses target disinformation, not phishing or malware.",
+          "report": "An incident reporting form is aimed at anyone who fell victim to a cyber attack, plus incident@nbu.gov.sk.",
+          "oss": "No open-source tools found.",
+          "proactive": "Automated statistics on the Slovak IP range are mentioned; no evidence of systematic notifications was found.",
+          "transparency": "A statistics page exists, but its update cadence is unclear; no confirmed annual report.",
+          "english": "English site sections exist, but advisories are in Slovak."
+        },
+        "sources": [
+          "https://www.sk-cert.sk/threat/sk-cert-bezpecnostne-varovanie-v20260715-04/index.html",
+          "https://www.sk-cert.sk/sk/rady-a-navody/kedy-nas-kontaktovat/index.html",
+          "https://www.sk-cert.sk/en/statistics/index.html",
+          "https://www.teraz.sk/slovensko/pravomoci-nbu-v-oblasti-kybernetickej/530431-clanok.html"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "si-cert",
@@ -1838,8 +2554,8 @@
         "EN"
       ],
       "scores": {
-        "adv": 2,
-        "feeds": 1,
+        "adv": 1,
+        "feeds": 0,
         "block": 0,
         "report": 2,
         "oss": 0,
@@ -1889,7 +2605,36 @@
           "url": "https://www.gov.si/"
         }
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 2,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 2,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "Issues warnings to network operators and the public (per 2024 report), but no evidence found of several public advisories per month.",
+          "feeds": "No machine-readable security feed found in search results.",
+          "block": "No protective DNS, blocklist or takedown programme found.",
+          "report": "Anyone outside government can report to cert@cert.si, by phone or web form; the Varni na internetu programme serves citizens.",
+          "oss": "No open-source tools or free platforms found.",
+          "proactive": "Coordinates incidents for all Slovenian networks (~6,000/yr), but no evidence of systematic scan-based notifications.",
+          "transparency": "Publishes annual cyber security reports (2023 and 2024 editions found on cert.si).",
+          "english": "English pages exist (about/history), but reports and most content are Slovenian."
+        },
+        "sources": [
+          "https://www.cert.si/wp-content/uploads/2025/08/Porocilo-o-kibernetski-varnosti_SI-CERT_2024.pdf",
+          "https://www.cert.si/wp-content/uploads/2024/05/Porocilo-o-kibernetski-varnosti_2023_SI-CERT_web.pdf",
+          "https://www.helpnetsecurity.com/?p=372942",
+          "https://www.gov.si/assets/vladne-sluzbe/URSIV/Datoteke/Predstavitve-predavanja/Konferenca-ZInfV-1-Brdo/Prijava-incidenta-SIGOV-CERT-Miklavz-Sef.pdf"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "incibe-cert",
@@ -1911,7 +2656,7 @@
         "feeds": 2,
         "block": 0,
         "report": 2,
-        "oss": 0,
+        "oss": 1,
         "proactive": 2,
         "transparency": 2,
         "english": 1
@@ -1962,7 +2707,37 @@
           "url": "https://www.ccn-cert.cni.es/"
         }
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 2,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "Publishes frequent early-warning advisories and vulnerability notices for businesses and citizens (Spanish and English).",
+          "feeds": "RSS feeds for advisories and a daily-updated vulnerability database feed, plus signed newsletters; acts as a CVE CNA.",
+          "block": "No public protective DNS or blocklist found; Antibotnet is notification, not blocking.",
+          "report": "017 helpline (142,000+ queries in 2025) and online fraud-reporting forms for citizens and companies.",
+          "oss": "Free closed tools such as the Antibotnet code-check service; no substantial open-source portfolio found.",
+          "proactive": "Flagged 237,028 vulnerable systems in 2025; Antibotnet notifies infected users through ISPs nationwide.",
+          "transparency": "Annual balance published (122,223 incidents in 2025; 97,348 in 2024).",
+          "english": "Large parts of the site, including advisories, have English versions, but much content is Spanish-only."
+        },
+        "sources": [
+          "https://www.incibe.es/incibe/sala-de-prensa/incibe-detecto-mas-de-122000-incidentes-de-ciberseguridad-en-2025",
+          "https://www.incibe.es/en/empresas/avisos",
+          "https://www.incibe.es/servicio-antibotnet/infocodigo",
+          "https://feeder.co/discover/site/incibe.es",
+          "https://incibe.es/ciudadania/ayuda/reporte-de-fraude"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "ccn-cert",
@@ -1981,11 +2756,11 @@
       ],
       "scores": {
         "adv": 2,
-        "feeds": 2,
+        "feeds": 1,
         "block": 1,
         "report": 1,
         "oss": 1,
-        "proactive": 2,
+        "proactive": 1,
         "transparency": 2,
         "english": 1
       },
@@ -2024,7 +2799,36 @@
       "pages": [
         "https://www.ccn-cert.cni.es/es/seguridad-al-dia.html"
       ],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 1,
+        "report": 1,
+        "oss": 1,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "Public alerts (AL series, e.g. AL 01/26 FortiCloud SSO) plus news and vulnerability notices are published on 'Seguridad al día'.",
+          "feeds": "RSS is available; REYES/MISP threat sharing is limited to members.",
+          "block": "Early-warning and blocking (SAT-INET) is limited to public-sector networks.",
+          "report": "Incident reporting is aimed at public sector and strategic companies; citizens are directed to INCIBE.",
+          "oss": "Many free tools (PILAR, LUCIA, CLARA, microCLAUDIA), but mostly closed and for public administrations.",
+          "proactive": "SAT early-warning notifications go to the constituency only.",
+          "transparency": "Annual public report 'Ciberamenazas y Tendencias' (2022 to 2024 editions confirmed).",
+          "english": "Partial English; most content is in Spanish."
+        },
+        "sources": [
+          "https://www.ccn-cert.cni.es/es/seguridad-al-dia/alertas-ccn-cert.html",
+          "https://www.ccn-cert.cni.es/es/informes/informes-ccn-cert-publicos/7274-ccn-cert-ia-04-24-ciberamenazas-y-tendencias-edicion-2024/file.html",
+          "https://interoperable-europe.ec.europa.eu/collection/spain-center-technology-transfer/solution/consolidated-list-coordination-incidents-and-threats-lucia",
+          "https://www.zaragoza.es/sede/servicio/contratacion-publica/anuncio/72204/document.pdf"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "cert-se",
@@ -2043,11 +2847,11 @@
       ],
       "scores": {
         "adv": 2,
-        "feeds": 2,
+        "feeds": 1,
         "block": 0,
         "report": 1,
         "oss": 0,
-        "proactive": 1,
+        "proactive": 2,
         "transparency": 1,
         "english": 1
       },
@@ -2086,7 +2890,37 @@
         "url": "https://www.cert.se/"
       },
       "related": [],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 1,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "Frequent vulnerability posts and a weekly newsletter (veckobrev), with editions through December 2025.",
+          "feeds": "Offers subscriptions, but no public machine-readable security data (API, IoC or CSAF) was found.",
+          "block": "No protective blocking found.",
+          "report": "The reporting channel (cert@cert.se, phone) targets organisations, especially those in critical sectors; no citizen channel found.",
+          "oss": "No open-source tools found.",
+          "proactive": "ANTS gives free daily notifications of vulnerable or compromised systems to any Swedish organisation that registers.",
+          "transparency": "The latest annual IT-incident report found covers 2023 (published by MSB); currency after the 2026 move to FRA is unclear.",
+          "english": "Has an English section (cert.se/en), but most content is in Swedish."
+        },
+        "sources": [
+          "https://cert.se/2025/12/cert-se-veckobrev-v51.html",
+          "https://www.cert.se/assets/documents/anmalan-proaktiv-skanning-cert-se.pdf",
+          "https://mcf.mynewsdesk.com/pressreleases/ny-tjaenst-fraan-msb-ska-goer-sverige-mer-cybersaekert-3386819.pdf",
+          "https://cert.se/en/",
+          "https://energiforetagen.se/48e6ed/globalassets/dokument/sakerhet/faktablad-cert-se.pdf"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "cert-eu",
@@ -2103,11 +2937,11 @@
         "EN"
       ],
       "scores": {
-        "adv": 2,
-        "feeds": 2,
-        "block": 0,
-        "report": 0,
-        "oss": 0,
+        "adv": 1,
+        "feeds": 1,
+        "block": 1,
+        "report": 1,
+        "oss": 1,
         "proactive": 1,
         "transparency": 2,
         "english": 2
@@ -2139,7 +2973,36 @@
       ],
       "newsletter": null,
       "related": [],
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 0,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 2,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "Public security advisories run at roughly one per month (2026-006 by May 2026), plus threat-intel publications; fewer than several per month.",
+          "feeds": "There is a public security-advisories RSS feed and JSON views of publications; IoC collection (CIMBL) goes to constituents only.",
+          "block": "Protective measures such as the CIMBL IoC lists serve EU institutions only.",
+          "report": "Incident reporting is for its constituency (EU institutions, bodies and agencies); no channel for the public.",
+          "oss": "Some tooling published (e.g. 'droid' Sigma rule tool), but not a substantial portfolio.",
+          "proactive": "Notifications go to its EU-institution constituency only.",
+          "transparency": "Annual Threat Landscape Report (2025 edition published April 2026).",
+          "english": "Fully in English."
+        },
+        "sources": [
+          "https://cert.europa.eu/publications/security-advisories-rss",
+          "https://cert.europa.eu/publications/threat-intelligence/tlr2025/json",
+          "https://www.cert.europa.eu/blog",
+          "https://enisa.europa.eu/events/cti-eu-event/cti-eu-event-presentations/cert-eu-presentation"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "enisa-euvd",
@@ -2156,13 +3019,13 @@
         "EN"
       ],
       "scores": {
-        "adv": 2,
+        "adv": 1,
         "feeds": 2,
         "block": 0,
         "report": 0,
-        "oss": 1,
+        "oss": 0,
         "proactive": 0,
-        "transparency": 2,
+        "transparency": 1,
         "english": 2
       },
       "services": [
@@ -2199,7 +3062,36 @@
         "type": "euvd",
         "url": "https://euvdservices.enisa.europa.eu/api/exploitedvulnerabilities"
       },
-      "region": "EU"
+      "region": "EU",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 0,
+        "oss": 1,
+        "proactive": 0,
+        "transparency": 2,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "A vulnerability database with critical and exploited dashboards, not an alert or advisory service.",
+          "feeds": "Public, unauthenticated JSON API at euvdservices.enisa.europa.eu (latest, critical, exploited and search endpoints).",
+          "block": "No blocking.",
+          "report": "No public incident-reporting channel.",
+          "oss": "Runs on CIRCL's Vulnerability-Lookup; ENISA's own open-source contribution was not evident.",
+          "proactive": "Does not notify network owners.",
+          "transparency": "No EUVD statistics found; ENISA's annual Threat Landscape is agency-wide rather than EUVD-specific.",
+          "english": "All content is in English."
+        },
+        "sources": [
+          "https://www.securityweek.com/eu-cybersecurity-agency-enisa-launches-european-vulnerability-database/amp/",
+          "https://github.com/cku-heise/euvd-api-doc",
+          "https://docs.rs/crate/euvd/latest",
+          "https://www.infosecurityeurope.com/en-gb/blog/future-thinking/how-to-use-euvd-enisa.html"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "shadowserver",
@@ -2217,10 +3109,10 @@
       ],
       "scores": {
         "adv": 1,
-        "feeds": 2,
+        "feeds": 1,
         "block": 1,
-        "report": 0,
-        "oss": 1,
+        "report": 1,
+        "oss": 2,
         "proactive": 2,
         "transparency": 2,
         "english": 2
@@ -2262,7 +3154,36 @@
       "newsletter": null,
       "related": [],
       "pages": [],
-      "region": "Global"
+      "region": "Global",
+      "scores_v1": {
+        "adv": 1,
+        "feeds": 2,
+        "block": 1,
+        "report": 0,
+        "oss": 1,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "Publishes news and occasional exposure alerts, not a formal advisory stream.",
+          "feeds": "Detailed machine-readable reports are free but go only to verified network owners/subscribers.",
+          "block": "Sinkholing in law-enforcement operations (e.g. Avalanche), a takedown-type measure, not public blocking.",
+          "report": "Contact for organisations and subscribers; no channel aimed at the general public.",
+          "oss": "Free daily report platform used by 9,000+ organisations and 201 national CSIRTs; report schema on GitHub.",
+          "proactive": "Daily early-warning and victim-notification reports to network owners in 175 countries.",
+          "transparency": "Public dashboard of statistics and an annual Year in Review.",
+          "english": "Fully in English."
+        },
+        "sources": [
+          "https://shadowserver.org/hp-rewrite/05c3085594e0522dcb07cb14ee83279d",
+          "https://dashboard.shadowserver.org/help/",
+          "https://shadowserver.org/news/shadowservers-new-public-dashboard",
+          "https://ncsc.gov.ie/emailsfrom/reports/mw/sinkhole/"
+        ],
+        "confidence": "high"
+      }
     },
     {
       "id": "abuse-ch",
@@ -2279,11 +3200,11 @@
         "EN"
       ],
       "scores": {
-        "adv": 0,
+        "adv": 1,
         "feeds": 2,
         "block": 2,
-        "report": 2,
-        "oss": 1,
+        "report": 1,
+        "oss": 2,
         "proactive": 1,
         "transparency": 2,
         "english": 2
@@ -2323,7 +3244,36 @@
       "feeds": [],
       "newsletter": null,
       "related": [],
-      "region": "Global"
+      "region": "Global",
+      "scores_v1": {
+        "adv": 0,
+        "feeds": 2,
+        "block": 2,
+        "report": 2,
+        "oss": 1,
+        "proactive": 1,
+        "transparency": 2,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "Publishes occasional blog posts and threat write-ups, not a regular advisory series.",
+          "feeds": "URLhaus, ThreatFox, MalwareBazaar and Feodo Tracker provide APIs, CSV/JSON dumps, STIX/TAXII and MISP feeds.",
+          "block": "Free downloadable blocklists, including the Feodo Tracker IP blocklist and the URLhaus RPZ zone updated every five minutes.",
+          "report": "Anyone with a free account can submit URLs, samples and IoCs, but the channel is aimed at researchers rather than the general public.",
+          "oss": "Runs major free platforms (URLhaus, ThreatFox, MalwareBazaar, YARAify) that are widely integrated by others.",
+          "proactive": "Its data is used for abuse handling, but the searches found no direct evidence of systematic notification of network owners.",
+          "transparency": "Continuous public statistics pages and impact posts (for example 3.2M malware sites shared, Nov 2024), plus a monthly digest with Spamhaus.",
+          "english": "All content is in English."
+        },
+        "sources": [
+          "https://abuse.ch/blog/using-urlhaus-as-response-policy-zone-rpz",
+          "https://docs.spamhaus.com/real-time-feeds/docs/source/01-intro/what-is-the-real-time-feed.html",
+          "https://abuse.ch/blog/ach-stec-the-impact-of-your-contributions/",
+          "https://urlhaus.abuse.ch/statistics"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "divd",
@@ -2341,13 +3291,13 @@
         "NL"
       ],
       "scores": {
-        "adv": 2,
+        "adv": 1,
         "feeds": 1,
         "block": 0,
         "report": 1,
         "oss": 1,
         "proactive": 2,
-        "transparency": 2,
+        "transparency": 1,
         "english": 2
       },
       "services": [
@@ -2370,7 +3320,37 @@
       ],
       "newsletter": null,
       "related": [],
-      "region": "Global"
+      "region": "Global",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 1,
+        "oss": 1,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "Public casefiles, but only about 7 cases by mid-2026 (~1/month).",
+          "feeds": "An RSS feed of cases (csirt.divd.nl/feed.xml); no API or IoC data found.",
+          "block": "No blocking.",
+          "report": "Accepts vulnerability reports from researchers; not aimed at victims among the general public.",
+          "oss": "A GitHub org with some scripts and tools (CNA bot, ProxyOracleNSE, case scripts); a modest portfolio.",
+          "proactive": "Scans and notifies owners of vulnerable systems worldwide; 1.4M+ notified IPs across ~198 cases.",
+          "transparency": "Annual reports since 2021 (first in Dutch); case statistics on the homepage; a 2025 report not confirmed.",
+          "english": "Site and casefiles are in English."
+        },
+        "sources": [
+          "https://csirt.divd.nl/feed.xml",
+          "https://divd.nl/newsroom/articles/over-1-million-notifications",
+          "https://github.com/DIVD-NL",
+          "https://www.divd.nl/warningemail/",
+          "https://vintage.divd.nl/2021/03/29/DIVD-publishes-first-annual-report"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "misp",
@@ -2389,7 +3369,7 @@
       "scores": {
         "adv": 0,
         "feeds": 2,
-        "block": 1,
+        "block": 0,
         "report": 0,
         "oss": 2,
         "proactive": 0,
@@ -2420,7 +3400,35 @@
       "feeds": [],
       "newsletter": null,
       "related": [],
-      "region": "Global"
+      "region": "Global",
+      "scores_v1": {
+        "adv": 0,
+        "feeds": 2,
+        "block": 1,
+        "report": 0,
+        "oss": 2,
+        "proactive": 0,
+        "transparency": 1,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "A software project; it publishes no threat advisories beyond its own release and security notes.",
+          "feeds": "Ships default OSINT feeds, warninglists and galaxies as public, machine-readable data.",
+          "block": "No blocking service; warninglists are for reducing false positives, not for blocking.",
+          "report": "No incident-reporting channel; only project and GitHub contacts.",
+          "oss": "MISP (AGPL) is a major, actively maintained open-source platform (v2.5.46 in 2026) used by CERTs worldwide.",
+          "proactive": "Does not notify network owners.",
+          "transparency": "Release notes and occasional papers, but no regular statistics or threat reports.",
+          "english": "All content is in English."
+        },
+        "sources": [
+          "https://newreleases.io/project/github/MISP/MISP/release/v2.5.46",
+          "https://www.misp-project.org/.well-known/open-contributions.json",
+          "https://gittrend.io/repo/MISP/misp-warninglists"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "ncsc-uk",
@@ -2437,8 +3445,8 @@
         "EN"
       ],
       "scores": {
-        "adv": 2,
-        "feeds": 2,
+        "adv": 1,
+        "feeds": 1,
         "block": 2,
         "report": 2,
         "oss": 1,
@@ -2506,7 +3514,35 @@
       ],
       "newsletter": null,
       "related": [],
-      "kind": "international"
+      "kind": "international",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 2,
+        "report": 2,
+        "oss": 1,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "Publishes alerts and news, but search gave no evidence of several advisories per month.",
+          "feeds": "News RSS only found; no public IoC/advisory API found.",
+          "block": "Share and Defend gives malicious-domain feeds to ISPs, blocking about 1 billion visits for the public; PDNS also covers schools.",
+          "report": "The public Suspicious Email Reporting Service feeds takedowns.",
+          "oss": "Free services (Early Warning, PDNS for schools) but no open-source portfolio found.",
+          "proactive": "Early Warning: 13,178 organisations, alerts on 316k IPs (compromise and vulnerability reports).",
+          "transparency": "Annual Review every year (2025 edition) with ACD statistics.",
+          "english": "Fully in English."
+        },
+        "sources": [
+          "https://www.ncsc.gov.uk/collection/ncsc-annual-review-2025/chapter-02-resilience-at-scale/active-cyber-defence",
+          "https://www.techradar.com/pro/security/uk-cybercrime-agency-blocks-nearly-1-billion-access-attempts-to-malicious-websites",
+          "https://www.ncsc.gov.uk/files/Active-Cyber-Defence-ACD-The-Fourth-Year.pdf"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "cisa-us",
@@ -2529,7 +3565,7 @@
         "report": 2,
         "oss": 2,
         "proactive": 2,
-        "transparency": 2,
+        "transparency": 1,
         "english": 2
       },
       "services": [
@@ -2596,6 +3632,34 @@
       "api": {
         "type": "kev",
         "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json"
+      },
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 1,
+        "report": 2,
+        "oss": 2,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "Continuous public alerts, advisories and KEV additions.",
+          "feeds": "KEV catalog published as JSON/CSV with a schema, mirrored on GitHub.",
+          "block": "No public blocking service found; protective DNS is for federal agencies.",
+          "report": "Public incident and phishing reporting (report.cisa.gov), though search only partly confirmed it.",
+          "oss": "cisagov GitHub (e.g. kev-data) and a large free services and tools catalog.",
+          "proactive": "Free Cyber Hygiene scanning of internet-facing systems, with results reported to the organisations that sign up.",
+          "transparency": "No annual statistics report surfaced in search; scored conservatively.",
+          "english": "Fully in English."
+        },
+        "sources": [
+          "https://github.com/cisagov/kev-data",
+          "https://cisa.gov/free-cybersecurity-services-and-tools",
+          "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?page=4"
+        ],
+        "confidence": "medium"
       }
     },
     {
@@ -2614,11 +3678,11 @@
       ],
       "scores": {
         "adv": 2,
-        "feeds": 2,
+        "feeds": 1,
         "block": 0,
-        "report": 1,
+        "report": 2,
         "oss": 2,
-        "proactive": 0,
+        "proactive": 1,
         "transparency": 1,
         "english": 2
       },
@@ -2648,7 +3712,36 @@
       ],
       "newsletter": null,
       "related": [],
-      "kind": "international"
+      "kind": "international",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 1,
+        "oss": 2,
+        "proactive": 0,
+        "transparency": 1,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "Several Vulnerability Notes per month in 2026 (e.g. VU#326070, VU#492466 in July 2026).",
+          "feeds": "No public API or CSAF feed confirmed in search results; vulnerability notes are public web pages.",
+          "block": "No blocking.",
+          "report": "Anyone can submit vulnerabilities through the public VINCE platform.",
+          "oss": "Substantial maintained GitHub portfolio (VINCE, SSVC, Vultron, Kaiju, and others).",
+          "proactive": "Coordinates with vendors, not network owners; no network-owner notification programme.",
+          "transparency": "No regular annual statistics found in search results.",
+          "english": "Fully English."
+        },
+        "sources": [
+          "https://github.com/CERTCC",
+          "https://vuls.cert.org/confluence/x/BwAeB",
+          "https://securityonline.info/tag/cert-cc/",
+          "https://www.kb.cert.org/vuls/"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "cccs-ca",
@@ -2667,12 +3760,12 @@
       ],
       "scores": {
         "adv": 2,
-        "feeds": 2,
+        "feeds": 1,
         "block": 0,
         "report": 2,
         "oss": 2,
         "proactive": 1,
-        "transparency": 2,
+        "transparency": 1,
         "english": 2
       },
       "services": [
@@ -2720,7 +3813,36 @@
           "url": "https://www.cira.ca/en/canadian-shield/"
         }
       ],
-      "kind": "international"
+      "kind": "international",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 2,
+        "oss": 2,
+        "proactive": 1,
+        "transparency": 2,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "Public alerts and advisories published continuously (AL26-003 to AL26-006 in Feb–Mar 2026).",
+          "feeds": "RSS feeds of alerts and advisories; no public IoC/API found.",
+          "block": "No evidence of a blocking service run or fed by the Cyber Centre (no link to Canadian Shield found).",
+          "report": "Public contact and reporting line 1-833-CYBER-88 and online reporting.",
+          "oss": "Assemblyline malware analysis platform is open source on GitHub and widely used.",
+          "proactive": "No evidence of systematic notifications to network owners.",
+          "transparency": "National Cyber Threat Assessment published every two years (2025-2026), not annually.",
+          "english": "Fully in English."
+        },
+        "sources": [
+          "https://cyber.gc.ca/en/alerts-advisories",
+          "https://cyber.gc.ca/en/rss-feeds",
+          "https://www.cyber.gc.ca/en/tools-services/assemblyline",
+          "https://cyber.gc.ca/en/guidance/national-cyber-threat-assessment-2025-2026"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "cert-br",
@@ -2785,7 +3907,36 @@
       ],
       "newsletter": null,
       "related": [],
-      "kind": "international"
+      "kind": "international",
+      "scores_v1": {
+        "adv": 1,
+        "feeds": 1,
+        "block": 0,
+        "report": 2,
+        "oss": 1,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "Few public alerts found; the focus is on direct notification rather than published advisories.",
+          "feeds": "Threat feeds from its distributed honeypots are shared with networks, but no public feed was found.",
+          "block": "No blocking service.",
+          "report": "cert@cert.br is open to anyone (516,556 incidents in 2024), plus mail-abuse@cert.br for spam complaints.",
+          "oss": "Free awareness material (Cartilha) and honeypot/SpamPots projects; no large open-source portfolio found.",
+          "proactive": "Regularly notifies Brazilian networks about vulnerable, misconfigured, infected or amplifier hosts.",
+          "transparency": "Statistics portal stats.cert.br and annual NIC.br activity reports.",
+          "english": "Partial English site; reports are in Portuguese."
+        },
+        "sources": [
+          "https://nic.br/media/docs/publicacoes/9/20250424215104/relatorio-de-atividades-2024.pdf",
+          "https://nic.br/media/docs/publicacoes/9/20240717103150/relatorio-de-atividades-2023.pdf",
+          "https://minhaagenda.nic.br/files/apresentacao/arquivo/1975/Incidentes.pdf",
+          "https://www.cgi.br/media/atas/ApresentacaoCERT.pdf"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "jpcert-jp",
@@ -2805,12 +3956,12 @@
       "scores": {
         "adv": 2,
         "feeds": 2,
-        "block": 0,
+        "block": 1,
         "report": 2,
         "oss": 2,
         "proactive": 1,
         "transparency": 2,
-        "english": 2
+        "english": 1
       },
       "services": [
         {
@@ -2863,7 +4014,36 @@
           "desc": "Cabinet Secretariat body that replaced NISC in 2025; handles government incidents."
         }
       ],
-      "kind": "international"
+      "kind": "international",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 2,
+        "oss": 2,
+        "proactive": 1,
+        "transparency": 2,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "Regular alerts (注意喚起, e.g. 8 Oct 2026) and JVN vulnerability notes co-published with IPA.",
+          "feeds": "JVN and JVN iPedia provide public vulnerability data with RSS and the MyJVN API.",
+          "block": "Requests phishing-site takedowns; no public blocklist or protective DNS was found.",
+          "report": "Accepts incident reports, including phishing sites, from anyone (88% of 14,558 reports in Q1 FY2025 were phishing).",
+          "oss": "Maintains a substantial GitHub portfolio (LogonTracer, EmoCheck, MalConfScan, and others).",
+          "proactive": "TSUBAME monitoring data is shared case by case with ISPs, hosting companies and vendors; no systematic national notification scheme was confirmed.",
+          "transparency": "Quarterly reports (JPCERT/CC 四半期レポート) and TSUBAME reports through 2026.",
+          "english": "There is an English site and blog, but many alerts are Japanese only."
+        },
+        "sources": [
+          "https://www.github.com/JPCERTCC",
+          "https://blogs.jpcert.or.jp/en/2026/07/tsubame_overflow_2026-01-03.html",
+          "https://scan.netsecurity.ne.jp/article/2025/08/05/53364.html",
+          "https://jvn.jp/en/jp/JVN57877356/"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "krcert-kr",
@@ -2883,11 +4063,11 @@
       "scores": {
         "adv": 2,
         "feeds": 1,
-        "block": 1,
+        "block": 2,
         "report": 2,
-        "oss": 0,
+        "oss": 1,
         "proactive": 2,
-        "transparency": 1,
+        "transparency": 2,
         "english": 1
       },
       "services": [
@@ -2920,7 +4100,37 @@
       ],
       "newsletter": null,
       "related": [],
-      "kind": "international"
+      "kind": "international",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 1,
+        "report": 2,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 1,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "The Boho (보호나라) portal publishes security notices and vulnerability guidance for the public; frequency not verified for 2026.",
+          "feeds": "Threat sharing via C-TAS is for member organisations.",
+          "block": "DNS sinkhole of botnet C&C domains run with domestic ISPs since 2005 (nationwide; evidence is dated).",
+          "report": "118 hotline and online channels for hacking, phishing and smishing reports from citizens.",
+          "oss": "Free closed tools (web check, website inspection tools); no open-source portfolio found.",
+          "proactive": "Sinkhole-based infection detection with ISP user notification; companies get asset-tailored threat alerts.",
+          "transparency": "Annual cyber threat trend report (2025 edition released Jan 2026: 2,383 incidents).",
+          "english": "Limited English content; primarily Korean."
+        },
+        "sources": [
+          "https://byline.network/2026/01/27-564/",
+          "https://koreascience.or.kr/article/CFKO201123552848769.pdf",
+          "https://byline.network/2020/01/19-89/",
+          "https://itwiki.kr/w/KrCERT/CC",
+          "https://www.inews24.com/view/370132"
+        ],
+        "confidence": "low"
+      }
     },
     {
       "id": "singcert-sg",
@@ -2939,7 +4149,7 @@
       "scores": {
         "adv": 2,
         "feeds": 1,
-        "block": 1,
+        "block": 0,
         "report": 2,
         "oss": 0,
         "proactive": 1,
@@ -2979,7 +4189,36 @@
       ],
       "newsletter": null,
       "related": [],
-      "kind": "international"
+      "kind": "international",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 1,
+        "report": 2,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 2,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "CSA Alerts & Advisories page lists several SingCERT alerts per month (for example six or more in January 2026).",
+          "feeds": "An email-style 'Subscribe for Updates' option exists, but no public RSS, CSAF or IoC feed was found.",
+          "block": "No SingCERT-run protective DNS or public blocklist was found.",
+          "report": "Public incident-reporting tool and form, singcert@csa.gov.sg, and a 'Report a Phishing Email' channel for the public.",
+          "oss": "No open-source tools or free platforms from SingCERT were found.",
+          "proactive": "Informs hosting providers about C&C servers and remediated 2,700 botnet-infected devices; no systematic nationwide notification service found.",
+          "transparency": "Annual Singapore Cyber Landscape report (2025/2026 edition published June 2026).",
+          "english": "All content is in English."
+        },
+        "sources": [
+          "https://www.csa.gov.sg/alerts-and-advisories",
+          "https://www.csa.gov.sg/reporting",
+          "https://www.bakermckenzie.com/en/insight/publications/2026/07/singapore-csa-cyber-landscape-report-2025-2026",
+          "https://www.csa.gov.sg/faqs/incident-reporting"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "certin-in",
@@ -3003,7 +4242,7 @@
         "report": 2,
         "oss": 1,
         "proactive": 2,
-        "transparency": 1,
+        "transparency": 2,
         "english": 2
       },
       "services": [
@@ -3045,7 +4284,35 @@
       "feeds": [],
       "newsletter": null,
       "related": [],
-      "kind": "international"
+      "kind": "international",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 2,
+        "oss": 1,
+        "proactive": 2,
+        "transparency": 1,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "Reported 1,530 alerts and 390 vulnerability notes in 2025 (from a single news-wire report).",
+          "feeds": "Infected-IP data goes to ISPs/onboarded organisations only; no public machine-readable feed found.",
+          "block": "No blocking service found; CSK focuses on cleaning infected devices.",
+          "report": "Free help desk for users and administrators to report incidents.",
+          "oss": "Free but closed bot-removal tools (reported 89.55 lakh downloads).",
+          "proactive": "Cyber Swachhta Kendra alerts ISPs with infected IPs to notify owners, covering about 98% of the digital population.",
+          "transparency": "Annual activity statistics published (2025 figures); the annual report was not directly retrieved.",
+          "english": "Site and advisories in English."
+        },
+        "sources": [
+          "https://morungexpress.com/cert-in-handled-over-2944-lakh-cyber-incidents-in-2025-gains-global-recognition",
+          "https://www.vikaspedia.in/education/digital-litercy/information-security/cyber-swachhta-kendra",
+          "https://eparlib.nic.in/bitstream/123456789/958685/1/AU2731.pdf"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "cncert-cn",
@@ -3063,13 +4330,13 @@
         "EN"
       ],
       "scores": {
-        "adv": 1,
+        "adv": 2,
         "feeds": 1,
         "block": 1,
         "report": 1,
         "oss": 0,
         "proactive": 2,
-        "transparency": 1,
+        "transparency": 2,
         "english": 1
       },
       "services": [
@@ -3098,7 +4365,36 @@
       "kind": "international",
       "pages": [
         "https://www.cert.org.cn/publish/main/index.html"
-      ]
+      ],
+      "scores_v1": {
+        "adv": 1,
+        "feeds": 1,
+        "block": 1,
+        "report": 1,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 1,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "Weekly security bulletins and CNVD vulnerability warnings; a malicious-address bulletin in Aug 2026.",
+          "feeds": "No public API or feed found; CNVD data is shared mainly through members.",
+          "block": "Coordinates takedowns of malicious apps and domains with app stores, clouds and registrars; no public blocklist found.",
+          "report": "Accepts reports via a website and email (e.g. cncert_report@cert.org.cn); no evidence of a citizen-aimed channel.",
+          "oss": "None found.",
+          "proactive": "Nationwide monitoring of botnet C2 and infected hosts (4.45M IPs in H1 2021), with coordinated remediation through ISPs and provincial branches.",
+          "transparency": "Annual China Internet Network Security Report since 2008, plus weekly and monthly reports.",
+          "english": "Some English reports exist; most content is Chinese."
+        },
+        "sources": [
+          "https://www.secrss.com/articles/32815",
+          "https://security.bnu.edu.cn/docs/20221026094352895785.pdf",
+          "https://m.thepaper.cn/detail/33851247",
+          "https://www.manilatimes.net/2020/08/15/news/world/china-captured-62m-internet-attacks-in-19/755476/"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "twcert-tw",
@@ -3118,11 +4414,11 @@
       "scores": {
         "adv": 2,
         "feeds": 1,
-        "block": 0,
-        "report": 1,
-        "oss": 0,
+        "block": 1,
+        "report": 2,
+        "oss": 1,
         "proactive": 1,
-        "transparency": 1,
+        "transparency": 2,
         "english": 1
       },
       "services": [
@@ -3143,7 +4439,36 @@
       "feeds": [],
       "newsletter": null,
       "related": [],
-      "kind": "international"
+      "kind": "international",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 1,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "Regularly publishes Taiwan Vulnerability Notes (TVN) as a CVE CNA, plus monthly bulletins.",
+          "feeds": "TVN entries become machine-readable public CVE records; no RSS/API of its own was confirmed.",
+          "block": "Phishing Check service gets confirmed phishing sites taken down; no blocking service.",
+          "report": "Phishing Check and online form/email for the public; cve@cert.org.tw for vulnerabilities.",
+          "oss": "Offers a free (closed) malicious-file detection service; no open-source portfolio found.",
+          "proactive": "Coordinates enterprise incident notification; no evidence of systematic scan-based notifications.",
+          "transparency": "Monthly threat-intelligence e-newsletter (Dec 2025 edition); no annual statistics report found.",
+          "english": "English site with policy and press releases; newsletters mostly in Chinese."
+        },
+        "sources": [
+          "https://www.twcert.org.tw/en/cp-59-98-f496f-2.html",
+          "https://www.twcert.org.tw/tw/dl-434-06ffcd77e05d4655bba1dad50f90bea3.html",
+          "https://twcert.org.tw/tw/dl-340-b19a0240cd3148a598f7464ce52c0917.html",
+          "https://www.twcert.org.tw/en/np-55-2.html"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "hkcert-hk",
@@ -3162,11 +4487,11 @@
       ],
       "scores": {
         "adv": 2,
-        "feeds": 2,
-        "block": 0,
+        "feeds": 1,
+        "block": 1,
         "report": 2,
         "oss": 0,
-        "proactive": 1,
+        "proactive": 2,
         "transparency": 2,
         "english": 2
       },
@@ -3208,7 +4533,36 @@
         "url": "https://www.hkcert.org/about-us/our-services"
       },
       "related": [],
-      "kind": "international"
+      "kind": "international",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 2,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 2,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "Frequent public security bulletins and phishing alerts (e.g. March 2026 Water Supplies Department phishing).",
+          "feeds": "Bulletins are available via RSS and app, and incident statistics are on data.gov.hk; no IoC or blocklist feed was found.",
+          "block": "Coordinates phishing-site takedowns; public URL checking is the Police-run Scameter, not HKCERT.",
+          "report": "A public online incident reporting form and a 24-hour hotline (+852 8105 6060).",
+          "oss": "No open-source or free tools found.",
+          "proactive": "Quarterly Security Watch Report tracks compromised HK machines, and HKCERT contacts their operators for cleanup.",
+          "transparency": "Annual Report 2025, quarterly Security Watch Reports (through 2025 Q4) and incident statistics.",
+          "english": "Fully bilingual site."
+        },
+        "sources": [
+          "https://www.hkcert.org/security-bulletin/phishing-alert-hkcert-warns-of-phishing-scams-impersonating-water-supplies-department-via-fake-bills_20260316",
+          "https://www.hkcert.org/f/press_center/914358/918984/HKCERT%20Annual%20Report%202025.pdf",
+          "https://www.hkcert.org/f/report/914207/918769/2025Q4%20HK%20SecurityWatchReport%20%28English%29%20v2.pdf",
+          "https://www.hkcert.org/watch-report/hong-kong-security-watch-report-q2-2019"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "acsc-au",
@@ -3226,11 +4580,11 @@
       ],
       "scores": {
         "adv": 2,
-        "feeds": 2,
+        "feeds": 1,
         "block": 1,
         "report": 2,
         "oss": 0,
-        "proactive": 2,
+        "proactive": 1,
         "transparency": 2,
         "english": 2
       },
@@ -3293,7 +4647,36 @@
         "url": "https://www.cyber.gov.au/"
       },
       "related": [],
-      "kind": "international"
+      "kind": "international",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 1,
+        "report": 2,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "cyber.gov.au runs a free public Alert Service and publishes alerts and advisories regularly.",
+          "feeds": "RSS feeds for advisories/alerts/news exist; IoC sharing (CTIS) is limited to partner organisations.",
+          "block": "AUPDNS protective DNS is limited to government entities; no public blocking service found.",
+          "report": "ReportCyber takes reports from individuals and businesses, and the hotline handled about 42,500 calls in 2024-25.",
+          "oss": "No open-source tools or free platforms found in search results.",
+          "proactive": "ASD says it 'may notify' organisations of vulnerabilities or compromise; no evidence of systematic nationwide scan notifications.",
+          "transparency": "Annual Cyber Threat Report published every year (sixth edition, Oct 2025).",
+          "english": "English-language site."
+        },
+        "sources": [
+          "https://www.cyber.gov.au/about-us/about-asdacsc/who-we-are/ACSC-social-media-community",
+          "https://www.cyber.gov.au/news/australian-signals-directorate-releases-annual-cyber-threat-report-2024-25",
+          "https://www.csoonline.com/article/3637769/government-wide-dns-security-strengthens-australia-s-cyberdefence.html",
+          "https://www.cyber.gov.au/report-and-recover/how-asdacsc-can-help-during-cyber-security-incident"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "ncsc-nz",
@@ -3313,9 +4696,9 @@
       "scores": {
         "adv": 2,
         "feeds": 1,
-        "block": 1,
+        "block": 2,
         "report": 2,
-        "oss": 0,
+        "oss": 1,
         "proactive": 2,
         "transparency": 2,
         "english": 2
@@ -3353,7 +4736,36 @@
       "kind": "international",
       "pages": [
         "https://www.ncsc.govt.nz/news/"
-      ]
+      ],
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 1,
+        "report": 2,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "Public cyber security advisories and alerts (e.g. FortiOS April 2025, Iran-related March 2026) are listed by type on ncsc.govt.nz; exact frequency was not verified.",
+          "feeds": "No public advisory RSS or IoC feed was confirmed; Malware Free Networks threat data goes only to partners.",
+          "block": "Malware Free Networks feeds ISPs such as One NZ and 2degrees, which block malicious domains and IPs by default for their customers (10M+ disruptions).",
+          "report": "Individuals are the majority reporters (4,343 of 5,995 reports in 2024/25) through public reporting channels.",
+          "oss": "MFN is a free but closed service delivered via partners; no open-source tools were found.",
+          "proactive": "Nationwide notifications, e.g. reaching 26,000 New Zealanders whose devices were compromised by Lumma Stealer.",
+          "transparency": "There is an annual Cyber Threat Report (2025 edition) plus quarterly insights data.",
+          "english": "English-language site."
+        },
+        "sources": [
+          "https://www.ncsc.govt.nz/resources/ncsc-annual-cyber-threat-reports",
+          "https://www.ncsc.govt.nz/news/the-ncscs-malware-free-networks-service-achieves-10-million-disruptions/",
+          "https://aws-139110925978.2degreesmobile.co.nz/media-release/network-level-protection-keeping-customers-safe",
+          "https://ncsc.govt.nz/news/new-look-and-content-structure-for-the-ncsc-website"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "incd-il",
@@ -3373,11 +4785,11 @@
       "scores": {
         "adv": 1,
         "feeds": 0,
-        "block": 0,
+        "block": 1,
         "report": 2,
         "oss": 0,
-        "proactive": 1,
-        "transparency": 1,
+        "proactive": 2,
+        "transparency": 2,
         "english": 1
       },
       "services": [
@@ -3397,7 +4809,36 @@
       "feeds": [],
       "newsletter": null,
       "related": [],
-      "kind": "international"
+      "kind": "international",
+      "scores_v1": {
+        "adv": 1,
+        "feeds": 0,
+        "block": 0,
+        "report": 2,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 1,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "Issued 51 public alerts in 2025 (about four a month), with most of its output going to organisations as targeted alerts.",
+          "feeds": "IoCs appear in some reports (for example on LockBit), but no public machine-readable feed was found.",
+          "block": "Takes down phishing infrastructure (4,491 cases in 2024) and works with SMS providers; no public protective DNS found.",
+          "report": "The national 119 hotline is open to anyone (26,500 reports in 2025).",
+          "oss": "No open-source tools found.",
+          "proactive": "Sent 2,304 targeted proactive alerts to organisations across the economy in 2025.",
+          "transparency": "Annual report with statistics (2025 report covered in the press).",
+          "english": "Partial English on gov.il; most alerts are in Hebrew."
+        },
+        "sources": [
+          "https://www.computerweekly.com/news/366593152/Inside-Israels-cyber-security-operations",
+          "https://www.ice.co.il/digital-140/news/article/1104399",
+          "https://www.tribuneindia.com/news/world/4491-phishing-infrastructures-handled-by-israels-cyber-directorate",
+          "https://infoblog.brooklyn.edu/2024/06/03/intelligence-lockbit-3-0-ransomware-attacks-within-israeli-cyberspace-tlp-clear/"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "ncsc-ch",
@@ -3418,11 +4859,11 @@
       ],
       "scores": {
         "adv": 2,
-        "feeds": 1,
-        "block": 0,
+        "feeds": 0,
+        "block": 1,
         "report": 2,
         "oss": 0,
-        "proactive": 2,
+        "proactive": 1,
         "transparency": 2,
         "english": 2
       },
@@ -3462,7 +4903,36 @@
       "kind": "international",
       "pages": [
         "https://www.ncsc.admin.ch/ncsc/en/home/aktuell/im-fokus.html"
-      ]
+      ],
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 2,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "evidence": {
+        "why": {
+          "adv": "Weekly reviews (Wochenrückblick) and current-incident warnings published regularly.",
+          "feeds": "No machine-readable security feeds found.",
+          "block": "Has phishing sites taken down and shares active phishing URLs with partners; no confirmed public blocking service.",
+          "report": "Public online reporting form for anyone, plus antiphishing.ch for suspicious sites/emails (544k reports in 2023).",
+          "oss": "No open-source tools found (only an OSS-auditing pilot with NTC).",
+          "proactive": "Informs website operators about phishing sites; no evidence of systematic vulnerable-system notifications.",
+          "transparency": "Half-yearly situation reports and annual anti-phishing reports.",
+          "english": "English site, reporting form and news pages."
+        },
+        "sources": [
+          "https://www.ncsc.admin.ch/ncsc/en/home/aktuell/im-fokus/2022/meldeformular.html",
+          "https://www.ncsc.admin.ch/dam/ncsc/de/dokumente/dokumentation/lageberichte/BACS-HJB-2025-2_DE.pdf.download.pdf/BACS-HJB-2025-2_DE.pdf",
+          "https://www.ncsc.admin.ch/dam/ncsc/de/dokumente/dokumentation/fachberichte/bacs-bericht-antiphishing-2024_de.pdf.download.pdf/bacs-bericht-antiphishing-2024_de.pdf",
+          "https://www.bacs.admin.ch/en/news"
+        ],
+        "confidence": "medium"
+      }
     },
     {
       "id": "nsm-no",
@@ -3480,12 +4950,12 @@
         "EN"
       ],
       "scores": {
-        "adv": 2,
-        "feeds": 1,
+        "adv": 1,
+        "feeds": 0,
         "block": 0,
         "report": 1,
         "oss": 0,
-        "proactive": 2,
+        "proactive": 1,
         "transparency": 2,
         "english": 1
       },
@@ -3512,7 +4982,36 @@
       "feeds": [],
       "newsletter": null,
       "related": [],
-      "kind": "international"
+      "kind": "international",
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "Issues occasional public warnings on exploited vulnerabilities (e.g. Ivanti, Cisco IOS XE in 2023); no recent regular stream found.",
+          "feeds": "No machine-readable feeds found.",
+          "block": "VDI is a detection and early-warning sensor system for constituents; no evidence of blocking.",
+          "report": "24/7 incident phone line and contact for organisations; no channel aimed at citizens found.",
+          "oss": "No open-source tools found.",
+          "proactive": "Notified all known Norwegian owners of exposed Ivanti EPMM systems, but only on an ad hoc basis.",
+          "transparency": "Annual 'Risiko' risk assessment (2025, 2026 editions).",
+          "english": "Some English pages exist, but key reports (Risiko) and guidance appear in Norwegian only."
+        },
+        "sources": [
+          "https://regjeringen.no/contentassets/6290dec36c374ee191e5c7dbba18a258/risiko-2025.pdf",
+          "https://www.tu.no/nyhetsstudio/nsm-nytt-alvorlig-cyberangrep-mot-norge/11357",
+          "https://www.trusted-introducer.org/directory/teams/ncsc-no.html",
+          "https://nsm.no/about-nsm/news/statement-regarding-the-cyber-incident-at-the-norwegian-parliament"
+        ],
+        "confidence": "low"
+      }
     },
     {
       "id": "certua-ua",
@@ -3531,12 +5030,12 @@
       ],
       "scores": {
         "adv": 2,
-        "feeds": 2,
-        "block": 0,
-        "report": 1,
+        "feeds": 1,
+        "block": 2,
+        "report": 2,
         "oss": 0,
         "proactive": 1,
-        "transparency": 1,
+        "transparency": 2,
         "english": 1
       },
       "services": [
@@ -3565,7 +5064,37 @@
       "kind": "international",
       "pages": [
         "https://cert.gov.ua/articles"
-      ]
+      ],
+      "scores_v1": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 1,
+        "english": 1
+      },
+      "evidence": {
+        "why": {
+          "adv": "Frequent public CERT-UA# articles on UAC threat clusters (for example #19542 and #20032 in 2026).",
+          "feeds": "IoCs are published within articles; no official API or STIX/MISP feed was confirmed.",
+          "block": "Maintains a DNS RPZ zone that feeds Ukraine's Protective DNS, used by over 320 providers.",
+          "report": "Public web form at cert.gov.ua/contact-us, email and phone; it processes reports from citizens.",
+          "oss": "No open-source tools found.",
+          "proactive": "Notifies affected organisations, mostly within the government constituency; no evidence of systematic scan notifications.",
+          "transparency": "Half-year and annual incident reports (5,927 incidents in 2025).",
+          "english": "Some articles and reports are available in English, but coverage is partial."
+        },
+        "sources": [
+          "https://court.gov.ua/press/news/1258246",
+          "https://dev.ua/en/news/dns-blokuvannia-1677784934",
+          "https://buhgalter.com.ua/news/other/oberezhno-kiberataka-na-vlasnikiv-poshti-ukrnet",
+          "https://dev.ua/en/news/u-2025-rotsi-kilkist-kiberatak-zrosla-na-37-1767858414",
+          "https://unn.ua/en/news/no-critical-cyber-incidents-recorded-in-ukraine-by-the-end-of-2025-state-special-communications-service"
+        ],
+        "confidence": "medium"
+      }
     }
   ]
 }
