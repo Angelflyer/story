@@ -579,12 +579,12 @@
       "id": "cfcs-dk",
       "cc": "DK",
       "country": "Denmark",
-      "name": "CFCS",
-      "full": "Center for Cybersikkerhed (Centre for Cyber Security)",
+      "name": "SAMSIK / CFCS",
+      "full": "Styrelsen for Samfundssikkerhed (national CSIRT) and Center for Cybersikkerhed",
       "kind": "national",
-      "host": "Danish Defence Intelligence Service",
-      "url": "https://www.cfcs.dk/",
-      "about": "National IT security authority and CSIRT. Publishes the national threat assessment and threat level, and operates a sensor network that watches traffic at connected authorities and companies.",
+      "host": "Danish Agency for Societal Security (Ministry for Societal Security and Preparedness); CFCS stays under the Defence Intelligence Service",
+      "url": "https://samsik.dk/",
+      "about": "Since 2024–2025 Denmark's civilian cyber tasks, including the national CSIRT, have moved from CFCS to the new Danish Agency for Societal Security (SAMSIK), which publishes warnings and guidance at samsik.dk. CFCS, under the Defence Intelligence Service, keeps the operational defensive work, including the sensor network that monitors traffic at connected authorities and companies.",
       "constituency": "Danish authorities, critical infrastructure, companies connected to the sensor network",
       "langs": [
         "DA",
@@ -605,13 +605,13 @@
           "cat": "alerts",
           "name": "Warnings (varsler)",
           "desc": "Public warnings about vulnerabilities and active threats.",
-          "url": "https://www.cfcs.dk/"
+          "url": "https://samsik.dk/"
         },
         {
           "cat": "reports",
           "name": "Threat assessments",
           "desc": "National cyber threat assessment and current threat levels.",
-          "url": "https://www.cfcs.dk/"
+          "url": "https://samsik.dk/"
         },
         {
           "cat": "notify",
@@ -622,7 +622,7 @@
           "cat": "reporting",
           "name": "Report an incident",
           "desc": "Incident reporting for organisations.",
-          "url": "https://www.cfcs.dk/"
+          "url": "https://samsik.dk/"
         },
         {
           "cat": "awareness",
@@ -632,9 +632,17 @@
         }
       ],
       "stats": [],
-      "feeds": [],
+      "feeds": [
+        "https://samsik.dk/feed/"
+      ],
       "newsletter": null,
-      "related": []
+      "related": [
+        {
+          "name": "CFCS",
+          "desc": "Center for Cybersikkerhed under the Defence Intelligence Service: sensor network and operational defence.",
+          "url": "https://www.cfcs.dk/"
+        }
+      ]
     },
     {
       "id": "cert-ee",
