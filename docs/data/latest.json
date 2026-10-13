@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13T21:28:49+00:00",
+ "updated": "2026-10-13T22:06:51+00:00",
  "teams": {
   "cert-pl": {
    "status": "ok",
@@ -1621,6 +1621,774 @@
      "summary": "This MISP release 2.5.42 and is primarily a security hardening release, alongside a large iteration on the new Overmind UI, new TAXII scheduled-push capability, and the usual data-library refreshes."
     }
    ]
+  },
+  "ncsc-uk": {
+   "status": "ok",
+   "feed": "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml",
+   "via": "known",
+   "items": [
+    {
+     "title": "Help the NCSC understand how organisations approach external attack surface risk",
+     "link": "https://www.ncsc.gov.uk/blogs/help-ncsc-understand-how-organisations-approach-external-attack-surface-risk",
+     "date": "2026-10-12T12:00:00+00:00",
+     "summary": "We're looking to hear from people involved in evaluating, selecting or adopting EASM."
+    },
+    {
+     "title": "China-linked malicious actors called out by UK and international partners for targeting sensitive data globally",
+     "link": "https://www.ncsc.gov.uk/news/china-linked-actors-called-out-by-uk-and-international-partners-for-targeting-sensitive-data",
+     "date": "2026-10-08T12:00:00+00:00",
+     "summary": "Joint advisory with international partners highlights malicious targeting of organisations from a range of sectors across the globe."
+    },
+    {
+     "title": "Incident affecting ASOS customers",
+     "link": "https://www.ncsc.gov.uk/news/incident-affecting-asos-customers",
+     "date": "2026-10-06T12:00:00+00:00",
+     "summary": "ASOS has said it is investigating a cyber incident and that some customer personal information may have been accessed."
+    },
+    {
+     "title": "Exploitation of vulnerabilities affecting Citrix NetScaler ADC and Citrix NetScaler Gateway",
+     "link": "https://www.ncsc.gov.uk/news/exploitation-of-vulnerabilities-affecting-citrix-netscaler-adc-and-citrix-netscaler-gateway",
+     "date": "2026-09-28T12:00:00+00:00",
+     "summary": "The NCSC is urging UK organisations to promptly mitigate vulnerabilities affecting Citrix NetScaler ADC and Gateway, two of which are being actively exploited."
+    },
+    {
+     "title": "One does not simply defend agentically",
+     "link": "https://www.ncsc.gov.uk/blogs/one-does-not-simply-defend-agentically",
+     "date": "2026-09-21T12:00:00+00:00",
+     "summary": "Defenders can’t use AI in the same way attackers can, but there’s much they can do to unlock the potential of agentic cyber defence."
+    },
+    {
+     "title": "Adversary simulation: what you need to know",
+     "link": "https://www.ncsc.gov.uk/guidance/adversary-simulation-what-you-need-to-know",
+     "date": "2026-09-17T12:00:00+00:00",
+     "summary": "Adversary simulation ('red teaming') tests your ability to prevent, detect and respond to cyber attacks."
+    },
+    {
+     "title": "Cyber Adversary Simulation (CyAS): scheme documents now available",
+     "link": "https://www.ncsc.gov.uk/blogs/cyber-adversary-simulation-cyas-scheme-documents-now-available",
+     "date": "2026-09-17T12:00:00+00:00",
+     "summary": "Our view of good cyber adversary simulation – and how assured providers can deliver it."
+    },
+    {
+     "title": "UK and allies expose spyware used by Iranian state actors to target dissidents, activists and journalists",
+     "link": "https://www.ncsc.gov.uk/news/uk-allies-expose-spyware-iranian-state-actors-target-dissidents-activists-journalists",
+     "date": "2026-09-15T12:00:00+00:00",
+     "summary": "UK and allies provide advice to help organisations and individuals at risk detect and counter the threat from CHOSEN BRICK malware."
+    }
+   ]
+  },
+  "cisa-us": {
+   "status": "ok",
+   "feed": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+   "via": "api",
+   "items": [
+    {
+     "title": "CVE-2026-104935: Ivanti Connect Secure added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-104935",
+     "date": "2026-10-13T00:00:00+00:00",
+     "summary": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands."
+    },
+    {
+     "title": "CVE-2015-5477: ISC BIND added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2015-5477",
+     "date": "2026-10-08T00:00:00+00:00",
+     "summary": "ISC BIND contains a data processing errors vulnerability that could allow remote attackers to cause a denial of service via TKEY queries."
+    },
+    {
+     "title": "CVE-2016-3081: Apache Struts added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2016-3081",
+     "date": "2026-10-08T00:00:00+00:00",
+     "summary": "Apache Struts contains a command injection vulnerability that could allow remote attackers to execute arbitrary code via method:prefix when Dynamic Method Invocation is enabled."
+    },
+    {
+     "title": "CVE-2023-22894: Strapi Strapi added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2023-22894",
+     "date": "2026-10-08T00:00:00+00:00",
+     "summary": "Strapi contains a cleartext storage of sensitive information vulnerability that could allow attackers with access to the admin panel to discover sensitive user details via the query filter. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users…"
+    },
+    {
+     "title": "CVE-2021-3199: ONLYOFFICE Docs added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2021-3199",
+     "date": "2026-10-08T00:00:00+00:00",
+     "summary": "ONLYOFFICE Docs contains a path traversal vulnerability that can occur when JWT is used, via a /.. sequence in an image upload parameter and could allow for remote code execution."
+    },
+    {
+     "title": "CVE-2015-3306: ProFTPD ProFTPD added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2015-3306",
+     "date": "2026-10-08T00:00:00+00:00",
+     "summary": "ProFTPD contains an improper access control vulnerability that could allow remote attackers to read and write to arbitrary files via the site cpfr and site cpto commands."
+    },
+    {
+     "title": "CVE-2026-88779: Citrix NetScaler added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-88779",
+     "date": "2026-10-04T00:00:00+00:00",
+     "summary": "Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway) contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for a denial of service."
+    },
+    {
+     "title": "CVE-2026-102490: Zammad GmbH Zammad added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-102490",
+     "date": "2026-10-02T00:00:00+00:00",
+     "summary": "Zammad GmbH Zammad contains an improper privilege management vulnerability that can allow the local zammad user to escalate privileges to root. This vulnerability can be chained with CVE-2026-102489."
+    }
+   ]
+  },
+  "certcc-us": {
+   "status": "ok",
+   "feed": "https://www.kb.cert.org/vuls/atomfeed/",
+   "via": "known",
+   "items": [
+    {
+     "title": "VU#456950: Komodo Periphery Agent Contains an OS Command Injection Vulnerability",
+     "link": "https://kb.cert.org/vuls/id/456950",
+     "date": "2026-10-13T19:24:10.004944+00:00",
+     "summary": "Overview Versions <= 2.2.0 of Periphery, an agent within the Komodo server management platform, is vulnerable to OS command injection due to missing validation of container names, through two vectors: container destruction and container log searches. This allows an…"
+    },
+    {
+     "title": "VU#382143: Lowcoder Query Library API contains cross-tenant authorization bypass allowing for data exfiltration",
+     "link": "https://kb.cert.org/vuls/id/382143",
+     "date": "2026-10-13T19:21:56.387558+00:00",
+     "summary": "Overview Lowcoder, version 2.4.10, contains an authorization bypass vulnerability in its Query Library feature’s API. Authenticated users with an admin or dev role can access private library-query data from other organizations within a multi-tenant Lowcoder instance.…"
+    },
+    {
+     "title": "VU#573195: Go, OpenSSL, Apple, LibreSSL, pyca, wolfSSL Name-Constraint Inconsistency in RFC 5280 Implementation",
+     "link": "https://kb.cert.org/vuls/id/573195",
+     "date": "2026-10-13T18:27:20.433572+00:00",
+     "summary": "Overview This note covers differences in how TLS libraries interpret X.509 Name Constraints. A certificate that one library accepts may be rejected by another. Some of those differences are defects; others follow from behavior that RFC 5280 does not fully specify. Description…"
+    },
+    {
+     "title": "VU#157374: XSS vulnerability in Shopware 6 enables Admin Token Theft and RCE",
+     "link": "https://kb.cert.org/vuls/id/157374",
+     "date": "2026-10-13T18:14:02.229148+00:00",
+     "summary": "Overview Shopware 6.7 contains a stored cross-site scripting (XSS) vulnerability in its media upload functionality that can lead to administrator credential compromise and remote code execution. Description Shopware is an open-source e-commerce platform used to build and manage…"
+    },
+    {
+     "title": "VU#162329: Multiple vulnerabilities in Thelia 2.6.0 and 2.6.1",
+     "link": "https://kb.cert.org/vuls/id/162329",
+     "date": "2026-10-12T14:52:17.431997+00:00",
+     "summary": "Overview Thelia versions 2.6.0 and 2.6.1 contain multiple vulnerabilities relating to file management, Smarty templating, module installation, and administrative workflows. Successful exploitation of these issues could enable remote code execution (RCE), server-side template…"
+    },
+    {
+     "title": "VU#553437: InsydeH2O IHISI SMM is vulnerable to unsafe memory write operations",
+     "link": "https://kb.cert.org/vuls/id/553437",
+     "date": "2026-10-01T14:33:19.418341+00:00",
+     "summary": "Overview An Out-of-bounds Write vulnerability in the InsydeH2O IHISI software used by HP PC BIOS can allow a local attacker with OS kernel privileges to perform arbitrary physical memory writes, including writes to System Management RAM (SMRAM). Because the vulnerable code…"
+    },
+    {
+     "title": "VU#762428: Authlib library contains a signature‑verification bypass vulnerability",
+     "link": "https://kb.cert.org/vuls/id/762428",
+     "date": "2026-09-28T19:36:11.488016+00:00",
+     "summary": "Overview Authlib (versions up to and including 1.7.2) contain a signature‑verification bypass in the JSON Web Signature (JWS) general JSON serialization handling. The JsonWebSignature.deserialize_json() function accepts a JWS object with an empty \"signatures\" array and treats…"
+    },
+    {
+     "title": "VU#699627: Readwise Reader for Android, version 8.7.2, contains multiple XSS vulnerabilities",
+     "link": "https://kb.cert.org/vuls/id/699627",
+     "date": "2026-09-25T16:25:10.791585+00:00",
+     "summary": "Overview Three cross-site scripting (XSS) vulnerabilities identified in Readwise Reader for Android version 8.7.2 are disclosed. An attacker with the ability to craft malicious documents or metadata can exploit these vulnerabilities by supplying poisoned content that bypasses…"
+    }
+   ]
+  },
+  "cccs-ca": {
+   "status": "ok",
+   "feed": "https://www.cyber.gc.ca/api/cccs/rss/v1/get?feed=alerts_advisories&lang=en",
+   "via": "discovered",
+   "items": [
+    {
+     "title": "Fortinet security advisory (AV26-1037)",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-1037",
+     "date": "2026-10-13T20:21:54+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Esri security advisory (AV26-1036)",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/esri-security-advisory-av26-1036",
+     "date": "2026-10-13T20:10:52+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Microsoft security advisory – October 2026 monthly rollup (AV26-1038)",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-october-2026-monthly-rollup-av26-1038",
+     "date": "2026-10-13T20:06:47+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Ivanti security advisory (AV26-1035)",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1035",
+     "date": "2026-10-13T19:32:43+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Citrix security advisory (AV26-1034)",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-1034",
+     "date": "2026-10-13T19:10:44+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Commvault security advisory (AV26-1033)",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/commvault-security-advisory-av26-1033",
+     "date": "2026-10-13T18:53:51+00:00",
+     "summary": ""
+    },
+    {
+     "title": "JetBrains security advisory (AV26-1032)",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-1032",
+     "date": "2026-10-13T13:43:03+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Progress security advisory (AV26-1031)",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-1031",
+     "date": "2026-10-13T13:36:59+00:00",
+     "summary": ""
+    }
+   ]
+  },
+  "cert-br": {
+   "status": "ok",
+   "feed": "https://www.cert.br/rss/certbr-rss.xml",
+   "via": "known",
+   "items": [
+    {
+     "title": "Fascículo da Cartilha de Segurança para Internet sobre IA",
+     "link": "https://cartilha.cert.br/fasciculos/#ia",
+     "date": "2026-09-24T16:30:00+00:00",
+     "summary": "Novo Fascículo da Cartilha de Segurança para Internet Fascículo Inteligência Artificial IA É ASSISTENTE. O RESPONSÁVEL É VOCÊ! A IA já faz parte do dia a dia, mas os resultados podem conter erros, expor dados ou ser usados para golpes. O Fascículo Inteligência Artificial dá…"
+    },
+    {
+     "title": "Inscrições Abertas: Fórum de CSIRTs e Workshop MISP 2026",
+     "link": "https://forum.cert.br/#inscricao",
+     "date": "2026-06-29T17:15:00+00:00",
+     "summary": "Inscrições Abertas para o 14º Fórum Brasileiro de CSIRTs e para o 7º Workshop MISP. Cada evento tem sua própria inscrição , e é necessário ter conta no Portal de Cursos e Eventos do NIC.br. Inscrição no Fórum de CSIRTs https://cursoseventos.nic.br/evento/inscrever/csirts2026/…"
+    },
+    {
+     "title": "Divulgada a Programação do Fórum de CSIRTs e Workshop MISP 2026",
+     "link": "https://forum.cert.br/",
+     "date": "2026-06-07T12:00:00+00:00",
+     "summary": "Confira a Programação completa do Fórum de CSIRTs e do Workshop MISP 2026 Local: Amcham Business Center, Rua da Paz, 1431 Chácara Santo Antônio, São Paulo/SP. Data: 28 a 30 de julho de 2026 Agenda do 14º Fórum Brasileiro de CSIRTs Agenda do 7º Workshop MISP"
+    },
+    {
+     "title": "Novos Fascículos sobre Golpes",
+     "link": "https://cartilha.cert.br/",
+     "date": "2026-03-31T15:45:00+00:00",
+     "summary": "Novos Fascículos da Cartilha de Segurança para Internet Fascículo Golpes: Não se Deixe Enganar Golpistas estão sempre criando novos truques para enganar e tirar vantagem, veja nesse fascículo como identificar sinais de golpes. Fascículo Golpes: Evite Fraudes Além de manipular…"
+    },
+    {
+     "title": "Fórum de CSIRTs e Workshop MISP 2026",
+     "link": "https://forum.cert.br/",
+     "date": "2026-01-19T19:50:00+00:00",
+     "summary": "Marque na Agenda: Fórum de CSIRTs e Workshop MISP 2026 Local: AMCHAM, Rua da Paz, 1431 Chácara Santo Antônio, São Paulo/SP. Data: 28 a 30 de julho de 2026 Chamada de Palestras — 14º Fórum Brasileiro de CSIRTs Chamada de Palestras — 7º Workshop MISP"
+    },
+    {
+     "title": "Cursos CERT.br: Inscrições 2026 Abertas",
+     "link": "https://cursos.cert.br/inscricao/",
+     "date": "2026-01-13T11:00:00+00:00",
+     "summary": "Estão abertas, até as 17h00 do dia 15 de janeiro , as inscrições para as turmas 2026 dos cursos ministrados pelo CERT.br: https://cursos.cert.br/inscricao/ Em 2025 o CERT.br ministrará os seguintes cursos: Overview of Creating and Managing CSIRTs Foundations of Incident…"
+    },
+    {
+     "title": "Slides de Boas Práticas sobre Ransomware",
+     "link": "https://cert.br/docs/ransomware/#divulgacao",
+     "date": "2025-10-31T19:00:00+00:00",
+     "summary": "Está disponível um conjunto de slides , licenciado sob Creative Commons , que pode ser livremente utilizado para quem quiser apresentar Boas Práticas para Proteção, Detecção e Resposta de Ataques de Raswomware ."
+    },
+    {
+     "title": "Cursos: Agenda 2026 e Novas Regras",
+     "link": "https://cursos.cert.br/",
+     "date": "2025-10-17T16:00:00+00:00",
+     "summary": "Anunciadas as datas das turmas para o ano de 2026 . Confira as novas regras e critérios de aceite . Inscrições estarão abertas de 13 a 16 de janeiro de 2026 ."
+    }
+   ]
+  },
+  "jpcert-jp": {
+   "status": "ok",
+   "feed": "https://blogs.jpcert.or.jp/en/atom.xml",
+   "via": "known",
+   "items": [
+    {
+     "title": "TSUBAME Report Overflow (Apr-Jun 2026)",
+     "link": "https://blogs.jpcert.or.jp/en/2026/09/tsubame_overflow_2026-04-06.html",
+     "date": "2026-09-18T05:00:00+00:00",
+     "summary": "This TSUBAME Report Overflow series discusses observation trends from TSUBAME sensors both in Japan and overseas, as well as other topics not covered in the JPCERT/CC Quarterly Report. This article covers monitoring results from April to June 2026. Note: Starting..."
+    },
+    {
+     "title": "TSUBAME Report Overflow (Jan-Mar 2026)",
+     "link": "https://blogs.jpcert.or.jp/en/2026/07/tsubame_overflow_2026-01-03.html",
+     "date": "2026-07-23T02:00:00+00:00",
+     "summary": "This TSUBAME Report Overflow series discusses observation trends from TSUBAME sensors both in Japan and overseas, as well as other topics not covered in the Internet Threat Monitoring Quarterly Report. This article covers monitoring results from January to March 2026...."
+    },
+    {
+     "title": "Update on Attacks by Threat Group APT-C-60 in 2026",
+     "link": "https://blogs.jpcert.or.jp/en/2026/07/apt-c-60_2026.html",
+     "date": "2026-07-13T04:15:00+00:00",
+     "summary": "In our previous two blog posts (Dec 2024..."
+    },
+    {
+     "title": "TSUBAME Report Overflow (Oct-Dec 2025)",
+     "link": "https://blogs.jpcert.or.jp/en/2026/05/tsubame_overflow_2025-10-12.html",
+     "date": "2026-05-14T04:30:00+00:00",
+     "summary": "This TSUBAME Report Overflow series discuss monitoring trends of overseas TSUBAME sensors and other activities which the Internet Threat Monitoring Quarterly Reports do not include. This article covers the monitoring results for the period October to December 2025. Suspicious…"
+    },
+    {
+     "title": "ICS Security Conference 2026",
+     "link": "https://blogs.jpcert.or.jp/en/2026/04/ics-conference2026.html",
+     "date": "2026-04-14T06:00:00+00:00",
+     "summary": "JPCERT/CC held the ICS Security Conference 2026 on February 10, 2026. This conference aims to share the current threat landscape surrounding Industrial Control System (ICS) in Japan and abroad, as well as initiatives undertaken by stakeholders in ICS security. It..."
+    },
+    {
+     "title": "TSUBAME Report Overflow (Jul-Sep 2025)",
+     "link": "https://blogs.jpcert.or.jp/en/2026/03/tsubame_overflow_2025-07-09.html",
+     "date": "2026-03-30T05:00:00+00:00",
+     "summary": "This TSUBAME Report Overflow series discusses monitoring trends observed by overseas TSUBAME sensors, as well as other activities that are not included in the Internet Threat Monitoring Quarterly Reports. This article covers the monitoring results from July to September 2025...."
+    },
+    {
+     "title": "CSIRTs Around the World – Azerbaijan",
+     "link": "https://blogs.jpcert.or.jp/en/2026/03/csirts-around-the-world-azerbaijan.html",
+     "date": "2026-03-25T06:00:00+00:00",
+     "summary": "Hello, this is Shihono from the Global Coordination Division. In early March, we traveled to Baku, the capital of Azerbaijan, and had the opportunity to visit five organizations, including CSIRTs and facilities involved in cyber security workforce development. In this..."
+    },
+    {
+     "title": "Study of Binaries Created with Rust through Reverse Engineering",
+     "link": "https://blogs.jpcert.or.jp/en/2026/03/rust_research_en.html",
+     "date": "2026-03-12T05:00:00+00:00",
+     "summary": "Rust has been gaining attention in recent years as a language expected to replace C and C++, due to its memory safety and high performance. While Rust continues to be adopted as a programming language, malware developed using Rust (hereinafter..."
+    }
+   ]
+  },
+  "krcert-kr": {
+   "status": "ok",
+   "feed": "https://knvd.krcert.or.kr/rss/security/notice",
+   "via": "known",
+   "items": [
+    {
+     "title": "SonicWall 제품 보안 업데이트 권고",
+     "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6acd873fb4f3e447302d4263",
+     "date": "2026-10-13T01:19:59+00:00",
+     "summary": "□ 개요 o SonicWall社는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표 \\[1\\] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 설명 o SonicWall SMA1000에서 발생하는 Server-Side Request Forgery (SSRF) 취약점(CVE-2026-102255) \\[1\\]\\[2\\] o SonicWall SMA1000에서 발생하는 OS Command Injection 취약점(CVE-2026-102256)…"
+    },
+    {
+     "title": "美 CISA 발표 주요 Exploit 정보공유(Update. 2026-10-13)",
+     "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6accf5f052c47bec3bcea9a5",
+     "date": "2026-10-12T15:00:00+00:00",
+     "summary": "□ 개요 o 美 CISA에서 현재 자주 악용되고 있는 취약점 목록 발표 [1] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 영향을 받는 제품 | CVE | 제조사 | 취약점 | 내용 | 조치사항 | | :---: | :---: | :---: | --- | --- | | CVE-2026-96951 | Microsoft | Microsoft Windows Command Injection Vulnerability | Microsoft Windows…"
+    },
+    {
+     "title": "Citrix 제품 보안 업데이트 권고",
+     "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6acc6b26b4f3e447302d35fd",
+     "date": "2026-10-12T05:07:50+00:00",
+     "summary": "□ 개요 o Citrix社는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표 \\[1\\] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 설명 o NetScaler ADC, NetScaler Gateway에서 발생하는 Improper Restriction of Operations within the Bounds of a Memory Buffer 취약점(CVE-2026-107406) \\[1\\]\\[2\\] □ 영향을 받는 제품 및 해결 방안 |…"
+    },
+    {
+     "title": "美 CISA 발표 주요 Exploit 정보공유(Update. 2026-10-08)",
+     "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6ac65e70b508ccb76d5d3437",
+     "date": "2026-10-07T15:00:00+00:00",
+     "summary": "□ 개요 o 美 CISA에서 현재 자주 악용되고 있는 취약점 목록 발표 [1] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 영향을 받는 제품 | CVE | 제조사 | 취약점 | 내용 | 조치사항 | | :---: | :---: | :---: | --- | --- | | CVE-2015-3306 | ProFTPD | ProFTPD Improper Access Control Vulnerability | ProFTPD contains an…"
+    },
+    {
+     "title": "보안인증 소프트웨어 취약점 관련 클리닝 서비스 가동 안내",
+     "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6ac48a1bb4f3e447302d0491",
+     "date": "2026-10-06T05:41:47+00:00",
+     "summary": "□ 개요 o INNORIX社의 Agent에서 보안 취약점 발견 o 해당 S/W를 운용 중인 각 기관 담당자 및 이용자는 조치 방안에 따라 소프트웨어 삭제 권고 □ 설명 o INNORIX社 Agent에서 취약점을 통해 로컬 권한 상승 가능 □ 영향받는 제품 | 제품명 | 영향받는 버전 | 주요 취약점 내용 | |:---:|:---:|:---:| | Agent | 1.1.1.001 이상 1.3.5.576 이하 | 로컬 권한 상승 | □ 보안 취약점 클리닝 서비스 운영 안내 o 해당 서비스는 백신…"
+    },
+    {
+     "title": "Citrix 제품 보안 업데이트 권고",
+     "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6ac4816ab4f3e447302d045e",
+     "date": "2026-10-06T05:04:42+00:00",
+     "summary": "□ 개요 o Citrix社는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표 \\[1\\] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 설명 o NetScaler ADC, NetScaler Gateway에서 발생하는 Improper Restriction of Operations within the Bounds of a Memory Buffer 취약점(CVE-2026-88779) \\[1\\]\\[2\\] □ 영향을 받는 제품 및 해결 방안 |…"
+    },
+    {
+     "title": "Apache 제품 보안 업데이트 권고",
+     "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6ac44c84b4f3e447302d0160",
+     "date": "2026-10-06T01:19:00+00:00",
+     "summary": "□ 개요 o Apache 재단은 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표 \\[1\\] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 설명 o Apache HTTP Server에서 발생하는 NULL Pointer Dereference 취약점(CVE-2026-46729) \\[1\\]\\[2\\] o Apache HTTP Server에서 발생하는 Exposure of Sensitive Information to an Unauthorized…"
+    },
+    {
+     "title": "美 CISA 발표 주요 Exploit 정보공유(Update. 2026-10-04)",
+     "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6ac118704158313f41a0392f",
+     "date": "2026-10-03T15:00:00+00:00",
+     "summary": "□ 개요 o 美 CISA에서 현재 자주 악용되고 있는 취약점 목록 발표 [1] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 영향을 받는 제품 | CVE | 제조사 | 취약점 | 내용 | 조치사항 | | :---: | :---: | :---: | --- | --- | | CVE-2026-88779 | Citrix | Citrix NetScaler Improper Restriction of Operations within the Bounds of a…"
+    }
+   ]
+  },
+  "singcert-sg": {
+   "status": "ok",
+   "feed": "https://www.csa.gov.sg/alerts-and-advisories/rss.xml",
+   "via": "discovered",
+   "items": [
+    {
+     "title": "Critical Vulnerability in Citrix NetScaler ADC and NetScaler Gateway",
+     "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-140",
+     "date": "2026-10-11T16:00:00+00:00",
+     "summary": "Attackers can exploit a critical vulnerability in Citrix NetScaler ADC and NetScaler Gateway to perform remote code execution or cause a denial of service on the affected system. Patch immediately."
+    },
+    {
+     "title": "Critical Vulnerabilities in HPE Networking ClearPass Policy Manager",
+     "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-139",
+     "date": "2026-10-11T16:00:00+00:00",
+     "summary": "Attackers can exploit critical vulnerabilities in HPE Networking ClearPass Policy Manager to bypass authentication, execute arbitrary code, or gain full administrative access to the affected system. Patch immediately."
+    },
+    {
+     "title": "Critical Vulnerability in Veeam Backup & Replication",
+     "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-138",
+     "date": "2026-10-08T16:00:00+00:00",
+     "summary": "Attackers with the Backup Viewer role can exploit a critical vulnerability in Veeam Backup & Replication to execute arbitrary code as SYSTEM. Patch immediately."
+    },
+    {
+     "title": "Critical Vulnerability in SonicWall SMA1000 Series",
+     "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-137",
+     "date": "2026-10-07T16:00:00+00:00",
+     "summary": "SonicWall has released security updates to address a critical vulnerability in the SMA1000 series appliances. Users and administrators of affected products are advised to update to the latest version immediately."
+    },
+    {
+     "title": "SQLView KRIS – Stored Cross-Site Scripting Vulnerability in Workflow Template Feature",
+     "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-136",
+     "date": "2026-10-07T16:00:00+00:00",
+     "summary": "A vulnerability has been discovered in the records management application \"SQLView KRIS\". The product owner has rolled out a fix for the reported vulnerability. Special thanks to the researcher and SQLView for coordinating through CSA's Responsible Vulnerability Disclosure…"
+    },
+    {
+     "title": "Creative Sound Blaster Katana – Multiple Vulnerabilities in Firmware Verification and Bluetooth Authentication",
+     "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-134",
+     "date": "2026-10-06T16:00:00+00:00",
+     "summary": "Multiple vulnerabilities have been discovered in Creative Sound Blaster Katana products. Creative Labs has released firmware updates to address these vulnerabilities. Special thanks to the informer and Creative Labs for coordinating through CSA's Responsible Vulnerability…"
+    },
+    {
+     "title": "Critical Vulnerability in Atlassian Data Center Products",
+     "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-135",
+     "date": "2026-10-06T16:00:00+00:00",
+     "summary": "Attackers can exploit a critical vulnerability in multiple Atlassian Data Center products to gain unauthorised access to sensitive files without authentication. Patch immediately."
+    },
+    {
+     "title": "Security Bulletin 7 Oct 2026 [PDF, 1859KB]",
+     "link": "https://isomer-user-content.by.gov.sg/36/157c884e-52d7-4956-932a-bec78f58f89f/Security%20Bulletin%2007%20Oct%202026%20[PDF,%201859KB].pdf",
+     "date": "2026-10-06T16:00:00+00:00",
+     "summary": ""
+    }
+   ]
+  },
+  "certin-in": {
+   "status": "no-feed",
+   "blocked": false,
+   "tried": [
+    "https://www.cert-in.org.in/feed/",
+    "https://www.cert-in.org.in/rss.xml",
+    "https://www.cert-in.org.in/rss",
+    "https://www.cert-in.org.in/feed.xml",
+    "https://www.cert-in.org.in/atom.xml",
+    "https://www.cert-in.org.in/index.xml",
+    "https://www.cert-in.org.in/feed.rss",
+    "https://www.cert-in.org.in/?format=feed&type=rss"
+   ],
+   "items": []
+  },
+  "cncert-cn": {
+   "status": "watched",
+   "page": "https://www.cert.org.cn/publish/main/index.html",
+   "via": "page",
+   "items": [
+    {
+     "title": "关于内置后门功能的恶意软件“荐片播放器”大规模传播的风险提示",
+     "link": "https://www.cert.org.cn/publish/main/10/2026/20261009203110219274970/20261009203110219274970_.html",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "关于新型僵尸网络FlyLegit大范围传播的风险提示",
+     "link": "https://www.cert.org.cn/publish/main/10/2026/20260930172928865590388/20260930172928865590388_.html",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "关于“银狐”木马“甲蚁（G01）”团伙攻击态势深入分析报告",
+     "link": "https://www.cert.org.cn/publish/main/10/2026/20260928181524758579103/20260928181524758579103_.html",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "关于“FakeSvc”挖矿组织大规模传播恶意程序的风险提示",
+     "link": "https://www.cert.org.cn/publish/main/10/2026/20260731185549211877315/20260731185549211877315_.html",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "关于Dysphoria僵尸网络大范围传播的风险提示",
+     "link": "https://www.cert.org.cn/publish/main/10/2026/20260727185721857549342/20260727185721857549342_.html",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "关于家用路由器DNS被恶意篡改导致异常跳转风险的提示",
+     "link": "https://www.cert.org.cn/publish/main/11/2026/20260601145618109326016/20260601145618109326016_.html",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "关于黑产团伙批量搭建高仿真钓鱼网站大规模传播银狐木马的风险提示",
+     "link": "https://www.cert.org.cn/publish/main/10/2026/20260522113326926111046/20260522113326926111046_.html",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "关于“黑猫”团伙利用搜索引擎传播仿冒Notepad++下载远...",
+     "link": "https://www.cert.org.cn/publish/main/10/2025/20251230153606629708787/20251230153606629708787_.html",
+     "date": null,
+     "summary": ""
+    }
+   ]
+  },
+  "twcert-tw": {
+   "status": "no-feed",
+   "blocked": false,
+   "tried": [
+    "https://www.twcert.org.tw/feed/",
+    "https://www.twcert.org.tw/rss.xml",
+    "https://www.twcert.org.tw/rss",
+    "https://www.twcert.org.tw/feed.xml",
+    "https://www.twcert.org.tw/atom.xml",
+    "https://www.twcert.org.tw/index.xml",
+    "https://www.twcert.org.tw/feed.rss",
+    "https://www.twcert.org.tw/?format=feed&type=rss"
+   ],
+   "items": []
+  },
+  "hkcert-hk": {
+   "status": "ok",
+   "feed": "https://www.hkcert.org/getrss/security-bulletin",
+   "via": "known",
+   "items": [
+    {
+     "title": "Samsung Products Multiple Vulnerabilities",
+     "link": "https://www.hkcert.org/security-bulletin/samsung-products-multiple-vulnerabilities_20261013",
+     "date": "2026-10-13T03:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "GitLab Multiple Vulnerabilities",
+     "link": "https://www.hkcert.org/security-bulletin/gitlab-multiple-vulnerabilities_20261013",
+     "date": "2026-10-13T01:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Apache HTTP Server Multiple Vulnerabilities",
+     "link": "https://www.hkcert.org/security-bulletin/apache-http-server-multiple-vulnerabilities_20261009",
+     "date": "2026-10-09T01:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "ONLYOFFICE Docs Remote Code Execution Vulnerability",
+     "link": "https://www.hkcert.org/security-bulletin/onlyoffice-docs-remote-code-execution-vulnerability_20261009",
+     "date": "2026-10-09T01:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Splunk Products Multiple Vulnerabilities",
+     "link": "https://www.hkcert.org/security-bulletin/splunk-products-multiple-vulnerabilities_20261009",
+     "date": "2026-10-09T01:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Cisco Products Multiple Vulnerabilities",
+     "link": "https://www.hkcert.org/security-bulletin/cisco-products-multiple-vulnerabilities_20261008",
+     "date": "2026-10-08T03:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "GitHub Enterprise Server Multiple Vulnerabilities",
+     "link": "https://www.hkcert.org/security-bulletin/github-enterprise-server-multiple-vulnerabilities_20261008",
+     "date": "2026-10-08T03:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "IBM WebSphere Products Multiple Vulnerabilities",
+     "link": "https://www.hkcert.org/security-bulletin/ibm-websphere-products-multiple-vulnerabilities_20261008",
+     "date": "2026-10-08T03:00:00+00:00",
+     "summary": ""
+    }
+   ]
+  },
+  "acsc-au": {
+   "status": "no-feed",
+   "blocked": false,
+   "tried": [
+    "https://www.cyber.gov.au/rss/alerts",
+    "https://www.cyber.gov.au/rss/advisories",
+    "https://www.cyber.gov.au/ (discovery: TimeoutError)",
+    "https://www.cyber.gov.au/about-us/view-all-content/alerts-and-advisories (discovery: TimeoutError)",
+    "https://www.cyber.gov.au/feed/",
+    "https://www.cyber.gov.au/rss.xml",
+    "https://www.cyber.gov.au/rss",
+    "https://www.cyber.gov.au/feed.xml",
+    "https://www.cyber.gov.au/atom.xml",
+    "https://www.cyber.gov.au/index.xml",
+    "https://www.cyber.gov.au/feed.rss",
+    "https://www.cyber.gov.au/?format=feed&type=rss"
+   ],
+   "items": []
+  },
+  "ncsc-nz": {
+   "status": "watched",
+   "page": "https://www.ncsc.govt.nz/news/",
+   "via": "page",
+   "items": [
+    {
+     "title": "30 September 2026 Cyber Smart Week 2026 raises awareness of good cyber security practices The National Cyber Security Centre (NCSC) is using Cyber Smart Week (5-11 October) to remind people and…",
+     "link": "https://www.ncsc.govt.nz/news/find-a-scam-before-it-finds-you-cyber-smart-week-2026-raises-awareness-of-good-cyber-security-practices/",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "29 September 2026 Cyber security insights shared at Cyber Summit Korea 2026 Deputy Director-General of the National Cyber Security Centre, Catriona Robinson, recently spoke at Cyber Summit Korea…",
+     "link": "https://www.ncsc.govt.nz/news/cyber-security-insights-shared-at-cyber-summit-korea-2026/",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "24 September 2026 Cyber Threat Report 2026: Leaders need to prepare now for the impact of AI The NCSC is urging New Zealand business and organisational leaders to prepare for a cyber threat…",
+     "link": "https://www.ncsc.govt.nz/news/cyber-threat-report-2026-leaders-need-to-prepare-now-for-the-impact-of-ai/",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "21 September 2026 SME cyber vulnerability jumps as attacks hit medium-sized businesses hardest AI-enabled threats emerge as a growing concern, while one in three SMEs still take no action to train…",
+     "link": "https://www.ncsc.govt.nz/news/sme-cyber-vulnerability-jumps-as-attacks-hit-medium-sized-businesses-hardest/",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "20 August 2026 New Zealanders urged to take care as cyber security incidents become more complex New Zealanders continue to report cyber security incidents at a consistent rate, helping the NCSC…",
+     "link": "https://www.ncsc.govt.nz/news/new-zealanders-urged-to-take-care-as-cyber-security-incidents-become-more-complex/",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "4 August 2026 Strengthening your supply chain security Managing a third party supplier is an ongoing process, and NCSC has released cyber security guidance for organisations who use third parties to…",
+     "link": "https://www.ncsc.govt.nz/news/strengthening-your-supply-chain-security/",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "23 June 2026 Leaders of Five Eyes Cyber Security Agencies Call to Action on AI Preparedness The GCSB’s National Cyber Security Centre (NCSC) joins Five Eyes partners in issuing a call to action to…",
+     "link": "https://www.ncsc.govt.nz/news/leaders-of-five-eyes-cyber-security-agencies-call-to-action-on-ai-preparedness/",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "22 June 2026 Quarter One sees significant cyber incidents In Q1 the NCSC responded to three C2 category or ‘highly significant’ incidents, the first type of these incidents since the 2021/22…",
+     "link": "https://www.ncsc.govt.nz/news/quarter-one-sees-significant-cyber-incidents/",
+     "date": null,
+     "summary": ""
+    }
+   ]
+  },
+  "incd-il": {
+   "status": "no-feed",
+   "blocked": true,
+   "tried": [
+    "https://www.gov.il/en/departments/israel_national_cyber_directorate (discovery: HTTPError 403)",
+    "https://www.gov.il/en/departments/israel_national_cyber_directorate/feed/",
+    "https://www.gov.il/en/departments/israel_national_cyber_directorate/rss.xml",
+    "https://www.gov.il/en/departments/israel_national_cyber_directorate/rss",
+    "https://www.gov.il/feed/",
+    "https://www.gov.il/rss.xml",
+    "https://www.gov.il/rss",
+    "https://www.gov.il/feed.xml",
+    "https://www.gov.il/atom.xml",
+    "https://www.gov.il/index.xml",
+    "https://www.gov.il/feed.rss",
+    "https://www.gov.il/?format=feed&type=rss"
+   ],
+   "items": []
+  },
+  "ncsc-ch": {
+   "status": "watched",
+   "page": "https://www.ncsc.admin.ch/ncsc/en/home/aktuell/im-fokus.html",
+   "via": "page",
+   "items": [
+    {
+     "title": "More about «Mandatory caller ID is proving effective: Fraudulent calls made in the name of public authorities have fallen by over 75 per cent»",
+     "link": "https://www.bacs.admin.ch/en/hjb-2026-1-mm-en",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "More about «Cyberthreat level remains high – attacks becoming more targeted and complex»",
+     "link": "https://www.bacs.admin.ch/en/hjb-2025-2-mm-en",
+     "date": null,
+     "summary": ""
+    },
+    {
+     "title": "More about «Better protection for critical infrastructure in Switzerland»",
+     "link": "https://www.bacs.admin.ch/en/26-mo233001-2-en",
+     "date": null,
+     "summary": ""
+    }
+   ]
+  },
+  "nsm-no": {
+   "status": "ok",
+   "feed": "https://nsm.no/rss/nyheter-fra-nsm/",
+   "via": "discovered",
+   "items": [
+    {
+     "title": "Tiltak mot tjenestenektangrep",
+     "link": "https://nsm.no/aktuelt/tiltak-mot-tjenestenektangrep",
+     "date": "2026-09-15T11:50:31+00:00",
+     "summary": "Norske virksomheter bør iverksette tiltak som kan hindre tjenestenektangrep. Ved tjenestenektangrep er det viktig at virksomhetene har en plan for håndtering, samt gode reserveløsninger."
+    },
+    {
+     "title": "Tjenestenektangrep er forstyrrende, ikke farlig",
+     "link": "https://nsm.no/aktuelt/tjenestenektangrep-er-forstyrrende-ikke-farlig",
+     "date": "2026-08-04T12:26:52+00:00",
+     "summary": "Den seneste tiden har flere norske virksomheter vært plaget av tjenestenektangrep som har ført til treghet på nettsider og i innloggingstjenester. Denne type angrep handler som regel om oppmerksomhet, ikke om å påføre skade."
+    },
+    {
+     "title": "Posisjonsnotat om kvantenøkkeldistribusjon",
+     "link": "https://nsm.no/aktuelt/posisjonsnotat-om-kvantenokkeldistribusjon",
+     "date": "2026-06-07T09:51:12+00:00",
+     "summary": "Kvantedatamaskiner kan innen relativt kort tid utgjøre en trussel mot eksisterende kryptografiske løsninger. Det er avgjørende å bytte til nye kryptografiske løsninger som kan motstå denne trusselen."
+    },
+    {
+     "title": "Om Mythos og Anthropic",
+     "link": "https://nsm.no/aktuelt/om-mythos-og-anthropic",
+     "date": "2026-05-12T07:34:32+00:00",
+     "summary": "I lys av utviklingen av kraftige KI-systemer mener NSM at norske virksomheter må være proaktive og bedre egen cybersikkerhet. Dette er blitt aktualisert av Anthropics nyeste språkmodell Mythos."
+    },
+    {
+     "title": "Angrepsforsøk i populær meldingsapplikasjon",
+     "link": "https://nsm.no/aktuelt/angrepsforsok-i-popular-meldingsapplikasjon",
+     "date": "2026-03-18T14:00:00+00:00",
+     "summary": "Flere europeiske myndigheter har sendt ut offentlige varsler om at trusselaktører har utgitt seg for å være kundesupport i meldingsappen Signal. Appen brukes av mange ansatte i flere sektorer i Norge. NSM råder brukere av Signal om å være svært oppmerksomme når det gjelder…"
+    },
+    {
+     "title": "NCC-NO: Sju norske virksomheter får støtte til innovativ cybersikkerhet i kraftsektoren",
+     "link": "https://nsm.no/aktuelt/ncc-no-sju-norske-virksomheter-far-stotte-til-innovativ-cybersikkerhet-i-kraftsektoren",
+     "date": "2026-03-17T06:48:45+00:00",
+     "summary": "Tildelingene skjer gjennom det nordiske samarbeidsprosjektet CRESCENDO og er en del av EUs satsing for å gjøre kritisk infrastruktur mer robust mot digitale trusler. Ordningen forvaltes i Norge av Norges forskningsråd og Nasjonal sikkerhetsmyndighet (NSM)."
+    },
+    {
+     "title": "Iverksett tiltak i forbindelse med konflikten i Midtøsten",
+     "link": "https://nsm.no/aktuelt/iverksett-tiltak-i-forbindelse-med-konflikten-i-midtosten",
+     "date": "2026-03-16T12:58:24+00:00",
+     "summary": "NSM følger situasjonen i Midtøsten tett og jobber kontinuerlig med å formidle bevissthet rundt risiko og sårbarheter for norske virksomheter. NSM råder norske virksomheter til å iverksette tiltak i forbindelse med konflikten."
+    },
+    {
+     "title": "Risiko 2026: Dagens valg – morgendagens risiko",
+     "link": "https://nsm.no/aktuelt/risiko-2026",
+     "date": "2026-02-06T08:00:00+00:00",
+     "summary": "Norge trenger at virksomheter flest bidrar til at samfunnet fungerer mest mulig normalt uavhengig av sikkerhetssituasjonen. Det krever et godt forebyggende sikkerhetsarbeid."
+    }
+   ]
+  },
+  "certua-ua": {
+   "status": "no-feed",
+   "blocked": false,
+   "tried": [
+    "https://cert.gov.ua/feed/",
+    "https://cert.gov.ua/rss.xml",
+    "https://cert.gov.ua/rss",
+    "https://cert.gov.ua/feed.xml",
+    "https://cert.gov.ua/atom.xml",
+    "https://cert.gov.ua/index.xml",
+    "https://cert.gov.ua/feed.rss",
+    "https://cert.gov.ua/?format=feed&type=rss"
+   ],
+   "items": []
   }
  }
 }

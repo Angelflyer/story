@@ -163,7 +163,8 @@
           "desc": "Sectoral team for financial market operators.",
           "url": "https://www.knf.gov.pl/en/MARKET/CSIRT_KNF"
         }
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "cert-at",
@@ -254,7 +255,8 @@
           "desc": "Sector CERT for the energy industry.",
           "url": "https://cert.at/en/"
         }
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "ccb-be",
@@ -337,7 +339,8 @@
       "pages": [
         "https://ccb.belgium.be/advisories",
         "https://ccb.belgium.be/ccb-news"
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "cert-bg",
@@ -384,7 +387,8 @@
       "stats": [],
       "feeds": [],
       "newsletter": null,
-      "related": []
+      "related": [],
+      "region": "EU"
     },
     {
       "id": "cert-hr",
@@ -455,7 +459,8 @@
           "desc": "CERT for state administration bodies, at the Information Systems Security Bureau.",
           "url": "https://www.zsis.hr/"
         }
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "csirt-cy",
@@ -505,7 +510,8 @@
           "desc": "Academic CSIRT for universities and research institutes. Publishes alerts.",
           "url": "https://csirt.cynet.ac.cy/"
         }
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "csirt-cz",
@@ -600,7 +606,8 @@
       ],
       "pages": [
         "https://www.nic.cz/news/"
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "cfcs-dk",
@@ -669,7 +676,8 @@
           "desc": "Center for Cybersikkerhed under the Defence Intelligence Service: sensor network and operational defence.",
           "url": "https://www.cfcs.dk/"
         }
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "cert-ee",
@@ -742,7 +750,8 @@
       "pages": [
         "https://www.ria.ee/uudised",
         "https://www.ria.ee/en"
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "ncsc-fi",
@@ -827,7 +836,8 @@
         "name": "NCSC-FI subscriptions",
         "url": "https://www.kyberturvallisuuskeskus.fi/en/subscribe-our-newsletters"
       },
-      "related": []
+      "related": [],
+      "region": "EU"
     },
     {
       "id": "cert-fr",
@@ -925,7 +935,8 @@
           "desc": "National assistance platform for victims (GIP ACYMA).",
           "url": "https://www.cybermalveillance.gouv.fr/"
         }
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "cert-bund",
@@ -1010,7 +1021,8 @@
           "desc": "BSI partnership network for companies.",
           "url": "https://www.allianz-fuer-cybersicherheit.de/"
         }
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "el-csirt",
@@ -1072,7 +1084,8 @@
           "desc": "Academic network CERT.",
           "url": "https://cert.grnet.gr/"
         }
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "nki-hu",
@@ -1142,7 +1155,8 @@
       "pages": [
         "https://nki.gov.hu/figyelmeztetesek/cve-serulekenysegek/",
         "https://nki.gov.hu/en/figyelmeztetesek/riasztas/"
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "ncsc-ie",
@@ -1198,7 +1212,8 @@
       "related": [],
       "pages": [
         "https://www.ncsc.gov.ie/news/"
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "csirt-it",
@@ -1258,7 +1273,8 @@
       "related": [],
       "pages": [
         "https://www.acn.gov.it/portale/csirt-italia"
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "cert-lv",
@@ -1325,7 +1341,8 @@
       ],
       "feeds": [],
       "newsletter": null,
-      "related": []
+      "related": [],
+      "region": "EU"
     },
     {
       "id": "nksc-lt",
@@ -1384,7 +1401,8 @@
       "related": [],
       "pages": [
         "https://www.nksc.lt/naujienos.html"
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "circl-lu",
@@ -1482,7 +1500,8 @@
           "desc": "Government CERT of Luxembourg.",
           "url": "https://www.govcert.lu/"
         }
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "csirt-mt",
@@ -1528,7 +1547,8 @@
       "related": [],
       "pages": [
         "https://ncc-mita.gov.mt/news/"
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "ncsc-nl",
@@ -1597,7 +1617,8 @@
           "desc": "CERT for Dutch healthcare.",
           "url": "https://www.z-cert.nl/"
         }
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "cert-pt",
@@ -1661,7 +1682,8 @@
       "related": [],
       "pages": [
         "https://www.cncs.gov.pt/pt/"
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "dnsc-ro",
@@ -1723,7 +1745,8 @@
       "related": [],
       "pages": [
         "https://dnsc.ro/citeste/"
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "sk-cert",
@@ -1796,7 +1819,8 @@
       ],
       "pages": [
         "https://www.sk-cert.sk/sk/index.html"
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "si-cert",
@@ -1864,7 +1888,8 @@
           "desc": "Government CERT within the Information Security Administration (URSIV).",
           "url": "https://www.gov.si/"
         }
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "incibe-cert",
@@ -1936,7 +1961,8 @@
           "desc": "Government CERT (see below).",
           "url": "https://www.ccn-cert.cni.es/"
         }
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "ccn-cert",
@@ -1997,7 +2023,8 @@
       "related": [],
       "pages": [
         "https://www.ccn-cert.cni.es/es/seguridad-al-dia.html"
-      ]
+      ],
+      "region": "EU"
     },
     {
       "id": "cert-se",
@@ -2058,7 +2085,8 @@
         "name": "CERT-SE weekly letter",
         "url": "https://www.cert.se/"
       },
-      "related": []
+      "related": [],
+      "region": "EU"
     },
     {
       "id": "cert-eu",
@@ -2110,7 +2138,8 @@
         "https://cert.europa.eu/publications/threat-intelligence-rss"
       ],
       "newsletter": null,
-      "related": []
+      "related": [],
+      "region": "EU"
     },
     {
       "id": "enisa-euvd",
@@ -2169,7 +2198,8 @@
       "api": {
         "type": "euvd",
         "url": "https://euvdservices.enisa.europa.eu/api/exploitedvulnerabilities"
-      }
+      },
+      "region": "EU"
     },
     {
       "id": "shadowserver",
@@ -2231,7 +2261,8 @@
       ],
       "newsletter": null,
       "related": [],
-      "pages": []
+      "pages": [],
+      "region": "Global"
     },
     {
       "id": "abuse-ch",
@@ -2291,7 +2322,8 @@
       "stats": [],
       "feeds": [],
       "newsletter": null,
-      "related": []
+      "related": [],
+      "region": "Global"
     },
     {
       "id": "divd",
@@ -2337,7 +2369,8 @@
         "https://www.divd.nl/index.xml"
       ],
       "newsletter": null,
-      "related": []
+      "related": [],
+      "region": "Global"
     },
     {
       "id": "misp",
@@ -2386,7 +2419,1153 @@
       "stats": [],
       "feeds": [],
       "newsletter": null,
-      "related": []
+      "related": [],
+      "region": "Global"
+    },
+    {
+      "id": "ncsc-uk",
+      "cc": "GB",
+      "country": "United Kingdom",
+      "region": "Europe (non-EU)",
+      "name": "NCSC UK",
+      "full": "National Cyber Security Centre (part of GCHQ)",
+      "host": "GCHQ",
+      "url": "https://www.ncsc.gov.uk/",
+      "about": "The UK's national technical authority for cyber security. Its Active Cyber Defence programme is one of the largest free public protection schemes anywhere: protective DNS for the public sector, a takedown service for malicious sites, a public phishing-report inbox, and Early Warning alerts for any UK organisation about its own IP space.",
+      "constituency": "UK government, critical national infrastructure, businesses and the public",
+      "langs": [
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 2,
+        "report": 2,
+        "oss": 1,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "reporting",
+          "name": "Suspicious Email Reporting Service",
+          "desc": "Forward scam emails to report@phishing.gov.uk. Suspicious texts can be forwarded to 7726.",
+          "url": "https://www.ncsc.gov.uk/collection/phishing-scams/report-scam-email"
+        },
+        {
+          "cat": "notify",
+          "name": "Early Warning",
+          "desc": "Free alerts for UK organisations about malware infections and vulnerable services on their own networks.",
+          "url": "https://www.ncsc.gov.uk/information/early-warning-service"
+        },
+        {
+          "cat": "blocklists",
+          "name": "Protective DNS & Takedown Service",
+          "desc": "Protective DNS for the public sector, plus removal of malicious websites at scale with hosting providers.",
+          "url": "https://www.ncsc.gov.uk/collection/ncsc-annual-review-2025/chapter-02-resilience-at-scale/active-cyber-defence"
+        },
+        {
+          "cat": "alerts",
+          "name": "News, alerts & advisories",
+          "desc": "Alerts on actively exploited vulnerabilities and joint advisories with Five Eyes partners.",
+          "url": "https://www.ncsc.gov.uk/section/keep-up-to-date/ncsc-news"
+        },
+        {
+          "cat": "feeds",
+          "name": "RSS feeds",
+          "desc": "Feeds for news, reports, blogs and guidance.",
+          "url": "https://www.ncsc.gov.uk/information/rss-feeds"
+        },
+        {
+          "cat": "awareness",
+          "name": "Cyber Aware & Cyber Essentials",
+          "desc": "Public advice and the Cyber Essentials certification scheme for businesses.",
+          "url": "https://www.ncsc.gov.uk/cyberaware/home"
+        },
+        {
+          "cat": "reports",
+          "name": "NCSC Annual Review",
+          "desc": "Yearly review with Active Cyber Defence statistics.",
+          "url": "https://www.ncsc.gov.uk/collection/ncsc-annual-review-2025"
+        }
+      ],
+      "stats": [
+        {
+          "label": "Organisations registered for Early Warning (2025)",
+          "value": "13,178"
+        },
+        {
+          "label": "Customer IP addresses alerted by Early Warning (2025)",
+          "value": "316,343"
+        }
+      ],
+      "feeds": [
+        "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml",
+        "https://www.ncsc.gov.uk/api/1/services/v1/news-rss-feed.xml"
+      ],
+      "newsletter": null,
+      "related": [],
+      "kind": "international"
+    },
+    {
+      "id": "cisa-us",
+      "cc": "US",
+      "country": "United States",
+      "region": "Americas",
+      "name": "CISA",
+      "full": "Cybersecurity and Infrastructure Security Agency",
+      "host": "Department of Homeland Security",
+      "url": "https://www.cisa.gov/",
+      "about": "US federal cyber defence agency. Its Known Exploited Vulnerabilities (KEV) catalogue is a de facto global patch-priority list, it publishes joint advisories with international partners, and it maintains many open-source tools. Budget cuts in 2025–2026 and a February 2026 funding lapse have reduced some services, including free vulnerability scanning for critical infrastructure.",
+      "constituency": "Federal civilian agencies, critical infrastructure, state and local government; public advisories for all",
+      "langs": [
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 1,
+        "report": 2,
+        "oss": 2,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "feeds",
+          "name": "Known Exploited Vulnerabilities catalogue",
+          "desc": "Free list of vulnerabilities exploited in the wild, as web page, CSV and JSON. Also mirrored on GitHub (cisagov/kev-data), which this site polls.",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        },
+        {
+          "cat": "alerts",
+          "name": "Cybersecurity advisories",
+          "desc": "Alerts, ICS advisories and joint advisories with partners, with RSS.",
+          "url": "https://www.cisa.gov/news-events/cybersecurity-advisories"
+        },
+        {
+          "cat": "notify",
+          "name": "Cyber Hygiene services",
+          "desc": "Free vulnerability scanning and web application scanning for eligible organisations. Capacity reduced by 2025–2026 budget cuts.",
+          "url": "https://www.cisa.gov/cyber-hygiene-services"
+        },
+        {
+          "cat": "tools",
+          "name": "cisagov on GitHub",
+          "desc": "Open-source tools such as ScubaGear, Logging Made Easy, Malcolm and Decider.",
+          "url": "https://github.com/cisagov"
+        },
+        {
+          "cat": "reporting",
+          "name": "Report an incident",
+          "desc": "Online incident and phishing reporting.",
+          "url": "https://www.cisa.gov/report"
+        },
+        {
+          "cat": "feeds",
+          "name": "Automated Indicator Sharing (AIS)",
+          "desc": "Free machine-to-machine sharing of indicators in STIX/TAXII.",
+          "url": "https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing/automated-indicator-sharing-ais"
+        }
+      ],
+      "stats": [
+        {
+          "label": "Final FY2026 budget cut",
+          "value": "≈$135M",
+          "note": "Proposed cut was $495M (Cloud Security Alliance research note)"
+        }
+      ],
+      "feeds": [
+        "https://www.cisa.gov/cybersecurity-advisories/all.xml",
+        "https://www.cisa.gov/news.xml"
+      ],
+      "newsletter": {
+        "name": "CISA email updates",
+        "url": "https://www.cisa.gov/about/contact-us/subscribe-updates-cisa"
+      },
+      "related": [
+        {
+          "name": "MS-ISAC",
+          "desc": "State and local ISAC. Lost its CISA cooperative agreement in September 2025 and moved to paid membership.",
+          "url": "https://www.cisecurity.org/ms-isac"
+        }
+      ],
+      "kind": "international",
+      "api": {
+        "type": "kev",
+        "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json"
+      }
+    },
+    {
+      "id": "certcc-us",
+      "cc": "US",
+      "country": "United States",
+      "region": "Americas",
+      "name": "CERT/CC",
+      "full": "CERT Coordination Center, Carnegie Mellon University SEI",
+      "host": "Software Engineering Institute (federally funded)",
+      "url": "https://www.kb.cert.org/vuls/",
+      "about": "The original CERT, founded in 1988. It now focuses on coordinated vulnerability disclosure: it publishes Vulnerability Notes, runs the VINCE coordination platform and releases research tools.",
+      "constituency": "Vendors and researchers worldwide",
+      "langs": [
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 1,
+        "oss": 2,
+        "proactive": 0,
+        "transparency": 1,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Vulnerability Notes",
+          "desc": "Public notes on coordinated vulnerabilities.",
+          "url": "https://www.kb.cert.org/vuls/"
+        },
+        {
+          "cat": "reporting",
+          "name": "VINCE",
+          "desc": "Platform to report and coordinate vulnerabilities with vendors.",
+          "url": "https://www.kb.cert.org/vince/"
+        },
+        {
+          "cat": "tools",
+          "name": "Open-source tools",
+          "desc": "VINCE, Kaiju, Pharos and other research tools.",
+          "url": "https://github.com/CERTCC"
+        }
+      ],
+      "stats": [],
+      "feeds": [
+        "https://www.kb.cert.org/vuls/atomfeed/"
+      ],
+      "newsletter": null,
+      "related": [],
+      "kind": "international"
+    },
+    {
+      "id": "cccs-ca",
+      "cc": "CA",
+      "country": "Canada",
+      "region": "Americas",
+      "name": "Canadian Centre for Cyber Security",
+      "full": "Canadian Centre for Cyber Security (Cyber Centre)",
+      "host": "Communications Security Establishment",
+      "url": "https://www.cyber.gc.ca/en",
+      "about": "Canada's national cyber authority and CSIRT. Publishes alerts and advisories with RSS, the National Cyber Threat Assessment, and develops the open-source Assemblyline malware triage platform.",
+      "constituency": "Federal government, critical infrastructure, Canadians and businesses",
+      "langs": [
+        "EN",
+        "FR"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 2,
+        "oss": 2,
+        "proactive": 1,
+        "transparency": 2,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Alerts & advisories",
+          "desc": "Alerts on threats to Canadian critical infrastructure and vendor advisories.",
+          "url": "https://www.cyber.gc.ca/en/alerts-advisories"
+        },
+        {
+          "cat": "feeds",
+          "name": "RSS feeds",
+          "desc": "Feeds for alerts, advisories and news.",
+          "url": "https://cyber.gc.ca/en/rss-feeds"
+        },
+        {
+          "cat": "tools",
+          "name": "Assemblyline",
+          "desc": "Open-source platform for large-scale file and malware triage.",
+          "url": "https://cybercentrecanada.github.io/assemblyline4_docs/"
+        },
+        {
+          "cat": "reporting",
+          "name": "Report an incident",
+          "desc": "Online reporting, phone 1-833-CYBER-88.",
+          "url": "https://www.cyber.gc.ca/en/incident-management"
+        },
+        {
+          "cat": "reports",
+          "name": "National Cyber Threat Assessment",
+          "desc": "Biennial assessment of threats to Canada.",
+          "url": "https://www.cyber.gc.ca/en"
+        }
+      ],
+      "stats": [],
+      "feeds": [],
+      "pages": [
+        "https://cyber.gc.ca/en/rss-feeds"
+      ],
+      "newsletter": null,
+      "related": [
+        {
+          "name": "CIRA Canadian Shield",
+          "desc": "Free protective DNS for Canadians from the .ca registry.",
+          "url": "https://www.cira.ca/en/canadian-shield/"
+        }
+      ],
+      "kind": "international"
+    },
+    {
+      "id": "cert-br",
+      "cc": "BR",
+      "country": "Brazil",
+      "region": "Americas",
+      "name": "CERT.br",
+      "full": "Centro de Estudos, Resposta e Tratamento de Incidentes de Segurança no Brasil",
+      "host": "NIC.br",
+      "url": "https://www.cert.br/",
+      "about": "National CERT run by the .br registry NIC.br. Known for its distributed honeypot network, notifications to Brazilian networks about misconfigured and abusable services, and incident statistics published since 1999.",
+      "constituency": "Brazilian internet networks",
+      "langs": [
+        "PT",
+        "EN"
+      ],
+      "scores": {
+        "adv": 1,
+        "feeds": 1,
+        "block": 0,
+        "report": 2,
+        "oss": 1,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "notify",
+          "name": "Network notifications",
+          "desc": "Notifies Brazilian networks about abusable services such as open resolvers, from its honeypots and scans.",
+          "url": "https://www.cert.br/"
+        },
+        {
+          "cat": "reports",
+          "name": "Incident statistics",
+          "desc": "Statistics published since 1999.",
+          "url": "https://stats.cert.br/"
+        },
+        {
+          "cat": "tools",
+          "name": "Distributed honeypots",
+          "desc": "Honeypot network operated with partners, with public data.",
+          "url": "https://honeytarg.cert.br/"
+        },
+        {
+          "cat": "awareness",
+          "name": "Cartilha de Segurança",
+          "desc": "Free security booklets for the public.",
+          "url": "https://cartilha.cert.br/"
+        },
+        {
+          "cat": "reporting",
+          "name": "Report an incident",
+          "desc": "Email cert@cert.br.",
+          "url": "https://www.cert.br/"
+        }
+      ],
+      "stats": [],
+      "feeds": [
+        "https://www.cert.br/rss/certbr-rss.xml"
+      ],
+      "newsletter": null,
+      "related": [],
+      "kind": "international"
+    },
+    {
+      "id": "jpcert-jp",
+      "cc": "JP",
+      "country": "Japan",
+      "region": "Asia-Pacific",
+      "name": "JPCERT/CC",
+      "full": "Japan Computer Emergency Response Team Coordination Center",
+      "host": "Independent non-profit (METI-funded)",
+      "url": "https://www.jpcert.or.jp/english/",
+      "about": "Japan's national coordination centre. Runs the JVN vulnerability portal with IPA, publishes alerts and an English technical blog, and releases popular open-source DFIR tools. Merged its early-warning and incident-response groups in April 2026. Government incidents fall to Japan's National Cybersecurity Office, the successor to NISC.",
+      "constituency": "Japanese organisations and vendors; international coordination",
+      "langs": [
+        "JA",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 2,
+        "oss": 2,
+        "proactive": 1,
+        "transparency": 2,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Alerts & security advisories",
+          "desc": "Alerts on critical vulnerabilities and active attacks.",
+          "url": "https://www.jpcert.or.jp/english/"
+        },
+        {
+          "cat": "feeds",
+          "name": "JVN (Japan Vulnerability Notes)",
+          "desc": "Vulnerability portal run with IPA, with RSS/RDF feeds.",
+          "url": "https://jvn.jp/en/"
+        },
+        {
+          "cat": "tools",
+          "name": "Open-source DFIR tools",
+          "desc": "LogonTracer, EmoCheck, MalConfScan and more.",
+          "url": "https://github.com/JPCERTCC"
+        },
+        {
+          "cat": "alerts",
+          "name": "JPCERT/CC Eyes blog",
+          "desc": "Technical analysis of malware and threat actors in English.",
+          "url": "https://blogs.jpcert.or.jp/en/"
+        },
+        {
+          "cat": "reporting",
+          "name": "Report an incident",
+          "desc": "Online form and email.",
+          "url": "https://www.jpcert.or.jp/english/ir/form.html"
+        },
+        {
+          "cat": "reports",
+          "name": "Quarterly incident reports",
+          "desc": "Incident handling statistics.",
+          "url": "https://www.jpcert.or.jp/english/"
+        }
+      ],
+      "stats": [],
+      "feeds": [
+        "https://blogs.jpcert.or.jp/en/atom.xml",
+        "https://jvn.jp/en/rss/jvn.rdf",
+        "https://www.jpcert.or.jp/english/rss/jpcert-en.rdf"
+      ],
+      "newsletter": null,
+      "related": [
+        {
+          "name": "National Cybersecurity Office",
+          "desc": "Cabinet Secretariat body that replaced NISC in 2025; handles government incidents."
+        }
+      ],
+      "kind": "international"
+    },
+    {
+      "id": "krcert-kr",
+      "cc": "KR",
+      "country": "South Korea",
+      "region": "Asia-Pacific",
+      "name": "KrCERT/CC",
+      "full": "Korea Internet Emergency Response Team Coordination Center (KISA)",
+      "host": "Korea Internet & Security Agency (KISA)",
+      "url": "https://www.krcert.or.kr/",
+      "about": "National CERT inside KISA. Runs the 118 hacking and spam hotline, the Boho-nara public security portal, botnet C&C sinkholing and support for companies hit by intrusions.",
+      "constituency": "Korean private sector and the public",
+      "langs": [
+        "KO",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 1,
+        "report": 2,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 1,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "reporting",
+          "name": "118 hotline",
+          "desc": "National hotline for hacking, spam and personal data incidents."
+        },
+        {
+          "cat": "alerts",
+          "name": "Security notices (보호나라)",
+          "desc": "Vulnerability notices and security updates.",
+          "url": "https://www.boho.or.kr/"
+        },
+        {
+          "cat": "feeds",
+          "name": "Vulnerability portal RSS",
+          "desc": "Security notices feed from the KNVD portal.",
+          "url": "https://knvd.krcert.or.kr/"
+        },
+        {
+          "cat": "notify",
+          "name": "Botnet sinkhole & incident support",
+          "desc": "Sinkholes botnet C&C domains and supports victim companies."
+        }
+      ],
+      "stats": [],
+      "feeds": [
+        "https://knvd.krcert.or.kr/rss/security/notice"
+      ],
+      "newsletter": null,
+      "related": [],
+      "kind": "international"
+    },
+    {
+      "id": "singcert-sg",
+      "cc": "SG",
+      "country": "Singapore",
+      "region": "Asia-Pacific",
+      "name": "SingCERT",
+      "full": "Singapore Computer Emergency Response Team (CSA)",
+      "host": "Cyber Security Agency of Singapore",
+      "url": "https://www.csa.gov.sg/resources/singcert",
+      "about": "National CERT within the Cyber Security Agency. Publishes alerts and advisories, frequently on scams impersonating government officials, and publishes the annual Singapore Cyber Landscape report. Scam blocking for the public runs through the ScamShield app and the 1799 helpline.",
+      "constituency": "Singapore businesses and the public",
+      "langs": [
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 1,
+        "report": 2,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 2,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Alerts & advisories",
+          "desc": "Alerts on vulnerabilities and scams.",
+          "url": "https://www.csa.gov.sg/alerts-and-advisories/"
+        },
+        {
+          "cat": "reporting",
+          "name": "Report an incident",
+          "desc": "Online form or singcert@csa.gov.sg.",
+          "url": "https://www.csa.gov.sg/resources/singcert"
+        },
+        {
+          "cat": "blocklists",
+          "name": "ScamShield",
+          "desc": "National anti-scam app and 1799 helpline; blocks scam calls and filters scam SMS.",
+          "url": "https://www.scamshield.gov.sg/"
+        },
+        {
+          "cat": "reports",
+          "name": "Singapore Cyber Landscape",
+          "desc": "Annual threat report.",
+          "url": "https://www.csa.gov.sg/"
+        }
+      ],
+      "stats": [],
+      "feeds": [],
+      "pages": [
+        "https://www.csa.gov.sg/alerts-and-advisories/"
+      ],
+      "newsletter": null,
+      "related": [],
+      "kind": "international"
+    },
+    {
+      "id": "certin-in",
+      "cc": "IN",
+      "country": "India",
+      "region": "Asia-Pacific",
+      "name": "CERT-In",
+      "full": "Indian Computer Emergency Response Team",
+      "host": "Ministry of Electronics and IT (MeitY)",
+      "url": "https://www.cert-in.org.in/",
+      "about": "National CERT with broad legal powers, including a six-hour incident reporting rule for organisations. It runs the Cyber Swachhta Kendra botnet-cleaning centre, which offers free removal tools and notifies ISPs about infected users.",
+      "constituency": "All of India",
+      "langs": [
+        "EN",
+        "HI"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 2,
+        "oss": 1,
+        "proactive": 2,
+        "transparency": 1,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Advisories & vulnerability notes",
+          "desc": "1,530 alerts and 390 vulnerability notes in 2025.",
+          "url": "https://www.cert-in.org.in/"
+        },
+        {
+          "cat": "notify",
+          "name": "Cyber Swachhta Kendra",
+          "desc": "Botnet cleaning and malware analysis centre that notifies ISPs and organisations about infections.",
+          "url": "https://www.csk.gov.in/"
+        },
+        {
+          "cat": "tools",
+          "name": "Free bot removal tools",
+          "desc": "Free security tools distributed through Cyber Swachhta Kendra.",
+          "url": "https://www.csk.gov.in/"
+        },
+        {
+          "cat": "reporting",
+          "name": "Report an incident",
+          "desc": "Email incident@cert-in.org.in. High-severity incidents must be reported within six hours.",
+          "url": "https://www.cert-in.org.in/"
+        }
+      ],
+      "stats": [
+        {
+          "label": "Incidents handled (2025)",
+          "value": "≈2.94 million"
+        },
+        {
+          "label": "Downloads of Cyber Swachhta Kendra tools",
+          "value": "≈8.96 million"
+        }
+      ],
+      "feeds": [],
+      "newsletter": null,
+      "related": [],
+      "kind": "international"
+    },
+    {
+      "id": "cncert-cn",
+      "cc": "CN",
+      "country": "China",
+      "region": "Asia-Pacific",
+      "name": "CNCERT/CC",
+      "full": "National Computer Network Emergency Response Technical Team/Coordination Center of China",
+      "host": "Cyberspace Administration of China",
+      "url": "https://www.cert.org.cn/",
+      "about": "China's national CERT. Runs the CNVD vulnerability database and large-scale network monitoring. Public output is mostly in Chinese, and disclosure is shaped by Chinese rules that require vulnerabilities to be reported to the state.",
+      "constituency": "Chinese networks",
+      "langs": [
+        "ZH",
+        "EN"
+      ],
+      "scores": {
+        "adv": 1,
+        "feeds": 1,
+        "block": 1,
+        "report": 1,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 1,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Security bulletins",
+          "desc": "Weekly and monthly security reports, in Chinese.",
+          "url": "https://www.cert.org.cn/"
+        },
+        {
+          "cat": "feeds",
+          "name": "CNVD",
+          "desc": "China National Vulnerability Database.",
+          "url": "https://www.cnvd.org.cn/"
+        },
+        {
+          "cat": "notify",
+          "name": "Network monitoring",
+          "desc": "Monitors Chinese networks for botnets, malware and website defacements."
+        }
+      ],
+      "stats": [],
+      "feeds": [],
+      "newsletter": null,
+      "related": [],
+      "kind": "international",
+      "pages": [
+        "https://www.cert.org.cn/publish/main/index.html"
+      ]
+    },
+    {
+      "id": "twcert-tw",
+      "cc": "TW",
+      "country": "Taiwan",
+      "region": "Asia-Pacific",
+      "name": "TWCERT/CC",
+      "full": "Taiwan Computer Emergency Response Team / Coordination Center",
+      "host": "Taiwan government (Ministry of Digital Affairs)",
+      "url": "https://www.twcert.org.tw/",
+      "about": "Private-sector CERT that handles security notifications, vulnerability coordination as a CVE Numbering Authority, and information sharing with international partners.",
+      "constituency": "Taiwanese private sector",
+      "langs": [
+        "ZH",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 1,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Vulnerability notes & news",
+          "desc": "Vulnerability coordination as a CNA and security news.",
+          "url": "https://www.twcert.org.tw/en/"
+        },
+        {
+          "cat": "reporting",
+          "name": "Report an incident",
+          "desc": "Incident and vulnerability reporting.",
+          "url": "https://www.twcert.org.tw/en/"
+        }
+      ],
+      "stats": [],
+      "feeds": [],
+      "newsletter": null,
+      "related": [],
+      "kind": "international"
+    },
+    {
+      "id": "hkcert-hk",
+      "cc": "HK",
+      "country": "Hong Kong",
+      "region": "Asia-Pacific",
+      "name": "HKCERT",
+      "full": "Hong Kong Computer Emergency Response Team Coordination Centre",
+      "host": "Hong Kong Productivity Council",
+      "url": "https://www.hkcert.org/",
+      "about": "Coordination centre for local enterprises and internet users. Security bulletins go out free of charge through the website, RSS, a mobile app, the Hong Kong government notification app, and email and SMS alerts.",
+      "constituency": "Hong Kong enterprises and internet users",
+      "langs": [
+        "ZH",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 2,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 2,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Security bulletins",
+          "desc": "Bulletins on vulnerabilities and threats.",
+          "url": "https://www.hkcert.org/security-bulletin"
+        },
+        {
+          "cat": "newsletter",
+          "name": "Email & SMS alerts",
+          "desc": "Free subscription to selected bulletins.",
+          "url": "https://www.hkcert.org/about-us/our-services"
+        },
+        {
+          "cat": "feeds",
+          "name": "RSS & mobile app",
+          "desc": "RSS feeds and the HKCERT app.",
+          "url": "https://www.hkcert.org/about-us/our-services"
+        },
+        {
+          "cat": "reporting",
+          "name": "Report an incident",
+          "desc": "24-hour hotline and online form.",
+          "url": "https://www.hkcert.org/"
+        }
+      ],
+      "stats": [],
+      "feeds": [
+        "https://www.hkcert.org/getrss/security-bulletin"
+      ],
+      "pages": [
+        "https://www.hkcert.org/security-bulletin"
+      ],
+      "newsletter": {
+        "name": "HKCERT email & SMS alerts",
+        "url": "https://www.hkcert.org/about-us/our-services"
+      },
+      "related": [],
+      "kind": "international"
+    },
+    {
+      "id": "acsc-au",
+      "cc": "AU",
+      "country": "Australia",
+      "region": "Asia-Pacific",
+      "name": "ASD's ACSC",
+      "full": "Australian Signals Directorate's Australian Cyber Security Centre",
+      "host": "Australian Signals Directorate",
+      "url": "https://www.cyber.gov.au/",
+      "about": "Australia's lead cyber agency. Runs ReportCyber, the 1300 CYBER1 hotline, threat intelligence sharing through CTIS, a protective DNS service for government, and the widely used Essential Eight mitigation strategies.",
+      "constituency": "Australian individuals, businesses, government and critical infrastructure",
+      "langs": [
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 1,
+        "report": 2,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "reporting",
+          "name": "ReportCyber & 1300 CYBER1",
+          "desc": "National reporting portal and 24/7 hotline.",
+          "url": "https://www.cyber.gov.au/report-and-recover/report"
+        },
+        {
+          "cat": "alerts",
+          "name": "Alerts & advisories",
+          "desc": "Alerts with RSS and email subscription.",
+          "url": "https://www.cyber.gov.au/about-us/view-all-content/alerts-and-advisories"
+        },
+        {
+          "cat": "feeds",
+          "name": "Cyber Threat Intelligence Sharing (CTIS)",
+          "desc": "Machine-to-machine indicator sharing for partners."
+        },
+        {
+          "cat": "blocklists",
+          "name": "Australian Protective DNS",
+          "desc": "Protective DNS for government entities."
+        },
+        {
+          "cat": "reports",
+          "name": "Annual Cyber Threat Report",
+          "desc": "2024–25 edition published 14 October 2025.",
+          "url": "https://cyber.gov.au/about-us/view-all-content/reports-and-statistics"
+        },
+        {
+          "cat": "awareness",
+          "name": "Essential Eight",
+          "desc": "Prioritised mitigation strategies widely used worldwide.",
+          "url": "https://www.cyber.gov.au/"
+        }
+      ],
+      "stats": [
+        {
+          "label": "ReportCyber reports (FY2024–25)",
+          "value": ">84,700",
+          "note": "Reported by a third-party summary of the ASD Cyber Threat Report"
+        },
+        {
+          "label": "Hotline calls (FY2024–25)",
+          "value": ">42,500"
+        }
+      ],
+      "feeds": [
+        "https://www.cyber.gov.au/rss/alerts",
+        "https://www.cyber.gov.au/rss/advisories"
+      ],
+      "pages": [
+        "https://www.cyber.gov.au/about-us/view-all-content/alerts-and-advisories"
+      ],
+      "newsletter": {
+        "name": "ASD's ACSC alert service",
+        "url": "https://www.cyber.gov.au/"
+      },
+      "related": [],
+      "kind": "international"
+    },
+    {
+      "id": "ncsc-nz",
+      "cc": "NZ",
+      "country": "New Zealand",
+      "region": "Asia-Pacific",
+      "name": "NCSC NZ",
+      "full": "National Cyber Security Centre New Zealand (incl. former CERT NZ)",
+      "host": "Government Communications Security Bureau",
+      "url": "https://www.ncsc.govt.nz/",
+      "about": "CERT NZ was merged into the NCSC in July 2024, and the old CERT NZ brand and website retired in July 2025. Everyone from individuals to critical infrastructure now reports through one NCSC platform, and the Own Your Online campaign continues for the public.",
+      "constituency": "Individuals, businesses, critical infrastructure and government",
+      "langs": [
+        "EN",
+        "MI"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 1,
+        "report": 2,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "reporting",
+          "name": "Report an incident",
+          "desc": "Single national reporting platform, phone 0800 114 115.",
+          "url": "https://www.ncsc.govt.nz/report"
+        },
+        {
+          "cat": "alerts",
+          "name": "Advisories",
+          "desc": "Alerts and advisories for New Zealand organisations.",
+          "url": "https://www.ncsc.govt.nz/"
+        },
+        {
+          "cat": "awareness",
+          "name": "Own Your Online",
+          "desc": "Public awareness site created by CERT NZ in 2023.",
+          "url": "https://www.ownyouronline.govt.nz/"
+        },
+        {
+          "cat": "reports",
+          "name": "Cyber Threat Report",
+          "desc": "Annual and quarterly threat reports.",
+          "url": "https://www.ncsc.govt.nz/"
+        }
+      ],
+      "stats": [],
+      "feeds": [],
+      "newsletter": null,
+      "related": [],
+      "kind": "international",
+      "pages": [
+        "https://www.ncsc.govt.nz/news/"
+      ]
+    },
+    {
+      "id": "incd-il",
+      "cc": "IL",
+      "country": "Israel",
+      "region": "Middle East",
+      "name": "INCD / CERT-IL",
+      "full": "Israel National Cyber Directorate",
+      "host": "Prime Minister's Office",
+      "url": "https://www.gov.il/en/departments/israel_national_cyber_directorate",
+      "about": "National cyber directorate running Israel's national CERT and the 119 cyber hotline for citizens and organisations.",
+      "constituency": "All of Israel",
+      "langs": [
+        "HE",
+        "EN"
+      ],
+      "scores": {
+        "adv": 1,
+        "feeds": 0,
+        "block": 0,
+        "report": 2,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 1,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "reporting",
+          "name": "119 hotline",
+          "desc": "National cyber incident hotline."
+        },
+        {
+          "cat": "alerts",
+          "name": "Alerts & publications",
+          "desc": "Alerts, mostly in Hebrew.",
+          "url": "https://www.gov.il/en/departments/israel_national_cyber_directorate"
+        }
+      ],
+      "stats": [],
+      "feeds": [],
+      "newsletter": null,
+      "related": [],
+      "kind": "international"
+    },
+    {
+      "id": "ncsc-ch",
+      "cc": "CH",
+      "country": "Switzerland",
+      "region": "Europe (non-EU)",
+      "name": "NCSC.ch / BACS",
+      "full": "Federal Office for Cyber Security (BACS / NCSC)",
+      "host": "Swiss Federal Department of Defence",
+      "url": "https://www.ncsc.admin.ch/ncsc/en/home.html",
+      "about": "Switzerland's federal cyber security office. Takes reports from the public, publishes detailed semi-annual and annual situation reports, and since 1 April 2025 receives mandatory 24-hour incident reports from critical infrastructure.",
+      "constituency": "Swiss public, businesses and critical infrastructure",
+      "langs": [
+        "DE",
+        "FR",
+        "IT",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 2,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "reporting",
+          "name": "Report an incident",
+          "desc": "Online reporting form for the public and organisations; mandatory 24-hour reporting for critical infrastructure.",
+          "url": "https://www.report.ncsc.admin.ch/"
+        },
+        {
+          "cat": "reports",
+          "name": "Semi-annual & annual reports",
+          "desc": "Detailed situation reports with incident statistics.",
+          "url": "https://www.ncsc.admin.ch/ncsc/en/home/dokumentation/berichte/lageberichte/halbjahresbericht-2025-1.html"
+        },
+        {
+          "cat": "alerts",
+          "name": "Weekly review & warnings",
+          "desc": "Weekly review of reported incidents and current warnings.",
+          "url": "https://www.ncsc.admin.ch/ncsc/en/home.html"
+        }
+      ],
+      "stats": [
+        {
+          "label": "Voluntary incident reports (2025)",
+          "value": "≈65,000"
+        },
+        {
+          "label": "Share of reports that were fraud (H1 2025)",
+          "value": "58%"
+        }
+      ],
+      "feeds": [],
+      "newsletter": null,
+      "related": [],
+      "kind": "international",
+      "pages": [
+        "https://www.ncsc.admin.ch/ncsc/en/home/aktuell/im-fokus.html"
+      ]
+    },
+    {
+      "id": "nsm-no",
+      "cc": "NO",
+      "country": "Norway",
+      "region": "Europe (non-EU)",
+      "name": "NSM NCSC",
+      "full": "Norwegian National Security Authority – National Cyber Security Centre (NorCERT)",
+      "host": "Nasjonal sikkerhetsmyndighet (NSM)",
+      "url": "https://nsm.no/",
+      "about": "Norway's national cyber security centre, including the national CERT (NorCERT). Operates the VDI sensor network at critical organisations and publishes the annual national risk assessment.",
+      "constituency": "Norwegian government, critical infrastructure and businesses",
+      "langs": [
+        "NO",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Varsler (warnings)",
+          "desc": "Warnings about vulnerabilities and attacks.",
+          "url": "https://nsm.no/"
+        },
+        {
+          "cat": "notify",
+          "name": "VDI sensor network",
+          "desc": "Warning system for digital infrastructure at connected organisations."
+        },
+        {
+          "cat": "reports",
+          "name": "Risiko (national risk assessment)",
+          "desc": "Annual risk report.",
+          "url": "https://nsm.no/"
+        }
+      ],
+      "stats": [],
+      "feeds": [],
+      "newsletter": null,
+      "related": [],
+      "kind": "international"
+    },
+    {
+      "id": "certua-ua",
+      "cc": "UA",
+      "country": "Ukraine",
+      "region": "Europe (non-EU)",
+      "name": "CERT-UA",
+      "full": "Computer Emergency Response Team of Ukraine",
+      "host": "State Service of Special Communications and Information Protection",
+      "url": "https://cert.gov.ua/",
+      "about": "Ukraine's national CERT, operating under sustained state-backed attack. Its numbered alerts (CERT-UA#…) on UAC-tracked threat actors, with indicators of compromise, are widely used by defenders worldwide.",
+      "constituency": "Ukrainian government and critical infrastructure",
+      "langs": [
+        "UK",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 1,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Threat alerts (CERT-UA#)",
+          "desc": "Numbered alerts on threat actors such as UAC-0001 (APT28), with IoCs.",
+          "url": "https://cert.gov.ua/"
+        },
+        {
+          "cat": "feeds",
+          "name": "Indicators of compromise",
+          "desc": "IoCs published with each alert."
+        },
+        {
+          "cat": "reporting",
+          "name": "Report an incident",
+          "desc": "Incident reporting for Ukrainian organisations.",
+          "url": "https://cert.gov.ua/"
+        }
+      ],
+      "stats": [],
+      "feeds": [],
+      "newsletter": null,
+      "related": [],
+      "kind": "international",
+      "pages": [
+        "https://cert.gov.ua/articles"
+      ]
     }
   ]
 }

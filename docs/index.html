@@ -95,6 +95,8 @@ main section { padding-block: 32px 48px; }
 #map .eu { stroke: var(--surface); stroke-width: 1.1; cursor: pointer; transition: opacity .15s; }
 #map .eu:hover, #map .eu:focus-visible { stroke: var(--ink); stroke-width: 2; outline: none; }
 #map .lbl { font: 700 19px var(--f-display); font-stretch: 80%; fill: var(--ink); stroke: var(--surface); stroke-width: 3px; paint-order: stroke; pointer-events: none; text-anchor: middle; }
+#map.world .lbl { font-size: 12px; stroke-width: 2.5px; }
+#map.world .eu { stroke-width: .6; }
 #map .lbl tspan.v { font: 600 14px var(--f-mono); }
 .tip { position: absolute; z-index: 2; pointer-events: none; background: var(--ink); color: var(--bg); padding: 8px 10px; border-radius: 6px; font-size: .8rem; max-width: 240px; box-shadow: 0 6px 18px rgb(0 0 0 / .2); }
 .tip b { display: block; font-size: .9rem; }
@@ -124,6 +126,13 @@ main section { padding-block: 32px 48px; }
 .axisrow { display: grid; grid-template-columns: minmax(120px, 210px) minmax(0, 1fr) 30px; gap: 10px; font: .68rem var(--f-mono); color: var(--muted); }
 .axisrow .ticks { position: relative; height: 14px; }
 .axisrow .ticks span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
+.evw { display: grid; gap: 12px; margin-top: 12px; }
+.evw .grp { display: grid; grid-template-columns: minmax(120px, 230px) minmax(0, 1fr); gap: 4px 12px; align-items: center; font-size: .85rem; }
+.evw .bars2 { display: grid; gap: 3px; }
+.evw .b { display: grid; grid-template-columns: minmax(0, 1fr) 44px; gap: 8px; align-items: center; }
+.evw .t { height: 11px; background: var(--sunk); border-radius: 3px; overflow: hidden; }
+.evw .t span { display: block; height: 100%; border-radius: 0 4px 4px 0; }
+.evw .b b { font: 500 .75rem var(--f-mono); font-variant-numeric: tabular-nums; }
 .matrix td.m { text-align: center; padding: 6px 4px; }
 .matrix th.m { text-align: center; padding-inline: 4px; }
 .mdot { display: inline-block; border-radius: 50%; background: var(--s4); vertical-align: middle; }
@@ -226,11 +235,11 @@ footer .wrap { display: grid; gap: 8px; }
 <header class="mast">
   <div class="wrap">
     <div class="mast-top">
-      <span class="eyebrow">National CSIRTs · EU-27 · <span id="asof"></span></span>
+      <span class="eyebrow">National CSIRTs · EU-27 + world · <span id="asof"></span></span>
       <span class="tlp" title="Traffic Light Protocol: may be shared without restriction"><b>TLP:CLEAR</b></span>
     </div>
     <h1>EU CERT Atlas</h1>
-    <p class="lede">The government and community incident response teams of all 27 EU member states, compared on what they actually give the public: alerts, feeds, blocklists, reporting channels, open-source tools and notifications. Live feeds refresh every six hours.</p>
+    <p class="lede">The government and community incident response teams of all 27 EU member states, plus 18 leading teams from the UK, US, Asia-Pacific and beyond, compared on what they actually give the public: alerts, feeds, blocklists, reporting channels, open-source tools and notifications. Live feeds refresh every six hours.</p>
     <div class="kpis" id="kpis"></div>
   </div>
 </header>
@@ -252,14 +261,14 @@ footer .wrap { display: grid; gap: 8px; }
     <div class="wrap">
       <div class="overview">
         <div class="panel">
-          <div class="eyebrow">Map · best-rated team per member state</div>
+          <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center"><div class="eyebrow">Map · best-rated team per country</div><div role="group" aria-label="Map area" style="display:flex;gap:4px"><button class="chip" data-scope="europe" aria-pressed="true">Europe</button><button class="chip" data-scope="world" aria-pressed="false">World</button></div></div>
           <h3 style="margin-top:6px" id="maptitle">Overall capability score</h3>
           <div class="metricbar" id="metrics" role="group" aria-label="Colour the map by"></div>
           <div class="mapwrap"><svg id="map" role="img" aria-labelledby="maptitle"></svg><div class="tip" id="tip" hidden></div></div>
           <div class="legend" id="maplegend"></div>
         </div>
         <div class="panel">
-          <div class="eyebrow">Leaderboard</div>
+          <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center"><div class="eyebrow">Leaderboard</div><div role="group" aria-label="Leaderboard scope" style="display:flex;gap:4px"><button class="chip" data-lb="all" aria-pressed="true">All</button><button class="chip" data-lb="eu" aria-pressed="false">EU</button><button class="chip" data-lb="intl" aria-pressed="false">Non-EU</button></div></div>
           <h3 style="margin-top:6px">Top teams by public capability</h3>
           <div class="leaders" id="leaders"></div>
         </div>
@@ -299,7 +308,7 @@ footer .wrap { display: grid; gap: 8px; }
         <div class="panel">
           <div class="eyebrow">Ranking</div>
           <h3 style="margin-top:6px">Every team by overall score</h3>
-          <div class="controls" style="margin:10px 0 6px"><label class="chip" style="display:inline-flex;gap:6px;align-items:center"><input type="checkbox" id="rank-nat"> National CSIRTs only</label></div>
+          <div class="controls" style="margin:10px 0 6px"><select id="rank-nat" class="chip" aria-label="Teams to rank" style="padding:7px 10px"><option value="all">All teams</option><option value="nat">All national teams</option><option value="eu">EU national teams</option><option value="intl">Non-EU national teams</option></select></div>
           <div class="rank" id="ranking"></div>
         </div>
         <div class="panel">
@@ -308,6 +317,12 @@ footer .wrap { display: grid; gap: 8px; }
           <p class="muted" style="font-size:.8rem;margin:6px 0 10px">Square-root scale, so recent differences stay readable. Green: within 30 days. Amber: within 180 days. Red: older.</p>
           <div class="rank fresh" id="fresh"></div>
         </div>
+      </div>
+      <div class="panel" style="margin-top:24px">
+        <div class="eyebrow">EU vs the world</div>
+        <h3 style="margin-top:6px">Average rating per dimension: EU national teams compared with non-EU national teams</h3>
+        <div class="legend" id="evw-legend" style="margin-top:8px"></div>
+        <div id="evw" class="evw"></div>
       </div>
       <div class="panel" style="margin-top:24px">
         <div class="eyebrow">Who offers what</div>
@@ -371,7 +386,7 @@ footer .wrap { display: grid; gap: 8px; }
       <h2>Method</h2>
       <p id="scale"></p>
       <ol id="rubric"></ol>
-      <p>Each EU member state is represented by its national CSIRT under the NIS2 Directive. Where a country has separate government or sector teams, they appear under <em>Related teams</em> in the profile, and Spain's CCN-CERT is scored separately because it offers its own public services. EU-level bodies (CERT-EU, ENISA) and free community services (Shadowserver, abuse.ch, DIVD, MISP) are scored on the same rubric for reference.</p>
+      <p>Each EU member state is represented by its national CSIRT under the NIS2 Directive. Where a country has separate government or sector teams, they appear under <em>Related teams</em> in the profile, and Spain's CCN-CERT is scored separately because it offers its own public services. EU-level bodies (CERT-EU, ENISA) and free community services (Shadowserver, abuse.ch, DIVD, MISP) are scored on the same rubric for reference. For international comparison, 18 national teams outside the EU are included: the UK, Switzerland, Norway, Ukraine, the US (CISA and CERT/CC), Canada, Brazil, Japan, South Korea, Singapore, India, China, Taiwan, Hong Kong, Australia, New Zealand and Israel.</p>
       <p>Scores reflect public information found through web research in October 2026, including official pages, RFC 2350 profiles, annual reports and reputable press. Services a team offers only to its regulated constituency score as limited. These are editorial assessments for orientation, not audits. Check each team's site before relying on a detail, and report corrections through the repository.</p>
       <p>The feed panel is filled by a scheduled GitHub Action that tries each team's known feed URLs, then auto-discovers feeds on the team's homepage. Teams without a working public feed are listed as such.</p>
     </div>
@@ -393,10 +408,10 @@ footer .wrap { display: grid; gap: 8px; }
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const DIMS = ["adv", "feeds", "block", "report", "oss", "proactive", "transparency", "english"];
   const SHORT = { adv: "Alerts", feeds: "Feeds", block: "Block", report: "Report", oss: "Tools", proactive: "Notify", transparency: "Stats", english: "EN" };
-  const KINDS = { national: "National CSIRT", government: "Government CERT", eu: "EU-level", community: "Community / free" };
+  const KINDS = { national: "National CSIRT", government: "Government CERT", eu: "EU-level", international: "Non-EU national", community: "Community / free" };
   const GRID = { EU: [0, 0], SE: [4, 0], FI: [5, 0], IE: [0, 1], DK: [3, 1], EE: [5, 1], NL: [2, 2], DE: [3, 2], PL: [4, 2], LV: [5, 2], FR: [1, 3], BE: [2, 3], LU: [3, 3], CZ: [4, 3], LT: [5, 3], PT: [0, 4], ES: [1, 4], AT: [3, 4], SK: [4, 4], HU: [5, 4], RO: [6, 4], IT: [2, 5], SI: [3, 5], HR: [4, 5], BG: [6, 5], MT: [2, 6], GR: [5, 6], CY: [6, 6] };
-  let D, L = { updated: null, teams: {} }, GEO = null, metric = "score";
-  const FLAGGED = new Set("AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE EU".split(" "));
+  let D, L = { updated: null, teams: {} }, GEO = null, WORLD = null, metric = "score", mapScope = "europe", lbScope = "all";
+  const FLAGGED = new Set("AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE EU GB US CA BR JP KR SG IN CN TW HK AU NZ IL CH NO UA".split(" "));
   const flag = (cc, lg) => FLAGGED.has(cc) ? `<img class="flag${lg ? " lg" : ""}" src="flags/${cc.toLowerCase()}.svg" alt="" width="${lg ? 32 : 20}" height="${lg ? 24 : 15}" loading="lazy" decoding="async">` : `<span class="flag globe${lg ? " lg" : ""}" aria-hidden="true">◎</span>`;
   const badge = cc => `<span class="badge">${flag(cc)}<span class="cc">${cc}</span></span>`;
   const SERIES = ["var(--c1)", "var(--c2)", "var(--c3)"];
@@ -433,6 +448,7 @@ footer .wrap { display: grid; gap: 8px; }
     $("#kpis").innerHTML = [
       [ccs.size + "/27", "member states covered"],
       [D.certs.length, "teams and services profiled"],
+      [new Set(D.certs.filter(c => c.kind === "international").map(c => c.cc)).size, "non-EU countries for comparison"],
       [svc, "individual services catalogued"],
       [avg, "average national score / 100"],
       [block, "national teams running public blocking"],
@@ -441,7 +457,7 @@ footer .wrap { display: grid; gap: 8px; }
     $("#asof").textContent = "data as of " + D.meta.asOf;
   }
 
-  const bestByCc = () => { const best = {}; D.certs.filter(c => c.kind === "national" || c.kind === "eu").forEach(c => { if (!best[c.cc] || score(c) > score(best[c.cc])) best[c.cc] = c; }); return best; };
+  const bestByCc = () => { const best = {}; D.certs.filter(c => c.kind === "national" || c.kind === "eu" || (mapScope === "world" && c.kind === "international")).forEach(c => { if (!best[c.cc] || score(c) > score(best[c.cc])) best[c.cc] = c; }); return best; };
   const METRICS = [["score", "Overall score"], ...DIMS.map(k => [k, D_LABEL(k)]), ["feed", "Live feed"]];
   function D_LABEL(k) { return SHORT[k]; }
   const FEEDKEYS = { live: ["var(--ok)", "Live"], watch: ["var(--s3)", "Page watch"], quiet: ["var(--warn)", "Quiet or stale"], blocked: ["var(--bad)", "Blocks readers"], none: ["var(--s0)", "No feed"] };
@@ -464,17 +480,22 @@ footer .wrap { display: grid; gap: 8px; }
   }
   function drawMap() {
     const svg = $("#map");
-    if (!GEO) { svg.outerHTML = '<p class="muted">The map data (data/europe.json) could not be loaded.</p>'; return; }
+    const G = mapScope === "world" ? WORLD : GEO;
+    document.querySelectorAll("[data-scope]").forEach(b => b.setAttribute("aria-pressed", b.dataset.scope === mapScope));
+    svg.classList.toggle("world", mapScope === "world");
+    if (!G) { svg.outerHTML = '<p class="muted">The map data (data/europe.json) could not be loaded.</p>'; return; }
     const best = bestByCc();
-    svg.setAttribute("viewBox", `0 0 ${GEO.w} ${GEO.h}`);
-    const parts = GEO.ctx.map(d => `<path class="ctx" d="${d}"/>`);
+    svg.setAttribute("viewBox", `0 0 ${G.w} ${G.h}`);
+    const parts = G.ctx.map(d => `<path class="ctx" d="${d}"/>`);
     const labels = [];
-    Object.entries(GEO.eu).forEach(([cc, g]) => {
+    const world = mapScope === "world";
+    Object.entries(world ? G.c : G.eu).forEach(([cc, g]) => {
       const c = best[cc]; if (!c) return;
       const m = metricOf(c);
       const aria = `${c.country}, ${c.name}: ${m.text}`;
-      parts.push(`<path class="eu" d="${g.d}" fill="${m.fill}" data-id="${c.id}" tabindex="0" role="button" aria-label="${esc(aria)}"/>`);
-      if (g.a < 400) parts.push(`<circle class="eu" cx="${g.cx}" cy="${g.cy}" r="9" fill="${m.fill}" data-id="${c.id}" tabindex="-1" aria-hidden="true"/>`);
+      if (g.d) parts.push(`<path class="eu" d="${g.d}" fill="${m.fill}" data-id="${c.id}" tabindex="0" role="button" aria-label="${esc(aria)}"/>`);
+      if (g.a < (world ? 30 : 400)) parts.push(`<circle class="eu" cx="${g.cx}" cy="${g.cy}" r="${world ? 4.5 : 9}" fill="${m.fill}" data-id="${c.id}" ${g.d ? 'tabindex="-1" aria-hidden="true"' : `tabindex="0" role="button" aria-label="${esc(aria)}"`}/>`);
+      if (world) { if (c.kind === "international" && g.a > 25) labels.push(`<text class="lbl" x="${g.cx}" y="${g.cy + 4}">${cc}</text>`); return; }
       if (g.a > 1800 || cc === "LU" || cc === "MT" || cc === "CY") {
         const dy = cc === "CY" ? 28 : cc === "LU" || cc === "MT" ? -30 : 0;
         labels.push(`<text class="lbl" x="${g.cx}" y="${g.cy + dy}">${cc}${m.short !== "" ? `<tspan class="v" x="${g.cx}" dy="16">${m.short}</tspan>` : ""}</text>`);
@@ -497,13 +518,13 @@ footer .wrap { display: grid; gap: 8px; }
     tip.style.left = Math.max(0, x) + "px"; tip.style.top = y + "px";
   }
 
-  let picks = ["cert-pl", "circl-lu", "nki-hu"];
+  let picks = ["cert-pl", "ncsc-uk", "jpcert-jp"];
   function charts() {
     // Pickers
     const opts = sel => D.certs.map(c => `<option value="${c.id}"${c.id === sel ? " selected" : ""}>${c.cc} · ${esc(c.name)}</option>`).join("");
     $("#pickers").innerHTML = picks.map((p, i) => `<label class="picker"><i class="sw" style="background:${SERIES[i]};width:14px;height:14px;border-radius:${["50%", "2px", "0"][i]}"></i><select data-pick="${i}" aria-label="Team ${i + 1}">${i ? '<option value="">None</option>' : ""}${opts(p)}</select></label>`).join("");
     radar();
-    ranking(); freshness(); matrix();
+    ranking(); freshness(); euVsWorld(); matrix();
   }
   function radar() {
     const sel = picks.map(id => id && byId(id)).filter(Boolean);
@@ -528,9 +549,16 @@ footer .wrap { display: grid; gap: 8px; }
     $("#radar").innerHTML = g;
     $("#h2htable").innerHTML = `<thead><tr><th>Dimension</th>${sel.map((c, i) => `<th style="text-align:center"><i class="sw" style="background:${SERIES[picks.indexOf(c.id)]}"></i>${c.cc}</th>`).join("")}</tr></thead><tbody>${DIMS.map(k => `<tr style="cursor:default"><td>${esc(SHORT[k])}</td>${sel.map(c => `<td class="dim">${pip(c.scores[k])}</td>`).join("")}</tr>`).join("")}<tr style="cursor:default"><td><strong>Score</strong></td>${sel.map(c => `<td style="text-align:center"><span class="score">${score(c)}</span></td>`).join("")}</tr></tbody>`;
   }
+  function euVsWorld() {
+    const eu = D.certs.filter(c => c.kind === "national"), w = D.certs.filter(c => c.kind === "international");
+    const avg = (arr, k) => arr.reduce((a, c) => a + c.scores[k], 0) / arr.length;
+    const avgScore = arr => Math.round(arr.reduce((a, c) => a + score(c), 0) / arr.length);
+    $("#evw-legend").innerHTML = `<span><i class="sw" style="background:var(--c1)"></i>EU national (${eu.length}) · average ${avgScore(eu)}/100</span><span><i class="sw" style="background:var(--c2)"></i>Non-EU national (${w.length}) · average ${avgScore(w)}/100</span>`;
+    $("#evw").innerHTML = DIMS.map(k => { const a = avg(eu, k), b = avg(w, k); return `<div class="grp" title="${esc(D.meta.rubric[k])}"><span>${esc(D.meta.rubric[k])}</span><div class="bars2"><div class="b"><span class="t"><span style="width:${a / 2 * 100}%;background:var(--c1)"></span></span><b>${a.toFixed(2)}</b></div><div class="b"><span class="t"><span style="width:${b / 2 * 100}%;background:var(--c2)"></span></span><b>${b.toFixed(2)}</b></div></div></div>`; }).join("") + '<p class="muted" style="font-size:.78rem;margin:2px 0 0">Scale 0 (none found) to 2 (public and mature). The non-EU group is a selection of 18 major teams, not every country, so it leans towards well-resourced agencies.</p>';
+  }
   function ranking() {
-    const nat = $("#rank-nat").checked;
-    const rows = D.certs.filter(c => !nat || c.kind === "national").sort((a, b) => score(b) - score(a) || a.name.localeCompare(b.name));
+    const f = $("#rank-nat").value;
+    const rows = D.certs.filter(c => f === "all" || (f === "nat" ? c.kind === "national" || c.kind === "international" : f === "eu" ? c.kind === "national" : c.kind === "international")).sort((a, b) => score(b) - score(a) || a.name.localeCompare(b.name));
     $("#ranking").innerHTML = rows.map(c => { const s = score(c); return `<button class="row" data-id="${c.id}" title="${esc(c.name)} · ${KINDS[c.kind]} · ${s}/100"><span class="nm">${flag(c.cc)}<span style="overflow:hidden;text-overflow:ellipsis">${esc(c.name)}</span></span><span class="track"><span class="bar-fill" style="width:${s}%;background:var(--s${Math.max(2, step(s))})"></span></span><b>${s}</b></button>`; }).join("");
   }
   function freshness() {
@@ -548,10 +576,16 @@ footer .wrap { display: grid; gap: 8px; }
     $("#matrix").innerHTML = `<thead><tr><th>Team</th>${cats.map(k => `<th class="m" title="${esc(D.meta.categories[k])}">${SH[k]}</th>`).join("")}<th class="m">Total</th></tr></thead><tbody>${rows.map(c => `<tr data-id="${c.id}" tabindex="0"><td><span class="badge">${flag(c.cc)}<strong>${esc(c.name)}</strong></span></td>${cats.map(k => { const ss = c.services.filter(s => s.cat === k); const n = ss.length; const sz = n ? 7 + Math.round(11 * Math.sqrt(n / max)) : 0; return `<td class="m" title="${esc(D.meta.categories[k])}: ${n ? esc(ss.map(s => s.name).join(", ")) : "none"}">${n ? `<span class="mdot" style="width:${sz}px;height:${sz}px"></span>` : '<span class="mdot z"></span>'}</td>`; }).join("")}<td class="m mono">${c.services.length}</td></tr>`).join("")}</tbody>`;
   }
 
+  function leaders() {
+    const inScope = c => lbScope === "all" || (lbScope === "eu" ? c.region === "EU" : c.kind === "international");
+    const top = [...D.certs].filter(inScope).sort((a, b) => score(b) - score(a)).slice(0, 15);
+    document.querySelectorAll("[data-lb]").forEach(b => b.setAttribute("aria-pressed", b.dataset.lb === lbScope));
+    $("#leaders").innerHTML = top.map((c, i) => `<button class="leader" data-id="${c.id}"><span class="rank">${String(i + 1).padStart(2, "0")}</span><span class="nm">${badge(c.cc)} ${esc(c.name)} <span class="kind">· ${KINDS[c.kind]}</span></span><span class="score">${score(c)}</span></button>`).join("");
+  }
+
   function overview() {
     drawMetrics(); drawMap();
-    const top = [...D.certs].sort((a, b) => score(b) - score(a)).slice(0, 15);
-    $("#leaders").innerHTML = top.map((c, i) => `<button class="leader" data-id="${c.id}"><span class="rank">${String(i + 1).padStart(2, "0")}</span><span class="nm">${badge(c.cc)} ${esc(c.name)} <span class="kind">· ${KINDS[c.kind]}</span></span><span class="score">${score(c)}</span></button>`).join("");
+    leaders();
     const nat = D.certs.filter(c => c.kind === "national");
     const cats = Object.keys(D.meta.categories);
     const cov = cats.map(k => [k, nat.filter(c => c.services.some(s => s.cat === k)).length]).sort((a, b) => b[1] - a[1]);
@@ -661,6 +695,8 @@ footer .wrap { display: grid; gap: 8px; }
   }
 
   document.addEventListener("click", e => {
+    const sc = e.target.closest("[data-scope]"); if (sc) { mapScope = sc.dataset.scope; drawMap(); return; }
+    const lb = e.target.closest("[data-lb]"); if (lb) { lbScope = lb.dataset.lb; leaders(); return; }
     const mt = e.target.closest("[data-metric]"); if (mt) { metric = mt.dataset.metric; drawMetrics(); drawMap(); return; }
     const tab = e.target.closest("[data-tab]"); if (tab) { showTab(tab.dataset.tab); return; }
     if (e.target.closest("[data-close]")) { $("#dlg").close(); return; }
@@ -684,6 +720,7 @@ footer .wrap { display: grid; gap: 8px; }
     if (!D) { document.querySelector("main").innerHTML = '<div class="wrap" style="padding-block:40px"><div class="empty"><h3>Data could not be loaded</h3><p class="muted">data/certs.json is missing or unreachable. Reload the page, or open it from the repository\'s GitHub Pages site.</p></div></div>'; return; }
     L = await load("data/latest.json", L) || L;
     GEO = await load("data/europe.json", null);
+    WORLD = await load("data/world.json", null);
     $("#team3").insertAdjacentHTML("beforeend", D.certs.filter(c => L.teams[c.id]?.items?.length).map(c => `<option value="${c.id}">${c.cc} · ${esc(c.name)}</option>`).join(""));
     kpis(); overview(); charts(); kindChips(); table(); services(); latest(); follow(); method();
     let t = "overview"; try { t = localStorage.getItem("atlas-tab") || t; } catch (e) {}

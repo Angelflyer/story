@@ -1,6 +1,6 @@
 # EU CERT Atlas
 
-A comparison of the national CSIRTs/CERTs of all 27 EU member states, plus EU-level bodies (CERT-EU, ENISA EUVD) and free community services (Shadowserver, abuse.ch, DIVD, MISP).
+A comparison of the national CSIRTs/CERTs of all 27 EU member states, plus EU-level bodies (CERT-EU, ENISA EUVD), free community services (Shadowserver, abuse.ch, DIVD, MISP) and 18 national teams outside the EU for comparison (UK, Switzerland, Norway, Ukraine, US CISA and CERT/CC, Canada, Brazil, Japan, South Korea, Singapore, India, China, Taiwan, Hong Kong, Australia, New Zealand, Israel).
 
 - `docs/index.html` is the website: overview map, ratings, comparison table, a service directory grouped by type (feeds, blocklists, alerts, reporting, notifications, tools, newsletters), latest posts and subscription links.
 - `docs/data/certs.json` is the hand-curated dataset (services, links, stats, scores). Edit it to correct or add a team.
@@ -14,7 +14,7 @@ A comparison of the national CSIRTs/CERTs of all 27 EU member states, plus EU-le
 3. Common feed paths (`/feed/`, `/rss.xml`, `/index.xml` …) on the team's site.
 4. If there is still no feed, new article links are read from the team's news `pages`.
 
-Feeds with nothing newer than two years are ignored as abandoned. Sites that answer every request with HTTP 403 are marked as blocking automated readers. As of October 2026 that applies to Belgium (CCB), Lithuania (NKSC), Malta (MITA) and Spain's CCN-CERT; Portugal's CNCS returns server errors.
+Feeds with nothing newer than two years are ignored as abandoned. Sites that answer every request with HTTP 403 are marked as blocking automated readers. As of October 2026 that applies to Belgium (CCB), Lithuania (NKSC), Malta (MITA), Spain's CCN-CERT, CISA's website and Israel's INCD; Portugal's CNCS returns server errors. CISA is tracked through its KEV catalogue mirror on GitHub instead. CERT-In, TWCERT/CC, ASD's ACSC and CERT-UA have no feed the updater can read yet.
 
 ## Viewing the site
 

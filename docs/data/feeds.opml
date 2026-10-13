@@ -31,5 +31,15 @@
   <outline type="rss" text="INT – abuse.ch" xmlUrl="https://abuse.ch/rss/" htmlUrl="https://abuse.ch/"/>
   <outline type="rss" text="NL – DIVD" xmlUrl="https://www.divd.nl/index.xml" htmlUrl="https://www.divd.nl/"/>
   <outline type="rss" text="INT – MISP Project" xmlUrl="https://www.misp-project.org/feed.xml" htmlUrl="https://www.misp-project.org/"/>
+  <outline type="rss" text="GB – NCSC UK" xmlUrl="https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml" htmlUrl="https://www.ncsc.gov.uk/"/>
+  <outline type="rss" text="US – CISA" xmlUrl="https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json" htmlUrl="https://www.cisa.gov/"/>
+  <outline type="rss" text="US – CERT/CC" xmlUrl="https://www.kb.cert.org/vuls/atomfeed/" htmlUrl="https://www.kb.cert.org/vuls/"/>
+  <outline type="rss" text="CA – Canadian Centre for Cyber Security" xmlUrl="https://www.cyber.gc.ca/api/cccs/rss/v1/get?feed=alerts_advisories&amp;lang=en" htmlUrl="https://www.cyber.gc.ca/en"/>
+  <outline type="rss" text="BR – CERT.br" xmlUrl="https://www.cert.br/rss/certbr-rss.xml" htmlUrl="https://www.cert.br/"/>
+  <outline type="rss" text="JP – JPCERT/CC" xmlUrl="https://blogs.jpcert.or.jp/en/atom.xml" htmlUrl="https://www.jpcert.or.jp/english/"/>
+  <outline type="rss" text="KR – KrCERT/CC" xmlUrl="https://knvd.krcert.or.kr/rss/security/notice" htmlUrl="https://www.krcert.or.kr/"/>
+  <outline type="rss" text="SG – SingCERT" xmlUrl="https://www.csa.gov.sg/alerts-and-advisories/rss.xml" htmlUrl="https://www.csa.gov.sg/resources/singcert"/>
+  <outline type="rss" text="HK – HKCERT" xmlUrl="https://www.hkcert.org/getrss/security-bulletin" htmlUrl="https://www.hkcert.org/"/>
+  <outline type="rss" text="NO – NSM NCSC" xmlUrl="https://nsm.no/rss/nyheter-fra-nsm/" htmlUrl="https://nsm.no/"/>
 </body>
 </opml>
