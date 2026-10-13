@@ -1,4 +1,4 @@
-# EU CERT Atlas
+# CERT Atlas
 
 A comparison of the national CSIRTs/CERTs of all 27 EU member states, plus EU-level bodies (CERT-EU, ENISA EUVD), free community services (Shadowserver, abuse.ch, DIVD, MISP) and 18 national teams outside the EU for comparison (UK, Switzerland, Norway, Ukraine, US CISA and CERT/CC, Canada, Brazil, Japan, South Korea, Singapore, India, China, Taiwan, Hong Kong, Australia, New Zealand, Israel).
 
