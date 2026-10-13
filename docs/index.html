@@ -2,44 +2,45 @@
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>EU CERT Atlas</title>
-<meta name="description" content="Comparison of national CSIRTs/CERTs in all 27 EU member states, plus EU-level and community services: capabilities, ratings, feeds, blocklists, alerts and reporting channels.">
+<title>CERT Atlas</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-1 -7.5 27 27'%3E%3Cg fill='%230b6e66'%3E%3Crect width='5' height='5'/%3E%3Crect x='6.5' width='5' height='5'/%3E%3Cpath d='M13 5V0h5z'/%3E%3Crect x='19.5' width='5' height='5'/%3E%3Crect y='6.5' width='5' height='5'/%3E%3Crect x='13' y='6.5' width='5' height='5'/%3E%3Cpath d='M19.5 11.5V6.5h5z'/%3E%3C/g%3E%3C/svg%3E">
+<meta name="description" content="A field guide to national incident response teams: all 27 EU member states plus 18 teams worldwide: capabilities, ratings, feeds, blocklists, alerts and reporting channels.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600;700&display=swap">
 <style>
-/* Layout: masthead + sticky section tabs; each section is a full-width band built on a 1100px column. Tile-grid map of the EU as the signature element. */
+/* Layout: slim sticky brand bar with underline tabs; left-aligned hero with a ruled spec strip; content on a 1120px column with hairline-ruled panels. Identity: teal "signal" ink, the 8-cell rating fingerprint as logomark. */
 :root {
-  --bg: #f3f5f8;
+  --bg: #f4f6f6;
   --surface: #ffffff;
-  --sunk: #e9edf3;
-  --ink: #131926;
-  --muted: #586378;
-  --line: #d9dfe8;
-  --accent: #1f4fd1;
+  --sunk: #e8edec;
+  --ink: #0e1a1c;
+  --muted: #56666a;
+  --line: #d6dedd;
+  --accent: #0b6e66;
   --accent-ink: #ffffff;
-  --s0: #e4e9f5; --s1: #c3d0f0; --s2: #93abe6; --s3: #5e82db; --s4: #2f58cf; --s5: #1c3a96;
+  --s0: #e1efed; --s1: #b8ddd8; --s2: #7fc2b9; --s3: #3fa095; --s4: #0f7a70; --s5: #0a4e48;
   --ok: #1a7f4b; --warn: #a15c00; --bad: #b42318;
   --c1: #2a78d6; --c2: #eb6834; --c3: #1baf7a;
   --f-display: "Archivo", "Arial Narrow", system-ui, sans-serif;
-  --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
-  --r: 6px;
+  --r: 4px;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0e121a; --surface: #161c27; --sunk: #1d2431; --ink: #e5e9f0; --muted: #9aa4b6; --line: #2a3242;
-    --accent: #8aa6ff; --accent-ink: #0e121a;
-    --s0: #1f2738; --s1: #23345e; --s2: #2c4a8c; --s3: #3d64bd; --s4: #6187e6; --s5: #a3bbff;
+    --bg: #0b1213; --surface: #111b1c; --sunk: #172426; --ink: #e3ecea; --muted: #93a6a5; --line: #233335;
+    --accent: #4fc1b3; --accent-ink: #0b1213;
+    --s0: #15292a; --s1: #1b3f3d; --s2: #1f5f59; --s3: #2a867d; --s4: #46b1a4; --s5: #8edbd0;
     --ok: #4cc38a; --warn: #f0a541; --bad: #ff7b72;
     --c1: #3987e5; --c2: #d95926; --c3: #199e70;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0e121a; --surface: #161c27; --sunk: #1d2431; --ink: #e5e9f0; --muted: #9aa4b6; --line: #2a3242;
-  --accent: #8aa6ff; --accent-ink: #0e121a;
-  --s0: #1f2738; --s1: #23345e; --s2: #2c4a8c; --s3: #3d64bd; --s4: #6187e6; --s5: #a3bbff;
+  --bg: #0b1213; --surface: #111b1c; --sunk: #172426; --ink: #e3ecea; --muted: #93a6a5; --line: #233335;
+  --accent: #4fc1b3; --accent-ink: #0b1213;
+  --s0: #15292a; --s1: #1b3f3d; --s2: #1f5f59; --s3: #2a867d; --s4: #46b1a4; --s5: #8edbd0;
   --ok: #4cc38a; --warn: #f0a541; --bad: #ff7b72;
   --c1: #3987e5; --c2: #d95926; --c3: #199e70;
   color-scheme: dark;
@@ -48,41 +49,52 @@
 body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--f-body); margin: 0; }
 a { color: var(--accent); text-underline-offset: 2px; }
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.wrap { max-width: 1100px; margin: 0 auto; padding-inline: 20px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 20px; }
 h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; line-height: 1.1; }
-h2 { font-size: 1.7rem; font-stretch: 80%; font-weight: 750; }
-h3 { font-size: 1.1rem; font-weight: 700; font-stretch: 90%; }
+h2 { font-size: 1.75rem; font-stretch: 88%; font-weight: 700; letter-spacing: -.005em; }
+h3 { font-size: 1.06rem; font-weight: 650; font-stretch: 96%; }
 .mono { font-family: var(--f-mono); font-size: .82em; }
 .muted { color: var(--muted); }
 .eyebrow { font: 500 .72rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 
-/* Masthead */
-header.mast { border-bottom: 1px solid var(--line); background: var(--surface); }
-.mast .wrap { padding-block: 28px 22px; display: grid; gap: 14px; }
-.mast-top { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; justify-content: space-between; }
-.tlp { font: 600 .72rem/1 var(--f-mono); background: #000; color: #fff; padding: 5px 8px; border-radius: 3px; letter-spacing: .04em; }
+/* Brand bar */
+header.topbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 6; background: color-mix(in srgb, var(--surface) 94%, transparent); backdrop-filter: saturate(1.4) blur(8px); border-bottom: 1px solid var(--line); }
+.bar-in { display: flex; align-items: center; gap: 0 28px; min-height: 58px; flex-wrap: wrap; }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font: 700 1.12rem/1 var(--f-display); font-stretch: 92%; letter-spacing: -.01em; white-space: nowrap; }
+.brand .mark { width: 30px; height: 14px; color: var(--accent); fill: currentColor; flex: none; }
+nav.tabs { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; flex: 1 1 auto; min-width: 0; align-self: stretch; }
+nav.tabs button { font: 500 .88rem/1 var(--f-body); color: var(--muted); background: none; border: 0; border-bottom: 2px solid transparent; padding: 0 10px; cursor: pointer; white-space: nowrap; min-height: 58px; }
+nav.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); font-weight: 600; }
+nav.tabs button:hover:not([aria-selected="true"]) { color: var(--ink); }
+.bar-meta { display: flex; align-items: center; gap: 10px; font: .72rem var(--f-mono); color: var(--muted); white-space: nowrap; }
+.tlp { font: 600 .66rem/1 var(--f-mono); background: #000; color: #fff; padding: 4px 6px; border-radius: 2px; letter-spacing: .05em; }
 .tlp b { color: #fff; }
-h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); font-stretch: 68%; font-weight: 800; letter-spacing: -.01em; }
-.lede { max-width: 66ch; color: var(--muted); margin: 0; }
-.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; margin-top: 6px; }
-.kpi { background: var(--surface); padding: 12px 14px; display: grid; gap: 2px; }
-.kpi b { font: 700 1.6rem/1.1 var(--f-display); font-stretch: 75%; font-variant-numeric: tabular-nums; }
-.kpi span { font-size: .8rem; color: var(--muted); }
+@media (max-width: 900px) {
+  .bar-in { padding-top: 10px; }
+  nav.tabs { order: 3; flex-basis: 100%; }
+  nav.tabs button:first-child { padding-left: 0; }
+  nav.tabs button { min-height: 42px; }
+  .bar-meta { margin-left: auto; }
+  #asof { display: none; }
+}
+/* Hero */
+.hero .wrap { padding-block: 44px 28px; display: grid; gap: 16px; }
+h1 { font-size: clamp(2rem, 4.4vw, 3.1rem); font-stretch: 86%; font-weight: 700; letter-spacing: -.015em; line-height: 1.04; max-width: 20ch; }
+h1 em { font-style: normal; color: var(--accent); }
+.lede { max-width: 62ch; color: var(--muted); margin: 0; font-size: 1.02rem; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); gap: 0 22px; margin-top: 14px; }
+.kpi { border-top: 1px solid var(--ink); padding: 10px 0 4px; display: grid; gap: 4px; align-content: start; }
+.kpi b { font: 600 1.7rem/1 var(--f-display); font-stretch: 90%; font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
+.kpi span { font-size: .78rem; color: var(--muted); line-height: 1.35; }
 
-/* Tabs */
-nav.tabs { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
-nav.tabs .wrap { display: flex; gap: 4px; overflow-x: auto; padding-block: 8px; scrollbar-width: none; }
-nav.tabs button { font: 600 .9rem/1 var(--f-body); color: var(--muted); background: none; border: 0; padding: 9px 12px; border-radius: 999px; cursor: pointer; white-space: nowrap; }
-nav.tabs button[aria-selected="true"] { background: var(--ink); color: var(--bg); }
-nav.tabs button:hover:not([aria-selected="true"]) { background: var(--sunk); color: var(--ink); }
-main section { padding-block: 32px 48px; }
-.section-head { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: end; justify-content: space-between; margin-bottom: 18px; }
+main section { padding-block: 8px 56px; }
+.section-head { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: end; justify-content: space-between; margin: 28px 0 18px; }
 .section-head p { margin: 6px 0 0; color: var(--muted); max-width: 70ch; }
 
 /* Overview: map + leaders */
 .overview { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 24px; }
 @media (max-width: 860px) { .overview { grid-template-columns: 1fr; } }
-.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 18px; min-width: 0; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 20px; min-width: 0; }
 .flag { width: 20px; height: 15px; border-radius: 2px; box-shadow: 0 0 0 1px var(--line); object-fit: cover; flex: none; display: inline-block; vertical-align: -2px; background: var(--sunk); }
 .flag.lg { width: 32px; height: 24px; border-radius: 3px; }
 .flag.globe { display: inline-grid; place-items: center; font-size: .7rem; color: var(--muted); }
@@ -162,7 +174,7 @@ main section { padding-block: 32px 48px; }
 /* Controls */
 .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 14px; }
 input[type="search"] { font: inherit; padding: 9px 12px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); color: var(--ink); min-width: 0; flex: 1 1 220px; max-width: 360px; }
-.chip { font: 500 .8rem/1 var(--f-body); padding: 8px 11px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.chip { font: 500 .8rem/1 var(--f-body); padding: 8px 11px; border-radius: var(--r); border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
 .chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
 
 /* Compare table */
@@ -229,34 +241,41 @@ dialog::backdrop { background: rgb(8 12 20 / .55); }
 .stat b { font: 700 1.3rem/1 var(--f-display); font-stretch: 75%; min-width: 110px; }
 .method { max-width: 72ch; }
 .method li { margin-bottom: 6px; }
+.foot { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 2fr); gap: 24px 40px; }
+@media (max-width: 760px) { .foot { grid-template-columns: 1fr; } }
+.foot-brand p { margin: 10px 0 0; max-width: 46ch; }
+.foot-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; }
+.foot-cols div { display: grid; gap: 6px; align-content: start; }
+.foot-cols strong { color: var(--ink); font-weight: 600; }
 footer { border-top: 1px solid var(--line); padding-block: 24px 40px; font-size: .82rem; color: var(--muted); }
 footer .wrap { display: grid; gap: 8px; }
 @media (prefers-reduced-motion: reduce) { .tile { transition: none; } .tile:hover { transform: none; } }
 </style>
 
-<header class="mast">
-  <div class="wrap">
-    <div class="mast-top">
-      <span class="eyebrow">National CSIRTs · EU-27 + world · <span id="asof"></span></span>
-      <span class="tlp" title="Traffic Light Protocol: may be shared without restriction"><b>TLP:CLEAR</b></span>
-    </div>
-    <h1>EU CERT Atlas</h1>
-    <p class="lede">The government and community incident response teams of all 27 EU member states, plus 18 leading teams from the UK, US, Asia-Pacific and beyond, compared on what they actually give the public: alerts, feeds, blocklists, reporting channels, open-source tools and notifications. Live feeds refresh every six hours.</p>
-    <div class="kpis" id="kpis"></div>
+<header class="topbar">
+  <div class="wrap bar-in">
+    <a class="brand" href="#overview" data-home><svg class="mark" viewBox="0 0 25 11.5" aria-hidden="true"><rect x="0" y="0" width="5" height="5"/><rect x="6.5" y="0" width="5" height="5"/><path d="M13 5V0h5z"/><rect x="13.5" y=".5" width="4" height="4" fill="none" stroke="currentColor"/><rect x="19.5" y="0" width="5" height="5"/><rect x="0" y="6.5" width="5" height="5"/><rect x="7" y="7" width="4" height="4" fill="none" stroke="currentColor"/><rect x="13" y="6.5" width="5" height="5"/><path d="M19.5 11.5V6.5h5z"/><rect x="20" y="7" width="4" height="4" fill="none" stroke="currentColor"/></svg><span>CERT Atlas</span></a>
+    <nav class="tabs" aria-label="Sections" role="tablist" id="tabs">
+      <button role="tab" data-tab="overview" aria-selected="true">Overview</button>
+      <button role="tab" data-tab="charts" aria-selected="false">Charts</button>
+      <button role="tab" data-tab="compare" aria-selected="false">Compare</button>
+      <button role="tab" data-tab="services" aria-selected="false">Services</button>
+      <button role="tab" data-tab="latest" aria-selected="false">Latest</button>
+      <button role="tab" data-tab="follow" aria-selected="false">Follow</button>
+      <button role="tab" data-tab="method" aria-selected="false">Method</button>
+    </nav>
+    <div class="bar-meta"><span id="asof"></span><span class="tlp" title="Traffic Light Protocol: may be shared without restriction"><b>TLP:CLEAR</b></span></div>
   </div>
 </header>
 
-<nav class="tabs" aria-label="Sections">
-  <div class="wrap" role="tablist" id="tabs">
-    <button role="tab" data-tab="overview" aria-selected="true">Overview</button>
-    <button role="tab" data-tab="charts" aria-selected="false">Charts</button>
-    <button role="tab" data-tab="compare" aria-selected="false">Compare</button>
-    <button role="tab" data-tab="services" aria-selected="false">Services</button>
-    <button role="tab" data-tab="latest" aria-selected="false">Latest feed</button>
-    <button role="tab" data-tab="follow" aria-selected="false">Follow</button>
-    <button role="tab" data-tab="method" aria-selected="false">Method</button>
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">A field guide to national incident response teams</span>
+    <h1>Who protects each country's internet, and <em>what they give the public</em>.</h1>
+    <p class="lede">Every EU member state's national CSIRT, plus 18 leading teams from the UK, US, Asia-Pacific and beyond, rated on alerts, feeds, blocklists, reporting channels, open-source tools and notifications. Ratings come from a blind, evidence-based review. Live posts refresh every six hours.</p>
+    <div class="kpis" id="kpis"></div>
   </div>
-</nav>
+</section>
 
 <main>
   <section id="overview" data-panel="overview">
@@ -405,9 +424,13 @@ footer .wrap { display: grid; gap: 8px; }
 </main>
 
 <footer>
-  <div class="wrap">
-    <span>Flags: <a href="https://github.com/lipis/flag-icons">flag-icons</a> (MIT) · Map: <a href="https://github.com/topojson/world-atlas">Natural Earth via world-atlas</a> · Data: <a href="data/certs.json">certs.json</a> · <a href="data/latest.json">latest.json</a> · <a href="data/feeds.opml">feeds.opml</a> · Source: <a href="https://github.com/angelflyer/story">github.com/angelflyer/story</a></span>
-    <span>Not affiliated with any CERT. Names belong to their respective organisations.</span>
+  <div class="wrap foot">
+    <div class="foot-brand"><span class="brand"><svg class="mark" viewBox="0 0 25 11.5" aria-hidden="true"><rect x="0" y="0" width="5" height="5"/><rect x="6.5" y="0" width="5" height="5"/><path d="M13 5V0h5z"/><rect x="13.5" y=".5" width="4" height="4" fill="none" stroke="currentColor"/><rect x="19.5" y="0" width="5" height="5"/><rect x="0" y="6.5" width="5" height="5"/><rect x="7" y="7" width="4" height="4" fill="none" stroke="currentColor"/><rect x="13" y="6.5" width="5" height="5"/><path d="M19.5 11.5V6.5h5z"/><rect x="20" y="7" width="4" height="4" fill="none" stroke="currentColor"/></svg><span>CERT Atlas</span></span><p>An independent field guide to national incident response teams. Not affiliated with any CERT; names belong to their organisations. Shared under TLP:CLEAR.</p></div>
+    <div class="foot-cols">
+      <div><strong>Data</strong><a href="data/certs.json">certs.json</a><a href="data/latest.json">latest.json</a><a href="data/feeds.opml">feeds.opml</a></div>
+      <div><strong>Project</strong><a href="https://github.com/angelflyer/story">GitHub repository</a><a href="#method" data-goto="method">Method</a></div>
+      <div><strong>Credits</strong><a href="https://github.com/lipis/flag-icons">flag-icons (MIT)</a><a href="https://github.com/topojson/world-atlas">Natural Earth / world-atlas</a></div>
+    </div>
   </div>
 </footer>
 
@@ -466,7 +489,7 @@ footer .wrap { display: grid; gap: 8px; }
       [block, "national teams running public blocking"],
       [L.updated ? withFeed : "—", L.updated ? "teams tracked live" : "live feeds pending first run"]
     ].map(([b, s]) => `<div class="kpi"><b>${b}</b><span>${s}</span></div>`).join("");
-    $("#asof").textContent = "data as of " + D.meta.asOf;
+    $("#asof").textContent = "Data " + D.meta.asOf;
   }
 
   const bestByCc = () => { const best = {}; D.certs.filter(c => c.kind === "national" || c.kind === "eu" || (mapScope === "world" && c.kind === "international")).forEach(c => { if (!best[c.cc] || score(c) > score(best[c.cc])) best[c.cc] = c; }); return best; };
@@ -714,6 +737,8 @@ footer .wrap { display: grid; gap: 8px; }
   }
 
   document.addEventListener("click", e => {
+    if (e.target.closest("[data-home]")) { e.preventDefault(); showTab("overview"); scrollTo({ top: 0 }); return; }
+    const go = e.target.closest("[data-goto]"); if (go) { e.preventDefault(); showTab(go.dataset.goto); scrollTo({ top: 0 }); return; }
     const sc = e.target.closest("[data-scope]"); if (sc) { mapScope = sc.dataset.scope; drawMap(); return; }
     const lb = e.target.closest("[data-lb]"); if (lb) { lbScope = lb.dataset.lb; leaders(); return; }
     const mt = e.target.closest("[data-metric]"); if (mt) { metric = mt.dataset.metric; drawMetrics(); drawMap(); return; }
@@ -745,6 +770,7 @@ footer .wrap { display: grid; gap: 8px; }
     let t = "overview"; try { t = localStorage.getItem("atlas-tab") || t; } catch (e) {}
     const h = location.hash.slice(1); if (document.querySelector(`[data-tab="${h}"]`)) t = h;
     showTab(t);
+    if (h) scrollTo({ top: 0 });
   })();
 })();
 </script>
