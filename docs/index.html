@@ -223,6 +223,8 @@ dialog::backdrop { background: rgb(8 12 20 / .55); }
 .fingerprint { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 6px 18px; }
 .fp { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: center; font-size: .85rem; }
 .fp .cells { display: flex; gap: 3px; } .fp .cells i { width: 18px; height: 10px; border-radius: 2px; background: var(--sunk); display: block; } .fp .cells i.on { background: var(--s4); }
+.evid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px 20px; margin-top: 8px; }
+.ev p { margin: 3px 0 0; font-size: .82rem; color: var(--muted); }
 .stat { display: flex; gap: 12px; align-items: baseline; padding: 6px 0; border-bottom: 1px solid var(--line); }
 .stat b { font: 700 1.3rem/1 var(--f-display); font-stretch: 75%; min-width: 110px; }
 .method { max-width: 72ch; }
@@ -319,6 +321,12 @@ footer .wrap { display: grid; gap: 8px; }
         </div>
       </div>
       <div class="panel" style="margin-top:24px">
+        <div class="eyebrow">Before and after the blind re-rating</div>
+        <h3 style="margin-top:6px">How each team's score moved</h3>
+        <div class="legend" style="margin-top:8px"><span><i class="sw" style="background:var(--surface);box-shadow:inset 0 0 0 2px var(--muted);border-radius:50%"></i>First editorial score</span><span><i class="sw" style="background:var(--c1);border-radius:50%"></i>Independent score</span></div>
+        <div class="rank fresh" id="dumbbell" style="margin-top:10px"></div>
+      </div>
+      <div class="panel" style="margin-top:24px">
         <div class="eyebrow">EU vs the world</div>
         <h3 style="margin-top:6px">Average rating per dimension: EU national teams compared with non-EU national teams</h3>
         <div class="legend" id="evw-legend" style="margin-top:8px"></div>
@@ -386,8 +394,11 @@ footer .wrap { display: grid; gap: 8px; }
       <h2>Method</h2>
       <p id="scale"></p>
       <ol id="rubric"></ol>
+      <h3 style="margin-top:20px">How the scores were produced</h3>
+      <p id="rating-note"></p>
+      <p>The blind re-rating agreed with the first editorial scores on 295 of 416 individual dimension scores (71%), with a rank correlation of 0.62 and an average absolute change of 10 points. CERT Polska scored 100 in both rounds and was the only team to reach the maximum in either. The rubric itself was written by the same author as the first round, so it can still favour some kinds of service over others. The Charts tab shows each team's before and after scores.</p>
       <p>Each EU member state is represented by its national CSIRT under the NIS2 Directive. Where a country has separate government or sector teams, they appear under <em>Related teams</em> in the profile, and Spain's CCN-CERT is scored separately because it offers its own public services. EU-level bodies (CERT-EU, ENISA) and free community services (Shadowserver, abuse.ch, DIVD, MISP) are scored on the same rubric for reference. For international comparison, 18 national teams outside the EU are included: the UK, Switzerland, Norway, Ukraine, the US (CISA and CERT/CC), Canada, Brazil, Japan, South Korea, Singapore, India, China, Taiwan, Hong Kong, Australia, New Zealand and Israel.</p>
-      <p>Scores reflect public information found through web research in October 2026, including official pages, RFC 2350 profiles, annual reports and reputable press. Services a team offers only to its regulated constituency score as limited. These are editorial assessments for orientation, not audits. Check each team's site before relying on a detail, and report corrections through the repository.</p>
+      <p>All evidence is public information found through web search in October 2026: official pages, RFC 2350 profiles, annual reports and reputable press. Each profile lists the evidence and sources behind every dimension score. These are assessments for orientation, not audits. Check each team's site before relying on a detail, and report corrections through the repository.</p>
       <p>The feed panel is filled by a scheduled GitHub Action that tries each team's known feed URLs, then auto-discovers feeds on the team's homepage. Teams without a working public feed are listed as such.</p>
     </div>
   </section>
@@ -416,6 +427,7 @@ footer .wrap { display: grid; gap: 8px; }
   const badge = cc => `<span class="badge">${flag(cc)}<span class="cc">${cc}</span></span>`;
   const SERIES = ["var(--c1)", "var(--c2)", "var(--c3)"];
   let sortKey = "score", sortDir = -1, kindFilter = new Set(Object.keys(KINDS));
+  const score1 = c => c.scores_v1 ? Math.round(DIMS.reduce((a, k) => a + (c.scores_v1[k] || 0), 0) / (DIMS.length * 2) * 100) : null;
   const score = c => Math.round(DIMS.reduce((a, k) => a + (c.scores[k] || 0), 0) / (DIMS.length * 2) * 100);
   const step = s => Math.min(5, Math.floor(s / 100 * 6));
   const byId = id => D.certs.find(c => c.id === id);
@@ -524,7 +536,7 @@ footer .wrap { display: grid; gap: 8px; }
     const opts = sel => D.certs.map(c => `<option value="${c.id}"${c.id === sel ? " selected" : ""}>${c.cc} · ${esc(c.name)}</option>`).join("");
     $("#pickers").innerHTML = picks.map((p, i) => `<label class="picker"><i class="sw" style="background:${SERIES[i]};width:14px;height:14px;border-radius:${["50%", "2px", "0"][i]}"></i><select data-pick="${i}" aria-label="Team ${i + 1}">${i ? '<option value="">None</option>' : ""}${opts(p)}</select></label>`).join("");
     radar();
-    ranking(); freshness(); euVsWorld(); matrix();
+    ranking(); freshness(); dumbbell(); euVsWorld(); matrix();
   }
   function radar() {
     const sel = picks.map(id => id && byId(id)).filter(Boolean);
@@ -548,6 +560,10 @@ footer .wrap { display: grid; gap: 8px; }
     picks.forEach((id, si) => { const c = id && byId(id); if (!c) return; DIMS.forEach((k, i) => { const [x, y] = pt(i, R * c.scores[k] / 2); g += `<g><title>${esc(c.name)} · ${esc(D.meta.rubric[k])}: ${["none", "limited", "full"][c.scores[k]]}</title>${marker(si, x, y, SERIES[si])}</g>`; }); });
     $("#radar").innerHTML = g;
     $("#h2htable").innerHTML = `<thead><tr><th>Dimension</th>${sel.map((c, i) => `<th style="text-align:center"><i class="sw" style="background:${SERIES[picks.indexOf(c.id)]}"></i>${c.cc}</th>`).join("")}</tr></thead><tbody>${DIMS.map(k => `<tr style="cursor:default"><td>${esc(SHORT[k])}</td>${sel.map(c => `<td class="dim">${pip(c.scores[k])}</td>`).join("")}</tr>`).join("")}<tr style="cursor:default"><td><strong>Score</strong></td>${sel.map(c => `<td style="text-align:center"><span class="score">${score(c)}</span></td>`).join("")}</tr></tbody>`;
+  }
+  function dumbbell() {
+    const rows = [...D.certs].sort((a, b) => score(b) - score(a) || score1(b) - score1(a));
+    $("#dumbbell").innerHTML = rows.map(c => { const a = score1(c), b = score(c), lo = Math.min(a, b), hi = Math.max(a, b); return `<button class="row" data-id="${c.id}" title="${esc(c.name)}: ${a} before, ${b} after"><span class="nm">${flag(c.cc)}<span style="overflow:hidden;text-overflow:ellipsis">${esc(c.name)}</span></span><span class="track"><span class="stem" style="left:${lo}%;width:${hi - lo}%;background:var(--line)"></span><span class="dot" style="left:${a}%;background:var(--surface);box-shadow:inset 0 0 0 2px var(--muted),0 0 0 2px var(--surface)"></span><span class="dot" style="left:${b}%;background:var(--c1)"></span></span><b>${b - a > 0 ? "+" : ""}${b - a}</b></button>`; }).join("") + `<div class="axisrow"><span></span><span class="ticks">${[0, 25, 50, 75, 100].map(t => `<span style="left:${t}%">${t}</span>`).join("")}</span><span></span></div>`;
   }
   function euVsWorld() {
     const eu = D.certs.filter(c => c.kind === "national"), w = D.certs.filter(c => c.kind === "international");
@@ -603,17 +619,17 @@ footer .wrap { display: grid; gap: 8px; }
   }
 
   function table() {
-    const head = `<tr><th><button data-sort="cc">Country</button></th><th><button data-sort="name">Team</button></th><th><button data-sort="score">Score ${sortKey === "score" ? (sortDir < 0 ? "↓" : "↑") : ""}</button></th>${DIMS.map(k => `<th class="dim" title="${esc(D.meta.rubric[k])}"><button data-sort="${k}">${SHORT[k]}</button></th>`).join("")}<th>Feed</th></tr>`;
+    const head = `<tr><th><button data-sort="cc">Country</button></th><th><button data-sort="name">Team</button></th><th><button data-sort="score">Score ${sortKey === "score" ? (sortDir < 0 ? "↓" : "↑") : ""}</button></th><th title="First editorial score, before the blind re-rating"><button data-sort="v1">Before</button></th>${DIMS.map(k => `<th class="dim" title="${esc(D.meta.rubric[k])}"><button data-sort="${k}">${SHORT[k]}</button></th>`).join("")}<th>Feed</th></tr>`;
     $("#table thead").innerHTML = head;
     const q = $("#q").value.trim().toLowerCase();
     const rows = D.certs.filter(c => kindFilter.has(c.kind)).filter(c => !q || [c.name, c.full, c.country, c.cc, c.about, ...c.services.map(s => s.name + " " + s.desc)].join(" ").toLowerCase().includes(q));
-    const val = c => sortKey === "score" ? score(c) : sortKey === "name" ? c.name.toLowerCase() : sortKey === "cc" ? c.country : c.scores[sortKey];
+    const val = c => sortKey === "score" ? score(c) : sortKey === "v1" ? score1(c) : sortKey === "name" ? c.name.toLowerCase() : sortKey === "cc" ? c.country : c.scores[sortKey];
     rows.sort((a, b) => (val(a) > val(b) ? 1 : val(a) < val(b) ? -1 : score(b) - score(a)) * (sortKey === "name" || sortKey === "cc" ? -sortDir : sortDir));
     $("#table tbody").innerHTML = rows.map(c => {
       const s = score(c), t = L.teams[c.id];
       const st = feedStatus(t);
-      return `<tr data-id="${c.id}" tabindex="0"><td>${badge(c.cc)} <span class="muted" style="font-size:.8rem">${esc(c.country)}</span></td><td><strong>${esc(c.name)}</strong><br><span class="kind">${KINDS[c.kind]}</span></td><td><div class="scorecell"><span class="score">${s}</span><span class="track"><span class="fill" style="width:${s}%;display:block"></span></span></div></td>${DIMS.map(k => `<td class="dim">${pip(c.scores[k])}</td>`).join("")}<td>${st}</td></tr>`;
-    }).join("") || `<tr><td colspan="12" class="muted">No team matches “${esc(q)}”.</td></tr>`;
+      return `<tr data-id="${c.id}" tabindex="0"><td>${badge(c.cc)} <span class="muted" style="font-size:.8rem">${esc(c.country)}</span></td><td><strong>${esc(c.name)}</strong><br><span class="kind">${KINDS[c.kind]}</span></td><td><div class="scorecell"><span class="score">${s}</span><span class="track"><span class="fill" style="width:${s}%;display:block"></span></span></div></td><td class="mono" style="white-space:nowrap">${score1(c) ?? "—"} <span class="delta" style="color:${s - score1(c) > 0 ? "var(--ok)" : s - score1(c) < 0 ? "var(--bad)" : "var(--muted)"}">${s - score1(c) > 0 ? "+" : ""}${s - score1(c) || "±0"}</span></td>${DIMS.map(k => `<td class="dim">${pip(c.scores[k])}</td>`).join("")}<td>${st}</td></tr>`;
+    }).join("") || `<tr><td colspan="13" class="muted">No team matches “${esc(q)}”.</td></tr>`;
   }
 
   function kindChips() {
@@ -665,7 +681,8 @@ footer .wrap { display: grid; gap: 8px; }
 
   function method() {
     $("#scale").textContent = D.meta.scale;
-    $("#rubric").innerHTML = DIMS.map(k => `<li><strong>${SHORT[k]}</strong>: ${esc(D.meta.rubric[k])}</li>`).join("");
+    $("#rubric").innerHTML = DIMS.map(k => `<li><strong>${esc(D.meta.rubric[k])}</strong><br><span class="muted">${esc(D.meta.levels?.[k] || "")}</span></li>`).join("");
+    $("#rating-note").textContent = D.meta.rating || "";
   }
 
   function open(id) {
@@ -678,7 +695,9 @@ footer .wrap { display: grid; gap: 8px; }
     <div class="dlg-body">
       <p style="margin:0">${esc(c.about)}</p>
       <dl class="facts"><div><dt>Hosted by</dt><dd>${esc(c.host)}</dd></div><div><dt>Serves</dt><dd>${esc(c.constituency)}</dd></div><div><dt>Languages</dt><dd>${c.langs.join(" · ")}</dd></div><div><dt>Website</dt><dd><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.url.replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a></dd></div></dl>
-      <div><div class="eyebrow" style="margin-bottom:8px">Capability fingerprint</div><div class="fingerprint">${DIMS.map(k => `<div class="fp" title="${esc(D.meta.rubric[k])}"><span>${esc(D.meta.rubric[k])}</span><span class="cells"><i class="${c.scores[k] >= 1 ? "on" : ""}"></i><i class="${c.scores[k] >= 2 ? "on" : ""}"></i></span></div>`).join("")}</div></div>
+      <div><div class="cat-head"><h3>Rating evidence</h3><span class="n mono">independent · ${esc(c.evidence?.confidence || "—")} confidence · before ${score1(c) ?? "—"}</span></div>
+        <div class="evid">${DIMS.map(k => `<div class="ev"><div class="fp"><span><strong>${esc(D.meta.rubric[k])}</strong></span><span class="cells"><i class="${c.scores[k] >= 1 ? "on" : ""}"></i><i class="${c.scores[k] >= 2 ? "on" : ""}"></i></span></div><p>${esc(c.evidence?.why?.[k] || "")}${c.scores_v1 && c.scores_v1[k] !== c.scores[k] ? ` <span class="mono" style="color:var(--muted)">(before: ${c.scores_v1[k]})</span>` : ""}</p></div>`).join("")}</div>
+        ${c.evidence?.sources?.length ? `<p class="muted" style="font-size:.8rem;margin:10px 0 0">Sources: ${c.evidence.sources.map((u, i) => `<a href="${esc(u)}" target="_blank" rel="noopener">[${i + 1}]</a>`).join(" ")}</p>` : ""}</div>
       ${Object.entries(groups).map(([k, ss]) => `<div><div class="cat-head"><h3>${esc(D.meta.categories[k])}</h3></div>${ss.map(s => `<div class="svc" style="grid-template-columns:1fr"><div class="what">${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>` : `<strong>${esc(s.name)}</strong>`}<p>${esc(s.desc)}</p></div></div>`).join("")}</div>`).join("")}
       ${c.stats.length ? `<div><div class="cat-head"><h3>Numbers</h3></div>${c.stats.map(s => `<div class="stat"><b>${esc(s.value)}</b><span>${esc(s.label)}${s.note ? `<br><span class="muted" style="font-size:.8rem">${esc(s.note)}</span>` : ""}</span></div>`).join("")}</div>` : ""}
       ${t && t.items && t.items.length ? `<div><div class="cat-head"><h3>Latest posts</h3><span class="n mono">${fmtDate(L.updated)}</span></div>${t.items.slice(0, 5).map(i => `<div class="item"><time>${fmtDate(i.date)}</time><div><a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.title)}</a></div></div>`).join("")}</div>` : ""}
