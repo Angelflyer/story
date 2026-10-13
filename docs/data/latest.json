@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13T21:20:59+00:00",
+ "updated": "2026-10-13T21:24:30+00:00",
  "teams": {
   "cert-pl": {
    "status": "ok",
@@ -113,6 +113,7 @@
   },
   "ccb-be": {
    "status": "no-feed",
+   "blocked": true,
    "tried": [
     "https://ccb.belgium.be/advisories/rss.xml",
     "https://ccb.belgium.be/rss.xml",
@@ -253,19 +254,59 @@
    ]
   },
   "csirt-cz": {
-   "status": "no-feed",
-   "tried": [
-    "https://csirt.cz/cs/rss/",
-    "https://csirt.cz/feed/",
-    "https://csirt.cz/rss.xml",
-    "https://csirt.cz/rss",
-    "https://csirt.cz/feed.xml",
-    "https://csirt.cz/atom.xml",
-    "https://csirt.cz/index.xml",
-    "https://csirt.cz/feed.rss",
-    "https://csirt.cz/?format=feed&type=rss"
-   ],
-   "items": []
+   "status": "ok",
+   "feed": "https://www.nic.cz/rss/news/",
+   "via": "discovered",
+   "items": [
+    {
+     "title": "CSNOG 2027: organizátoři zveřejnili Call for Abstracts, ty platí do 31. října",
+     "link": "https://www.nic.cz/page/4655/",
+     "date": "2026-09-29T10:20:00+00:00",
+     "summary": "Návrhy konferenčních příspěvků mohou být věnované nejen správě sítí nebo bezpečnosti, ale programový výbor uvítá i přednášky s mezioborovým přesahem, například do oblasti legislativy nebo regulace."
+    },
+    {
+     "title": "Akademie CZ.NIC rozšiřuje nabídku vzdělávání o dva nové kurzy",
+     "link": "https://www.nic.cz/page/4652/",
+     "date": "2026-09-08T11:30:00+00:00",
+     "summary": "[Tisková zpráva] V harmonogramu Akademie CZ.NIC na druhou polovinu letošního roku se objevují dva nové kurzy – Linux pro mírně pokročilé a Exfiltrace dat: Útok a obrana."
+    },
+    {
+     "title": "Národní bezpečnostní tým CSIRT.CZ spouští službu Strážci internetu",
+     "link": "https://www.nic.cz/page/4647/",
+     "date": "2026-09-02T08:15:00+00:00",
+     "summary": "[Tisková zpráva] Nový nástroj podporuje jak hlášení vyžadující autorizaci, tak anonymní reporting, u kterého však nebude možné zapojit takovou míru automatizace jako u neanonymních oznámení."
+    },
+    {
+     "title": "Nový podcast Safer Internet Centra ČR pomůže rodičům lépe se orientovat v online světě dětí",
+     "link": "https://www.nic.cz/page/4643/",
+     "date": "2026-07-01T12:48:43+00:00",
+     "summary": "Cílem podcastu je nabídnout jasná data, konkrétní rady a návody, které mohou rodiče, pedagogové i další dospělí využít doma i ve škole. Bez zbytečného strašení a obecných frází chce podcast pomoci dospělým lépe porozumět digitálnímu světu dětí a otevírat s nimi důležitá témata…"
+    },
+    {
+     "title": "Safer Internet Centrum ČR se zapojilo do pracovní skupiny Kybermravnost",
+     "link": "https://www.nic.cz/page/4644/",
+     "date": "2026-06-22T10:35:00+00:00",
+     "summary": "[Tisková zpráva] Skupina propojuje instituce a odborné organizace, které se věnují prevenci, detekci a řešení rizik spojených s mravnostní kriminalitou v online prostředí. Vedle Ministerstva vnitra, Safer Internet Centra ČR a linky STOPonline.cz jsou její součástí také Policie…"
+    },
+    {
+     "title": "V Edici CZ.NIC vychází kniha Kódy, buildy, firmwary od Martina Malého",
+     "link": "https://www.nic.cz/page/4638/",
+     "date": "2026-06-18T07:30:00+00:00",
+     "summary": "[Tisková zpráva] Čtenář se v knize seznámí s různými možnostmi automatizace s cílem zlepšení a zjednodušení procesu vývoje domácích elektroprojektů, například pomocí ladicích nástrojů, build systémů nebo využití CI/CD pipeline."
+    },
+    {
+     "title": "Česko se zapojí do největšího evropského cvičení kybernetických krizí Cyber Europe 2026",
+     "link": "https://www.nic.cz/page/4640/",
+     "date": "2026-06-10T07:20:00+00:00",
+     "summary": "[Tisková zpráva] Národní koordinaci cvičení v České republice zajišťuje sdružení CZ.NIC prostřednictvím týmu CSIRT.CZ. CZ.NIC se organizaci cvičení Cyber Europe věnuje již od roku 2012, kdy se Česká republika zapojila do prvního ročníku."
+    },
+    {
+     "title": "Prezentace a videozáznamy z konference Den IPv6 2026 jsou na webu akce",
+     "link": "https://www.nic.cz/page/4639/",
+     "date": "2026-06-09T11:46:56+00:00",
+     "summary": "Konference věnovaná internetovému protokolu IPv6 proběhla 4. června v Národní technické knihovně v pražských Dejvicích."
+    }
+   ]
   },
   "cfcs-dk": {
    "status": "ok",
@@ -323,23 +364,59 @@
    ]
   },
   "cert-ee": {
-   "status": "no-feed",
-   "tried": [
-    "https://www.ria.ee/en/cyber-security (discovery: HTTPError 404)",
-    "https://www.ria.ee/en/news (discovery: HTTPError 404)",
-    "https://www.ria.ee/en/cyber-security/feed/",
-    "https://www.ria.ee/en/cyber-security/rss.xml",
-    "https://www.ria.ee/en/cyber-security/rss",
-    "https://www.ria.ee/feed/",
-    "https://www.ria.ee/rss.xml",
-    "https://www.ria.ee/rss",
-    "https://www.ria.ee/feed.xml",
-    "https://www.ria.ee/atom.xml",
-    "https://www.ria.ee/index.xml",
-    "https://www.ria.ee/feed.rss",
-    "https://www.ria.ee/?format=feed&type=rss"
-   ],
-   "items": []
+   "status": "ok",
+   "feed": "https://www.ria.ee/en/rss-feeds/rss.xml",
+   "via": "discovered",
+   "items": [
+    {
+     "title": "Reporting scam sites helps to prevent further victims",
+     "link": "https://ria.ee/en/news/reporting-scam-sites-helps-prevent-further-victims",
+     "date": "2026-10-13T10:26:18+00:00",
+     "summary": "One person’s vigilance can help to protect many others from fraud. The Information System Authority (RIA) invites the public to report fraudulent websites by emailing cert@cert.ee, so that these websites can be removed from the internet."
+    },
+    {
+     "title": "September in cyberspace: data breaches and disruptions to government e-services",
+     "link": "https://ria.ee/en/news/september-cyberspace-data-breaches-and-disruptions-government-e-services",
+     "date": "2026-10-05T06:45:59+00:00",
+     "summary": "The Information System Authority (RIA) registered 964 cyber incidents with an impact in September. Among the more serious incidents this month were data breaches affecting the dental care information system and the University of Tartu’s online bookshop, denial-of-service…"
+    },
+    {
+     "title": "The Windows update released on March 10 resolves issues affecting the use of new Thales ID cards",
+     "link": "https://ria.ee/en/news/windows-update-released-march-10-resolves-issues-affecting-use-new-thales-id-cards",
+     "date": "2026-09-17T07:43:00+00:00",
+     "summary": "The Windows update released on March 10 resolves an issue with new ID-cards that prevented the DigiDoc4 app from recognizing them. RIA recommends downloading and installing the latest Windows software update to ensure trouble-free use of your ID-card."
+    },
+    {
+     "title": "Estonian experts develop cyber defence doctrine for the AI era",
+     "link": "https://ria.ee/en/news/estonian-experts-develop-cyber-defence-doctrine-ai-era",
+     "date": "2026-09-16T10:18:14+00:00",
+     "summary": "Experts and researchers from Estonian government agencies, universities, technology companies and banks have developed a comprehensive cyber defence policy paper setting out recommendations for countries seeking to protect digital society in the age of artificial intelligence."
+    },
+    {
+     "title": "August in cyberspace: service disruptions, ransomware attacks, and phishing messages",
+     "link": "https://ria.ee/en/news/august-cyberspace-service-disruptions-ransomware-attacks-and-phishing-messages",
+     "date": "2026-09-03T09:49:42+00:00",
+     "summary": "In August, the Information System Authority registered 899 cyber incidents with an impact. Over the course of the month, there were disruptions to several key services, a school in Harju County was hit by a ransomware attack, and a phishing campaign with the perpetrator…"
+    },
+    {
+     "title": "RIA: Mobile-ID users will need to replace their SIM cards to continue using the service",
+     "link": "https://ria.ee/en/news/ria-mobile-id-users-will-need-replace-their-sim-cards-continue-using-service",
+     "date": "2026-08-06T07:06:50+00:00",
+     "summary": "Due to updates to the EU regulation on electronic identification and trust services (the eIDAS Regulation), mobile network operators will start to gradually replace SIM cards that support the Mobile-ID service. The way Mobile-ID is used will not change, but users will need to…"
+    },
+    {
+     "title": "July in cyberspace: hacked websites, service disruptions, and phishing emails",
+     "link": "https://ria.ee/en/news/july-cyberspace-hacked-websites-service-disruptions-and-phishing-emails",
+     "date": "2026-08-05T11:14:25+00:00",
+     "summary": "The Information System Authority (RIA) registered 1,044 cyber incidents in July. Over the course of the month, several websites experienced disruptions, defacements of Estonian websites became more frequent, and phishing emails sent posing as banks continued."
+    },
+    {
+     "title": "Mai Kraft appointed Director of RIA's National Cyber Security Centre",
+     "link": "https://ria.ee/en/news/mai-kraft-appointed-director-rias-national-cyber-security-centre",
+     "date": "2026-08-03T10:26:20+00:00",
+     "summary": "As of 1 August, Mai Kraft has assumed the position of Director of the National Cyber Security Centre of Estonia (NCSC-EE) at the Estonian Information System Authority (RIA), as well as Deputy Director General for Cyber Security. She succeeds Gert Auväärt, who has been appointed…"
+    }
+   ]
   },
   "ncsc-fi": {
    "status": "ok",
@@ -562,20 +639,59 @@
    ]
   },
   "nki-hu": {
-   "status": "no-feed",
-   "tried": [
-    "https://nki.gov.hu/feed/",
-    "https://nki.gov.hu/figyelmeztetesek/ (discovery: HTTPError 404)",
-    "https://nki.gov.hu/intezet/tartalom/rss-csatornak/",
-    "https://nki.gov.hu/rss.xml",
-    "https://nki.gov.hu/rss",
-    "https://nki.gov.hu/feed.xml",
-    "https://nki.gov.hu/atom.xml",
-    "https://nki.gov.hu/index.xml",
-    "https://nki.gov.hu/feed.rss",
-    "https://nki.gov.hu/?format=feed&type=rss"
-   ],
-   "items": []
+   "status": "ok",
+   "feed": "https://nki.gov.hu/figyelmeztetesek/riasztas/feed/",
+   "via": "known",
+   "items": [
+    {
+     "title": "Riasztás a WordPress Core-t érintő sérülékenységről",
+     "link": "https://nki.gov.hu/figyelmeztetesek/riasztas/riasztas-a-wordpress-core-t-erinto-serulekenysegrol/",
+     "date": "2026-10-01T10:27:15+00:00",
+     "summary": "A Nemzetbiztonsági Szakszolgálat Nemzeti Kiberbiztonsági Intézete riasztást ad ki a széles körben használt WordPress tartalomkezelő rendszer (Core) aktívan kihasznált sérülékenysége miatt. A CISA 2026. szeptember 25-én vette fel a KEV-katalógusába. A hiba hitelesítés nélkül…"
+    },
+    {
+     "title": "Riasztás a Cisco Catalyst SD-WAN Manager rendszert érintő sérülékenységről",
+     "link": "https://nki.gov.hu/figyelmeztetesek/riasztas/riasztas-a-cisco-catalyst-sd-wan-manager-rendszert-erinto-serulekenysegrol/",
+     "date": "2026-10-01T10:24:00+00:00",
+     "summary": "A Nemzetbiztonsági Szakszolgálat Nemzeti Kiberbiztonsági Intézete riasztást ad ki a Cisco Catalyst SD-WAN Manager API-jának hitelesítését érintő, aktívan kihasznált kritikus sérülékenység miatt. A hibát a Cisco közlése szerint 2026 szeptemberében már aktívan kihasználták. A…"
+    },
+    {
+     "title": "Riasztás a NetScaler ADC és NetScaler Gateway termékeket érintő sérülékenységekről",
+     "link": "https://nki.gov.hu/figyelmeztetesek/riasztas/riasztas-a-netscaler-adc-es-netscaler-gateway-termekeket-erinto-serulekenysegekrol/",
+     "date": "2026-09-28T10:59:18+00:00",
+     "summary": "A Nemzetbiztonsági Szakszolgálat Nemzeti Kiberbiztonsági Intézet riasztást ad ki a NetScaler ADC és NetScaler Gateway termékeket érintő CVE-2026-88771 és CVE-2026-88772 azonosítójú, aktívan kihasznált kritikus sérülékenységek kapcsán. A gyártó 2026. szeptember 27-én adott ki…"
+    },
+    {
+     "title": "Riasztás a Tárhely.Eu nevében küldött adathalász kampány kapcsán",
+     "link": "https://nki.gov.hu/figyelmeztetesek/riasztas/riasztas-a-tarhely-eu-neveben-kuldott-adathalasz-kampany-kapcsan/",
+     "date": "2026-09-25T06:18:10+00:00",
+     "summary": "A Nemzetbiztonsági Szakszolgálat Nemzeti Kiberbiztonsági Intézet riasztást ad ki a Tárhely.Eu tárhelyszolgáltató nevében küldött adathalász kampány kapcsán. A beérkezett bejelentések alapján ismeretlen elkövetők a Tárhely.Eu nevével visszaélve fizetési felszólításokat küldenek…"
+    },
+    {
+     "title": "Riasztás az F5 BIG-IP APM rendszert érintő CVE-2026-94127 sérülékenységről",
+     "link": "https://nki.gov.hu/figyelmeztetesek/riasztas/riasztas-az-f5-big-ip-apm-rendszert-erinto-cve-2026-94127-serulekenysegrol/",
+     "date": "2026-09-23T08:20:50+00:00",
+     "summary": "A Nemzetbiztonsági Szakszolgálat Nemzeti Kiberbiztonsági Intézet riasztást ad ki a BIG-IP Access Policy Manager-t (APM) érintő CVE-2026-94127 azonosítón nyomon követett, kritikus, nulladik napi sérülékenység kapcsán. A sérülékenység egy heap-alapú puffertúlcsordulás, amely…"
+    },
+    {
+     "title": "Riasztás Check Point Security Management Server-t érintő sérülékenységről",
+     "link": "https://nki.gov.hu/figyelmeztetesek/riasztas/riasztas-check-point-security-management-server-t-erinto-serulekenysegrol/",
+     "date": "2026-09-23T08:16:19+00:00",
+     "summary": "A Nemzetbiztonsági Szakszolgálat Nemzeti Kiberbiztonsági Intézet riasztást ad ki a Check Point Security Management Servert érintő CVE-2026-93616 azonosítójú, aktívan kihasznált kritikus sérülékenység kapcsán. A CVSS 9,8-as, előzetes hitelesítés nélkül kihasználható…"
+    },
+    {
+     "title": "Riasztás Cisco szoftvereket érintő sérülékenységekről",
+     "link": "https://nki.gov.hu/figyelmeztetesek/riasztas/riasztas-cisco-szoftvereket-erinto-serulekenysegekrol/",
+     "date": "2026-09-17T11:27:57+00:00",
+     "summary": "A Nemzetbiztonsági Szakszolgálat Nemzeti Kiberbiztonsági Intézet riasztást ad ki a Cisco Identity Services Engine (ISE) és az ISE Passive Identity Connector (ISE-PIC) termékeket érintő, CVE-2026-76460 azonosítón nyomon követett kritikus sérülékenység kapcsán. A sebezhetőség…"
+    },
+    {
+     "title": "Riasztás Microsoft szoftverek 2026 szeptemberben javított sérülékenységeiről",
+     "link": "https://nki.gov.hu/figyelmeztetesek/riasztas/riasztas-microsoft-szoftverek-2026-szeptemberben-javitott-serulekenysegeirol/",
+     "date": "2026-09-09T06:04:38+00:00",
+     "summary": "A Nemzetbiztonsági Szakszolgálat Nemzeti Kiberbiztonsági Intézet riasztást ad ki a Microsoft szoftvereket érintő kritikus kockázati besorolású sérülékenységek kapcsán azok súlyossága, a szoftverek széleskörű elterjedtsége, valamint az egyes biztonsági hibákat érintő aktív…"
+    }
+   ]
   },
   "ncsc-ie": {
    "status": "ok",
@@ -744,6 +860,7 @@
   },
   "nksc-lt": {
    "status": "no-feed",
+   "blocked": true,
    "tried": [
     "https://www.nksc.lt/en/ (discovery: HTTPError 403)",
     "https://www.nksc.lt/naujienos.html (discovery: HTTPError 403)",
@@ -818,6 +935,7 @@
   },
   "csirt-mt": {
    "status": "no-feed",
+   "blocked": true,
    "tried": [
     "https://ncc-mita.gov.mt/ (discovery: HTTPError 403)",
     "https://ncc-mita.gov.mt/news/ (discovery: HTTPError 403)",
@@ -889,9 +1007,10 @@
   },
   "cert-pt": {
    "status": "no-feed",
+   "blocked": false,
    "tried": [
-    "https://www.cncs.gov.pt/ (discovery: HTTPError 307)",
-    "https://www.cncs.gov.pt/pt/ (discovery: HTTPError 307)",
+    "https://www.cncs.gov.pt/ (discovery: HTTPError 513)",
+    "https://www.cncs.gov.pt/pt/ (discovery: HTTPError 513)",
     "https://www.cncs.gov.pt/feed/",
     "https://www.cncs.gov.pt/rss.xml",
     "https://www.cncs.gov.pt/rss",
@@ -1069,7 +1188,7 @@
    ]
   },
   "incibe-cert": {
-   "status": "ok",
+   "status": "stale",
    "feed": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/feed",
    "via": "known",
    "items": [
@@ -1121,10 +1240,12 @@
      "date": "2026-10-09T07:23:24+00:00",
      "summary": "Inyección de comandos en Tenable Identity Exposure de Tenable Vie, 09/10/2026 - 09:23 Aviso Recursos Afectados Tenable Identity Exposure SaaS, versión 3.125.0 y anteriores. Descripción Takumi Ito ha informado sobre una vulnerabilidad de severidad crítica que, en caso de ser…"
     }
-   ]
+   ],
+   "error": "latest fetch failed"
   },
   "ccn-cert": {
    "status": "no-feed",
+   "blocked": true,
    "tried": [
     "https://www.ccn-cert.cni.es/es/seguridad-al-dia/alertas-ccn-cert.feed?type=rss",
     "https://www.ccn-cert.cni.es/es/seguridad-al-dia/noticias-seguridad.feed?type=rss",
@@ -1283,19 +1404,59 @@
    ]
   },
   "shadowserver": {
-   "status": "no-feed",
-   "tried": [
-    "https://www.shadowserver.org/feed/",
-    "https://www.shadowserver.org/news/ (discovery: HTTPError 404)",
-    "https://www.shadowserver.org/rss.xml",
-    "https://www.shadowserver.org/rss",
-    "https://www.shadowserver.org/feed.xml",
-    "https://www.shadowserver.org/atom.xml",
-    "https://www.shadowserver.org/index.xml",
-    "https://www.shadowserver.org/feed.rss",
-    "https://www.shadowserver.org/?format=feed&type=rss"
-   ],
-   "items": []
+   "status": "ok",
+   "feed": "https://www.shadowserver.org/topics/shadowserver/feed/",
+   "via": "known",
+   "items": [
+    {
+     "title": "Shadowserver 2025: Highlights of the Year in Review",
+     "link": "https://www.shadowserver.org/news/shadowserver-2025-highlights-of-the-year-in-review/",
+     "date": "2026-09-07T09:29:44+00:00",
+     "summary": "A review of Shadowserver’s 21st year as the world’s largest provider of free, timely, actionable, daily cyber threat intelligence. Covering the latest improvements in our public benefit services, responses to emerging cyber threats, and detection and reporting of the latest…"
+    },
+    {
+     "title": "Shadowserver Critical Community Infrastructure Cyber Resilience Project",
+     "link": "https://www.shadowserver.org/news/shadowserver-critical-community-infrastructure-cyber-resilience-project/",
+     "date": "2026-08-05T09:04:44+00:00",
+     "summary": "The Shadowserver Critical Community Infrastructure (CCI) Project is designed to improve the cybersecurity posture of essential public-serving organizations across Central and Eastern Europe (CEE), with a special focus on Ukraine. The project will deliver free Cyber Threat…"
+    },
+    {
+     "title": "StealC Historical Bot Infection Special Report",
+     "link": "https://www.shadowserver.org/news/stealc-historical-bot-infection-special-report/",
+     "date": "2026-06-25T08:37:57+00:00",
+     "summary": "On Wednesday 24th June 2026, international law enforcement partners announced additional successful cyber crime disruption actions as part of the ongoing Operation Endgame initiative. This time the StealC infostealer and Amadey malware-as-a-service families were targeted. Law…"
+    },
+    {
+     "title": "SocGholish Compromised WordPress Sites Special Report",
+     "link": "https://www.shadowserver.org/news/socgholish-compromised-wordpress-sites-special-report/",
+     "date": "2026-06-18T19:41:28+00:00",
+     "summary": "On Thursday 18th June 2026, international law enforcement partners announced another successful cyber crime disruption action as part of the ongoing Operation Endgame initiative. This time it targeted the SocGholish malware platform and threat actors. Law enforcement acquired…"
+    },
+    {
+     "title": "Shadowserver Report Provides Cybersecurity Insights and Recommendations for ECOWAS Member States in West Africa",
+     "link": "https://www.shadowserver.org/news/shadowserver-report-provides-cybersecurity-insights-and-recommendations-for-ecowas-member-states-in-west-africa/",
+     "date": "2026-06-08T13:54:07+00:00",
+     "summary": "Shadowserver issued a report to inform government leaders, policymakers, and other key stakeholders in ECOWAS Member States in West Africa on the following: a) The ECOWAS region’s cyber threat landscape and attack surface using Shadowserver’s free, actionable cyber threat…"
+    },
+    {
+     "title": "Rhadamanthys Historical Bot Infections Special Report",
+     "link": "https://www.shadowserver.org/news/rhadamanthys-historical-bot-infections-special-report/",
+     "date": "2025-11-13T10:03:08+00:00",
+     "summary": "On Thursday 13th November 2025, international law enforcement partners announced a disruption action against the Rhadamanthys information stealer malware. As part of the ongoing Operation Endgame initiative, law enforcement acquired copies of the threat actor’s databases…"
+    },
+    {
+     "title": "Shadowserver 2024: Highlights of the Year in Review",
+     "link": "https://www.shadowserver.org/news/shadowserver-2024-highlights-of-the-year-in-review/",
+     "date": "2025-02-17T13:02:01+00:00",
+     "summary": "A review of Shadowserver’s 20th year as the world’s largest provider of free, timely, actionable, daily cyber threat intelligence. Covering the latest improvements in our public benefit services, responses to emerging cyber threats, and detection and reporting of the latest…"
+    },
+    {
+     "title": "Non-profit consortium launches national scale Cyber Resilience pilot to assess the cyber threat landscape for the NGO sector in The Netherlands",
+     "link": "https://www.shadowserver.org/news/non-profit-consortium-launches-national-scale-cyber-resilience-pilot-to-assess-the-cyber-threat-landscape-for-the-ngo-sector-in-the-netherlands/",
+     "date": "2024-04-04T07:20:24+00:00",
+     "summary": "A non-profit consortium – consisting of The Hague Humanity Hub, the CyberPeace Institute (CPI), Connect2 Trust Foundation and The Shadowserver Foundation, co-funded by Rijksdienst voor Ondernemend Nederland (RVO), will produce a national level assessment of the cyber threat…"
+    }
+   ]
   },
   "abuse-ch": {
    "status": "ok",

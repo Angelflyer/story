@@ -7,11 +7,14 @@
   <outline type="rss" text="BG – CERT Bulgaria" xmlUrl="https://www.govcert.bg/feed/" htmlUrl="https://govcert.bg/"/>
   <outline type="rss" text="HR – CERT.hr" xmlUrl="https://www.cert.hr/feed/" htmlUrl="https://www.cert.hr/"/>
   <outline type="rss" text="CY – CSIRT-CY" xmlUrl="https://csirt.cy/?format=feed&amp;type=rss" htmlUrl="https://csirt.cy/"/>
+  <outline type="rss" text="CZ – CSIRT.CZ" xmlUrl="https://www.nic.cz/rss/news/" htmlUrl="https://csirt.cz/"/>
   <outline type="rss" text="DK – SAMSIK / CFCS" xmlUrl="https://samsik.dk/feed/" htmlUrl="https://samsik.dk/"/>
+  <outline type="rss" text="EE – CERT-EE" xmlUrl="https://www.ria.ee/en/rss-feeds/rss.xml" htmlUrl="https://www.ria.ee/en/cyber-security"/>
   <outline type="rss" text="FI – NCSC-FI" xmlUrl="https://www.kyberturvallisuuskeskus.fi/feed/rss/en" htmlUrl="https://www.kyberturvallisuuskeskus.fi/en"/>
   <outline type="rss" text="FR – CERT-FR" xmlUrl="https://www.cert.ssi.gouv.fr/feed/" htmlUrl="https://www.cert.ssi.gouv.fr/"/>
   <outline type="rss" text="DE – CERT-Bund" xmlUrl="https://wid.cert-bund.de/content/public/securityAdvisory/rss" htmlUrl="https://wid.cert-bund.de/"/>
   <outline type="rss" text="GR – EL-CSIRT" xmlUrl="https://cyber.gov.gr/feed/" htmlUrl="https://cyber.gov.gr/el-csirt/"/>
+  <outline type="rss" text="HU – NKI / GovCERT-Hungary" xmlUrl="https://nki.gov.hu/figyelmeztetesek/riasztas/feed/" htmlUrl="https://nki.gov.hu/"/>
   <outline type="rss" text="IE – NCSC-IE / CSIRT-IE" xmlUrl="https://www.ncsc.gov.ie/news/alerts.rss" htmlUrl="https://www.ncsc.gov.ie/"/>
   <outline type="rss" text="IT – CSIRT Italia" xmlUrl="https://www.acn.gov.it/portale/feedrss/-/journal/rss/20119/723192" htmlUrl="https://www.acn.gov.it/portale/csirt-italia"/>
   <outline type="rss" text="LV – CERT.LV" xmlUrl="https://cert.lv/lv/feed/atom/viss" htmlUrl="https://cert.lv/"/>
@@ -24,6 +27,7 @@
   <outline type="rss" text="SE – CERT-SE" xmlUrl="https://www.cert.se/feed.rss" htmlUrl="https://www.cert.se/"/>
   <outline type="rss" text="EU – CERT-EU" xmlUrl="https://cert.europa.eu/publications/security-advisories-rss" htmlUrl="https://cert.europa.eu/"/>
   <outline type="rss" text="EU – ENISA EUVD" xmlUrl="https://euvdservices.enisa.europa.eu/api/exploitedvulnerabilities" htmlUrl="https://euvd.enisa.europa.eu/"/>
+  <outline type="rss" text="INT – Shadowserver" xmlUrl="https://www.shadowserver.org/topics/shadowserver/feed/" htmlUrl="https://www.shadowserver.org/"/>
   <outline type="rss" text="INT – abuse.ch" xmlUrl="https://abuse.ch/rss/" htmlUrl="https://abuse.ch/"/>
   <outline type="rss" text="NL – DIVD" xmlUrl="https://www.divd.nl/index.xml" htmlUrl="https://www.divd.nl/"/>
   <outline type="rss" text="INT – MISP Project" xmlUrl="https://www.misp-project.org/feed.xml" htmlUrl="https://www.misp-project.org/"/>
