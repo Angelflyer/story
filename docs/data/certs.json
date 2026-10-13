@@ -1,0 +1,2285 @@
+{
+  "meta": {
+    "title": "EU CERT Atlas",
+    "asOf": "2026-10-13",
+    "rubric": {
+      "adv": "Public alerts & advisories",
+      "feeds": "Machine-readable feeds (RSS, API, IoC, CSAF)",
+      "block": "Protective blocking (blocklists, DNS firewall, takedowns)",
+      "report": "Reporting channels for citizens and organisations",
+      "oss": "Open-source tools & free platforms",
+      "proactive": "Proactive notification of network owners (scans, sinkholes)",
+      "transparency": "Published statistics and threat reports",
+      "english": "Usable in English"
+    },
+    "scale": "Each dimension is scored 0 (none found), 1 (limited or constituency-only) or 2 (public and mature). The overall score is the sum of eight dimensions, scaled to 100.",
+    "categories": {
+      "alerts": "Alerts & advisories",
+      "feeds": "Feeds & APIs",
+      "blocklists": "Blocklists & protective DNS",
+      "reporting": "Report an incident",
+      "notify": "Network-owner notifications",
+      "tools": "Open-source tools & platforms",
+      "newsletter": "Newsletters & digests",
+      "reports": "Threat reports & statistics",
+      "awareness": "Awareness & help for citizens"
+    }
+  },
+  "certs": [
+    {
+      "id": "cert-pl",
+      "cc": "PL",
+      "country": "Poland",
+      "name": "CERT Polska",
+      "full": "CERT Polska / CSIRT NASK",
+      "kind": "national",
+      "host": "NASK – National Research Institute",
+      "url": "https://cert.pl/en/",
+      "featured": true,
+      "about": "One of three national CSIRTs under Poland's National Cybersecurity System Act (with CSIRT GOV and CSIRT MON). Handles incidents for citizens, businesses, and most of the .pl space. Runs the national Warning List of phishing domains that Polish ISPs block, the SMS 8080 scam-text channel, and a large portfolio of open-source security tools.",
+      "constituency": "Citizens, private sector, local government, .pl domain and Polish IP space (except areas covered by CSIRT GOV and CSIRT MON)",
+      "langs": [
+        "PL",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 2,
+        "report": 2,
+        "oss": 2,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "reporting",
+          "name": "Incident reporting form",
+          "desc": "Online form for anyone in Poland to report phishing, fraud, malware or attacks.",
+          "url": "https://incydent.cert.pl/"
+        },
+        {
+          "cat": "reporting",
+          "name": "SMS 8080",
+          "desc": "Forward suspicious text messages free of charge to 8080. Reports feed SMS blocking by mobile operators."
+        },
+        {
+          "cat": "blocklists",
+          "name": "Dangerous Websites Warning List",
+          "desc": "24/7-maintained list of phishing and scam domains. Polish ISPs block the domains at the DNS level. Entries stay on the list for six months.",
+          "url": "https://cert.pl/en/warning-list/"
+        },
+        {
+          "cat": "feeds",
+          "name": "Warning List data files",
+          "desc": "Free downloads in text, JSON, XML, hosts, AdBlock, MikroTik and RPZ formats. CERT Polska recommends refreshing every 5 minutes.",
+          "url": "https://hole.cert.pl/domains/v2/domains.txt"
+        },
+        {
+          "cat": "blocklists",
+          "name": "Warning List check",
+          "desc": "Tests whether your current connection is protected by the Warning List.",
+          "url": "https://lista.cert.pl/"
+        },
+        {
+          "cat": "tools",
+          "name": "Warning List tools",
+          "desc": "Scripts for deploying the list on Active Directory DNS, Pi-hole and other resolvers.",
+          "url": "https://github.com/CERT-Polska/warning-list-tools"
+        },
+        {
+          "cat": "notify",
+          "name": "n6",
+          "desc": "Free platform that sends organisations security events matched to their IP ranges and domains, from sinkholes, MWDB, Artemis and partners.",
+          "url": "https://cert.pl/en/n6/"
+        },
+        {
+          "cat": "notify",
+          "name": "Artemis scanner",
+          "desc": "Modular vulnerability scanner. CERT Polska runs it at scale against public-sector assets and privately reports findings to administrators.",
+          "url": "https://github.com/CERT-Polska/Artemis"
+        },
+        {
+          "cat": "tools",
+          "name": "MWDB",
+          "desc": "Community malware repository with REST API. A free account gives access to samples and extracted configs.",
+          "url": "https://mwdb.cert.pl/"
+        },
+        {
+          "cat": "tools",
+          "name": "Open-source portfolio",
+          "desc": "mwdb-core, Karton, mquery (YARA search), malduck, DRAKVUF Sandbox, n6, Artemis.",
+          "url": "https://github.com/CERT-Polska"
+        },
+        {
+          "cat": "alerts",
+          "name": "Publications & warnings",
+          "desc": "Threat analyses, vulnerability disclosures and scam campaign warnings in Polish and English.",
+          "url": "https://cert.pl/en/publications/"
+        },
+        {
+          "cat": "alerts",
+          "name": "Coordinated vulnerability disclosure",
+          "desc": "CVE Numbering Authority. Coordinates vulnerabilities in Polish products and publishes advisories.",
+          "url": "https://cert.pl/en/cvd/"
+        },
+        {
+          "cat": "reports",
+          "name": "Annual report 2025",
+          "desc": "Published 8 April 2026. Incident statistics, campaigns, and the Warning List in numbers.",
+          "url": "https://cert.pl/uploads/docs/Report_CP_2025.pdf"
+        }
+      ],
+      "stats": [
+        {
+          "label": "Incidents handled by CSIRT NASK in 2025",
+          "value": "≈261,000",
+          "note": "+152% year on year, reported by Polskie Radio from a Ministry of Digital Affairs report"
+        },
+        {
+          "label": "Share of incidents that were fraud or social engineering (2025)",
+          "value": "≈97%"
+        }
+      ],
+      "feeds": [
+        "https://cert.pl/en/atom.xml",
+        "https://cert.pl/en/rss.xml",
+        "https://cert.pl/atom.xml"
+      ],
+      "newsletter": null,
+      "related": [
+        {
+          "name": "CSIRT GOV",
+          "desc": "Government and critical infrastructure, run by the Internal Security Agency (ABW).",
+          "url": "https://csirt.gov.pl/"
+        },
+        {
+          "name": "CSIRT MON",
+          "desc": "Defence sector, Ministry of National Defence."
+        },
+        {
+          "name": "CSIRT KNF",
+          "desc": "Sectoral team for financial market operators.",
+          "url": "https://www.knf.gov.pl/en/MARKET/CSIRT_KNF"
+        }
+      ]
+    },
+    {
+      "id": "cert-at",
+      "cc": "AT",
+      "country": "Austria",
+      "name": "CERT.at",
+      "full": "Computer Emergency Response Team Austria",
+      "kind": "national",
+      "host": "nic.at (.at registry)",
+      "url": "https://cert.at/en/",
+      "about": "Austria's national CSIRT. Known for its daily German-language security digest, automated notifications to Austrian network owners, and co-creating the open-source IntelMQ feed-processing tool. Also runs the Austrian Energy CERT and supports GovCERT Austria.",
+      "constituency": "Austrian internet users, companies and network operators",
+      "langs": [
+        "DE",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 1,
+        "oss": 2,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Warnings",
+          "desc": "Public warnings on critical vulnerabilities and active campaigns.",
+          "url": "https://cert.at/en/"
+        },
+        {
+          "cat": "newsletter",
+          "name": "Daily summary (Tageszusammenfassung)",
+          "desc": "Free daily mailing list with a curated summary of security news and advisories.",
+          "url": "https://lists.cert.at/cgi-bin/mailman/listinfo/daily"
+        },
+        {
+          "cat": "feeds",
+          "name": "RSS & Atom feeds",
+          "desc": "Feeds for warnings, the blog and the daily summary.",
+          "url": "https://cert.at/en/services/feeds"
+        },
+        {
+          "cat": "notify",
+          "name": "Data feeds / emails from us",
+          "desc": "Automated notifications to Austrian network owners about infected or vulnerable systems.",
+          "url": "https://cert.at/en/services/feeds"
+        },
+        {
+          "cat": "tools",
+          "name": "IntelMQ",
+          "desc": "Open-source tool for collecting and processing threat feeds, co-created with CERT.PT and used by many CSIRTs.",
+          "url": "https://github.com/certtools/intelmq"
+        },
+        {
+          "cat": "reports",
+          "name": "Annual reports (Jahresbericht)",
+          "desc": "Yearly reports on incidents and the Austrian threat landscape.",
+          "url": "https://cert.at/en/"
+        },
+        {
+          "cat": "reporting",
+          "name": "Report an incident",
+          "desc": "Email reports@cert.at.",
+          "url": "https://cert.at/en/"
+        }
+      ],
+      "stats": [],
+      "feeds": [
+        "https://www.cert.at/cert-at.en.blog.rss_2.0.xml",
+        "https://www.cert.at/cert-at.de.warnings.rss_2.0.xml"
+      ],
+      "newsletter": {
+        "name": "CERT.at daily summary",
+        "url": "https://lists.cert.at/cgi-bin/mailman/listinfo/daily"
+      },
+      "related": [
+        {
+          "name": "GovCERT Austria",
+          "desc": "Government CERT, operated with the Federal Chancellery.",
+          "url": "https://www.govcert.gv.at/en/"
+        },
+        {
+          "name": "Austrian Energy CERT",
+          "desc": "Sector CERT for the energy industry.",
+          "url": "https://cert.at/en/"
+        }
+      ]
+    },
+    {
+      "id": "ccb-be",
+      "cc": "BE",
+      "country": "Belgium",
+      "name": "CCB / CERT.be",
+      "full": "Centre for Cybersecurity Belgium – CERT.be",
+      "kind": "national",
+      "host": "Centre for Cybersecurity Belgium (Prime Minister's office)",
+      "url": "https://ccb.belgium.be/",
+      "about": "National CSIRT and NIS2 authority. Runs Safeonweb for the public, the suspect@safeonweb.be phishing inbox, the Belgian Anti-Phishing Shield with ISPs, and free tailored early warnings for registered organisations through Safeonweb@work.",
+      "constituency": "All of Belgium: citizens, organisations, essential and important entities",
+      "langs": [
+        "NL",
+        "FR",
+        "DE",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 2,
+        "report": 2,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 1,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Advisories & warnings",
+          "desc": "Warnings on critical vulnerabilities with patch guidance.",
+          "url": "https://ccb.belgium.be/advisories"
+        },
+        {
+          "cat": "reporting",
+          "name": "suspect@safeonweb.be",
+          "desc": "Forward suspicious emails. The CCB extracts links and attachments and blocks malicious URLs. About 10 million messages were received in 2023."
+        },
+        {
+          "cat": "blocklists",
+          "name": "Belgian Anti-Phishing Shield (BAPS)",
+          "desc": "Phishing URLs reported by the public are redirected to a warning page by participating ISPs."
+        },
+        {
+          "cat": "notify",
+          "name": "Safeonweb@work",
+          "desc": "Free service where organisations register domains and IP addresses to receive tailored early warnings.",
+          "url": "https://atwork.safeonweb.be/"
+        },
+        {
+          "cat": "awareness",
+          "name": "Safeonweb",
+          "desc": "Public awareness site and app with alerts about current scams.",
+          "url": "https://safeonweb.be/"
+        },
+        {
+          "cat": "reporting",
+          "name": "Report an incident",
+          "desc": "Incident notification for organisations and NIS2 entities.",
+          "url": "https://ccb.belgium.be/"
+        }
+      ],
+      "stats": [
+        {
+          "label": "Messages forwarded to suspect@safeonweb.be (2023)",
+          "value": "≈10 million"
+        }
+      ],
+      "feeds": [
+        "https://ccb.belgium.be/advisories/rss.xml",
+        "https://ccb.belgium.be/rss.xml"
+      ],
+      "newsletter": {
+        "name": "Safeonweb alerts",
+        "url": "https://safeonweb.be/"
+      },
+      "related": []
+    },
+    {
+      "id": "cert-bg",
+      "cc": "BG",
+      "country": "Bulgaria",
+      "name": "CERT Bulgaria",
+      "full": "Bulgarian Computer Security Incidents Response Team",
+      "kind": "national",
+      "host": "Ministry of Electronic Governance",
+      "url": "https://govcert.bg/",
+      "about": "National CSIRT since 2008 and the NIS2 CSIRT for Bulgaria. Mostly serves state administration bodies. Trusted Introducer accredited since 2009. Publishes advisories in Bulgarian and runs training.",
+      "constituency": "Ministries, state agencies, national and regional administration",
+      "langs": [
+        "BG"
+      ],
+      "scores": {
+        "adv": 1,
+        "feeds": 0,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 0,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Security advisories",
+          "desc": "Advisories and news for the public administration, in Bulgarian.",
+          "url": "https://govcert.bg/"
+        },
+        {
+          "cat": "reporting",
+          "name": "Report an incident",
+          "desc": "Email cert@govcert.bg, weekdays 08:00–18:00."
+        },
+        {
+          "cat": "awareness",
+          "name": "Training",
+          "desc": "Training on information security and incident management for the public sector."
+        }
+      ],
+      "stats": [],
+      "feeds": [],
+      "newsletter": null,
+      "related": []
+    },
+    {
+      "id": "cert-hr",
+      "cc": "HR",
+      "country": "Croatia",
+      "name": "CERT.hr",
+      "full": "Nacionalni CERT (National CERT)",
+      "kind": "national",
+      "host": "CARNET (Croatian Academic and Research Network)",
+      "url": "https://www.cert.hr/",
+      "about": "Handles incidents involving the .hr domain or Croatian IP space, plus significant incidents in banking, financial infrastructure and digital infrastructure. Offers several free services, including a spam filter, a CVE subscription service and a web-shop checker.",
+      "constituency": ".hr domain, Croatian IP space, regulated sectors (state bodies are covered by ZSIS)",
+      "langs": [
+        "HR",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 1,
+        "report": 2,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 1,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Warnings & recommendations",
+          "desc": "Warnings on scam campaigns, such as those impersonating HZZO or the Interior Ministry, plus security recommendations.",
+          "url": "https://www.cert.hr/"
+        },
+        {
+          "cat": "feeds",
+          "name": "CERT CVE",
+          "desc": "Subscribe to vulnerability notifications for specific vendors and products."
+        },
+        {
+          "cat": "blocklists",
+          "name": "CERT spamblok",
+          "desc": "Free spam-reduction service for users in Croatia."
+        },
+        {
+          "cat": "reporting",
+          "name": "PiXi",
+          "desc": "Platform for mandatory incident reporting by regulated sectors."
+        },
+        {
+          "cat": "reporting",
+          "name": "incident@cert.hr",
+          "desc": "Email incident reports with logs, timestamps and IP addresses."
+        },
+        {
+          "cat": "awareness",
+          "name": "Web-shop checker",
+          "desc": "Tool to check whether an online shop looks fraudulent."
+        }
+      ],
+      "stats": [],
+      "feeds": [
+        "https://www.cert.hr/feed/"
+      ],
+      "newsletter": null,
+      "related": [
+        {
+          "name": "ZSIS CERT",
+          "desc": "CERT for state administration bodies, at the Information Systems Security Bureau.",
+          "url": "https://www.zsis.hr/"
+        }
+      ]
+    },
+    {
+      "id": "csirt-cy",
+      "cc": "CY",
+      "country": "Cyprus",
+      "name": "CSIRT-CY",
+      "full": "National Computer Security Incident Response Team of Cyprus",
+      "kind": "national",
+      "host": "Digital Security Authority (DSA)",
+      "url": "https://csirt.cy/",
+      "about": "National CSIRT launched in June 2018 with ITU support. Focuses on critical information infrastructure and operators of essential services. Publishes alerts and coordinates incidents.",
+      "constituency": "Critical information infrastructure, essential and important entities",
+      "langs": [
+        "EL",
+        "EN"
+      ],
+      "scores": {
+        "adv": 1,
+        "feeds": 0,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 0,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Alerts & news",
+          "desc": "Security alerts relevant to Cypriot organisations.",
+          "url": "https://csirt.cy/"
+        },
+        {
+          "cat": "reporting",
+          "name": "Report an incident",
+          "desc": "Incident reporting for regulated entities.",
+          "url": "https://csirt.cy/"
+        }
+      ],
+      "stats": [],
+      "feeds": [],
+      "newsletter": null,
+      "related": [
+        {
+          "name": "CYNET-CSIRT",
+          "desc": "Academic CSIRT for universities and research institutes. Publishes alerts.",
+          "url": "https://csirt.cynet.ac.cy/"
+        }
+      ]
+    },
+    {
+      "id": "csirt-cz",
+      "cc": "CZ",
+      "country": "Czechia",
+      "name": "CSIRT.CZ",
+      "full": "National CSIRT of the Czech Republic",
+      "kind": "national",
+      "host": "CZ.NIC (.cz registry association)",
+      "url": "https://csirt.cz/",
+      "about": "National CSIRT run by the CZ.NIC registry. It benefits from CZ.NIC's Turris router project, whose Sentinel network of honeypots and router firewalls produces a public dynamic blocklist.",
+      "constituency": "Czech internet users and organisations outside the state sector",
+      "langs": [
+        "CS",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 2,
+        "report": 1,
+        "oss": 2,
+        "proactive": 2,
+        "transparency": 1,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "News & warnings",
+          "desc": "Warnings about campaigns and vulnerabilities affecting Czech users.",
+          "url": "https://csirt.cz/"
+        },
+        {
+          "cat": "blocklists",
+          "name": "Turris Sentinel dynamic firewall",
+          "desc": "Attacker IP greylist built from thousands of Turris routers and honeypots, available to the public.",
+          "url": "https://view.sentinel.turris.cz/"
+        },
+        {
+          "cat": "tools",
+          "name": "Honeypot as a Service (HaaS)",
+          "desc": "Free SSH honeypot service from CZ.NIC. Attacker data feeds the greylist.",
+          "url": "https://haas.nic.cz/"
+        },
+        {
+          "cat": "notify",
+          "name": "Network-owner notifications",
+          "desc": "Notifies Czech network owners about compromised or vulnerable hosts."
+        },
+        {
+          "cat": "reporting",
+          "name": "Report an incident",
+          "desc": "Email abuse@csirt.cz.",
+          "url": "https://csirt.cz/"
+        }
+      ],
+      "stats": [],
+      "feeds": [],
+      "newsletter": null,
+      "related": [
+        {
+          "name": "NÚKIB / GovCERT.CZ",
+          "desc": "National Cyber and Information Security Agency. Regulator and government CERT, issues formal warnings and annual reports.",
+          "url": "https://nukib.gov.cz/en/"
+        },
+        {
+          "name": "CESNET-CERTS",
+          "desc": "Academic network CSIRT.",
+          "url": "https://csirt.cesnet.cz/"
+        }
+      ]
+    },
+    {
+      "id": "cfcs-dk",
+      "cc": "DK",
+      "country": "Denmark",
+      "name": "CFCS",
+      "full": "Center for Cybersikkerhed (Centre for Cyber Security)",
+      "kind": "national",
+      "host": "Danish Defence Intelligence Service",
+      "url": "https://www.cfcs.dk/",
+      "about": "National IT security authority and CSIRT. Publishes the national threat assessment and threat level, and operates a sensor network that watches traffic at connected authorities and companies.",
+      "constituency": "Danish authorities, critical infrastructure, companies connected to the sensor network",
+      "langs": [
+        "DA",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Warnings (varsler)",
+          "desc": "Public warnings about vulnerabilities and active threats.",
+          "url": "https://www.cfcs.dk/"
+        },
+        {
+          "cat": "reports",
+          "name": "Threat assessments",
+          "desc": "National cyber threat assessment and current threat levels.",
+          "url": "https://www.cfcs.dk/"
+        },
+        {
+          "cat": "notify",
+          "name": "Sensor network",
+          "desc": "Hardware sensors at connected organisations raise alarms that CFCS analysts investigate."
+        },
+        {
+          "cat": "reporting",
+          "name": "Report an incident",
+          "desc": "Incident reporting for organisations.",
+          "url": "https://www.cfcs.dk/"
+        },
+        {
+          "cat": "awareness",
+          "name": "Sikkerdigital.dk",
+          "desc": "Citizen and SME awareness portal, from the Danish Agency for Digital Government.",
+          "url": "https://sikkerdigital.dk/"
+        }
+      ],
+      "stats": [],
+      "feeds": [],
+      "newsletter": null,
+      "related": []
+    },
+    {
+      "id": "cert-ee",
+      "cc": "EE",
+      "country": "Estonia",
+      "name": "CERT-EE",
+      "full": "CERT-EE, Incident Response Department of RIA",
+      "kind": "national",
+      "host": "Information System Authority (RIA)",
+      "url": "https://www.ria.ee/en/cyber-security",
+      "about": "National CSIRT inside RIA. Publishes a monthly overview of incidents in Estonian cyberspace and an annual cyber security yearbook. It restricts access to scam and phishing sites and takes them down through hosts and partners.",
+      "constituency": "All of Estonia",
+      "langs": [
+        "ET",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 2,
+        "report": 2,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 2,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "reports",
+          "name": "Monthly cyberspace overview",
+          "desc": "Monthly count of incidents with impact, with notable campaigns.",
+          "url": "https://www.ria.ee/en/news"
+        },
+        {
+          "cat": "blocklists",
+          "name": "Phishing site blocking",
+          "desc": "Restricts access to scam and phishing sites and notifies hosting providers."
+        },
+        {
+          "cat": "reporting",
+          "name": "cert@cert.ee",
+          "desc": "Forward suspicious emails and report incidents."
+        },
+        {
+          "cat": "awareness",
+          "name": "Itvaatlik.ee",
+          "desc": "Public awareness portal from RIA.",
+          "url": "https://www.itvaatlik.ee/"
+        },
+        {
+          "cat": "reports",
+          "name": "Cyber Security in Estonia yearbook",
+          "desc": "Annual review of incidents and threats.",
+          "url": "https://www.ria.ee/en"
+        }
+      ],
+      "stats": [
+        {
+          "label": "Incidents with impact in a single month (Sep 2024)",
+          "value": "512"
+        },
+        {
+          "label": "Phishing and scam sites detected (Dec 2024)",
+          "value": "735"
+        }
+      ],
+      "feeds": [],
+      "newsletter": null,
+      "related": []
+    },
+    {
+      "id": "ncsc-fi",
+      "cc": "FI",
+      "country": "Finland",
+      "name": "NCSC-FI",
+      "full": "Kyberturvallisuuskeskus (National Cyber Security Centre Finland)",
+      "kind": "national",
+      "host": "Traficom",
+      "url": "https://www.kyberturvallisuuskeskus.fi/en",
+      "about": "National CSIRT known for clear public communication: a weekly review, a monthly Cyber Weather report, colour-coded alerts, and RSS and email subscriptions. Runs the Autoreporter service, which notifies Finnish network owners about infections, and the HAVARO detection system for critical organisations.",
+      "constituency": "All of Finland",
+      "langs": [
+        "FI",
+        "SV",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 1,
+        "report": 2,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Alerts",
+          "desc": "Red alerts call for immediate action, yellow for caution.",
+          "url": "https://www.kyberturvallisuuskeskus.fi/en/alerts"
+        },
+        {
+          "cat": "alerts",
+          "name": "Vulnerabilities",
+          "desc": "Vulnerability notices with guidance.",
+          "url": "https://www.kyberturvallisuuskeskus.fi/en"
+        },
+        {
+          "cat": "newsletter",
+          "name": "Weekly review",
+          "desc": "Weekly digest of cyber phenomena relevant to Finland.",
+          "url": "https://www.kyberturvallisuuskeskus.fi/en/weekly-review"
+        },
+        {
+          "cat": "reports",
+          "name": "Cyber Weather",
+          "desc": "Monthly summary of the threat landscape.",
+          "url": "https://www.kyberturvallisuuskeskus.fi/en"
+        },
+        {
+          "cat": "newsletter",
+          "name": "Email subscriptions",
+          "desc": "Subscribe to alerts, vulnerabilities and the weekly review by email.",
+          "url": "https://www.kyberturvallisuuskeskus.fi/en/subscribe-our-newsletters"
+        },
+        {
+          "cat": "notify",
+          "name": "Autoreporter",
+          "desc": "Automated notifications to Finnish network operators about infected hosts and vulnerabilities."
+        },
+        {
+          "cat": "notify",
+          "name": "HAVARO",
+          "desc": "Detection system for critical organisations."
+        },
+        {
+          "cat": "reporting",
+          "name": "Report an incident",
+          "desc": "Online form for citizens and organisations.",
+          "url": "https://www.kyberturvallisuuskeskus.fi/en"
+        }
+      ],
+      "stats": [],
+      "feeds": [
+        "https://www.kyberturvallisuuskeskus.fi/feed/rss/en",
+        "https://www.kyberturvallisuuskeskus.fi/en/rss"
+      ],
+      "newsletter": {
+        "name": "NCSC-FI subscriptions",
+        "url": "https://www.kyberturvallisuuskeskus.fi/en/subscribe-our-newsletters"
+      },
+      "related": []
+    },
+    {
+      "id": "cert-fr",
+      "cc": "FR",
+      "country": "France",
+      "name": "CERT-FR",
+      "full": "CERT-FR (ANSSI)",
+      "kind": "national",
+      "host": "ANSSI – French National Cybersecurity Agency",
+      "url": "https://www.cert.ssi.gouv.fr/",
+      "about": "Government and national CERT run by ANSSI. Publishes alerts, advisories (avis), a weekly bulletin and detailed threat intelligence reports with indicators. Citizens and SMEs are served by Cybermalveillance.gouv.fr, and a network of regional CSIRTs supports local organisations.",
+      "constituency": "Administration, critical operators, essential entities. Public information for everyone.",
+      "langs": [
+        "FR",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 1,
+        "oss": 2,
+        "proactive": 1,
+        "transparency": 2,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Alertes",
+          "desc": "Alerts on actively exploited vulnerabilities.",
+          "url": "https://www.cert.ssi.gouv.fr/alerte/"
+        },
+        {
+          "cat": "alerts",
+          "name": "Avis",
+          "desc": "Daily vulnerability advisories by vendor and product.",
+          "url": "https://www.cert.ssi.gouv.fr/avis/"
+        },
+        {
+          "cat": "newsletter",
+          "name": "Bulletin d'actualité",
+          "desc": "Weekly news bulletin.",
+          "url": "https://www.cert.ssi.gouv.fr/actualite/"
+        },
+        {
+          "cat": "feeds",
+          "name": "CTI reports with IoCs",
+          "desc": "Threat intelligence reports that include indicators of compromise.",
+          "url": "https://www.cert.ssi.gouv.fr/cti/"
+        },
+        {
+          "cat": "feeds",
+          "name": "RSS feeds",
+          "desc": "Feeds for all publications and for each section.",
+          "url": "https://www.cert.ssi.gouv.fr/feed/"
+        },
+        {
+          "cat": "tools",
+          "name": "ANSSI open source",
+          "desc": "DFIR-ORC, ADTimeline and other tools on GitHub.",
+          "url": "https://github.com/ANSSI-FR"
+        },
+        {
+          "cat": "reports",
+          "name": "Panorama de la cybermenace",
+          "desc": "Annual threat landscape report.",
+          "url": "https://cyber.gouv.fr/"
+        },
+        {
+          "cat": "awareness",
+          "name": "Cybermalveillance.gouv.fr",
+          "desc": "Victim assistance, diagnostics and referrals for citizens, SMEs and local authorities. Runs the 17Cyber platform.",
+          "url": "https://www.cybermalveillance.gouv.fr/"
+        }
+      ],
+      "stats": [],
+      "feeds": [
+        "https://www.cert.ssi.gouv.fr/feed/",
+        "https://www.cert.ssi.gouv.fr/alerte/feed/",
+        "https://www.cert.ssi.gouv.fr/avis/feed/"
+      ],
+      "newsletter": {
+        "name": "Cybermalveillance.gouv.fr newsletter",
+        "url": "https://www.cybermalveillance.gouv.fr/"
+      },
+      "related": [
+        {
+          "name": "Regional CSIRTs (CSIRT territoriaux)",
+          "desc": "Regional response centres incubated by ANSSI since 2022, covering Bretagne, Grand Est, Normandie, Nouvelle-Aquitaine, Sud and others.",
+          "url": "https://cyber.gouv.fr/"
+        },
+        {
+          "name": "Cybermalveillance.gouv.fr",
+          "desc": "National assistance platform for victims (GIP ACYMA).",
+          "url": "https://www.cybermalveillance.gouv.fr/"
+        }
+      ]
+    },
+    {
+      "id": "cert-bund",
+      "cc": "DE",
+      "country": "Germany",
+      "name": "CERT-Bund",
+      "full": "CERT-Bund (BSI)",
+      "kind": "national",
+      "host": "Federal Office for Information Security (BSI)",
+      "url": "https://wid.cert-bund.de/",
+      "about": "National CSIRT inside the BSI. Publishes high-volume vulnerability advisories through the WID portal, is a CSAF provider, sends automated notifications to German network operators, and publishes the annual State of IT Security report. The Bürger-CERT service and the 'Sicher informiert' newsletter serve citizens.",
+      "constituency": "Federal administration, critical infrastructure, German network operators. Advisories are public.",
+      "langs": [
+        "DE",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 1,
+        "report": 1,
+        "oss": 2,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "WID advisories",
+          "desc": "Short notices (Kurzinfo) and security advisories, free email subscription after registration.",
+          "url": "https://wid.cert-bund.de/portal/wid/kurzinformationen"
+        },
+        {
+          "cat": "feeds",
+          "name": "WID RSS & CSAF",
+          "desc": "RSS for advisories plus machine-readable CSAF documents.",
+          "url": "https://wid.cert-bund.de/"
+        },
+        {
+          "cat": "alerts",
+          "name": "Cyber-Sicherheitswarnungen",
+          "desc": "BSI cyber security warnings for serious threats.",
+          "url": "https://www.bsi.bund.de/"
+        },
+        {
+          "cat": "newsletter",
+          "name": "Bürger-CERT / Sicher informiert",
+          "desc": "Free newsletter and technical warnings for citizens, in German.",
+          "url": "https://www.bsi.bund.de/EN/Service-Navi/Abonnements/Newsletter/Buerger-CERT-Abos/buerger-cert-abos_node.html"
+        },
+        {
+          "cat": "notify",
+          "name": "CERT-Bund Reports",
+          "desc": "Automated notifications to German network operators about infected and vulnerable systems."
+        },
+        {
+          "cat": "tools",
+          "name": "CSAF tooling",
+          "desc": "BSI-backed open-source CSAF tools such as Secvisogram.",
+          "url": "https://github.com/secvisogram/secvisogram"
+        },
+        {
+          "cat": "reports",
+          "name": "Die Lage der IT-Sicherheit",
+          "desc": "Annual State of IT Security in Germany report.",
+          "url": "https://www.bsi.bund.de/"
+        }
+      ],
+      "stats": [],
+      "feeds": [
+        "https://wid.cert-bund.de/content/public/securityAdvisory/rss",
+        "https://www.bsi.bund.de/SiteGlobals/Functions/RSSFeed/RSSNewsfeed/RSSNewsfeed_WID.xml"
+      ],
+      "newsletter": {
+        "name": "Bürger-CERT newsletters",
+        "url": "https://www.bsi.bund.de/EN/Service-Navi/Abonnements/Newsletter/Buerger-CERT-Abos/buerger-cert-abos_node.html"
+      },
+      "related": [
+        {
+          "name": "Allianz für Cyber-Sicherheit",
+          "desc": "BSI partnership network for companies.",
+          "url": "https://www.allianz-fuer-cybersicherheit.de/"
+        }
+      ]
+    },
+    {
+      "id": "el-csirt",
+      "cc": "GR",
+      "country": "Greece",
+      "name": "EL-CSIRT",
+      "full": "Hellenic National Cybersecurity Authority CSIRT",
+      "kind": "national",
+      "host": "National Cybersecurity Authority",
+      "url": "https://cyber.gov.gr/el-csirt/",
+      "about": "Civilian national CSIRT of the National Cybersecurity Authority. Its RFC 2350 profile (v1.0, April 2025) defines its services. A member of the EU CSIRTs Network.",
+      "constituency": "Essential and important entities, public sector",
+      "langs": [
+        "EL",
+        "EN"
+      ],
+      "scores": {
+        "adv": 1,
+        "feeds": 1,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 0,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Announcements",
+          "desc": "Security announcements from the National Cybersecurity Authority.",
+          "url": "https://cyber.gov.gr/"
+        },
+        {
+          "cat": "reporting",
+          "name": "Incident notification",
+          "desc": "Incident reporting for NIS2 entities.",
+          "url": "https://cyber.gov.gr/el-csirt/"
+        },
+        {
+          "cat": "reports",
+          "name": "RFC 2350 profile",
+          "desc": "Service description, version 1.0, April 2025.",
+          "url": "https://cyber.gov.gr/wp-content/uploads/2025/10/EL-CSIRT_RFC_2350_ENG-v1.0.pdf"
+        }
+      ],
+      "stats": [],
+      "feeds": [
+        "https://cyber.gov.gr/feed/"
+      ],
+      "newsletter": null,
+      "related": [
+        {
+          "name": "GR-CSIRT",
+          "desc": "Hellenic Cyber Defence (military) CSIRT."
+        },
+        {
+          "name": "GRNET-CERT",
+          "desc": "Academic network CERT.",
+          "url": "https://cert.grnet.gr/"
+        }
+      ]
+    },
+    {
+      "id": "nki-hu",
+      "cc": "HU",
+      "country": "Hungary",
+      "name": "NKI / GovCERT-Hungary",
+      "full": "Nemzeti Kibervédelmi Intézet (National Cybersecurity Institute)",
+      "kind": "national",
+      "host": "Special Service for National Security (NBSZ)",
+      "url": "https://nki.gov.hu/",
+      "about": "Hungary's national and government CSIRT. Publishes warnings and a continuously updated vulnerability list on nki.gov.hu. Trusted Introducer accredited.",
+      "constituency": "Public administration, critical infrastructure, essential entities",
+      "langs": [
+        "HU",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 1,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Figyelmeztetések (warnings)",
+          "desc": "Warnings on threats and campaigns.",
+          "url": "https://nki.gov.hu/figyelmeztetesek/"
+        },
+        {
+          "cat": "alerts",
+          "name": "Sérülékenységek (vulnerabilities)",
+          "desc": "Rolling list of newly published CVEs from major vendors, in Hungarian.",
+          "url": "https://nki.gov.hu/"
+        },
+        {
+          "cat": "reporting",
+          "name": "Report an incident",
+          "desc": "Incident reporting for regulated organisations.",
+          "url": "https://nki.gov.hu/"
+        }
+      ],
+      "stats": [],
+      "feeds": [
+        "https://nki.gov.hu/feed/"
+      ],
+      "newsletter": null,
+      "related": [
+        {
+          "name": "KIFÜ HBONE CSIRT",
+          "desc": "Academic network CSIRT.",
+          "url": "https://www.kifu.gov.hu/"
+        }
+      ]
+    },
+    {
+      "id": "ncsc-ie",
+      "cc": "IE",
+      "country": "Ireland",
+      "name": "NCSC-IE / CSIRT-IE",
+      "full": "National Cyber Security Centre Ireland",
+      "kind": "national",
+      "host": "Irish government (NCSC)",
+      "url": "https://www.ncsc.gov.ie/",
+      "about": "CSIRT-IE serves government bodies and critical national infrastructure. Most advisories go to constituents on a need-to-know basis. Proactive services include phishing takedowns, stolen-credential notifications, malware analysis and vulnerability notifications.",
+      "constituency": "Government bodies and critical national infrastructure",
+      "langs": [
+        "EN",
+        "GA"
+      ],
+      "scores": {
+        "adv": 1,
+        "feeds": 1,
+        "block": 1,
+        "report": 1,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 1,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Advisories",
+          "desc": "Public advisories on major vulnerabilities. Constituents get more.",
+          "url": "https://www.ncsc.gov.ie/"
+        },
+        {
+          "cat": "blocklists",
+          "name": "Anti-phishing takedowns",
+          "desc": "Takedown of phishing sites targeting Irish organisations."
+        },
+        {
+          "cat": "notify",
+          "name": "Stolen credentials & vulnerability notification",
+          "desc": "Notifies constituents about leaked credentials and exposed vulnerable systems."
+        },
+        {
+          "cat": "reporting",
+          "name": "certreport@ncsc.gov.ie",
+          "desc": "Incident reporting, weekdays 09:00–16:30."
+        }
+      ],
+      "stats": [],
+      "feeds": [],
+      "newsletter": null,
+      "related": []
+    },
+    {
+      "id": "csirt-it",
+      "cc": "IT",
+      "country": "Italy",
+      "name": "CSIRT Italia",
+      "full": "CSIRT Italia (ACN)",
+      "kind": "national",
+      "host": "Agenzia per la Cybersicurezza Nazionale (ACN)",
+      "url": "https://www.acn.gov.it/portale/csirt-italia",
+      "about": "National CSIRT inside the National Cybersecurity Agency. Publishes alerts and bulletins on vulnerabilities, shares indicators of compromise with accredited parties, and publishes a monthly Operational Summary with incident statistics.",
+      "constituency": "Public administration, NIS2 entities, national perimeter; public alerts for all",
+      "langs": [
+        "IT",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 2,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Alerts & bulletins",
+          "desc": "Alerts on vulnerabilities in widely used products.",
+          "url": "https://www.acn.gov.it/portale/csirt-italia"
+        },
+        {
+          "cat": "feeds",
+          "name": "IoC sharing",
+          "desc": "Indicators of compromise by malware family, shared with accredited organisations."
+        },
+        {
+          "cat": "reports",
+          "name": "Operational Summary",
+          "desc": "Monthly and half-yearly incident statistics (TLP:CLEAR).",
+          "url": "https://www.acn.gov.it/"
+        },
+        {
+          "cat": "reporting",
+          "name": "Incident notification",
+          "desc": "Mandatory and voluntary incident notifications.",
+          "url": "https://www.acn.gov.it/"
+        }
+      ],
+      "stats": [],
+      "feeds": [],
+      "newsletter": null,
+      "related": []
+    },
+    {
+      "id": "cert-lv",
+      "cc": "LV",
+      "country": "Latvia",
+      "name": "CERT.LV",
+      "full": "Information Technology Security Incident Response Institution of Latvia",
+      "kind": "national",
+      "host": "Institute of Mathematics and Computer Science, University of Latvia (Ministry of Defence)",
+      "url": "https://cert.lv/",
+      "about": "National CSIRT. With NIC.LV it runs a free national DNS firewall that blocks phishing and malware sites for anyone in Latvia, and it publishes quarterly reports on Latvian cyberspace.",
+      "constituency": "All of Latvia",
+      "langs": [
+        "LV",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 2,
+        "report": 2,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "blocklists",
+          "name": "DNS firewall (DNS ugunsmūris)",
+          "desc": "Free protective DNS for everyone in Latvia, updated daily with scam links reported by residents and specialists.",
+          "url": "https://dnsmuris.lv/"
+        },
+        {
+          "cat": "alerts",
+          "name": "News & warnings",
+          "desc": "Warnings about scams and vulnerabilities.",
+          "url": "https://cert.lv/"
+        },
+        {
+          "cat": "reports",
+          "name": "Quarterly reports",
+          "desc": "Quarterly analysis of Latvian cyberspace, including DNS firewall statistics.",
+          "url": "https://cert.lv/"
+        },
+        {
+          "cat": "reporting",
+          "name": "Report an incident",
+          "desc": "Report incidents and scam links.",
+          "url": "https://cert.lv/"
+        },
+        {
+          "cat": "awareness",
+          "name": "Esi drošs",
+          "desc": "Public awareness portal.",
+          "url": "https://www.esidross.lv/"
+        }
+      ],
+      "stats": [
+        {
+          "label": "DNS firewall blocks in Q1 2026",
+          "value": ">2.5 million"
+        }
+      ],
+      "feeds": [],
+      "newsletter": null,
+      "related": []
+    },
+    {
+      "id": "nksc-lt",
+      "cc": "LT",
+      "country": "Lithuania",
+      "name": "NKSC / CERT-LT",
+      "full": "Nacionalinis kibernetinio saugumo centras (National Cyber Security Centre)",
+      "kind": "national",
+      "host": "Ministry of National Defence",
+      "url": "https://www.nksc.lt/en/",
+      "about": "National cyber security centre, NIS2 competent authority and national CSIRT (CERT-LT). Trusted Introducer accredited and a FIRST member since 2009. Publishes practical security recommendations and an annual national cyber security report.",
+      "constituency": ".lt domain and Lithuanian IP space; supervised entities",
+      "langs": [
+        "LT",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 2,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "reporting",
+          "name": "Online incident form",
+          "desc": "Report incidents in Lithuanian or English, or email cert@nksc.lt.",
+          "url": "https://www.nksc.lt/en/report.html"
+        },
+        {
+          "cat": "alerts",
+          "name": "Recommendations & warnings",
+          "desc": "Practical guidance, for example on remote desktop management.",
+          "url": "https://www.nksc.lt/en/"
+        },
+        {
+          "cat": "notify",
+          "name": "Network monitoring",
+          "desc": "Monitoring of state networks; an EU-funded programme expands threat detection and free tools for the public.",
+          "url": "https://www.nksc.lt/en/cef.html"
+        },
+        {
+          "cat": "reports",
+          "name": "National cyber security report",
+          "desc": "Annual status report.",
+          "url": "https://www.nksc.lt/en/"
+        }
+      ],
+      "stats": [],
+      "feeds": [],
+      "newsletter": null,
+      "related": []
+    },
+    {
+      "id": "circl-lu",
+      "cc": "LU",
+      "country": "Luxembourg",
+      "name": "CIRCL",
+      "full": "Computer Incident Response Center Luxembourg",
+      "kind": "national",
+      "host": "Luxembourg House of Cybersecurity",
+      "url": "https://www.circl.lu/",
+      "featured": true,
+      "about": "National CERT for the private sector, municipalities and NGOs in Luxembourg, and one of Europe's largest builders of free security infrastructure. It leads the MISP threat-sharing project and develops Vulnerability-Lookup, the software behind ENISA's EU Vulnerability Database.",
+      "constituency": "Private sector, communes and non-governmental entities in Luxembourg",
+      "langs": [
+        "EN",
+        "FR",
+        "DE",
+        "LB"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 1,
+        "report": 2,
+        "oss": 2,
+        "proactive": 2,
+        "transparency": 1,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "tools",
+          "name": "MISP",
+          "desc": "Open-source threat intelligence sharing platform. CIRCL runs communities for the private sector (access on request).",
+          "url": "https://www.misp-project.org/"
+        },
+        {
+          "cat": "feeds",
+          "name": "Vulnerability-Lookup",
+          "desc": "Free vulnerability database with API, sightings and RSS. Powers the EUVD.",
+          "url": "https://vulnerability.circl.lu/"
+        },
+        {
+          "cat": "feeds",
+          "name": "Passive DNS & Passive SSL",
+          "desc": "Historical DNS and certificate databases, access on request.",
+          "url": "https://www.circl.lu/services/passive-dns/"
+        },
+        {
+          "cat": "tools",
+          "name": "AIL framework",
+          "desc": "Analysis of information leaks from paste sites and dark-web sources.",
+          "url": "https://github.com/ail-project"
+        },
+        {
+          "cat": "tools",
+          "name": "Lookyloo",
+          "desc": "Captures a web page and maps every domain it calls. Public instance available.",
+          "url": "https://lookyloo.circl.lu/"
+        },
+        {
+          "cat": "tools",
+          "name": "hashlookup",
+          "desc": "Free API to check whether a file hash is known.",
+          "url": "https://hashlookup.circl.lu/"
+        },
+        {
+          "cat": "tools",
+          "name": "Pandora",
+          "desc": "Open-source file analysis tool.",
+          "url": "https://pandora.circl.lu/"
+        },
+        {
+          "cat": "reporting",
+          "name": "Report an incident",
+          "desc": "Email info@circl.lu or use the incident form.",
+          "url": "https://www.circl.lu/"
+        },
+        {
+          "cat": "alerts",
+          "name": "Publications & TR",
+          "desc": "Technical reports and advisories.",
+          "url": "https://www.circl.lu/pub/"
+        }
+      ],
+      "stats": [],
+      "feeds": [
+        "https://www.circl.lu/feed.xml",
+        "https://vulnerability.circl.lu/rss/recent/5"
+      ],
+      "newsletter": null,
+      "related": [
+        {
+          "name": "GOVCERT.LU",
+          "desc": "Government CERT of Luxembourg.",
+          "url": "https://www.govcert.lu/"
+        }
+      ]
+    },
+    {
+      "id": "csirt-mt",
+      "cc": "MT",
+      "country": "Malta",
+      "name": "CSIRTMalta",
+      "full": "CSIRTMalta / govmtCSIRT",
+      "kind": "national",
+      "host": "Malta Information Technology Agency (MITA)",
+      "url": "https://ncc-mita.gov.mt/",
+      "about": "Government and national CSIRT hosted by MITA, designated under Legal Notice 71 of 2025. Trusted Introducer accredited. MITA is also Malta's National Coordination Centre.",
+      "constituency": "Ministries, public sector, essential and important entities",
+      "langs": [
+        "EN",
+        "MT"
+      ],
+      "scores": {
+        "adv": 1,
+        "feeds": 0,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 0,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Security advisories",
+          "desc": "Occasional advisories on cyber hygiene and threats.",
+          "url": "https://ncc-mita.gov.mt/"
+        },
+        {
+          "cat": "reporting",
+          "name": "Incident reporting",
+          "desc": "Reporting routes for NIS entities."
+        }
+      ],
+      "stats": [],
+      "feeds": [],
+      "newsletter": null,
+      "related": []
+    },
+    {
+      "id": "ncsc-nl",
+      "cc": "NL",
+      "country": "Netherlands",
+      "name": "NCSC-NL",
+      "full": "Nationaal Cyber Security Centrum",
+      "kind": "national",
+      "host": "Ministry of Justice and Security",
+      "url": "https://www.ncsc.nl/",
+      "about": "National CSIRT. Publishes structured security advisories with probability and impact ratings, offers RSS and CSAF, keeps public GitHub resources during major vulnerabilities, and co-publishes the annual Cyber Security Assessment Netherlands.",
+      "constituency": "Central government, vital providers, NIS2 entities; public advisories",
+      "langs": [
+        "NL",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 1,
+        "oss": 2,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Security advisories",
+          "desc": "Advisories rated on probability and damage.",
+          "url": "https://advisories.ncsc.nl/"
+        },
+        {
+          "cat": "feeds",
+          "name": "Advisory RSS & CSAF",
+          "desc": "Machine-readable advisories.",
+          "url": "https://advisories.ncsc.nl/"
+        },
+        {
+          "cat": "tools",
+          "name": "NCSC-NL on GitHub",
+          "desc": "Software lists and detection resources for major vulnerabilities.",
+          "url": "https://github.com/NCSC-NL"
+        },
+        {
+          "cat": "reports",
+          "name": "Cybersecuritybeeld Nederland",
+          "desc": "Annual national cyber security assessment.",
+          "url": "https://www.ncsc.nl/"
+        }
+      ],
+      "stats": [],
+      "feeds": [
+        "https://advisories.ncsc.nl/rss/advisories"
+      ],
+      "newsletter": null,
+      "related": [
+        {
+          "name": "DIVD",
+          "desc": "Volunteer vulnerability disclosure institute (see Community).",
+          "url": "https://www.divd.nl/"
+        },
+        {
+          "name": "Z-CERT",
+          "desc": "CERT for Dutch healthcare.",
+          "url": "https://www.z-cert.nl/"
+        }
+      ]
+    },
+    {
+      "id": "cert-pt",
+      "cc": "PT",
+      "country": "Portugal",
+      "name": "CERT.PT",
+      "full": "CERT.PT (Centro Nacional de Cibersegurança)",
+      "kind": "national",
+      "host": "Centro Nacional de Cibersegurança (CNCS)",
+      "url": "https://www.cncs.gov.pt/",
+      "about": "Incident response team of the CNCS, operating 24/7. Its Observatório publishes the annual Risks and Conflicts report. Co-created the open-source IntelMQ tool with CERT.at.",
+      "constituency": "Public administration, critical infrastructure, essential entities, cyberspace of national interest",
+      "langs": [
+        "PT",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 2,
+        "oss": 1,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Alerts",
+          "desc": "Security alerts and recommendations.",
+          "url": "https://www.cncs.gov.pt/"
+        },
+        {
+          "cat": "reporting",
+          "name": "24/7 incident response",
+          "desc": "Incident coordination, on-site support and vulnerability identification.",
+          "url": "https://www.cncs.gov.pt/"
+        },
+        {
+          "cat": "reports",
+          "name": "Observatório – Riscos & Conflitos",
+          "desc": "Annual report on incidents and cybercrime.",
+          "url": "https://www.cncs.gov.pt/"
+        },
+        {
+          "cat": "tools",
+          "name": "IntelMQ (co-creator)",
+          "desc": "Threat feed processing framework.",
+          "url": "https://github.com/certtools/intelmq"
+        }
+      ],
+      "stats": [
+        {
+          "label": "Share of 2023 incidents targeting ISPs",
+          "value": "81%"
+        }
+      ],
+      "feeds": [],
+      "newsletter": null,
+      "related": []
+    },
+    {
+      "id": "dnsc-ro",
+      "cc": "RO",
+      "country": "Romania",
+      "name": "DNSC",
+      "full": "Directoratul Național de Securitate Cibernetică (ex CERT-RO)",
+      "kind": "national",
+      "host": "Romanian government",
+      "url": "https://dnsc.ro/",
+      "about": "National cyber security directorate, successor to CERT-RO. Runs the national 1911 cyber incident hotline, the PNRISC online reporting platform, and frequent public warnings about scams, including ones that impersonate DNSC itself.",
+      "constituency": "All of Romania",
+      "langs": [
+        "RO",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 2,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 1,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "reporting",
+          "name": "1911 hotline",
+          "desc": "National phone number for reporting cyber incidents, reachable from all networks."
+        },
+        {
+          "cat": "reporting",
+          "name": "PNRISC platform",
+          "desc": "Online incident reporting portal.",
+          "url": "https://pnrisc.dnsc.ro/"
+        },
+        {
+          "cat": "reporting",
+          "name": "alerts@dnsc.ro",
+          "desc": "Email reporting."
+        },
+        {
+          "cat": "alerts",
+          "name": "Alerts & scam warnings",
+          "desc": "Warnings about phishing, vishing and fake fines.",
+          "url": "https://dnsc.ro/"
+        }
+      ],
+      "stats": [
+        {
+          "label": "Relevant security events recorded (2024)",
+          "value": ">27 million"
+        }
+      ],
+      "feeds": [],
+      "newsletter": null,
+      "related": []
+    },
+    {
+      "id": "sk-cert",
+      "cc": "SK",
+      "country": "Slovakia",
+      "name": "SK-CERT",
+      "full": "National Cybersecurity Centre SK-CERT",
+      "kind": "national",
+      "host": "National Security Authority (NBÚ)",
+      "url": "https://www.sk-cert.sk/",
+      "about": "National cybersecurity centre within the NBÚ since September 2019, under Act 69/2018. Publishes security bulletins and severity-rated warnings, and issues extraordinary warnings to essential service operators.",
+      "constituency": "All of Slovakia, essential services operators",
+      "langs": [
+        "SK",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 1,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Warnings & bulletins",
+          "desc": "Severity-rated warnings on vulnerabilities and threats.",
+          "url": "https://www.sk-cert.sk/"
+        },
+        {
+          "cat": "reporting",
+          "name": "incident(at)nbu.gov.sk",
+          "desc": "Incident reporting, plus a reporting portal."
+        },
+        {
+          "cat": "awareness",
+          "name": "Security quality management",
+          "desc": "Guidance for organisations.",
+          "url": "https://www.sk-cert.sk/en/services/security-quality-management/index.html"
+        }
+      ],
+      "stats": [],
+      "feeds": [],
+      "newsletter": null,
+      "related": [
+        {
+          "name": "CSIRT.SK",
+          "desc": "Government CSIRT for public administration.",
+          "url": "https://www.csirt.gov.sk/"
+        }
+      ]
+    },
+    {
+      "id": "si-cert",
+      "cc": "SI",
+      "country": "Slovenia",
+      "name": "SI-CERT",
+      "full": "Slovenian Computer Emergency Response Team",
+      "kind": "national",
+      "host": "Arnes (Academic and Research Network of Slovenia)",
+      "url": "https://www.cert.si/",
+      "about": "National CERT under the Information Security Act. Handles incidents, warns operators and the public, and runs the national awareness programme Varni na internetu (Safe on the Internet).",
+      "constituency": "All of Slovenia",
+      "langs": [
+        "SL",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 2,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 2,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Warnings (opozorila)",
+          "desc": "Warnings to network operators and the public.",
+          "url": "https://www.cert.si/"
+        },
+        {
+          "cat": "reporting",
+          "name": "cert@cert.si",
+          "desc": "Incident reporting, working days 8:00–16:00."
+        },
+        {
+          "cat": "awareness",
+          "name": "Varni na internetu",
+          "desc": "National awareness and education programme.",
+          "url": "https://varninainternetu.si/"
+        },
+        {
+          "cat": "reports",
+          "name": "Cyber security report",
+          "desc": "Annual incident report.",
+          "url": "https://www.cert.si/"
+        }
+      ],
+      "stats": [
+        {
+          "label": "Incidents handled (2021)",
+          "value": ">3,000"
+        }
+      ],
+      "feeds": [
+        "https://www.cert.si/feed/"
+      ],
+      "newsletter": null,
+      "related": [
+        {
+          "name": "SIGOV-CERT",
+          "desc": "Government CERT within the Information Security Administration (URSIV).",
+          "url": "https://www.gov.si/"
+        }
+      ]
+    },
+    {
+      "id": "incibe-cert",
+      "cc": "ES",
+      "country": "Spain",
+      "name": "INCIBE-CERT",
+      "full": "INCIBE-CERT (Instituto Nacional de Ciberseguridad)",
+      "kind": "national",
+      "host": "INCIBE",
+      "url": "https://www.incibe.es/incibe-cert",
+      "about": "24/7 national CSIRT for citizens, companies and strategic operators, and a CVE Numbering Authority. Runs the free 017 cyber security helpline and publishes early-warning notices, including industrial control system (ICS) notices.",
+      "constituency": "Citizens, companies, digital service providers, RedIRIS, critical operators",
+      "langs": [
+        "ES",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 2,
+        "oss": 0,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "reporting",
+          "name": "017 helpline",
+          "desc": "Free, confidential national cyber security helpline, open 9:00–21:00 every day, by phone, web form, chat and video."
+        },
+        {
+          "cat": "alerts",
+          "name": "Avisos & Avisos SCI",
+          "desc": "Early-warning notices, including ICS/OT notices.",
+          "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos"
+        },
+        {
+          "cat": "alerts",
+          "name": "CVE Numbering Authority",
+          "desc": "Assigns CVEs and coordinates disclosure."
+        },
+        {
+          "cat": "feeds",
+          "name": "Vulnerability database & RSS",
+          "desc": "National vulnerability database with personalised alerts and RSS.",
+          "url": "https://www.incibe.es/incibe-cert/alerta-temprana/vulnerabilidades"
+        },
+        {
+          "cat": "awareness",
+          "name": "Protege tu empresa / Ciudadanía",
+          "desc": "Guides for citizens and SMEs.",
+          "url": "https://www.incibe.es/"
+        }
+      ],
+      "stats": [],
+      "feeds": [
+        "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/feed",
+        "https://www.incibe.es/feed/avisos"
+      ],
+      "newsletter": {
+        "name": "INCIBE boletines",
+        "url": "https://www.incibe.es/"
+      },
+      "related": [
+        {
+          "name": "CCN-CERT",
+          "desc": "Government CERT (see below).",
+          "url": "https://www.ccn-cert.cni.es/"
+        }
+      ]
+    },
+    {
+      "id": "ccn-cert",
+      "cc": "ES",
+      "country": "Spain",
+      "name": "CCN-CERT",
+      "full": "CCN-CERT (Centro Criptológico Nacional)",
+      "kind": "government",
+      "host": "National Cryptologic Centre (CNI)",
+      "url": "https://www.ccn-cert.cni.es/",
+      "about": "Government CERT for the public sector. Offers a large set of free tools to public bodies, including LUCIA for incident management, CLARA for compliance checks, microCLAUDIA for ransomware vaccination, REYES for threat intel exchange and ATENEA for training challenges.",
+      "constituency": "Spanish public sector and strategic companies",
+      "langs": [
+        "ES",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 1,
+        "report": 1,
+        "oss": 1,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Seguridad al día",
+          "desc": "Alerts and vulnerability news.",
+          "url": "https://www.ccn-cert.cni.es/"
+        },
+        {
+          "cat": "tools",
+          "name": "Free government tools",
+          "desc": "LUCIA, PILAR, CLARA, microCLAUDIA, REYES, ATENEA and more.",
+          "url": "https://www.ccn-cert.cni.es/"
+        },
+        {
+          "cat": "feeds",
+          "name": "REYES",
+          "desc": "Threat intelligence exchange for public bodies."
+        },
+        {
+          "cat": "reports",
+          "name": "Ciberamenazas y tendencias",
+          "desc": "Annual threat report and guides (Series CCN-STIC).",
+          "url": "https://www.ccn-cert.cni.es/"
+        }
+      ],
+      "stats": [],
+      "feeds": [],
+      "newsletter": null,
+      "related": []
+    },
+    {
+      "id": "cert-se",
+      "cc": "SE",
+      "country": "Sweden",
+      "name": "CERT-SE",
+      "full": "CERT-SE (Swedish National CSIRT)",
+      "kind": "national",
+      "host": "National Cyber Security Centre Sweden",
+      "url": "https://www.cert.se/",
+      "about": "National CSIRT, now part of Sweden's National Cyber Security Centre. Best known for its weekly letter (veckobrev), which mixes tips with a curated list of security news, and for vulnerability notices.",
+      "constituency": "All of Sweden",
+      "langs": [
+        "SV",
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 1,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 1,
+        "english": 1
+      },
+      "services": [
+        {
+          "cat": "newsletter",
+          "name": "CERT-SE:s veckobrev",
+          "desc": "Weekly letter with tips and curated security news. Pauses over the summer.",
+          "url": "https://www.cert.se/"
+        },
+        {
+          "cat": "alerts",
+          "name": "Vulnerability notices",
+          "desc": "Notices on critical vulnerabilities.",
+          "url": "https://www.cert.se/"
+        },
+        {
+          "cat": "feeds",
+          "name": "RSS feed",
+          "desc": "Feed of all publications.",
+          "url": "https://www.cert.se/feed.rss"
+        },
+        {
+          "cat": "reporting",
+          "name": "Report an incident",
+          "desc": "Incident reporting.",
+          "url": "https://www.cert.se/"
+        }
+      ],
+      "stats": [],
+      "feeds": [
+        "https://www.cert.se/feed.rss"
+      ],
+      "newsletter": {
+        "name": "CERT-SE weekly letter",
+        "url": "https://www.cert.se/"
+      },
+      "related": []
+    },
+    {
+      "id": "cert-eu",
+      "cc": "EU",
+      "country": "European Union",
+      "name": "CERT-EU",
+      "full": "Cybersecurity Service for the Union institutions, bodies, offices and agencies",
+      "kind": "eu",
+      "host": "EU institutions",
+      "url": "https://cert.europa.eu/",
+      "about": "CERT for EU institutions and agencies, and a member of the EU CSIRTs Network. Publishes public security advisories on major vulnerabilities, threat intelligence and an annual Threat Landscape Report, all with RSS feeds.",
+      "constituency": "EU institutions, bodies, offices and agencies",
+      "langs": [
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 0,
+        "oss": 0,
+        "proactive": 1,
+        "transparency": 2,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "alerts",
+          "name": "Security advisories",
+          "desc": "Advisories on major vulnerabilities with patch and mitigation steps.",
+          "url": "https://cert.europa.eu/publications/security-advisories"
+        },
+        {
+          "cat": "feeds",
+          "name": "Threat intelligence RSS",
+          "desc": "Latest threat intelligence publications.",
+          "url": "https://cert.europa.eu/publications/threat-intelligence-rss"
+        },
+        {
+          "cat": "reports",
+          "name": "Threat Landscape Report",
+          "desc": "Annual report, the 2025 edition was published in April 2026.",
+          "url": "https://cert.europa.eu/publications"
+        }
+      ],
+      "stats": [],
+      "feeds": [
+        "https://cert.europa.eu/publications/security-advisories-rss",
+        "https://cert.europa.eu/publications/threat-intelligence-rss"
+      ],
+      "newsletter": null,
+      "related": []
+    },
+    {
+      "id": "enisa-euvd",
+      "cc": "EU",
+      "country": "European Union",
+      "name": "ENISA EUVD",
+      "full": "European Union Vulnerability Database (ENISA)",
+      "kind": "eu",
+      "host": "ENISA – EU Agency for Cybersecurity",
+      "url": "https://euvd.enisa.europa.eu/",
+      "about": "Free EU vulnerability database launched on 13 May 2025 under NIS2. Aggregates CVE data, national CSIRT advisories and vendor information, with views for critical, exploited and EU-coordinated vulnerabilities. Built on CIRCL's open-source Vulnerability-Lookup. ENISA also provides the secretariat of the EU CSIRTs Network.",
+      "constituency": "Everyone",
+      "langs": [
+        "EN"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 2,
+        "block": 0,
+        "report": 0,
+        "oss": 1,
+        "proactive": 0,
+        "transparency": 2,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "feeds",
+          "name": "EUVD dashboard & API",
+          "desc": "Critical, exploited and EU-coordinated vulnerability views with a public API.",
+          "url": "https://euvd.enisa.europa.eu/"
+        },
+        {
+          "cat": "reports",
+          "name": "ENISA Threat Landscape",
+          "desc": "Annual EU threat landscape report.",
+          "url": "https://www.enisa.europa.eu/"
+        },
+        {
+          "cat": "awareness",
+          "name": "CSIRTs Network",
+          "desc": "Network of national CSIRTs and CERT-EU, with ENISA as secretariat.",
+          "url": "https://www.csirtsnetwork.eu/"
+        }
+      ],
+      "stats": [],
+      "feeds": [],
+      "newsletter": null,
+      "related": []
+    },
+    {
+      "id": "shadowserver",
+      "cc": "INT",
+      "country": "Community",
+      "name": "Shadowserver",
+      "full": "The Shadowserver Foundation",
+      "kind": "community",
+      "host": "Non-profit foundation",
+      "url": "https://www.shadowserver.org/",
+      "about": "Non-profit that scans the internet and runs sinkholes and honeypots, then sends free daily reports to network owners. Most EU national CSIRTs receive its data and use it in their own notifications. Any organisation can sign up for reports about its own networks.",
+      "constituency": "Network owners worldwide; 201 national CSIRTs in 175 countries and territories",
+      "langs": [
+        "EN"
+      ],
+      "scores": {
+        "adv": 1,
+        "feeds": 2,
+        "block": 1,
+        "report": 0,
+        "oss": 1,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "notify",
+          "name": "Free daily network reports",
+          "desc": "Daily reports on compromised, vulnerable and exposed systems on your ASN, netblocks or domains.",
+          "url": "https://www.shadowserver.org/what-we-do/network-reporting/get-reports/"
+        },
+        {
+          "cat": "reports",
+          "name": "Dashboard",
+          "desc": "Public statistics on exposure, infections and attacks by country.",
+          "url": "https://dashboard.shadowserver.org/"
+        },
+        {
+          "cat": "alerts",
+          "name": "Special reports & news",
+          "desc": "Alerts on mass exploitation events.",
+          "url": "https://www.shadowserver.org/news/"
+        }
+      ],
+      "stats": [
+        {
+          "label": "National CSIRTs receiving daily reports",
+          "value": "201"
+        },
+        {
+          "label": "Other organisations receiving reports",
+          "value": ">8,000"
+        }
+      ],
+      "feeds": [
+        "https://www.shadowserver.org/feed/"
+      ],
+      "newsletter": null,
+      "related": []
+    },
+    {
+      "id": "abuse-ch",
+      "cc": "INT",
+      "country": "Community",
+      "name": "abuse.ch",
+      "full": "abuse.ch",
+      "kind": "community",
+      "host": "Bern University of Applied Sciences (Switzerland)",
+      "url": "https://abuse.ch/",
+      "about": "Community-driven threat intelligence platforms. Free and widely used by European CSIRTs as blocklist and IoC sources. Not an EU body, but central to the EU CSIRT ecosystem.",
+      "constituency": "Everyone (free for non-commercial use; commercial terms apply for some data)",
+      "langs": [
+        "EN"
+      ],
+      "scores": {
+        "adv": 0,
+        "feeds": 2,
+        "block": 2,
+        "report": 2,
+        "oss": 1,
+        "proactive": 1,
+        "transparency": 2,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "blocklists",
+          "name": "URLhaus",
+          "desc": "Malware distribution URLs with blocklists, RPZ and API.",
+          "url": "https://urlhaus.abuse.ch/"
+        },
+        {
+          "cat": "feeds",
+          "name": "ThreatFox",
+          "desc": "Indicators of compromise shared by the community.",
+          "url": "https://threatfox.abuse.ch/"
+        },
+        {
+          "cat": "feeds",
+          "name": "MalwareBazaar",
+          "desc": "Malware sample sharing.",
+          "url": "https://bazaar.abuse.ch/"
+        },
+        {
+          "cat": "blocklists",
+          "name": "Feodo Tracker & SSLBL",
+          "desc": "Botnet C2 IP blocklists and malicious TLS certificate lists.",
+          "url": "https://feodotracker.abuse.ch/"
+        },
+        {
+          "cat": "reporting",
+          "name": "Community submission",
+          "desc": "Anyone with an account can submit URLs, IoCs and samples."
+        }
+      ],
+      "stats": [],
+      "feeds": [],
+      "newsletter": null,
+      "related": []
+    },
+    {
+      "id": "divd",
+      "cc": "NL",
+      "country": "Community",
+      "name": "DIVD",
+      "full": "Dutch Institute for Vulnerability Disclosure",
+      "kind": "community",
+      "host": "Volunteer non-profit (Netherlands)",
+      "url": "https://www.divd.nl/",
+      "about": "Volunteer researchers who scan the internet for vulnerable systems and notify their owners. DIVD is a CVE Numbering Authority and publishes every case openly.",
+      "constituency": "Anyone with an exposed vulnerable system",
+      "langs": [
+        "EN",
+        "NL"
+      ],
+      "scores": {
+        "adv": 2,
+        "feeds": 1,
+        "block": 0,
+        "report": 1,
+        "oss": 1,
+        "proactive": 2,
+        "transparency": 2,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "notify",
+          "name": "Vulnerability notifications",
+          "desc": "Scans for specific critical vulnerabilities and notifies affected owners worldwide.",
+          "url": "https://www.divd.nl/cases/"
+        },
+        {
+          "cat": "alerts",
+          "name": "Case files & CVEs",
+          "desc": "Public case pages and advisories.",
+          "url": "https://www.divd.nl/"
+        }
+      ],
+      "stats": [],
+      "feeds": [
+        "https://www.divd.nl/index.xml"
+      ],
+      "newsletter": null,
+      "related": []
+    },
+    {
+      "id": "misp",
+      "cc": "INT",
+      "country": "Community",
+      "name": "MISP Project",
+      "full": "MISP – Open Source Threat Intelligence Platform",
+      "kind": "community",
+      "host": "Led by CIRCL, EU co-financed",
+      "url": "https://www.misp-project.org/",
+      "about": "The open-source threat-sharing platform most European CSIRTs use to exchange indicators. Includes free public OSINT feeds and taxonomies such as TLP and the ENISA incident taxonomy.",
+      "constituency": "Everyone",
+      "langs": [
+        "EN"
+      ],
+      "scores": {
+        "adv": 0,
+        "feeds": 2,
+        "block": 1,
+        "report": 0,
+        "oss": 2,
+        "proactive": 0,
+        "transparency": 1,
+        "english": 2
+      },
+      "services": [
+        {
+          "cat": "tools",
+          "name": "MISP platform",
+          "desc": "Self-hosted threat intelligence sharing platform.",
+          "url": "https://github.com/MISP/MISP"
+        },
+        {
+          "cat": "feeds",
+          "name": "Default OSINT feeds",
+          "desc": "Curated list of free feeds that MISP can ingest.",
+          "url": "https://www.misp-project.org/feeds/"
+        },
+        {
+          "cat": "tools",
+          "name": "Taxonomies & galaxies",
+          "desc": "Shared vocabularies for tagging, including TLP and threat actor galaxies.",
+          "url": "https://www.misp-project.org/taxonomies.html"
+        }
+      ],
+      "stats": [],
+      "feeds": [],
+      "newsletter": null,
+      "related": []
+    }
+  ]
+}
