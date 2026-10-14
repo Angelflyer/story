@@ -145,6 +145,26 @@ main section { padding-block: 8px 56px; }
 .evw .t { height: 11px; background: var(--sunk); border-radius: 3px; overflow: hidden; }
 .evw .t span { display: block; height: 100%; border-radius: 0 4px 4px 0; }
 .evw .b b { font: 500 .75rem var(--f-mono); font-variant-numeric: tabular-nums; }
+.skywrap { position: relative; margin-top: 10px; }
+#sky { width: 100%; height: auto; display: block; }
+#sky .floor { fill: var(--sunk); stroke: var(--surface); stroke-width: .8; }
+#sky .floor.eu { fill: color-mix(in srgb, var(--s1) 55%, var(--sunk)); }
+#sky .tower { cursor: pointer; }
+#sky .tower:hover rect, #sky .tower:focus-visible rect { stroke: var(--ink); stroke-width: 1.5; }
+#sky .tower:focus-visible { outline: none; }
+#sky .side { fill: #000; opacity: .28; }
+#sky .top { fill: #fff; opacity: .35; }
+#sky .shadow { fill: #000; opacity: .12; }
+#sky .tl { font: 700 13px var(--f-display); font-stretch: 85%; fill: var(--ink); stroke: var(--surface); stroke-width: 3px; paint-order: stroke; text-anchor: middle; pointer-events: none; }
+#sky .tl .tv { font: 600 11px var(--f-mono); }
+.tree { position: relative; width: 100%; aspect-ratio: 1000 / 560; margin-top: 14px; min-height: 360px; }
+.tree .tg { position: absolute; box-sizing: border-box; padding: 2px; border: 2px solid var(--surface); background: var(--sunk); overflow: hidden; }
+.tree .tgh { height: 20px; font: 600 .72rem/20px var(--f-body); padding: 0 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--ink); }
+.tree .tgh span { font: .68rem var(--f-mono); color: var(--muted); }
+.tree .tgb { position: absolute; left: 2px; right: 2px; top: 22px; bottom: 2px; }
+.tree .tt { all: unset; position: absolute; box-sizing: border-box; border: 1px solid var(--surface); cursor: pointer; display: grid; place-items: center; }
+.tree .tt:hover, .tree .tt:focus-visible { outline: 2px solid var(--ink); outline-offset: -2px; z-index: 1; }
+@media (max-width: 640px) { .tree { aspect-ratio: auto; height: 520px; } }
 .quad-wrap { overflow-x: auto; margin-top: 14px; }
 .quad { display: grid; grid-template-columns: 34px repeat(7, minmax(64px, 1fr)); grid-template-rows: repeat(7, minmax(52px, auto)) 34px; min-width: 560px; position: relative; }
 .quad .cell { border-right: 1px dashed var(--line); border-bottom: 1px dashed var(--line); padding: 5px; display: flex; flex-wrap: wrap; gap: 4px; align-content: flex-start; }
@@ -328,18 +348,14 @@ footer .wrap { display: grid; gap: 8px; }
   <section id="charts" data-panel="charts" hidden>
     <div class="wrap">
       <div class="section-head">
-        <div><h2>Charts</h2><p>Put teams side by side, see who each team mainly serves, how scores spread across regions, where national teams fall short, and which kinds of service each one offers. Select any flag or team name to open its profile.</p></div>
+        <div><h2>Charts</h2><p>See how capability rises across the map, who each team mainly serves, how scores spread within each region, and where the world's public security services are concentrated. Select any flag, tower or tile to open a team's profile.</p></div>
       </div>
       <div class="panel">
-        <div class="eyebrow">Head to head</div>
-        <h3 style="margin-top:6px">Compare up to three teams on the eight rubric dimensions</h3>
-        <div class="h2h">
-          <svg id="radar" viewBox="0 0 520 430" role="img" aria-label="Radar chart comparing the selected teams"></svg>
-          <div>
-            <div class="pickers" id="pickers"></div>
-            <div class="tablewrap" style="margin-top:14px"><table id="h2htable"></table></div>
-          </div>
-        </div>
+        <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center"><div class="eyebrow">Capability skyline</div><div role="group" aria-label="Skyline area" style="display:flex;gap:4px"><button class="chip" data-sky="europe" aria-pressed="true">Europe</button><button class="chip" data-sky="world" aria-pressed="false">World</button></div></div>
+        <h3 style="margin-top:6px">Each country's best team, as a tower on the map</h3>
+        <p class="muted" style="font-size:.82rem;margin:6px 0 0">Tower height and colour show the score out of 100. Hover a tower for the team; select it to open the profile.</p>
+        <div class="skywrap"><svg id="sky" role="img" aria-label="3D map with a tower per country, height by score"></svg><div class="tip" id="skytip" hidden></div></div>
+        <div class="legend"><span>Score 0</span><span class="ramp"><i style="background:var(--s1)"></i><i style="background:var(--s2)"></i><i style="background:var(--s3)"></i><i style="background:var(--s4)"></i><i style="background:var(--s5)"></i></span><span>100</span><span>· labels shown for larger countries; hover any tower</span></div>
       </div>
       <div class="panel" style="margin-top:24px">
         <div class="eyebrow">Who they serve</div>
@@ -354,16 +370,11 @@ footer .wrap { display: grid; gap: 8px; }
         <div id="spread" class="spread"></div>
       </div>
       <div class="panel" style="margin-top:24px">
-        <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center"><div class="eyebrow">Gaps</div><div role="group" aria-label="Teams" style="display:flex;gap:4px"><button class="chip" data-gaps="eu" aria-pressed="true">EU national</button><button class="chip" data-gaps="intl" aria-pressed="false">Non-EU national</button></div></div>
-        <h3 style="margin-top:6px">Where national teams fall short</h3>
-        <div class="legend" id="gaps-legend" style="margin-top:8px"></div>
-        <div id="gaps" class="gaps"></div>
-      </div>
-      <div class="panel" style="margin-top:24px">
-        <div class="eyebrow">EU vs the world</div>
-        <h3 style="margin-top:6px">Average rating per dimension: EU national teams compared with non-EU national teams</h3>
-        <div class="legend" id="evw-legend" style="margin-top:8px"></div>
-        <div id="evw" class="evw"></div>
+        <div class="eyebrow">Where the services are</div>
+        <h3 style="margin-top:6px">All catalogued services, by type and by team</h3>
+        <p class="muted" style="font-size:.82rem;margin:6px 0 0">Each block is one service type, sized by how many services of that type exist across all teams. Inside, each tile is a team, sized by how many it runs and coloured by its overall score.</p>
+        <div id="tree" class="tree"></div>
+        <div class="legend"><span>Team score 0</span><span class="ramp"><i style="background:var(--s1)"></i><i style="background:var(--s2)"></i><i style="background:var(--s3)"></i><i style="background:var(--s4)"></i><i style="background:var(--s5)"></i></span><span>100</span><span>· hover a tile for the team and its services</span></div>
       </div>
       <div class="panel" style="margin-top:24px">
         <div class="eyebrow">Who offers what</div>
@@ -572,36 +583,78 @@ footer .wrap { display: grid; gap: 8px; }
     tip.style.left = Math.max(0, x) + "px"; tip.style.top = y + "px";
   }
 
-  let picks = ["cert-pl", "ncsc-uk", "jpcert-jp"];
   function charts() {
-    // Pickers
-    const opts = sel => D.certs.map(c => `<option value="${c.id}"${c.id === sel ? " selected" : ""}>${c.cc} · ${esc(c.name)}</option>`).join("");
-    $("#pickers").innerHTML = picks.map((p, i) => `<label class="picker"><i class="sw" style="background:${SERIES[i]};width:14px;height:14px;border-radius:${["50%", "2px", "0"][i]}"></i><select data-pick="${i}" aria-label="Team ${i + 1}">${i ? '<option value="">None</option>' : ""}${opts(p)}</select></label>`).join("");
-    radar();
-    freshness(); quadrant(); spread(); gaps(); euVsWorld(); matrix();
+    skyline(); freshness(); quadrant(); spread(); treemap(); matrix();
   }
-  function radar() {
-    const sel = picks.map(id => id && byId(id)).filter(Boolean);
-    const cx = 260, cy = 210, R = 145, n = DIMS.length;
-    const pt = (i, r) => { const a = -Math.PI / 2 + i * 2 * Math.PI / n; return [cx + Math.cos(a) * r, cy + Math.sin(a) * r]; };
-    let g = "";
-    [1, 2].forEach(l => { g += `<polygon class="ring" points="${DIMS.map((_, i) => pt(i, R * l / 2).join(",")).join(" ")}"/>`; });
-    DIMS.forEach((k, i) => {
-      const [x, y] = pt(i, R), [lx, ly] = pt(i, R + 22);
-      g += `<line class="axis" x1="${cx}" y1="${cy}" x2="${x}" y2="${y}"/>`;
-      const anchor = Math.abs(lx - cx) < 8 ? "middle" : lx > cx ? "start" : "end";
-      g += `<text x="${lx}" y="${ly + 4}" text-anchor="${anchor}">${SHORT[k]}</text>`;
-    });
-    g += `<text x="${cx + 5}" y="${cy - R / 2 + 12}" style="font-size:9px">limited</text><text x="${cx + 5}" y="${cy - R + 12}" style="font-size:9px">full</text>`;
-    const marker = (i, x, y, col) => i === 0 ? `<circle cx="${x}" cy="${y}" r="5" fill="${col}" stroke="var(--surface)" stroke-width="2"/>` : i === 1 ? `<rect x="${x - 4.5}" y="${y - 4.5}" width="9" height="9" fill="${col}" stroke="var(--surface)" stroke-width="2"/>` : `<polygon points="${x},${y - 6} ${x + 6},${y + 4.5} ${x - 6},${y + 4.5}" fill="${col}" stroke="var(--surface)" stroke-width="2"/>`;
-    picks.forEach((id, si) => {
-      const c = id && byId(id); if (!c) return;
-      const ptsArr = DIMS.map((k, i) => pt(i, R * c.scores[k] / 2));
-      g += `<polygon points="${ptsArr.map(p => p.join(",")).join(" ")}" fill="${SERIES[si]}" fill-opacity=".12" stroke="${SERIES[si]}" stroke-width="2" stroke-linejoin="round" ${si ? `stroke-dasharray="${si === 1 ? "7 4" : "2 3"}"` : ""}/>`;
-    });
-    picks.forEach((id, si) => { const c = id && byId(id); if (!c) return; DIMS.forEach((k, i) => { const [x, y] = pt(i, R * c.scores[k] / 2); g += `<g><title>${esc(c.name)} · ${esc(D.meta.rubric[k])}: ${["none", "limited", "full"][c.scores[k]]}</title>${marker(si, x, y, SERIES[si])}</g>`; }); });
-    $("#radar").innerHTML = g;
-    $("#h2htable").innerHTML = `<thead><tr><th>Dimension</th>${sel.map((c, i) => `<th style="text-align:center"><i class="sw" style="background:${SERIES[picks.indexOf(c.id)]}"></i>${c.cc}</th>`).join("")}</tr></thead><tbody>${DIMS.map(k => `<tr style="cursor:default"><td>${esc(SHORT[k])}</td>${sel.map(c => `<td class="dim">${pip(c.scores[k])}</td>`).join("")}</tr>`).join("")}<tr style="cursor:default"><td><strong>Score</strong></td>${sel.map(c => `<td style="text-align:center"><span class="score">${score(c)}</span></td>`).join("")}</tr></tbody>`;
+  let skyScope = "europe";
+  function skyline() {
+    const G = skyScope === "world" ? WORLD : GEO, svg = $("#sky");
+    document.querySelectorAll("[data-sky]").forEach(b => b.setAttribute("aria-pressed", b.dataset.sky === skyScope));
+    if (!G) { svg.outerHTML = '<p class="muted">Map data could not be loaded.</p>'; return; }
+    const world = skyScope === "world";
+    const SKEW = -0.42, SQ = 0.52, TOP = world ? 70 : 150, HMAX = world ? 120 : 210;
+    const W = G.w + G.h * Math.abs(SKEW) * 0.2, H = G.h * SQ + TOP + 20;
+    const ox = world ? 110 : 160;
+    const fx = (x, y) => x + SKEW * y + ox, fy = y => y * SQ + TOP;
+    const best = {};
+    D.certs.filter(c => c.kind === "national" || c.kind === "eu" || (world && c.kind === "international")).forEach(c => { if (!best[c.cc] || score(c) > score(best[c.cc])) best[c.cc] = c; });
+    const shapes = world ? G.c : G.eu;
+    let g = `<g transform="matrix(1 0 ${SKEW} ${SQ} ${ox} ${TOP})">${G.ctx.map(d => `<path class="floor" d="${d}"/>`).join("")}${Object.entries(shapes).filter(([cc, s]) => s.d && best[cc]).map(([cc, s]) => `<path class="floor eu" d="${s.d}"/>`).join("")}</g>`;
+    const bars = Object.entries(shapes).filter(([cc]) => best[cc]).map(([cc, s]) => ({ cc, c: best[cc], a: s.a, x: fx(s.cx, s.cy), y: fy(s.cy) })).sort((a, b) => a.y - b.y || a.x - b.x);
+    const w = world ? 7 : 12, dx = world ? 4 : 7, dy = world ? -3 : -5;
+    g += bars.map(({ cc, c, a, x, y }) => {
+      const v = score(c), h = Math.max(3, v / 100 * HMAX), col = `var(--s${Math.max(1, step(v))})`, x0 = x - w / 2, y0 = y - h;
+      return `<g class="tower" data-id="${c.id}" tabindex="0" role="button" aria-label="${esc(c.country)}, ${esc(c.name)}: ${v}/100">
+        <ellipse cx="${x + dx / 2}" cy="${y + 1}" rx="${w}" ry="${w * 0.35}" class="shadow"/>
+        <polygon points="${x0 + w},${y} ${x0 + w + dx},${y + dy} ${x0 + w + dx},${y0 + dy} ${x0 + w},${y0}" fill="${col}"/><polygon points="${x0 + w},${y} ${x0 + w + dx},${y + dy} ${x0 + w + dx},${y0 + dy} ${x0 + w},${y0}" class="side"/>
+        <rect x="${x0}" y="${y0}" width="${w}" height="${h}" fill="${col}"/>
+        <polygon points="${x0},${y0} ${x0 + w},${y0} ${x0 + w + dx},${y0 + dy} ${x0 + dx},${y0 + dy}" fill="${col}"/><polygon points="${x0},${y0} ${x0 + w},${y0} ${x0 + w + dx},${y0 + dy} ${x0 + dx},${y0 + dy}" class="top"/>
+        ${(world ? c.kind !== "international" : !(a > 2600 || v >= 85 || ["MT", "CY", "IE", "PT"].includes(cc))) ? "" : `<text x="${x + dx / 2}" y="${y0 + dy - 5}" class="tl">${cc}${world ? "" : `<tspan x="${x + dx / 2}" dy="-12" class="tv">${v}</tspan>`}</text>`}
+      </g>`;
+    }).join("");
+    const left = Math.min(0, ox + SKEW * G.h); svg.setAttribute("viewBox", `${Math.round(left)} 0 ${Math.round(G.w + ox - left)} ${Math.round(H)}`);
+    svg.innerHTML = g;
+    try { const bb = svg.getBBox(); if (bb.width > 0) svg.setAttribute("viewBox", `${Math.floor(bb.x - 8)} ${Math.floor(bb.y - 8)} ${Math.ceil(bb.width + 16)} ${Math.ceil(bb.height + 16)}`); } catch (e) {}
+  }
+  function skyTip(e) {
+    const el = e.target.closest("#sky .tower"), tip = $("#skytip");
+    if (!el) { tip.hidden = true; return; }
+    const c = byId(el.dataset.id), box = $(".skywrap").getBoundingClientRect();
+    tip.innerHTML = `<b>${flag(c.cc)} ${esc(c.country)}</b>${esc(c.name)} · ${score(c)}/100`;
+    tip.hidden = false;
+    tip.style.left = Math.max(0, Math.min(e.clientX - box.left + 14, box.width - 250)) + "px"; tip.style.top = (e.clientY - box.top + 14) + "px";
+  }
+  function squarify(items, x, y, w, h) {
+    // items: [{v,...}] sorted desc; returns [{...item, x,y,w,h}]
+    const out = [], total = items.reduce((a, i) => a + i.v, 0);
+    if (!total) return out;
+    let rest = items.map(i => ({ ...i, a: i.v / total * w * h }));
+    while (rest.length) {
+      const short = Math.min(w, h); let row = [], best = Infinity;
+      for (const it of rest) {
+        const r = [...row, it], sum = r.reduce((a, i) => a + i.a, 0), mx = Math.max(...r.map(i => i.a)), mn = Math.min(...r.map(i => i.a));
+        const worst = Math.max(short * short * mx / (sum * sum), (sum * sum) / (short * short * mn));
+        if (worst > best) break; best = worst; row = r;
+      }
+      const sum = row.reduce((a, i) => a + i.a, 0);
+      if (w >= h) { const cw = sum / h; let cy = y; row.forEach(i => { const ch = i.a / cw; out.push({ ...i, x, y: cy, w: cw, h: ch }); cy += ch; }); x += cw; w -= cw; }
+      else { const ch = sum / w; let cx = x; row.forEach(i => { const cw2 = i.a / ch; out.push({ ...i, x: cx, y, w: cw2, h: ch }); cx += cw2; }); y += ch; h -= ch; }
+      rest = rest.slice(row.length);
+    }
+    return out;
+  }
+  function treemap() {
+    const el = $("#tree"), W = 1000, H = 560, cats = D.meta.categories;
+    const groups = Object.keys(cats).map(k => {
+      const teams = D.certs.map(c => ({ c, v: c.services.filter(s => s.cat === k).length })).filter(t => t.v).sort((a, b) => b.v - a.v);
+      return { k, v: teams.reduce((a, t) => a + t.v, 0), teams };
+    }).filter(g => g.v).sort((a, b) => b.v - a.v);
+    const pct = (n, of) => (n / of * 100).toFixed(3) + "%";
+    el.innerHTML = squarify(groups, 0, 0, W, H).map(g => {
+      const PAD = 2, HEAD = 22;
+      const tiles = squarify(g.teams, 0, 0, g.w - PAD * 2, Math.max(1, g.h - HEAD - PAD));
+      return `<div class="tg" style="left:${pct(g.x, W)};top:${pct(g.y, H)};width:${pct(g.w, W)};height:${pct(g.h, H)}"><div class="tgh">${esc(cats[g.k])} <span>${g.v}</span></div><div class="tgb">${tiles.map(t => { const v = score(t.c); const names = t.c.services.filter(s => s.cat === g.k).map(s => s.name).join(", "); return `<button class="tt" data-id="${t.c.id}" style="left:${pct(t.x, g.w - PAD * 2)};top:${pct(t.y, g.h - HEAD - PAD)};width:${pct(t.w, g.w - PAD * 2)};height:${pct(t.h, g.h - HEAD - PAD)};background:var(--s${Math.max(1, step(v))})" title="${esc(t.c.name)} (${esc(t.c.country)}), ${v}/100 · ${esc(names)}">${t.w > 34 && t.h > 22 ? flag(t.c.cc) : ""}</button>`; }).join("")}</div></div>`;
+    }).join("");
   }
   const fit = c => ({ pub: c.scores.adv + c.scores.report + c.scores.block, tech: c.scores.feeds + c.scores.oss + c.scores.proactive });
   function quadrant() {
@@ -641,23 +694,6 @@ footer .wrap { display: grid; gap: 8px; }
       return `<div class="srow"><div class="slab">${name}<small>${list.length} team${list.length === 1 ? "" : "s"} · median ${Math.round(med)}</small></div><div class="strack" style="height:${tall * STEP + 2}px"><span class="med" style="left:${med}%"></span>${flags}</div></div>`;
     }).join("");
     $("#spread").innerHTML = rows + `<div class="srow" style="border:0;padding-top:0"><span></span><div class="ticks">${[0, 25, 50, 75, 100].map(t => `<span style="left:${t}%">${t}</span>`).join("")}</div></div>`;
-  }
-  let gapsScope = "eu";
-  function gaps() {
-    const list = D.certs.filter(c => gapsScope === "eu" ? c.kind === "national" : c.kind === "international");
-    const n = list.length;
-    document.querySelectorAll("[data-gaps]").forEach(b => b.setAttribute("aria-pressed", b.dataset.gaps === gapsScope));
-    const COL = [["var(--s0)", "var(--ink)", "Nothing found"], ["var(--s2)", "var(--ink)", "Limited"], ["var(--s4)", "var(--accent-ink)", "Public and mature"]];
-    $("#gaps-legend").innerHTML = COL.map(([bg, , t]) => `<span><i class="sw" style="background:${bg};box-shadow:inset 0 0 0 1px var(--line)"></i>${t}</span>`).join("") + `<span>· ${n} teams</span>`;
-    const rows = DIMS.map(k => { const cnt = [0, 1, 2].map(v => list.filter(c => c.scores[k] === v).length); return { k, cnt }; }).sort((a, b) => (b.cnt[0] * 2 + b.cnt[1]) - (a.cnt[0] * 2 + a.cnt[1]));
-    $("#gaps").innerHTML = rows.map(({ k, cnt }) => `<div class="g"><span>${esc(D.meta.rubric[k])}</span><div class="stack" role="img" aria-label="${esc(D.meta.rubric[k])}: ${cnt[0]} nothing found, ${cnt[1]} limited, ${cnt[2]} public">${cnt.map((v, i) => v ? `<span style="flex:${v};background:${COL[i][0]};color:${COL[i][1]}" title="${COL[i][2]}: ${v} of ${n}">${v}</span>` : "").join("")}</div></div>`).join("");
-  }
-  function euVsWorld() {
-    const eu = D.certs.filter(c => c.kind === "national"), w = D.certs.filter(c => c.kind === "international");
-    const avg = (arr, k) => arr.reduce((a, c) => a + c.scores[k], 0) / arr.length;
-    const avgScore = arr => Math.round(arr.reduce((a, c) => a + score(c), 0) / arr.length);
-    $("#evw-legend").innerHTML = `<span><i class="sw" style="background:var(--c1)"></i>EU national (${eu.length}) · average ${avgScore(eu)}/100</span><span><i class="sw" style="background:var(--c2)"></i>Non-EU national (${w.length}) · average ${avgScore(w)}/100</span>`;
-    $("#evw").innerHTML = DIMS.map(k => { const a = avg(eu, k), b = avg(w, k); return `<div class="grp" title="${esc(D.meta.rubric[k])}"><span>${esc(D.meta.rubric[k])}</span><div class="bars2"><div class="b"><span class="t"><span style="width:${a / 2 * 100}%;background:var(--c1)"></span></span><b>${a.toFixed(2)}</b></div><div class="b"><span class="t"><span style="width:${b / 2 * 100}%;background:var(--c2)"></span></span><b>${b.toFixed(2)}</b></div></div></div>`; }).join("") + '<p class="muted" style="font-size:.78rem;margin:2px 0 0">Scale 0 (none found) to 2 (public and mature). The non-EU group is a selection of 18 major teams, not every country, so it leans towards well-resourced agencies.</p>';
   }
   function freshness() {
     if (!L.updated) { $("#fresh").innerHTML = '<p class="muted">Appears after the first feed collection.</p>'; return; }
@@ -773,6 +809,7 @@ footer .wrap { display: grid; gap: 8px; }
     document.querySelectorAll("[data-tab]").forEach(b => b.setAttribute("aria-selected", b.dataset.tab === name));
     document.querySelectorAll("[data-panel]").forEach(p => p.hidden = p.dataset.panel !== name);
     $(".hero").hidden = name !== "overview";
+    if (name === "charts" && D) skyline();
     try { localStorage.setItem("atlas-tab", name); } catch (e) {}
   }
 
@@ -780,7 +817,7 @@ footer .wrap { display: grid; gap: 8px; }
     if (e.target.closest("[data-home]")) { e.preventDefault(); showTab("overview"); scrollTo({ top: 0 }); return; }
     const go = e.target.closest("[data-goto]"); if (go) { e.preventDefault(); showTab(go.dataset.goto); scrollTo({ top: 0 }); return; }
     const sc = e.target.closest("[data-scope]"); if (sc) { mapScope = sc.dataset.scope; drawMap(); return; }
-    const gp = e.target.closest("[data-gaps]"); if (gp) { gapsScope = gp.dataset.gaps; gaps(); return; }
+    const sk = e.target.closest("[data-sky]"); if (sk) { skyScope = sk.dataset.sky; skyline(); return; }
     const mt = e.target.closest("[data-metric]"); if (mt) { metric = mt.dataset.metric; drawMetrics(); drawMap(); return; }
     const tab = e.target.closest("[data-tab]"); if (tab) { showTab(tab.dataset.tab); return; }
     if (e.target.closest("[data-close]")) { $("#dlg").close(); return; }
@@ -791,9 +828,10 @@ footer .wrap { display: grid; gap: 8px; }
     const row = e.target.closest("[data-id]"); if (row && !e.target.closest("a")) open(row.dataset.id);
     if (e.target === $("#dlg")) $("#dlg").close();
   });
-  document.addEventListener("keydown", e => { if (e.key === "Enter" && e.target.matches("tr[data-id], #map [data-id]")) open(e.target.dataset.id); });
-  document.addEventListener("change", e => { const p = e.target.closest("[data-pick]"); if (p) { picks[+p.dataset.pick] = p.value; radar(); } });
+  document.addEventListener("keydown", e => { if (e.key === "Enter" && e.target.matches("tr[data-id], #map [data-id], #sky [data-id]")) open(e.target.dataset.id); });
   $("#map").addEventListener("pointermove", tipShow);
+  $("#sky").addEventListener("pointermove", skyTip);
+  $("#sky").addEventListener("pointerleave", () => { $("#skytip").hidden = true; });
   $("#map").addEventListener("pointerleave", () => { $("#tip").hidden = true; });
   ["team3", "mix3"].forEach(id => $("#" + id).addEventListener("change", latest));
   ["q", "q2", "q3"].forEach(id => $("#" + id).addEventListener("input", () => (id === "q" ? table : id === "q2" ? services : latest)()));
