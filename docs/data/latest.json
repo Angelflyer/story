@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T17:23:20+00:00",
+ "updated": "2026-10-14T21:51:36+00:00",
  "teams": {
   "cert-pl": {
    "status": "ok",
@@ -934,7 +934,7 @@
    ]
   },
   "csirt-mt": {
-   "status": "ok",
+   "status": "stale",
    "feed": "https://ncc-mita.gov.mt/feed/",
    "via": "probed",
    "items": [
@@ -986,13 +986,20 @@
      "date": "2026-05-08T09:16:59+00:00",
      "summary": "A campaign on national television captures the despair of a senior executive after he inadvertently clicks an email … Continued"
     }
-   ]
+   ],
+   "error": "latest fetch failed"
   },
   "ncsc-nl": {
    "status": "ok",
    "feed": "https://advisories.ncsc.nl/rss/advisories",
    "via": "known",
    "items": [
+    {
+     "title": "NCSC-2026-0429 [1.00] [H/H] Kwetsbaarheid verholpen in Cisco Secure Email Gateway",
+     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0429",
+     "date": "2026-10-14T18:46:36+00:00",
+     "summary": "Cisco heeft een kwetsbaarheid verholpen in Cisco Secure Email Gateway, specifiek in de Advanced Malware Protection feature. De kwetsbaarheid bevindt zich in de wijze waarop de Advanced Malware Protection feature e-mailbijlagen verwerkt wanneer de file reputation service is…"
+    },
     {
      "title": "NCSC-2026-0428 [1.00] [M/H] Kwetsbaarheden verholpen in Fortinet FortiSandbox",
      "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0428",
@@ -1034,12 +1041,6 @@
      "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0422",
      "date": "2026-10-13T18:36:28+00:00",
      "summary": "Microsoft heeft xxx kwetsbaarheden verholpen in diverse Office producten, zoals Word, Excel, Access, Outlook, Visio, Sharepoint en PowerPoint, maar ook subcomponenten als Shell, Azure Key Vault en Click-to-Run. Een kwaadwillende kan de kwetsbaarheden misbruiken om een…"
-    },
-    {
-     "title": "NCSC-2026-0421 [1.00] [M/H] Kwetsbaarheden verholpen in Microsoft Azure",
-     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0421",
-     "date": "2026-10-13T18:31:42+00:00",
-     "summary": "Microsoft heeft kwetsbaarheden verholpen in diverse Azure componenten, zoals Key Vault, DevOps, API center en Storage. Een kwaadwillende kan de kwetsbaarheden misbruiken om beveiligingsmaatregelen te omzeilen, zich verhoogde rechten toe te kennen, willekeurige code uit te…"
     }
    ]
   },
@@ -1226,7 +1227,7 @@
    ]
   },
   "incibe-cert": {
-   "status": "stale",
+   "status": "ok",
    "feed": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/feed",
    "via": "known",
    "items": [
@@ -1278,8 +1279,7 @@
      "date": "2026-10-13T07:39:28+00:00",
      "summary": "Cross-Site Scripting en la aplicación web de YouMind Mar, 13/10/2026 - 09:39 Aviso Recursos Afectados Aplicación web de YouMind. Descripción INCIBE ha coordinado la publicación de una vulnerabilidad de severidad media que afecta a la aplicación web de YouMind, un espacio de…"
     }
-   ],
-   "error": "latest fetch failed"
+   ]
   },
   "ccn-cert": {
    "status": "no-feed",
@@ -1416,28 +1416,28 @@
    "via": "api",
    "items": [
     {
-     "title": "EUVD-2026-100274 (CVE-2026-96951) · CVSS 8.8",
-     "link": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-100274",
-     "date": "2026-10-13T19:01:26+00:00",
-     "summary": "Improper neutralization of special elements used in a command ('command injection') in Windows Shell allows an unauthorized attacker to bypass a security feature over a network."
+     "title": "EUVD-2026-101495 (GHSA-9fh3-97mp-7wmv) · CVSS 8.6",
+     "link": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-101495",
+     "date": "2026-10-14T17:26:52+00:00",
+     "summary": "A remote code execution (RCE) vulnerability in the management interface of Palo Alto Networks PAN-OS® software enables an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall. The security risk posed by this issue is…"
     },
     {
-     "title": "EUVD-2026-98816 (GHSA-vm2g-whwh-xhq8) · CVSS 8.6",
-     "link": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-98816",
-     "date": "2026-10-13T15:31:07+00:00",
-     "summary": "Authentication bypass by spoofing in ICS before version 25.1.3.0 allows a remote unauthenticated attacker to execute arbitrary commands. This does not impact ICS version 22.7R2.14 or prior."
+     "title": "EUVD-2026-101420 (CVE-2026-76519) · CVSS 9.8",
+     "link": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-101420",
+     "date": "2026-10-14T16:07:51+00:00",
+     "summary": "A vulnerability in the Advanced Malware Protection (AMP) feature of Cisco Secure Email Gateway could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system. This vulnerability is due to improper handling of email attachments when…"
     },
     {
-     "title": "EUVD-2026-88445 (GHSA-3cf3-h799-fjvq) · CVSS 8.8",
-     "link": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-88445",
-     "date": "2026-09-28T19:13:52+00:00",
-     "summary": "An out-of-bounds write issue was addressed with improved bounds checking. This issue is fixed in iOS 26.7.1 and iPadOS 26.7.1, macOS Sequoia 15.8.1, macOS Tahoe 26.7.1. Processing a maliciously crafted file may lead to arbitrary code execution. Apple is aware of a report that…"
+     "title": "EUVD-2026-92078 (CVE-2026-105134) · CVSS 10.0",
+     "link": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-92078",
+     "date": "2026-10-04T05:30:12+00:00",
+     "summary": "A flaw has been found in Ahsay AhsayCBS up to 10.3.2. This vulnerability affects unknown code of the file /rps/api/json/UpdateReceivers.do of the component Replication Receiver. Executing a manipulation of the argument random can lead to os command injection. It is possible to…"
     },
     {
-     "title": "EUVD-2023-1342 (GHSA-jjqf-j4w7-92w8) · CVSS 7.2",
-     "link": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2023-1342",
-     "date": "2023-04-19T00:00:00+00:00",
-     "summary": "Strapi through 4.5.5 allows attackers (with access to the admin panel) to discover sensitive user details by exploiting the query filter. The attacker can filter users by columns that contain sensitive information and infer a value from API responses. If the attacker has super…"
+     "title": "EUVD-2026-92079 (CVE-2026-105133) · CVSS 6.9",
+     "link": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-92079",
+     "date": "2026-10-04T05:15:14+00:00",
+     "summary": "A vulnerability was detected in Ahsay AhsayCBS up to 10.3.2. This affects the function checkSysPwd of the file com/ahsay/obs/api/ApiStructsAction.java of the component API. Performing a manipulation of the argument random results in improper authentication. It is possible to…"
     }
    ]
   },
@@ -1709,10 +1709,10 @@
      "summary": "Adversary simulation ('red teaming') tests your ability to prevent, detect and respond to cyber attacks."
     },
     {
-     "title": "UK and allies expose spyware used by Iranian state actors to target dissidents, activists and journalists",
-     "link": "https://www.ncsc.gov.uk/news/uk-allies-expose-spyware-iranian-state-actors-target-dissidents-activists-journalists",
+     "title": "Iranian cyber targeting of dissidents, activists and journalists",
+     "link": "https://www.ncsc.gov.uk/news/iranian-cyber-targeting-of-dissidents-activists-and-journalists",
      "date": "2026-09-15T12:00:00+00:00",
-     "summary": "UK and allies provide advice to help organisations and individuals at risk detect and counter the threat from CHOSEN BRICK malware."
+     "summary": "Advisory on CHOSEN BRICK malware, including technical analysis and advice to help individuals and organisations protect themselves."
     }
    ]
   },
@@ -1832,6 +1832,24 @@
    "via": "discovered",
    "items": [
     {
+     "title": "Cisco security advisory (AV26-1042) – Update 1",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1042",
+     "date": "2026-10-14T20:00:12+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Palo Alto Networks security advisory (AV26-1041)",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-1041",
+     "date": "2026-10-14T19:08:03+00:00",
+     "summary": ""
+    },
+    {
+     "title": "IBM security advisory (AV26-1040)",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1040",
+     "date": "2026-10-14T18:31:46+00:00",
+     "summary": ""
+    },
+    {
      "title": "Adobe security advisory (AV26-1039)",
      "link": "https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-1039",
      "date": "2026-10-14T15:44:16+00:00",
@@ -1859,24 +1877,6 @@
      "title": "Ivanti security advisory (AV26-1035)",
      "link": "https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1035",
      "date": "2026-10-13T19:32:43+00:00",
-     "summary": ""
-    },
-    {
-     "title": "Citrix security advisory (AV26-1034)",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-1034",
-     "date": "2026-10-13T19:10:44+00:00",
-     "summary": ""
-    },
-    {
-     "title": "Commvault security advisory (AV26-1033)",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/commvault-security-advisory-av26-1033",
-     "date": "2026-10-13T18:53:51+00:00",
-     "summary": ""
-    },
-    {
-     "title": "JetBrains security advisory (AV26-1032)",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/jetbrains-security-advisory-av26-1032",
-     "date": "2026-10-13T13:43:03+00:00",
      "summary": ""
     }
    ]
@@ -2009,6 +2009,12 @@
      "summary": "□ 개요 o Ivanti社는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표 \\[1\\] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 설명 o Ivanti Connect Secure에서 발생하는 Authentication Bypass by Spoofing 취약점(CVE-2026-104935) \\[1\\]\\[2\\] □ 영향을 받는 제품 및 해결 방안 | 취약점 | 제품명 | 영향받는 버전 | 해결 버전 |…"
     },
     {
+     "title": "美 CISA 발표 주요 Exploit 정보공유(Update. 2026-10-14)",
+     "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6ace47709ef9a3deea971031",
+     "date": "2026-10-13T15:00:00+00:00",
+     "summary": "□ 개요 o 美 CISA에서 현재 자주 악용되고 있는 취약점 목록 발표 [1] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 영향을 받는 제품 | CVE | 제조사 | 취약점 | 내용 | 조치사항 | | :---: | :---: | :---: | --- | --- | | CVE-2026-0322 | Palo Alto Networks | Palo Alto Networks PAN-OS Code Injection Vulnerability | Palo…"
+    },
+    {
      "title": "SonicWall 제품 보안 업데이트 권고",
      "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6acd873fb4f3e447302d4263",
      "date": "2026-10-13T01:19:59+00:00",
@@ -2037,12 +2043,6 @@
      "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6ac48a1bb4f3e447302d0491",
      "date": "2026-10-06T05:41:47+00:00",
      "summary": "□ 개요 o INNORIX社의 Agent에서 보안 취약점 발견 o 해당 S/W를 운용 중인 각 기관 담당자 및 이용자는 조치 방안에 따라 소프트웨어 삭제 권고 □ 설명 o INNORIX社 Agent에서 취약점을 통해 로컬 권한 상승 가능 □ 영향받는 제품 | 제품명 | 영향받는 버전 | 주요 취약점 내용 | |:---:|:---:|:---:| | Agent | 1.1.1.001 이상 1.3.5.576 이하 | 로컬 권한 상승 | □ 보안 취약점 클리닝 서비스 운영 안내 o 해당 서비스는 백신…"
-    },
-    {
-     "title": "Citrix 제품 보안 업데이트 권고",
-     "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6ac4816ab4f3e447302d045e",
-     "date": "2026-10-06T05:04:42+00:00",
-     "summary": "□ 개요 o Citrix社는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표 \\[1\\] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 설명 o NetScaler ADC, NetScaler Gateway에서 발생하는 Improper Restriction of Operations within the Bounds of a Memory Buffer 취약점(CVE-2026-88779) \\[1\\]\\[2\\] □ 영향을 받는 제품 및 해결 방안 |…"
     }
    ]
   },
