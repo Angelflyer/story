@@ -30,13 +30,13 @@ jobs:
         run: python scripts/update_feeds.py
       - name: Commit changes
         run: |
-          if git add -N docs/data/feeds.opml 2>/dev/null; git diff --quiet -- docs/data/latest.json docs/data/feeds.opml; then
+          if git add -N docs/data/feeds.opml docs/data/history.json 2>/dev/null; git diff --quiet -- docs/data/latest.json docs/data/feeds.opml docs/data/history.json; then
             echo "No changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data/latest.json docs/data/feeds.opml
+          git add docs/data/latest.json docs/data/feeds.opml docs/data/history.json
           git commit -m "Update CERT feeds"
           for i in 1 2 3 4; do
             git pull --rebase origin "${GITHUB_REF_NAME}" && git push && exit 0

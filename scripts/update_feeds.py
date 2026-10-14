@@ -21,7 +21,9 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "docs" / "data"
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
 TIMEOUT = 20
-MAX_ITEMS = 8
+MAX_ITEMS = 60  # items read per feed; all feed the activity history
+SHOW_ITEMS = 8  # items kept per team in latest.json
+HISTORY_DAYS = 400
 DEAD_DAYS = 730  # a feed with nothing newer than this is treated as abandoned
 
 
@@ -301,9 +303,34 @@ def main():
             r = {**previous[c["id"]], "status": "stale", "error": "latest fetch failed"}
         teams[c["id"]] = r
         print(f"{c['id']:<14} {r['status']:<8} {r.get('feed', '')}", file=sys.stderr)
+    update_history(teams)
+    for t in teams.values():
+        t["items"] = (t.get("items") or [])[:SHOW_ITEMS]
     out = {"updated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "teams": teams}
     out_path.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", "utf-8")
     write_opml(certs, teams)
+
+
+def update_history(teams):
+    """Keep one dated record per post ever seen, so activity can be charted over time.
+
+    Posts without a publication date (news-page watching) are dated on the day
+    the updater first saw them.
+    """
+    import hashlib
+    path = DATA / "history.json"
+    hist = json.loads(path.read_text("utf-8")) if path.exists() else {"started": None, "teams": {}}
+    today = datetime.now(timezone.utc).date()
+    hist["started"] = hist.get("started") or today.isoformat()
+    cutoff = (today.toordinal() - HISTORY_DAYS)
+    for tid, t in teams.items():
+        seen = hist["teams"].setdefault(tid, {})
+        for i in t.get("items") or []:
+            key = hashlib.sha1((i.get("link") or i.get("title") or "").encode()).hexdigest()[:12]
+            day = (i.get("date") or "")[:10] or seen.get(key) or today.isoformat()
+            seen.setdefault(key, day)
+        hist["teams"][tid] = {k: d for k, d in seen.items() if datetime.fromisoformat(d).toordinal() >= cutoff}
+    path.write_text(json.dumps(hist, separators=(",", ":"), sort_keys=True) + "\n", "utf-8")
 
 
 def write_opml(certs, teams):
