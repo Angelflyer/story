@@ -19,6 +19,7 @@
   <outline type="rss" text="IT – CSIRT Italia" xmlUrl="https://www.acn.gov.it/portale/feedrss/-/journal/rss/20119/723192" htmlUrl="https://www.acn.gov.it/portale/csirt-italia"/>
   <outline type="rss" text="LV – CERT.LV" xmlUrl="https://cert.lv/lv/feed/atom/viss" htmlUrl="https://cert.lv/"/>
   <outline type="rss" text="LU – CIRCL" xmlUrl="https://www.circl.lu/rss.xml" htmlUrl="https://www.circl.lu/"/>
+  <outline type="rss" text="MT – CSIRTMalta" xmlUrl="https://ncc-mita.gov.mt/feed/" htmlUrl="https://ncc-mita.gov.mt/"/>
   <outline type="rss" text="NL – NCSC-NL" xmlUrl="https://advisories.ncsc.nl/rss/advisories" htmlUrl="https://www.ncsc.nl/"/>
   <outline type="rss" text="RO – DNSC" xmlUrl="https://dnsc.ro/feed/" htmlUrl="https://dnsc.ro/"/>
   <outline type="rss" text="SK – SK-CERT" xmlUrl="https://www.sk-cert.sk/index.html%3Ffeed=rss" htmlUrl="https://www.sk-cert.sk/"/>
