@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "EU CERT Atlas",
+    "title": "CERT Atlas",
     "asOf": "2026-10-13",
     "rubric": {
       "adv": "Public alerts & advisories",
@@ -417,7 +417,7 @@
       ],
       "scores": {
         "adv": 1,
-        "feeds": 0,
+        "feeds": 1,
         "block": 0,
         "report": 1,
         "oss": 0,
@@ -451,7 +451,7 @@
       "evidence": {
         "why": {
           "adv": "The govcert.bg warnings category has 2026 entries (Ghost-Sender, an email threat campaign), but the cadence appears irregular.",
-          "feeds": "No machine-readable feeds found.",
+          "feeds": "Public RSS feed of news and warnings (https://www.govcert.bg/feed/), confirmed by this site's feed collector in October 2026; no API, IoC or CSAF data found.",
           "block": "No blocking service found.",
           "report": "cert@govcert.bg in business hours; the constituency is state administration.",
           "oss": "No tools found.",
@@ -462,7 +462,8 @@
         "sources": [
           "https://www.govcert.bg/en/category/warnings/",
           "https://www.trusted-introducer.org/teams/cert-bulgaria.html",
-          "https://www.bta.bg/en/news/131405-Internet-Abuse-Alerts-on-the-Increase"
+          "https://www.bta.bg/en/news/131405-Internet-Abuse-Alerts-on-the-Increase",
+          "https://www.govcert.bg/feed/"
         ],
         "confidence": "low"
       }
@@ -575,7 +576,7 @@
       ],
       "scores": {
         "adv": 1,
-        "feeds": 0,
+        "feeds": 1,
         "block": 0,
         "report": 1,
         "oss": 0,
@@ -611,7 +612,7 @@
       "evidence": {
         "why": {
           "adv": "The homepage lists some alerts (e.g. a critical vulnerability advisory dated 27/05/2026), but they appear sparse.",
-          "feeds": "No feed found.",
+          "feeds": "Public RSS feed of news and warnings (https://csirt.cy/?format=feed&type=rss), confirmed by this site's feed collector in October 2026; no API, IoC or CSAF data found.",
           "block": "No blocking service found.",
           "report": "Only a general contact (info@csirt.cy) found; no citizen hotline or form found.",
           "oss": "None found.",
@@ -623,7 +624,8 @@
           "https://www.csirt.cy/",
           "https://csirt.cy/alerts/customer-complaint-phishing-pushes-network-hacking-malware",
           "https://mobile.ransomware.live/csirt/CY",
-          "https://www.lemorange.com/engineering/cyprus-cybersecurity-2026"
+          "https://www.lemorange.com/engineering/cyprus-cybersecurity-2026",
+          "https://csirt.cy/?format=feed&type=rss"
         ],
         "confidence": "low"
       }
@@ -761,7 +763,7 @@
       ],
       "scores": {
         "adv": 1,
-        "feeds": 0,
+        "feeds": 1,
         "block": 0,
         "report": 2,
         "oss": 0,
@@ -816,7 +818,7 @@
       "evidence": {
         "why": {
           "adv": "Mainly threat assessments and occasional guidance; no evidence of regular public alerts on samsik.dk.",
-          "feeds": "No machine-readable feeds found.",
+          "feeds": "Public RSS feed of news and warnings (https://samsik.dk/feed/), confirmed by this site's feed collector in October 2026; no API, IoC or CSAF data found.",
           "block": "No evidence of blocking.",
           "report": "Organisations report through the virk.dk form (MitID); citizens can use the sikkerdigital.dk cyber hotline, which CFCS co-runs.",
           "oss": "No open-source tools found.",
@@ -828,7 +830,8 @@
           "https://lex.dk/Styrelsen_for_Samfundssikkerhed",
           "https://virk.dk/myndigheder/stat/SAMSIK/selvbetjening/Indberetning_af_brud_paa_sikkerhed/",
           "https://cfcs.dk/en/cybertruslen/threat-assessments/the-cyber-threat-against-denmark",
-          "https://www.danskindustri.dk/brancher/di-digital/nyhedsarkiv/nyheder/2025/11/sadan-laser-du-en-trusselsvurdering--og-hvad-den-betyder-for-din-virksomhed/"
+          "https://www.danskindustri.dk/brancher/di-digital/nyhedsarkiv/nyheder/2025/11/sadan-laser-du-en-trusselsvurdering--og-hvad-den-betyder-for-din-virksomhed/",
+          "https://samsik.dk/feed/"
         ],
         "confidence": "low"
       }
@@ -850,7 +853,7 @@
       ],
       "scores": {
         "adv": 1,
-        "feeds": 0,
+        "feeds": 1,
         "block": 2,
         "report": 2,
         "oss": 1,
@@ -909,7 +912,7 @@
       "evidence": {
         "why": {
           "adv": "Warnings appear occasionally via RIA news (e.g. Log4j, MikroTik); no regular advisory series was found.",
-          "feeds": "No machine-readable feeds found.",
+          "feeds": "Public RSS feed of news and warnings (https://www.ria.ee/en/rss-feeds/rss.xml), confirmed by this site's feed collector in October 2026; no API, IoC or CSAF data found.",
           "block": "A free CERT-EE DNS-filtering app for iOS/Android blocks phishing and malware domains for the public, and CERT-EE restricts access to malicious sites.",
           "report": "The public is asked to forward suspicious emails to cert@cert.ee.",
           "oss": "The protective app is free but closed; no open-source portfolio was found.",
@@ -921,7 +924,8 @@
           "https://ria.ee/en/news/application-developed-cert-ee-protects-against-phishing-and-malware",
           "https://www.ria.ee/en/situation-cyberspace-july-2026",
           "https://www.ria.ee/sites/default/files/documents/2026-02/RIA-kuberturvalisuse-aastaraamat-2026.pdf",
-          "https://www.err.ee/1608432728/ria-java-turvanorkus-ohustab-ka-eesti-ettevotteid-ja-asutusi"
+          "https://www.err.ee/1608432728/ria-java-turvanorkus-ohustab-ka-eesti-ettevotteid-ja-asutusi",
+          "https://www.ria.ee/en/rss-feeds/rss.xml"
         ],
         "confidence": "medium"
       }
@@ -1273,7 +1277,7 @@
       ],
       "scores": {
         "adv": 2,
-        "feeds": 0,
+        "feeds": 1,
         "block": 0,
         "report": 1,
         "oss": 0,
@@ -1321,7 +1325,7 @@
       "evidence": {
         "why": {
           "adv": "Weekly public vulnerability newsletters on cyber.gov.gr (Feb and Aug 2026 issues) and public phishing warnings.",
-          "feeds": "Bulletins are PDFs only; no machine-readable feeds found.",
+          "feeds": "Public RSS feed of news and warnings (https://cyber.gov.gr/feed/), confirmed by this site's feed collector in October 2026; no API, IoC or CSAF data found.",
           "block": "No evidence of blocking.",
           "report": "Incident reporting for NIS2 entities and organisations via RFC 2350 contacts and forms; no citizen channel found.",
           "oss": "No open-source tools found.",
@@ -1333,7 +1337,8 @@
           "https://cyber.gov.gr/wp-content/uploads/2026/08/20260825.pdf",
           "https://cyber.gov.gr/wp-content/uploads/2026/02/20260206_CVE.pdf",
           "https://cyber.gov.gr/wp-content/uploads/2025/10/EL-CSIRT_RFC_2350_ENG-v1.0.pdf",
-          "https://ot.gr/2026/03/18/english-edition/greece-issues-cyber-alert-to-shipping-energy-banking-sectors/"
+          "https://ot.gr/2026/03/18/english-edition/greece-issues-cyber-alert-to-shipping-energy-banking-sectors/",
+          "https://cyber.gov.gr/feed/"
         ],
         "confidence": "low"
       }
@@ -1355,7 +1360,7 @@
       ],
       "scores": {
         "adv": 2,
-        "feeds": 0,
+        "feeds": 1,
         "block": 0,
         "report": 1,
         "oss": 0,
@@ -1410,8 +1415,8 @@
       "region": "EU",
       "evidence": {
         "why": {
-          "adv": "Publishes alerts (riasztás), notices (tájékoztatás) and a running vulnerability list; the latest alert listing seen ran to 2025.",
-          "feeds": "No machine-readable feed found.",
+          "adv": "Publishes alerts (riasztás), notices and a running vulnerability list; its alert feed showed seven alerts in the 30 days to 14 October 2026.",
+          "feeds": "Public RSS feed of news and warnings (https://nki.gov.hu/figyelmeztetesek/riasztas/feed/), confirmed by this site's feed collector in October 2026; no API, IoC or CSAF data found.",
           "block": "No public blocking service found.",
           "report": "Incidents and vulnerabilities can be reported by email (CSIRT@nki.gov.hu) or phone; no citizen-focused form or hotline found.",
           "oss": "No open-source tools found.",
@@ -1423,7 +1428,8 @@
           "https://nki.gov.hu/en/figyelmeztetesek/riasztas",
           "https://nki.gov.hu/en/",
           "https://nki.gov.hu/en/?p=57276",
-          "https://nki.gov.hu/figyelmeztetesek/archivum/nemzeti-kiberbunozesi-es-digitalis-biztonsagi-trend-riport"
+          "https://nki.gov.hu/figyelmeztetesek/archivum/nemzeti-kiberbunozesi-es-digitalis-biztonsagi-trend-riport",
+          "https://nki.gov.hu/figyelmeztetesek/riasztas/feed/"
         ],
         "confidence": "low"
       }
@@ -1444,8 +1450,8 @@
         "GA"
       ],
       "scores": {
-        "adv": 1,
-        "feeds": 0,
+        "adv": 2,
+        "feeds": 1,
         "block": 0,
         "report": 1,
         "oss": 0,
@@ -1486,8 +1492,8 @@
       "region": "EU",
       "evidence": {
         "why": {
-          "adv": "Publishes occasional TLP:CLEAR PDF advisories on critical vulnerabilities (for example Fortinet and Citrix in 2025).",
-          "feeds": "No RSS, API or IoC feed found.",
+          "adv": "Its public alerts feed carries several critical-vulnerability alerts a month (for example eight between 27 September and 13 October 2026).",
+          "feeds": "Public RSS feed of news and warnings (https://www.ncsc.gov.ie/news/alerts.rss), confirmed by this site's feed collector in October 2026; no API, IoC or CSAF data found.",
           "block": "No blocking service found.",
           "report": "Reporting is via certreport@ncsc.gov.ie and info@ for organisations; citizens are directed to An Garda Síochána.",
           "oss": "No open-source tools found.",
@@ -1500,7 +1506,8 @@
           "https://www.ncsc.gov.ie/emailsfrom/reports/mw/",
           "https://ncsc.gov.ie/pdfs/2505140007_Critical_Vuln_Fortinet.pdf",
           "https://www.ncsc.gov.ie/pdfs/RFC2350 NCSC-IE.txt",
-          "https://www.ncsc.gov.ie/npc25"
+          "https://www.ncsc.gov.ie/npc25",
+          "https://www.ncsc.gov.ie/news/alerts.rss"
         ],
         "confidence": "medium"
       }
@@ -2128,7 +2135,7 @@
       ],
       "scores": {
         "adv": 2,
-        "feeds": 0,
+        "feeds": 1,
         "block": 0,
         "report": 2,
         "oss": 0,
@@ -2176,7 +2183,7 @@
       "evidence": {
         "why": {
           "adv": "Frequent public phishing and fraud alerts throughout 2026 (Feb, Jul, Aug), widely relayed by the media.",
-          "feeds": "No public machine-readable feed found.",
+          "feeds": "Public RSS feed of news and warnings (https://dnsc.ro/feed/), confirmed by this site's feed collector in October 2026; no API, IoC or CSAF data found.",
           "block": "No protective DNS, blocklist or blocking service found.",
           "report": "1911 hotline for citizens and organisations, the PNRISC online reporting platform, and alerts@dnsc.ro.",
           "oss": "No DNSC open-source tools found.",
@@ -2189,7 +2196,8 @@
           "https://www.digi24.ro/stiri/actualitate/social/de-joi-romanii-care-sunt-victime-ale-unui-atac-cibernetic-pot-raporta-incidentul-la-numarul-unic-1911-1124468",
           "https://www.capital.ro/noua-escrocherie-online-avertismentul-dnsc-phishing-periculos-cu-taxe-de-marca.html",
           "https://www.forbes.ro/?p=519067",
-          "https://agerpres.ro/economic/2025/08/31/aproximativ-27-080-de-milioane-de-atacuri-cyber-extrase-din-senzorii-de-detectie-ai-dnsc-in-2024-rap--1480071"
+          "https://agerpres.ro/economic/2025/08/31/aproximativ-27-080-de-milioane-de-atacuri-cyber-extrase-din-senzorii-de-detectie-ai-dnsc-in-2024-rap--1480071",
+          "https://dnsc.ro/feed/"
         ],
         "confidence": "medium"
       }
@@ -2211,7 +2219,7 @@
       ],
       "scores": {
         "adv": 2,
-        "feeds": 0,
+        "feeds": 1,
         "block": 1,
         "report": 2,
         "oss": 0,
@@ -2270,7 +2278,7 @@
       "evidence": {
         "why": {
           "adv": "There are regular public security warnings in 2026 (Microsoft, Atlassian, NVIDIA, Cisco), with numbering such as V20260715-04 implying several per day or month.",
-          "feeds": "Bulletins are distributed by email subscription; no RSS, IoC or API feed was found.",
+          "feeds": "Public RSS feed of news and warnings (https://www.sk-cert.sk/index.html%3Ffeed=rss), confirmed by this site's feed collector in October 2026; no API, IoC or CSAF data found.",
           "block": "NBÚ (parent) can order nationwide blocking of harmful content, but the documented uses target disinformation, not phishing or malware.",
           "report": "An incident reporting form is aimed at anyone who fell victim to a cyber attack, plus incident@nbu.gov.sk.",
           "oss": "No open-source tools found.",
@@ -2282,7 +2290,8 @@
           "https://www.sk-cert.sk/threat/sk-cert-bezpecnostne-varovanie-v20260715-04/index.html",
           "https://www.sk-cert.sk/sk/rady-a-navody/kedy-nas-kontaktovat/index.html",
           "https://www.sk-cert.sk/en/statistics/index.html",
-          "https://www.teraz.sk/slovensko/pravomoci-nbu-v-oblasti-kybernetickej/530431-clanok.html"
+          "https://www.teraz.sk/slovensko/pravomoci-nbu-v-oblasti-kybernetickej/530431-clanok.html",
+          "https://www.sk-cert.sk/index.html%3Ffeed=rss"
         ],
         "confidence": "medium"
       }
@@ -2304,7 +2313,7 @@
       ],
       "scores": {
         "adv": 1,
-        "feeds": 0,
+        "feeds": 1,
         "block": 0,
         "report": 2,
         "oss": 0,
@@ -2358,7 +2367,7 @@
       "evidence": {
         "why": {
           "adv": "Issues warnings to network operators and the public (per 2024 report), but no evidence found of several public advisories per month.",
-          "feeds": "No machine-readable security feed found in search results.",
+          "feeds": "Public RSS feed of news and warnings (https://www.cert.si/feed/), confirmed by this site's feed collector in October 2026; no API, IoC or CSAF data found.",
           "block": "No protective DNS, blocklist or takedown programme found.",
           "report": "Anyone outside government can report to cert@cert.si, by phone or web form; the Varni na internetu programme serves citizens.",
           "oss": "No open-source tools or free platforms found.",
@@ -2370,7 +2379,8 @@
           "https://www.cert.si/wp-content/uploads/2025/08/Porocilo-o-kibernetski-varnosti_SI-CERT_2024.pdf",
           "https://www.cert.si/wp-content/uploads/2024/05/Porocilo-o-kibernetski-varnosti_2023_SI-CERT_web.pdf",
           "https://www.helpnetsecurity.com/?p=372942",
-          "https://www.gov.si/assets/vladne-sluzbe/URSIV/Datoteke/Predstavitve-predavanja/Konferenca-ZInfV-1-Brdo/Prijava-incidenta-SIGOV-CERT-Miklavz-Sef.pdf"
+          "https://www.gov.si/assets/vladne-sluzbe/URSIV/Datoteke/Predstavitve-predavanja/Konferenca-ZInfV-1-Brdo/Prijava-incidenta-SIGOV-CERT-Miklavz-Sef.pdf",
+          "https://www.cert.si/feed/"
         ],
         "confidence": "medium"
       }
@@ -2646,7 +2656,7 @@
         "EN"
       ],
       "scores": {
-        "adv": 1,
+        "adv": 2,
         "feeds": 1,
         "block": 1,
         "report": 1,
@@ -2685,7 +2695,7 @@
       "region": "EU",
       "evidence": {
         "why": {
-          "adv": "Public security advisories run at roughly one per month (2026-006 by May 2026), plus threat-intel publications; fewer than several per month.",
+          "adv": "Publishes numbered public security advisories two or three times a month (2026-013 to 2026-016 between 22 September and 12 October 2026).",
           "feeds": "There is a public security-advisories RSS feed and JSON views of publications; IoC collection (CIMBL) goes to constituents only.",
           "block": "Protective measures such as the CIMBL IoC lists serve EU institutions only.",
           "report": "Incident reporting is for its constituency (EU institutions, bodies and agencies); no channel for the public.",
@@ -4440,7 +4450,7 @@
       ],
       "scores": {
         "adv": 1,
-        "feeds": 0,
+        "feeds": 1,
         "block": 0,
         "report": 1,
         "oss": 0,
@@ -4475,7 +4485,7 @@
       "evidence": {
         "why": {
           "adv": "Issues occasional public warnings on exploited vulnerabilities (e.g. Ivanti, Cisco IOS XE in 2023); no recent regular stream found.",
-          "feeds": "No machine-readable feeds found.",
+          "feeds": "Public RSS feed of news and warnings (https://nsm.no/rss/nyheter-fra-nsm/), confirmed by this site's feed collector in October 2026; no API, IoC or CSAF data found.",
           "block": "VDI is a detection and early-warning sensor system for constituents; no evidence of blocking.",
           "report": "24/7 incident phone line and contact for organisations; no channel aimed at citizens found.",
           "oss": "No open-source tools found.",
@@ -4487,7 +4497,8 @@
           "https://regjeringen.no/contentassets/6290dec36c374ee191e5c7dbba18a258/risiko-2025.pdf",
           "https://www.tu.no/nyhetsstudio/nsm-nytt-alvorlig-cyberangrep-mot-norge/11357",
           "https://www.trusted-introducer.org/directory/teams/ncsc-no.html",
-          "https://nsm.no/about-nsm/news/statement-regarding-the-cyber-incident-at-the-norwegian-parliament"
+          "https://nsm.no/about-nsm/news/statement-regarding-the-cyber-incident-at-the-norwegian-parliament",
+          "https://nsm.no/rss/nyheter-fra-nsm/"
         ],
         "confidence": "low"
       }

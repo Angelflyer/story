@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T07:24:31+00:00",
+ "updated": "2026-10-14T08:00:00+00:00",
  "teams": {
   "cert-pl": {
    "status": "ok",
@@ -534,6 +534,24 @@
    "via": "known",
    "items": [
     {
+     "title": "[NEU] [hoch] Microsoft Entwicklerwerkzeuge: Mehrere Schwachstellen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3893",
+     "date": "2026-10-14T07:49:11+00:00",
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in Microsoft .NET Framework, Microsoft .NET, Microsoft ASP.NET, Microsoft Visual Studio 2022, Microsoft Visual Studio 2026, Microsoft Visual Studio Code, Microsoft SysInternals und Microsoft PowerShell ausnutzen, um seine Privilegien zu…"
+    },
+    {
+     "title": "[NEU] [kritisch] Microsoft Windows und Windows Server: Mehrere Schwachstellen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3892",
+     "date": "2026-10-14T07:34:11+00:00",
+     "summary": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in verschiedenen Versionen von Microsoft Windows Server und Microsoft Windows ausnutzen, um seine Privilegien auf administrative Rechte zu erhöhen, um beliebigen Code auszuführen, um Informationen offenzulegen, um…"
+    },
+    {
+     "title": "[UPDATE] [mittel] Linux Kernel: Mehrere Schwachstellen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-2970",
+     "date": "2026-10-14T07:19:12+00:00",
+     "summary": "Ein Angreifer kann mehrere Schwachstellen im Linux Kernel ausnutzen, um einen nicht näher spezifizierten Angriff durchzuführen, möglicherweise Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenlegen oder Root-Rechte…"
+    },
+    {
      "title": "[UPDATE] [hoch] ImageMagick: Mehrere Schwachstellen",
      "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3867",
      "date": "2026-10-13T18:04:11+00:00",
@@ -562,24 +580,6 @@
      "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3619",
      "date": "2026-10-13T12:00:15+00:00",
      "summary": "Ein Angreifer kann eine Schwachstelle in libpng ausnutzen, um einen Denial of Service Angriff durchzuführen."
-    },
-    {
-     "title": "[UPDATE] [mittel] gcc: Schwachstelle ermöglicht Manipulation von Dateien und DoS",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3612",
-     "date": "2026-10-13T12:00:14+00:00",
-     "summary": "Ein Angreifer kann eine Schwachstelle in gcc ausnutzen, um Dateien zu manipulieren und Denial-of-Service-Zustände zu verursachen."
-    },
-    {
-     "title": "[UPDATE] [mittel] Linux Kernel: Mehrere Schwachstellen",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3444",
-     "date": "2026-10-13T12:00:13+00:00",
-     "summary": "Ein Angreifer kann mehrere Schwachstellen im Linux Kernel möglicherweise ausnutzen, um Berechtigungen zu erweitern, Sicherheitsmaßnahmen zu umgehen, Daten offenzulegen oder zu manipulieren, den Speicher zu beschädigen, Denial-of-Service-Zustände zu verursachen oder andere,…"
-    },
-    {
-     "title": "[UPDATE] [mittel] Intel Prozessor: Mehrere Schwachstellen",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-2772",
-     "date": "2026-10-13T12:00:10+00:00",
-     "summary": "Ein lokaler Angreifer kann mehrere Schwachstellen in Intel Prozessor ausnutzen, um erweiterte Rechte zu erlangen, Daten zu manipulieren, vertrauliche Informationen offenzulegen oder einen Denial-of-Service-Zustand auszulösen."
     }
    ]
   },
@@ -1193,6 +1193,12 @@
    "via": "known",
    "items": [
     {
+     "title": "Divulgación no autorizada de información en el servicio web de facturación de Copart",
+     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/divulgacion-no-autorizada-de-informacion-en-el-servicio-web-de-facturacion-de",
+     "date": "2026-10-14T07:05:06+00:00",
+     "summary": "Divulgación no autorizada de información en el servicio web de facturación de Copart Mié, 14/10/2026 - 09:05 Aviso Recursos Afectados Customer invoicing web service. Descripción INCIBE ha coordinado la publicación de una vulnerabilidad de severidad crítica que afecta a servicio…"
+    },
+    {
      "title": "Cross-Site Scripting en la aplicación web de YouMind",
      "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/cross-site-scripting-en-la-aplicacion-web-de-youmind",
      "date": "2026-10-13T07:39:28+00:00",
@@ -1233,12 +1239,6 @@
      "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/desbordamiento-de-memoria-en-netscaler-adc-y-netscaler-gateway-de-citrix",
      "date": "2026-10-09T07:23:25+00:00",
      "summary": "Desbordamiento de memoria en NetScaler ADC y NetScaler Gateway de Citrix Vie, 09/10/2026 - 09:23 Aviso Recursos Afectados Las siguientes versiones de NetScaler ADC y NetScaler Gateway configuradas como proveedor de identidad SAML: 14.1-73.37 hasta 14.1-73.41, ambas incluidas;…"
-    },
-    {
-     "title": "Inyección de comandos en Tenable Identity Exposure de Tenable",
-     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/inyeccion-de-comandos-en-tenable-identity-exposure-de-tenable",
-     "date": "2026-10-09T07:23:24+00:00",
-     "summary": "Inyección de comandos en Tenable Identity Exposure de Tenable Vie, 09/10/2026 - 09:23 Aviso Recursos Afectados Tenable Identity Exposure SaaS, versión 3.125.0 y anteriores. Descripción Takumi Ito ha informado sobre una vulnerabilidad de severidad crítica que, en caso de ser…"
     }
    ]
   },
