@@ -1,10 +1,10 @@
 # CERT Atlas
 
-A comparison of the national CSIRTs/CERTs of all 27 EU member states, plus EU-level bodies (CERT-EU, ENISA EUVD), free community services (Shadowserver, abuse.ch, DIVD, MISP) and 18 national teams outside the EU for comparison (UK, Switzerland, Norway, Ukraine, US CISA and CERT/CC, Canada, Brazil, Japan, South Korea, Singapore, India, China, Taiwan, Hong Kong, Australia, New Zealand, Israel).
+A comparison of the national CSIRTs/CERTs of all 27 EU member states, plus EU-level bodies (CERT-EU, ENISA EUVD), free community services (Shadowserver, abuse.ch, DIVD, MISP) and 18 national teams from 17 countries outside the EU for comparison (UK, Switzerland, Norway, Ukraine, US CISA and CERT/CC, Canada, Brazil, Japan, South Korea, Singapore, India, China, Taiwan, Hong Kong, Australia, New Zealand, Israel).
 
 - `docs/index.html` is the website: overview map, ratings, comparison table, a service directory grouped by type (feeds, blocklists, alerts, reporting, notifications, tools, newsletters), latest posts and subscription links.
 - `docs/data/certs.json` is the hand-curated dataset (services, links, stats, scores). Edit it to correct or add a team.
-- `scripts/update_feeds.py` fetches each team's RSS/Atom feed. It tries known URLs first, then auto-discovers feeds on the team's homepage. Output goes to `docs/data/latest.json` and `docs/data/feeds.opml`.
+- `scripts/update_feeds.py` fetches each team's RSS/Atom feed. It tries known URLs first, then auto-discovers feeds on the team's homepage. Output goes to `docs/data/latest.json` (newest posts), `docs/data/history.json` (every dated post seen, for the activity chart) and `docs/data/feeds.opml`.
 - `.github/workflows/update-feeds.yml` runs the updater every 6 hours and commits the results.
 
 ### How each team is tracked
@@ -18,7 +18,7 @@ Feeds with nothing newer than two years are ignored as abandoned. Sites that ans
 
 ## Viewing the site
 
-Enable GitHub Pages (Settings → Pages → Deploy from branch → `main` / `/docs`). The page loads its data with `fetch`, so open it through Pages or a local server (`python3 -m http.server -d docs`), not as a `file://` URL.
+Enable GitHub Pages (Settings → Pages → Deploy from branch → `main` / `/docs`). The site is then served at https://angelflyer.github.io/cert-atlas/. The page loads its data with `fetch`, so open it through Pages or a local server (`python3 -m http.server -d docs`), not as a `file://` URL.
 
 ## Getting updates by email
 

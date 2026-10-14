@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>CERT Atlas</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-1 -7.5 27 27'%3E%3Cg fill='%230b6e66'%3E%3Crect width='5' height='5'/%3E%3Crect x='6.5' width='5' height='5'/%3E%3Cpath d='M13 5V0h5z'/%3E%3Crect x='19.5' width='5' height='5'/%3E%3Crect y='6.5' width='5' height='5'/%3E%3Crect x='13' y='6.5' width='5' height='5'/%3E%3Cpath d='M19.5 11.5V6.5h5z'/%3E%3C/g%3E%3C/svg%3E">
-<meta name="description" content="A field guide to national incident response teams: all 27 EU member states plus 18 teams worldwide: capabilities, ratings, feeds, blocklists, alerts and reporting channels.">
+<meta name="description" content="A field guide to national incident response teams: all 27 EU member states plus 18 teams from 17 countries outside the EU: capabilities, ratings, feeds, blocklists, alerts and reporting channels.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600;700&display=swap">
@@ -304,7 +304,7 @@ footer .wrap { display: grid; gap: 8px; }
   <div class="wrap">
     <span class="eyebrow">A field guide to national incident response teams</span>
     <h1>Who protects each country's internet, and <em>what they give the public</em>.</h1>
-    <p class="lede">Every EU member state's national CSIRT, plus 18 leading teams from the UK, US, Asia-Pacific and beyond, rated on alerts, feeds, blocklists, reporting channels, open-source tools and notifications. Every rating is backed by cited public evidence. Live posts refresh every six hours.</p>
+    <p class="lede">Every EU member state's national CSIRT, plus 18 teams from 17 countries outside the EU, from the UK and US to Japan and Australia, rated on alerts, feeds, blocklists, reporting channels, open-source tools and notifications. Every rating is backed by cited public evidence. Live posts refresh every six hours.</p>
     <div class="kpis" id="kpis"></div>
   </div>
 </section>
@@ -364,7 +364,7 @@ footer .wrap { display: grid; gap: 8px; }
   <section id="compare" data-panel="compare" hidden>
     <div class="wrap">
       <div class="section-head">
-        <div><h2>Compare capabilities</h2><p>Each square is one rubric dimension: empty means none found, half means limited or constituency-only, full means public and mature. Select a row for the full profile.</p></div>
+        <div><h2>Compare capabilities</h2><p>Each square is one of the eight rating areas: empty means nothing found, half means limited or constituency-only, full means public and mature. Select a row for the full profile.</p></div>
       </div>
       <div class="controls">
         <input type="search" id="q" placeholder="Search team, country or service" aria-label="Search teams">
@@ -415,7 +415,7 @@ footer .wrap { display: grid; gap: 8px; }
       <h3 style="margin-top:18px">How ratings were made</h3>
       <p>Assessors rated each team only from public evidence found through web search in October 2026: official pages, RFC 2350 profiles, annual reports and reputable press. Every area score in a team's profile comes with a one-line reason, source links and a confidence level. Where no evidence turned up, the score is lower, so a low score can mean the service is hard to find rather than missing. Teams marked low confidence are the ones with the thinnest evidence.</p>
       <h3 style="margin-top:18px">Which teams are included</h3>
-      <p>Each EU member state is represented by its national CSIRT under the NIS2 Directive. Separate government or sector teams appear under <em>Related teams</em> in the profile; Spain's CCN-CERT is rated on its own because it runs its own public services. EU-level bodies (CERT-EU, ENISA) and free community services (Shadowserver, abuse.ch, DIVD, MISP) are rated the same way for reference. For international comparison, 18 national teams outside the EU are included: the UK, Switzerland, Norway, Ukraine, the US (CISA and CERT/CC), Canada, Brazil, Japan, South Korea, Singapore, India, China, Taiwan, Hong Kong, Australia, New Zealand and Israel.</p>
+      <p>Each EU member state is represented by its national CSIRT under the NIS2 Directive. Separate government or sector teams appear under <em>Related teams</em> in the profile; Spain's CCN-CERT is rated on its own because it runs its own public services. EU-level bodies (CERT-EU, ENISA) and free community services (Shadowserver, abuse.ch, DIVD, MISP) are rated the same way for reference. For international comparison, 18 national teams from 17 countries outside the EU are included: the UK, Switzerland, Norway, Ukraine, the US (CISA and CERT/CC), Canada, Brazil, Japan, South Korea, Singapore, India, China, Taiwan, Hong Kong, Australia, New Zealand and Israel.</p>
       <h3 style="margin-top:18px">Limits</h3>
       <p>These ratings measure what a team visibly offers, not how well it handles incidents behind the scenes. Teams that mainly serve government or critical infrastructure can score lower without being weaker. Check a team's own site before relying on a detail, and send corrections through the repository.</p>
       <h3 style="margin-top:18px">Live posts</h3>
@@ -429,7 +429,7 @@ footer .wrap { display: grid; gap: 8px; }
     <div class="foot-brand"><span class="brand"><svg class="mark" viewBox="0 0 25 11.5" aria-hidden="true"><rect x="0" y="0" width="5" height="5"/><rect x="6.5" y="0" width="5" height="5"/><path d="M13 5V0h5z"/><rect x="13.5" y=".5" width="4" height="4" fill="none" stroke="currentColor"/><rect x="19.5" y="0" width="5" height="5"/><rect x="0" y="6.5" width="5" height="5"/><rect x="7" y="7" width="4" height="4" fill="none" stroke="currentColor"/><rect x="13" y="6.5" width="5" height="5"/><path d="M19.5 11.5V6.5h5z"/><rect x="20" y="7" width="4" height="4" fill="none" stroke="currentColor"/></svg><span>CERT Atlas</span></span><p>An independent field guide to national incident response teams. Not affiliated with any CERT; names belong to their organisations. Shared under TLP:CLEAR.</p></div>
     <div class="foot-cols">
       <div><strong>Data</strong><a href="data/certs.json">certs.json</a><a href="data/latest.json">latest.json</a><a href="data/feeds.opml">feeds.opml</a></div>
-      <div><strong>Project</strong><a href="https://github.com/angelflyer/story">GitHub repository</a><a href="#method" data-goto="method">Method</a></div>
+      <div><strong>Project</strong><a href="https://github.com/Angelflyer/cert-atlas">GitHub repository</a><a href="#method" data-goto="method">Method</a></div>
       <div><strong>Credits</strong><a href="https://github.com/lipis/flag-icons">flag-icons (MIT)</a><a href="https://github.com/topojson/world-atlas">Natural Earth / world-atlas</a></div>
     </div>
   </div>
@@ -483,7 +483,7 @@ footer .wrap { display: grid; gap: 8px; }
     $("#kpis").innerHTML = [
       [ccs.size + "/27", "member states covered"],
       [D.certs.length, "teams and services profiled"],
-      [new Set(D.certs.filter(c => c.kind === "international").map(c => c.cc)).size, "non-EU countries for comparison"],
+      [new Set(D.certs.filter(c => c.kind === "international").map(c => c.cc)).size, "non-EU countries (18 teams)"],
       [svc, "individual services catalogued"],
       [avg, "average national score / 100"],
       [block, "national teams running public blocking"],
@@ -675,8 +675,8 @@ footer .wrap { display: grid; gap: 8px; }
     $("#act").innerHTML = head + `<tbody>${rows.map(r => `<tr data-id="${r.c.id}" tabindex="0"><td><span class="badge">${flag(r.c.cc)}<strong>${esc(r.c.name)}</strong></span></td>${r.weeks.map((v, i) => `<td class="hc" title="${esc(r.c.name)} · week of ${wkLabel(i)}: ${v} post${v === 1 ? "" : "s"}"><i class="h${lvl(v)}"></i></td>`).join("")}<td class="m">${agoCell(r)}</td><td class="m mono">${r.d30}</td><td class="m mono">${r.d90}</td><td class="m mono">${r.total}</td></tr>`).join("") || `<tr><td colspan="${WEEKS + 5}" class="muted">No dated posts collected yet.</td></tr>`}</tbody>`;
     $("#act-legend").innerHTML = `<span>Posts per week</span>${[[0, "0"], [1, "1"], [2, "2–3"], [3, "4–7"], [4, "8–15"], [5, "16+"]].map(([l, t]) => `<span><i class="sw hsw h${l}"></i>${t}</span>`).join("")}`;
     const started = HIST?.started;
-    const counted = rows.reduce((a, r) => a + r.total, 0);
-    $("#act-note").textContent = `${counted.toLocaleString("en")} dated posts from ${rows.length} teams. Each feed is read every six hours and every post seen is kept${started ? `, starting ${started}` : ""}, so older weeks only include posts still listed in a team's feed at that point. Teams followed through their news page are dated on the day a new link first appears.`;
+    const counted = allRows.reduce((a, r) => a + r.total, 0);
+    $("#act-note").textContent = `${counted.toLocaleString("en")} dated posts from ${allRows.length} teams. Each feed is read every six hours and every post seen is kept${started ? `, starting ${started}` : ""}, so older weeks only include posts still listed in a team's feed at that point. Teams followed through their news page are dated on the day a new link first appears.`;
   }
 
 
@@ -691,7 +691,7 @@ footer .wrap { display: grid; gap: 8px; }
       ["Best advisory volume", "cert-bund", "WID advisories with RSS and CSAF"],
       ["Best EU-wide vulnerability view", "enisa-euvd", "Critical, exploited and EU-coordinated CVEs"]
     ];
-    $("#standouts").innerHTML = picks.map(([t, id, d]) => { const c = byId(id); return `<button class="leader" data-id="${id}" style="grid-template-columns:minmax(0,1fr) auto"><span class="nm" style="white-space:normal"><span class="eyebrow">${t}</span><br><strong>${esc(c.name)}</strong> <span class="muted">· ${esc(d)}</span></span><span class="score">${score(c)}</span></button>`; }).join("");
+    $("#standouts").innerHTML = picks.map(([t, id, d]) => { const c = byId(id); return `<button class="leader" data-id="${id}" style="grid-template-columns:minmax(0,1fr)"><span class="nm" style="white-space:normal"><span class="eyebrow">${t}</span><br><strong>${esc(c.name)}</strong> <span class="muted">· ${esc(d)}</span></span></button>`; }).join("");
   }
 
   function table() {
