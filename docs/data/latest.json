@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T05:05:56+00:00",
+ "updated": "2026-10-14T07:06:04+00:00",
  "teams": {
   "cert-pl": {
    "status": "ok",
@@ -639,7 +639,7 @@
    ]
   },
   "nki-hu": {
-   "status": "ok",
+   "status": "stale",
    "feed": "https://nki.gov.hu/figyelmeztetesek/riasztas/feed/",
    "via": "known",
    "items": [
@@ -691,7 +691,8 @@
      "date": "2026-09-09T06:04:38+00:00",
      "summary": "A Nemzetbiztonsági Szakszolgálat Nemzeti Kiberbiztonsági Intézet riasztást ad ki a Microsoft szoftvereket érintő kritikus kockázati besorolású sérülékenységek kapcsán azok súlyossága, a szoftverek széleskörű elterjedtsége, valamint az egyes biztonsági hibákat érintő aktív…"
     }
-   ]
+   ],
+   "error": "latest fetch failed"
   },
   "ncsc-ie": {
    "status": "ok",
@@ -749,7 +750,7 @@
    ]
   },
   "csirt-it": {
-   "status": "ok",
+   "status": "stale",
    "feed": "https://www.acn.gov.it/portale/feedrss/-/journal/rss/20119/723192",
    "via": "known",
    "items": [
@@ -801,7 +802,8 @@
      "date": "2026-10-13T10:40:45+00:00",
      "summary": "Rilevate due nuove vulnerabilità con gravità “alta” in alcuni prodotti Schneider Electric."
     }
-   ]
+   ],
+   "error": "latest fetch failed"
   },
   "cert-lv": {
    "status": "ok",
@@ -1267,6 +1269,12 @@
    "via": "known",
    "items": [
     {
+     "title": "Patchtisdag oktober 2026",
+     "link": "https://www.cert.se/2026/10/patchtisdag-oktober-2026.html",
+     "date": "2026-10-14T06:50:00+00:00",
+     "summary": "Flera leverantörer har släppt sina månatliga säkerhetsuppdateringar för oktober."
+    },
+    {
      "title": "GitLab rättar kritisk sårbarhet",
      "link": "https://www.cert.se/2026/10/gitlab-rattar-kritisk-sarbarhet.html",
      "date": "2026-10-13T09:50:00+00:00",
@@ -1307,12 +1315,6 @@
      "link": "https://www.cert.se/2026/09/cert-se-veckobrev-v39.html",
      "date": "2026-09-25T08:45:00+00:00",
      "summary": "För tionde året genomförs Beredskapsveckan i Sverige vecka 39. I år är det fokus på Sveriges totalförsvar, där samhällets motståndskraft mot cyberhot är en viktig del. Tänk på att ha en radio inställd på Sveriges Radio P4 och viktiga telefonnummer nedskrivna på papper."
-    },
-    {
-     "title": "F5 informerar om kritisk sårbarhet i BIG-IP APM",
-     "link": "https://www.cert.se/2026/09/information-om-kritisk-sarbarhet-i-big-ip-apm.html",
-     "date": "2026-09-23T09:20:00+00:00",
-     "summary": "F5 har publicerat information om en kritisk sårbarhet, CVE-2026-94127, i BIG-IP APM. Sårbarheten kan resultera i att en oautentiserad angripare kan fjärrexekvera godtycklig kod."
     }
    ]
   },
@@ -1958,6 +1960,18 @@
    "via": "known",
    "items": [
     {
+     "title": "GitLab 제품 보안 업데이트 권고",
+     "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6acf2067b5290478048eea80",
+     "date": "2026-10-14T06:25:43+00:00",
+     "summary": "□ 개요 o GitLab社는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표 \\[1\\]\\[2\\] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 설명 o GitLab CE/EE에서 발생하는 Integer Overflow or Wraparound 취약점(CVE-2026-97229) \\[1\\]\\[3\\] o GitLab CE/EE에서 발생하는 Cross-site Scripting 취약점(CVE-2026-92883) \\[1\\]\\[4\\] o…"
+    },
+    {
+     "title": "Ivanti 제품 보안 업데이트 권고",
+     "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6acf2047b5290478048eea7a",
+     "date": "2026-10-14T06:25:11+00:00",
+     "summary": "□ 개요 o Ivanti社는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표 \\[1\\] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 설명 o Ivanti Connect Secure에서 발생하는 Authentication Bypass by Spoofing 취약점(CVE-2026-104935) \\[1\\]\\[2\\] □ 영향을 받는 제품 및 해결 방안 | 취약점 | 제품명 | 영향받는 버전 | 해결 버전 |…"
+    },
+    {
      "title": "SonicWall 제품 보안 업데이트 권고",
      "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6acd873fb4f3e447302d4263",
      "date": "2026-10-13T01:19:59+00:00",
@@ -1992,18 +2006,6 @@
      "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6ac4816ab4f3e447302d045e",
      "date": "2026-10-06T05:04:42+00:00",
      "summary": "□ 개요 o Citrix社는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표 \\[1\\] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 설명 o NetScaler ADC, NetScaler Gateway에서 발생하는 Improper Restriction of Operations within the Bounds of a Memory Buffer 취약점(CVE-2026-88779) \\[1\\]\\[2\\] □ 영향을 받는 제품 및 해결 방안 |…"
-    },
-    {
-     "title": "Apache 제품 보안 업데이트 권고",
-     "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6ac44c84b4f3e447302d0160",
-     "date": "2026-10-06T01:19:00+00:00",
-     "summary": "□ 개요 o Apache 재단은 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표 \\[1\\] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 설명 o Apache HTTP Server에서 발생하는 NULL Pointer Dereference 취약점(CVE-2026-46729) \\[1\\]\\[2\\] o Apache HTTP Server에서 발생하는 Exposure of Sensitive Information to an Unauthorized…"
-    },
-    {
-     "title": "美 CISA 발표 주요 Exploit 정보공유(Update. 2026-10-04)",
-     "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6ac118704158313f41a0392f",
-     "date": "2026-10-03T15:00:00+00:00",
-     "summary": "□ 개요 o 美 CISA에서 현재 자주 악용되고 있는 취약점 목록 발표 [1] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 영향을 받는 제품 | CVE | 제조사 | 취약점 | 내용 | 조치사항 | | :---: | :---: | :---: | --- | --- | | CVE-2026-88779 | Citrix | Citrix NetScaler Improper Restriction of Operations within the Bounds of a…"
     }
    ]
   },
@@ -2012,6 +2014,12 @@
    "feed": "https://www.csa.gov.sg/alerts-and-advisories/rss.xml",
    "via": "discovered",
    "items": [
+    {
+     "title": "October 2026 Monthly Patch",
+     "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-142",
+     "date": "2026-10-13T16:00:00+00:00",
+     "summary": "Microsoft has released security patches to address multiple vulnerabilities in their software and products."
+    },
     {
      "title": "Critical Vulnerability in GitLab Community Edition and Enterprise Edition",
      "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-141",
@@ -2053,12 +2061,6 @@
      "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-137",
      "date": "2026-10-07T16:00:00+00:00",
      "summary": "SonicWall has released security updates to address a critical vulnerability in the SMA1000 series appliances. Users and administrators of affected products are advised to update to the latest version immediately."
-    },
-    {
-     "title": "SQLView KRIS – Stored Cross-Site Scripting Vulnerability in Workflow Template Feature",
-     "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-136",
-     "date": "2026-10-07T16:00:00+00:00",
-     "summary": "A vulnerability has been discovered in the records management application \"SQLView KRIS\". The product owner has rolled out a fix for the reported vulnerability. Special thanks to the researcher and SQLView for coordinating through CSA's Responsible Vulnerability Disclosure…"
     }
    ]
   },
@@ -2066,6 +2068,7 @@
    "status": "no-feed",
    "blocked": false,
    "tried": [
+    "https://www.cert-in.org.in/ (discovery: TimeoutError)",
     "https://www.cert-in.org.in/feed/",
     "https://www.cert-in.org.in/rss.xml",
     "https://www.cert-in.org.in/rss",
