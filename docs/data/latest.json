@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T07:06:04+00:00",
+ "updated": "2026-10-14T07:19:11+00:00",
  "teams": {
   "cert-pl": {
    "status": "ok",
@@ -639,7 +639,7 @@
    ]
   },
   "nki-hu": {
-   "status": "stale",
+   "status": "ok",
    "feed": "https://nki.gov.hu/figyelmeztetesek/riasztas/feed/",
    "via": "known",
    "items": [
@@ -691,8 +691,7 @@
      "date": "2026-09-09T06:04:38+00:00",
      "summary": "A Nemzetbiztonsági Szakszolgálat Nemzeti Kiberbiztonsági Intézet riasztást ad ki a Microsoft szoftvereket érintő kritikus kockázati besorolású sérülékenységek kapcsán azok súlyossága, a szoftverek széleskörű elterjedtsége, valamint az egyes biztonsági hibákat érintő aktív…"
     }
-   ],
-   "error": "latest fetch failed"
+   ]
   },
   "ncsc-ie": {
    "status": "ok",
@@ -750,10 +749,16 @@
    ]
   },
   "csirt-it": {
-   "status": "stale",
+   "status": "ok",
    "feed": "https://www.acn.gov.it/portale/feedrss/-/journal/rss/20119/723192",
    "via": "known",
    "items": [
+    {
+     "title": "Risolte vulnerabilità in Google Chrome",
+     "link": "https://www.acn.gov.it/portale/w/risolte-vulnerabilita-in-google-chrome-79",
+     "date": "2026-10-14T07:09:51+00:00",
+     "summary": "Google ha rilasciato un aggiornamento per il browser Chrome al fine di correggere 37 nuove vulnerabilità di sicurezza, di cui 7 con gravità “critica” e 29 con gravità “alta”."
+    },
     {
      "title": "Rilevate vulnerabilità in prodotti IBM",
      "link": "https://www.acn.gov.it/portale/w/rilevate-vulnerabilita-in-prodotti-ibm-3",
@@ -795,15 +800,8 @@
      "link": "https://www.acn.gov.it/portale/w/misure-urgenti-di-verifica-e-mitigazione-per-operatori-della-distribuzione-alimentare-e-della-filiera-del-freddo",
      "date": "2026-10-13T10:44:39+00:00",
      "summary": "L’Agenzia per la Cybersicurezza Nazionale richiama l’attenzione delle organizzazioni operanti nei settori della grande distribuzione organizzata (GDO), della logistica alimentare, della refrigerazione industriale e dei servizi di manutenzione connessi, alla luce del recente…"
-    },
-    {
-     "title": "Vulnerabilità in prodotti Schneider Electric",
-     "link": "https://www.acn.gov.it/portale/w/vulnerabilita-in-prodotti-schneider-electric-16",
-     "date": "2026-10-13T10:40:45+00:00",
-     "summary": "Rilevate due nuove vulnerabilità con gravità “alta” in alcuni prodotti Schneider Electric."
     }
-   ],
-   "error": "latest fetch failed"
+   ]
   },
   "cert-lv": {
    "status": "ok",
@@ -2068,7 +2066,6 @@
    "status": "no-feed",
    "blocked": false,
    "tried": [
-    "https://www.cert-in.org.in/ (discovery: TimeoutError)",
     "https://www.cert-in.org.in/feed/",
     "https://www.cert-in.org.in/rss.xml",
     "https://www.cert-in.org.in/rss",

@@ -145,26 +145,27 @@ main section { padding-block: 8px 56px; }
 .evw .t { height: 11px; background: var(--sunk); border-radius: 3px; overflow: hidden; }
 .evw .t span { display: block; height: 100%; border-radius: 0 4px 4px 0; }
 .evw .b b { font: 500 .75rem var(--f-mono); font-variant-numeric: tabular-nums; }
-.skywrap { position: relative; margin-top: 10px; }
-#sky { width: 100%; height: auto; display: block; }
-#sky .floor { fill: var(--sunk); stroke: var(--surface); stroke-width: .8; }
-#sky .floor.eu { fill: color-mix(in srgb, var(--s1) 55%, var(--sunk)); }
-#sky .tower { cursor: pointer; }
-#sky .tower:hover rect, #sky .tower:focus-visible rect { stroke: var(--ink); stroke-width: 1.5; }
-#sky .tower:focus-visible { outline: none; }
-#sky .side { fill: #000; opacity: .28; }
-#sky .top { fill: #fff; opacity: .35; }
-#sky .shadow { fill: #000; opacity: .12; }
-#sky .tl { font: 700 13px var(--f-display); font-stretch: 85%; fill: var(--ink); stroke: var(--surface); stroke-width: 3px; paint-order: stroke; text-anchor: middle; pointer-events: none; }
-#sky .tl .tv { font: 600 11px var(--f-mono); }
-.tree { position: relative; width: 100%; aspect-ratio: 1000 / 560; margin-top: 14px; min-height: 360px; }
-.tree .tg { position: absolute; box-sizing: border-box; padding: 2px; border: 2px solid var(--surface); background: var(--sunk); overflow: hidden; }
-.tree .tgh { height: 20px; font: 600 .72rem/20px var(--f-body); padding: 0 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--ink); }
-.tree .tgh span { font: .68rem var(--f-mono); color: var(--muted); }
-.tree .tgb { position: absolute; left: 2px; right: 2px; top: 22px; bottom: 2px; }
-.tree .tt { all: unset; position: absolute; box-sizing: border-box; border: 1px solid var(--surface); cursor: pointer; display: grid; place-items: center; }
-.tree .tt:hover, .tree .tt:focus-visible { outline: 2px solid var(--ink); outline-offset: -2px; z-index: 1; }
-@media (max-width: 640px) { .tree { aspect-ratio: auto; height: 520px; } }
+details.collapsible > summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+details.collapsible > summary::-webkit-details-marker { display: none; }
+details.collapsible > summary > span:first-child { display: grid; gap: 6px; }
+.sum-title { font: 650 1.06rem/1.1 var(--f-display); font-stretch: 96%; color: var(--ink); }
+.sum-hint { font: 500 .8rem var(--f-body); color: var(--accent); border: 1px solid var(--line); border-radius: var(--r); padding: 6px 10px; white-space: nowrap; }
+.sum-hint::after { content: " ▾"; }
+details[open] .sum-hint::after { content: " ▴"; }
+.sum-close, details[open] .sum-open { display: none; }
+details[open] .sum-close { display: inline; }
+.mxh { all: unset; cursor: pointer; padding: 3px 5px; border-radius: 3px; border: 1px solid transparent; }
+.mxh:hover { border-color: var(--line); }
+.mxh.on { background: var(--accent); color: var(--accent-ink); }
+.mxh:focus-visible { outline: 2px solid var(--accent); }
+.matrix td.m.on { background: color-mix(in srgb, var(--s0) 60%, transparent); }
+table.act { border-collapse: separate; border-spacing: 0; }
+table.act th.wk { text-align: left; font-weight: 500; }
+table.act td.hc { padding: 6px 1px; border-bottom: 1px solid var(--line); }
+table.act td.hc i { display: block; width: 100%; min-width: 9px; height: 16px; border-radius: 2px; }
+.h0 { background: var(--sunk); } .h1 { background: var(--s1); } .h2 { background: var(--s2); } .h3 { background: var(--s3); } .h4 { background: var(--s4); } .h5 { background: var(--s5); }
+.hsw { box-shadow: inset 0 0 0 1px var(--line); }
+table.act td.m, table.act th.m { text-align: right; padding-inline: 8px; white-space: nowrap; }
 .quad-wrap { overflow-x: auto; margin-top: 14px; }
 .quad { display: grid; grid-template-columns: 34px repeat(7, minmax(64px, 1fr)); grid-template-rows: repeat(7, minmax(52px, auto)) 34px; min-width: 560px; position: relative; }
 .quad .cell { border-right: 1px dashed var(--line); border-bottom: 1px dashed var(--line); padding: 5px; display: flex; flex-wrap: wrap; gap: 4px; align-content: flex-start; }
@@ -177,16 +178,6 @@ main section { padding-block: 8px 56px; }
 .quad .ax.y { justify-content: flex-end; padding-right: 8px; }
 .quad .qlab { position: absolute; font: 600 .68rem/1.2 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--accent); pointer-events: none; }
 .quad-axis { display: flex; justify-content: space-between; font-size: .75rem; color: var(--muted); margin: 6px 0 0 34px; min-width: 526px; }
-.spread { display: grid; gap: 4px; margin-top: 14px; }
-.spread .srow { display: grid; grid-template-columns: minmax(110px, 190px) minmax(0, 1fr); gap: 12px; align-items: end; border-bottom: 1px solid var(--line); padding: 8px 0 6px; }
-.spread .slab { font-size: .82rem; padding-bottom: 2px; }
-.spread .slab small { display: block; color: var(--muted); font: .7rem var(--f-mono); }
-.spread .strack { position: relative; }
-.spread .fl { all: unset; position: absolute; cursor: pointer; line-height: 0; transform: translateX(-50%); }
-.spread .fl:hover .flag, .spread .fl:focus-visible .flag { box-shadow: 0 0 0 2px var(--accent); }
-.spread .med { position: absolute; bottom: -6px; top: -4px; width: 0; border-left: 2px solid var(--ink); opacity: .55; }
-.spread .ticks { position: relative; height: 16px; font: .68rem var(--f-mono); color: var(--muted); }
-.spread .ticks span { position: absolute; transform: translateX(-50%); }
 .gaps { display: grid; gap: 8px; margin-top: 12px; }
 .gaps .g { display: grid; grid-template-columns: minmax(130px, 260px) minmax(0, 1fr); gap: 12px; align-items: center; font-size: .84rem; }
 .gaps .stack { display: flex; height: 22px; border-radius: 3px; overflow: hidden; gap: 2px; }
@@ -348,40 +339,28 @@ footer .wrap { display: grid; gap: 8px; }
   <section id="charts" data-panel="charts" hidden>
     <div class="wrap">
       <div class="section-head">
-        <div><h2>Charts</h2><p>See how capability rises across the map, who each team mainly serves, how scores spread within each region, and where the world's public security services are concentrated. Select any flag, tower or tile to open a team's profile.</p></div>
+        <div><h2>Charts</h2><p>Who each team mainly serves, how actively each one publishes, and which kinds of service each one runs. Select any flag or team to open its profile.</p></div>
       </div>
       <div class="panel">
-        <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center"><div class="eyebrow">Capability skyline</div><div role="group" aria-label="Skyline area" style="display:flex;gap:4px"><button class="chip" data-sky="europe" aria-pressed="true">Europe</button><button class="chip" data-sky="world" aria-pressed="false">World</button></div></div>
-        <h3 style="margin-top:6px">Each country's best team, as a tower on the map</h3>
-        <p class="muted" style="font-size:.82rem;margin:6px 0 0">Tower height and colour show the score out of 100. Hover a tower for the team; select it to open the profile.</p>
-        <div class="skywrap"><svg id="sky" role="img" aria-label="3D map with a tower per country, height by score"></svg><div class="tip" id="skytip" hidden></div></div>
-        <div class="legend"><span>Score 0</span><span class="ramp"><i style="background:var(--s1)"></i><i style="background:var(--s2)"></i><i style="background:var(--s3)"></i><i style="background:var(--s4)"></i><i style="background:var(--s5)"></i></span><span>100</span><span>· labels shown for larger countries; hover any tower</span></div>
-      </div>
-      <div class="panel" style="margin-top:24px">
         <div class="eyebrow">Who they serve</div>
         <h3 style="margin-top:6px">Citizen-facing versus defender-facing services</h3>
         <p class="muted" style="font-size:.82rem;margin:6px 0 0;max-width:80ch">Across: alerts, reporting channels and protective blocking, the things the public uses. Up: feeds, open-source tools and network-owner notifications, the things security teams use. Each flag is a team; select one for its profile.</p>
         <div class="quad-wrap"><div class="quad" id="quad"></div></div>
       </div>
       <div class="panel" style="margin-top:24px">
-        <div class="eyebrow">Spread</div>
-        <h3 style="margin-top:6px">Every team's score, grouped by region</h3>
-        <p class="muted" style="font-size:.82rem;margin:6px 0 0">Each flag is one team. The thin line marks the region's median.</p>
-        <div id="spread" class="spread"></div>
+        <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center"><div class="eyebrow">Publishing activity · from the live feeds</div>
+          <div class="controls" style="margin:0"><select id="act-sort" class="chip" aria-label="Sort teams" style="padding:7px 10px"><option value="d30">Most posts, last 30 days</option><option value="recent">Most recent post</option><option value="total">Most posts recorded</option><option value="name">Name</option></select><label class="chip" style="display:inline-flex;gap:6px;align-items:center"><input type="checkbox" id="act-all"> Include teams with no posts</label></div></div>
+        <h3 style="margin-top:6px">How often each team publishes, week by week</h3>
+        <p class="muted" style="font-size:.82rem;margin:6px 0 0" id="act-note"></p>
+        <div class="tablewrap" style="margin-top:12px"><table class="act" id="act"></table></div>
+        <div class="legend" id="act-legend"></div>
       </div>
-      <div class="panel" style="margin-top:24px">
-        <div class="eyebrow">Where the services are</div>
-        <h3 style="margin-top:6px">All catalogued services, by type and by team</h3>
-        <p class="muted" style="font-size:.82rem;margin:6px 0 0">Each block is one service type, sized by how many services of that type exist across all teams. Inside, each tile is a team, sized by how many it runs and coloured by its overall score.</p>
-        <div id="tree" class="tree"></div>
-        <div class="legend"><span>Team score 0</span><span class="ramp"><i style="background:var(--s1)"></i><i style="background:var(--s2)"></i><i style="background:var(--s3)"></i><i style="background:var(--s4)"></i><i style="background:var(--s5)"></i></span><span>100</span><span>· hover a tile for the team and its services</span></div>
-      </div>
-      <div class="panel" style="margin-top:24px">
-        <div class="eyebrow">Who offers what</div>
-        <h3 style="margin-top:6px">Number of services per team in each category</h3>
-        <p class="muted" style="font-size:.8rem;margin:6px 0 10px">Larger dot, more services in that category. Hover a dot for the service names.</p>
+      <details class="panel collapsible" style="margin-top:24px" id="mx-panel">
+        <summary><span><span class="eyebrow">Who offers what</span><span class="sum-title">Services per team in each category</span></span><span class="sum-hint"><span class="sum-open">Show</span><span class="sum-close">Hide</span></span></summary>
+        <div class="controls" style="margin:14px 0 6px"><input type="search" id="mx-q" placeholder="Filter teams" aria-label="Filter teams"><select id="mx-region" class="chip" aria-label="Region" style="padding:7px 10px"><option value="">All teams</option><option value="eu">EU national &amp; government</option><option value="intl">Non-EU national</option><option value="other">EU-level &amp; community</option></select><button class="chip" id="mx-reset" type="button">Clear filters</button><span class="muted" id="mx-count" style="font-size:.8rem"></span></div>
+        <p class="muted" style="font-size:.8rem;margin:0 0 10px">Select a column heading to show only teams that offer that kind of service; select more to require all of them. Larger dot, more services. Hover a dot for the service names.</p>
         <div class="tablewrap"><table class="matrix" id="matrix"></table></div>
-      </div>
+      </details>
     </div>
   </section>
 
@@ -412,13 +391,7 @@ footer .wrap { display: grid; gap: 8px; }
   <section id="latest" data-panel="latest" hidden>
     <div class="wrap">
       <div class="section-head">
-        <div><h2>Latest from the teams</h2><p id="latest-sub">How recently each team published, and the newest posts across all team feeds.</p></div>
-      </div>
-      <div class="panel" style="margin-bottom:24px">
-        <div class="eyebrow">Freshness · from the live feeds</div>
-        <h3 style="margin-top:6px">Days since each team last published</h3>
-        <p class="muted" style="font-size:.8rem;margin:6px 0 10px">Square-root scale, so recent differences stay readable. Green: within 30 days. Amber: within 180 days. Red: older.</p>
-        <div class="rank fresh" id="fresh"></div>
+        <div><h2>Latest from the teams</h2><p id="latest-sub">The newest posts across all team feeds.</p></div>
       </div>
       <div class="controls"><input type="search" id="q3" placeholder="Filter posts" aria-label="Filter posts"><select id="team3" aria-label="Show posts from" class="chip" style="padding:8px 10px"><option value="">All teams</option></select><label class="chip" style="display:inline-flex;gap:6px;align-items:center"><input type="checkbox" id="mix3" checked> Max 2 per team</label></div>
       <div id="latest-list"></div>
@@ -475,7 +448,7 @@ footer .wrap { display: grid; gap: 8px; }
   const SHORT = { adv: "Alerts", feeds: "Feeds", block: "Block", report: "Report", oss: "Tools", proactive: "Notify", transparency: "Stats", english: "EN" };
   const KINDS = { national: "National CSIRT", government: "Government CERT", eu: "EU-level", international: "Non-EU national", community: "Community / free" };
   const GRID = { EU: [0, 0], SE: [4, 0], FI: [5, 0], IE: [0, 1], DK: [3, 1], EE: [5, 1], NL: [2, 2], DE: [3, 2], PL: [4, 2], LV: [5, 2], FR: [1, 3], BE: [2, 3], LU: [3, 3], CZ: [4, 3], LT: [5, 3], PT: [0, 4], ES: [1, 4], AT: [3, 4], SK: [4, 4], HU: [5, 4], RO: [6, 4], IT: [2, 5], SI: [3, 5], HR: [4, 5], BG: [6, 5], MT: [2, 6], GR: [5, 6], CY: [6, 6] };
-  let D, L = { updated: null, teams: {} }, GEO = null, WORLD = null, metric = "score", mapScope = "europe";
+  let D, L = { updated: null, teams: {} }, GEO = null, WORLD = null, HIST = null, metric = "score", mapScope = "europe";
   const FLAGGED = new Set("AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE EU GB US CA BR JP KR SG IN CN TW HK AU NZ IL CH NO UA".split(" "));
   const flag = (cc, lg) => FLAGGED.has(cc) ? `<img class="flag${lg ? " lg" : ""}" src="flags/${cc.toLowerCase()}.svg" alt="" width="${lg ? 32 : 20}" height="${lg ? 24 : 15}" loading="lazy" decoding="async">` : `<span class="flag globe${lg ? " lg" : ""}" aria-hidden="true">◎</span>`;
   const badge = cc => `<span class="badge">${flag(cc)}<span class="cc">${cc}</span></span>`;
@@ -584,77 +557,7 @@ footer .wrap { display: grid; gap: 8px; }
   }
 
   function charts() {
-    skyline(); freshness(); quadrant(); spread(); treemap(); matrix();
-  }
-  let skyScope = "europe";
-  function skyline() {
-    const G = skyScope === "world" ? WORLD : GEO, svg = $("#sky");
-    document.querySelectorAll("[data-sky]").forEach(b => b.setAttribute("aria-pressed", b.dataset.sky === skyScope));
-    if (!G) { svg.outerHTML = '<p class="muted">Map data could not be loaded.</p>'; return; }
-    const world = skyScope === "world";
-    const SKEW = -0.42, SQ = 0.52, TOP = world ? 70 : 150, HMAX = world ? 120 : 210;
-    const W = G.w + G.h * Math.abs(SKEW) * 0.2, H = G.h * SQ + TOP + 20;
-    const ox = world ? 110 : 160;
-    const fx = (x, y) => x + SKEW * y + ox, fy = y => y * SQ + TOP;
-    const best = {};
-    D.certs.filter(c => c.kind === "national" || c.kind === "eu" || (world && c.kind === "international")).forEach(c => { if (!best[c.cc] || score(c) > score(best[c.cc])) best[c.cc] = c; });
-    const shapes = world ? G.c : G.eu;
-    let g = `<g transform="matrix(1 0 ${SKEW} ${SQ} ${ox} ${TOP})">${G.ctx.map(d => `<path class="floor" d="${d}"/>`).join("")}${Object.entries(shapes).filter(([cc, s]) => s.d && best[cc]).map(([cc, s]) => `<path class="floor eu" d="${s.d}"/>`).join("")}</g>`;
-    const bars = Object.entries(shapes).filter(([cc]) => best[cc]).map(([cc, s]) => ({ cc, c: best[cc], a: s.a, x: fx(s.cx, s.cy), y: fy(s.cy) })).sort((a, b) => a.y - b.y || a.x - b.x);
-    const w = world ? 7 : 12, dx = world ? 4 : 7, dy = world ? -3 : -5;
-    g += bars.map(({ cc, c, a, x, y }) => {
-      const v = score(c), h = Math.max(3, v / 100 * HMAX), col = `var(--s${Math.max(1, step(v))})`, x0 = x - w / 2, y0 = y - h;
-      return `<g class="tower" data-id="${c.id}" tabindex="0" role="button" aria-label="${esc(c.country)}, ${esc(c.name)}: ${v}/100">
-        <ellipse cx="${x + dx / 2}" cy="${y + 1}" rx="${w}" ry="${w * 0.35}" class="shadow"/>
-        <polygon points="${x0 + w},${y} ${x0 + w + dx},${y + dy} ${x0 + w + dx},${y0 + dy} ${x0 + w},${y0}" fill="${col}"/><polygon points="${x0 + w},${y} ${x0 + w + dx},${y + dy} ${x0 + w + dx},${y0 + dy} ${x0 + w},${y0}" class="side"/>
-        <rect x="${x0}" y="${y0}" width="${w}" height="${h}" fill="${col}"/>
-        <polygon points="${x0},${y0} ${x0 + w},${y0} ${x0 + w + dx},${y0 + dy} ${x0 + dx},${y0 + dy}" fill="${col}"/><polygon points="${x0},${y0} ${x0 + w},${y0} ${x0 + w + dx},${y0 + dy} ${x0 + dx},${y0 + dy}" class="top"/>
-        ${(world ? c.kind !== "international" : !(a > 2600 || v >= 85 || ["MT", "CY", "IE", "PT"].includes(cc))) ? "" : `<text x="${x + dx / 2}" y="${y0 + dy - 5}" class="tl">${cc}${world ? "" : `<tspan x="${x + dx / 2}" dy="-12" class="tv">${v}</tspan>`}</text>`}
-      </g>`;
-    }).join("");
-    const left = Math.min(0, ox + SKEW * G.h); svg.setAttribute("viewBox", `${Math.round(left)} 0 ${Math.round(G.w + ox - left)} ${Math.round(H)}`);
-    svg.innerHTML = g;
-    try { const bb = svg.getBBox(); if (bb.width > 0) svg.setAttribute("viewBox", `${Math.floor(bb.x - 8)} ${Math.floor(bb.y - 8)} ${Math.ceil(bb.width + 16)} ${Math.ceil(bb.height + 16)}`); } catch (e) {}
-  }
-  function skyTip(e) {
-    const el = e.target.closest("#sky .tower"), tip = $("#skytip");
-    if (!el) { tip.hidden = true; return; }
-    const c = byId(el.dataset.id), box = $(".skywrap").getBoundingClientRect();
-    tip.innerHTML = `<b>${flag(c.cc)} ${esc(c.country)}</b>${esc(c.name)} · ${score(c)}/100`;
-    tip.hidden = false;
-    tip.style.left = Math.max(0, Math.min(e.clientX - box.left + 14, box.width - 250)) + "px"; tip.style.top = (e.clientY - box.top + 14) + "px";
-  }
-  function squarify(items, x, y, w, h) {
-    // items: [{v,...}] sorted desc; returns [{...item, x,y,w,h}]
-    const out = [], total = items.reduce((a, i) => a + i.v, 0);
-    if (!total) return out;
-    let rest = items.map(i => ({ ...i, a: i.v / total * w * h }));
-    while (rest.length) {
-      const short = Math.min(w, h); let row = [], best = Infinity;
-      for (const it of rest) {
-        const r = [...row, it], sum = r.reduce((a, i) => a + i.a, 0), mx = Math.max(...r.map(i => i.a)), mn = Math.min(...r.map(i => i.a));
-        const worst = Math.max(short * short * mx / (sum * sum), (sum * sum) / (short * short * mn));
-        if (worst > best) break; best = worst; row = r;
-      }
-      const sum = row.reduce((a, i) => a + i.a, 0);
-      if (w >= h) { const cw = sum / h; let cy = y; row.forEach(i => { const ch = i.a / cw; out.push({ ...i, x, y: cy, w: cw, h: ch }); cy += ch; }); x += cw; w -= cw; }
-      else { const ch = sum / w; let cx = x; row.forEach(i => { const cw2 = i.a / ch; out.push({ ...i, x: cx, y, w: cw2, h: ch }); cx += cw2; }); y += ch; h -= ch; }
-      rest = rest.slice(row.length);
-    }
-    return out;
-  }
-  function treemap() {
-    const el = $("#tree"), W = 1000, H = 560, cats = D.meta.categories;
-    const groups = Object.keys(cats).map(k => {
-      const teams = D.certs.map(c => ({ c, v: c.services.filter(s => s.cat === k).length })).filter(t => t.v).sort((a, b) => b.v - a.v);
-      return { k, v: teams.reduce((a, t) => a + t.v, 0), teams };
-    }).filter(g => g.v).sort((a, b) => b.v - a.v);
-    const pct = (n, of) => (n / of * 100).toFixed(3) + "%";
-    el.innerHTML = squarify(groups, 0, 0, W, H).map(g => {
-      const PAD = 2, HEAD = 22;
-      const tiles = squarify(g.teams, 0, 0, g.w - PAD * 2, Math.max(1, g.h - HEAD - PAD));
-      return `<div class="tg" style="left:${pct(g.x, W)};top:${pct(g.y, H)};width:${pct(g.w, W)};height:${pct(g.h, H)}"><div class="tgh">${esc(cats[g.k])} <span>${g.v}</span></div><div class="tgb">${tiles.map(t => { const v = score(t.c); const names = t.c.services.filter(s => s.cat === g.k).map(s => s.name).join(", "); return `<button class="tt" data-id="${t.c.id}" style="left:${pct(t.x, g.w - PAD * 2)};top:${pct(t.y, g.h - HEAD - PAD)};width:${pct(t.w, g.w - PAD * 2)};height:${pct(t.h, g.h - HEAD - PAD)};background:var(--s${Math.max(1, step(v))})" title="${esc(t.c.name)} (${esc(t.c.country)}), ${v}/100 · ${esc(names)}">${t.w > 34 && t.h > 22 ? flag(t.c.cc) : ""}</button>`; }).join("")}</div></div>`;
-    }).join("");
+    quadrant(); activity(); matrix();
   }
   const fit = c => ({ pub: c.scores.adv + c.scores.report + c.scores.block, tech: c.scores.feeds + c.scores.oss + c.scores.proactive });
   function quadrant() {
@@ -673,41 +576,46 @@ footer .wrap { display: grid; gap: 8px; }
     $("#quad").innerHTML = h;
     if (!$(".quad-axis")) $("#quad").insertAdjacentHTML("afterend", '<div class="quad-axis"><span>← fewer citizen-facing services</span><span>more citizen-facing services →</span></div>');
   }
-  const GROUPS = [
-    ["EU national & government", c => c.kind === "national" || c.kind === "government"],
-    ["Europe, non-EU", c => c.kind === "international" && c.region === "Europe (non-EU)"],
-    ["Americas", c => c.region === "Americas"],
-    ["Asia-Pacific", c => c.region === "Asia-Pacific"],
-    ["Middle East", c => c.region === "Middle East"],
-    ["EU-level & community", c => c.kind === "eu" || c.kind === "community"]
-  ];
-  function spread() {
-    const STEP = 17;
-    const rows = GROUPS.map(([name, test]) => {
-      const list = D.certs.filter(test).sort((a, b) => score(a) - score(b));
-      const stacks = {};
-      list.forEach(c => (stacks[score(c)] ||= []).push(c));
-      const tall = Math.max(1, ...Object.values(stacks).map(v => v.length));
-      const sc = list.map(score).sort((a, b) => a - b);
-      const med = sc.length % 2 ? sc[(sc.length - 1) / 2] : (sc[sc.length / 2 - 1] + sc[sc.length / 2]) / 2;
-      const flags = Object.entries(stacks).map(([v, cs]) => cs.map((c, i) => `<button class="fl" data-id="${c.id}" style="left:${v}%;bottom:${i * STEP}px" title="${esc(c.name)} (${esc(c.country)}): ${v}/100">${flag(c.cc)}</button>`).join("")).join("");
-      return `<div class="srow"><div class="slab">${name}<small>${list.length} team${list.length === 1 ? "" : "s"} · median ${Math.round(med)}</small></div><div class="strack" style="height:${tall * STEP + 2}px"><span class="med" style="left:${med}%"></span>${flags}</div></div>`;
-    }).join("");
-    $("#spread").innerHTML = rows + `<div class="srow" style="border:0;padding-top:0"><span></span><div class="ticks">${[0, 25, 50, 75, 100].map(t => `<span style="left:${t}%">${t}</span>`).join("")}</div></div>`;
-  }
-  function freshness() {
-    if (!L.updated) { $("#fresh").innerHTML = '<p class="muted">Appears after the first feed collection.</p>'; return; }
-    const MAX = 365, pos = d => Math.sqrt(Math.min(d, MAX)) / Math.sqrt(MAX) * 100;
-    const rows = D.certs.map(c => { const t = L.teams[c.id]; const newest = (t?.items || []).map(i => i.date).filter(Boolean).sort().pop(); return newest ? { c, d: Math.max(0, Math.floor((new Date(L.updated) - new Date(newest)) / 864e5)) } : null; }).filter(Boolean).sort((a, b) => a.d - b.d);
-    const ticks = [0, 7, 30, 90, 180, 365];
-    $("#fresh").innerHTML = rows.map(({ c, d }) => { const col = d <= 30 ? "var(--ok)" : d <= 180 ? "var(--warn)" : "var(--bad)"; return `<button class="row" data-id="${c.id}" title="${esc(c.name)}: last post ${d} days before the last refresh"><span class="nm">${flag(c.cc)}<span style="overflow:hidden;text-overflow:ellipsis">${esc(c.name)}</span></span><span class="track"><span class="stem" style="width:${pos(d)}%"></span><span class="dot" style="left:${pos(d)}%;background:${col}"></span></span><b>${d > MAX ? MAX + "+" : d}d</b></button>`; }).join("") + `<div class="axisrow"><span></span><span class="ticks">${ticks.map(t => `<span style="left:${pos(t)}%">${t}</span>`).join("")}</span><span></span></div>` + `<p class="muted" style="font-size:.78rem;margin:8px 0 0">${D.certs.length - rows.length} teams have no dated posts to measure.</p>`;
-  }
+  const mxCats = new Set(); let mxSortTotal = false;
   function matrix() {
     const cats = Object.keys(D.meta.categories);
     const SH = { alerts: "Alerts", feeds: "Feeds", blocklists: "Block", reporting: "Report", notify: "Notify", tools: "Tools", newsletter: "Digest", reports: "Reports", awareness: "Help" };
-    const rows = [...D.certs].sort((a, b) => score(b) - score(a));
-    const max = Math.max(...rows.flatMap(c => cats.map(k => c.services.filter(s => s.cat === k).length)));
-    $("#matrix").innerHTML = `<thead><tr><th>Team</th>${cats.map(k => `<th class="m" title="${esc(D.meta.categories[k])}">${SH[k]}</th>`).join("")}<th class="m">Total</th></tr></thead><tbody>${rows.map(c => `<tr data-id="${c.id}" tabindex="0"><td><span class="badge">${flag(c.cc)}<strong>${esc(c.name)}</strong></span></td>${cats.map(k => { const ss = c.services.filter(s => s.cat === k); const n = ss.length; const sz = n ? 7 + Math.round(11 * Math.sqrt(n / max)) : 0; return `<td class="m" title="${esc(D.meta.categories[k])}: ${n ? esc(ss.map(s => s.name).join(", ")) : "none"}">${n ? `<span class="mdot" style="width:${sz}px;height:${sz}px"></span>` : '<span class="mdot z"></span>'}</td>`; }).join("")}<td class="m mono">${c.services.length}</td></tr>`).join("")}</tbody>`;
+    const q = $("#mx-q").value.trim().toLowerCase(), reg = $("#mx-region").value;
+    const n = (c, k) => c.services.filter(s => s.cat === k).length;
+    const inReg = c => !reg || (reg === "eu" ? (c.kind === "national" || c.kind === "government") : reg === "intl" ? c.kind === "international" : (c.kind === "eu" || c.kind === "community"));
+    const rows = D.certs.filter(inReg).filter(c => !q || (c.name + " " + c.country + " " + c.full).toLowerCase().includes(q)).filter(c => [...mxCats].every(k => n(c, k) > 0))
+      .sort((a, b) => mxSortTotal ? b.services.length - a.services.length || score(b) - score(a) : score(b) - score(a));
+    const max = Math.max(...D.certs.flatMap(c => cats.map(k => n(c, k))));
+    $("#mx-count").textContent = `${rows.length} of ${D.certs.length} teams`;
+    $("#matrix").innerHTML = `<thead><tr><th>Team</th>${cats.map(k => `<th class="m"><button class="mxh${mxCats.has(k) ? " on" : ""}" data-mxcat="${k}" aria-pressed="${mxCats.has(k)}" title="Show only teams with ${esc(D.meta.categories[k])}">${SH[k]}</button></th>`).join("")}<th class="m"><button class="mxh${mxSortTotal ? " on" : ""}" data-mxsort aria-pressed="${mxSortTotal}" title="Sort by number of services">Total ${mxSortTotal ? "↓" : ""}</button></th></tr></thead><tbody>${rows.map(c => `<tr data-id="${c.id}" tabindex="0"><td><span class="badge">${flag(c.cc)}<strong>${esc(c.name)}</strong></span></td>${cats.map(k => { const ss = c.services.filter(s => s.cat === k); const v = ss.length; const sz = v ? 7 + Math.round(11 * Math.sqrt(v / max)) : 0; return `<td class="m${mxCats.has(k) ? " on" : ""}" title="${esc(D.meta.categories[k])}: ${v ? esc(ss.map(s => s.name).join(", ")) : "none"}">${v ? `<span class="mdot" style="width:${sz}px;height:${sz}px"></span>` : '<span class="mdot z"></span>'}</td>`; }).join("")}<td class="m mono">${c.services.length}</td></tr>`).join("") || `<tr><td colspan="${cats.length + 2}" class="muted">No team matches these filters.</td></tr>`}</tbody>`;
+  }
+  function activity() {
+    const WEEKS = 26, now = L.updated ? new Date(L.updated) : new Date(), DAY = 864e5;
+    const end = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
+    const datesFor = c => {
+      const h = HIST?.teams?.[c.id];
+      if (h) return Object.values(h).map(d => new Date(d + "T00:00:00Z"));
+      return (L.teams[c.id]?.items || []).map(i => i.date && new Date(i.date)).filter(Boolean);
+    };
+    let rows = D.certs.map(c => {
+      const ds = datesFor(c).filter(d => !isNaN(d));
+      const weeks = Array(WEEKS).fill(0);
+      ds.forEach(d => { const w = Math.floor((end - d) / (7 * DAY)); if (w >= 0 && w < WEEKS) weeks[WEEKS - 1 - w]++; });
+      const last = ds.length ? Math.max(...ds) : null;
+      return { c, weeks, total: ds.length, d30: ds.filter(d => end - d <= 30 * DAY).length, d90: ds.filter(d => end - d <= 90 * DAY).length, ago: last ? Math.max(0, Math.round((end - last) / DAY)) : null, st: L.teams[c.id] };
+    });
+    if (!$("#act-all").checked) rows = rows.filter(r => r.total);
+    const sort = $("#act-sort").value;
+    rows.sort((a, b) => sort === "name" ? a.c.name.localeCompare(b.c.name) : sort === "recent" ? (a.ago ?? 1e9) - (b.ago ?? 1e9) : sort === "total" ? b.total - a.total : b.d30 - a.d30 || b.d90 - a.d90);
+    const lvl = v => v === 0 ? 0 : v === 1 ? 1 : v <= 3 ? 2 : v <= 7 ? 3 : v <= 15 ? 4 : 5;
+    const wkLabel = i => { const d = new Date(end - (WEEKS - 1 - i) * 7 * DAY); return d.toISOString().slice(5, 10); };
+    const agoCell = r => r.ago == null ? '<span class="status none">—</span>' : `<span class="status ${r.ago <= 30 ? "ok" : r.ago <= 180 ? "stale" : "none"}" style="${r.ago > 180 ? "color:var(--bad)" : ""}">${r.ago === 0 ? "today" : r.ago + "d ago"}</span>`;
+    const head = `<thead><tr><th>Team</th><th class="wk" colspan="${WEEKS}">Posts per week · last ${WEEKS} weeks →</th><th class="m">Last post</th><th class="m">30 days</th><th class="m">90 days</th><th class="m">Recorded</th></tr></thead>`;
+    $("#act").innerHTML = head + `<tbody>${rows.map(r => `<tr data-id="${r.c.id}" tabindex="0"><td><span class="badge">${flag(r.c.cc)}<strong>${esc(r.c.name)}</strong></span></td>${r.weeks.map((v, i) => `<td class="hc" title="${esc(r.c.name)} · week of ${wkLabel(i)}: ${v} post${v === 1 ? "" : "s"}"><i class="h${lvl(v)}"></i></td>`).join("")}<td class="m">${agoCell(r)}</td><td class="m mono">${r.d30}</td><td class="m mono">${r.d90}</td><td class="m mono">${r.total}</td></tr>`).join("") || `<tr><td colspan="${WEEKS + 5}" class="muted">No dated posts collected yet.</td></tr>`}</tbody>`;
+    $("#act-legend").innerHTML = `<span>Posts per week</span>${[[0, "0"], [1, "1"], [2, "2–3"], [3, "4–7"], [4, "8–15"], [5, "16+"]].map(([l, t]) => `<span><i class="sw hsw h${l}"></i>${t}</span>`).join("")}`;
+    const started = HIST?.started;
+    const counted = rows.reduce((a, r) => a + r.total, 0);
+    $("#act-note").textContent = `${counted.toLocaleString("en")} dated posts from ${rows.length} teams. Each feed is read every six hours and every post seen is kept${started ? `, starting ${started}` : ""}, so older weeks only include posts still listed in a team's feed at that point. Teams followed through their news page are dated on the day a new link first appears.`;
   }
 
 
@@ -809,7 +717,6 @@ footer .wrap { display: grid; gap: 8px; }
     document.querySelectorAll("[data-tab]").forEach(b => b.setAttribute("aria-selected", b.dataset.tab === name));
     document.querySelectorAll("[data-panel]").forEach(p => p.hidden = p.dataset.panel !== name);
     $(".hero").hidden = name !== "overview";
-    if (name === "charts" && D) skyline();
     try { localStorage.setItem("atlas-tab", name); } catch (e) {}
   }
 
@@ -817,7 +724,9 @@ footer .wrap { display: grid; gap: 8px; }
     if (e.target.closest("[data-home]")) { e.preventDefault(); showTab("overview"); scrollTo({ top: 0 }); return; }
     const go = e.target.closest("[data-goto]"); if (go) { e.preventDefault(); showTab(go.dataset.goto); scrollTo({ top: 0 }); return; }
     const sc = e.target.closest("[data-scope]"); if (sc) { mapScope = sc.dataset.scope; drawMap(); return; }
-    const sk = e.target.closest("[data-sky]"); if (sk) { skyScope = sk.dataset.sky; skyline(); return; }
+    const mxc = e.target.closest("[data-mxcat]"); if (mxc) { const k = mxc.dataset.mxcat; mxCats.has(k) ? mxCats.delete(k) : mxCats.add(k); matrix(); return; }
+    if (e.target.closest("[data-mxsort]")) { mxSortTotal = !mxSortTotal; matrix(); return; }
+    if (e.target.closest("#mx-reset")) { mxCats.clear(); $("#mx-q").value = ""; $("#mx-region").value = ""; mxSortTotal = false; matrix(); return; }
     const mt = e.target.closest("[data-metric]"); if (mt) { metric = mt.dataset.metric; drawMetrics(); drawMap(); return; }
     const tab = e.target.closest("[data-tab]"); if (tab) { showTab(tab.dataset.tab); return; }
     if (e.target.closest("[data-close]")) { $("#dlg").close(); return; }
@@ -828,10 +737,11 @@ footer .wrap { display: grid; gap: 8px; }
     const row = e.target.closest("[data-id]"); if (row && !e.target.closest("a")) open(row.dataset.id);
     if (e.target === $("#dlg")) $("#dlg").close();
   });
-  document.addEventListener("keydown", e => { if (e.key === "Enter" && e.target.matches("tr[data-id], #map [data-id], #sky [data-id]")) open(e.target.dataset.id); });
+  document.addEventListener("keydown", e => { if (e.key === "Enter" && e.target.matches("tr[data-id], #map [data-id]")) open(e.target.dataset.id); });
   $("#map").addEventListener("pointermove", tipShow);
-  $("#sky").addEventListener("pointermove", skyTip);
-  $("#sky").addEventListener("pointerleave", () => { $("#skytip").hidden = true; });
+  ["act-sort", "act-all"].forEach(id => $("#" + id).addEventListener("change", activity));
+  $("#mx-q").addEventListener("input", matrix);
+  $("#mx-region").addEventListener("change", matrix);
   $("#map").addEventListener("pointerleave", () => { $("#tip").hidden = true; });
   ["team3", "mix3"].forEach(id => $("#" + id).addEventListener("change", latest));
   ["q", "q2", "q3"].forEach(id => $("#" + id).addEventListener("input", () => (id === "q" ? table : id === "q2" ? services : latest)()));
@@ -842,6 +752,7 @@ footer .wrap { display: grid; gap: 8px; }
     L = await load("data/latest.json", L) || L;
     GEO = await load("data/europe.json", null);
     WORLD = await load("data/world.json", null);
+    HIST = await load("data/history.json", null);
     $("#team3").insertAdjacentHTML("beforeend", D.certs.filter(c => L.teams[c.id]?.items?.length).map(c => `<option value="${c.id}">${c.cc} · ${esc(c.name)}</option>`).join(""));
     kpis(); overview(); charts(); kindChips(); table(); services(); latest(); follow(); method();
     let t = "overview"; try { t = localStorage.getItem("atlas-tab") || t; } catch (e) {}
