@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T08:05:45+00:00",
+ "updated": "2026-10-14T12:07:39+00:00",
  "teams": {
   "cert-pl": {
    "status": "ok",
@@ -534,52 +534,52 @@
    "via": "known",
    "items": [
     {
-     "title": "[NEU] [hoch] Microsoft Entwicklerwerkzeuge: Mehrere Schwachstellen",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3893",
-     "date": "2026-10-14T07:49:11+00:00",
-     "summary": "Ein Angreifer kann mehrere Schwachstellen in Microsoft .NET Framework, Microsoft .NET, Microsoft ASP.NET, Microsoft Visual Studio 2022, Microsoft Visual Studio 2026, Microsoft Visual Studio Code, Microsoft SysInternals und Microsoft PowerShell ausnutzen, um seine Privilegien zu…"
+     "title": "[UPDATE] [mittel] PCRE (Perl Compatible Regular Expressions): Schwachstelle ermöglicht Codeausführung",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3622",
+     "date": "2026-10-14T11:59:30+00:00",
+     "summary": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in PCRE (Perl Compatible Regular Expressions) ausnutzen, um möglicherweise beliebigen Code auszuführen, angrenzenden Speicher zu beschädigen oder einen Denial-of-Service-Zustand herbeizuführen."
     },
     {
-     "title": "[NEU] [kritisch] Microsoft Windows und Windows Server: Mehrere Schwachstellen",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3892",
-     "date": "2026-10-14T07:34:11+00:00",
-     "summary": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in verschiedenen Versionen von Microsoft Windows Server und Microsoft Windows ausnutzen, um seine Privilegien auf administrative Rechte zu erhöhen, um beliebigen Code auszuführen, um Informationen offenzulegen, um…"
+     "title": "[UPDATE] [hoch] PCRE2 (Perl Compatible Regular Expressions): Mehrere Schwachstellen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3334",
+     "date": "2026-10-14T11:59:29+00:00",
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in PCRE2 (Perl Compatible Regular Expressions) ausnutzen, um Sicherheitsvorkehrungen zu umgehen, Speicher zu beschädigen, Informationen offenzulegen oder Denial-of-Service-Zustände herbeizuführen."
+    },
+    {
+     "title": "[UPDATE] [hoch] OpenSSL: Mehrere Schwachstellen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3638",
+     "date": "2026-10-14T11:59:21+00:00",
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in OpenSSL ausnutzen, um Sicherheitsvorkehrungen zu umgehen, vertrauliche Informationen offenzulegen, Daten zu manipulieren und einen Denial-of-Service-Zustand zu verursachen."
     },
     {
      "title": "[UPDATE] [mittel] Linux Kernel: Mehrere Schwachstellen",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-2970",
-     "date": "2026-10-14T07:19:12+00:00",
-     "summary": "Ein Angreifer kann mehrere Schwachstellen im Linux Kernel ausnutzen, um einen nicht näher spezifizierten Angriff durchzuführen, möglicherweise Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand herbeizuführen, vertrauliche Informationen offenlegen oder Root-Rechte…"
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3438",
+     "date": "2026-10-14T11:34:32+00:00",
+     "summary": "Ein lokaler Angreifer kann mehrere Schwachstellen im Linux Kernel ausnutzen, um einen Denial of Service zu verursachen oder eine nicht näher spezifizierte Auswirkung zu erzielen."
     },
     {
-     "title": "[UPDATE] [hoch] ImageMagick: Mehrere Schwachstellen",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3867",
-     "date": "2026-10-13T18:04:11+00:00",
-     "summary": "Ein Angreifer kann mehrere Schwachstellen in ImageMagick ausnutzen, um beliebigen Programmcode mit den Rechten des Dienstes auszuführen, den Speicher zu beschädigen, Cross-Site-Scripting-Angriffe durchzuführen, einen Denial-of-Service-Angriff auszulösen, Daten zu manipulieren…"
+     "title": "[UPDATE] [hoch] Mozilla Firefox und Thunderbird: Mehrere Schwachstellen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3375",
+     "date": "2026-10-14T11:34:31+00:00",
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in Mozilla Firefox, Firefox ESR und Thunderbird ausnutzen, um seine Privilegien zu erhöhen, Sicherheitsmaßnahmen zu umgehen, Daten offenzulegen oder zu manipulieren, den Speicher zu beschädigen, Denial-of-Service-Zustände zu verursachen…"
     },
     {
-     "title": "[UPDATE] [hoch] Froxlor: Mehrere Schwachstellen",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3629",
-     "date": "2026-10-13T17:59:11+00:00",
-     "summary": "Ein entfernter, authentisierter Angreifer kann mehrere Schwachstellen in Froxlor ausnutzen, um Cross-Site-Scripting-Angriffe durchzuführen, vertrauliche Informationen offenzulegen, Daten zu manipulieren und möglicherweise erweiterte Berechtigungen zu erlangen."
+     "title": "[UPDATE] [mittel] X.Org X11 und Xwayland: Mehrere Schwachstellen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3787",
+     "date": "2026-10-14T11:29:32+00:00",
+     "summary": "Ein lokaler Angreifer kann mehrere Schwachstellen in X.Org X11 und Xwayland ausnutzen, um beliebigen Programmcode auszuführen und um einen Denial of Service Zustand herbeizuführen."
     },
     {
-     "title": "[NEU] [hoch] Siemens SIMATIC S7: Mehrere Schwachstelle",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3891",
-     "date": "2026-10-13T12:04:11+00:00",
-     "summary": "Ein Angreifer kann mehrere Schwachstellen in verschiedenen Siemens SIMATIC S7 Produkten ausnutzen, um beliebigen Code auszuführen, erweiterte Berechtigungen zu erlangen, Daten zu manipulieren oder offenzulegen, Sicherheitsmaßnahmen zu umgehen, einen Denial-of-Service-Zustand…"
+     "title": "[UPDATE] [hoch] LibreOffice: Mehrere Schwachstellen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3738",
+     "date": "2026-10-14T11:29:32+00:00",
+     "summary": "Ein lokaler Angreifer kann mehrere Schwachstellen in LibreOffice ausnutzen, um Informationen offenzulegen, Daten zu manipulieren und beliebigen Code auszuführen."
     },
     {
-     "title": "[UPDATE] [mittel] QT: Schwachstelle ermöglicht Denial of Service",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3332",
-     "date": "2026-10-13T12:04:11+00:00",
-     "summary": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in QT ausnutzen, um einen Denial of Service Angriff durchzuführen."
-    },
-    {
-     "title": "[UPDATE] [mittel] libpng: Schwachstelle ermöglicht Denial of Service",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3619",
-     "date": "2026-10-13T12:00:15+00:00",
-     "summary": "Ein Angreifer kann eine Schwachstelle in libpng ausnutzen, um einen Denial of Service Angriff durchzuführen."
+     "title": "[UPDATE] [mittel] LibreOffice: Mehrere Schwachstellen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3521",
+     "date": "2026-10-14T11:29:31+00:00",
+     "summary": "Ein lokaler Angreifer kann mehrere Schwachstellen in LibreOffice ausnutzen, um einen Denial of Service Angriff durchzuführen, Daten zu manipulieren oder Informationen offenzulegen."
     }
    ]
   },
@@ -754,6 +754,36 @@
    "via": "known",
    "items": [
     {
+     "title": "Ivanti October Security Update",
+     "link": "https://www.acn.gov.it/portale/w/ivanti-october-security-update-1",
+     "date": "2026-10-14T10:19:21+00:00",
+     "summary": "Ivanti ha rilasciato gli aggiornamenti di sicurezza di ottobre che risolvono 7 vulnerabilità, di cui 2 con gravità “critica” e 3 con gravità “alta”, in alcuni prodotti. Tra queste si evidenzia la CVE-2026-104935 - riguardante il prodotto Connect Secure (ICS) e di tipo…"
+    },
+    {
+     "title": "Risolte vulnerabilità in prodotti Fortinet",
+     "link": "https://www.acn.gov.it/portale/w/risolte-vulnerabilita-in-prodotti-fortinet-1",
+     "date": "2026-10-14T10:19:05+00:00",
+     "summary": "Fortinet ha rilasciato aggiornamenti di sicurezza che sanano alcune vulnerabilità, di cui 2 con gravità \"critica\" e 2 con gravità \"alta\", in FortiSIEM, FortiMail, FortiSandbox, FortiAnalyzer e FortiManager. Tali vulnerabilità potrebbero consentire ad un attaccante remoto di…"
+    },
+    {
+     "title": "Risolte vulnerabilità in prodotti Zoom",
+     "link": "https://www.acn.gov.it/portale/w/risolte-vulnerabilita-in-prodotti-zoom",
+     "date": "2026-10-14T10:10:25+00:00",
+     "summary": "Zoom ha rilasciato aggiornamenti di sicurezza che risolvono 4 vulnerabilità con gravità \"alta\" in Zoom Workplace, piattaforma per la comunicazione e la collaborazione, e nei relativi client Zoom. Tali vulnerabilità, qualora sfruttate, permetterebbero a un utente malintenzionato…"
+    },
+    {
+     "title": "Rilevate vulnerabilità in Commvault",
+     "link": "https://www.acn.gov.it/portale/w/rilevate-vulnerabilita-in-commvault",
+     "date": "2026-10-14T09:21:51+00:00",
+     "summary": "Commvault ha rilasciato aggiornamenti di sicurezza che sanano 10 vulnerabilità, di cui 1 con gravità \"critica\" e 9 con gravità \"alta\", in Grid(HSX) CVFS e Commvault Cloud, piattaforma software enterprise per la protezione, il backup e la gestione dei dati."
+    },
+    {
+     "title": "Aggiornamenti Mensili Microsoft",
+     "link": "https://www.acn.gov.it/portale/w/aggiornamenti-mensili-microsoft-25",
+     "date": "2026-10-14T08:49:33+00:00",
+     "summary": "Microsoft ha rilasciato gli aggiornamenti di sicurezza mensili che risolvono un totale di 1416 nuove vulnerabilità, di cui una di tipo 0-day."
+    },
+    {
      "title": "Risolte vulnerabilità in Citrix XenServer",
      "link": "https://www.acn.gov.it/portale/w/risolte-vulnerabilita-in-citrix-xenserver-1",
      "date": "2026-10-14T07:53:37+00:00",
@@ -770,36 +800,6 @@
      "link": "https://www.acn.gov.it/portale/w/rilevate-vulnerabilita-in-prodotti-ibm-3",
      "date": "2026-10-13T14:35:18+00:00",
      "summary": "Risolte molteplici vulnerabilità, di cui 4 con gravità \"critica\" e 31 con gravità \"alta\", in diversi prodotti IBM."
-    },
-    {
-     "title": "Risolte vulnerabilità in prodotti Mozilla",
-     "link": "https://www.acn.gov.it/portale/w/risolte-vulnerabilita-in-prodotti-mozilla-12",
-     "date": "2026-10-13T14:18:09+00:00",
-     "summary": "Aggiornamenti di sicurezza sanano molteplici vulnerabilità di sicurezza, di cui 30 con gravità “alta”, in Firefox e Firefox ESR."
-    },
-    {
-     "title": "Progress Software: sanate vulnerabilità in MarkLogic Server",
-     "link": "https://www.acn.gov.it/portale/w/progress-software-sanate-vulnerabilita-in-marklogic-server",
-     "date": "2026-10-13T13:09:02+00:00",
-     "summary": "Rilasciati aggiornamenti di sicurezza per sanare 31 vulnerabilità, di cui 5 con gravità \"critica\" e 24 con gravità \"alta\", in Progress MarkLogic Server, nota piattaforma di database NoSQL progettata per archiviare, integrare, gestire e ricercare grandi volumi di dati eterogenei…"
-    },
-    {
-     "title": "Risolte vulnerabilità in Craft CMS",
-     "link": "https://www.acn.gov.it/portale/w/risolte-vulnerabilita-in-craft-cms-1",
-     "date": "2026-10-13T13:05:28+00:00",
-     "summary": "Aggiornamenti di sicurezza sanano alcune vulnerabilità, di cui 2 con gravità “alta”, in Craft CMS, piattaforma open source per lo sviluppo e l’amministrazione di siti web e applicazioni digitali. Tali vulnerabilità, qualora sfruttate, potrebbero consentire a un utente…"
-    },
-    {
-     "title": "Risolte vulnerabilità nella libreria Neo4j GraphQL",
-     "link": "https://www.acn.gov.it/portale/w/risolte-vulnerabilita-nella-libreria-neo4j-graphql",
-     "date": "2026-10-13T13:03:53+00:00",
-     "summary": "Risolte due vulnerabilità, di cui una con gravità \"critica\" e una con gravità \"alta\", presenti nella libreria Neo4j GraphQL. Tali vulnerabilità, qualora sfruttate, potrebbero consentire ad un utente malintenzionato di eludere dei meccanismi di sicurezza, accedere ad…"
-    },
-    {
-     "title": "Aggiornamenti per prodotti Siemens",
-     "link": "https://www.acn.gov.it/portale/w/aggiornamenti-per-prodotti-siemens-28",
-     "date": "2026-10-13T11:11:09+00:00",
-     "summary": "Siemens ha rilasciato aggiornamenti di sicurezza per sanare molteplici vulnerabilità nei propri prodotti, di cui 4 con gravità “critica” e 14 con gravità “alta”."
     }
    ]
   },
@@ -884,22 +884,28 @@
    "via": "discovered",
    "items": [
     {
+     "title": "TR-101 Security Recommendations for Industrial, Operational Technology (OT) and Internet of Things (IoT) Devices",
+     "link": "https://www.circl.lu/pub/tr-101/",
+     "date": "2026-10-14T00:00:00+00:00",
+     "summary": "TR-101 - Security Recommendations for Industrial, Operational Technology (OT) and Internet of Things (IoT) Devices Overview Industrial, Operational Technology (OT) and Internet of Things (IoT) devices are increasingly connected to IP networks. These systems include industrial…"
+    },
+    {
      "title": "Publications and Presentations",
      "link": "https://www.circl.lu/pub/",
-     "date": "2026-10-01T00:00:00+00:00",
-     "summary": "Publications Description Last update TR-100 - Multiple Critical Vulnerabilities in Citrix NetScaler ADC and NetScaler Gateway 27th September 2026 TR-99 - Phishing Campaign Targeting Hotel Customers in Luxembourg 1st June 2026 TR-98 - Security Advisory Ivanti Endpoint Manager…"
+     "date": "2026-10-14T00:00:00+00:00",
+     "summary": "Publications Description Last update TR-101 - Security Recommendations for Industrial, Operational Technology (OT) and Internet of Things (IoT) Devices 14 October 2026 TR-100 - Multiple Critical Vulnerabilities in Citrix NetScaler ADC and NetScaler Gateway 27 September 2026…"
+    },
+    {
+     "title": "CIRCL",
+     "link": "https://www.circl.lu/",
+     "date": "2026-10-14T00:00:00+00:00",
+     "summary": ""
     },
     {
      "title": "Operational Guidance for Incident Handling - Rulebooks",
      "link": "https://www.circl.lu/pub/guidance/",
      "date": "2026-10-01T00:00:00+00:00",
      "summary": "Operational guidance for incident handling Traffic Light Protocol (TLP): CLEAR Version: 1.0 (stable) Date: 28 September 2026 Authors: Agence Nationale de la Sécurité des Systèmes d’Information (ANSSI) Commission de Surveillance du Secteur Financier (CSSF) Computer Incident…"
-    },
-    {
-     "title": "CIRCL",
-     "link": "https://www.circl.lu/",
-     "date": "2026-10-01T00:00:00+00:00",
-     "summary": ""
     },
     {
      "title": "Operational guidance for incident handling",
@@ -924,12 +930,6 @@
      "link": "https://www.circl.lu/pub/tr-98/",
      "date": "2026-02-09T00:00:00+00:00",
      "summary": "Ivanti has released security updates for Endpoint Manager Mobile (EPMM) addressing two critical-severity vulnerabilities. Successful exploitation allows unauthenticated remote code execution. Active exploitation has been confirmed in the wild, both worldwide and in Luxembourg.…"
-    },
-    {
-     "title": "TR-97 - Supply Chain Compromise Propagating Through the npm Ecosystem (Shai-Hulud)",
-     "link": "https://www.circl.lu/pub/tr-97/",
-     "date": "2025-11-28T00:00:00+00:00",
-     "summary": "The incident involves a self-replicating worm, publicly referred to as “Shai-Hulud”, which has infected more than 500 npm packages, with an even broader impact in a second wave (Shai-Hulud 2.0) that delivered a different payload. After gaining initial access, the malicious…"
     }
    ]
   },
@@ -1028,6 +1028,12 @@
    "via": "probed",
    "items": [
     {
+     "title": "ALERTĂ: Incident de securitate ce vizează vulnerabilități ale unor instalații frigorifice",
+     "link": "https://dnsc.ro/citeste/alerta-incident-de-securitate-ce-vizeaza-vulnerabilitati-ale-unor-instalatii-frigorifice",
+     "date": "2026-10-14T10:13:32+00:00",
+     "summary": "DESCRIERE CERT-FR (Centre gouvernemental de veille, d’alerte et de réponse aux attaque..."
+    },
+    {
      "title": "Știrile săptămânii din cybersecurity (08.10.2026)",
      "link": "https://dnsc.ro/citeste/stirile-saptamanii-din-cybersecurity-08-10-2026",
      "date": "2026-10-08T11:48:08+00:00",
@@ -1068,12 +1074,6 @@
      "link": "https://dnsc.ro/citeste/stirile-saptamanii-din-cybersecurity-24-09-2026",
      "date": "2026-09-24T11:57:36+00:00",
      "summary": "Vulnerabilitate critică în WordPress Core. Atacatorii pot ajunge la executarea de cod pe serv..."
-    },
-    {
-     "title": "ALERTĂ: Vulnerabilitate critică la nivelul WordPress Core",
-     "link": "https://dnsc.ro/citeste/alerta-vulnerabilitate-critica-la-nivelul-wordpress-core",
-     "date": "2026-09-24T11:40:58+00:00",
-     "summary": "DESCRIERE Experții în securitate cibernetică au descoperit o vulnerabilitate critică, CVE-..."
     }
    ]
   },
@@ -1193,6 +1193,42 @@
    "via": "known",
    "items": [
     {
+     "title": "Múltiples vulnerabilidades en Integrated Lights-Out de HPE",
+     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-integrated-lights-out-de-hpe",
+     "date": "2026-10-14T09:52:52+00:00",
+     "summary": "Múltiples vulnerabilidades en Integrated Lights-Out de HPE Mié, 14/10/2026 - 11:52 Aviso Recursos Afectados HPE Integrated Lights-Out 5 (iLO 5) para servidores HPE Gen10, versiones anteriores a la 3.22; HPE Integrated Lights-Out 6 (iLO 6), versiones anteriores a la 1.79; HPE…"
+    },
+    {
+     "title": "Boletín mensual de seguridad de SAP de octubre de 2026",
+     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/boletin-mensual-de-seguridad-de-sap-de-octubre-de-2026",
+     "date": "2026-10-14T09:08:02+00:00",
+     "summary": "Boletín mensual de seguridad de SAP de octubre de 2026 Mié, 14/10/2026 - 11:08 Aviso Recursos Afectados El boletín incluye vulnerabilidades en las siguientes versiones y productos: SAP Cloud SDK for Python, versiones anteriores a 0.45.2. SAP NetWeaver Visual Composer,…"
+    },
+    {
+     "title": "Múltiples vulnerabilidades en TSplus Remote Access",
+     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-tsplus-remote-access",
+     "date": "2026-10-14T08:34:32+00:00",
+     "summary": "Múltiples vulnerabilidades en TSplus Remote Access Mié, 14/10/2026 - 10:34 Aviso Recursos Afectados TSplus Remote Access, versión 19.20.3.10. Se ha confirmado que esta versión está afectada, aunque otras versiones anteriores podrían verse afectadas. Descripción INCIBE ha…"
+    },
+    {
+     "title": "Múltiples vulnerabilidades en productos de Fortinet",
+     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-fortinet-3",
+     "date": "2026-10-14T08:03:50+00:00",
+     "summary": "Múltiples vulnerabilidades en productos de Fortinet Mié, 14/10/2026 - 10:03 Aviso Recursos Afectados FortiSIEM 7.5.0. FortiSandbox, versiones comprendidas entre la 5.0.0 y la 5.0.6. FortiSandbox, versiones comprendidas entre la 4.4.0 y la 4.4.9. FortiSandbox PaaS, versiones…"
+    },
+    {
+     "title": "Múltiples vulnerabilidades en productos de Ivanti",
+     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-ivanti-4",
+     "date": "2026-10-14T08:03:49+00:00",
+     "summary": "Múltiples vulnerabilidades en productos de Ivanti Mié, 14/10/2026 - 10:03 Aviso Recursos Afectados Ivanti Connect Secure: 25.1.1.1 y anteriores; 25.1.2.2 y anteriores; 22.8R2.4 y anteriores de la rama 22.8.X. Ivanti Xtraction, versiones 2026.2.1 y anteriores. Ivanti Neurons…"
+    },
+    {
+     "title": "Boletín mensual de seguridad de Microsoft de octubre de 2026",
+     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/boletin-mensual-de-seguridad-de-microsoft-de-octubre-de-2026",
+     "date": "2026-10-14T08:03:47+00:00",
+     "summary": "Boletín mensual de seguridad de Microsoft de octubre de 2026 Mié, 14/10/2026 - 10:03 Aviso Recursos Afectados Las actualizaciones de seguridad afectan a diferentes versiones y componentes de: Windows; Microsoft Office, incluidos Excel, Word, Outlook, PowerPoint y Visio;…"
+    },
+    {
      "title": "Divulgación no autorizada de información en el servicio web de facturación de Copart",
      "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/divulgacion-no-autorizada-de-informacion-en-el-servicio-web-de-facturacion-de",
      "date": "2026-10-14T07:05:06+00:00",
@@ -1203,42 +1239,6 @@
      "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/cross-site-scripting-en-la-aplicacion-web-de-youmind",
      "date": "2026-10-13T07:39:28+00:00",
      "summary": "Cross-Site Scripting en la aplicación web de YouMind Mar, 13/10/2026 - 09:39 Aviso Recursos Afectados Aplicación web de YouMind. Descripción INCIBE ha coordinado la publicación de una vulnerabilidad de severidad media que afecta a la aplicación web de YouMind, un espacio de…"
-    },
-    {
-     "title": "Múltiples vulnerabilidades en NonStop Servers de HPE",
-     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-nonstop-servers-de-hpe",
-     "date": "2026-10-13T07:38:16+00:00",
-     "summary": "Múltiples vulnerabilidades en NonStop Servers de HPE Mar, 13/10/2026 - 09:38 Aviso Recursos Afectados HPE NonStop Servers y los componentes de software indicados en el boletín del fabricante. Para la vulnerabilidad crítica está afectado XDR Streams T0248, versión T0248L01^AAD y…"
-    },
-    {
-     "title": "Desbordamiento de búfer basado en montículo en NX-OS Software de Cisco",
-     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/desbordamiento-de-bufer-basado-en-monticulo-en-nx-os-software-de-cisco",
-     "date": "2026-10-13T07:38:15+00:00",
-     "summary": "Desbordamiento de búfer basado en montículo en NX-OS Software de Cisco Mar, 13/10/2026 - 09:38 Aviso Recursos Afectados Versiones vulnerables de Cisco NX-OS Software en los siguientes productos: Cisco Nexus 3000 Series Switches con la función NX-API habilitada; Cisco Nexus 9000…"
-    },
-    {
-     "title": "Múltiples vulnerabilidades en productos de GitLab",
-     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-gitlab",
-     "date": "2026-10-13T07:38:14+00:00",
-     "summary": "Múltiples vulnerabilidades en productos de GitLab Mar, 13/10/2026 - 09:38 Aviso Recursos Afectados Para la vulnerabilidad crítica: GitLab Community Edition y Enterprise Edition 19.2, versiones anteriores a 19.2.8; GitLab Community Edition y Enterprise Edition 19.3, versiones…"
-    },
-    {
-     "title": "Cross-Site Scripting reflejado en la plataforma eCommerce de BeeTienda",
-     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/cross-site-scripting-reflejado-en-la-plataforma-ecommerce-de-beetienda",
-     "date": "2026-10-09T09:54:04+00:00",
-     "summary": "Cross-Site Scripting reflejado en la plataforma eCommerce de BeeTienda Vie, 09/10/2026 - 11:54 Aviso Recursos Afectados Última versión de demo de eCommerce Platform (noviembre de 2025). Descripción INCIBE ha coordinado la publicación de una vulnerabilidad de severidad media que…"
-    },
-    {
-     "title": "Omisión de autenticación en Intelligent Management Center de HPE",
-     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/omision-de-autenticacion-en-intelligent-management-center-de-hpe",
-     "date": "2026-10-09T07:23:27+00:00",
-     "summary": "Omisión de autenticación en Intelligent Management Center de HPE Vie, 09/10/2026 - 09:23 Aviso Recursos Afectados HPE Intelligent Management Center (iMC), versiones anteriores a 7.3 E0713. Descripción HPE ha publicado una vulnerabilidad de severidad crítica que, en caso de ser…"
-    },
-    {
-     "title": "Desbordamiento de memoria en NetScaler ADC y NetScaler Gateway de Citrix",
-     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/desbordamiento-de-memoria-en-netscaler-adc-y-netscaler-gateway-de-citrix",
-     "date": "2026-10-09T07:23:25+00:00",
-     "summary": "Desbordamiento de memoria en NetScaler ADC y NetScaler Gateway de Citrix Vie, 09/10/2026 - 09:23 Aviso Recursos Afectados Las siguientes versiones de NetScaler ADC y NetScaler Gateway configuradas como proveedor de identidad SAML: 14.1-73.37 hasta 14.1-73.41, ambas incluidas;…"
     }
    ]
   },
