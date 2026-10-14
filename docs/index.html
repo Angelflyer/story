@@ -145,6 +145,33 @@ main section { padding-block: 8px 56px; }
 .evw .t { height: 11px; background: var(--sunk); border-radius: 3px; overflow: hidden; }
 .evw .t span { display: block; height: 100%; border-radius: 0 4px 4px 0; }
 .evw .b b { font: 500 .75rem var(--f-mono); font-variant-numeric: tabular-nums; }
+.quad-wrap { overflow-x: auto; margin-top: 14px; }
+.quad { display: grid; grid-template-columns: 34px repeat(7, minmax(64px, 1fr)); grid-template-rows: repeat(7, minmax(52px, auto)) 34px; min-width: 560px; position: relative; }
+.quad .cell { border-right: 1px dashed var(--line); border-bottom: 1px dashed var(--line); padding: 5px; display: flex; flex-wrap: wrap; gap: 4px; align-content: flex-start; }
+.quad .cell.hi-x.hi-y { background: color-mix(in srgb, var(--s1) 45%, transparent); }
+.quad .cell.hi-x:not(.hi-y), .quad .cell.hi-y:not(.hi-x) { background: color-mix(in srgb, var(--s0) 55%, transparent); }
+.quad .fl { all: unset; cursor: pointer; line-height: 0; border-radius: 2px; }
+.quad .fl:hover .flag, .quad .fl:focus-visible .flag { box-shadow: 0 0 0 2px var(--accent); }
+.quad .fl:focus-visible { outline: none; }
+.quad .ax { font: .7rem var(--f-mono); color: var(--muted); display: flex; align-items: center; justify-content: center; }
+.quad .ax.y { justify-content: flex-end; padding-right: 8px; }
+.quad .qlab { position: absolute; font: 600 .68rem/1.2 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--accent); pointer-events: none; }
+.quad-axis { display: flex; justify-content: space-between; font-size: .75rem; color: var(--muted); margin: 6px 0 0 34px; min-width: 526px; }
+.spread { display: grid; gap: 4px; margin-top: 14px; }
+.spread .srow { display: grid; grid-template-columns: minmax(110px, 190px) minmax(0, 1fr); gap: 12px; align-items: end; border-bottom: 1px solid var(--line); padding: 8px 0 6px; }
+.spread .slab { font-size: .82rem; padding-bottom: 2px; }
+.spread .slab small { display: block; color: var(--muted); font: .7rem var(--f-mono); }
+.spread .strack { position: relative; }
+.spread .fl { all: unset; position: absolute; cursor: pointer; line-height: 0; transform: translateX(-50%); }
+.spread .fl:hover .flag, .spread .fl:focus-visible .flag { box-shadow: 0 0 0 2px var(--accent); }
+.spread .med { position: absolute; bottom: -6px; top: -4px; width: 0; border-left: 2px solid var(--ink); opacity: .55; }
+.spread .ticks { position: relative; height: 16px; font: .68rem var(--f-mono); color: var(--muted); }
+.spread .ticks span { position: absolute; transform: translateX(-50%); }
+.gaps { display: grid; gap: 8px; margin-top: 12px; }
+.gaps .g { display: grid; grid-template-columns: minmax(130px, 260px) minmax(0, 1fr); gap: 12px; align-items: center; font-size: .84rem; }
+.gaps .stack { display: flex; height: 22px; border-radius: 3px; overflow: hidden; gap: 2px; }
+.gaps .stack span:first-child { box-shadow: inset 0 0 0 1px var(--line); }
+.gaps .stack span { display: flex; align-items: center; justify-content: center; font: 600 .7rem var(--f-mono); min-width: 0; overflow: hidden; }
 .matrix td.m { text-align: center; padding: 6px 4px; }
 .matrix th.m { text-align: center; padding-inline: 4px; }
 .mdot { display: inline-block; border-radius: 50%; background: var(--s4); vertical-align: middle; }
@@ -239,7 +266,8 @@ dialog::backdrop { background: rgb(8 12 20 / .55); }
 .ev p { margin: 3px 0 0; font-size: .82rem; color: var(--muted); }
 .stat { display: flex; gap: 12px; align-items: baseline; padding: 6px 0; border-bottom: 1px solid var(--line); }
 .stat b { font: 700 1.3rem/1 var(--f-display); font-stretch: 75%; min-width: 110px; }
-.method { max-width: 72ch; }
+.method > * { max-width: 72ch; }
+.method h2 { margin-top: 28px; }
 .method li { margin-bottom: 6px; }
 .foot { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 2fr); gap: 24px 40px; }
 @media (max-width: 760px) { .foot { grid-template-columns: 1fr; } }
@@ -272,7 +300,7 @@ footer .wrap { display: grid; gap: 8px; }
   <div class="wrap">
     <span class="eyebrow">A field guide to national incident response teams</span>
     <h1>Who protects each country's internet, and <em>what they give the public</em>.</h1>
-    <p class="lede">Every EU member state's national CSIRT, plus 18 leading teams from the UK, US, Asia-Pacific and beyond, rated on alerts, feeds, blocklists, reporting channels, open-source tools and notifications. Ratings come from a blind, evidence-based review. Live posts refresh every six hours.</p>
+    <p class="lede">Every EU member state's national CSIRT, plus 18 leading teams from the UK, US, Asia-Pacific and beyond, rated on alerts, feeds, blocklists, reporting channels, open-source tools and notifications. Every rating is backed by cited public evidence. Live posts refresh every six hours.</p>
     <div class="kpis" id="kpis"></div>
   </div>
 </section>
@@ -300,7 +328,7 @@ footer .wrap { display: grid; gap: 8px; }
   <section id="charts" data-panel="charts" hidden>
     <div class="wrap">
       <div class="section-head">
-        <div><h2>Charts</h2><p>Put up to three teams side by side, see how the blind re-rating moved each score, compare the EU with the rest of the world, and see which kinds of service each team offers. Select any team name to open its profile.</p></div>
+        <div><h2>Charts</h2><p>Put teams side by side, see who each team mainly serves, how scores spread across regions, where national teams fall short, and which kinds of service each one offers. Select any flag or team name to open its profile.</p></div>
       </div>
       <div class="panel">
         <div class="eyebrow">Head to head</div>
@@ -314,10 +342,22 @@ footer .wrap { display: grid; gap: 8px; }
         </div>
       </div>
       <div class="panel" style="margin-top:24px">
-        <div class="eyebrow">Before and after the blind re-rating</div>
-        <h3 style="margin-top:6px">How each team's score moved</h3>
-        <div class="legend" style="margin-top:8px"><span><i class="sw" style="background:var(--surface);box-shadow:inset 0 0 0 2px var(--muted);border-radius:50%"></i>First editorial score</span><span><i class="sw" style="background:var(--c1);border-radius:50%"></i>Independent score</span></div>
-        <div class="rank fresh" id="dumbbell" style="margin-top:10px"></div>
+        <div class="eyebrow">Who they serve</div>
+        <h3 style="margin-top:6px">Citizen-facing versus defender-facing services</h3>
+        <p class="muted" style="font-size:.82rem;margin:6px 0 0;max-width:80ch">Across: alerts, reporting channels and protective blocking, the things the public uses. Up: feeds, open-source tools and network-owner notifications, the things security teams use. Each flag is a team; select one for its profile.</p>
+        <div class="quad-wrap"><div class="quad" id="quad"></div></div>
+      </div>
+      <div class="panel" style="margin-top:24px">
+        <div class="eyebrow">Spread</div>
+        <h3 style="margin-top:6px">Every team's score, grouped by region</h3>
+        <p class="muted" style="font-size:.82rem;margin:6px 0 0">Each flag is one team. The thin line marks the region's median.</p>
+        <div id="spread" class="spread"></div>
+      </div>
+      <div class="panel" style="margin-top:24px">
+        <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center"><div class="eyebrow">Gaps</div><div role="group" aria-label="Teams" style="display:flex;gap:4px"><button class="chip" data-gaps="eu" aria-pressed="true">EU national</button><button class="chip" data-gaps="intl" aria-pressed="false">Non-EU national</button></div></div>
+        <h3 style="margin-top:6px">Where national teams fall short</h3>
+        <div class="legend" id="gaps-legend" style="margin-top:8px"></div>
+        <div id="gaps" class="gaps"></div>
       </div>
       <div class="panel" style="margin-top:24px">
         <div class="eyebrow">EU vs the world</div>
@@ -389,14 +429,16 @@ footer .wrap { display: grid; gap: 8px; }
   <section id="method" data-panel="method" hidden>
     <div class="wrap method">
       <h2>Method</h2>
-      <p id="scale"></p>
-      <ol id="rubric"></ol>
-      <h3 style="margin-top:20px">How the scores were produced</h3>
-      <p id="rating-note"></p>
-      <p>The blind re-rating agreed with the first editorial scores on 295 of 416 individual dimension scores (71%), with a rank correlation of 0.62 and an average absolute change of 10 points. CERT Polska scored 100 in both rounds and was the only team to reach the maximum in either. The rubric itself was written by the same author as the first round, so it can still favour some kinds of service over others. The Charts tab shows each team's before and after scores.</p>
-      <p>Each EU member state is represented by its national CSIRT under the NIS2 Directive. Where a country has separate government or sector teams, they appear under <em>Related teams</em> in the profile, and Spain's CCN-CERT is scored separately because it offers its own public services. EU-level bodies (CERT-EU, ENISA) and free community services (Shadowserver, abuse.ch, DIVD, MISP) are scored on the same rubric for reference. For international comparison, 18 national teams outside the EU are included: the UK, Switzerland, Norway, Ukraine, the US (CISA and CERT/CC), Canada, Brazil, Japan, South Korea, Singapore, India, China, Taiwan, Hong Kong, Australia, New Zealand and Israel.</p>
-      <p>All evidence is public information found through web search in October 2026: official pages, RFC 2350 profiles, annual reports and reputable press. Each profile lists the evidence and sources behind every dimension score. These are assessments for orientation, not audits. Check each team's site before relying on a detail, and report corrections through the repository.</p>
-      <p>The feed panel is filled by a scheduled GitHub Action that tries each team's known feed URLs, then auto-discovers feeds on the team's homepage. Teams without a working public feed are listed as such.</p>
+      <h3 style="margin-top:18px">What is rated</h3>
+      <p>Each team is rated on eight things it offers the public: alerts and advisories, machine-readable feeds, protective blocking, reporting channels, open-source tools, proactive notification of network owners, published statistics and reports, and how usable it is in English. Each area scores 0 (nothing found), 1 (limited, occasional or only for the team's own constituency) or 2 (public and mature). The overall score is the total, scaled to 100.</p>
+      <h3 style="margin-top:18px">How ratings were made</h3>
+      <p>Assessors rated each team only from public evidence found through web search in October 2026: official pages, RFC 2350 profiles, annual reports and reputable press. Every area score in a team's profile comes with a one-line reason, source links and a confidence level. Where no evidence turned up, the score is lower, so a low score can mean the service is hard to find rather than missing. Teams marked low confidence are the ones with the thinnest evidence.</p>
+      <h3 style="margin-top:18px">Which teams are included</h3>
+      <p>Each EU member state is represented by its national CSIRT under the NIS2 Directive. Separate government or sector teams appear under <em>Related teams</em> in the profile; Spain's CCN-CERT is rated on its own because it runs its own public services. EU-level bodies (CERT-EU, ENISA) and free community services (Shadowserver, abuse.ch, DIVD, MISP) are rated the same way for reference. For international comparison, 18 national teams outside the EU are included: the UK, Switzerland, Norway, Ukraine, the US (CISA and CERT/CC), Canada, Brazil, Japan, South Korea, Singapore, India, China, Taiwan, Hong Kong, Australia, New Zealand and Israel.</p>
+      <h3 style="margin-top:18px">Limits</h3>
+      <p>These ratings measure what a team visibly offers, not how well it handles incidents behind the scenes. Teams that mainly serve government or critical infrastructure can score lower without being weaker. Check a team's own site before relying on a detail, and send corrections through the repository.</p>
+      <h3 style="margin-top:18px">Live posts</h3>
+      <p>A scheduled job checks every team's feed every six hours. It tries known feed addresses, then feeds advertised on the team's site, then common feed paths, and finally reads new links from the team's news page. Teams whose sites refuse automated readers are marked as blocked.</p>
     </div>
   </section>
 </main>
@@ -428,7 +470,6 @@ footer .wrap { display: grid; gap: 8px; }
   const badge = cc => `<span class="badge">${flag(cc)}<span class="cc">${cc}</span></span>`;
   const SERIES = ["var(--c1)", "var(--c2)", "var(--c3)"];
   let sortKey = "score", sortDir = -1, kindFilter = new Set(Object.keys(KINDS));
-  const score1 = c => c.scores_v1 ? Math.round(DIMS.reduce((a, k) => a + (c.scores_v1[k] || 0), 0) / (DIMS.length * 2) * 100) : null;
   const score = c => Math.round(DIMS.reduce((a, k) => a + (c.scores[k] || 0), 0) / (DIMS.length * 2) * 100);
   const step = s => Math.min(5, Math.floor(s / 100 * 6));
   const byId = id => D.certs.find(c => c.id === id);
@@ -537,7 +578,7 @@ footer .wrap { display: grid; gap: 8px; }
     const opts = sel => D.certs.map(c => `<option value="${c.id}"${c.id === sel ? " selected" : ""}>${c.cc} · ${esc(c.name)}</option>`).join("");
     $("#pickers").innerHTML = picks.map((p, i) => `<label class="picker"><i class="sw" style="background:${SERIES[i]};width:14px;height:14px;border-radius:${["50%", "2px", "0"][i]}"></i><select data-pick="${i}" aria-label="Team ${i + 1}">${i ? '<option value="">None</option>' : ""}${opts(p)}</select></label>`).join("");
     radar();
-    freshness(); dumbbell(); euVsWorld(); matrix();
+    freshness(); quadrant(); spread(); gaps(); euVsWorld(); matrix();
   }
   function radar() {
     const sel = picks.map(id => id && byId(id)).filter(Boolean);
@@ -562,9 +603,54 @@ footer .wrap { display: grid; gap: 8px; }
     $("#radar").innerHTML = g;
     $("#h2htable").innerHTML = `<thead><tr><th>Dimension</th>${sel.map((c, i) => `<th style="text-align:center"><i class="sw" style="background:${SERIES[picks.indexOf(c.id)]}"></i>${c.cc}</th>`).join("")}</tr></thead><tbody>${DIMS.map(k => `<tr style="cursor:default"><td>${esc(SHORT[k])}</td>${sel.map(c => `<td class="dim">${pip(c.scores[k])}</td>`).join("")}</tr>`).join("")}<tr style="cursor:default"><td><strong>Score</strong></td>${sel.map(c => `<td style="text-align:center"><span class="score">${score(c)}</span></td>`).join("")}</tr></tbody>`;
   }
-  function dumbbell() {
-    const rows = [...D.certs].sort((a, b) => score(b) - score(a) || score1(b) - score1(a));
-    $("#dumbbell").innerHTML = rows.map(c => { const a = score1(c), b = score(c), lo = Math.min(a, b), hi = Math.max(a, b); return `<button class="row" data-id="${c.id}" title="${esc(c.name)}: ${a} before, ${b} after"><span class="nm">${flag(c.cc)}<span style="overflow:hidden;text-overflow:ellipsis">${esc(c.name)}</span></span><span class="track"><span class="stem" style="left:${lo}%;width:${hi - lo}%;background:var(--line)"></span><span class="dot" style="left:${a}%;background:var(--surface);box-shadow:inset 0 0 0 2px var(--muted),0 0 0 2px var(--surface)"></span><span class="dot" style="left:${b}%;background:var(--c1)"></span></span><b>${b - a > 0 ? "+" : ""}${b - a}</b></button>`; }).join("") + `<div class="axisrow"><span></span><span class="ticks">${[0, 25, 50, 75, 100].map(t => `<span style="left:${t}%">${t}</span>`).join("")}</span><span></span></div>`;
+  const fit = c => ({ pub: c.scores.adv + c.scores.report + c.scores.block, tech: c.scores.feeds + c.scores.oss + c.scores.proactive });
+  function quadrant() {
+    const cells = {};
+    D.certs.forEach(c => { const f = fit(c); (cells[f.pub + "," + f.tech] ||= []).push(c); });
+    let h = "";
+    for (let y = 6; y >= 0; y--) {
+      h += `<div class="ax y">${y}</div>`;
+      for (let x = 0; x <= 6; x++) {
+        const list = (cells[x + "," + y] || []).sort((a, b) => score(b) - score(a));
+        h += `<div class="cell${x >= 4 ? " hi-x" : ""}${y >= 4 ? " hi-y" : ""}">${list.map(c => `<button class="fl" data-id="${c.id}" title="${esc(c.name)} (${esc(c.country)}): citizen-facing ${x}/6, defender-facing ${y}/6">${flag(c.cc)}</button>`).join("")}</div>`;
+      }
+    }
+    h += '<div></div>' + [0, 1, 2, 3, 4, 5, 6].map(x => `<div class="ax">${x}</div>`).join("");
+    h += '<span class="qlab" style="right:8px;top:6px">All-rounders</span><span class="qlab" style="left:44px;top:6px">Defender-focused</span><span class="qlab" style="right:8px;bottom:42px">Citizen-focused</span><span class="qlab" style="left:44px;bottom:42px">Limited public offer</span>';
+    $("#quad").innerHTML = h;
+    if (!$(".quad-axis")) $("#quad").insertAdjacentHTML("afterend", '<div class="quad-axis"><span>← fewer citizen-facing services</span><span>more citizen-facing services →</span></div>');
+  }
+  const GROUPS = [
+    ["EU national & government", c => c.kind === "national" || c.kind === "government"],
+    ["Europe, non-EU", c => c.kind === "international" && c.region === "Europe (non-EU)"],
+    ["Americas", c => c.region === "Americas"],
+    ["Asia-Pacific", c => c.region === "Asia-Pacific"],
+    ["Middle East", c => c.region === "Middle East"],
+    ["EU-level & community", c => c.kind === "eu" || c.kind === "community"]
+  ];
+  function spread() {
+    const STEP = 17;
+    const rows = GROUPS.map(([name, test]) => {
+      const list = D.certs.filter(test).sort((a, b) => score(a) - score(b));
+      const stacks = {};
+      list.forEach(c => (stacks[score(c)] ||= []).push(c));
+      const tall = Math.max(1, ...Object.values(stacks).map(v => v.length));
+      const sc = list.map(score).sort((a, b) => a - b);
+      const med = sc.length % 2 ? sc[(sc.length - 1) / 2] : (sc[sc.length / 2 - 1] + sc[sc.length / 2]) / 2;
+      const flags = Object.entries(stacks).map(([v, cs]) => cs.map((c, i) => `<button class="fl" data-id="${c.id}" style="left:${v}%;bottom:${i * STEP}px" title="${esc(c.name)} (${esc(c.country)}): ${v}/100">${flag(c.cc)}</button>`).join("")).join("");
+      return `<div class="srow"><div class="slab">${name}<small>${list.length} team${list.length === 1 ? "" : "s"} · median ${Math.round(med)}</small></div><div class="strack" style="height:${tall * STEP + 2}px"><span class="med" style="left:${med}%"></span>${flags}</div></div>`;
+    }).join("");
+    $("#spread").innerHTML = rows + `<div class="srow" style="border:0;padding-top:0"><span></span><div class="ticks">${[0, 25, 50, 75, 100].map(t => `<span style="left:${t}%">${t}</span>`).join("")}</div></div>`;
+  }
+  let gapsScope = "eu";
+  function gaps() {
+    const list = D.certs.filter(c => gapsScope === "eu" ? c.kind === "national" : c.kind === "international");
+    const n = list.length;
+    document.querySelectorAll("[data-gaps]").forEach(b => b.setAttribute("aria-pressed", b.dataset.gaps === gapsScope));
+    const COL = [["var(--s0)", "var(--ink)", "Nothing found"], ["var(--s2)", "var(--ink)", "Limited"], ["var(--s4)", "var(--accent-ink)", "Public and mature"]];
+    $("#gaps-legend").innerHTML = COL.map(([bg, , t]) => `<span><i class="sw" style="background:${bg};box-shadow:inset 0 0 0 1px var(--line)"></i>${t}</span>`).join("") + `<span>· ${n} teams</span>`;
+    const rows = DIMS.map(k => { const cnt = [0, 1, 2].map(v => list.filter(c => c.scores[k] === v).length); return { k, cnt }; }).sort((a, b) => (b.cnt[0] * 2 + b.cnt[1]) - (a.cnt[0] * 2 + a.cnt[1]));
+    $("#gaps").innerHTML = rows.map(({ k, cnt }) => `<div class="g"><span>${esc(D.meta.rubric[k])}</span><div class="stack" role="img" aria-label="${esc(D.meta.rubric[k])}: ${cnt[0]} nothing found, ${cnt[1]} limited, ${cnt[2]} public">${cnt.map((v, i) => v ? `<span style="flex:${v};background:${COL[i][0]};color:${COL[i][1]}" title="${COL[i][2]}: ${v} of ${n}">${v}</span>` : "").join("")}</div></div>`).join("");
   }
   function euVsWorld() {
     const eu = D.certs.filter(c => c.kind === "national"), w = D.certs.filter(c => c.kind === "international");
@@ -608,7 +694,7 @@ footer .wrap { display: grid; gap: 8px; }
     $("#table thead").innerHTML = head;
     const q = $("#q").value.trim().toLowerCase();
     const rows = D.certs.filter(c => kindFilter.has(c.kind)).filter(c => !q || [c.name, c.full, c.country, c.cc, c.about, ...c.services.map(s => s.name + " " + s.desc)].join(" ").toLowerCase().includes(q));
-    const val = c => sortKey === "score" ? score(c) : sortKey === "v1" ? score1(c) : sortKey === "name" ? c.name.toLowerCase() : sortKey === "cc" ? c.country : c.scores[sortKey];
+    const val = c => sortKey === "score" ? score(c) : sortKey === "name" ? c.name.toLowerCase() : sortKey === "cc" ? c.country : c.scores[sortKey];
     rows.sort((a, b) => (val(a) > val(b) ? 1 : val(a) < val(b) ? -1 : score(b) - score(a)) * (sortKey === "name" || sortKey === "cc" ? -sortDir : sortDir));
     $("#table tbody").innerHTML = rows.map(c => {
       const s = score(c), t = L.teams[c.id];
@@ -659,9 +745,6 @@ footer .wrap { display: grid; gap: 8px; }
   }
 
   function method() {
-    $("#scale").textContent = D.meta.scale;
-    $("#rubric").innerHTML = DIMS.map(k => `<li><strong>${esc(D.meta.rubric[k])}</strong><br><span class="muted">${esc(D.meta.levels?.[k] || "")}</span></li>`).join("");
-    $("#rating-note").textContent = D.meta.rating || "";
   }
 
   function open(id) {
@@ -674,8 +757,8 @@ footer .wrap { display: grid; gap: 8px; }
     <div class="dlg-body">
       <p style="margin:0">${esc(c.about)}</p>
       <dl class="facts"><div><dt>Hosted by</dt><dd>${esc(c.host)}</dd></div><div><dt>Serves</dt><dd>${esc(c.constituency)}</dd></div><div><dt>Languages</dt><dd>${c.langs.join(" · ")}</dd></div><div><dt>Website</dt><dd><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.url.replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a></dd></div></dl>
-      <div><div class="cat-head"><h3>Rating evidence</h3><span class="n mono">independent · ${esc(c.evidence?.confidence || "—")} confidence · before ${score1(c) ?? "—"}</span></div>
-        <div class="evid">${DIMS.map(k => `<div class="ev"><div class="fp"><span><strong>${esc(D.meta.rubric[k])}</strong></span><span class="cells"><i class="${c.scores[k] >= 1 ? "on" : ""}"></i><i class="${c.scores[k] >= 2 ? "on" : ""}"></i></span></div><p>${esc(c.evidence?.why?.[k] || "")}${c.scores_v1 && c.scores_v1[k] !== c.scores[k] ? ` <span class="mono" style="color:var(--muted)">(before: ${c.scores_v1[k]})</span>` : ""}</p></div>`).join("")}</div>
+      <div><div class="cat-head"><h3>Rating evidence</h3><span class="n mono">${esc(c.evidence?.confidence || "—")} confidence</span></div>
+        <div class="evid">${DIMS.map(k => `<div class="ev"><div class="fp"><span><strong>${esc(D.meta.rubric[k])}</strong></span><span class="cells"><i class="${c.scores[k] >= 1 ? "on" : ""}"></i><i class="${c.scores[k] >= 2 ? "on" : ""}"></i></span></div><p>${esc(c.evidence?.why?.[k] || "")}</p></div>`).join("")}</div>
         ${c.evidence?.sources?.length ? `<p class="muted" style="font-size:.8rem;margin:10px 0 0">Sources: ${c.evidence.sources.map((u, i) => `<a href="${esc(u)}" target="_blank" rel="noopener">[${i + 1}]</a>`).join(" ")}</p>` : ""}</div>
       ${Object.entries(groups).map(([k, ss]) => `<div><div class="cat-head"><h3>${esc(D.meta.categories[k])}</h3></div>${ss.map(s => `<div class="svc" style="grid-template-columns:1fr"><div class="what">${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>` : `<strong>${esc(s.name)}</strong>`}<p>${esc(s.desc)}</p></div></div>`).join("")}</div>`).join("")}
       ${c.stats.length ? `<div><div class="cat-head"><h3>Numbers</h3></div>${c.stats.map(s => `<div class="stat"><b>${esc(s.value)}</b><span>${esc(s.label)}${s.note ? `<br><span class="muted" style="font-size:.8rem">${esc(s.note)}</span>` : ""}</span></div>`).join("")}</div>` : ""}
@@ -697,6 +780,7 @@ footer .wrap { display: grid; gap: 8px; }
     if (e.target.closest("[data-home]")) { e.preventDefault(); showTab("overview"); scrollTo({ top: 0 }); return; }
     const go = e.target.closest("[data-goto]"); if (go) { e.preventDefault(); showTab(go.dataset.goto); scrollTo({ top: 0 }); return; }
     const sc = e.target.closest("[data-scope]"); if (sc) { mapScope = sc.dataset.scope; drawMap(); return; }
+    const gp = e.target.closest("[data-gaps]"); if (gp) { gapsScope = gp.dataset.gaps; gaps(); return; }
     const mt = e.target.closest("[data-metric]"); if (mt) { metric = mt.dataset.metric; drawMetrics(); drawMap(); return; }
     const tab = e.target.closest("[data-tab]"); if (tab) { showTab(tab.dataset.tab); return; }
     if (e.target.closest("[data-close]")) { $("#dlg").close(); return; }
