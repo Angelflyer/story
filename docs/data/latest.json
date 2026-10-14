@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T08:00:00+00:00",
+ "updated": "2026-10-14T08:05:45+00:00",
  "teams": {
   "cert-pl": {
    "status": "ok",
@@ -754,6 +754,12 @@
    "via": "known",
    "items": [
     {
+     "title": "Risolte vulnerabilità in Citrix XenServer",
+     "link": "https://www.acn.gov.it/portale/w/risolte-vulnerabilita-in-citrix-xenserver-1",
+     "date": "2026-10-14T07:53:37+00:00",
+     "summary": "Risolte 4 vulnerabilità con gravità \"alta\" in XenServer, hypervisor basato su Xen che permette di creare, eseguire e gestire macchine virtuali su un server fisico. Tali vulnerabilità, qualora sfruttate, potrebbero consentire ad utenti malintenzionati presenti all'interno di…"
+    },
+    {
      "title": "Risolte vulnerabilità in Google Chrome",
      "link": "https://www.acn.gov.it/portale/w/risolte-vulnerabilita-in-google-chrome-79",
      "date": "2026-10-14T07:09:51+00:00",
@@ -794,12 +800,6 @@
      "link": "https://www.acn.gov.it/portale/w/aggiornamenti-per-prodotti-siemens-28",
      "date": "2026-10-13T11:11:09+00:00",
      "summary": "Siemens ha rilasciato aggiornamenti di sicurezza per sanare molteplici vulnerabilità nei propri prodotti, di cui 4 con gravità “critica” e 14 con gravità “alta”."
-    },
-    {
-     "title": "Misure urgenti di verifica e mitigazione per operatori della distribuzione alimentare e della filiera del freddo",
-     "link": "https://www.acn.gov.it/portale/w/misure-urgenti-di-verifica-e-mitigazione-per-operatori-della-distribuzione-alimentare-e-della-filiera-del-freddo",
-     "date": "2026-10-13T10:44:39+00:00",
-     "summary": "L’Agenzia per la Cybersicurezza Nazionale richiama l’attenzione delle organizzazioni operanti nei settori della grande distribuzione organizzata (GDO), della logistica alimentare, della refrigerazione industriale e dei servizi di manutenzione connessi, alla luce del recente…"
     }
    ]
   },
