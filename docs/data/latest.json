@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13T22:26:02+00:00",
+ "updated": "2026-10-14T05:05:56+00:00",
  "teams": {
   "cert-pl": {
    "status": "ok",
@@ -1689,6 +1689,12 @@
      "summary": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands."
     },
     {
+     "title": "CVE-2026-96951: Microsoft Windows added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-96951",
+     "date": "2026-10-13T00:00:00+00:00",
+     "summary": "Microsoft Windows Shell contains a command injection vulnerability that allows an unauthorized attacker to bypass a security feature over a network."
+    },
+    {
      "title": "CVE-2015-5477: ISC BIND added to KEV",
      "link": "https://nvd.nist.gov/vuln/detail/CVE-2015-5477",
      "date": "2026-10-08T00:00:00+00:00",
@@ -1723,12 +1729,6 @@
      "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-88779",
      "date": "2026-10-04T00:00:00+00:00",
      "summary": "Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway) contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for a denial of service."
-    },
-    {
-     "title": "CVE-2026-102490: Zammad GmbH Zammad added to KEV",
-     "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-102490",
-     "date": "2026-10-02T00:00:00+00:00",
-     "summary": "Zammad GmbH Zammad contains an improper privilege management vulnerability that can allow the local zammad user to escalate privileges to root. This vulnerability can be chained with CVE-2026-102489."
     }
    ]
   },
@@ -2013,6 +2013,24 @@
    "via": "discovered",
    "items": [
     {
+     "title": "Critical Vulnerability in GitLab Community Edition and Enterprise Edition",
+     "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-141",
+     "date": "2026-10-13T16:00:00+00:00",
+     "summary": "Attackers can exploit a critical vulnerability in GitLab Community Edition and Enterprise Edition to perform remote code execution without authentication. Patch immediately."
+    },
+    {
+     "title": "Security Bulletin 14 Oct 2026 [PDF, 2MB]",
+     "link": "https://isomer-user-content.by.gov.sg/36/41004bcb-4c74-4ab2-a1be-a28de8ee59c1/14_Oct_2026.pdf",
+     "date": "2026-10-13T16:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Advisory on Quantum-Safe Migration for Organisations",
+     "link": "https://www.csa.gov.sg/alerts-and-advisories/advisories/advisory-on-quantum-safe-migration-for-organisations",
+     "date": "2026-10-13T16:00:00+00:00",
+     "summary": "The quantum threat could undermine the cryptography that protects digital information today. This advisory provides organisations with key milestones and practical steps to assess their quantum risk, develop a migration plan and prepare their systems for quantum-safe…"
+    },
+    {
      "title": "Critical Vulnerability in Citrix NetScaler ADC and NetScaler Gateway",
      "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-140",
      "date": "2026-10-11T16:00:00+00:00",
@@ -2041,24 +2059,6 @@
      "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-136",
      "date": "2026-10-07T16:00:00+00:00",
      "summary": "A vulnerability has been discovered in the records management application \"SQLView KRIS\". The product owner has rolled out a fix for the reported vulnerability. Special thanks to the researcher and SQLView for coordinating through CSA's Responsible Vulnerability Disclosure…"
-    },
-    {
-     "title": "Creative Sound Blaster Katana – Multiple Vulnerabilities in Firmware Verification and Bluetooth Authentication",
-     "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-134",
-     "date": "2026-10-06T16:00:00+00:00",
-     "summary": "Multiple vulnerabilities have been discovered in Creative Sound Blaster Katana products. Creative Labs has released firmware updates to address these vulnerabilities. Special thanks to the informer and Creative Labs for coordinating through CSA's Responsible Vulnerability…"
-    },
-    {
-     "title": "Critical Vulnerability in Atlassian Data Center Products",
-     "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-135",
-     "date": "2026-10-06T16:00:00+00:00",
-     "summary": "Attackers can exploit a critical vulnerability in multiple Atlassian Data Center products to gain unauthorised access to sensitive files without authentication. Patch immediately."
-    },
-    {
-     "title": "Security Bulletin 7 Oct 2026 [PDF, 1859KB]",
-     "link": "https://isomer-user-content.by.gov.sg/36/157c884e-52d7-4956-932a-bec78f58f89f/Security%20Bulletin%2007%20Oct%202026%20[PDF,%201859KB].pdf",
-     "date": "2026-10-06T16:00:00+00:00",
-     "summary": ""
     }
    ]
   },
@@ -2153,6 +2153,42 @@
    "via": "known",
    "items": [
     {
+     "title": "Adobe Monthly Security Update (October 2026)",
+     "link": "https://www.hkcert.org/security-bulletin/adobe-monthly-security-update-october-2026",
+     "date": "2026-10-14T03:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Microsoft Monthly Security Update (October 2026)",
+     "link": "https://www.hkcert.org/security-bulletin/microsoft-monthly-security-update-october-2026",
+     "date": "2026-10-14T03:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "MongoDB Multiple Vulnerabilities",
+     "link": "https://www.hkcert.org/security-bulletin/mongodb-multiple-vulnerabilities_20261014",
+     "date": "2026-10-14T03:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Google Chrome Multiple Vulnerabilities",
+     "link": "https://www.hkcert.org/security-bulletin/google-chrome-multiple-vulnerabilities_20261014",
+     "date": "2026-10-14T02:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Fortinet Products Multiple Vulnerabilities",
+     "link": "https://www.hkcert.org/security-bulletin/fortinet-products-multiple-vulnerabilities_20261014",
+     "date": "2026-10-14T01:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Ivanti Connect Secure Remote Code Execution Vulnerability",
+     "link": "https://www.hkcert.org/security-bulletin/ivanti-connect-secure-remote-code-execution-vulnerability_20261014",
+     "date": "2026-10-14T01:00:00+00:00",
+     "summary": ""
+    },
+    {
      "title": "Samsung Products Multiple Vulnerabilities",
      "link": "https://www.hkcert.org/security-bulletin/samsung-products-multiple-vulnerabilities_20261013",
      "date": "2026-10-13T03:00:00+00:00",
@@ -2162,42 +2198,6 @@
      "title": "GitLab Multiple Vulnerabilities",
      "link": "https://www.hkcert.org/security-bulletin/gitlab-multiple-vulnerabilities_20261013",
      "date": "2026-10-13T01:00:00+00:00",
-     "summary": ""
-    },
-    {
-     "title": "Apache HTTP Server Multiple Vulnerabilities",
-     "link": "https://www.hkcert.org/security-bulletin/apache-http-server-multiple-vulnerabilities_20261009",
-     "date": "2026-10-09T01:00:00+00:00",
-     "summary": ""
-    },
-    {
-     "title": "ONLYOFFICE Docs Remote Code Execution Vulnerability",
-     "link": "https://www.hkcert.org/security-bulletin/onlyoffice-docs-remote-code-execution-vulnerability_20261009",
-     "date": "2026-10-09T01:00:00+00:00",
-     "summary": ""
-    },
-    {
-     "title": "Splunk Products Multiple Vulnerabilities",
-     "link": "https://www.hkcert.org/security-bulletin/splunk-products-multiple-vulnerabilities_20261009",
-     "date": "2026-10-09T01:00:00+00:00",
-     "summary": ""
-    },
-    {
-     "title": "Cisco Products Multiple Vulnerabilities",
-     "link": "https://www.hkcert.org/security-bulletin/cisco-products-multiple-vulnerabilities_20261008",
-     "date": "2026-10-08T03:00:00+00:00",
-     "summary": ""
-    },
-    {
-     "title": "GitHub Enterprise Server Multiple Vulnerabilities",
-     "link": "https://www.hkcert.org/security-bulletin/github-enterprise-server-multiple-vulnerabilities_20261008",
-     "date": "2026-10-08T03:00:00+00:00",
-     "summary": ""
-    },
-    {
-     "title": "IBM WebSphere Products Multiple Vulnerabilities",
-     "link": "https://www.hkcert.org/security-bulletin/ibm-websphere-products-multiple-vulnerabilities_20261008",
-     "date": "2026-10-08T03:00:00+00:00",
      "summary": ""
     }
    ]
