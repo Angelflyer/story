@@ -26,4 +26,4 @@ Import `docs/data/feeds.opml` into an RSS reader that can send email digests, or
 
 ## Scoring
 
-Eight dimensions are each scored 0 (none found), 1 (limited or constituency-only) or 2 (public and mature): alerts, machine-readable feeds, protective blocking, reporting channels, open-source tools, proactive notifications, transparency and English availability. The total is scaled to 100. Scores are editorial assessments based on public information as of October 2026.
+Each team is rated on eight areas: alerts and advisories, machine-readable feeds, protective blocking, reporting channels, open-source tools, proactive notification of network owners, published statistics and reports, and English availability. Each area scores 0 (nothing found), 1 (limited or constituency-only) or 2 (public and mature), and the total is scaled to 100. Every score is backed by public evidence found in October 2026; the reason, sources and a confidence level for each area are stored in `certs.json` under `evidence` and shown in each team's profile. Where the site's own feed collector shows a public RSS feed or regular alerts, the scores reflect that.
