@@ -12,7 +12,7 @@
       "transparency": "Published statistics and threat reports",
       "english": "Usable in English"
     },
-    "scale": "Each dimension is scored 0, 1 or 2 against written definitions (see below). The overall score is the sum of eight dimensions, scaled to 100. Where an assessor found no evidence, it scored lower, so a low score can mean missing evidence rather than a missing service.",
+    "scale": "Each area scores 0 (nothing found), 1 (limited or constituency-only) or 2 (public and mature). The overall score is the total of eight areas, scaled to 100.",
     "categories": {
       "alerts": "Alerts & advisories",
       "feeds": "Feeds & APIs",
@@ -23,17 +23,6 @@
       "newsletter": "Newsletters & digests",
       "reports": "Threat reports & statistics",
       "awareness": "Awareness & help for citizens"
-    },
-    "rating": "Scores come from a blind re-rating on 2026-10-13. Four separate assessor agents, with no access to the earlier scores, descriptions or conversation, each rated a random quarter of the 52 teams. They used only web search evidence and stricter written definitions for each level. The first editorial scores are kept for comparison.",
-    "levels": {
-      "adv": "0 none public · 1 occasional, sparse or constituency-only · 2 regular public advisories (several per month)",
-      "feeds": "0 none · 1 news RSS only, or data limited to members · 2 public machine-readable security data (advisory RSS plus API, IoC/STIX, CSAF or blocklists)",
-      "block": "0 none · 1 takedowns only, or blocking limited to government networks · 2 blocking that protects the general public (protective DNS, free blocklist, nationwide ISP blocking)",
-      "report": "0 no public channel · 1 organisations only · 2 channels for the general public (hotline, citizen form, phishing/SMS forwarding)",
-      "oss": "0 none · 1 a few tools, or free closed tools · 2 a substantial maintained open-source portfolio or major free platform",
-      "proactive": "0 none found · 1 limited or constituency-only notifications · 2 systematic notifications to network owners",
-      "transparency": "0 none · 1 occasional reports · 2 regular (at least annual) statistics or threat reports",
-      "english": "0 not usable without translation · 1 partial · 2 fully usable"
     }
   },
   "certs": [
@@ -176,16 +165,6 @@
         }
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 2,
-        "block": 2,
-        "report": 2,
-        "oss": 2,
-        "proactive": 2,
-        "transparency": 2,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "Regular public warnings, analyses and monthly CSIRT NASK summaries on cert.pl.",
@@ -299,16 +278,6 @@
         }
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 2,
-        "block": 0,
-        "report": 1,
-        "oss": 2,
-        "proactive": 2,
-        "transparency": 2,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "Regular public warnings and blog posts, plus a daily digest ('Tagesberichte').",
@@ -412,16 +381,6 @@
         "https://ccb.belgium.be/ccb-news"
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 1,
-        "block": 2,
-        "report": 2,
-        "oss": 0,
-        "proactive": 2,
-        "transparency": 1,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "ccb.belgium.be/advisories has dozens of paginated public 'Warning' advisories, with entries through late 2025.",
@@ -489,16 +448,6 @@
       "newsletter": null,
       "related": [],
       "region": "EU",
-      "scores_v1": {
-        "adv": 1,
-        "feeds": 0,
-        "block": 0,
-        "report": 1,
-        "oss": 0,
-        "proactive": 1,
-        "transparency": 0,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "The govcert.bg warnings category has 2026 entries (Ghost-Sender, an email threat campaign), but the cadence appears irregular.",
@@ -589,16 +538,6 @@
         }
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 1,
-        "block": 1,
-        "report": 2,
-        "oss": 0,
-        "proactive": 1,
-        "transparency": 1,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "Publishes security notices and recommendations; frequency not confirmed for 2026 (medium confidence).",
@@ -669,16 +608,6 @@
         }
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 1,
-        "feeds": 0,
-        "block": 0,
-        "report": 1,
-        "oss": 0,
-        "proactive": 1,
-        "transparency": 0,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "The homepage lists some alerts (e.g. a critical vulnerability advisory dated 27/05/2026), but they appear sparse.",
@@ -794,16 +723,6 @@
         "https://www.nic.cz/news/"
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 2,
-        "block": 2,
-        "report": 1,
-        "oss": 2,
-        "proactive": 2,
-        "transparency": 1,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "Publishes news and warnings, but no evidence of a regular advisory series.",
@@ -894,16 +813,6 @@
         }
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 1,
-        "block": 0,
-        "report": 1,
-        "oss": 0,
-        "proactive": 2,
-        "transparency": 2,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "Mainly threat assessments and occasional guidance; no evidence of regular public alerts on samsik.dk.",
@@ -997,16 +906,6 @@
         "https://www.ria.ee/en"
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 1,
-        "block": 2,
-        "report": 2,
-        "oss": 0,
-        "proactive": 1,
-        "transparency": 2,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "Warnings appear occasionally via RIA news (e.g. Log4j, MikroTik); no regular advisory series was found.",
@@ -1112,16 +1011,6 @@
       },
       "related": [],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 2,
-        "block": 1,
-        "report": 2,
-        "oss": 0,
-        "proactive": 2,
-        "transparency": 2,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "Public vulnerability bulletins, weekly reviews and 'Information Security Now!' articles appear regularly (e.g. 3 critical bulletins in March 2026 alone).",
@@ -1240,16 +1129,6 @@
         }
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 2,
-        "block": 0,
-        "report": 1,
-        "oss": 2,
-        "proactive": 1,
-        "transparency": 2,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "Publishes high volumes of numbered CERTFR-AVI advisories and alerts continuously.",
@@ -1356,16 +1235,6 @@
         }
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 2,
-        "block": 1,
-        "report": 1,
-        "oss": 2,
-        "proactive": 2,
-        "transparency": 2,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "The WID portal publishes many public Kurzinfo and Infomeldung advisories, usually several per day.",
@@ -1449,16 +1318,6 @@
         }
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 1,
-        "feeds": 1,
-        "block": 0,
-        "report": 1,
-        "oss": 0,
-        "proactive": 1,
-        "transparency": 0,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "Weekly public vulnerability newsletters on cyber.gov.gr (Feb and Aug 2026 issues) and public phishing warnings.",
@@ -1549,16 +1408,6 @@
         "https://nki.gov.hu/en/figyelmeztetesek/riasztas/"
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 1,
-        "block": 0,
-        "report": 1,
-        "oss": 0,
-        "proactive": 1,
-        "transparency": 1,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "Publishes alerts (riasztás), notices (tájékoztatás) and a running vulnerability list; the latest alert listing seen ran to 2025.",
@@ -1635,16 +1484,6 @@
         "https://www.ncsc.gov.ie/news/"
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 1,
-        "feeds": 1,
-        "block": 1,
-        "report": 1,
-        "oss": 0,
-        "proactive": 2,
-        "transparency": 1,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "Publishes occasional TLP:CLEAR PDF advisories on critical vulnerabilities (for example Fortinet and Citrix in 2025).",
@@ -1726,16 +1565,6 @@
         "https://www.acn.gov.it/portale/csirt-italia"
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 1,
-        "block": 0,
-        "report": 1,
-        "oss": 0,
-        "proactive": 1,
-        "transparency": 2,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "Issued 80 public security advisories in October 2025 alone.",
@@ -1823,16 +1652,6 @@
       "newsletter": null,
       "related": [],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 1,
-        "block": 2,
-        "report": 2,
-        "oss": 0,
-        "proactive": 2,
-        "transparency": 2,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "Regular public warnings about phishing and malware campaigns, plus monthly news digests.",
@@ -1913,16 +1732,6 @@
         "https://www.nksc.lt/naujienos.html"
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 1,
-        "block": 0,
-        "report": 2,
-        "oss": 0,
-        "proactive": 2,
-        "transparency": 2,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "Publishes occasional recommendations and bulletins (e.g. July 2026 recommendations); no evidence of several public advisories per month.",
@@ -2041,16 +1850,6 @@
         }
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 2,
-        "block": 1,
-        "report": 2,
-        "oss": 2,
-        "proactive": 2,
-        "transparency": 1,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "Its own TR advisories are sparse (TR-97 to TR-99 over late 2025 to mid-2026), though Vulnerability-Lookup aggregates many advisories.",
@@ -2118,16 +1917,6 @@
         "https://ncc-mita.gov.mt/news/"
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 1,
-        "feeds": 0,
-        "block": 0,
-        "report": 1,
-        "oss": 0,
-        "proactive": 1,
-        "transparency": 0,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "Advisories were found only via a mailing list and Twitter (2021 evidence); no current public advisory listing was found on ncc-mita.gov.mt or maltacip.gov.mt.",
@@ -2217,16 +2006,6 @@
         }
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 2,
-        "block": 0,
-        "report": 1,
-        "oss": 2,
-        "proactive": 2,
-        "transparency": 2,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "Regular public security advisories at advisories.ncsc.nl (hundreds per year).",
@@ -2312,16 +2091,6 @@
         "https://www.cncs.gov.pt/pt/"
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 1,
-        "block": 0,
-        "report": 2,
-        "oss": 1,
-        "proactive": 2,
-        "transparency": 2,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "CNCS publishes 'alertas de segurança' with an RSS feed, but their frequency could not be verified.",
@@ -2404,16 +2173,6 @@
         "https://dnsc.ro/citeste/"
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 1,
-        "block": 0,
-        "report": 2,
-        "oss": 0,
-        "proactive": 1,
-        "transparency": 1,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "Frequent public phishing and fraud alerts throughout 2026 (Feb, Jul, Aug), widely relayed by the media.",
@@ -2508,16 +2267,6 @@
         "https://www.sk-cert.sk/sk/index.html"
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 1,
-        "block": 0,
-        "report": 1,
-        "oss": 0,
-        "proactive": 1,
-        "transparency": 2,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "There are regular public security warnings in 2026 (Microsoft, Atlassian, NVIDIA, Cisco), with numbering such as V20260715-04 implying several per day or month.",
@@ -2606,16 +2355,6 @@
         }
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 1,
-        "block": 0,
-        "report": 2,
-        "oss": 0,
-        "proactive": 1,
-        "transparency": 2,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "Issues warnings to network operators and the public (per 2024 report), but no evidence found of several public advisories per month.",
@@ -2708,16 +2447,6 @@
         }
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 2,
-        "block": 0,
-        "report": 2,
-        "oss": 0,
-        "proactive": 2,
-        "transparency": 2,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "Publishes frequent early-warning advisories and vulnerability notices for businesses and citizens (Spanish and English).",
@@ -2800,16 +2529,6 @@
         "https://www.ccn-cert.cni.es/es/seguridad-al-dia.html"
       ],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 2,
-        "block": 1,
-        "report": 1,
-        "oss": 1,
-        "proactive": 2,
-        "transparency": 2,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "Public alerts (AL series, e.g. AL 01/26 FortiCloud SSO) plus news and vulnerability notices are published on 'Seguridad al día'.",
@@ -2891,16 +2610,6 @@
       },
       "related": [],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 2,
-        "block": 0,
-        "report": 1,
-        "oss": 0,
-        "proactive": 1,
-        "transparency": 1,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "Frequent vulnerability posts and a weekly newsletter (veckobrev), with editions through December 2025.",
@@ -2974,16 +2683,6 @@
       "newsletter": null,
       "related": [],
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 2,
-        "block": 0,
-        "report": 0,
-        "oss": 0,
-        "proactive": 1,
-        "transparency": 2,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "Public security advisories run at roughly one per month (2026-006 by May 2026), plus threat-intel publications; fewer than several per month.",
@@ -3063,16 +2762,6 @@
         "url": "https://euvdservices.enisa.europa.eu/api/exploitedvulnerabilities"
       },
       "region": "EU",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 2,
-        "block": 0,
-        "report": 0,
-        "oss": 1,
-        "proactive": 0,
-        "transparency": 2,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "A vulnerability database with critical and exploited dashboards, not an alert or advisory service.",
@@ -3155,16 +2844,6 @@
       "related": [],
       "pages": [],
       "region": "Global",
-      "scores_v1": {
-        "adv": 1,
-        "feeds": 2,
-        "block": 1,
-        "report": 0,
-        "oss": 1,
-        "proactive": 2,
-        "transparency": 2,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "Publishes news and occasional exposure alerts, not a formal advisory stream.",
@@ -3245,16 +2924,6 @@
       "newsletter": null,
       "related": [],
       "region": "Global",
-      "scores_v1": {
-        "adv": 0,
-        "feeds": 2,
-        "block": 2,
-        "report": 2,
-        "oss": 1,
-        "proactive": 1,
-        "transparency": 2,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "Publishes occasional blog posts and threat write-ups, not a regular advisory series.",
@@ -3321,16 +2990,6 @@
       "newsletter": null,
       "related": [],
       "region": "Global",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 1,
-        "block": 0,
-        "report": 1,
-        "oss": 1,
-        "proactive": 2,
-        "transparency": 2,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "Public casefiles, but only about 7 cases by mid-2026 (~1/month).",
@@ -3401,16 +3060,6 @@
       "newsletter": null,
       "related": [],
       "region": "Global",
-      "scores_v1": {
-        "adv": 0,
-        "feeds": 2,
-        "block": 1,
-        "report": 0,
-        "oss": 2,
-        "proactive": 0,
-        "transparency": 1,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "A software project; it publishes no threat advisories beyond its own release and security notes.",
@@ -3515,16 +3164,6 @@
       "newsletter": null,
       "related": [],
       "kind": "international",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 2,
-        "block": 2,
-        "report": 2,
-        "oss": 1,
-        "proactive": 2,
-        "transparency": 2,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "Publishes alerts and news, but search gave no evidence of several advisories per month.",
@@ -3633,16 +3272,6 @@
         "type": "kev",
         "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json"
       },
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 2,
-        "block": 1,
-        "report": 2,
-        "oss": 2,
-        "proactive": 2,
-        "transparency": 2,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "Continuous public alerts, advisories and KEV additions.",
@@ -3713,16 +3342,6 @@
       "newsletter": null,
       "related": [],
       "kind": "international",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 2,
-        "block": 0,
-        "report": 1,
-        "oss": 2,
-        "proactive": 0,
-        "transparency": 1,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "Several Vulnerability Notes per month in 2026 (e.g. VU#326070, VU#492466 in July 2026).",
@@ -3814,16 +3433,6 @@
         }
       ],
       "kind": "international",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 2,
-        "block": 0,
-        "report": 2,
-        "oss": 2,
-        "proactive": 1,
-        "transparency": 2,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "Public alerts and advisories published continuously (AL26-003 to AL26-006 in Feb–Mar 2026).",
@@ -3908,16 +3517,6 @@
       "newsletter": null,
       "related": [],
       "kind": "international",
-      "scores_v1": {
-        "adv": 1,
-        "feeds": 1,
-        "block": 0,
-        "report": 2,
-        "oss": 1,
-        "proactive": 2,
-        "transparency": 2,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "Few public alerts found; the focus is on direct notification rather than published advisories.",
@@ -4015,16 +3614,6 @@
         }
       ],
       "kind": "international",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 2,
-        "block": 0,
-        "report": 2,
-        "oss": 2,
-        "proactive": 1,
-        "transparency": 2,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "Regular alerts (注意喚起, e.g. 8 Oct 2026) and JVN vulnerability notes co-published with IPA.",
@@ -4101,16 +3690,6 @@
       "newsletter": null,
       "related": [],
       "kind": "international",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 1,
-        "block": 1,
-        "report": 2,
-        "oss": 0,
-        "proactive": 2,
-        "transparency": 1,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "The Boho (보호나라) portal publishes security notices and vulnerability guidance for the public; frequency not verified for 2026.",
@@ -4190,16 +3769,6 @@
       "newsletter": null,
       "related": [],
       "kind": "international",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 1,
-        "block": 1,
-        "report": 2,
-        "oss": 0,
-        "proactive": 1,
-        "transparency": 2,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "CSA Alerts & Advisories page lists several SingCERT alerts per month (for example six or more in January 2026).",
@@ -4285,16 +3854,6 @@
       "newsletter": null,
       "related": [],
       "kind": "international",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 1,
-        "block": 0,
-        "report": 2,
-        "oss": 1,
-        "proactive": 2,
-        "transparency": 1,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "Reported 1,530 alerts and 390 vulnerability notes in 2025 (from a single news-wire report).",
@@ -4366,16 +3925,6 @@
       "pages": [
         "https://www.cert.org.cn/publish/main/index.html"
       ],
-      "scores_v1": {
-        "adv": 1,
-        "feeds": 1,
-        "block": 1,
-        "report": 1,
-        "oss": 0,
-        "proactive": 2,
-        "transparency": 1,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "Weekly security bulletins and CNVD vulnerability warnings; a malicious-address bulletin in Aug 2026.",
@@ -4440,16 +3989,6 @@
       "newsletter": null,
       "related": [],
       "kind": "international",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 1,
-        "block": 0,
-        "report": 1,
-        "oss": 0,
-        "proactive": 1,
-        "transparency": 1,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "Regularly publishes Taiwan Vulnerability Notes (TVN) as a CVE CNA, plus monthly bulletins.",
@@ -4534,16 +4073,6 @@
       },
       "related": [],
       "kind": "international",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 2,
-        "block": 0,
-        "report": 2,
-        "oss": 0,
-        "proactive": 1,
-        "transparency": 2,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "Frequent public security bulletins and phishing alerts (e.g. March 2026 Water Supplies Department phishing).",
@@ -4648,16 +4177,6 @@
       },
       "related": [],
       "kind": "international",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 2,
-        "block": 1,
-        "report": 2,
-        "oss": 0,
-        "proactive": 2,
-        "transparency": 2,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "cyber.gov.au runs a free public Alert Service and publishes alerts and advisories regularly.",
@@ -4737,16 +4256,6 @@
       "pages": [
         "https://www.ncsc.govt.nz/news/"
       ],
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 1,
-        "block": 1,
-        "report": 2,
-        "oss": 0,
-        "proactive": 2,
-        "transparency": 2,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "Public cyber security advisories and alerts (e.g. FortiOS April 2025, Iran-related March 2026) are listed by type on ncsc.govt.nz; exact frequency was not verified.",
@@ -4810,16 +4319,6 @@
       "newsletter": null,
       "related": [],
       "kind": "international",
-      "scores_v1": {
-        "adv": 1,
-        "feeds": 0,
-        "block": 0,
-        "report": 2,
-        "oss": 0,
-        "proactive": 1,
-        "transparency": 1,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "Issued 51 public alerts in 2025 (about four a month), with most of its output going to organisations as targeted alerts.",
@@ -4904,16 +4403,6 @@
       "pages": [
         "https://www.ncsc.admin.ch/ncsc/en/home/aktuell/im-fokus.html"
       ],
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 1,
-        "block": 0,
-        "report": 2,
-        "oss": 0,
-        "proactive": 2,
-        "transparency": 2,
-        "english": 2
-      },
       "evidence": {
         "why": {
           "adv": "Weekly reviews (Wochenrückblick) and current-incident warnings published regularly.",
@@ -4983,16 +4472,6 @@
       "newsletter": null,
       "related": [],
       "kind": "international",
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 1,
-        "block": 0,
-        "report": 1,
-        "oss": 0,
-        "proactive": 2,
-        "transparency": 2,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "Issues occasional public warnings on exploited vulnerabilities (e.g. Ivanti, Cisco IOS XE in 2023); no recent regular stream found.",
@@ -5065,16 +4544,6 @@
       "pages": [
         "https://cert.gov.ua/articles"
       ],
-      "scores_v1": {
-        "adv": 2,
-        "feeds": 2,
-        "block": 0,
-        "report": 1,
-        "oss": 0,
-        "proactive": 1,
-        "transparency": 1,
-        "english": 1
-      },
       "evidence": {
         "why": {
           "adv": "Frequent public CERT-UA# articles on UAC threat clusters (for example #19542 and #20032 in 2026).",
