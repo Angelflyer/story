@@ -18,7 +18,7 @@ Feeds with nothing newer than two years are ignored as abandoned. Sites that ans
 
 ## Viewing the site
 
-Enable GitHub Pages (Settings → Pages → Deploy from branch → `main` / `/docs`). The site is then served at https://angelflyer.github.io/cert-atlas/. The page loads its data with `fetch`, so open it through Pages or a local server (`python3 -m http.server -d docs`), not as a `file://` URL.
+Enable GitHub Pages (Settings → Pages → Deploy from branch → `main` / `/docs`). The site is then served at https://angelflyer.github.io/certatlas/. The page loads its data with `fetch`, so open it through Pages or a local server (`python3 -m http.server -d docs`), not as a `file://` URL.
 
 ## Getting updates by email
 
