@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T21:51:36+00:00",
+ "updated": "2026-10-15T04:54:41+00:00",
  "teams": {
   "cert-pl": {
    "status": "ok",
@@ -1709,10 +1709,10 @@
      "summary": "Adversary simulation ('red teaming') tests your ability to prevent, detect and respond to cyber attacks."
     },
     {
-     "title": "Iranian cyber targeting of dissidents, activists and journalists",
-     "link": "https://www.ncsc.gov.uk/news/iranian-cyber-targeting-of-dissidents-activists-and-journalists",
+     "title": "UK and allies expose spyware used by Iranian state actors to target dissidents, activists and journalists",
+     "link": "https://www.ncsc.gov.uk/news/uk-allies-expose-spyware-iranian-state-actors-target-dissidents-activists-journalists",
      "date": "2026-09-15T12:00:00+00:00",
-     "summary": "Advisory on CHOSEN BRICK malware, including technical analysis and advice to help individuals and organisations protect themselves."
+     "summary": "UK and allies provide advice to help organisations and individuals at risk detect and counter the threat from CHOSEN BRICK malware."
     }
    ]
   },
@@ -1721,6 +1721,30 @@
    "feed": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
    "via": "api",
    "items": [
+    {
+     "title": "CVE-2026-105134: Ahsay AhsayCBS added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-105134",
+     "date": "2026-10-14T00:00:00+00:00",
+     "summary": "Ahsay AhsayCBS contains a command injection vulnerability that could allow a remote attacker to execute operating system commands via manipulation of the random parameter in the Replication Receiver component’s /rps/api/json/UpdateReceivers.do endpoint. This vulnerability can…"
+    },
+    {
+     "title": "CVE-2026-76519: Cisco Secure Email Gateway added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-76519",
+     "date": "2026-10-14T00:00:00+00:00",
+     "summary": "Cisco Secure Email Gateway contains a relative path traversal vulnerability that could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system."
+    },
+    {
+     "title": "CVE-2026-105133: Ahsay AhsayCBS added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-105133",
+     "date": "2026-10-14T00:00:00+00:00",
+     "summary": "Ahsay AhsayCBS contains an improper authentication vulnerability that could allow a remote attacker to bypass authentication via manipulation of the random parameter in the API component’s checkSysPwd function. This vulnerability can be chained with CVE-2026-105134."
+    },
+    {
+     "title": "CVE-2026-0322: Palo Alto Networks PAN-OS added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-0322",
+     "date": "2026-10-14T00:00:00+00:00",
+     "summary": "Palo Alto Networks PAN-OS contains a code injection vulnerability that could allow an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall."
+    },
     {
      "title": "CVE-2026-104935: Ivanti Connect Secure added to KEV",
      "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-104935",
@@ -1744,30 +1768,6 @@
      "link": "https://nvd.nist.gov/vuln/detail/CVE-2016-3081",
      "date": "2026-10-08T00:00:00+00:00",
      "summary": "Apache Struts contains a command injection vulnerability that could allow remote attackers to execute arbitrary code via method:prefix when Dynamic Method Invocation is enabled."
-    },
-    {
-     "title": "CVE-2023-22894: Strapi Strapi added to KEV",
-     "link": "https://nvd.nist.gov/vuln/detail/CVE-2023-22894",
-     "date": "2026-10-08T00:00:00+00:00",
-     "summary": "Strapi contains a cleartext storage of sensitive information vulnerability that could allow attackers with access to the admin panel to discover sensitive user details via the query filter. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users…"
-    },
-    {
-     "title": "CVE-2021-3199: ONLYOFFICE Docs added to KEV",
-     "link": "https://nvd.nist.gov/vuln/detail/CVE-2021-3199",
-     "date": "2026-10-08T00:00:00+00:00",
-     "summary": "ONLYOFFICE Docs contains a path traversal vulnerability that can occur when JWT is used, via a /.. sequence in an image upload parameter and could allow for remote code execution."
-    },
-    {
-     "title": "CVE-2015-3306: ProFTPD ProFTPD added to KEV",
-     "link": "https://nvd.nist.gov/vuln/detail/CVE-2015-3306",
-     "date": "2026-10-08T00:00:00+00:00",
-     "summary": "ProFTPD contains an improper access control vulnerability that could allow remote attackers to read and write to arbitrary files via the site cpfr and site cpto commands."
-    },
-    {
-     "title": "CVE-2026-88779: Citrix NetScaler added to KEV",
-     "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-88779",
-     "date": "2026-10-04T00:00:00+00:00",
-     "summary": "Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway) contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for a denial of service."
     }
    ]
   },
@@ -2192,6 +2192,36 @@
    "via": "known",
    "items": [
     {
+     "title": "Cisco Secure Email Gateway Remote Code Execution Vulnerability",
+     "link": "https://www.hkcert.org/security-bulletin/cisco-secure-email-gateway-remote-code-execution-vulnerability_20261015",
+     "date": "2026-10-15T03:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "IBM WebSphere Products Multiple Vulnerabilities",
+     "link": "https://www.hkcert.org/security-bulletin/ibm-websphere-products-multiple-vulnerabilities_20261015",
+     "date": "2026-10-15T03:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Mozilla Products Multiple Vulnerabilities",
+     "link": "https://www.hkcert.org/security-bulletin/mozilla-products-multiple-vulnerabilities_20261015",
+     "date": "2026-10-15T03:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Palo Alto Products Multiple Vulnerabilities",
+     "link": "https://www.hkcert.org/security-bulletin/palo-alto-products-multiple-vulnerabilities_20261015",
+     "date": "2026-10-15T03:00:00+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Juniper Junos OS Multiple Vulnerabilities",
+     "link": "https://www.hkcert.org/security-bulletin/juniper-junos-os-multiple-vulnerabilities_20261015",
+     "date": "2026-10-15T01:00:00+00:00",
+     "summary": ""
+    },
+    {
      "title": "Adobe Monthly Security Update (October 2026)",
      "link": "https://www.hkcert.org/security-bulletin/adobe-monthly-security-update-october-2026",
      "date": "2026-10-14T03:00:00+00:00",
@@ -2207,36 +2237,6 @@
      "title": "MongoDB Multiple Vulnerabilities",
      "link": "https://www.hkcert.org/security-bulletin/mongodb-multiple-vulnerabilities_20261014",
      "date": "2026-10-14T03:00:00+00:00",
-     "summary": ""
-    },
-    {
-     "title": "Google Chrome Multiple Vulnerabilities",
-     "link": "https://www.hkcert.org/security-bulletin/google-chrome-multiple-vulnerabilities_20261014",
-     "date": "2026-10-14T02:00:00+00:00",
-     "summary": ""
-    },
-    {
-     "title": "Fortinet Products Multiple Vulnerabilities",
-     "link": "https://www.hkcert.org/security-bulletin/fortinet-products-multiple-vulnerabilities_20261014",
-     "date": "2026-10-14T01:00:00+00:00",
-     "summary": ""
-    },
-    {
-     "title": "Ivanti Connect Secure Remote Code Execution Vulnerability",
-     "link": "https://www.hkcert.org/security-bulletin/ivanti-connect-secure-remote-code-execution-vulnerability_20261014",
-     "date": "2026-10-14T01:00:00+00:00",
-     "summary": ""
-    },
-    {
-     "title": "Samsung Products Multiple Vulnerabilities",
-     "link": "https://www.hkcert.org/security-bulletin/samsung-products-multiple-vulnerabilities_20261013",
-     "date": "2026-10-13T03:00:00+00:00",
-     "summary": ""
-    },
-    {
-     "title": "GitLab Multiple Vulnerabilities",
-     "link": "https://www.hkcert.org/security-bulletin/gitlab-multiple-vulnerabilities_20261013",
-     "date": "2026-10-13T01:00:00+00:00",
      "summary": ""
     }
    ]
