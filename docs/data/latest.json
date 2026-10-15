@@ -1,11 +1,17 @@
 {
- "updated": "2026-10-15T11:44:24+00:00",
+ "updated": "2026-10-15T17:12:56+00:00",
  "teams": {
   "cert-pl": {
    "status": "ok",
    "feed": "https://cert.pl/en/atom.xml",
    "via": "known",
    "items": [
+    {
+     "title": "Vulnerability in Sparx Systems Enterprise Architect software",
+     "link": "https://cert.pl/en/posts/2026/10/CVE-2026-88794/",
+     "date": "2026-10-15T11:55:00+00:00",
+     "summary": "Improper restriction of XML external entity reference vulnerability (CVE-2026-88794) has been found in Sparx Systems Enterprise Architect software."
+    },
     {
      "title": "Vulnerabilities in Slican telephone exchanges",
      "link": "https://cert.pl/en/posts/2026/10/CVE-2026-35088/",
@@ -47,12 +53,6 @@
      "link": "https://cert.pl/en/posts/2026/09/CVE-2026-41875/",
      "date": "2026-09-29T13:55:00+00:00",
      "summary": "Cross-Site Request Forgery (CSRF) vulnerability (CVE-2026-41875) has been found in Quick.Cart software."
-    },
-    {
-     "title": "Vulnerability in MyPresta Google Merchant Center Feed software",
-     "link": "https://cert.pl/en/posts/2026/09/CVE-2026-85520/",
-     "date": "2026-09-29T12:55:00+00:00",
-     "summary": "External control of file name or path vulnerability (CVE-2026-85520) has been found in MyPresta Google Merchant Center Feed software."
     }
    ]
   },
@@ -191,6 +191,12 @@
    "via": "known",
    "items": [
     {
+     "title": "Upozorenje: Lažne SMS poruke o povratu poreza",
+     "link": "https://www.cert.hr/upozorenje-lazne-sms-poruke-o-povratu-poreza/?utm_source=rss&utm_medium=rss&utm_campaign=upozorenje-lazne-sms-poruke-o-povratu-poreza",
+     "date": "2026-10-15T12:42:39+00:00",
+     "summary": "Nacionalni CERT upozorava građane na phishing kampanju putem SMS poruka u kojima se napadači predstavljaju kao Porezna uprava i obavještavaju primatelje da im je odobren povrat poreza. Cilj kampanje je navesti građane na odavanje osobnih i financijskih podataka, koji se potom…"
+    },
+    {
      "title": "Produljen rok za prijave na Hacknite 2026.",
      "link": "https://www.cert.hr/produljen-rok-za-prijave-na-hacknite-2026/?utm_source=rss&utm_medium=rss&utm_campaign=produljen-rok-za-prijave-na-hacknite-2026",
      "date": "2026-10-14T13:48:38+00:00",
@@ -231,12 +237,6 @@
      "link": "https://www.cert.hr/upozorenje-whatsapp-prijevara-glasajte-za-moje-dijete/?utm_source=rss&utm_medium=rss&utm_campaign=upozorenje-whatsapp-prijevara-glasajte-za-moje-dijete",
      "date": "2026-09-07T12:36:29+00:00",
      "summary": "Nacionalni CERT zaprimio je prijave o phishing (smishing) prijevari putem preuzetog WhatsApp računa te je prijavio prijevare izvorima incidenta i nadležnim CERT timovima. Primjer WhatsApp poruke: Sadržaj lažnih WhatsApp poruka je: “Glasajte za … dijete na natjecanju” Možete…"
-    },
-    {
-     "title": "GÉANT webinar: Psihologija sigurnih navika",
-     "link": "https://www.cert.hr/geant-webinar-psihologija-sigurnih-navika/?utm_source=rss&utm_medium=rss&utm_campaign=geant-webinar-psihologija-sigurnih-navika",
-     "date": "2026-09-04T09:41:35+00:00",
-     "summary": "Navike oblikuju naš svakodnevni život. Svakoga dana izvodimo stotine radnji gotovo automatski, često bez aktivnog razmišljanja. Pojavi se obavijest o novoj poruci i otvaramo aplikaciju. Zvoni telefon, javljamo se. Vežemo pojas kada uđemo u automobil, peremo zube prije spavanja…"
     }
    ]
   },
@@ -479,52 +479,52 @@
    "via": "known",
    "items": [
     {
-     "title": "Multiples vulnérabilités dans les produits Ivanti (14 octobre 2026)",
-     "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1311/",
-     "date": "2026-10-14T00:00:00+00:00",
-     "summary": "De multiples vulnérabilités ont été découvertes dans les produits Ivanti. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et une atteinte à la confidentialité des données. Ivanti indique que…"
+     "title": "Multiples vulnérabilités dans les produits F5 (15 octobre 2026)",
+     "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1317/",
+     "date": "2026-10-15T00:00:00+00:00",
+     "summary": "De multiples vulnérabilités ont été découvertes dans les produits F5. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une atteinte à la confidentialité des données et une atteinte à l'intégrité des données."
     },
     {
-     "title": "Multiples vulnérabilités dans Microsoft Office (14 octobre 2026)",
-     "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1312/",
-     "date": "2026-10-14T00:00:00+00:00",
-     "summary": "De multiples vulnérabilités ont été découvertes dans Microsoft Office. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et une atteinte à la confidentialité des données. Microsoft indique que…"
+     "title": "Multiples vulnérabilités dans les produits Symfony (15 octobre 2026)",
+     "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1324/",
+     "date": "2026-10-15T00:00:00+00:00",
+     "summary": "De multiples vulnérabilités ont été découvertes dans les produits Symfony. Elles permettent à un attaquant de provoquer un déni de service à distance."
     },
     {
-     "title": "Multiples vulnérabilités dans les produits Adobe (14 octobre 2026)",
-     "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1301/",
-     "date": "2026-10-14T00:00:00+00:00",
-     "summary": "De multiples vulnérabilités ont été découvertes dans les produits Adobe. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance."
+     "title": "Multiples vulnérabilités dans les produits Palo Alto Networks (15 octobre 2026)",
+     "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1326/",
+     "date": "2026-10-15T00:00:00+00:00",
+     "summary": "De multiples vulnérabilités ont été découvertes dans les produits Palo Alto Networks. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance. Palo Alto Networks…"
     },
     {
-     "title": "Multiples vulnérabilités dans Microsoft Azure (14 octobre 2026)",
-     "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1315/",
-     "date": "2026-10-14T00:00:00+00:00",
-     "summary": "De multiples vulnérabilités ont été découvertes dans Microsoft Azure. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et une atteinte à la confidentialité des données."
+     "title": "Multiples vulnérabilités dans Moodle (15 octobre 2026)",
+     "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1318/",
+     "date": "2026-10-15T00:00:00+00:00",
+     "summary": "De multiples vulnérabilités ont été découvertes dans Moodle. Elles permettent à un attaquant de provoquer une injection de code indirecte à distance (XSS) et un contournement de la politique de sécurité."
     },
     {
-     "title": "Multiples vulnérabilités dans Google Chrome (14 octobre 2026)",
-     "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1308/",
-     "date": "2026-10-14T00:00:00+00:00",
-     "summary": "De multiples vulnérabilités ont été découvertes dans Google Chrome. Elles permettent à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur."
+     "title": "Vulnérabilité dans les produits Microsoft (15 octobre 2026)",
+     "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1323/",
+     "date": "2026-10-15T00:00:00+00:00",
+     "summary": "Une vulnérabilité a été découverte dans les produits Microsoft. Elle permet à un attaquant de provoquer une élévation de privilèges."
     },
     {
-     "title": "Multiples vulnérabilités dans les produits Mozilla (14 octobre 2026)",
-     "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1305/",
-     "date": "2026-10-14T00:00:00+00:00",
-     "summary": "De multiples vulnérabilités ont été découvertes dans les produits Mozilla. Certaines d'entre elles permettent à un attaquant de provoquer une élévation de privilèges, un déni de service à distance et une atteinte à la confidentialité des données."
+     "title": "Multiples vulnérabilités dans Drupal (15 octobre 2026)",
+     "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1321/",
+     "date": "2026-10-15T00:00:00+00:00",
+     "summary": "De multiples vulnérabilités ont été découvertes dans Drupal. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance et une injection de code indirecte à distance (XSS)."
     },
     {
-     "title": "Vulnérabilité dans Zabbix (14 octobre 2026)",
-     "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1309/",
-     "date": "2026-10-14T00:00:00+00:00",
-     "summary": "Une vulnérabilité a été découverte dans Zabbix. Elle permet à un attaquant de provoquer une atteinte à la confidentialité des données."
+     "title": "Multiples vulnérabilités dans les produits Juniper Networks (15 octobre 2026)",
+     "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1322/",
+     "date": "2026-10-15T00:00:00+00:00",
+     "summary": "De multiples vulnérabilités ont été découvertes dans les produits Juniper Networks. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance."
     },
     {
-     "title": "Multiples vulnérabilités dans Curl (14 octobre 2026)",
-     "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1307/",
-     "date": "2026-10-14T00:00:00+00:00",
-     "summary": "De multiples vulnérabilités ont été découvertes dans Curl. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la confidentialité des données."
+     "title": "Multiples vulnérabilités dans Sonicwall Network Security Manager (15 octobre 2026)",
+     "link": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1320/",
+     "date": "2026-10-15T00:00:00+00:00",
+     "summary": "De multiples vulnérabilités ont été découvertes dans Sonicwall Network Security Manager. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance et un contournement de la politique de sécurité."
     }
    ]
   },
@@ -534,52 +534,52 @@
    "via": "known",
    "items": [
     {
-     "title": "[UPDATE] [hoch] cURL: Mehrere Schwachstellen",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3904",
-     "date": "2026-10-15T11:27:14+00:00",
-     "summary": "Ein Angreifer kann mehrere Schwachstellen in cURL ausnutzen, um beliebigen Programmcode auszuführen, Sicherheitsmaßnahmen zu umgehen, vertrauliche Informationen offenzulegen, Daten zu manipulieren oder einen Denial-of-Service-Zustand auszulösen."
+     "title": "[NEU] [mittel] Red Hat Enterprise Linux (lrzsz): Mehrere Schwachstellen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3978",
+     "date": "2026-10-15T13:16:15+00:00",
+     "summary": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Red Hat Enterprise Linux (lrzsz) ausnutzen, um Dateien zu manipulieren oder beliebigen Programmcode mit Benutzerrechten auszuführen."
     },
     {
-     "title": "[UPDATE] [hoch] PgBouncer: Mehrere Schwachstellen",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3906",
-     "date": "2026-10-15T11:27:14+00:00",
-     "summary": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in PgBouncer ausnutzen, um einen Denial of Service Angriff durchzuführen, Sicherheitsvorkehrungen zu umgehen oder Adminrechte zu erlangen."
+     "title": "[NEU] [UNGEPATCHT] [mittel] Synacor Zimbra: Mehrere Schwachstellen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3977",
+     "date": "2026-10-15T13:16:15+00:00",
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in Synacor Zimbra ausnutzen, um Sicherheitsvorkehrungen zu umgehen, und um Informationen offenzulegen."
     },
     {
-     "title": "[UPDATE] [hoch] IBM WebSphere Application Server und Application Server Liberty: Mehrere Schwachstellen",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3909",
-     "date": "2026-10-15T11:26:54+00:00",
-     "summary": "Ein Angreifer kann mehrere Schwachstellen in IBM WebSphere Application Server Liberty und IBM WebSphere Application Server ausnutzen, um beliebigen Programmcode auszuführen, um einen Denial of Service Angriff durchzuführen, um Daten zu manipulieren und um…"
+     "title": "[NEU] [hoch] Juniper Junos OS und Junos OS Evolved: Mehrere Schwachstellen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3976",
+     "date": "2026-10-15T13:16:15+00:00",
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in Juniper JUNOS ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, erweiterte Rechte zu erlangen, Sicherheitsmaßnahmen zu umgehen, Daten zu manipulieren und offenzulegen oder Denial-of-Service-Zustände…"
     },
     {
-     "title": "[UPDATE] [mittel] OpenVPN: Mehrere Schwachstellen",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3915",
-     "date": "2026-10-15T11:26:53+00:00",
-     "summary": "Ein entfernter, authentisierter Angreifer kann mehrere Schwachstellen in OpenVPN ausnutzen, um Sicherheitsmaßnahmen zu umgehen, Denial of Service Attacken durchzuführen und Informationen offenzulegen."
+     "title": "[NEU] [UNGEPATCHT] [niedrig] CUPS: Mehrere Schwachstellen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3975",
+     "date": "2026-10-15T13:15:54+00:00",
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in CUPS ausnutzen, um einen Denial of Service Angriff durchzuführen, um Informationen offenzulegen und um seine Privilegien zu erhöhen."
     },
     {
-     "title": "[UPDATE] [kritisch] Microsoft Windows und Windows Server: Mehrere Schwachstellen",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3892",
-     "date": "2026-10-15T11:26:53+00:00",
-     "summary": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in verschiedenen Versionen von Microsoft Windows Server und Microsoft Windows ausnutzen, um seine Privilegien auf administrative Rechte zu erhöhen, um beliebigen Code auszuführen, um Informationen offenzulegen, um…"
+     "title": "[UPDATE] [hoch] Ghostscript: Schwachstelle ermöglicht Codeausführung",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3777",
+     "date": "2026-10-15T13:15:54+00:00",
+     "summary": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Ghostscript ausnutzen, um beliebigen Programmcode auszuführen."
     },
     {
-     "title": "[UPDATE] [hoch] Microsoft SQL Server: Mehrere Schwachstellen",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3917",
-     "date": "2026-10-15T11:26:51+00:00",
-     "summary": "Ein Angreifer kann mehrere Schwachstellen in Microsoft SQL Server 2017, Microsoft SQL Server 2019 und Microsoft SQL Server 2022 ausnutzen, um Administratorrechte zu erlangen, beliebigen Code auszuführen, vertrauliche Informationen offenzulegen oder einen…"
+     "title": "[UPDATE] [mittel] Ghostscript: Schwachstelle ermöglicht Manipulation von Dateien und DoS",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3684",
+     "date": "2026-10-15T13:15:54+00:00",
+     "summary": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Ghostscript ausnutzen, um möglicherweise Daten offenzulegen oder zu manipulieren oder einen Denial-of-Service-Zustand herbeizuführen."
     },
     {
-     "title": "[UPDATE] [mittel] Red Hat Enterprise Linux (OpenEXR): Mehrere Schwachstellen",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3923",
-     "date": "2026-10-15T11:26:51+00:00",
-     "summary": "Ein Angreifer kann mehrere Schwachstellen in Red Hat Enterprise Linux ausnutzen, um einen Denial of Service Angriff durchzuführen, vertrauliche Informationen offenzulegen oder beliebigen Code auszuführen."
+     "title": "[UPDATE] [hoch] Rancher: Schwachstelle ermöglicht Privilegieneskalation",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-0890",
+     "date": "2026-10-15T13:15:54+00:00",
+     "summary": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in Rancher ausnutzen, um seine Privilegien zu erhöhen."
     },
     {
-     "title": "[UPDATE] [hoch] IBM WebSphere Application Server und Liberty: Mehrere Schwachstellen",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3927",
-     "date": "2026-10-15T11:26:50+00:00",
-     "summary": "Ein Angreifer kann mehrere Schwachstellen in IBM WebSphere Application Server und IBM WebSphere Application Server Liberty ausnutzen, um einen Denial of Service Angriff durchzuführen, Daten offenzulegen, Sicherheitsmaßnahmen zu umgehen oder Administratorrechte zu erlangen."
+     "title": "[NEU] [hoch] Netgate pfSense: Schwachstelle ermöglicht Ausführen von beliebigem Programmcode mit Administratorrechten",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3974",
+     "date": "2026-10-15T13:15:53+00:00",
+     "summary": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in Netgate pfSense ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen."
     }
    ]
   },
@@ -699,6 +699,12 @@
    "via": "discovered",
    "items": [
     {
+     "title": "Critical Vulnerability in Cisco Secure Email Gateway (CVE-2026-76519)",
+     "link": "https://www.ncsc.gov.ie/pdfs/2610150240_CVE-2026-76519.pdf",
+     "date": "2026-10-15T00:00:00+00:00",
+     "summary": ""
+    },
+    {
      "title": "Critical Vulnerability in Ivanti Connect Secure (CVE-2026-104935)",
      "link": "https://www.ncsc.gov.ie/pdfs/2610130333_CVE-2026-104935.pdf",
      "date": "2026-10-13T00:00:00+00:00",
@@ -739,12 +745,6 @@
      "link": "https://www.ncsc.gov.ie/pdfs/2610010256_CVE-2026-76504.pdf",
      "date": "2026-10-01T00:00:00+00:00",
      "summary": ""
-    },
-    {
-     "title": "Critical vulnerabilities in Citrix NetScaler Gateway & ADC",
-     "link": "https://www.ncsc.gov.ie/pdfs/2609270214_Multiple_Citrix_Vulns.pdf",
-     "date": "2026-09-27T00:00:00+00:00",
-     "summary": ""
     }
    ]
   },
@@ -753,6 +753,42 @@
    "feed": "https://www.acn.gov.it/portale/feedrss/-/journal/rss/20119/723192",
    "via": "known",
    "items": [
+    {
+     "title": "Risolte vulnerabilità in prodotti TP-Link Omada",
+     "link": "https://www.acn.gov.it/portale/w/risolte-vulnerabilita-in-prodotti-tp-link-omada-1",
+     "date": "2026-10-15T13:23:41+00:00",
+     "summary": "Risolte tre vulnerabilità di sicurezza, di cui due con gravità “alta”, nel prodotto Omada Controller di TP-Link. Tali vulnerabilità potrebbero consentire a un utente malintenzionato autenticato di eludere i meccanismi di autorizzazione ed eseguire operazioni non autorizzate sui…"
+    },
+    {
+     "title": "Rilevate vulnerabilità in Erlang/OTP",
+     "link": "https://www.acn.gov.it/portale/w/rilevate-vulnerabilita-in-erlang/otp-5",
+     "date": "2026-10-15T13:10:00+00:00",
+     "summary": "Rilevate due nuove vulnerabilità, di cui una con gravità \"alta\", in Erlang/OTP, piattaforma open source basata sul linguaggio Erlang e sul relativo set di librerie OTP, utilizzata per lo sviluppo di sistemi distribuiti ad alta disponibilità. Tale vulnerabilità, qualora…"
+    },
+    {
+     "title": "Rilevate vulnerabilità in n8n",
+     "link": "https://www.acn.gov.it/portale/w/rilevate-vulnerabilita-in-n8n-9",
+     "date": "2026-10-15T13:04:37+00:00",
+     "summary": "Rilasciati aggiornamenti di sicurezza per sanare molteplici vulnerabilità, di cui 10 con gravità “alta”, che interessano la piattaforma open-source per l'automazione dei workflow n8n."
+    },
+    {
+     "title": "Juniper Networks: risolte vulnerabilità in Junos OS e Junos OS Evolved",
+     "link": "https://www.acn.gov.it/portale/w/juniper-networks-risolte-vulnerabilita-in-junos-os-e-junos-os-evolved-2",
+     "date": "2026-10-15T12:45:15+00:00",
+     "summary": "Juniper Networks ha rilasciato aggiornamenti per risolvere numerose vulnerabilità, di cui 23 con gravità \"critica\" e 119 con gravità “alta”, nei sistemi operativi Junos OS e Junos OS Evolved."
+    },
+    {
+     "title": "Risolte vulnerabilità in OpenVPN",
+     "link": "https://www.acn.gov.it/portale/w/risolte-vulnerabilita-in-openvpn-1",
+     "date": "2026-10-15T12:36:21+00:00",
+     "summary": "Aggiornamenti di sicurezza risolvono quattro vulnerabilità, di cui tre con gravità “alta”, in OpenVPN, software open-source per la creazione di reti private virtuali (VPN). Tali vulnerabilità potrebbero consentire a un utente malintenzionato di impersonare utenti o servizi…"
+    },
+    {
+     "title": "F5: risolte vulnerabilità nei prodotti NGINX",
+     "link": "https://www.acn.gov.it/portale/w/f5-risolte-vulnerabilita-nei-prodotti-nginx-1",
+     "date": "2026-10-15T11:58:01+00:00",
+     "summary": "F5 ha rilasciato aggiornamenti di sicurezza che sanano alcune vulnerabilità, di cui 3 con gravità \"critica\" e 6 con gravità \"alta\", in prodotti NGINX, noto software per la gestione del traffico e degli applicativi web."
+    },
     {
      "title": "Risolte vulnerabilità in Progress MOVEit Transfer",
      "link": "https://www.acn.gov.it/portale/w/risolte-vulnerabilita-in-progress-moveit-transfer",
@@ -764,42 +800,6 @@
      "link": "https://www.acn.gov.it/portale/w/risolte-vulnerabilita-in-gitea",
      "date": "2026-10-15T09:49:25+00:00",
      "summary": "Rilasciati aggiornamenti di sicurezza per sanare 36 vulnerabilità, di cui una con gravità “critica” e due con gravità “alta”, in Gitea, piattaforma collaborativa open source per la gestione del codice sorgente e lo sviluppo di applicazioni software. Tali vulnerabilità, qualora…"
-    },
-    {
-     "title": "Risolta vulnerabilità in cURL",
-     "link": "https://www.acn.gov.it/portale/w/risolta-vulnerabilita-in-curl-1",
-     "date": "2026-10-15T09:01:36+00:00",
-     "summary": "Rilasciati aggiornamenti di sicurezza per sanare una vulnerabilità con gravità \"alta\" in cURL, noto tool a linea di comando e libreria per il trasferimento dati. Tale vulnerabilità potrebbe consentire a un utente malintenzionato di eseguire codice arbitrario sui sistemi…"
-    },
-    {
-     "title": "D-Link: disponibile PoC per lo sfruttamento della CVE-2026-110536",
-     "link": "https://www.acn.gov.it/portale/w/d-link-disponibile-poc-per-lo-sfruttamento-della-cve-2026-110536",
-     "date": "2026-10-15T08:28:14+00:00",
-     "summary": "Disponibile un Proof of Concept (PoC) per lo sfruttamento della CVE-2026-110536, presente in dispositivi DIR-868L non più supportati. Tale vulnerabilità potrebbe consentire a un utente malintenzionato remoto non autenticato di eseguire codice arbitrario sui sistemi interessati."
-    },
-    {
-     "title": "Palo Alto Networks: rilevato sfruttamento in rete della CVE-2026-0322 relativa a PAN-OS",
-     "link": "https://www.acn.gov.it/portale/w/palo-alto-networks-rilevato-sfruttamento-in-rete-della-cve-2026-0322-relativa-a-pan-os",
-     "date": "2026-10-15T07:52:28+00:00",
-     "summary": "Palo Alto Networks ha rilasciato aggiornamenti di sicurezza per sanare molteplici vulnerabilità, di cui una con gravità “alta” relativa a PAN-OS per la quale è stato rilevato lo sfruttamento attivo in rete."
-    },
-    {
-     "title": "Cisco: rilevato sfruttamento in rete della CVE-2026-76519 relativa a Secure Email Gateway",
-     "link": "https://www.acn.gov.it/portale/w/cisco-rilevato-sfruttamento-in-rete-della-cve-2026-76519-relativa-a-secure-email-gateway",
-     "date": "2026-10-15T07:30:28+00:00",
-     "summary": "Cisco ha rilevato lo sfruttamento in rete di una vulnerabilità critica, identificata tramite la CVE-2026-76519, in Advanced Malware Protection di Cisco Secure Email Gateway, soluzione per la protezione e la gestione della posta elettronica."
-    },
-    {
-     "title": "Risolte vulnerabilità in prodotti IBM",
-     "link": "https://www.acn.gov.it/portale/w/risolte-vulnerabilita-in-prodotti-ibm",
-     "date": "2026-10-14T15:40:16+00:00",
-     "summary": "IBM ha rilasciato aggiornamenti di sicurezza per sanare molteplici vulnerabilità, di cui 2 con gravità “critica” e 5 con gravità “alta”, nei prodotti WebSphere Application Server - Liberty e WebSphere Application Server. Tali vulnerabilità potrebbero consentire a un utente…"
-    },
-    {
-     "title": "Risolte vulnerabilità in prodotti Ubiquiti",
-     "link": "https://www.acn.gov.it/portale/w/risolte-vulnerabilita-in-prodotti-ubiquiti",
-     "date": "2026-10-14T15:14:24+00:00",
-     "summary": "Ubiquiti ha rilasciato aggiornamenti di sicurezza che sanano alcune vulnerabilità, di cui 2 con gravità \"alta\", in UniFi Protect AI Key, componente della piattaforma di videosorveglianza IP UniFi Protect. Tali vulnerabilità, qualora sfruttate, potrebbero consentire a un…"
     }
    ]
   },
@@ -808,6 +808,12 @@
    "feed": "https://cert.lv/lv/feed/atom/viss",
    "via": "discovered",
    "items": [
+    {
+     "title": "Krāpnieciskas SMS par jaunu WhatsApp numuru",
+     "link": "https://cert.lv/lv/2026/10/krapnieciskas-sms-par-jaunu-whatsapp-numuru",
+     "date": "2026-10-15T12:05:04+00:00",
+     "summary": "CERT.LV brīdina par jaunu krāpniecisku īsziņu (SMS) izplatīšanas kampaņu, kurā krāpnieki uzdodas par saņēmējam pazīstamām personām un aicina turpmākai saziņai izmantot jaunu tālruņa numuru lietotnē WhatsApp, apgalvojot, ka iepriekšējais numurs vairs nedarbojas."
+    },
     {
      "title": "Kritiska ievainojamība Collabora Online - Built-in CODE Server",
      "link": "https://cert.lv/lv/2026/10/kritiska-ievainojamiba-collabora-online-built-in-code-server",
@@ -849,12 +855,6 @@
      "link": "https://cert.lv/lv/2026/10/kritiska-ievanojamiba-atlassian-produktos",
      "date": "2026-10-06T10:29:57+00:00",
      "summary": "Programmatūras izstrādātājs Atlassian ir publicējis brīdinājumu par kritisku ievainojamību CVE-2026-21589 (CVSS 9.3), kas ietekmē Bitbucket Data Center, Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center, Crowd Data…"
-    },
-    {
-     "title": "Viltus sludinājumu krāpniecība",
-     "link": "https://cert.lv/lv/2026/10/viltus-sludinajumu-krapnieciba",
-     "date": "2026-10-06T08:47:42+00:00",
-     "summary": "CERT.LV informē, ka krāpnieki šobrīd aktīvi izvieto vilinošus sludinājumus, piedāvājot preces par neticami zemām cenām, taču to patiesais mērķis ir iegūt potenciālo pircēju maksājumu karšu datus."
     }
    ]
   },
@@ -1067,6 +1067,12 @@
    "via": "probed",
    "items": [
     {
+     "title": "Știrile săptămânii din cybersecurity (15.10.2026)",
+     "link": "https://dnsc.ro/citeste/stirile-saptamanii-din-cybersecurity-15-10-2026",
+     "date": "2026-10-15T12:13:11+00:00",
+     "summary": "Atacuri cibernetice asupra instalațiilor frigorifice din Franța. Cel puțin 350 de supermarketuri ..."
+    },
+    {
      "title": "ALERTĂ: Incident de securitate ce vizează vulnerabilități ale unor instalații frigorifice",
      "link": "https://dnsc.ro/citeste/alerta-incident-de-securitate-ce-vizeaza-vulnerabilitati-ale-unor-instalatii-frigorifice",
      "date": "2026-10-14T10:13:32+00:00",
@@ -1107,12 +1113,6 @@
      "link": "https://dnsc.ro/citeste/alert-vulnerabilitati-critice-exploatate-activ-in-citrix-netscaler",
      "date": "2026-09-28T10:53:04+00:00",
      "summary": "CONTEXT La data de 27 septembrie 2026, Citrix a publicat un buletin de securitate referitor la opt ..."
-    },
-    {
-     "title": "Știrile săptămânii din cybersecurity (24.09.2026)",
-     "link": "https://dnsc.ro/citeste/stirile-saptamanii-din-cybersecurity-24-09-2026",
-     "date": "2026-09-24T11:57:36+00:00",
-     "summary": "Vulnerabilitate critică în WordPress Core. Atacatorii pot ajunge la executarea de cod pe serv..."
     }
    ]
   },
@@ -1832,51 +1832,51 @@
    "via": "discovered",
    "items": [
     {
+     "title": "Drupal security advisory (AV26-1047)",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/drupal-security-advisory-av26-1047",
+     "date": "2026-10-15T15:19:12+00:00",
+     "summary": ""
+    },
+    {
+     "title": "HPE security advisory (AV26-1046)",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/hpe-security-advisory-av26-1046",
+     "date": "2026-10-15T15:09:14+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Google security advisory (AV26-1045)",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1045",
+     "date": "2026-10-15T14:50:27+00:00",
+     "summary": ""
+    },
+    {
+     "title": "n8n security advisory (AV26-1044)",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/n8n-security-advisory-av26-1044",
+     "date": "2026-10-15T14:40:03+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Juniper Networks security advisory (AV26-1043)",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-1043",
+     "date": "2026-10-15T13:44:50+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Palo Alto Networks security advisory (AV26-1041) - Update 1",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-1041",
+     "date": "2026-10-15T13:11:51+00:00",
+     "summary": ""
+    },
+    {
      "title": "Cisco security advisory (AV26-1042) – Update 1",
      "link": "https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1042",
      "date": "2026-10-14T20:00:12+00:00",
      "summary": ""
     },
     {
-     "title": "Palo Alto Networks security advisory (AV26-1041)",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-1041",
-     "date": "2026-10-14T19:08:03+00:00",
-     "summary": ""
-    },
-    {
      "title": "IBM security advisory (AV26-1040)",
      "link": "https://cyber.gc.ca/en/alerts-advisories/ibm-security-advisory-av26-1040",
      "date": "2026-10-14T18:31:46+00:00",
-     "summary": ""
-    },
-    {
-     "title": "Adobe security advisory (AV26-1039)",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-1039",
-     "date": "2026-10-14T15:44:16+00:00",
-     "summary": ""
-    },
-    {
-     "title": "Microsoft security advisory – October 2026 monthly rollup (AV26-1038)",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/microsoft-security-advisory-october-2026-monthly-rollup-av26-1038",
-     "date": "2026-10-14T15:36:15+00:00",
-     "summary": ""
-    },
-    {
-     "title": "Fortinet security advisory (AV26-1037)",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-1037",
-     "date": "2026-10-13T20:21:54+00:00",
-     "summary": ""
-    },
-    {
-     "title": "Esri security advisory (AV26-1036)",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/esri-security-advisory-av26-1036",
-     "date": "2026-10-13T20:10:52+00:00",
-     "summary": ""
-    },
-    {
-     "title": "Ivanti security advisory (AV26-1035)",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1035",
-     "date": "2026-10-13T19:32:43+00:00",
      "summary": ""
     }
    ]
@@ -1997,6 +1997,12 @@
    "via": "known",
    "items": [
     {
+     "title": "Cisco 제품 보안 업데이트 권고",
+     "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6ad0c6c0b5290478048efbec",
+     "date": "2026-10-15T12:27:44+00:00",
+     "summary": "□ 개요 o Cisco社는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표 [1] o 해당 취약점은 실제 공격에 악용되고 있으며, 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 설명 o Cisco Secure Email Gateway에서 발생하는 임의 파일 기록(Arbitrary File Write) 취약점(CVE-2026-76519) [1][2] □ 영향을 받는 제품 및 해결 방안 | 취약점 | 제품명 | 영향받는 버전 | 해결 버전 |…"
+    },
+    {
      "title": "MS 10월 보안 위협에 따른 정기 보안 업데이트 권고",
      "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6ad07b97b5290478048ef9ac",
      "date": "2026-10-15T07:07:03+00:00",
@@ -2037,12 +2043,6 @@
      "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6acc6b26b4f3e447302d35fd",
      "date": "2026-10-12T05:07:50+00:00",
      "summary": "□ 개요 o Citrix社는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표 \\[1\\] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 설명 o NetScaler ADC, NetScaler Gateway에서 발생하는 Improper Restriction of Operations within the Bounds of a Memory Buffer 취약점(CVE-2026-107406) \\[1\\]\\[2\\] □ 영향을 받는 제품 및 해결 방안 |…"
-    },
-    {
-     "title": "美 CISA 발표 주요 Exploit 정보공유(Update. 2026-10-08)",
-     "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6ac65e70b508ccb76d5d3437",
-     "date": "2026-10-07T15:00:00+00:00",
-     "summary": "□ 개요 o 美 CISA에서 현재 자주 악용되고 있는 취약점 목록 발표 [1] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 영향을 받는 제품 | CVE | 제조사 | 취약점 | 내용 | 조치사항 | | :---: | :---: | :---: | --- | --- | | CVE-2015-3306 | ProFTPD | ProFTPD Improper Access Control Vulnerability | ProFTPD contains an…"
     }
    ]
   },
