@@ -1,11 +1,17 @@
 {
- "updated": "2026-10-16T04:44:44+00:00",
+ "updated": "2026-10-16T11:38:05+00:00",
  "teams": {
   "cert-pl": {
    "status": "ok",
    "feed": "https://cert.pl/en/atom.xml",
    "via": "known",
    "items": [
+    {
+     "title": "Vulnerability in NordVPN software",
+     "link": "https://cert.pl/en/posts/2026/10/CVE-2026-106030/",
+     "date": "2026-10-16T08:55:00+00:00",
+     "summary": "Incorrect Authorization vulnerability (CVE-2026-106030) has been found in NordVPN software."
+    },
     {
      "title": "Vulnerability in Sparx Systems Enterprise Architect software",
      "link": "https://cert.pl/en/posts/2026/10/CVE-2026-88794/",
@@ -47,12 +53,6 @@
      "link": "https://cert.pl/en/posts/2026/09/CVE-2026-74864/",
      "date": "2026-09-30T10:55:00+00:00",
      "summary": "CERT Polska has received a report about 2 vulnerabilities (CVE-2026-74864 and CVE-2026-74865) found in YunoHost-Apps sogo_yhn software."
-    },
-    {
-     "title": "Vulnerability in Quick.Cart software",
-     "link": "https://cert.pl/en/posts/2026/09/CVE-2026-41875/",
-     "date": "2026-09-29T13:55:00+00:00",
-     "summary": "Cross-Site Request Forgery (CSRF) vulnerability (CVE-2026-41875) has been found in Quick.Cart software."
     }
    ]
   },
@@ -534,52 +534,52 @@
    "via": "known",
    "items": [
     {
-     "title": "[NEU] [mittel] Red Hat Enterprise Linux (lrzsz): Mehrere Schwachstellen",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3978",
-     "date": "2026-10-15T13:16:15+00:00",
-     "summary": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in Red Hat Enterprise Linux (lrzsz) ausnutzen, um Dateien zu manipulieren oder beliebigen Programmcode mit Benutzerrechten auszuführen."
+     "title": "[NEU] [UNGEPATCHT] [mittel] PJSIP: Mehrere Schwachstellen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4007",
+     "date": "2026-10-16T11:30:51+00:00",
+     "summary": "Ein entfernter, anonymer Angreifer kann mehrere Schwachstellen in PJSIP ausnutzen, um einen Denial of Service Angriff durchzuführen oder Informationen offenzulegen."
     },
     {
-     "title": "[NEU] [UNGEPATCHT] [mittel] Synacor Zimbra: Mehrere Schwachstellen",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3977",
-     "date": "2026-10-15T13:16:15+00:00",
-     "summary": "Ein Angreifer kann mehrere Schwachstellen in Synacor Zimbra ausnutzen, um Sicherheitsvorkehrungen zu umgehen, und um Informationen offenzulegen."
+     "title": "[NEU] [hoch] Apache Camel: Mehrere Schwachstellen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4006",
+     "date": "2026-10-16T11:25:51+00:00",
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in Apache Camel ausnutzen, um beliebigen Programmcode auszuführen, um Informationen offenzulegen, um Dateien zu manipulieren und um Sicherheitsvorkehrungen zu umgehen."
     },
     {
-     "title": "[NEU] [hoch] Juniper Junos OS und Junos OS Evolved: Mehrere Schwachstellen",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3976",
-     "date": "2026-10-15T13:16:15+00:00",
-     "summary": "Ein Angreifer kann mehrere Schwachstellen in Juniper JUNOS ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen, erweiterte Rechte zu erlangen, Sicherheitsmaßnahmen zu umgehen, Daten zu manipulieren und offenzulegen oder Denial-of-Service-Zustände…"
+     "title": "[NEU] [mittel] Apache Airflow: Mehrere Schwachstellen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4005",
+     "date": "2026-10-16T11:25:51+00:00",
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in Apache Airflow ausnutzen, um Sicherheitsvorkehrungen zu umgehen oder Informationen offenzulegen."
     },
     {
-     "title": "[NEU] [UNGEPATCHT] [niedrig] CUPS: Mehrere Schwachstellen",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3975",
-     "date": "2026-10-15T13:15:54+00:00",
-     "summary": "Ein Angreifer kann mehrere Schwachstellen in CUPS ausnutzen, um einen Denial of Service Angriff durchzuführen, um Informationen offenzulegen und um seine Privilegien zu erhöhen."
+     "title": "[NEU] [hoch] Sonatype Nexus Repository Manager: Mehrere Schwachstellen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4004",
+     "date": "2026-10-16T11:20:51+00:00",
+     "summary": "Ein Angreifer kann mehrere Schwachstellen in Sonatype Nexus Repository Manager ausnutzen, um Sicherheitsvorkehrungen zu umgehen, Informationen offenzulegen, beliebigen Programmcode auszuführen oder Administratorrechte zu erlangen, sowie um einen Cross-Site Scripting Angriff…"
     },
     {
-     "title": "[UPDATE] [hoch] Ghostscript: Schwachstelle ermöglicht Codeausführung",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3777",
-     "date": "2026-10-15T13:15:54+00:00",
-     "summary": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Ghostscript ausnutzen, um beliebigen Programmcode auszuführen."
+     "title": "[NEU] [mittel] FasterXML Jackson: Schwachstelle ermöglicht Denial of Service",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4003",
+     "date": "2026-10-16T10:45:51+00:00",
+     "summary": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in FasterXML Jackson ausnutzen, um einen Denial of Service Angriff durchzuführen."
     },
     {
-     "title": "[UPDATE] [mittel] Ghostscript: Schwachstelle ermöglicht Manipulation von Dateien und DoS",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3684",
-     "date": "2026-10-15T13:15:54+00:00",
-     "summary": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in Ghostscript ausnutzen, um möglicherweise Daten offenzulegen oder zu manipulieren oder einen Denial-of-Service-Zustand herbeizuführen."
+     "title": "[NEU] [mittel] Grafana: Schwachstelle ermöglicht Manipulation von Daten",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4002",
+     "date": "2026-10-16T10:45:51+00:00",
+     "summary": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in Grafana ausnutzen, um Daten zu manipulieren."
     },
     {
-     "title": "[UPDATE] [hoch] Rancher: Schwachstelle ermöglicht Privilegieneskalation",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2025-0890",
-     "date": "2026-10-15T13:15:54+00:00",
-     "summary": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in Rancher ausnutzen, um seine Privilegien zu erhöhen."
+     "title": "[NEU] [kritisch] BeyondTrust Remote Support: Schwachstelle ermöglicht Umgehen von Sicherheitsvorkehrungen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-4001",
+     "date": "2026-10-16T10:45:51+00:00",
+     "summary": "Ein entfernter, anonymer Angreifer kann eine Schwachstelle in BeyondTrust Remote Support ausnutzen, um Sicherheitsvorkehrungen zu umgehen."
     },
     {
-     "title": "[NEU] [hoch] Netgate pfSense: Schwachstelle ermöglicht Ausführen von beliebigem Programmcode mit Administratorrechten",
-     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3974",
-     "date": "2026-10-15T13:15:53+00:00",
-     "summary": "Ein entfernter, authentisierter Angreifer kann eine Schwachstelle in Netgate pfSense ausnutzen, um beliebigen Programmcode mit Administratorrechten auszuführen."
+     "title": "[UPDATE] [hoch] Linux Kernel: Mehrere Schwachstellen",
+     "link": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-1700",
+     "date": "2026-10-16T10:38:36+00:00",
+     "summary": "Ein Angreifer kann mehrere Schwachstellen im Linux Kernel ausnutzen, um einen Denial of Service Angriff durchzuführen oder andere nicht näher spezifizierte Auswirkungen zu erzielen."
     }
    ]
   },
@@ -588,6 +588,12 @@
    "feed": "https://cyber.gov.gr/feed/",
    "via": "known",
    "items": [
+    {
+     "title": "Αναβαθμίζεται ο ρόλος του NCC-EL – Καθήκοντα Αντιπροέδρου του Δικτύου Εθνικών Κέντρων Συντονισμού NCCs αναλαμβάνει ο κ. Ιωάννης Πανoλίας",
+     "link": "https://cyber.gov.gr/anavathmizetai-o-rolos-toy-ncc-el-kathikonta-antiproedroy-toy-diktyoy-ethnikon-kentron-syntonismoy-nccs-analamvanei-o-k-ioannis-panolias/",
+     "date": "2026-10-16T08:04:38+00:00",
+     "summary": "Με την εκλογή της Προέδρου του Δικτύου των Εθνικών Κέντρων Συντονισμού (NCCs) κα. Ruta Apeikyte, από το Εθνικό Κέντρο Κυβερνοασφάλειας της Λιθουανίας (NKSC/CERT-LT) και του Αντιπροέδρου κ. Ιωάννη Πανολία από… Το άρθρο Αναβαθμίζεται ο ρόλος του NCC-EL – Καθήκοντα Αντιπροέδρου…"
+    },
     {
      "title": "Εκτεθειμένοι βιομηχανικοί ελεγκτές στο στόχαστρο κυβερνοεπιθέσεων – H ΕΑΚ συνιστά άμεση αποσύνδεση από το δημόσιο διαδίκτυο",
      "link": "https://cyber.gov.gr/ektetheimenoi-viomichanikoi-elegktes-sto-stochastro-kyvernoepitheseon-h-eak-synista-amesi-aposyndesi-apo-to-dimosio-diadiktyo/",
@@ -629,17 +635,11 @@
      "link": "https://cyber.gov.gr/kampanaki-kindynoy-kroyei-i-eak-otan-o-kodikos-prosvasis-ginetai-pyli-eisodoy-kakovoylon/",
      "date": "2026-09-28T12:53:25+00:00",
      "summary": "Προστατεύουμε εταιρικά και υπηρεσιακά διαπιστευτήρια από υποκλοπή και κακόβουλη αξιοποίηση Η Εθνική Αρχή Κυβερνοασφάλειας διαπιστώνει ότι σημαντικός αριθμός εταιρικών και υπηρεσιακών διαπιστευτηρίων κυκλοφορεί σε παράνομες αγορές του διαδικτύου. Τα διαπιστευτήρια… Το άρθρο…"
-    },
-    {
-     "title": "Διοικητής ΕΑΚ Μ. Μπλέτσας στην ΕΡΤ1 : «Ψυχραιμία και δυσπιστία στην πρώτη γραμμή άμυνας απέναντι στις σύγχρονες κυβερνοαπάτες»",
-     "link": "https://cyber.gov.gr/dioikitis-eak-m-mpletsas-stin-ert1-psychraimia-kai-dyspistia-stin-proti-grammi-amynas-apenanti-stis-sygchrones-kyvernoapates/",
-     "date": "2026-09-25T14:23:33+00:00",
-     "summary": "Την ανάγκη να διατηρούμε την ψυχραιμία μας και να ενεργοποιούμε τους μηχανισμούς λογικής πριν αντιδράσουμε σε ένα ύποπτο μήνυμα, τηλεφώνημα ή βιντεοκλήση, ανέδειξε ο Διοικητής της Εθνικής Αρχής Κυβερνοασφάλειας (ΕΑΚ)… Το άρθρο Διοικητής ΕΑΚ Μ. Μπλέτσας στην ΕΡΤ1 : «Ψυχραιμία…"
     }
    ]
   },
   "nki-hu": {
-   "status": "ok",
+   "status": "stale",
    "feed": "https://nki.gov.hu/figyelmeztetesek/riasztas/feed/",
    "via": "known",
    "items": [
@@ -691,7 +691,8 @@
      "date": "2026-09-17T11:27:57+00:00",
      "summary": "A Nemzetbiztonsági Szakszolgálat Nemzeti Kiberbiztonsági Intézet riasztást ad ki a Cisco Identity Services Engine (ISE) és az ISE Passive Identity Connector (ISE-PIC) termékeket érintő, CVE-2026-76460 azonosítón nyomon követett kritikus sérülékenység kapcsán. A sebezhetőség…"
     }
-   ]
+   ],
+   "error": "latest fetch failed"
   },
   "ncsc-ie": {
    "status": "ok",
@@ -749,7 +750,7 @@
    ]
   },
   "csirt-it": {
-   "status": "ok",
+   "status": "stale",
    "feed": "https://www.acn.gov.it/portale/feedrss/-/journal/rss/20119/723192",
    "via": "known",
    "items": [
@@ -801,7 +802,8 @@
      "date": "2026-10-15T09:49:25+00:00",
      "summary": "Rilasciati aggiornamenti di sicurezza per sanare 36 vulnerabilità, di cui una con gravità “critica” e due con gravità “alta”, in Gitea, piattaforma collaborativa open source per la gestione del codice sorgente e lo sviluppo di applicazioni software. Tali vulnerabilità, qualora…"
     }
-   ]
+   ],
+   "error": "latest fetch failed"
   },
   "cert-lv": {
    "status": "ok",
@@ -934,7 +936,7 @@
    ]
   },
   "csirt-mt": {
-   "status": "stale",
+   "status": "ok",
    "feed": "https://ncc-mita.gov.mt/feed/",
    "via": "probed",
    "items": [
@@ -986,8 +988,7 @@
      "date": "2026-05-08T09:16:59+00:00",
      "summary": "A campaign on national television captures the despair of a senior executive after he inadvertently clicks an email … Continued"
     }
-   ],
-   "error": "latest fetch failed"
+   ]
   },
   "ncsc-nl": {
    "status": "ok",
@@ -995,52 +996,52 @@
    "via": "known",
    "items": [
     {
-     "title": "NCSC-2026-0429 [1.00] [H/H] Kwetsbaarheid verholpen in Cisco Secure Email Gateway",
-     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0429",
-     "date": "2026-10-14T18:46:36+00:00",
-     "summary": "Cisco heeft een kwetsbaarheid verholpen in Cisco Secure Email Gateway, specifiek in de Advanced Malware Protection feature. De kwetsbaarheid bevindt zich in de wijze waarop de Advanced Malware Protection feature e-mailbijlagen verwerkt wanneer de file reputation service is…"
+     "title": "NCSC-2026-0437 [1.00] [H/H] Kwetsbaarheid verholpen in BeyondTrust Remote Support",
+     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0437",
+     "date": "2026-10-16T08:59:16+00:00",
+     "summary": "BeyondTrust heeft een kritieke kwetsbaarheid verholpen in BeyondTrust Remote Support. De kwetsbaarheid met kenmerk CVE-2026-102764 heeft een CVSS-score van 9.3 en betreft onvoldoende validatie van de herkomst van berichten binnen de interne componenten van het product. Hierdoor…"
     },
     {
-     "title": "NCSC-2026-0428 [1.00] [M/H] Kwetsbaarheden verholpen in Fortinet FortiSandbox",
-     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0428",
-     "date": "2026-10-14T14:31:17+00:00",
-     "summary": "Fortinet heeft kwetsbaarheden verholpen in FortiSandbox. De kwetsbaarheid met kenmerk CVE-2026-107656 heeft een CVSS-score van 9,6 en betreft een authenticatieomzeiling in de webmanagementinterface van FortiSandbox. Een niet-geauthenticeerde kwaadwillende kan via speciaal…"
+     "title": "NCSC-2026-0436 [1.00] [M/H] Kwetsbaarheden verholpen in Adobe Commerce",
+     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0436",
+     "date": "2026-10-16T06:32:06+00:00",
+     "summary": "Adobe heeft meerdere kwetsbaarheden verholpen in Adobe Commerce. De kwetsbaarheden betreffen onder andere stored Cross-Site Scripting (XSS) waarbij aanvallers kwaadaardige JavaScript-code kunnen injecteren in formuliervelden binnen de applicatie. Deze code wordt uitgevoerd in…"
     },
     {
-     "title": "NCSC-2026-0427 [1.00] [M/H] Kwetsbaarheden verholpen in Ahsay AhsayCBS",
-     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0427",
-     "date": "2026-10-14T13:19:14+00:00",
-     "summary": "Ahsay heeft kwetsbaarheden verholpen in AhsayCBS tot en met versie 10.3.2. De kwetsbaarheid met kenmerk CVE-2026-105133 heeft een CVSS-score van 7,3 en betreft onvoldoende authenticatie in de functie checkSysPwd van de AhsayCBS API. Een niet-geauthenticeerde kwaadwillende kan…"
+     "title": "NCSC-2026-0435 [1.00] [M/H] Kwetsbaarheden verholpen in Adobe ColdFusion",
+     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0435",
+     "date": "2026-10-16T06:30:43+00:00",
+     "summary": "Adobe heeft meerdere kwetsbaarheden verholpen in Adobe ColdFusion. De kwetsbaarheden in Adobe ColdFusion omvatten onder andere Server-Side Request Forgery (SSRF), Incorrect Authorization, Improper Input Validation, code-injectie, XML External Entity (XXE), Uncontrolled Resource…"
     },
     {
-     "title": "NCSC-2026-0426 [1.00] [M/H] Kwetsbaarheden verholpen in Microsoft Developer Tools",
-     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0426",
-     "date": "2026-10-13T18:56:15+00:00",
-     "summary": "Microsoft heeft kwetsbaarheden verholpen in diverse componenten van de Developer Tools, zoals .NET en Visual Studio. Een kwaadwillende kan aanvallen uitvoeren die kunnen leiden tot de categoriën schade zoals weergegeven in de onderstaande tabellen. .NET:…"
+     "title": "NCSC-2026-0434 [1.00] [M/H] Kwetsbaarheden verholpen in Fortinet FortiSIEM",
+     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0434",
+     "date": "2026-10-16T06:28:22+00:00",
+     "summary": "Fortinet heeft kwetsbaarheden verholpen in FortiSIEM versie 7.5.0. De eerste kwetsbaarheid betreft een path traversal probleem waarbij het systeem onvoldoende beperkingen oplegt aan padnamen naar beperkte directories. Hierdoor kan een niet-geauthenticeerde aanvaller speciaal…"
     },
     {
-     "title": "NCSC-2026-0425 [1.00] [M/H] Kwetsbaarheden verholpen in Microsoft System Center",
-     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0425",
-     "date": "2026-10-13T18:55:30+00:00",
-     "summary": "Microsoft heeft kwetsbaarheden verholpen in de Configuration Manager en Defender. Een lokale kwaadwillende kan de kwetsbaarheden misbruiken om zich verhoogde rechten toe te kennen en mogelijk toegang te krijgen tot gevoelige gegevens. Microsoft Configuration Manager:…"
+     "title": "NCSC-2026-0433 [1.00] [M/H] Kwetsbaarheden verholpen in IBM Guardium Data Protection",
+     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0433",
+     "date": "2026-10-16T06:24:12+00:00",
+     "summary": "IBM heeft meerdere kwetsbaarheden verholpen in IBM Guardium Data Protection versies 12.0, 12.1 en 12.2. De kwetsbaarheden betreffen onder andere remote code execution via path traversal, meerdere SQL-injectieproblemen, en diverse buffer overflow kwetsbaarheden (heap-based,…"
     },
     {
-     "title": "NCSC-2026-0424 [1.00] [M/H] Kwetsbaarheden verholpen in Microsoft Dynamics",
-     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0424",
-     "date": "2026-10-13T18:54:39+00:00",
-     "summary": "Microsoft heeft kwetsbaarheden verholpen in diverse Dynamics componenten. Een kwaadwillende kan de kwetsbaarheden misbruiken om aanvallen uit te voeren die kunnen leiden tot de categorieën schade zoals benoemd in onderstaande tabellen: Microsoft Dataverse:…"
+     "title": "NCSC-2026-0432 [1.00] [M/H] Kwetsbaarheden verholpen in HPE Brocade Fabric OS",
+     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0432",
+     "date": "2026-10-16T06:23:02+00:00",
+     "summary": "HPE heeft meerdere beveiligingsproblemen verholpen in Brocade Fabric OS, specifiek in versies vóór 10.0.1 en in de 9.2.x en 10.0.x release lijnen. De kwetsbaarheden omvatten onder andere authenticatieomzeiling, denial of service, informatielekken, privilege-escalatie, buffer…"
     },
     {
-     "title": "NCSC-2026-0423 [1.00] [M/H] Kwetsbaarheden verholpen in Microsoft Windows",
-     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0423",
-     "date": "2026-10-13T18:49:46+00:00",
-     "summary": "Microsoft heeft 1159 kwetsbaarheden verholpen in Windows. Het voert te ver om iedere kwetsbaarheid te benoemen. De 53 ernstigste kwetsbaarheden, met een CVSS score van 9 en hoger zijn weergegeven in onderstaande lijst en geven een kwaadwillende de mogelijkheid om zich voor te…"
+     "title": "NCSC-2026-0431 [1.00] [M/H] Kwetsbaarheden verholpen in IBM DataPower Gateway en onderliggende componenten",
+     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0431",
+     "date": "2026-10-16T06:16:13+00:00",
+     "summary": "IBM heeft meerdere beveiligingsproblemen opgelost in DataPower Gateway versies 10.5 tot 11.0 en een veelvoud aan onderliggende subcomponenten. De kwetsbaarheden betreffen een breed scala aan problemen zoals use-after-free bugs, race conditions, buffer overflows, null pointer…"
     },
     {
-     "title": "NCSC-2026-0422 [1.00] [M/H] Kwetsbaarheden verholpen in Microsoft Office",
-     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0422",
-     "date": "2026-10-13T18:36:28+00:00",
-     "summary": "Microsoft heeft xxx kwetsbaarheden verholpen in diverse Office producten, zoals Word, Excel, Access, Outlook, Visio, Sharepoint en PowerPoint, maar ook subcomponenten als Shell, Azure Key Vault en Click-to-Run. Een kwaadwillende kan de kwetsbaarheden misbruiken om een…"
+     "title": "NCSC-2026-0430 [1.00] [M/H] Kwetsbaarheden verholpen in Juniper Networks Junos OS",
+     "link": "https://advisories.ncsc.nl/advisory?id=NCSC-2026-0430",
+     "date": "2026-10-16T06:11:46+00:00",
+     "summary": "Juniper heeft meerdere kwetsbaarheden verholpen in Junos OS. De kwetsbaarheden bevinden zich in verschillende componenten van Junos OS, waaronder de VXLAN Gateway Daemon (vgd), kmd op MX Series routers, SDK service met JDAF routing, TWAMP client (rmopd service), gRPC library,…"
     }
    ]
   },
@@ -1232,6 +1233,36 @@
    "via": "known",
    "items": [
     {
+     "title": "Gestión incorrecta de mayúsculas y minúsculas en Wazuh Manager",
+     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/gestion-incorrecta-de-mayusculas-y-minusculas-en-wazuh-manager",
+     "date": "2026-10-16T07:37:32+00:00",
+     "summary": "Gestión incorrecta de mayúsculas y minúsculas en Wazuh Manager Vie, 16/10/2026 - 09:37 Aviso Recursos Afectados Wazuh Manager, versiones desde la 4.14.3, inclusive, pero anteriores a la 4.14.8. Descripción namd0ng y vikman90 han informado sobre una vulnerabilidad de severidad…"
+    },
+    {
+     "title": "Múltiples vulnerabilidades en Next.js de Vercel",
+     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-nextjs-de-vercel",
+     "date": "2026-10-16T07:37:31+00:00",
+     "summary": "Múltiples vulnerabilidades en Next.js de Vercel Vie, 16/10/2026 - 09:37 Aviso Recursos Afectados Las siguientes versiones y configuraciones de Next.js: versiones desde la 16.0.0 hasta la 16.4.0, cuando se utiliza App Router con Cache Components y una función use cache devuelve…"
+    },
+    {
+     "title": "Omisión de autenticación mediante suplantación en Remote Support de BeyondTrust",
+     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/omision-de-autenticacion-mediante-suplantacion-en-remote-support-de-beyondtrust",
+     "date": "2026-10-16T07:37:29+00:00",
+     "summary": "Omisión de autenticación mediante suplantación en Remote Support de BeyondTrust Vie, 16/10/2026 - 09:37 Aviso Recursos Afectados BeyondTrust Remote Support, todas las versiones hasta la 26.2.3, inclusive. Descripción BeyondTrust ha publicado una vulnerabilidad de severidad…"
+    },
+    {
+     "title": "Inyección SQL en Profleet de TSG",
+     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/inyeccion-sql-en-profleet-de-tsg",
+     "date": "2026-10-16T07:27:19+00:00",
+     "summary": "Inyección SQL en Profleet de TSG Vie, 16/10/2026 - 09:27 Aviso Recursos Afectados TSG Profleet versión 12.004.01. Descripción INCIBE ha coordinado la publicación de una vulnerabilidad de severidad crítica, que afecta a Profleet de TSG, proveedor de soluciones para el…"
+    },
+    {
+     "title": "Server-Side Request Forgery en la exportación a PDF de Wegow",
+     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/server-side-request-forgery-en-la-exportacion-pdf-de-wegow",
+     "date": "2026-10-16T07:25:00+00:00",
+     "summary": "Server-Side Request Forgery en la exportación a PDF de Wegow Vie, 16/10/2026 - 09:25 Aviso Recursos Afectados Funcionalidad de exportación a PDF de gráficos de ventas de entradas del portal backoffice.wegow.com. Descripción INCIBE ha coordinado la publicación de una…"
+    },
+    {
      "title": "Omisión de autenticación en Stela de Diaple Networking",
      "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/omision-de-autenticacion-en-stela-de-diaple-networking",
      "date": "2026-10-15T07:59:45+00:00",
@@ -1248,36 +1279,6 @@
      "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/inyeccion-de-codigo-en-pan-os-de-palo-alto-networks",
      "date": "2026-10-15T07:40:43+00:00",
      "summary": "Inyección de código en PAN-OS de Palo Alto Networks Jue, 15/10/2026 - 09:40 Aviso Recursos Afectados PAN-OS instalado en cortafuegos PA-Series y VM-Series, y en dispositivos Panorama virtuales y M-Series, en las siguientes versiones: PAN-OS 12.2, versiones anteriores a la…"
-    },
-    {
-     "title": "Múltiples vulnerabilidades en productos de Cisco",
-     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-cisco-17",
-     "date": "2026-10-15T07:40:42+00:00",
-     "summary": "Múltiples vulnerabilidades en productos de Cisco Jue, 15/10/2026 - 09:40 Aviso Recursos Afectados Versiones 15.5 y anteriores, 16.0 y 16.5 de: Cisco Secure Email Gateway, tanto en dispositivos físicos como virtuales; Cisco Secure Email and Web Manager. La vulnerabilidad…"
-    },
-    {
-     "title": "Múltiples vulnerabilidades en Integrated Lights-Out de HPE",
-     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-integrated-lights-out-de-hpe",
-     "date": "2026-10-14T09:52:52+00:00",
-     "summary": "Múltiples vulnerabilidades en Integrated Lights-Out de HPE Mié, 14/10/2026 - 11:52 Aviso Recursos Afectados HPE Integrated Lights-Out 5 (iLO 5) para servidores HPE Gen10, versiones anteriores a la 3.22; HPE Integrated Lights-Out 6 (iLO 6), versiones anteriores a la 1.79; HPE…"
-    },
-    {
-     "title": "Boletín mensual de seguridad de SAP de octubre de 2026",
-     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/boletin-mensual-de-seguridad-de-sap-de-octubre-de-2026",
-     "date": "2026-10-14T09:08:02+00:00",
-     "summary": "Boletín mensual de seguridad de SAP de octubre de 2026 Mié, 14/10/2026 - 11:08 Aviso Recursos Afectados El boletín incluye vulnerabilidades en las siguientes versiones y productos: SAP Cloud SDK for Python, versiones anteriores a 0.45.2. SAP NetWeaver Visual Composer,…"
-    },
-    {
-     "title": "Múltiples vulnerabilidades en TSplus Remote Access",
-     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-tsplus-remote-access",
-     "date": "2026-10-14T08:34:32+00:00",
-     "summary": "Múltiples vulnerabilidades en TSplus Remote Access Mié, 14/10/2026 - 10:34 Aviso Recursos Afectados TSplus Remote Access, versión 19.20.3.10. Se ha confirmado que esta versión está afectada, aunque otras versiones anteriores podrían verse afectadas. Descripción INCIBE ha…"
-    },
-    {
-     "title": "Múltiples vulnerabilidades en productos de Fortinet",
-     "link": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-fortinet-3",
-     "date": "2026-10-14T08:03:50+00:00",
-     "summary": "Múltiples vulnerabilidades en productos de Fortinet Mié, 14/10/2026 - 10:03 Aviso Recursos Afectados FortiSIEM 7.5.0. FortiSandbox, versiones comprendidas entre la 5.0.0 y la 5.0.6. FortiSandbox, versiones comprendidas entre la 4.4.0 y la 4.4.9. FortiSandbox PaaS, versiones…"
     }
    ]
   },
@@ -1305,6 +1306,12 @@
    "feed": "https://www.cert.se/feed.rss",
    "via": "known",
    "items": [
+    {
+     "title": "CERT-SE:s veckobrev v.42",
+     "link": "https://www.cert.se/2026/10/cert-se-veckobrev-v42.html",
+     "date": "2026-10-16T09:30:00+00:00",
+     "summary": "I veckans brev bjuder vi bland annat på rekommendationer om cyberfysiska system, insikter om hur cyberkriminella storskaliga nätfiskekampanjer fungerar och en inbjudan till rundabordssamtal med fokus på lärande för att stärka Sveriges cybersäkerhet."
+    },
     {
      "title": "Patchtisdag oktober 2026",
      "link": "https://www.cert.se/2026/10/patchtisdag-oktober-2026.html",
@@ -1346,12 +1353,6 @@
      "link": "https://www.cert.se/2026/09/information-om-kritiska-sarbarheter-i-citrixnetscaler.html",
      "date": "2026-09-27T16:09:00+00:00",
      "summary": "Citrix har publicerat information om allvarliga och kritiska sårbarheter i Citrix NetScaler ADC (tidigare Citrix ADC) and Citrix NetScaler Gateway (tidigare Citrix Gateway). Två av sårbarheterna, CVE-2026-88771 och CVE-2026-88772, har fått en CVSS-klassning på 9.5 där ett ett…"
-    },
-    {
-     "title": "CERT-SE:s veckobrev v.39",
-     "link": "https://www.cert.se/2026/09/cert-se-veckobrev-v39.html",
-     "date": "2026-09-25T08:45:00+00:00",
-     "summary": "För tionde året genomförs Beredskapsveckan i Sverige vecka 39. I år är det fokus på Sveriges totalförsvar, där samhällets motståndskraft mot cyberhot är en viktig del. Tänk på att ha en radio inställd på Sveriges Radio P4 och viktiga telefonnummer nedskrivna på papper."
     }
    ]
   },
@@ -2052,6 +2053,24 @@
    "via": "discovered",
    "items": [
     {
+     "title": "Multiple Vulnerabilities in MariaDB Server",
+     "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-144",
+     "date": "2026-10-15T16:00:00+00:00",
+     "summary": "Attackers can exploit high-severity vulnerabilities in MariaDB Server to execute arbitrary code on the affected system. Patch promptly."
+    },
+    {
+     "title": "Critical Vulnerabilities in Splunk Enterprise",
+     "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-145",
+     "date": "2026-10-15T16:00:00+00:00",
+     "summary": "Attackers can exploit critical vulnerabilities in Splunk Enterprise to escalate privileges and execute arbitrary code. Patch immediately."
+    },
+    {
+     "title": "Active Exploitation of Vulnerability in Palo Alto Networks Products",
+     "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-143",
+     "date": "2026-10-15T16:00:00+00:00",
+     "summary": "Attackers are exploiting a high-severity vulnerability in Palo Alto Networks PAN-OS to execute arbitrary code with root privileges. Patch immediately."
+    },
+    {
      "title": "October 2026 Monthly Patch",
      "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-142",
      "date": "2026-10-13T16:00:00+00:00",
@@ -2080,24 +2099,6 @@
      "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-140",
      "date": "2026-10-11T16:00:00+00:00",
      "summary": "Attackers can exploit a critical vulnerability in Citrix NetScaler ADC and NetScaler Gateway to perform remote code execution or cause a denial of service on the affected system. Patch immediately."
-    },
-    {
-     "title": "Critical Vulnerabilities in HPE Networking ClearPass Policy Manager",
-     "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-139",
-     "date": "2026-10-11T16:00:00+00:00",
-     "summary": "Attackers can exploit critical vulnerabilities in HPE Networking ClearPass Policy Manager to bypass authentication, execute arbitrary code, or gain full administrative access to the affected system. Patch immediately."
-    },
-    {
-     "title": "Critical Vulnerability in Veeam Backup & Replication",
-     "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-138",
-     "date": "2026-10-08T16:00:00+00:00",
-     "summary": "Attackers with the Backup Viewer role can exploit a critical vulnerability in Veeam Backup & Replication to execute arbitrary code as SYSTEM. Patch immediately."
-    },
-    {
-     "title": "Critical Vulnerability in SonicWall SMA1000 Series",
-     "link": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-137",
-     "date": "2026-10-07T16:00:00+00:00",
-     "summary": "SonicWall has released security updates to address a critical vulnerability in the SMA1000 series appliances. Users and administrators of affected products are advised to update to the latest version immediately."
     }
    ]
   },
@@ -2105,6 +2106,7 @@
    "status": "no-feed",
    "blocked": false,
    "tried": [
+    "https://www.cert-in.org.in/ (discovery: TimeoutError)",
     "https://www.cert-in.org.in/feed/",
     "https://www.cert-in.org.in/rss.xml",
     "https://www.cert-in.org.in/rss",
