@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T21:34:41+00:00",
+ "updated": "2026-10-16T04:44:44+00:00",
  "teams": {
   "cert-pl": {
    "status": "ok",
@@ -934,7 +934,7 @@
    ]
   },
   "csirt-mt": {
-   "status": "ok",
+   "status": "stale",
    "feed": "https://ncc-mita.gov.mt/feed/",
    "via": "probed",
    "items": [
@@ -986,7 +986,8 @@
      "date": "2026-05-08T09:16:59+00:00",
      "summary": "A campaign on national television captures the despair of a senior executive after he inadvertently clicks an email … Continued"
     }
-   ]
+   ],
+   "error": "latest fetch failed"
   },
   "ncsc-nl": {
    "status": "ok",
@@ -1996,6 +1997,12 @@
    "via": "known",
    "items": [
     {
+     "title": "Palo Alto Networks 제품 보안 업데이트 권고",
+     "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6ad17aa3b5290478048effe0",
+     "date": "2026-10-16T01:15:15+00:00",
+     "summary": "□ 개요 o Palo Alto Networks社는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표 \\[1\\] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 설명 o PAN-OS에서 발생하는 Code Injection 취약점(CVE-2026-0322) \\[1\\]\\[2\\] □ 영향을 받는 제품 및 해결 방안 | 취약점 | 제품명 | 영향받는 버전 | 해결 버전 | |:---:|:---:|:---:|:---:| | CVE-2026-0322 |…"
+    },
+    {
      "title": "Cisco 제품 보안 업데이트 권고",
      "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6ad0c6c0b5290478048efbec",
      "date": "2026-10-15T12:27:44+00:00",
@@ -2036,12 +2043,6 @@
      "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6acd873fb4f3e447302d4263",
      "date": "2026-10-13T01:19:59+00:00",
      "summary": "□ 개요 o SonicWall社는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표 \\[1\\] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 설명 o SonicWall SMA1000에서 발생하는 Server-Side Request Forgery (SSRF) 취약점(CVE-2026-102255) \\[1\\]\\[2\\] o SonicWall SMA1000에서 발생하는 OS Command Injection 취약점(CVE-2026-102256)…"
-    },
-    {
-     "title": "美 CISA 발표 주요 Exploit 정보공유(Update. 2026-10-13)",
-     "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6accf5f052c47bec3bcea9a5",
-     "date": "2026-10-12T15:00:00+00:00",
-     "summary": "□ 개요 o 美 CISA에서 현재 자주 악용되고 있는 취약점 목록 발표 [1] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 영향을 받는 제품 | CVE | 제조사 | 취약점 | 내용 | 조치사항 | | :---: | :---: | :---: | --- | --- | | CVE-2026-96951 | Microsoft | Microsoft Windows Command Injection Vulnerability | Microsoft Windows…"
     }
    ]
   },
@@ -2191,6 +2192,12 @@
    "via": "known",
    "items": [
     {
+     "title": "Google Chrome Multiple Vulnerabilities",
+     "link": "https://www.hkcert.org/security-bulletin/google-chrome-multiple-vulnerabilities_20261016",
+     "date": "2026-10-16T03:00:00+00:00",
+     "summary": ""
+    },
+    {
      "title": "Cisco Secure Email Gateway Remote Code Execution Vulnerability",
      "link": "https://www.hkcert.org/security-bulletin/cisco-secure-email-gateway-remote-code-execution-vulnerability_20261015",
      "date": "2026-10-15T03:00:00+00:00",
@@ -2229,12 +2236,6 @@
     {
      "title": "Microsoft Monthly Security Update (October 2026)",
      "link": "https://www.hkcert.org/security-bulletin/microsoft-monthly-security-update-october-2026",
-     "date": "2026-10-14T03:00:00+00:00",
-     "summary": ""
-    },
-    {
-     "title": "MongoDB Multiple Vulnerabilities",
-     "link": "https://www.hkcert.org/security-bulletin/mongodb-multiple-vulnerabilities_20261014",
      "date": "2026-10-14T03:00:00+00:00",
      "summary": ""
     }
