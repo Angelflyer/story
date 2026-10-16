@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T16:49:50+00:00",
+ "updated": "2026-10-16T21:23:44+00:00",
  "teams": {
   "cert-pl": {
    "status": "ok",
@@ -934,7 +934,7 @@
    ]
   },
   "csirt-mt": {
-   "status": "stale",
+   "status": "ok",
    "feed": "https://ncc-mita.gov.mt/feed/",
    "via": "probed",
    "items": [
@@ -986,8 +986,7 @@
      "date": "2026-05-08T09:16:59+00:00",
      "summary": "A campaign on national television captures the despair of a senior executive after he inadvertently clicks an email … Continued"
     }
-   ],
-   "error": "latest fetch failed"
+   ]
   },
   "ncsc-nl": {
    "status": "ok",
@@ -1416,10 +1415,10 @@
    "via": "api",
    "items": [
     {
-     "title": "EUVD-2026-101495 (GHSA-9fh3-97mp-7wmv) · CVSS 8.6",
-     "link": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-101495",
-     "date": "2026-10-14T17:26:52+00:00",
-     "summary": "A remote code execution (RCE) vulnerability in the management interface of Palo Alto Networks PAN-OS® software enables an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall. The security risk posed by this issue is…"
+     "title": "EUVD-2026-102427 (CVE-2026-102764) · CVSS 9.3",
+     "link": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-102427",
+     "date": "2026-10-15T20:30:32+00:00",
+     "summary": "The vulnerability exists within internal components of BeyondTrust’s Remote Support product. The components did not adequately validate the origin of the messages it received. Under the right conditions, this could allow an attacker to perform file operations on the appliance."
     },
     {
      "title": "EUVD-2026-101420 (CVE-2026-76519) · CVSS 9.8",
@@ -1434,10 +1433,10 @@
      "summary": "This is a vulnerability in Bitbucket Data Center, Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center. Crowd Data Center, Crucible and Fisheye. This Arbitrary File Access vulnerability allows an unauthenticated attacker to…"
     },
     {
-     "title": "EUVD-2026-92079 (CVE-2026-105133) · CVSS 6.9",
-     "link": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-92079",
-     "date": "2026-10-04T05:15:14+00:00",
-     "summary": "A vulnerability was detected in Ahsay AhsayCBS up to 10.3.2. This affects the function checkSysPwd of the file com/ahsay/obs/api/ApiStructsAction.java of the component API. Performing a manipulation of the argument random results in improper authentication. It is possible to…"
+     "title": "EUVD-2025-209452 (GHSA-f3vf-64gv-cxr8) · CVSS 5.4",
+     "link": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2025-209452",
+     "date": "2026-04-14T15:39:51+00:00",
+     "summary": "An Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') [CWE-22] vulnerability in Fortinet FortiOS 7.6.0 through 7.6.4, FortiOS 7.4.0 through 7.4.9, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions, FortiPAM 1.7.0, FortiPAM…"
     }
    ]
   },
@@ -1722,6 +1721,18 @@
    "via": "api",
    "items": [
     {
+     "title": "CVE-2026-102764: BeyondTrust Remote Support added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-102764",
+     "date": "2026-10-16T00:00:00+00:00",
+     "summary": "BeyondTrust Remote Support contains an authentication bypass by spoofing vulnerability that could allow a remote attacker to perform file operations on the appliance."
+    },
+    {
+     "title": "CVE-2025-61624: Fortinet Multiple Products added to KEV",
+     "link": "https://nvd.nist.gov/vuln/detail/CVE-2025-61624",
+     "date": "2026-10-16T00:00:00+00:00",
+     "summary": "FortiOS, FortiPAM, FortiProxy, and FortiSwitchManager contain a path traversal vulnerability that may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands."
+    },
+    {
      "title": "CVE-2026-21589: Atlassian Multiple Products added to KEV",
      "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-21589",
      "date": "2026-10-15T00:00:00+00:00",
@@ -1756,18 +1767,6 @@
      "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-104935",
      "date": "2026-10-13T00:00:00+00:00",
      "summary": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands."
-    },
-    {
-     "title": "CVE-2026-96951: Microsoft Windows added to KEV",
-     "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-96951",
-     "date": "2026-10-13T00:00:00+00:00",
-     "summary": "Microsoft Windows Shell contains a command injection vulnerability that allows an unauthorized attacker to bypass a security feature over a network."
-    },
-    {
-     "title": "CVE-2015-5477: ISC BIND added to KEV",
-     "link": "https://nvd.nist.gov/vuln/detail/CVE-2015-5477",
-     "date": "2026-10-08T00:00:00+00:00",
-     "summary": "ISC BIND contains a data processing errors vulnerability that could allow remote attackers to cause a denial of service via TKEY queries."
     }
    ]
   },
@@ -1832,6 +1831,30 @@
    "via": "discovered",
    "items": [
     {
+     "title": "Google security advisory (AV26-1060)",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1060",
+     "date": "2026-10-16T20:16:50+00:00",
+     "summary": ""
+    },
+    {
+     "title": "BMC Helix security advisory (AV26-1059)",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/bmc-helix-security-advisory-av26-1059",
+     "date": "2026-10-16T18:45:43+00:00",
+     "summary": ""
+    },
+    {
+     "title": "BeyondTrust security advisory (AV26-1054) – Update 1",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-1054",
+     "date": "2026-10-16T18:27:37+00:00",
+     "summary": ""
+    },
+    {
+     "title": "Progress security advisory (AV26-1058)",
+     "link": "https://cyber.gc.ca/en/alerts-advisories/progress-security-advisory-av26-1058",
+     "date": "2026-10-16T17:50:47+00:00",
+     "summary": ""
+    },
+    {
      "title": "AL26-025 - Critical vulnerability impacting BeyondTrust Remote Support – CVE-2026-102764",
      "link": "https://cyber.gc.ca/en/alerts-advisories/al26-025-critical-vulnerability-impacting-beyondtrust-remote-support-cve-2026-102764",
      "date": "2026-10-16T16:34:00+00:00",
@@ -1853,30 +1876,6 @@
      "title": "Palo Alto Networks security advisory (AV26-1056)",
      "link": "https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-1056",
      "date": "2026-10-16T13:29:16+00:00",
-     "summary": ""
-    },
-    {
-     "title": "[Control Systems] Moxa security advisory (AV26-1055)",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/control-systems-moxa-security-advisory-av26-1055",
-     "date": "2026-10-16T13:16:21+00:00",
-     "summary": ""
-    },
-    {
-     "title": "BeyondTrust security advisory (AV26-1054)",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-1054",
-     "date": "2026-10-16T13:06:33+00:00",
-     "summary": ""
-    },
-    {
-     "title": "SUSE Linux security advisory (AV26-1053)",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/suse-linux-security-advisory-av26-1053",
-     "date": "2026-10-15T19:35:56+00:00",
-     "summary": ""
-    },
-    {
-     "title": "[Control systems] Johnson Controls security advisory (AV26-1052)",
-     "link": "https://cyber.gc.ca/en/alerts-advisories/control-systems-johnson-controls-security-advisory-av26-1052",
-     "date": "2026-10-15T19:24:46+00:00",
      "summary": ""
     }
    ]
@@ -2003,6 +2002,12 @@
      "summary": "□ 개요 o Palo Alto Networks社는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표 \\[1\\] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 설명 o PAN-OS에서 발생하는 Code Injection 취약점(CVE-2026-0322) \\[1\\]\\[2\\] □ 영향을 받는 제품 및 해결 방안 | 취약점 | 제품명 | 영향받는 버전 | 해결 버전 | |:---:|:---:|:---:|:---:| | CVE-2026-0322 |…"
     },
     {
+     "title": "美 CISA 발표 주요 Exploit 정보공유(Update. 2026-10-16)",
+     "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6ad0ea706af80d7109178051",
+     "date": "2026-10-15T15:00:00+00:00",
+     "summary": "□ 개요 o 美 CISA에서 현재 자주 악용되고 있는 취약점 목록 발표 [1] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 영향을 받는 제품 | CVE | 제조사 | 취약점 | 내용 | 조치사항 | | :---: | :---: | :---: | --- | --- | | CVE-2025-61624 | Fortinet | Fortinet Multiple Products Path Traversal Vulnerability | FortiOS,…"
+    },
+    {
      "title": "Cisco 제품 보안 업데이트 권고",
      "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6ad0c6c0b5290478048efbec",
      "date": "2026-10-15T12:27:44+00:00",
@@ -2037,12 +2042,6 @@
      "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6ace47709ef9a3deea971031",
      "date": "2026-10-13T15:00:00+00:00",
      "summary": "□ 개요 o 美 CISA에서 현재 자주 악용되고 있는 취약점 목록 발표 [1] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 영향을 받는 제품 | CVE | 제조사 | 취약점 | 내용 | 조치사항 | | :---: | :---: | :---: | --- | --- | | CVE-2026-0322 | Palo Alto Networks | Palo Alto Networks PAN-OS Code Injection Vulnerability | Palo…"
-    },
-    {
-     "title": "SonicWall 제품 보안 업데이트 권고",
-     "link": "https://knvd.krcert.or.kr/info/vuln/notice/detail?id=6acd873fb4f3e447302d4263",
-     "date": "2026-10-13T01:19:59+00:00",
-     "summary": "□ 개요 o SonicWall社는 자사 제품에서 발생하는 취약점을 해결한 보안 업데이트 발표 \\[1\\] o 영향을 받는 버전을 사용 중인 사용자는 해결 방안에 따라 최신 버전으로 업데이트 권고 □ 설명 o SonicWall SMA1000에서 발생하는 Server-Side Request Forgery (SSRF) 취약점(CVE-2026-102255) \\[1\\]\\[2\\] o SonicWall SMA1000에서 발생하는 OS Command Injection 취약점(CVE-2026-102256)…"
     }
    ]
   },
@@ -2105,7 +2104,6 @@
    "status": "no-feed",
    "blocked": false,
    "tried": [
-    "https://www.cert-in.org.in/ (discovery: TimeoutError)",
     "https://www.cert-in.org.in/feed/",
     "https://www.cert-in.org.in/rss.xml",
     "https://www.cert-in.org.in/rss",
