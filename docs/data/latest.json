@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T21:23:44+00:00",
+ "updated": "2026-10-17T04:42:07+00:00",
  "teams": {
   "cert-pl": {
    "status": "ok",
@@ -1430,7 +1430,7 @@
      "title": "EUVD-2026-92807 (GHSA-gr66-x5pq-8g2g) · CVSS 9.3",
      "link": "https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-92807",
      "date": "2026-10-05T21:30:00+00:00",
-     "summary": "This is a vulnerability in Bitbucket Data Center, Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center. Crowd Data Center, Crucible and Fisheye. This Arbitrary File Access vulnerability allows an unauthenticated attacker to…"
+     "summary": "This CVE's publication may have been a false positive or a mistake. As a result, we have rejected this record."
     },
     {
      "title": "EUVD-2025-209452 (GHSA-f3vf-64gv-cxr8) · CVSS 5.4",
